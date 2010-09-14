@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
 using System.Xml;
+using System.Xml.Linq;
 using InfoControl;
 using InfoControl;
 using Vivina.Erp.BusinessRules;
@@ -20,7 +21,11 @@ namespace Vivina.Erp.WebUI.Site
             if (!String.IsNullOrEmpty(Request["b"]))
                 Budget.BudgetId = Convert.ToInt32(Request["b"].DecryptFromHex());
 
-
+            //
+            // Caso já exista um carrinho carregado na memória, limpa para começar uma nova compra.
+            //
+            if (!String.IsNullOrEmpty(Request["productId"]) && Budget.BudgetId > 0)
+                Budget = null;
 
             if (Budget.BudgetId == 0 && !String.IsNullOrEmpty(Request["productId"]))
             {
@@ -198,29 +203,36 @@ namespace Vivina.Erp.WebUI.Site
                 new { id = 40215, name = "Sedex10" } 
             };
 
-            var queriesString = "http://ws.correios.com.br/calculador/calcprecoprazo.asmx?" +
-                "StrRetorno=xml&nCdServico=" + String.Join(",", servicos.Select(a => a.id.ToString()).ToArray()) +
+            var queriesString = "http://ws.correios.com.br/calculador/calcprecoprazo.asmx/CalcPrecoPrazo?" +
+                "&nCdEmpresa=" +
+                "&sDsSenha=" +
+                "&nCdServico=" + String.Join(",", servicos.Select(a => a.id.ToString()).ToArray()) +
                 "&nVlPeso=" + weight.ToString().Replace(",", ".") +
                 "&sCepOrigem=" + initialPostalCode +
                 "&sCepDestino=" + finishPostalCode +
                 "&nCdFormato=1" +
                 "&nVlComprimento=30" +
                 "&nVlAltura=30" +
-                "&nVlLargura=30";
+                "&nVlLargura=30" +
+                "&nVlDiametro=30" +
+                "&sCdMaoPropria=N" +
+                "&nVlValorDeclarado=0" +
+                "&sCdAvisoRecebimento=N";
 
             var xmlDocument = new XmlDocument();
             xmlDocument.Load(queriesString);
+            
+            var nodes = xmlDocument.ChildNodes[1].FirstChild.ChildNodes;
 
-            var nodes = xmlDocument.SelectNodes("//cServico");
-
-            if (nodes != null)
-                for (var i = 0; i < nodes.Count; i++)
-                {
-                    string txt = nodes[i].SelectSingleNode("Valor").InnerText;
-                    rbtListDelivery.Items[i].Value = txt;
-                    rbtListDelivery.Items[i].Text = servicos[i].name + ":  </td><td class='valor'>" + Convert.ToDecimal(txt).ToString("C");
-                    rbtListDelivery.Items[i].Selected = false;
-                }
+            for (var i = 0; i < nodes.Count; i++)
+            {
+                string txt = nodes[i].ChildNodes[1].InnerText;
+                var valor = Convert.ToDecimal(txt);
+                rbtListDelivery.Items[i].Enabled = valor > 0;
+                rbtListDelivery.Items[i].Value = txt;
+                rbtListDelivery.Items[i].Text = servicos[i].name + ":  </td><td class='valor'>" + valor.ToString("C");
+                rbtListDelivery.Items[i].Selected = false;
+            }
             pnlDeliveryPrices.Visible = true;
         }
 

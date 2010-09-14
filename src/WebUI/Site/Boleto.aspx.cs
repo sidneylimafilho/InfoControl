@@ -27,7 +27,9 @@ public partial class Site_Boleto : PageBase
         if (!String.IsNullOrEmpty(Request["saleId"]))
         {
             var sale = (new SaleManager(this)).GetSale(Company.CompanyId, Convert.ToInt32(Request["saleId"]));
-            BoletoBancario.Boleto = sale.Invoice.Parcels.First().GenerateBoleto();
+            var boleto = sale.Invoice.Parcels.First().GenerateBoleto();
+            BoletoBancario.CodigoBanco = (short)boleto.Banco.Codigo;
+            BoletoBancario.Boleto = boleto;
         }
     }
 }

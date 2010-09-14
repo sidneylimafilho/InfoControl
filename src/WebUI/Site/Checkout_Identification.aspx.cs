@@ -57,7 +57,7 @@ namespace Vivina.Erp.WebUI.Site
                 if (User.IsAuthenticated)
                 {
                     customer = new CustomerManager(this).GetCustomerByUserName(Company.CompanyId, User.Identity.UserName);
-                    Response.Redirect("~/site/Checkout_Payment.aspx?CustomerId=" + customer.CustomerId.EncryptToHex());
+                    Response.Redirect(nextUrl + "?CustomerId=" + customer.CustomerId.EncryptToHex());
                     if (!String.IsNullOrEmpty(Request["b"]))
                         GenerateServiceOrderAndReceipt();
                     return;
@@ -149,7 +149,7 @@ namespace Vivina.Erp.WebUI.Site
                 GenerateServiceOrderAndReceipt();
 
             var login = (sender as System.Web.UI.WebControls.Login);
-            login.DestinationPageUrl = "~/site/Checkout_Payment.aspx?b=" + Request["b"] + "&CustomerId=" + customer.CustomerId.EncryptToHex();
+            login.DestinationPageUrl = (nextUrl + "?b=" + Request["b"] + "&CustomerId=" + customer.CustomerId.EncryptToHex());
         }
 
         private void GenerateServiceOrderAndReceipt()

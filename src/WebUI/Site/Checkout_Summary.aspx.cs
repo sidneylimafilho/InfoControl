@@ -60,11 +60,11 @@ namespace Vivina.Erp.WebUI.Site
 
                 Sale = saleManager.SaveSale(Sale, Budget, User.Identity.UserId, DateTime.Now, condition);
 
-                //result = ProcessPayment(sale, condition);
+                Response.Redirect("Checkout_Summary.aspx?sale=" + Sale.SaleId);
             }
             else
             {
-                //Sale = saleManager.Get
+                Sale = saleManager.GetSale(Company.CompanyId, Convert.ToInt32(Request["sale"]));
             }
         }
 

@@ -182,6 +182,7 @@
     <Compile Include="Company.partial.cs" />
     <Compile Include="ContractType.partial.cs" />
     <Compile Include="Category.partial.cs" />
+    <Compile Include="Sale.cs" />
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

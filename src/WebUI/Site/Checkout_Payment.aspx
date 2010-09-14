@@ -66,7 +66,7 @@
                         <td align="right">
                             <table class="formAvancar" style="display: none; width: 1%">
                                 <tr>
-                                    <td id="Td1" runat="server" visible='<%# (int)Eval("PaymentMethodId") == 3%>'>
+                                    <td id="Td1" runat="server" visible='<%# (int)Eval("PaymentMethodId") == 3 || (int)Eval("PaymentMethodId") == 4%>'>
                                         <table cellspacing="0" cellpadding="0" border="0">
                                             <tbody>
                                                 <tr>

@@ -5,7 +5,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" id="clean">
 <head runat="server">
-    <title>Untitled Page</title>
+    <title>Boleto Bancário</title>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -16,7 +16,7 @@
             Contrato="1341888" DataEmissao="2008-02-20" DataProcessamento="2008-02-20" 
             Documento="123" OutrasAcrescimos="0" pEspecieDoc="DM" Quantidade="0">
         </VFX:HtmlBoleto>--%>
-        <bn:BoletoBancario ID="BoletoBancario" runat="server">
+        <bn:BoletoBancario ID="BoletoBancario" runat="server" CodigoBanco="001">
         </bn:BoletoBancario>
         <script type="text/javascript">
             window.print();

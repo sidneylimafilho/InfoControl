@@ -29,13 +29,13 @@ namespace Vivina.Erp.WebUI.Site
             {
                 var saleManager = new SaleManager(this);
                 var sale = saleManager.GetSale(Company.CompanyId, Convert.ToInt32(Request["sale"]));
-                //result = ProcessPayment(sale, condition);
+                result = ProcessPayment(sale);
             }
         }
 
-        private PaymentResult ProcessPayment(Sale sale, FinancierCondition condition)
+        private PaymentResult ProcessPayment(Sale sale)
         {
-            var provider = condition.FinancierOperation.PaymentProvider;
+            var provider = sale.FinancierOperation.PaymentProvider;
 
             if (provider != null)
             {
@@ -48,11 +48,10 @@ namespace Vivina.Erp.WebUI.Site
                     card = new CreditCard(Request["cardHolder"], Request["cardNumber"],
                                           Request["cardCvc2"], Request["cardMonth"], Request["cardYear"], 0);
 
-                string membership = condition.FinancierOperation.MembershipNumber.ToString();
                 return provider.Process(Total.ToString(),
                                         mode,
-                                        condition.ParcelCount,
-                                        membership,
+                                        sale.Invoice.Parcels.Count(),
+                                        sale.FinancierOperation.MembershipNumber,
                                         "",
                                         sale.SaleId,
                                         card);

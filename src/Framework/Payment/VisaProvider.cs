@@ -6,6 +6,7 @@ using System.Data.Linq;
 using System.Text;
 using InfoControl.Payment;
 using System.Xml;
+using InfoControl.Payment.Configuration;
 using InfoControl.Web.Configuration;
 using System.Configuration.Provider;
 using InfoControl.Net;
@@ -18,21 +19,8 @@ namespace InfoControl.Payment
 
     public class VisaProvider : PaymentProvider
     {
-        ChannelEndpointElement endpoint;
-
-        public VisaProvider()
-        {
-            //
-            // Pega endereço dos components da Visa
-            //
-            endpoint = WebConfig.ServiceModel.Clients.Endpoints.OfType<ChannelEndpointElement>()
-                            .FirstOrDefault(ep => ep.Name.ToLower() == "visa");
-
-
-            if (endpoint == null) throw new ProviderException("The Visa endpoint provider is not configured!");
-        }
-
-        public PaymentResult Process(string total, PaymentMode mode, int numParcels, string filiacao, string distribuidor, int numPedido, CreditCard cartao)
+        
+        public override PaymentResult Process(string total, PaymentMode mode, int numParcels, string filiacao, string distribuidor, int numPedido, CreditCard cartao)
         {
             filiacao = filiacao ?? "1001734898"; // 1001734898 filiacao de exemplo
             numParcels = numParcels == 0 ? 1 : numParcels;
@@ -47,7 +35,7 @@ namespace InfoControl.Payment
 
             var html = new StringBuilder();
 
-            html.Append("<form action=\"" + endpoint.Address.AbsoluteUri + "\" method=\"post\" id=\"pay_VBV\">");
+            html.Append("<form action=\"" + Config.Address + "\" method=\"post\" id=\"pay_VBV\">");
             //
             // Número único gerado a cada transação pela Visanet
             //
@@ -59,11 +47,11 @@ namespace InfoControl.Payment
             //
             // NUmero do banco quando o processo for Visa Electron
             //
-            html.Append("<input type=\"hidden\" name=\"bank\" value=\"" + cartao.Bank + "\">");
+            html.Append("<input type=\"hidden\" name=\"bank\" value=\"\">");
             //
             // Numero do Cartão
             //
-            html.Append("<input type=\"hidden\" name=\"bin\" value=\"" + cartao.Number + "\">");
+            html.Append("<input type=\"hidden\" name=\"bin\" value=\"\">");
             //
             // endereco onde está o arquivo de configuração .ini
             //
@@ -150,15 +138,15 @@ namespace InfoControl.Payment
 
             if (!String.IsNullOrEmpty(filiacao) && filiacao != "0")
             {
-                string keysPath = endpoint.Contract.Split(new[] { '|' })[0];
+                string keysPath = Config.Extras.Cast<ProviderExtrasSection>().First(x => x.Key == "keysPath").Value;
                 string keyFile = Path.Combine(keysPath, filiacao + ".keydata");
                 File.WriteAllText(keyFile, operation);
 
-                string configPath = endpoint.Contract.Split(new[] { '|' })[1];
+                string configPath = Config.Extras.Cast<ProviderExtrasSection>().First(x => x.Key == "configPath").Value;
                 string template = File.ReadAllText(Path.Combine(configPath, "template.ini"));
 
                 template = template.Replace("{KEY_FILE}", keyFile);
-                template =  template.Replace("{MEMBERSHIP}", filiacao);
+                template = template.Replace("{MEMBERSHIP}", filiacao);
 
                 File.WriteAllText(Path.Combine(configPath, filiacao + ".ini"), template);
             }

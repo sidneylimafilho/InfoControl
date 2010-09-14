@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using InfoControl.Web.Mail;
 using Vivina.Erp.BusinessRules;
@@ -9,8 +11,6 @@ using Vivina.Erp.BusinessRules.Comments;
 using Vivina.Erp.BusinessRules.WebSites;
 using Vivina.Erp.DataClasses;
 using Vivina.Erp.SystemFramework;
-using System.Web.UI;
-using System.ComponentModel;
 
 namespace Vivina.Erp.WebUI.Site
 {
@@ -20,6 +20,8 @@ namespace Vivina.Erp.WebUI.Site
         private WebPage _page;
 
         #region Properties
+
+        private Category _category;
 
         public WebPage WebPage
         {
@@ -48,7 +50,6 @@ namespace Vivina.Erp.WebUI.Site
             }
         }
 
-        private Category _category;
         public Category Category
         {
             get
@@ -89,7 +90,6 @@ namespace Vivina.Erp.WebUI.Site
                 _page = manager.WebPageNotFound();
                 MasterPageFile = Company.GetMasterPagePath();
             }
-
         }
 
         protected override void OnLoad(EventArgs e)
@@ -157,14 +157,14 @@ namespace Vivina.Erp.WebUI.Site
 
             return GetCategoryBreadcrumbs(category.Category1) +
                    string.Format(@"<a href=""{0}"">{1}</a> > ",
-                   HttpUtility.UrlDecode(ResolveUrl(category.Url)),
-                   category.Name);
+                                 HttpUtility.UrlDecode(ResolveUrl(category.Url)),
+                                 category.Name);
         }
 
         #region Actions
 
-        private void ProcessBudget()
-        {
+        private void ProcessBudget(){
+
             //
             // Verify if the request is not null ["nome"] and  ["email"]
             //
@@ -176,8 +176,7 @@ namespace Vivina.Erp.WebUI.Site
             //
             // Populate Budget
             //
-            var budget = new Budget
-                             {
+            var budget = new Budget{
                                  CustomerName = Request["nome"],
                                  CustomerMail = Request["email"],
                                  CompanyId = Company.CompanyId,
