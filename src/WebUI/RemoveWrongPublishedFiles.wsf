@@ -1,0 +1,143 @@
+﻿<package xmlns="http://schemas.microsoft.com/WindowsScriptHost">
+    <job>
+        <script language="VBScript">
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'
+'   VBScript  REFERENCES
+'   http://www.microsoft.com/technet/scriptcenter/guide/sas_wsh_crve.mspx?mfr=true
+'   http://www.activexperts.com/activmonitor/windowsmanagement/adminscripts/filesfolders/files/#DeleteFile.htm
+'
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Dim FileName, Find, ReplaceWith, fileContents
+
+currentExecutionPath = replace(WScript.ScriptFullName, WScript.ScriptName, "")
+
+
+'
+'  SET web.config to Production
+'
+fileContents = GetFile("web.config")
+
+fileContents = replace(fileContents, "connectionStringName=""Notebook""", "connectionStringName=""Production""", 1, -1, 1)
+fileContents = replace(fileContents, "connectionStringName=""DevServer""", "connectionStringName=""Production""", 1, -1, 1)
+fileContents = replace(fileContents, "<trace enabled=""true""", "<trace enabled=""false""", 1, -1, 1)
+fileContents = replace(fileContents, "<compilation debug=""true""", "<compilation debug=""false""", 1, -1, 1)
+fileContents = replace(fileContents, "<customErrors mode=""Off""", "<customErrors mode=""On""", 1, -1, 1)
+
+WriteFile "web.config", fileContents
+
+'
+'  DELETE Dll's exceed
+'
+Const DeleteReadOnly = True
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+
+DeleteWrongFiles(currentExecutionPath)
+
+
+Const OverwriteExisting = True
+objFSO.CopyFile currentExecutionPath & "..\trunk\src\dataclasses\dataclasses.er1" , currentExecutionPath, OverwriteExisting
+
+
+'
+'  SUICIDE
+'
+objFSO.DeleteFile(WScript.ScriptFullName), DeleteReadOnly
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'
+'   UTILITY FUNCTIONS
+'
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+function IsWrongObject(name)
+    IsWrongObject = ((InStr(name, ".pdb") > 0) or _
+                   (InStr(name, ".xml") > 0) or _
+                   (InStr(name, ".rar") > 0) or _
+                   (InStr(name, "lastcodeanalysissucceeded") > 0) or _
+                   (InStr(name, "AjaxControlToolkit") > 0) or _
+                   (InStr(name, "App_Licenses") > 0) or _
+                   (InStr(name, "Boleto") > 0) or _
+                   (InStr(name, "Dundas") > 0) or _
+                   (InStr(name, "Microsoft") > 0) or _
+                   (InStr(name, "SharpZipLib") > 0) or _
+                   (InStr(name, "Telerik") > 0) or _
+                   (name = "Properties") or _
+                   (name = "Service References") or _
+                   (name = "_svn") or _
+                   (name = ".svn"))
+                   
+                   
+                    
+end function
+
+
+function DeleteWrongFiles(path)
+
+    Set folder = objfso.GetFolder(path)
+    For Each subFolder in folder.SubFolders
+        If (IsWrongObject(subFolder.name)) Then
+            objFSO.DeleteFolder(path & "\" & subFolder.name), DeleteReadOnly
+        Else
+            DeleteWrongFiles(path & "\" & subFolder.name)           
+        End If       
+    Next
+    
+    
+
+    For Each file in folder.Files
+        If (IsWrongObject(file.name)) Then
+            objFSO.DeleteFile(path & "\" & file.name), DeleteReadOnly
+        End If
+    Next
+    
+    
+    '
+    ' Remove pastas vazias
+    '
+    If folder.SubFolders.Count = 0 and folder.Files.Count = 0 Then
+        objFSO.DeleteFile(path), DeleteReadOnly
+    End If
+
+end function
+
+
+'Read text file
+function GetFile(FileName)
+  If FileName<>"" Then
+    Dim FS, FileStream
+    Set FS = CreateObject("Scripting.FileSystemObject")
+      on error resume Next
+      Set FileStream = FS.OpenTextFile(currentExecutionPath & FileName)
+      GetFile = FileStream.ReadAll
+  End If
+End Function
+
+'Write string As a text file.
+function WriteFile(FileName, Contents)
+  Dim OutStream, FS
+
+  on error resume Next
+  Set FS = CreateObject("Scripting.FileSystemObject")
+    Set OutStream = FS.OpenTextFile(currentExecutionPath & FileName, 2, True)
+    OutStream.Write Contents
+End Function
+        </script>
+
+    </job>
+</package>

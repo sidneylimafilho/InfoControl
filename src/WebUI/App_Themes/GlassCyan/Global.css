@@ -1,0 +1,234 @@
+@import "../_global/global.css";
+@import "../../App_Shared/js/jquery.jgrowl.css";
+
+
+
+hr
+{
+	position: relative;
+	top: -8px;
+	height: 1px;
+	color: #CCCCCC;
+}
+
+body
+{
+	background: url(background.png) -40px -140px;
+}
+
+
+option
+{
+	color: #006666;
+}
+
+select
+{
+	color: #006666;
+	vertical-align: middle;
+	padding: 1px 0px;
+	font-size: 12px;
+}
+
+legend
+{
+	font-weight: bold;
+	padding: 0px 7px 0px 7px;
+	color: #006666;
+}
+
+fieldset
+{
+	border-top: 1px solid #009999;
+	border-bottom: 1px solid #f2f2f2;
+	border-left: 1px solid #f2f2f2;
+	border-right: 1px solid #f2f2f2;
+}
+
+#header #menu
+{
+	padding-left:2px;
+}
+
+#header #left
+{
+	/*background-image: url(topo_left.gif); 	background-repeat: no-repeat;*/
+	width: 183px;
+}
+
+#header #right
+{
+	background-image: url(topo_right.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+	vertical-align: bottom;
+	text-align: right;
+	padding-right: 65px;
+	padding-bottom: 12px;
+	width: 420px;
+}
+
+.logo
+{
+	position: absolute;
+	height: 51px;
+	width: 183px;
+	left: 0px;
+	top: 0px;
+}
+
+
+.menu
+{
+	background-image: url(bgMenu.gif);
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: left;
+	vertical-align: middle;
+	padding: 8px 0px 20px 8px;
+}
+
+.menuContainer
+{
+	display: inline-block;
+	width: 190px;
+}
+
+
+
+
+.topo
+{
+	position: absolute;
+	margin: -25px 0px 0px 80px;
+	z-index: 99;
+}
+
+.logoCliente
+{
+	height: 50px;
+	width: 183px;
+	left: 0px;
+	top: 0px;
+	background-repeat: no-repeat;
+	background-image:url(../../Site/LogoHandler.aspx);
+}
+
+
+
+
+
+
+
+
+/***********************************************************************************
+RadEditor
+***********************************************************************************/
+.rade_center_top, .rade_corner_top_left, .rade_corner_top_right
+{
+	padding: 0px !important;
+	height: 0px !important;
+	width: 0px !important;
+	line-height: 0px !important;
+	display: none !important;
+}
+.rade_wrapper
+{
+	padding: 0px !important;
+	border: 0px !important;
+}
+
+/* The following CSS needs to be copied to the page to produce textbox-like RadEditor */
+.radeditor
+{
+	background: none !important;
+}
+
+
+.rade_leftVerticalSide, .rade_rightVerticalSide, .rade_tlbVertical
+{
+	filter: alpha(opacity=0) !important;
+	opacity: 0 !important;
+	-moz-opacity: 0 !important;
+}
+
+.rade_leftVerticalSide, .rade_rightVerticalSide, .rade_tlbVertical
+{
+	display: none;
+}
+
+.breadcrumbs
+{
+	padding-bottom: 5px;
+}
+.breadcrumbs a
+{
+	color: Gray;
+}
+
+
+.rtTemplate
+{
+	padding: 0px !important;
+}
+.inline, .inline:hover
+{
+	display: inline;
+	text-decoration: none !important;
+}
+.rtIn
+{
+	border: 0px solid white !important;
+	padding:0px !important;
+}
+.rtHover .rtIn, .rtHover div
+{
+	background-color: white !important;
+	border: 0px solid white !important;
+}
+.rtSelected .rtIn, .rtSelected div
+{
+	background-color: white !important;
+	border: 0px solid white !important;
+	color: #000 !important;
+}
+
+
+/***********************************************************************************
+RadTreeView
+***********************************************************************************/
+.rtUL .deleted input
+{
+	display: none;
+}
+
+.rtUL .deleted .InfoTip1, .rtUL .deleted .essential, .rtUL .deleted .warning, .rtUL .deleted .normal
+{
+	color: #bbb !important;
+}
+
+.rtUL .essential
+{
+	color: #F00;
+}
+
+.rtUL .warning
+{
+	color: #F73;
+}
+
+.rtUL .normal
+{
+	color: #000;
+}
+
+.rtUL .waiting
+{
+	color: #999;
+}
+
+.RadTreeView_Default
+{
+	font: inherit !important;
+}

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Can_not_use_encrypted_passwords_with_autogen_keys" xml:space="preserve">
+    <value>You must specify a non-autogenerated machine key to store passwords in the encrypted format. Either specify a different passwordFormat, or change the machineKey configuration to use a non-autogenerated decryption key.</value>
+  </data>
+  <data name="CurrentDataManagerKey" xml:space="preserve">
+    <value>_CURRENT_DataManager_KEY</value>
+  </data>
+  <data name="DataControl_DataSourceDoesntExist" xml:space="preserve">
+    <value>The DataSourceID of '{0}' must be the ID of a control of type IDataSource.  A control with ID '{1}' could not be found.</value>
+  </data>
+  <data name="DataControl_DataSourceIDMustBeDataControl" xml:space="preserve">
+    <value>The DataSourceID of '{0}' must be the ID of a control of type IDataSource.  '{1}' is not an IDataSource.</value>
+  </data>
+  <data name="DataControl_MultipleDataSources" xml:space="preserve">
+    <value>Both DataSource and DataSourceID are defined on '{0}'.  Remove one definition.</value>
+  </data>
+  <data name="DataControl_ViewNotFound" xml:space="preserve">
+    <value>The view that data bound control '{0}' requested could not be found. Check that the DataMember property is valid.</value>
+  </data>
+  <data name="DataUserControl_BadCaller" xml:space="preserve">
+    <value>O controle  InfoControl.Web.UI.DataUserControl só pode ser utilizado em uma página herdada de InfoControl.Web.UI.DataPage</value>
+  </data>
+  <data name="MasterPage_BadCaller" xml:space="preserve">
+    <value>O controle InfoControl.Web.UI.MasterPage só pode ser utilizado em uma página herdada de InfoControl.Web.UI.Page</value>
+  </data>
+  <data name="PageIndex_bad" xml:space="preserve">
+    <value>The pageIndex must be greater than or equal to zero.</value>
+  </data>
+  <data name="PageIndex_PageSize_bad" xml:space="preserve">
+    <value>The combination of pageIndex and pageSize cannot exceed the maximum value of System.Int32.</value>
+  </data>
+  <data name="PageSize_bad" xml:space="preserve">
+    <value>The pageSize must be greater than zero.</value>
+  </data>
+  <data name="Parameter_cannot_be_NullOrEmpty" xml:space="preserve">
+    <value>The string parameter '{0}' cannot be null or empty.</value>
+  </data>
+  <data name="Parameter_can_not_be_empty" xml:space="preserve">
+    <value>The parameter '{0}' must not be empty.</value>
+  </data>
+  <data name="Parameter_Invalid" xml:space="preserve">
+    <value>The parameter '{0}' is invalid. </value>
+  </data>
+  <data name="Parameter_too_long" xml:space="preserve">
+    <value>The parameter '{0}' is too long: it must not exceed {1} chars in length.</value>
+  </data>
+  <data name="PermissionRequiredKey" xml:space="preserve">
+    <value>permissionRequired</value>
+  </data>
+  <data name="Section_dont_was_configured" xml:space="preserve">
+    <value>The section '{0}' dont was configured!</value>
+  </data>
+  <data name="UserControl_BadCaller" xml:space="preserve">
+    <value>O controle InfoControl.Web.UI.UserControl só pode ser utilizado em uma página herdada de InfoControl.Web.UI.Page</value>
+  </data>
+  <data name="VivinaRoleProviderNotConfigured" xml:space="preserve">
+    <value>To use the User in Page, required configure the HttpModule VivinaRoleProvider</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WebControls_PrintLabel_labelFormatData" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Web\UI\WebControls\PrintLabel.xml;System.String, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
+  <data name="Cypher_DecryptHash" xml:space="preserve">
+    <value>Cannot decrypt a one-way hash!</value>
+  </data>
+  <data name="Cypher_DefaultKey" xml:space="preserve">
+    <value>2B202B746511891C1BAF47F8D25C07F6C39A104696DB51F1</value>
+  </data>
+  <data name="Cypher_InvalidPath" xml:space="preserve">
+    <value>The specified filename is invalid!</value>
+  </data>
+  <data name="Cypher_InvalidProvider" xml:space="preserve">
+    <value>An invalid cryptographic provider was specified for this method!</value>
+  </data>
+  <data name="Cypher_NoAlgorithm" xml:space="preserve">
+    <value>No algorithm was specified!</value>
+  </data>
+  <data name="Cypher_NoContent" xml:space="preserve">
+    <value>No content was provided!</value>
+  </data>
+  <data name="Cypher_NoFile" xml:space="preserve">
+    <value>The specified file does not exist!</value>
+  </data>
+  <data name="Cypher_NoKey" xml:space="preserve">
+    <value>No encryption key was provided!</value>
+  </data>
+  <data name="Cypher_NotPermissionFileRead" xml:space="preserve">
+    <value>Could not read file!</value>
+  </data>
+  <data name="Cypher_NotPermissionFileWrite" xml:space="preserve">
+    <value>Could not create file!!</value>
+  </data>
+  <data name="Cypher_PrivateKey" xml:space="preserve">
+    <value>q+6lZpmZzL+9AcbMDFC9mTFHWR8vfO82KJXbD6d1OlgW1Ly81F+NaOhZ6rQDr6C4lFleOGlzLMvBN5FDxok15+fyF9jjoDl36iR0Ha8r0q9b1nS9We1w994muFo/W8uma6iJRJKc+7yb90cAQZhbGUgZRQ9Ab+GLT3di0g+opZSTsMrptSQxCp+iT4AQJN9pMD1SR7QzwrQiDxvMI8pOZnsvU6mM1XH84qy9/2BzPbyqeyQiYxhr3fXDucjZYXEUEt9+6pJebqO+VaCncTYrN4BU2+ZaN/QNO7oWZHPv37hWehPPfMpWa+lTnovq7KMyF2PNDCamdcA79iPHxGmEmLSjvgznp7xWLq0VARE/Yzhc8AUp/LcX2/Z3pH2hFvNfi+pmxfc1oFESYqEe+ujanYH2xkpzEM/XLdEm4aLzZHF9k42mdksS0DKwgPktoE26JhUmKJt2qP+MEwCMsF/S+5+vft5hQqrzW/L2Jra5GUs0jFO+RIExbxgRiPn6A4gyw1SVWG0LPklyBAuggcIX46lq4/TL4K6Jtagw8TnZfLCrzIU63a7GoZjQ5S9YPC9CHDdkcpQkQ3LrykmC4fXZbMdlut11sTKO3uRLHWuXiBlcf8HKPb9WNhPYFdHcSTlkPt/bEJW8HdSZJ4uW6o8T9SRl/QIekjaJBoHtJuSCztit66X1KTyNenqNPWR1vL3qIwVQuyVQDMzP60UlYSxdODpk+dkbFguMVsSG+waF4B6C3t8k1H81yTkiNI+cAd6cu9KbLZyy2NfYWUbWHfSgIssfNLOMVbg5NcOYZeQWajfcr/KYi3SPwLS4UBL9VmewClO3Gcr2Rk3MUzjuZu/+aUEnRqpn0/yoH0F3HK40GPdLK/kg7nUGUdFWJDghBXNgjiREmIBi0/H1RYWfz9/T2+XCdGVeFTLXLH/6RBR8L4kXO6VARbrBKHkf6QVLC/t1KgPUwTQ5jBp/BoW9bq1B+CHyCPd7Fdc5Tx147nbWmUcc8eSZrOmVoIs08CbYxwvvGBYbfPNV3d/srO9nYl8aaKA5fE1c3rCFDRNP8JpjOuQp1dtBx/Gp+vUwnVJUHmeD5eOk2SB4uFZIeSd9wrFQP6Iq40XXM1+f6co/CR7GNkG+sHgfbVGkGKM6cwdsQq73A66X3k+1jFeXOlM1ZbjlbyAh6mge8a5Gt4IaPYQEhsbnJdqlR58UFpQ7woPvAPZLns8u8JQTORFraze7EetpzQ==</value>
+  </data>
+  <data name="Cypher_PublicKey" xml:space="preserve">
+    <value>q+6lZpmZzL+9AcbMDFC9mTFHWR8vfO82KJXbD6d1OlgW1Ly81F+NaOhZ6rQDr6C4lFleOGlzLMvBN5FDxok15+fyF9jjoDl36iR0Ha8r0q9b1nS9We1w994muFo/W8uma6iJRJKc+7yb90cAQZhbGUgZRQ9Ab+GLT3di0g+opZSTsMrptSQxCp+iT4AQJN9pMD1SR7QzwrQiDxvMI8pOZnsvU6mM1XH84qy9/2BzPbyqeyQiYxhr3fXDucjZYXEUEt9+6pJebqO+VaCncTYrN4BU2+ZaN/QNO7oWZHPv37i3fw+M/cfYFhiCnGvtZZka8PZb14iXVyGKRLFsQccSYg==</value>
+  </data>
+  <data name="Section_NoConfigured" xml:space="preserve">
+    <value>The {0} in configuration file dont was configured!</value>
+  </data>
+</root>

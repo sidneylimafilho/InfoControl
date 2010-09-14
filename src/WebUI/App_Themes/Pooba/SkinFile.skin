@@ -1,0 +1,103 @@
+<%@ Register TagPrefix="radP" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%-- <%@ Register Assembly="RadCalendar.Net2" Namespace="Telerik.WebControls" TagPrefix="radCln" %> --%>
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+
+
+
+<radts:radtabstrip 
+    runat="server"  
+    CssClass="RadTabStrip_dnn" />
+
+<ajaxToolkit:Rating 
+    SkinID="Rating1" 
+    runat="server" 
+    StarCssClass="ratingStar" 
+    WaitingStarCssClass="savedRatingStar"
+    FilledStarCssClass="filledRatingStar" 
+    EmptyStarCssClass="emptyRatingStar" />
+    
+<radCln:RadCalendar  
+    runat="server" 
+    Skin="Calendar" 
+    Style="border-left-color: #ececec; border-bottom-color: #ececec; border-top-color: #ececec; border-right-color: #ececec" 
+    EnableRowSelectors="False" 
+    SkinsPath="~/App_Themes/Glass/"></radCln:RadCalendar>
+      --%>          
+                
+<asp:Button 
+    CssClass="cBtn11"  
+    runat="server"  />
+    
+<asp:TextBox
+    CssClass="cDat11"  
+    runat="server"  />
+    
+<asp:GridView 
+    CssClass="cGrd11"
+    runat="server" >
+    <PagerStyle CssClass="Pager" />
+    <HeaderStyle CssClass="Header" />    
+    </asp:GridView>
+    
+<asp:RequiredFieldValidator 
+    runat="server" 
+    CssClass="cErr21" 
+    ErrorMessage=""  />
+    
+<asp:RegularExpressionValidator 
+    runat="server"     
+    CssClass="cErr21"   
+    ErrorMessage="" 
+     />                                
+    
+<ajaxToolkit:TabContainer runat="server" CssClass="cTabs11" />
+
+<ajaxToolkit:AutoCompleteExtender 
+    runat="server" 
+    CompletionInterval="1000" 
+     
+    MinimumPrefixLength="2"
+    CompletionListCssClass="CompletionListCssClass" 
+    CompletionListHighlightedItemCssClass="CompletionListHighlightedItemCssClass"
+    CompletionListItemCssClass="CompletionListItemCssClass" 
+    />
+
+<ajaxToolkit:ModalPopupExtender  
+    runat="server"  
+    BackgroundCssClass="bgModalPopup" />
+    
+    
+<radP:RadPanelbar Runat="server"	
+	HeaderExpandedCssClass="panelbarHeaderExpand"
+	HeaderCollapsedCssClass="panelbarHeaderCollapsed"
+	HeaderHoverCollapsedCssClass="panelbarHeaderHover"
+	HeaderHoverExpandedCssClass="panelbarHeaderHover"
+	HeaderTextExpandedCssClass="panelbarText"
+	HeaderTextCollapsedCssClass="panelbarText"
+	HeaderTextHoverCssClass="panelbarText"
+	ItemCollapsedCssClass="panelbarItem"
+	ItemHoverCollapsedCssClass="panelbarItemHover"
+	ItemHoverExpandedCssClass="panelbarItemHover"	
+	ItemTextCollapsedCssClass="panelbarText"
+	ItemTextExpandedCssClass="panelbarText"
+	ItemTextHoverCssClass="panelbarText"
+	ItemSelectedCssClass="panelbarItemSelected"
+	CssClass="panelbar"
+	ImagesBaseDir="~/app_themes/Glass/"
+	SingleExpandedPanel="True"
+	/>

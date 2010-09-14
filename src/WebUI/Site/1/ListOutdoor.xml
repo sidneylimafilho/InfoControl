@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<outdoors>
+  <!--<outdoor id="2" imgPath="1/themes/vivina/img/outdoor_images/213729_5695.jpg" desc="&lt;b&gt;Descubra novos horizontes!&lt;/b&gt;&lt;br&gt;&lt;br&gt;Além de proporcionar bons trabalhos também proporcionamos lazer, afinal com a Vivina prestando os serviços, sobra tempo para você descançar!">
+  </outdoor>-->
+  <outdoor>
+    <![CDATA[
+      <img src="1/themes/vivina/img/outdoor_images/07-03-27_02.jpg" />
+      ]]>
+  </outdoor>
+  <!--
+  <outdoor  imgPath="1/themes/vivina/img/outdoor_images/317998_6622_pq2.jpg" desc="Cada dia que passa os computadores de mão se tornam mais acessiveis, e com eles, os sistemas integrados exercem papel importante na produção competitiva. Pensando nisso, Vivina se adiantou e está apta a proporcionar soluções ideais nessa plataforma!" />
+  <outdoor  imgPath="1/themes/vivina/img/outdoor_images/128844948_b144.jpg" desc="Nem tudo são flores no jardim da vida, agora quem disse que na sua empresa depende das flores não deixe o pessimismo tomar conta. Fale conosco temos a solução certa para seus problemas! &lt;br&gt;&lt;br&gt; Afinal somente a Vivina faz o futuro acontecer!" />
+  <outdoor  imgPath="1/themes/vivina/img/outdoor_images/200266327-001.jpg" desc="Sinta-se livre para alcançar seus objetivos, deixe seus problemas para quem sabe resolver, na estrada da tecnologia a Vivina vai de 0 a 100 em poucos segundos, faça seus concorrentes comererem poeira, contrate quem faz o futuro acontecer!" />
+  <outdoor  imgPath="1/themes/vivina/img/outdoor_images/hardmed.jpg" desc="A importancia de se ter a empresa controlada, olhando nesse horizonte a HARDMED consegue confiar nas soluções da Vivina e adota sistema de atendimento ao cliente!" />
+  <outdoor  imgPath="1/themes/vivina/img/outdoor_images/sigras.jpg" desc="Mais um cliente satisfeito, a razão é o lançamento do SIGRAS, um sistema de informações sobre a graduação na área da saúde, que permitirá aos usuários realizarem pesquisas refinadas, empregando modernas tecnologias de Business Inteligence!" />
+  -->
+</outdoors>

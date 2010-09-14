@@ -1,0 +1,128 @@
+@import "../_global/LeafBox/Cyan/leafbox.css";
+@import "../_global/LeafBox/Orange/leafbox.css";
+@import "../_global/LeafBox/Purple/leafbox.css";
+@import "../_global/LeafBox/Yellow/leafbox.css";
+@import "../GlassBlue/Controls/Button/Button.css";
+/* @import "../GlassBlue/Controls/TextBox/TextControl.css"; */
+@import "../GlassPurple/Controls/Validator/validator.css";
+@import "../GlassPurple/Controls/ModalPopup/ModalPopup.css";
+
+body, span, div, ul, li, a, br, input, textarea, select, table, tr, td, p, h1, h2, h3
+{
+	margin: 0px 0px 0px 0px;
+	z-index: 2;
+	padding: 0px 0px 0px 0px;	
+}
+
+img {border:0px}
+
+html, body, form
+{
+	height:100%;
+	width:100%;
+}
+
+a {text-decoration:none; color:#5477BD; font-weight:bold;}
+a:hover {text-decoration:underline;}
+
+
+body
+{
+	background-image: url(bg.jpg);
+	background-repeat: no-repeat;
+}
+
+option
+{
+	color: #666666;
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+
+select
+{
+	color: #006666;
+	font-family: Tahoma;
+	font-size: 8pt;
+}
+
+#main
+{
+	z-index: 2;
+	top: 0px;
+	left: 0px;
+	border:0px solid red;
+	padding: 0px;
+	margin: 0px;
+	width:100%;
+	height:100%;
+	border-collapse: collapse;
+	background-image: url(background.jpg);
+	background-repeat:no-repeat;
+}
+
+
+#header{ height:140px;}
+
+#header #banner 
+{
+	background-image: url(bg_login.gif);  
+	background-repeat:no-repeat;
+	position:absolute;
+	right:0px;
+	top:4px;
+	z-index:100;	
+	padding:14px 0px 0px 22px;
+	width:365px;	
+	filter:alpha(opacity=65);
+	-moz-opacity:0.65;
+}
+
+
+.loginMenu{white-space:nowrap;}
+.loginForm{white-space:nowrap;}
+
+
+#menu
+{			
+	padding-top: 10px;	
+	z-index:10;
+	border:0px solid red;
+	margin-right:-3px;
+	position:relative;
+	display:block;
+	border-bottom:solid 1px gray;
+	text-align:center;
+	color:#999999;
+	
+}
+
+#menu a { font-weight:bold; font-size:12px; font-family:Trebuchet MS; width:160px; padding:2px 12px 2px 12px; color:#782978; }
+#menu a:hover{ text-decoration: none; background-color: #782978;   color:#FFF; }
+#menu a.selected, #menu a.selected:hover {background-color:#C564A5; color:White; }
+
+#content{float:left; padding: 10px; z-index:1; }
+
+
+#footer
+{
+	clear:both;
+	text-align:center;
+	padding:6px 0px 10px 0px;
+	color:#782978;
+}
+
+#teaser span span{display:none;}
+
+#teaser .textbox input, #teaser .textbox_hover input, #teaser .textbox_focus input
+{	
+	height:37px;
+	border:2px solid #FFCC00 !important;
+	font-family:Tahoma !important;
+	font-size:24px !important;
+	font-weight:bold !important;
+	background:none !important;	
+	background-color: #FFF !important;
+	width:100%;
+	text-align:center;
+}

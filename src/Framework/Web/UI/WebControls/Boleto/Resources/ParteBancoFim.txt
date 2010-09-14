@@ -1,0 +1,16 @@
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tr>
+        <td class="ct">
+            &nbsp;</td>
+        <td class="ct" valign="top" align="center" width="150">
+            &nbsp;Autenticação Mecânica</td>
+    </tr>
+    <tr>
+        <td>
+            <br>
+            <span id="CodBarras">[=CodigoBarras=]</span>
+        </td>
+        <td class="cp" valign="bottom" align="right">
+            &nbsp;Ficha de Compensação&nbsp;</td>
+    </tr>
+</table>

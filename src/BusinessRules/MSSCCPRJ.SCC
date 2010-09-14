@@ -1,0 +1,5 @@
+SCC = This is a source code control file
+
+[BusinessRules.csproj]
+SCC_Aux_Path = http://server-01/VaultService|Sidney Filho:2
+SCC_Project_Name = $/InfoControl/Trunk/BusinessRules

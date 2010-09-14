@@ -1,0 +1,204 @@
+html, body
+{
+	font-family: Segoe UI, Arial, Trebuchet MS;
+	font-size: 16px;
+	margin: 0em;
+	padding: 0em;	
+	letter-spacing: -1px;
+	color:#333333;
+}
+
+
+h1{ font-size: 200% !important;	}
+h2{	font-size: 175% !important;	}
+h3{	font-size: 150% !important;	}
+h4{	font-size: 130% !important;	}
+
+p, h1, h2, h3, h4, ul
+{
+	margin: 0px 0px 8px 0px;	
+	font-weight:normal;
+	
+}
+
+small{	font-size: 80%;}
+
+
+
+blockquote
+{
+	background:url(../img/blockquote.gif) no-repeat;
+	padding:18px 18px 38px 48px;	
+	margin:0px;
+	color:#880;
+	font-style:italic;	
+}
+
+a
+{
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+/*---------------------------------------------------------------------------
+Header
+----------------------------------------------------------------------------*/
+.hDat11
+{
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	margin-top: 1px;
+}
+
+
+/*---------------------------------------------------------------------------
+Content
+----------------------------------------------------------------------------*/
+.cTxt11, .cTxt21, .cTxt31, .cTxt41, .cTxt51 { color: #00CCD0; }
+.cTxt12, .cTxt22, .cTxt32, .cTxt42, .cTxt52 { color: #006666; }
+.cTxt13, .cTxt23, .cTxt33, .cTxt43, .cTxt53 { color: #555555; }
+.cTxt14, .cTxt24, .cTxt34, .cTxt44, .cTxt54 { color: #FF9933; }
+.cTxt15, .cTxt25, .cTxt35, .cTxt45, .cTxt55 { color: #999999; }
+
+
+.cTxt11, .cTxt12, .cTxt13, .cTxt14, .cTxt15 { font-size: 200%; }
+.cTxt21, .cTxt22, .cTxt23, .cTxt24, .cTxt25 { font-size: 175%; }
+.cTxt31, .cTxt32, .cTxt33, .cTxt34, .cTxt35 { font-size: 150%; }
+.cTxt41, .cTxt42, .cTxt43, .cTxt44, .cTxt45 { font-size: 130%; }
+.cTxt51, .cTxt52, .cTxt53, .cTxt54, .cTxt55 { font-size: 100%; }
+
+
+dfn { }
+
+
+
+
+.cLnk11
+{
+	color: #006666;
+	border-bottom: 1px dashed #006666;
+	text-decoration: none;
+}
+
+
+.cLnk11:hover
+{
+	border-bottom: 1px solid #006666;
+	text-decoration: none;
+}
+
+
+
+
+
+
+.cTab11
+{
+}
+
+.cTab11 tr td
+{
+	border: solid 1px #004A4D;
+}
+
+.cTab11 .Header, .cTab11 th
+{
+	background-color: #004A4D;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.cTab11 .Footer
+{
+}
+
+.cTab11 .AlternatingRows
+{
+	background-color: #EEEEEE;
+}
+
+.cTab11 tr
+{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------
+Impulse
+----------------------------------------------------------------------------*/
+.iTxt11
+{
+	color: #CCDDDD;
+}
+.iTxt11b
+{
+	color: #CCDDDD;
+	font-weight: bold;
+}
+
+.iTxt21, .iTxt21b
+{
+	color: #CCDDDD;
+	font-size: 10pt;
+}
+.iTxt21b
+{
+	font-weight: bold;
+}
+
+
+.iLnk21, .iLnk21b
+{
+	color: #FFFFFF;
+	font-size: 10pt;
+}
+.iLnk21b
+{
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.iLnk21b:hover
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/*---------------------------------------------------------------------------
+Footer
+----------------------------------------------------------------------------*/
+
+.fTxt11
+{
+	color: #666;
+}
+
+.fLnk11
+{
+	color: #666;
+	text-decoration: none;
+}
+
+.fLnk11:hover
+{
+	color: #666;
+	text-decoration: underline;
+}
+
+.footer small
+{
+	color: #999;
+}

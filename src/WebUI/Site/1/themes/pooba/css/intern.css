@@ -1,0 +1,148 @@
+@import url("../../vivina/css/intern.css");
+@import url("../../vivina/css/_format.css");
+@import url("../../vivina/css/_global.css");
+
+/*---------------------------------------------------------------------------
+Geral
+----------------------------------------------------------------------------*/
+
+.bgLeft
+{
+	background: url(../img/bgLeft.gif) no-repeat;
+	background-position:-200px 0px;
+	background-attachment: fixed;
+	z-index: 2;
+	vertical-align: top;
+}
+.bgRight
+{
+	background: url(../img/bgRight.gif) no-repeat;
+	background-position:133% 0px;
+	background-attachment: fixed;
+	z-index: 2;
+	vertical-align: top;
+}
+
+
+
+/*---------------------------------------------------------------------------
+Header
+----------------------------------------------------------------------------*/
+.header
+{
+	height: 84px;	
+	
+}
+
+.header .logo
+{
+	background: url(../img/logo.gif) no-repeat;	
+	height:53px;
+	width: 186px;
+	float:none;
+}
+
+.header .login
+{
+	padding: 8px;
+}
+
+.header .login .username input, .header .login .password input
+{
+	width:120px;
+}
+
+.header .right
+{
+	float: right;
+	margin-right:0px;
+	width:auto;
+}
+
+.header .products
+{
+	top:0px;	
+	text-align:center;		
+	width:auto;	
+	margin:auto;
+}
+
+.header .menu
+{
+	margin-left: 0px;
+	float: left;
+}
+
+.header  .menu ul
+{
+	padding-left: 0px;
+}
+
+
+.header .aba
+{
+	width:300px;
+	position:absolute;
+	margin-left: 265px;
+}
+
+/*---------------------------------------------------------------------------
+Menu
+----------------------------------------------------------------------------*/
+
+.header .actions a
+{
+	margin: 0px 1px 0px 1px;
+	color: #0099A0;
+	text-decoration: none;
+	display: inline;
+	font-size: 12px;
+}
+
+
+#post-53 .breadcrumbs, #post-53 .head, #post-53 .foot, #post-53 .seeMore
+{
+	display:none;
+}
+
+.outdoor 
+{
+	background-position:right top;
+	background-image:url(../img/outdoor.jpg);
+	background-repeat:no-repeat;
+	height:330px;
+	margin-top:-10px;
+}
+
+.outdoor .pitch
+{
+	width:290px;
+	display:block;
+	margin-left:0px;
+	padding-top:20px;
+}
+
+.outdoor h1
+{
+	font-size:32px;
+	letter-spacing:-2px;
+	line-height:1em;
+	font-weight:normal;
+	color:#055;
+}
+
+.outdoor h2
+{
+	font-size:16px;
+	font-weight:normal;
+	line-height:16px;
+	margin:20px 0px;
+	color:#099;
+}
+
+.outdoor h3
+{
+	font-size:13px;
+	font-weight:normal;
+	color:#999;
+}

@@ -1,0 +1,16 @@
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tr>
+        <td width="150">
+            <img src="[=sImgBancoLogoTipo=]"></td>
+        <td valign="bottom" width="2">
+            <img src="[=sImgBarra=]" height="22" width="2" border="0"></td>
+        <td valign="bottom" align="center" width="75" class="nbanco">
+            <span id="nb2">[=BancoCodigoCompleto=]</span>
+        </td>
+        <td valign="bottom" width="2">
+            <img height="22" src="[=sImgBarra=]" width="2" border="0"></td>
+        <td class="ld" valign="bottom" align="right">
+            &nbsp;Recibo do Sacado&nbsp;</td>
+    </tr>
+</table>
+

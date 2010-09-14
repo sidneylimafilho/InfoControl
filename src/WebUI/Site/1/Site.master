@@ -1,0 +1,81 @@
+<%@ Master Language='C#' AutoEventWireup='true' %>
+
+<%@ Register Src='~/site/_modules/Menu.ascx' TagName='Menu' TagPrefix='vfx' %>
+<%@ Register Src='~/site/_modules/Categories.ascx' TagName='Categories' TagPrefix='vfx' %>
+<%@ Register Src='~/site/_modules/FeedReader.ascx' TagName='FeedReader' TagPrefix='vfx' %>
+<%@ Register Src='~/site/_modules/Products.ascx' TagName='Products' TagPrefix='vfx' %>
+<%@ Register Src='~/site/_modules/Tags.ascx' TagName='Tags' TagPrefix='vfx' %>
+<%@ Register Src='~/site/_modules/Search.ascx' TagName='Search' TagPrefix='vfx' %>
+<%@ Register Src='~/App_Modules/AccessControl/Login.ascx' TagName='Login' TagPrefix='vfx' %>
+<%@ Register Src='~/site/_modules/WebPage.ascx' TagName='WebPage' TagPrefix='vfx' %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Vivina</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(duration=0)" />
+    <meta name='generator' content='Vivina InfoControl' />
+    <link rel="shortcut icon" href="themes/vivina/img/vivina.ico" type="image/x-icon" />
+    <link href="themes/vivina/css/intern.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID='head' runat='server'>
+    </asp:ContentPlaceHolder>
+   
+    <script type="text/javascript">        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script>
+    <script type="text/javascript">        try { var pageTracker = _gat._getTracker("UA-10596815-1"); pageTracker._trackPageview(); } catch (err) { }</script>
+</head>
+ <script type="text/javascript" src="<%=ResolveUrl("~")%>App_Shared/js/ScriptCombiner.ascx" ></script>
+<body>
+    <form id='form1' runat='server'>
+     <asp:ScriptManager ID="ScriptManager1" runat='server' EnablePageMethods='true'>
+                        <scripts>
+                            <asp:ScriptReference Path='~/App_Shared/js/jquery.js' />
+                            <asp:ScriptReference Path='~/App_Shared/js/jquery.validate.js' />
+                        </scripts>
+                    </asp:ScriptManager>
+    <div class="bgLeft">
+        <div class="bgRight">
+            <div class="headerConteiner">
+                <div class="header">
+                    <a href="home.aspx" class="logo"></a>
+                    <div class="right">
+                        <div class="aba">
+                            <div class="products">
+                                <a href="/site/" class="selected">Vivina</a> <a href="Infocontrol,53.aspx">InfoControl</a><a href="/site/Blog-da-Vivina,F3E530499FBA0873.aspx?type=blog">Pooba</a><a href="/site/Blog-da-Vivina,F3E530499FBA0873.aspx?type=blog">Blog</a>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div id="ctl00_Menu1_RadMenu1" class="RadMenu RadMenu_Outlook ">
+                                <!-- 2008.1.515.35 -->
+                                <ul class="rmHorizontal rmRootGroup">
+                                    <li class="rmItem rmFirst rmTemplate "><a href="Empresa,3CCDAD1407BAD0BD.aspx" class="menuItem">Sobre a Vivina</a> </li>
+                                    <li class="rmItem rmFirst rmTemplate "><a href="Porque-Webware,1772233EBB4086F5.aspx" class="menuItem">Porque Webware?</a> </li>
+                                    <li class="rmItem rmFirst rmTemplate "><a href="Clientes,170529D16C7DA30C.aspx" class="menuItem">Clientes</a> </li>
+                                    <li class="rmItem rmLast rmTemplate "><a href="Fale-Conosco,EE54ABC31D093F13.aspx" class="menuItem">Fale Conosco</a> </li>
+                                </ul>
+                                <input id="ctl00_Menu1_RadMenu1_ClientState" name="ctl00_Menu1_RadMenu1_ClientState" type="hidden" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentContainer">
+                <div class="content">
+                    <asp:ContentPlaceHolder ID='ContentPlaceHolder' runat='server' />
+                </div>
+            </div>
+            <div class="footerConteiner">
+                <div class="footer">
+                    <div class="copyright">
+                        <a href='http://www.vivina.com.br' class="logoVivina">&nbsp;</a><br />
+                        <small>Os nomes e marcas InfoControl, Pooba, Vivina est&atilde;o registradas para a Vivina Softhouse.<br />
+                            © 2009 - Todos os direitos reservados.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Termos-de-Utilizacao,7A2F7321446A1780.aspx" class="fLnk11">Termos de Utiliza&ccedil;&atilde;o</a> | <a href="Politica-de-Privacidade,8E954284957DBF6D.aspx" class="fLnk11">Pol&iacute;tica de Privacidade</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <vfx:Tags runat="server" />
+    <vfx:Categories  runat="server" />
+    </form>
+</body>
+</html>

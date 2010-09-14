@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap>
+  <siteMapNode url="~/InfoControl/StartPage.aspx">
+    <!-- 
+    
+    HOST
+    
+     
+    -->
+    <siteMapNode url="" title=" HOST" permissionRequired="Host" ImageCollapsed="host.gif" roles="HostAdmin" ImageHoverCollapsed="host_hover.gif"  ImageExpanded="host_hover.gif"  >
+      <siteMapNode url="~/InfoControl/Administration/BirthDayCustomers.aspx" title="Aniversário de clientes " description="" />
+      <siteMapNode url="~/InfoControl/Host/ScheduleTasks.aspx" permissionRequired="ScheduleTasks" title="Agendador de Tarefas" description="" />
+      <siteMapNode url="~/InfoControl/Host/Applications.aspx" permissionRequired="Application" title="Aplicação"  description="" />
+      <siteMapNode url="~/InfoControl/Host/Branch.aspx?TableName=Branch¨DataKeyName=BranchId¨Title=Ramo de Atividades" permissionRequired="Branch" title="Ramo de Atividades"  description="" />
+      <siteMapNode url="~/InfoControl/Host/Plans.aspx" permissionRequired="Plans" title="Planos"  description="" />
+      <siteMapNode url="~/InfoControl/Host/Packages.aspx" permissionRequired="Packages" title="Pacotes"  description="" />
+      <siteMapNode url="~/InfoControl/Host/Functions.aspx" permissionRequired="Functions" title="Funções"  description="" />
+
+      <siteMapNode url="~/InfoControl/Host/SystemParameters.aspx" permissionRequired="SystemParameters" title="Parâmetros do Sistema"  description="" />
+      <!--<siteMapNode url="~/InfoControl/Site/SiteMap.aspx"  title="Mapa do Site"  description="" />-->
+      <siteMapNode url="~/App_Modules/AccessControl/EventViewer.aspx" permissionRequired="Event" title="Visualizador de Eventos" />
+      <!--<siteMapNode url="~/InfoControl/Host/PaymentMethods.aspx" title="Formas de Pagamento" permissionRequired="PaymentMethod" description="" />-->
+      <siteMapNode url="~/InfoControl/Host/Companies.aspx" permissionRequired="CompanySearch" title="Empresas Cadastradas"  description="" />
+
+      <siteMapNode url="~/InfoControl/Host/EmailSender.aspx"  title="Envio de Email"  description="" />
+
+      
+
+      <siteMapNode url="" title="Tabelas de Apoio"  permissionRequired="SupportTables">
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=Sex¨DataKeyName=SexId¨Title=Sexo" title="Sexo" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=EducationLevel¨DataKeyName=EducationLevelId¨Title=Escolaridade" title="Escolaridade" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=MaritalStatus¨DataKeyName=MaritalStatusId¨Title=Estado Civil" title="Estado Civil" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=CustomerCallType¨DataKeyName=CustomerCallTypeId¨Title=Tipo de Chamado" permissionRequired="CustomerCalls" title="Tipo de Chamado" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=DocumentTemplateType¨DataKeyName=DocumentTemplateTypeId¨Title=Tipo de Documento" title="Tipo de Documento" roles=""  ></siteMapNode>
+
+
+
+        <!--<siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=SupplierCategory¨DataKeyName=SupplierCategoryId¨Title=Categoria de Fornecedor¨DataParameterKeyName=SupplierCategoryId"  title="Categoria de Fornecedor" roles=""  ></siteMapNode>-->
+
+
+        <!--<siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=WarrantyType¨DataKeyName=WarrantyTypeId¨Title=Tipo de garantia" title="Tipo de garantia" roles=""  ></siteMapNode>-->
+        <!--<siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ContractPeriod¨DataKeyName=ContractPeriodId¨Title=Periodo de contrato" title="Periodo de contrato" roles=""  ></siteMapNode>-->
+        <!--<siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ContractType¨DataKeyName=ContractTypeId¨Title=Tipos de contrato" permissionRequired="Contracts"  title="Tipos de contrato" roles=""  ></siteMapNode>-->
+
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ContractStatus¨DataKeyName=ContractStatusId¨Title=Status de contrato" title="Status de contrato" roles=""  ></siteMapNode>
+        <siteMapNode url="" title="Recursos Humanos"  >
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=Bond¨DataKeyName=BondId¨Title=Vinculo" title="Vinculo" roles=""  ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=Shift¨DataKeyName=ShiftId¨Title=Turno" title="Turno" roles=""  ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=WorkJourney¨DataKeyName=WorkJourneyId¨Title=Jornada de Trabalho" title="Jornada de Trabalho" roles=""  ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=Syndicate¨DataKeyName=SyndicateId¨Title=Sindicato" title="Sindicatos" roles="" ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=AccountingPlanType¨DataKeyName=AccountingPlanTypeId¨Title=Tipo de Plano de Contas"  permissionRequired="AccountPlan"  title="Tipo de Plano de Contas" roles="" ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=Alienation¨DataKeyName=AlienationId¨Title=Tipo de Afastamento" title="Tipo de Afastamento" roles="" ></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="" title="Jurídico"  >
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ProcessAction¨DataKeyName=ProcessActionId¨Title=Ação" title="Ação" roles=""  ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ProcessArea¨DataKeyName=ProcessAreaId¨Title=Área" title="Área" roles=""  ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ProcessRite¨DataKeyName=ProcessRiteId¨Title=Rito" title="Rito" roles=""  ></siteMapNode>
+        </siteMapNode>
+        <siteMapNode url="" title="Serviços"  >
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ServiceOrderType¨DataKeyName=ServiceOrderTypeId¨Title=Tipo de Serviço" title="Tipo de Serviço" roles="" ></siteMapNode>
+          <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=ServiceOrderStatus¨DataKeyName=ServiceOrderStatusId¨Title=Status do Serviço" title="Status do Serviço"  roles=""  ></siteMapNode>
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="" title="Relatórios">
+        <siteMapNode url="~/InfoControl/Host/Reports.aspx" permissionRequired="ReportsHost" title="Relatórios Cadastrados" description=""   />
+        <siteMapNode url="~/App_Modules/Reports/dynamicReports.aspx" title="Esquema da tabela"  permissionRequired="ReportAdmin"  ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="" title="Site">
+        <siteMapNode url="~/InfoControl/Host/SiteTemplates.aspx" title="Modelos de sites"  permissionRequired="SiteBuilder"></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="" title="Tarefas" permissionRequired="Tasks">
+        <siteMapNode url="~/InfoControl/Host/GenericEntry.aspx?TableName=TaskStatus¨DataKeyName=TaskStatusId¨Title=Tipo de Tarefa"   permissionRequired="Tasks"  title="Tipo de Tarefa" roles=""></siteMapNode>
+      </siteMapNode>
+
+
+    </siteMapNode>
+    <!-- 
+    
+    
+    ADMINISTRAÇÃO
+    
+    
+    -->
+    <siteMapNode title=" Administração" permissionRequired="Administration"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Administracao,75.aspx"
+                 ImageCollapsed="administration.gif" ImageHoverCollapsed="administration_hover.gif" ImageExpanded="administration_hover.gif" >
+
+      <siteMapNode url="" title="Clientes" >
+        <siteMapNode url="~/InfoControl/Administration/Customers.aspx" permissionRequired="Customers" title="Cadastro"  description=""  />
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=CustomerType¨DataKeyName=CustomerTypeId¨Title=Tipos de cliente" permissionRequired="Customers"  title="Tipos de cliente" roles="" ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/InfoControl/CompanyConfiguration.aspx" permissionRequired="CompanyConfiguration" title="Configurações" description="" />
+      <siteMapNode url="~/InfoControl/Administration/Companies.aspx" permissionRequired="Companies" title="Empresas"  description="" />
+
+      <siteMapNode url="" title="Meu InfoControl">
+        <siteMapNode url="~/Site/CustomerCentral.aspx?host=true" title="Central do Cliente" roles="" ></siteMapNode>
+        <siteMapNode url="~/InfoControl/Administration/MyInfoControl/Statements.aspx" title="Extratos" roles="" ></siteMapNode>
+
+        <!-- <siteMapNode url="~/InfoControl/Administration/MyInfoControl/Billings.aspx" permissionRequired="Billing" title="Pagamentos / Boletos" roles="" ></siteMapNode>  -->
+
+        <!--   <siteMapNode url="~/InfoControl/Administration/MyInfoControl/Boletu.aspx" permissionRequired="Boletu" title="Gerar Boleto" roles="" ></siteMapNode> -->
+        <siteMapNode url="~/InfoControl/Administration/MyInfoControl/Upgrade.aspx" permissionRequired="Upgrade"  title="Upgrade" roles="" ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/InfoControl/Administration/Representants.aspx" permissionRequired="Representants" title="Representantes"  description="" />>
+      <siteMapNode url="" title="Transportadoras" >
+        <siteMapNode url="~/InfoControl/Administration/Transporters.aspx" permissionRequired="Transporters"  title="Cadastro"  description=""  />
+        <siteMapNode url="~/InfoControl/Administration/Transporter_Search.aspx" permissionRequired="Transporters"  title="Pesquisa de Transportadora"  description=""  />
+      </siteMapNode>
+    </siteMapNode>
+    <!-- 
+    
+    
+    CRM
+    
+    
+    -->
+    <siteMapNode title=" CRM"  permissionRequired="CRM"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/CRM,81.aspx"
+                 ImageCollapsed="crm.gif"  ImageHoverCollapsed="crm_hover.gif" ImageExpanded="crm_hover.gif" >
+
+      <siteMapNode url="~/InfoControl/CRM/CustomerFollowupActions.aspx"  title="Ações de venda"  description="" permissionRequired="CustomerFollowupActions"    />
+      <siteMapNode url="~/InfoControl/Administration/Customers.aspx?2" permissionRequired="Customers" title="Clientes" roles=""  ></siteMapNode>
+      <siteMapNode url="~/InfoControl/CRM/Contacts.aspx" permissionRequired="Contacts" title="Contatos"  description=""  />
+      <siteMapNode url="~/InfoControl/CRM/CustomerCalls.aspx"  title="Chamados"  description="" permissionRequired="CustomerCalls"    />
+      <siteMapNode url="~/InfoControl/CRM/CustomerFollowups.aspx"  title="Followup"  description=""  permissionRequired="CustomerFollowups"  />
+      <siteMapNode url="~/InfoControl/POS/Prospects.aspx" title="Propostas" permissionRequired="ProspectBuilder" roles=""></siteMapNode>
+    </siteMapNode>
+    <!-- 
+    
+    
+    VENDAS
+    
+    
+    -->
+    <siteMapNode title=" Vendas"  permissionRequired="POS"
+                 startPageUrl="http://vivina.com.br/site/Ajuda/InfoControl-ERP/Vendas,80.aspx"
+                 ImageCollapsed="POS.gif"  ImageHoverCollapsed="POS_hover.gif" ImageExpanded="POS_hover.gif" >
+
+      <siteMapNode url="" title="Caixa" roles="">
+        <siteMapNode url="~/InfoControl/POS/DropPayout.aspx" permissionRequired="DropPayout" title="Lançamentos"  description=""   />
+        <siteMapNode url="~/InfoControl/POS/DropPayoutReport.aspx" permissionRequired="DropPayout" title="Fechamento"  description=""   />
+      </siteMapNode>
+      <siteMapNode url="~/InfoControl/POS/AbcCurve.aspx"  title="Curva ABC"  description="" permissionRequired="AbcCurve"  />
+      <siteMapNode url="" title="Estoque" permissionRequired="Inventory" roles="">
+        <siteMapNode url="~/InfoControl/Administration/Deposits.aspx" permissionRequired="Deposits" title="Cadastro"  description="" />
+
+        <siteMapNode url="~/InfoControl/POS/StockDeposit.aspx" permissionRequired="StockDeposit" title="Entrada no Estoque"  description=""   />
+        <siteMapNode url="~/InfoControl/POS/StockDrop.aspx" permissionRequired="StockDrop" title="Baixa no Estoque"  description=""   />
+        <siteMapNode url="~/InfoControl/POS/Inventories.aspx" permissionRequired="Inventory" title="Inventário"  description=""   />
+        <siteMapNode url="~/InfoControl/POS/Exchange.aspx" permissionRequired="Devolution" title="Troca"  description=""   />
+        <siteMapNode url="" title="Transferência"  >
+          <siteMapNode url="~/InfoControl/POS/StockTransferSEND.aspx" permissionRequired="StockTransfer" title="Envio"  description=""   />
+          <siteMapNode url="~/InfoControl/POS/StockTransferRECEIVE.aspx" permissionRequired="StockTransfer" title="Recebimento"  description=""   />
+          <siteMapNode url="~/InfoControl/POS/StockTransfer.aspx" permissionRequired="StockTransfer" title="Produtos Enviados"  description=""   />
+          <siteMapNode url="~/InfoControl/POS/StockRMA.aspx" permissionRequired="RMA" title="R M A"  description=""   />
+          <siteMapNode url="~/InfoControl/POS/StockRMASupplier.aspx" permissionRequired="RMA" title="Produtos Aguardando R M A"  description=""   />
+        </siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="" title="Produtos" >
+        <siteMapNode url="~/InfoControl/Administration/Products.aspx" permissionRequired="Products" title="Cadastro"  description=""    />
+        <siteMapNode url="~/InfoControl/Administration/Categories.aspx" permissionRequired="Categories" title="Categorias"  description=""    />
+      </siteMapNode>
+      <siteMapNode url="~/InfoControl/POS/SaleList.aspx" permissionRequired="Sale"  title="Histórico de Vendas" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/POS/MapOfSales.aspx" title="Mapa de Vendas" permissionRequired="MapOfSales" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/POS/Sale.aspx" permissionRequired="Sale" title="Ponto de Venda" roles=""></siteMapNode>
+    </siteMapNode>
+    <!-- 
+    
+    
+    RECURSOS HUMANOS
+    
+    
+    -->
+    <siteMapNode title=" Recursos Humanos" permissionRequired="RH"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Recursos-Humanos,82.aspx"
+                 ImageCollapsed="humanResources.gif"  ImageHoverCollapsed="humanResources_hover.gif"  ImageExpanded="humanResources_hover.gif" >
+
+      <siteMapNode url="~/InfoControl/RH/EmployeeWorkedTime.aspx" permissionRequired="EmployeeWorkedTime"  title="Controle de Horário" roles=""></siteMapNode>
+
+
+
+      <siteMapNode url="" title="Funcionários" >
+
+        <siteMapNode url="~/InfoControl/RH/Employees.aspx" permissionRequired="Employee"  title="Cadastro" roles=""></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=AdditionalInformation¨DataKeyName=AddonInfoId¨Title=Campos Adicionais" permissionRequired="Employee" title="Campos Adicionais" roles=""></siteMapNode>
+
+        <siteMapNode url="~/InfoControl/RH/AdditionalInfo.aspx?TableName=AdditionalInformationData¨DataKeyName=AddonInfoDataId¨Title=Dados / Conteúdo" title="Conteúdo dos Campos" roles=""></siteMapNode>
+
+      </siteMapNode>
+
+
+      <siteMapNode url="~/InfoControl/RH/OrganizationLevel.aspx" permissionRequired="OrganizationalLevel" title="Organograma da Empresa" roles=""></siteMapNode>
+
+
+
+
+
+      <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=Post¨DataKeyName=PostId¨Title=Plano de Cargos" permissionRequired="Post"  title="Plano de Cargos" roles=""></siteMapNode>
+
+    </siteMapNode>
+    <!-- 
+    
+    
+    FINANCEIRO
+    
+    
+    -->
+    <siteMapNode title=" Financeiro"  permissionRequired="Accounting"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Financeiro,126.aspx"
+                 ImageCollapsed="Accounting.gif"  ImageHoverCollapsed="Accounting_hover.gif"  ImageExpanded="Accounting_hover.gif" >
+
+      <siteMapNode url="~/InfoControl/Accounting/CostCenter.aspx" permissionRequired="CostCenter"  title="Centro de Custos" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/AccountRegister.aspx"  title="Conciliação Bancária" roles="" permissionRequired="AccountRegister" ></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/Bills.aspx" permissionRequired="Bills" title="Contas a Pagar" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/Invoices.aspx" permissionRequired="Invoices" title="Contas a Receber" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/CashMonthly.aspx" title="Fluxo de Caixa" ></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/CashFlow.aspx" title="Fluxo de Caixa Mensal" ></siteMapNode>
+
+      <siteMapNode title=" Contrato">
+        <siteMapNode url="~/InfoControl/Accounting/Contracts.aspx" permissionRequired="Contracts" title="Cadastro"  roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ContractType¨DataKeyName=ContractTypeId¨Title=Tipos de Contrato" permissionRequired="Contracts"  title="Tipos de Contrato" roles=""  ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/Accounts.aspx" title="Dados Bancários" permissionRequired="Account" ></siteMapNode>
+
+      <siteMapNode url="~/InfoControl/Accounting/Receipts.aspx" permissionRequired="Receipt" title="Nota Fiscal"  description="" />
+      <siteMapNode url="~/InfoControl/Accounting/FinancierOperations.aspx" title="Formas de Pagamento" permissionRequired="FinancierOperation" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/AccountingPlan.aspx" permissionRequired="AccountingPlan"  title="Plano de Contas" roles=""></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/ExpenditureAuthorizations.aspx"   title="Autorização de Despesas" roles=""></siteMapNode>
+
+    </siteMapNode>
+    <!-- 
+    
+    
+    COMPRAS
+    
+    
+    -->
+    <siteMapNode title=" Compras" permissionRequired="Purchasing"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Compras,79.aspx"
+                 ImageCollapsed="purchasing.gif" ImageHoverCollapsed="purchasing_hover.gif" ImageExpanded="Purchasing_hover.gif">
+
+      <siteMapNode url="~/InfoControl/Purchasing/PurchaseRequests.aspx" title="Requisição de Compra" description=""  />
+      <siteMapNode url="~/InfoControl/Purchasing/PurchaseOrders.aspx" title="Processo de Compra" permissionRequired="PurchaseOrder" roles=""  ></siteMapNode>
+
+      <siteMapNode url="" title="Estoque" permissionRequired="Inventory" roles="">
+        <siteMapNode url="~/InfoControl/Administration/Deposits.aspx?2" permissionRequired="Deposits" title="Cadastro"  description="" />
+        <siteMapNode url="~/InfoControl/POS/StockDeposit.aspx?2" permissionRequired="StockDeposit" title="Entrada no Estoque"  description=""   />
+        <siteMapNode url="~/InfoControl/POS/StockDrop.aspx?2" permissionRequired="StockDrop" title="Baixa no Estoque"  description=""   />
+        <siteMapNode url="~/InfoControl/POS/Inventories.aspx?2" permissionRequired="Inventory" title="Inventário"  description=""   />
+        <siteMapNode url="" title="Transferência"  >
+          <siteMapNode url="~/InfoControl/POS/StockTransferSEND.aspx?2" permissionRequired="StockTransfer" title="Envio"  description=""   />
+          <siteMapNode url="~/InfoControl/POS/StockTransferRECEIVE.aspx?2" permissionRequired="StockTransfer" title="Recebimento"  description=""   />
+          <siteMapNode url="~/InfoControl/POS/StockTransfer.aspx?2" permissionRequired="StockTransfer" title="Produtos Enviados"  description=""   />
+        </siteMapNode>
+
+      </siteMapNode>
+      <siteMapNode url="" title="Produtos" >
+        <siteMapNode url="~/InfoControl/Administration/Products.aspx?2" permissionRequired="Products" title="Cadastro"  description=""    />
+        <siteMapNode url="~/InfoControl/Administration/Categories.aspx?2" permissionRequired="Categories" title="Categorias"  description=""    />
+      </siteMapNode>
+
+      <siteMapNode url="" permissionRequired="Suppliers" title="Fornecedores"  description="">
+        <siteMapNode url="~/InfoControl/Administration/Suppliers.aspx?2" permissionRequired="Suppliers" title="Cadastro"  description="" />
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=SupplierCategory¨DataKeyName=SupplierCategoryId¨Title=Categoria de Fornecedor¨DataParameterKeyName=SupplierCategoryId" roles="" title="Categoria"   />
+      </siteMapNode>
+
+      <siteMapNode url="~/InfoControl/Purchasing/PurchaseCompetencyValue.aspx" permissionRequired="PurchaseCompetencyValue" title="Controle de Competência" roles="" ></siteMapNode>
+
+    </siteMapNode>
+    <!-- 
+    
+    
+    SERVIÇOS
+    
+    
+    -->
+    <siteMapNode title=" Serviços" permissionRequired="Services"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Servicos,93.aspx"
+                 ImageCollapsed="services.gif"  ImageHoverCollapsed="services_hover.gif" ImageExpanded="services_hover.gif" >
+
+      <siteMapNode url="~/InfoControl/CRM/CustomerCalls.aspx?4"  title="Chamados"  description="" permissionRequired="CustomerCalls"    />
+      <siteMapNode title="Configurações" permissionRequired="ServiceOrders" >
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderTests¨DataKeyName=ServiceOrderTestId¨Title=Testes" permissionRequired="ServiceOrders"  title="Roteiro de Teste" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderEquipmentDamage¨DataKeyName=ServiceOrderEquipmentDamageId¨Title=Defeitos de equipamentos" permissionRequired="ServiceOrders"    title="Defeitos de equipamentos" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderProductDamage¨DataKeyName=ServiceOrderProductDamageId¨Title=Defeitos de produtos" permissionRequired="ServiceOrders"    title="Defeitos de peças" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderInstallType¨DataKeyName=ServiceOrderInstallTypeId¨Title=Tipo de Instalacao"  permissionRequired="ServiceOrders"   title="Tipo de Instalação" roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderHaltType¨DataKeyName=ServiceOrderHaltTypeId¨Title=Tipo de Corte"  title="Tipo de Corte" permissionRequired="ServiceOrders"   roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderProductType¨DataKeyName=ServiceOrderProductTypeId¨Title=Tipo de Produto"  title="Tipo de Produto" permissionRequired="ServiceOrders"   roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceType¨DataKeyName=ServiceTypeId¨Title=Tipo de Servico"  title="Tipo de Serviço" permissionRequired="ServiceOrders"   roles=""  ></siteMapNode>
+        <siteMapNode url="~/InfoControl/GenericEntry.aspx?TableName=ServiceOrderType¨DataKeyName=ServiceOrderTypeId¨Title=Tipo de Ordem de Servico"  title="Tipo de Ordem de Serviço" permissionRequired="ServiceOrders"   roles=""  ></siteMapNode>
+      </siteMapNode>
+      <siteMapNode url="~/InfoControl/Services/ServiceOrderBook.aspx" title="Controle do Talão de OS" permissionRequired="ServiceOrderBook"></siteMapNode>
+      <siteMapNode url="~/InfoControl/Services/ServiceOrders.aspx" title="Ordem de serviço" permissionRequired="ServiceOrders" ></siteMapNode>
+      <siteMapNode url="~/InfoControl/Services/Services.aspx" title="Serviço" permissionRequired="Service"  ></siteMapNode>
+
+      <siteMapNode url="~/InfoControl/Services/Summary.aspx" title="Sumário"  permissionRequired="Service"  ></siteMapNode>
+
+
+    </siteMapNode>
+    <!-- 
+    
+    
+    SITE
+    
+    
+    -->
+    <siteMapNode title=" Site" permissionRequired="WebSite"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Site,34.aspx"
+                 ImageCollapsed="WebsiteSettings.gif"  ImageHoverCollapsed="WebsiteSettings_hover.gif" ImageExpanded="WebsiteSettings_hover.gif" >
+      <siteMapNode url="~/InfoControl/Site/WebPages.aspx" permissionRequired="WebPages" title="Páginas" />
+    </siteMapNode>
+    <!-- 
+    
+    
+    REPORTS
+    
+    
+    -->
+    <siteMapNode title=" Relatórios"
+                 permissionRequired="Reports"
+                 url="~/App_Modules/Reports/Dynamic/ReportGenerator.aspx"
+                 ImageCollapsed="reports.gif"
+                 ImageHoverCollapsed="reports_hover.gif"
+                 ImageExpanded="reports_hover.gif" ></siteMapNode>
+    <!-- 
+    
+    
+    CONTROLE DE ACESSO
+    
+    
+    -->
+    <siteMapNode title=" Controle de Acesso"
+                 startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Controle-de-Acesso,122.aspx"
+                 ImageCollapsed="accessControl.gif"  ImageHoverCollapsed="accessControl_hover.gif" ImageExpanded="accessControl_hover.gif" >
+      <siteMapNode url="~/App_Modules/AccessControl/ChangePassword.aspx" permissionRequired="ChangePassword" title="Alterar Minha Senha" />
+      <siteMapNode url="~/App_Modules/AccessControl/Roles.aspx" permissionRequired="Roles" title="Perfil"    description="" />
+      <siteMapNode url="~/App_Modules/AccessControl/Users.aspx" permissionRequired="Users" title="Usuários"   description="" />
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

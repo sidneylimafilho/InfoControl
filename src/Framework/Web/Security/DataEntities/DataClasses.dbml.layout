@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 11.125" name="DataClasses">
+  <DataContextMoniker Name="/MembershipDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bd699491-cfbd-41d8-a203-146d816a192d" absoluteBounds="3.5, 1, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/MembershipDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="aa239355-0172-4f1a-8740-8281b9d3b0fb" absoluteBounds="3.515, 1.46, 1.9700000000000002, 3.9031168619791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="57303fe7-67ff-44c6-8d2f-3972d3eb765c" absoluteBounds="6.25, 2.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/MembershipDataContext/UsersInRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c3b5ac4e-4594-4f8a-98e6-3083b70816cb" absoluteBounds="6.265, 2.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c695d117-bda3-42c4-8247-ad71113e0eda" absoluteBounds="0.625, 1, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/MembershipDataContext/Profile" />
+      <nestedChildShapes>
+        <elementListCompartment Id="634fd4cf-02b5-481e-9680-4d98d947e886" absoluteBounds="0.64, 1.46, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fbccaab0-3c0b-48aa-91c3-03c4f44d5419" absoluteBounds="6.25, 7.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MembershipDataContext/Permission" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a6f6a631-0bcd-4fac-9537-68f6fff1aeb2" absoluteBounds="6.265, 7.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f60666b1-20cf-4e96-bb6c-38a86d77bd8f" absoluteBounds="9.75, 5.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/MembershipDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ff66abb7-c4d8-492d-9cb7-7d7de9fe8134" absoluteBounds="9.765, 5.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e0fd64f-bb4a-4378-b0ed-4bf15a90d512" absoluteBounds="3.5, 9.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/MembershipDataContext/Function" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b796995c-80cd-4abd-a697-3d1fca12fcf3" absoluteBounds="3.515, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 2.94314697265625); (6.25 : 2.94314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MembershipDataContext/User/User_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="bd699491-cfbd-41d8-a203-146d816a192d" />
+        <classShapeMoniker Id="57303fe7-67ff-44c6-8d2f-3972d3eb765c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 2.94310628255208); (3.5 : 2.94310628255208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MembershipDataContext/Profile/Profile_User" />
+      <nodes>
+        <classShapeMoniker Id="c695d117-bda3-42c4-8247-ad71113e0eda" />
+        <classShapeMoniker Id="bd699491-cfbd-41d8-a203-146d816a192d" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 5.25); (10.75 : 2.88025024414062); (8.25 : 2.88025024414062)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MembershipDataContext/Role/Role_UsersInRole" />
+      <nodes>
+        <classShapeMoniker Id="f60666b1-20cf-4e96-bb6c-38a86d77bd8f" />
+        <classShapeMoniker Id="57303fe7-67ff-44c6-8d2f-3972d3eb765c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(10.75 : 7.16788981119792); (10.75 : 7.85886931510417); (8.25 : 7.85886931510417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MembershipDataContext/Role/Role_Permission" />
+      <nodes>
+        <classShapeMoniker Id="f60666b1-20cf-4e96-bb6c-38a86d77bd8f" />
+        <classShapeMoniker Id="fbccaab0-3c0b-48aa-91c3-03c4f44d5419" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.0104484049479); (7.25 : 10.0104484049479); (7.25 : 8.70359537760417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MembershipDataContext/Function/Function_Permission" />
+      <nodes>
+        <classShapeMoniker Id="3e0fd64f-bb4a-4378-b0ed-4bf15a90d512" />
+        <classShapeMoniker Id="fbccaab0-3c0b-48aa-91c3-03c4f44d5419" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c0a1a50e-a52d-42dc-b949-ac5b4f6f1b19" absoluteBounds="6.25, 4, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/MembershipDataContext/UserActivityLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="48a053c2-46bb-4f39-bf09-68d103447126" absoluteBounds="6.265, 4.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 4.73155843098958); (6.25 : 4.73155843098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/MembershipDataContext/User/User_UserActivityLog" />
+      <nodes>
+        <classShapeMoniker Id="bd699491-cfbd-41d8-a203-146d816a192d" />
+        <classShapeMoniker Id="c0a1a50e-a52d-42dc-b949-ac5b4f6f1b19" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

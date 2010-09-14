@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddProductInList" xml:space="preserve">
+    <value>Deve haver pelo menos uma linha com dados do produto</value>
+    <comment>Mensagem utilizada quando pelo menos um produto deve ser adicionado a uma lista para que a execução continue </comment>
+  </data>
+  <data name="DateBiggerThanCurrentDate" xml:space="preserve">
+    <value>A data selecionada deve ser menor que a data corrente </value>
+    <comment>Mensagem utilizada para exibir que uma data não pode ser maior que a data corrente(hoje)</comment>
+  </data>
+  <data name="DeletingRegisterWithForeignKey" xml:space="preserve">
+    <value>O registro não pode ser apagado pois há outros registros associados!</value>
+    <comment>Mensagem utilizada quando se tenta excluir um registro que tem outros registros relacionados</comment>
+  </data>
+  <data name="DuplicateCode" xml:space="preserve">
+    <value>Este código já está cadastrado</value>
+    <comment>Mensagem utilizada quando um valor que deve ser único é duplicado</comment>
+  </data>
+  <data name="ExistsChildCategories" xml:space="preserve">
+    <value>Existem outras categorias associadas à esta categoria!</value>
+    <comment>Mensagem utilizada quando existe uma categoria associada e não é possível exlcuir uma categoria</comment>
+  </data>
+  <data name="ExistsProductInCategory" xml:space="preserve">
+    <value>Existem produtos incluídos nessa categoria!</value>
+    <comment>Mensagem utilizada quando existe produtos associados a uma categoria que iria ser deletada</comment>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>A data selecionada não é válida</value>
+  </data>
+  <data name="InvalidDiscountValue" xml:space="preserve">
+    <value>O valor selecionado para o desconto não é válido</value>
+    <comment>Mensagem utilizada na tela de ponto de venda quando o valor selecionado no desconto não é válido</comment>
+  </data>
+  <data name="InvalidFormatFile" xml:space="preserve">
+    <value>O formato do arquivo selecionado não é válido</value>
+    <comment>Mensagem utilizada quando o upload de arquivo define um tipo válidode arquivo a ser importado</comment>
+  </data>
+  <data name="InvalidProductQuantity" xml:space="preserve">
+    <value>A quantidade deve ser maior que 0</value>
+    <comment>Mensagem utilizada quando a quantidade do produto selecionado deve ser maior que 0</comment>
+  </data>
+  <data name="nonexistentProduct" xml:space="preserve">
+    <value>Esse produto ainda não foi cadastrado</value>
+    <comment>Mensagem utilizada quando uma operação tenta ser realizada com um produto inexistente</comment>
+  </data>
+  <data name="nonexistentReceiptNumber" xml:space="preserve">
+    <value>Não existe venda associada ao nº fornecido</value>
+    <comment>Mensagem utilizada quando não existe venda associada a um número de nota fiscal fornecido</comment>
+  </data>
+  <data name="nonexistentService" xml:space="preserve">
+    <value>Esse serviço ainda não foi cadastrado</value>
+    <comment>Mensagem utilizada quando uma operação tenta ser realizada com um serviço  inexistente</comment>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Escolha uma categoria na árvore ao lado.</value>
+  </data>
+  <data name="SelectedValue" xml:space="preserve">
+    <value>Não existe um valor selecionado</value>
+    <comment>Mensagem utilizada quando é necessário a seleção de um valor qualquer para realizar uma operação</comment>
+  </data>
+  <data name="SelectProduct" xml:space="preserve">
+    <value>É necessário selecionar ao menos um produto</value>
+    <comment>Mensagem utilizada quando para executar a operação é necessário selecionar/adicionar um produto</comment>
+  </data>
+  <data name="SummaryParcelNotEqualDocumentValue" xml:space="preserve">
+    <value>O valor das parcelas não coincide com o valor da conta</value>
+    <comment>Mensagem utilizada quando o somatório  das parcelas é maior que o valor  da conta ou menor</comment>
+  </data>
+  <data name="unavailableEmployee" xml:space="preserve">
+    <value>Neste intervalo de tempo o funcionário não está disponivel!</value>
+    <comment>Mensagem utilizada quando o funcionário desejado não está disponível</comment>
+  </data>
+  <data name="UnselectedCustomer" xml:space="preserve">
+    <value>É necessário selecionar um cliente</value>
+    <comment>Mensagem utilizada quando não existe um cliente selecionado</comment>
+  </data>
+  <data name="UnselectedEventType" xml:space="preserve">
+    <value>Selecione o tipo do evento</value>
+    <comment>Mensagem utilizada quando o usuário não seleciona o tipo de evento</comment>
+  </data>
+  <data name="UnselectedItem" xml:space="preserve">
+    <value>É necessário selecionar um item</value>
+    <comment> Mensagem utilizada quando a seleção de um item é necessária para continuar a operação</comment>
+  </data>
+  <data name="InsertProduct" xml:space="preserve">
+    <value>É necessário inserir ao menos um produto.</value>
+    <comment>Mensagem utilizada quando não há nenhum produto em uma lista de produtos, é utilizada na tela de RMA</comment>
+  </data>
+  <data name="InvalidStockQuantity" xml:space="preserve">
+    <value>O estoque não pode ser negativo.</value>
+    <comment>Mensagem utilizada na tela de RMA quando o estoque é inválido</comment>
+  </data>
+  <data name="nonSentProductToRMA" xml:space="preserve">
+    <value>O produto não pode ser enviado para o RMA.</value>
+    <comment>Mensagem utilizada na tela de RMA quando a operação de envio não foi bem sucedida</comment>
+  </data>
+  <data name="ExistentMail" xml:space="preserve">
+    <value>Operação não concluída, e-mail já está cadastrado no sistema</value>
+    <comment>Mensagem utilizada quando o email ja esta cadastrado no sistema</comment>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>Operação não concluída, senha inválida.</value>
+    <comment>Mensagem utilizada quando a senha está incorreta</comment>
+  </data>
+  <data name="nonExistentCPF" xml:space="preserve">
+    <value>Este CPF não encontra - se cadastrado.</value>
+    <comment>Mensage utilizada na tela de profile e exibida quando o cpf buscado não existe na base de dados.</comment>
+  </data>
+  <data name="InvalidReceiptNumber" xml:space="preserve">
+    <value>O número informado para a nota fiscal já existe na base de dados</value>
+    <comment>e nota fiscal já existe na base de dados</comment>
+  </data>
+  <data name="UnselectedEmployee" xml:space="preserve">
+    <value>É necessário selecionar um empregado</value>
+    <comment>Mensagem utilizada quando é necessário selecionar um advogado</comment>
+  </data>
+  <data name="UnselectedLawyer" xml:space="preserve">
+    <value>É necessário selecionar um advogado</value>
+  </data>
+  <data name="InsertService" xml:space="preserve">
+    <value>É necessário inserir pelo menos um serviço</value>
+    <comment>Mensage utilizada na tela de ordem de serviço, para alertar ao usuário que é necessário inserir no minimo um seviço para prosseguir com a operação</comment>
+  </data>
+  <data name="nonExistentSale" xml:space="preserve">
+    <value>Venda inexistente.</value>
+  </data>
+  <data name="InvalidCostCenterName" xml:space="preserve">
+    <value>É necessário selecionar um nome para o centro de custo.</value>
+    <comment>Mensagem utilizada quando nenhum nome foi informado para o centro de custo</comment>
+  </data>
+  <data name="UnselectedAccountPlan" xml:space="preserve">
+    <value>É necessário selecionar um plano de contas</value>
+    <comment>Mensagem utilizada quando nenhum plano de contas foi selecionado</comment>
+  </data>
+  <data name="CompanyAlreadyExist" xml:space="preserve">
+    <value>A empresa já se encontra cadastrada no sistema !</value>
+    <comment>Mensagem utilizada quando a empresa já está cadastrada no sistema</comment>
+  </data>
+  <data name="AdministratorCPFAlreadyExist" xml:space="preserve">
+    <value>O CPF deste administrador já está cadastrado no nosso sistema !</value>
+    <comment>Mensagem utilizada quando o CPF do administrador já existe no sistema</comment>
+  </data>
+  <data name="AdministratorEmailAlreadyExist" xml:space="preserve">
+    <value>O E-mail para este Administrador já está cadastrado no nosso sistema !</value>
+    <comment>a quando o e-mail informado já esta associado a uma conta de administrador</comment>
+  </data>
+  <data name="CNPJAlreadyExist" xml:space="preserve">
+    <value>Este CNPJ já está cadastrado no nosso sistema!</value>
+    <comment>Mensagem utilizada quando o CNPJ informado já está cadastrado</comment>
+  </data>
+  <data name="InvalidCompanyName" xml:space="preserve">
+    <value>O campo Razão social deve ser preenchido!</value>
+    <comment>Mensagem utilizada quando o campo razão social deve ser preenchido</comment>
+  </data>
+  <data name="InvalidUserPassword" xml:space="preserve">
+    <value>Senha inválida! A senha deve ter pelo menos 6 caracteres composto por numeros, letras e simbolos!</value>
+    <comment>Mensagem utilizada quando a senha informada não é valida</comment>
+  </data>
+  <data name="InvalidAccountPlanName" xml:space="preserve">
+    <value>É necessário selecionar um nome para o plano de contas</value>
+    <comment>Mensagem utilizada quando o nenhum nome para o plano de contas foi selecionado</comment>
+  </data>
+  <data name="UnselectedCostCenter" xml:space="preserve">
+    <value>É necessário selecionar um centro de custo</value>
+    <comment>Mensagem utilizada quando o centro de custo não foi selecionado</comment>
+  </data>
+  <data name="ExistUser" xml:space="preserve">
+    <value>O usuário selecionado já foi adicionado</value>
+    <comment>Mensagem utilizada para informar que um usuário já foi adicionado no determinado contexto</comment>
+  </data>
+  <data name="InvalidBillAmount" xml:space="preserve">
+    <value>O valor da conta à pagar deve ser o mesmo valor do somatorio das parcelas</value>
+    <comment>Mensagem utilizada quando o valor da conta à pagar deve ser igual ao somatorio da parcela</comment>
+  </data>
+  <data name="ContractGeneratedAsdepend" xml:space="preserve">
+    <value>O Contrato Foi Gerado com o status Dependente pois o cliente não possui limite de crédito suficiente!</value>
+    <comment>Mensagem utilizada quando o contrato foi gerado com o status dependente.</comment>
+  </data>
+  <data name="CustomerCreditLimitInvalid" xml:space="preserve">
+    <value>O Status do contrato não pode ser Aprovado pois o Cliente não possui limite de crédito suficiente!</value>
+    <comment>Mensagem utilizada quando o contrato não pode ser aprovado</comment>
+  </data>
+  <data name="NonExistentParcel" xml:space="preserve">
+    <value>É necessário adicionar ao menos uma parcela!</value>
+    <comment>Mensagem utilizada quando não existe nenhuma parcela cadastrada na operação</comment>
+  </data>
+  <data name="InvalidBank" xml:space="preserve">
+    <value>A exportação para este banco ainda não foi implementada!</value>
+  </data>
+  <data name="AssociatedContractValueIsEmpty" xml:space="preserve">
+    <value>O Valor do contrato deve ser preenchido</value>
+    <comment>Mensagem utilizada quando o campo de valor de contrato associado está vazio. </comment>
+  </data>
+  <data name="DateExpiredAssociatedContractIsEmpty" xml:space="preserve">
+    <value>A data de vencimento do contrato deve ser preenchida</value>
+    <comment>Mensagem utilizada quando a data de vencimento do contrato associado está vazia</comment>
+  </data>
+  <data name="InvalidContractAssociatedAmount" xml:space="preserve">
+    <value>O Valor do contrato deve ser preenchido!</value>
+  </data>
+  <data name="InvalidContractAssociatedDueDate" xml:space="preserve">
+    <value>A data de vencimento do contrato deve ser preenchida!</value>
+  </data>
+  <data name="errorOnImportDocument" xml:space="preserve">
+    <value>Erro; o arquivo não se encontra nos padrões de importação.</value>
+    <comment>Mensagem utilizada quando ocorre erros durante a importação de documentos</comment>
+  </data>
+  <data name="UnselectedProductOrService" xml:space="preserve">
+    <value>É necessário selecionar um produto ou serviço</value>
+  </data>
+  <data name="NonExistentProductOrService" xml:space="preserve">
+    <value>O produto/serviço selecionado não existe</value>
+  </data>
+  <data name="UserCreatedIsValid" xml:space="preserve">
+    <value>Usuário criado com sucesso !</value>
+    <comment>Mensagem utilizada quando um usuário é criado com sucesso em um cadastro</comment>
+  </data>
+  <data name="ServiceOrderWithoutProductAndService" xml:space="preserve">
+    <value>Selecione ao menos um produto ou serviço!</value>
+    <comment>Mensagem utilizada quando uma ordem de serviço está sem items de servico e produto</comment>
+  </data>
+  <data name="PurchaseDocumentTemplateIsNull" xml:space="preserve">
+    <value>Essa empresa não tem modelo de ordem de compra!</value>
+    <comment>Mensagem utilizada quando uma empresa tenta gerar um documento com formato do modelo de ordem de compra que a mesma não tem</comment>
+  </data>
+  <data name="BudgetDocumentTemplateIsNull" xml:space="preserve">
+    <value>Esta empresa não possui modelo de proposta!</value>
+    <comment>Mensagem utilizada quando uma empresa tenta gerar um documento com formato do modelo de proposta que a mesma não tem</comment>
+  </data>
+  <data name="BudgetRequestTemplateIsNull" xml:space="preserve">
+    <value>Essa empresa não possui modelo de Solicitação de Orçamento</value>
+    <comment>Mensagem utilizada quando se tenta pedir cotação a um fornecedor mas não há modelo cadastrado</comment>
+  </data>
+  <data name="SupplyAuthorizationTemplateIsNull" xml:space="preserve">
+    <value>Essa empresa não possui modelo de Autorização de Fornecimento</value>
+    <comment>Mensagem utilizada quando se tenta autorizar o fornecedor entregar o produto ao funcionário, que a empresa pagará!</comment>
+  </data>
+  <data name="StartTimeIsBiggerThanEndTime" xml:space="preserve">
+    <value>A hora de início não pode ser maior que a hora de término!</value>
+    <comment>Mensagem utilizada quando é cadastrada uma tarefa com hora ínicio maior que hora fim.</comment>
+  </data>
+</root>

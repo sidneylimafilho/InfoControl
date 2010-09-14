@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+    <link rel="SHORTCUT ICON" href="/favicon.ico" type="image/x-icon" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        html, body
+        {
+            height: 100%;
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <link href="http://www.google.com/uds/css/gsearch.css" type="text/css" />
+    <link href="http://www.google.com/uds/solutions/localsearch/gmlocalsearch.css" type="text/css" />
+
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAVXLmADVM44A8_eXZMUB0tBTgDvb8JJWq-nNmV9NBBnTHlDnnRxQ8HcGrRUH-SdSPJPDz3paQQPV9RQ"
+        type="text/javascript"></script>
+
+    <script src="http://www.google.com/uds/api?file=uds.js&v=1.0&key=ABQIAAAAVXLmADVM44A8_eXZMUB0tBTgDvb8JJWq-nNmV9NBBnTHlDnnRxQ8HcGrRUH-SdSPJPDz3paQQPV9RQ"
+        type="text/javascript"></script>
+
+    <script src="http://www.google.com/uds/solutions/localsearch/gmlocalsearch.js?adsense=pub-8459461757728965,skyscraper&channel=8974504343"
+        type="text/javascript"></script>
+
+    <script type="text/javascript">
+   var tskey = "ae4907fdd4" ;
+   var chkar = [ ] ;					// Zips Found
+   var zipar = [ ] ;					// Zips Found
+   var marar = [ ] ;					// Marker Array
+   var lastclick = "" ;				// Last Clicked Point
+   var map ;
+   var searchControl ;
+   var custommap ;
+   var custommap2 ;
+   function LoadMap()
+   {
+    if (GBrowserIsCompatible()) 			// Do Map if Compatible Browser only
+    {
+     map = new GMap2(document.getElementById("map"));
+     map.addControl(new GLargeMapControl());
+     var scalePos = new GControlPosition(G_ANCHOR_TOP_LEFT, new GSize(75,10));
+     map.addControl(new GScaleControl(), scalePos);
+
+     map.addMapType(G_PHYSICAL_MAP) ;
+
+     map.addControl(new GMapTypeControl());
+     
+     var cep = location.href.split("?")[1].split("=")[1];
+     var geocoder = new GClientGeocoder();
+     geocoder.getLocations(cep + ", Brazil", addAddressToMap);  
+      
+    } 
+   }
+
+   
+
+    // addAddressToMap() is called when the geocoder returns an
+    // answer.  It adds a marker to the map with an open info window
+    // showing the nicely formatted version of the address and the country code.
+    function addAddressToMap(response) {
+      map.clearOverlays();
+      if (!response || response.Status.code != 200) {
+        alert("Sorry, we were unable to geocode that address");
+      } else {
+        place = response.Placemark[0];
+        point = new GLatLng(place.Point.coordinates[1],
+                            place.Point.coordinates[0]);
+        map.setCenter(point,17);
+        
+        marker = new GMarker(point);
+        map.addOverlay(marker);
+//        marker.openInfoWindowHtml(place.address + '<br>' +
+//          '<b>Country code:</b> ' + place.AddressDetails.Country.CountryNameCode);
+      }
+    }
+
+
+
+    </script>
+
+</head>
+<body onload="LoadMap();" onunload="GUnload()">
+    <div id="map" title="Google Map" style="width: 100%; height: 100%;">
+    </div>
+    <div id="loading" title="loading message for map" class="HTEXT2" style="background-color: #D1D0CD;
+        position: absolute; left: 200px; top: 200px;">
+    </div>
+</body>
+</html>

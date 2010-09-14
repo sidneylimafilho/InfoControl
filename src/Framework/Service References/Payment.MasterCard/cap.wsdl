@@ -1,0 +1,2957 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ecommerce.redecard.com.br" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://ecommerce.redecard.com.br" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ecommerce.redecard.com.br">
+      <s:element name="GetAuthorized">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nrcartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVC2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfTxn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Add_Data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorized_AD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nrcartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVC2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Add_Data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorized_ADResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorized_ADResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedAVS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nrcartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVC2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Num1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cep1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cep2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedAVSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedAVSResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTxn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumSqn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransOrig" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTxnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmTxnResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTxn_AD">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumSqn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransOrig" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cod_Banco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Origem_Bin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AddData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTxn_ADResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmTxn_ADResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfPreAuthorization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfPreAuthorizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfPreAuthorizationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidTransactionResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionDistr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionDistrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidTransactionDistrResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidPreAuthorization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidPreAuthorizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidPreAuthorizationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidConfPreAuthorization">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidConfPreAuthorizationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidConfPreAuthorizationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CouncilReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data_Inicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data_Final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo_Trx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status_Trx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servico_AVS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Programa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CouncilReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CouncilReportResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsFornDistrib">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsFornDistribResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsFornDistribResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalesSumm">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalesSummResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalesSummResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedCAP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LinkCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfTxn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Add_Data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedCAPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedCAPResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReversalTxn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumSqn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReversalTxnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReversalTxnResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nrcartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVC2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfTxn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedAVSTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nrcartao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CVC2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CPF" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Endereco" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Num1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Complemento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cep1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cep2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedAVSTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedAVSTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTxnTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumSqn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransOrig" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfirmTxnTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfirmTxnTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfPreAuthorizationTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TransOrig" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConfPreAuthorizationTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConfPreAuthorizationTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidTransactionTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidTransactionTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidPreAuthorizationTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidPreAuthorizationTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidPreAuthorizationTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidConfPreAuthorizationTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumAutor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumCV" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="VoidConfPreAuthorizationTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VoidConfPreAuthorizationTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CouncilReportTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data_Inicial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Data_Final" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tipo_Trx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status_Trx" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Servico_AVS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CouncilReportTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CouncilReportTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalesSummTst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Usr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SalesSummTstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SalesSummTstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedCAPtst">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Total" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Transacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Parcelas" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filiacao" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumPedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SecureCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LinkCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Bin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Portador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mes" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ano" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Distribuidor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Concentrador" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TaxaEmbarque" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Entrada" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Pax4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Numdoc4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ConfTxn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Add_Data" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAuthorizedCAPtstResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAuthorizedCAPtstResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAuthorizedSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorized" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorized_ADSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorized_AD" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorized_ADSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorized_ADResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedAVS" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedAVSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmTxn" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmTxnResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxn_ADSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmTxn_AD" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxn_ADSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmTxn_ADResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfPreAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfPreAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidTransaction" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionDistrSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidTransactionDistr" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionDistrSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidTransactionDistrResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidPreAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidPreAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidConfPreAuthorization" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidConfPreAuthorizationResponse" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportSoapIn">
+    <wsdl:part name="parameters" element="tns:CouncilReport" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportSoapOut">
+    <wsdl:part name="parameters" element="tns:CouncilReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsFornDistribSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsFornDistrib" />
+  </wsdl:message>
+  <wsdl:message name="ConsFornDistribSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsFornDistribResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummSoapIn">
+    <wsdl:part name="parameters" element="tns:SalesSumm" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummSoapOut">
+    <wsdl:part name="parameters" element="tns:SalesSummResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedCAP" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedCAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReversalTxnSoapIn">
+    <wsdl:part name="parameters" element="tns:ReversalTxn" />
+  </wsdl:message>
+  <wsdl:message name="ReversalTxnSoapOut">
+    <wsdl:part name="parameters" element="tns:ReversalTxnResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedTstSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedTst" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedTstSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSTstSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedAVSTst" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSTstSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedAVSTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnTstSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfirmTxnTst" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnTstSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfirmTxnTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationTstSoapIn">
+    <wsdl:part name="parameters" element="tns:ConfPreAuthorizationTst" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationTstSoapOut">
+    <wsdl:part name="parameters" element="tns:ConfPreAuthorizationTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionTstSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidTransactionTst" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionTstSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidTransactionTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationTstSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidPreAuthorizationTst" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationTstSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidPreAuthorizationTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationTstSoapIn">
+    <wsdl:part name="parameters" element="tns:VoidConfPreAuthorizationTst" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationTstSoapOut">
+    <wsdl:part name="parameters" element="tns:VoidConfPreAuthorizationTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportTstSoapIn">
+    <wsdl:part name="parameters" element="tns:CouncilReportTst" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportTstSoapOut">
+    <wsdl:part name="parameters" element="tns:CouncilReportTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummTstSoapIn">
+    <wsdl:part name="parameters" element="tns:SalesSummTst" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummTstSoapOut">
+    <wsdl:part name="parameters" element="tns:SalesSummTstResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPtstSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedCAPtst" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPtstSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAuthorizedCAPtstResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorized_ADHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorized_ADHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="CPF" type="s:string" />
+    <wsdl:part name="Endereco" type="s:string" />
+    <wsdl:part name="Num1" type="s:string" />
+    <wsdl:part name="Complemento" type="s:string" />
+    <wsdl:part name="Cep1" type="s:string" />
+    <wsdl:part name="Cep2" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnHttpGetIn">
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="AddData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxn_ADHttpGetIn">
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="Cod_Banco" type="s:string" />
+    <wsdl:part name="Origem_Bin" type="s:string" />
+    <wsdl:part name="AddData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxn_ADHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionDistrHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionDistrHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Data_Inicial" type="s:string" />
+    <wsdl:part name="Data_Final" type="s:string" />
+    <wsdl:part name="Tipo_Trx" type="s:string" />
+    <wsdl:part name="Status_Trx" type="s:string" />
+    <wsdl:part name="Servico_AVS" type="s:string" />
+    <wsdl:part name="Programa" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsFornDistribHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsFornDistribHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="SecureCode" type="s:string" />
+    <wsdl:part name="LinkCode" type="s:string" />
+    <wsdl:part name="Bin" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReversalTxnHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReversalTxnHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedTstHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSTstHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="CPF" type="s:string" />
+    <wsdl:part name="Endereco" type="s:string" />
+    <wsdl:part name="Num1" type="s:string" />
+    <wsdl:part name="Complemento" type="s:string" />
+    <wsdl:part name="Cep1" type="s:string" />
+    <wsdl:part name="Cep2" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnTstHttpGetIn">
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationTstHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionTstHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationTstHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationTstHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportTstHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Data_Inicial" type="s:string" />
+    <wsdl:part name="Data_Final" type="s:string" />
+    <wsdl:part name="Tipo_Trx" type="s:string" />
+    <wsdl:part name="Status_Trx" type="s:string" />
+    <wsdl:part name="Servico_AVS" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummTstHttpGetIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummTstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPtstHttpGetIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="SecureCode" type="s:string" />
+    <wsdl:part name="LinkCode" type="s:string" />
+    <wsdl:part name="Bin" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPtstHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorized_ADHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorized_ADHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="CPF" type="s:string" />
+    <wsdl:part name="Endereco" type="s:string" />
+    <wsdl:part name="Num1" type="s:string" />
+    <wsdl:part name="Complemento" type="s:string" />
+    <wsdl:part name="Cep1" type="s:string" />
+    <wsdl:part name="Cep2" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnHttpPostIn">
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="AddData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxn_ADHttpPostIn">
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="Cod_Banco" type="s:string" />
+    <wsdl:part name="Origem_Bin" type="s:string" />
+    <wsdl:part name="AddData" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxn_ADHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionDistrHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionDistrHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Data_Inicial" type="s:string" />
+    <wsdl:part name="Data_Final" type="s:string" />
+    <wsdl:part name="Tipo_Trx" type="s:string" />
+    <wsdl:part name="Status_Trx" type="s:string" />
+    <wsdl:part name="Servico_AVS" type="s:string" />
+    <wsdl:part name="Programa" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConsFornDistribHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsFornDistribHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="SecureCode" type="s:string" />
+    <wsdl:part name="LinkCode" type="s:string" />
+    <wsdl:part name="Bin" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ReversalTxnHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ReversalTxnHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedTstHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSTstHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Nrcartao" type="s:string" />
+    <wsdl:part name="CVC2" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="CPF" type="s:string" />
+    <wsdl:part name="Endereco" type="s:string" />
+    <wsdl:part name="Num1" type="s:string" />
+    <wsdl:part name="Complemento" type="s:string" />
+    <wsdl:part name="Cep1" type="s:string" />
+    <wsdl:part name="Cep2" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedAVSTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnTstHttpPostIn">
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumSqn" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfirmTxnTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationTstHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="TransOrig" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConfPreAuthorizationTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionTstHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidTransactionTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationTstHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidPreAuthorizationTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationTstHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Data" type="s:string" />
+    <wsdl:part name="NumAutor" type="s:string" />
+    <wsdl:part name="NumCV" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="VoidConfPreAuthorizationTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportTstHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Data_Inicial" type="s:string" />
+    <wsdl:part name="Data_Final" type="s:string" />
+    <wsdl:part name="Tipo_Trx" type="s:string" />
+    <wsdl:part name="Status_Trx" type="s:string" />
+    <wsdl:part name="Servico_AVS" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CouncilReportTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummTstHttpPostIn">
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="Usr" type="s:string" />
+    <wsdl:part name="Pwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SalesSummTstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPtstHttpPostIn">
+    <wsdl:part name="Total" type="s:string" />
+    <wsdl:part name="Transacao" type="s:string" />
+    <wsdl:part name="Parcelas" type="s:string" />
+    <wsdl:part name="Filiacao" type="s:string" />
+    <wsdl:part name="NumPedido" type="s:string" />
+    <wsdl:part name="SecureCode" type="s:string" />
+    <wsdl:part name="LinkCode" type="s:string" />
+    <wsdl:part name="Bin" type="s:string" />
+    <wsdl:part name="Portador" type="s:string" />
+    <wsdl:part name="IATA" type="s:string" />
+    <wsdl:part name="Mes" type="s:string" />
+    <wsdl:part name="Ano" type="s:string" />
+    <wsdl:part name="Distribuidor" type="s:string" />
+    <wsdl:part name="Concentrador" type="s:string" />
+    <wsdl:part name="TaxaEmbarque" type="s:string" />
+    <wsdl:part name="Entrada" type="s:string" />
+    <wsdl:part name="Pax1" type="s:string" />
+    <wsdl:part name="Pax2" type="s:string" />
+    <wsdl:part name="Pax3" type="s:string" />
+    <wsdl:part name="Pax4" type="s:string" />
+    <wsdl:part name="Numdoc1" type="s:string" />
+    <wsdl:part name="Numdoc2" type="s:string" />
+    <wsdl:part name="Numdoc3" type="s:string" />
+    <wsdl:part name="Numdoc4" type="s:string" />
+    <wsdl:part name="ConfTxn" type="s:string" />
+    <wsdl:part name="Add_Data" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAuthorizedCAPtstHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:portType name="komerci_captureSoap">
+    <wsdl:operation name="GetAuthorized">
+      <wsdl:input message="tns:GetAuthorizedSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorized_AD">
+      <wsdl:input message="tns:GetAuthorized_ADSoapIn" />
+      <wsdl:output message="tns:GetAuthorized_ADSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVS">
+      <wsdl:input message="tns:GetAuthorizedAVSSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedAVSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn">
+      <wsdl:input message="tns:ConfirmTxnSoapIn" />
+      <wsdl:output message="tns:ConfirmTxnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn_AD">
+      <wsdl:input message="tns:ConfirmTxn_ADSoapIn" />
+      <wsdl:output message="tns:ConfirmTxn_ADSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorization">
+      <wsdl:input message="tns:ConfPreAuthorizationSoapIn" />
+      <wsdl:output message="tns:ConfPreAuthorizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:input message="tns:VoidTransactionSoapIn" />
+      <wsdl:output message="tns:VoidTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionDistr">
+      <wsdl:input message="tns:VoidTransactionDistrSoapIn" />
+      <wsdl:output message="tns:VoidTransactionDistrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorization">
+      <wsdl:input message="tns:VoidPreAuthorizationSoapIn" />
+      <wsdl:output message="tns:VoidPreAuthorizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorization">
+      <wsdl:input message="tns:VoidConfPreAuthorizationSoapIn" />
+      <wsdl:output message="tns:VoidConfPreAuthorizationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReport">
+      <wsdl:input message="tns:CouncilReportSoapIn" />
+      <wsdl:output message="tns:CouncilReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsFornDistrib">
+      <wsdl:input message="tns:ConsFornDistribSoapIn" />
+      <wsdl:output message="tns:ConsFornDistribSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesSumm">
+      <wsdl:input message="tns:SalesSummSoapIn" />
+      <wsdl:output message="tns:SalesSummSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAP">
+      <wsdl:input message="tns:GetAuthorizedCAPSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedCAPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReversalTxn">
+      <wsdl:input message="tns:ReversalTxnSoapIn" />
+      <wsdl:output message="tns:ReversalTxnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedTst">
+      <wsdl:input message="tns:GetAuthorizedTstSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVSTst">
+      <wsdl:input message="tns:GetAuthorizedAVSTstSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedAVSTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxnTst">
+      <wsdl:input message="tns:ConfirmTxnTstSoapIn" />
+      <wsdl:output message="tns:ConfirmTxnTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorizationTst">
+      <wsdl:input message="tns:ConfPreAuthorizationTstSoapIn" />
+      <wsdl:output message="tns:ConfPreAuthorizationTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionTst">
+      <wsdl:input message="tns:VoidTransactionTstSoapIn" />
+      <wsdl:output message="tns:VoidTransactionTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorizationTst">
+      <wsdl:input message="tns:VoidPreAuthorizationTstSoapIn" />
+      <wsdl:output message="tns:VoidPreAuthorizationTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorizationTst">
+      <wsdl:input message="tns:VoidConfPreAuthorizationTstSoapIn" />
+      <wsdl:output message="tns:VoidConfPreAuthorizationTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReportTst">
+      <wsdl:input message="tns:CouncilReportTstSoapIn" />
+      <wsdl:output message="tns:CouncilReportTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesSummTst">
+      <wsdl:input message="tns:SalesSummTstSoapIn" />
+      <wsdl:output message="tns:SalesSummTstSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAPtst">
+      <wsdl:input message="tns:GetAuthorizedCAPtstSoapIn" />
+      <wsdl:output message="tns:GetAuthorizedCAPtstSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="komerci_captureHttpGet">
+    <wsdl:operation name="GetAuthorized">
+      <wsdl:input message="tns:GetAuthorizedHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorizedHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorized_AD">
+      <wsdl:input message="tns:GetAuthorized_ADHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorized_ADHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVS">
+      <wsdl:input message="tns:GetAuthorizedAVSHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorizedAVSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn">
+      <wsdl:input message="tns:ConfirmTxnHttpGetIn" />
+      <wsdl:output message="tns:ConfirmTxnHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn_AD">
+      <wsdl:input message="tns:ConfirmTxn_ADHttpGetIn" />
+      <wsdl:output message="tns:ConfirmTxn_ADHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorization">
+      <wsdl:input message="tns:ConfPreAuthorizationHttpGetIn" />
+      <wsdl:output message="tns:ConfPreAuthorizationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:input message="tns:VoidTransactionHttpGetIn" />
+      <wsdl:output message="tns:VoidTransactionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionDistr">
+      <wsdl:input message="tns:VoidTransactionDistrHttpGetIn" />
+      <wsdl:output message="tns:VoidTransactionDistrHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorization">
+      <wsdl:input message="tns:VoidPreAuthorizationHttpGetIn" />
+      <wsdl:output message="tns:VoidPreAuthorizationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorization">
+      <wsdl:input message="tns:VoidConfPreAuthorizationHttpGetIn" />
+      <wsdl:output message="tns:VoidConfPreAuthorizationHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReport">
+      <wsdl:input message="tns:CouncilReportHttpGetIn" />
+      <wsdl:output message="tns:CouncilReportHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsFornDistrib">
+      <wsdl:input message="tns:ConsFornDistribHttpGetIn" />
+      <wsdl:output message="tns:ConsFornDistribHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesSumm">
+      <wsdl:input message="tns:SalesSummHttpGetIn" />
+      <wsdl:output message="tns:SalesSummHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAP">
+      <wsdl:input message="tns:GetAuthorizedCAPHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorizedCAPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReversalTxn">
+      <wsdl:input message="tns:ReversalTxnHttpGetIn" />
+      <wsdl:output message="tns:ReversalTxnHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedTst">
+      <wsdl:input message="tns:GetAuthorizedTstHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorizedTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVSTst">
+      <wsdl:input message="tns:GetAuthorizedAVSTstHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorizedAVSTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxnTst">
+      <wsdl:input message="tns:ConfirmTxnTstHttpGetIn" />
+      <wsdl:output message="tns:ConfirmTxnTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorizationTst">
+      <wsdl:input message="tns:ConfPreAuthorizationTstHttpGetIn" />
+      <wsdl:output message="tns:ConfPreAuthorizationTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionTst">
+      <wsdl:input message="tns:VoidTransactionTstHttpGetIn" />
+      <wsdl:output message="tns:VoidTransactionTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorizationTst">
+      <wsdl:input message="tns:VoidPreAuthorizationTstHttpGetIn" />
+      <wsdl:output message="tns:VoidPreAuthorizationTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorizationTst">
+      <wsdl:input message="tns:VoidConfPreAuthorizationTstHttpGetIn" />
+      <wsdl:output message="tns:VoidConfPreAuthorizationTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReportTst">
+      <wsdl:input message="tns:CouncilReportTstHttpGetIn" />
+      <wsdl:output message="tns:CouncilReportTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesSummTst">
+      <wsdl:input message="tns:SalesSummTstHttpGetIn" />
+      <wsdl:output message="tns:SalesSummTstHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAPtst">
+      <wsdl:input message="tns:GetAuthorizedCAPtstHttpGetIn" />
+      <wsdl:output message="tns:GetAuthorizedCAPtstHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="komerci_captureHttpPost">
+    <wsdl:operation name="GetAuthorized">
+      <wsdl:input message="tns:GetAuthorizedHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorizedHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorized_AD">
+      <wsdl:input message="tns:GetAuthorized_ADHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorized_ADHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVS">
+      <wsdl:input message="tns:GetAuthorizedAVSHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorizedAVSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn">
+      <wsdl:input message="tns:ConfirmTxnHttpPostIn" />
+      <wsdl:output message="tns:ConfirmTxnHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn_AD">
+      <wsdl:input message="tns:ConfirmTxn_ADHttpPostIn" />
+      <wsdl:output message="tns:ConfirmTxn_ADHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorization">
+      <wsdl:input message="tns:ConfPreAuthorizationHttpPostIn" />
+      <wsdl:output message="tns:ConfPreAuthorizationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <wsdl:input message="tns:VoidTransactionHttpPostIn" />
+      <wsdl:output message="tns:VoidTransactionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionDistr">
+      <wsdl:input message="tns:VoidTransactionDistrHttpPostIn" />
+      <wsdl:output message="tns:VoidTransactionDistrHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorization">
+      <wsdl:input message="tns:VoidPreAuthorizationHttpPostIn" />
+      <wsdl:output message="tns:VoidPreAuthorizationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorization">
+      <wsdl:input message="tns:VoidConfPreAuthorizationHttpPostIn" />
+      <wsdl:output message="tns:VoidConfPreAuthorizationHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReport">
+      <wsdl:input message="tns:CouncilReportHttpPostIn" />
+      <wsdl:output message="tns:CouncilReportHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsFornDistrib">
+      <wsdl:input message="tns:ConsFornDistribHttpPostIn" />
+      <wsdl:output message="tns:ConsFornDistribHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesSumm">
+      <wsdl:input message="tns:SalesSummHttpPostIn" />
+      <wsdl:output message="tns:SalesSummHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAP">
+      <wsdl:input message="tns:GetAuthorizedCAPHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorizedCAPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReversalTxn">
+      <wsdl:input message="tns:ReversalTxnHttpPostIn" />
+      <wsdl:output message="tns:ReversalTxnHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedTst">
+      <wsdl:input message="tns:GetAuthorizedTstHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorizedTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVSTst">
+      <wsdl:input message="tns:GetAuthorizedAVSTstHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorizedAVSTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxnTst">
+      <wsdl:input message="tns:ConfirmTxnTstHttpPostIn" />
+      <wsdl:output message="tns:ConfirmTxnTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorizationTst">
+      <wsdl:input message="tns:ConfPreAuthorizationTstHttpPostIn" />
+      <wsdl:output message="tns:ConfPreAuthorizationTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionTst">
+      <wsdl:input message="tns:VoidTransactionTstHttpPostIn" />
+      <wsdl:output message="tns:VoidTransactionTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorizationTst">
+      <wsdl:input message="tns:VoidPreAuthorizationTstHttpPostIn" />
+      <wsdl:output message="tns:VoidPreAuthorizationTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorizationTst">
+      <wsdl:input message="tns:VoidConfPreAuthorizationTstHttpPostIn" />
+      <wsdl:output message="tns:VoidConfPreAuthorizationTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReportTst">
+      <wsdl:input message="tns:CouncilReportTstHttpPostIn" />
+      <wsdl:output message="tns:CouncilReportTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SalesSummTst">
+      <wsdl:input message="tns:SalesSummTstHttpPostIn" />
+      <wsdl:output message="tns:SalesSummTstHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAPtst">
+      <wsdl:input message="tns:GetAuthorizedCAPtstHttpPostIn" />
+      <wsdl:output message="tns:GetAuthorizedCAPtstHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="komerci_captureSoap" type="tns:komerci_captureSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAuthorized">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorized" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorized_AD">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorized_AD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVS">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorizedAVS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ConfirmTxn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn_AD">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ConfirmTxn_AD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorization">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ConfPreAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionDistr">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidTransactionDistr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorization">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidPreAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorization">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidConfPreAuthorization" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReport">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/CouncilReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsFornDistrib">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ConsFornDistrib" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesSumm">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/SalesSumm" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAP">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorizedCAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReversalTxn">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ReversalTxn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorizedTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVSTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorizedAVSTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxnTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ConfirmTxnTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorizationTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/ConfPreAuthorizationTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidTransactionTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorizationTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidPreAuthorizationTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorizationTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/VoidConfPreAuthorizationTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReportTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/CouncilReportTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesSummTst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/SalesSummTst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAPtst">
+      <soap:operation soapAction="http://ecommerce.redecard.com.br/GetAuthorizedCAPtst" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="komerci_captureHttpGet" type="tns:komerci_captureHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetAuthorized">
+      <http:operation location="/GetAuthorized" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorized_AD">
+      <http:operation location="/GetAuthorized_AD" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVS">
+      <http:operation location="/GetAuthorizedAVS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn">
+      <http:operation location="/ConfirmTxn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn_AD">
+      <http:operation location="/ConfirmTxn_AD" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorization">
+      <http:operation location="/ConfPreAuthorization" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <http:operation location="/VoidTransaction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionDistr">
+      <http:operation location="/VoidTransactionDistr" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorization">
+      <http:operation location="/VoidPreAuthorization" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorization">
+      <http:operation location="/VoidConfPreAuthorization" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReport">
+      <http:operation location="/CouncilReport" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsFornDistrib">
+      <http:operation location="/ConsFornDistrib" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesSumm">
+      <http:operation location="/SalesSumm" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAP">
+      <http:operation location="/GetAuthorizedCAP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReversalTxn">
+      <http:operation location="/ReversalTxn" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedTst">
+      <http:operation location="/GetAuthorizedTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVSTst">
+      <http:operation location="/GetAuthorizedAVSTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxnTst">
+      <http:operation location="/ConfirmTxnTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorizationTst">
+      <http:operation location="/ConfPreAuthorizationTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionTst">
+      <http:operation location="/VoidTransactionTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorizationTst">
+      <http:operation location="/VoidPreAuthorizationTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorizationTst">
+      <http:operation location="/VoidConfPreAuthorizationTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReportTst">
+      <http:operation location="/CouncilReportTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesSummTst">
+      <http:operation location="/SalesSummTst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAPtst">
+      <http:operation location="/GetAuthorizedCAPtst" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="komerci_captureHttpPost" type="tns:komerci_captureHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetAuthorized">
+      <http:operation location="/GetAuthorized" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorized_AD">
+      <http:operation location="/GetAuthorized_AD" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVS">
+      <http:operation location="/GetAuthorizedAVS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn">
+      <http:operation location="/ConfirmTxn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxn_AD">
+      <http:operation location="/ConfirmTxn_AD" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorization">
+      <http:operation location="/ConfPreAuthorization" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransaction">
+      <http:operation location="/VoidTransaction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionDistr">
+      <http:operation location="/VoidTransactionDistr" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorization">
+      <http:operation location="/VoidPreAuthorization" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorization">
+      <http:operation location="/VoidConfPreAuthorization" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReport">
+      <http:operation location="/CouncilReport" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsFornDistrib">
+      <http:operation location="/ConsFornDistrib" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesSumm">
+      <http:operation location="/SalesSumm" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAP">
+      <http:operation location="/GetAuthorizedCAP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReversalTxn">
+      <http:operation location="/ReversalTxn" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedTst">
+      <http:operation location="/GetAuthorizedTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedAVSTst">
+      <http:operation location="/GetAuthorizedAVSTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmTxnTst">
+      <http:operation location="/ConfirmTxnTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConfPreAuthorizationTst">
+      <http:operation location="/ConfPreAuthorizationTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidTransactionTst">
+      <http:operation location="/VoidTransactionTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidPreAuthorizationTst">
+      <http:operation location="/VoidPreAuthorizationTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VoidConfPreAuthorizationTst">
+      <http:operation location="/VoidConfPreAuthorizationTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CouncilReportTst">
+      <http:operation location="/CouncilReportTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SalesSummTst">
+      <http:operation location="/SalesSummTst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuthorizedCAPtst">
+      <http:operation location="/GetAuthorizedCAPtst" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="komerci_capture">
+    <wsdl:port name="komerci_captureSoap" binding="tns:komerci_captureSoap">
+      <soap:address location="https://ecommerce.redecard.com.br/pos_virtual/wskomerci/cap.asmx" />
+    </wsdl:port>
+    <wsdl:port name="komerci_captureHttpGet" binding="tns:komerci_captureHttpGet">
+      <http:address location="https://ecommerce.redecard.com.br/pos_virtual/wskomerci/cap.asmx" />
+    </wsdl:port>
+    <wsdl:port name="komerci_captureHttpPost" binding="tns:komerci_captureHttpPost">
+      <http:address location="https://ecommerce.redecard.com.br/pos_virtual/wskomerci/cap.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

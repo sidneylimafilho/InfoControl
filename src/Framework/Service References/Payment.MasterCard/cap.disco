@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://ecommerce.redecard.com.br/pos_virtual/wskomerci/cap.asmx?wsdl" docRef="https://ecommerce.redecard.com.br/pos_virtual/wskomerci/cap.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://ecommerce.redecard.com.br/pos_virtual/wskomerci/cap.asmx" xmlns:q1="http://ecommerce.redecard.com.br" binding="q1:komerci_captureSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

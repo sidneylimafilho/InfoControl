@@ -1,0 +1,775 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{148DC18F-45AB-4191-B587-71092A7BDF74}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfoControl</RootNamespace>
+    <AssemblyName>InfoControl</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>%24/InfoControl/Framework</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>http://vivina.com.br:8080/tfs/default</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Disconnected|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Disconnected\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\InfoControl.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x86\Debug\InfoControl.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\InfoControl.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x86\Release\InfoControl.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Disconnected|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Disconnected\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Disconnected\InfoControl.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x86\Disconnected\InfoControl.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\InfoControl.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x64\Debug\InfoControl.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\InfoControl.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x64\Release\InfoControl.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Disconnected|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Disconnected\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Disconnected\InfoControl.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisInputAssembly>bin\x64\Disconnected\InfoControl.dll</CodeAnalysisInputAssembly>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="SharpZipLib">
+      <HintPath>..\..\Lib\SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Web">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 2\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Check.cs" />
+    <Compile Include="Configuration\AppConfig.cs" />
+    <Compile Include="Configuration\ConfigurationSectionColection.cs" />
+    <Compile Include="Configuration\ConfigurationSectionHandler.cs" />
+    <Compile Include="Configuration\DataAccessSection.cs" />
+    <Compile Include="Configuration\Loader.cs" />
+    <Compile Include="Data\BusinessManager.cs" />
+    <Compile Include="Data\DataAccessSettings.cs">
+      <DependentUpon>DataAccessSettings.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\DataManager.Designer.cs">
+      <DependentUpon>DataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataParameter.cs" />
+    <Compile Include="Data\DataParameterCollection.cs" />
+    <Compile Include="Data\DataReader.cs" />
+    <Compile Include="Data\DataReaderEnumerator.cs" />
+    <Compile Include="Data\DataTypeException.cs" />
+    <Compile Include="Data\ExtensionsMethods\DataContextTables.cs" />
+    <Compile Include="Data\ExtensionsMethods\SequenceExtensions.cs" />
+    <Compile Include="Data\IDataAcessor.cs" />
+    <Compile Include="Data\IDataContextBound.cs" />
+    <Compile Include="Data\ObjectReader.cs" />
+    <Compile Include="Data\ObjectReaderEnumerator.cs" />
+    <Compile Include="Data\SqlServerCeFactory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\TransationalAttribute.cs" />
+    <Compile Include="DateTimeInterval.cs" />
+    <Compile Include="DirectoryServices\ADHelper.cs" />
+    <Compile Include="EnumExtensions.cs" />
+    <Compile Include="Generics\Activator.cs" />
+    <Compile Include="IO\Compact.cs" />
+    <Compile Include="IO\StringExtensions.cs" />
+    <Compile Include="Management\DomainNameServer.cs" />
+    <Compile Include="Multimedia\Sound.cs" />
+    <Compile Include="Multimedia\UserNotifications.cs" />
+    <Compile Include="Net\EnvioSmsVIVO.cs" />
+    <Compile Include="Net\HttpWebClient.cs" />
+    <Compile Include="Net\Mail\AUTH\AuthHelper.cs" />
+    <Compile Include="Net\Mail\AUTH\AuthType.cs" />
+    <Compile Include="Net\Mail\AUTH\HMACMD5.cs" />
+    <Compile Include="Net\Mail\AUTH\SaslAuthTypes.cs" />
+    <Compile Include="Net\Mail\BufferedSocket.cs" />
+    <Compile Include="Net\Mail\Dns\Client\A_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\CNAME_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\DnsCache.cs" />
+    <Compile Include="Net\Mail\Dns\Client\DnsRecordBase.cs" />
+    <Compile Include="Net\Mail\Dns\Client\DnsServerResponse.cs" />
+    <Compile Include="Net\Mail\Dns\Client\Dns_Client.cs" />
+    <Compile Include="Net\Mail\Dns\Client\enums.cs" />
+    <Compile Include="Net\Mail\Dns\Client\HINFO_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\MX_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\NS_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\PTR_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\QTYPE.cs" />
+    <Compile Include="Net\Mail\Dns\Client\RCODE.cs" />
+    <Compile Include="Net\Mail\Dns\Client\SOA_Record.cs" />
+    <Compile Include="Net\Mail\Dns\Client\TXT_Record.cs" />
+    <Compile Include="Net\Mail\FTP\Client\FTP_Client.cs" />
+    <Compile Include="Net\Mail\FTP\Server\AuthUser_EventArgs.cs" />
+    <Compile Include="Net\Mail\FTP\Server\FileSysEntry_EventArgs.cs" />
+    <Compile Include="Net\Mail\FTP\Server\FTP_Server.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Net\Mail\FTP\Server\FTP_Session.cs" />
+    <Compile Include="Net\Mail\ICMP\Icmp.cs" />
+    <Compile Include="Net\Mail\IMAP\Client\IMAP_Client.cs" />
+    <Compile Include="Net\Mail\IMAP\Client\IMAP_FetchItem.cs" />
+    <Compile Include="Net\Mail\IMAP\IMAP_ACL_Flags.cs" />
+    <Compile Include="Net\Mail\IMAP\IMAP_MessageFlags.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\AuthUser_EventArgs.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\Folder_EventArgs.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_eArgs_DELETEACL.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_eArgs_GETACL.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_eArgs_GetUserACL.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_eArgs_SETACL.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Flags_SetType.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Folder.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Folders.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Message.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Messages.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Server.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Session.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\IMAP_Utils.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\Message_EventArgs.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\SharedRootFolders_EventArgs.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\_FetchHelper.cs" />
+    <Compile Include="Net\Mail\IMAP\Server\_SearchHelper.cs" />
+    <Compile Include="Net\Mail\Mime\Attachment.cs" />
+    <Compile Include="Net\Mail\Mime\Attachments.cs" />
+    <Compile Include="Net\Mail\Mime\MimeConstructor.cs" />
+    <Compile Include="Net\Mail\Mime\Parser\eAddress.cs" />
+    <Compile Include="Net\Mail\Mime\Parser\MimeEntry.cs" />
+    <Compile Include="Net\Mail\Mime\Parser\MimeParser.cs" />
+    <Compile Include="Net\Mail\Net_Core.cs" />
+    <Compile Include="Net\Mail\POP3\Client\POP3_Client.cs" />
+    <Compile Include="Net\Mail\POP3\Client\POP3_MessageInfo.cs" />
+    <Compile Include="Net\Mail\POP3\Client\POP3_MessagesInfo.cs" />
+    <Compile Include="Net\Mail\POP3\Server\AuthUser_EventArgs.cs" />
+    <Compile Include="Net\Mail\POP3\Server\GetMessagesInfo_EventArgs.cs" />
+    <Compile Include="Net\Mail\POP3\Server\POP3_Message.cs" />
+    <Compile Include="Net\Mail\POP3\Server\POP3_Messages.cs" />
+    <Compile Include="Net\Mail\POP3\Server\POP3_Message_EventArgs.cs" />
+    <Compile Include="Net\Mail\POP3\Server\POP3_Server.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Net\Mail\POP3\Server\POP3_Session.cs" />
+    <Compile Include="Net\Mail\ReadException.cs" />
+    <Compile Include="Net\Mail\ServersCore\commonDelegates.cs" />
+    <Compile Include="Net\Mail\ServersCore\Error_EventArgs.cs" />
+    <Compile Include="Net\Mail\ServersCore\ISocketServerSession.cs" />
+    <Compile Include="Net\Mail\ServersCore\Log_EventArgs.cs" />
+    <Compile Include="Net\Mail\ServersCore\SocketLogEntry.cs" />
+    <Compile Include="Net\Mail\ServersCore\SocketLogEntryType.cs" />
+    <Compile Include="Net\Mail\ServersCore\SocketLogger.cs" />
+    <Compile Include="Net\Mail\ServersCore\SocketServer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Net\Mail\ServersCore\SocketServerSession.cs" />
+    <Compile Include="Net\Mail\ServersCore\ValidateIP_EventArgs.cs" />
+    <Compile Include="Net\Mail\ServersCore\_FixedStack.cs" />
+    <Compile Include="Net\Mail\ServersCore\_ParamParser.cs" />
+    <Compile Include="Net\Mail\SMTP\BodyType.cs" />
+    <Compile Include="Net\Mail\SMTP\Client\PartOfMessage_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Client\SendJob_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Client\SmtpClientEx.cs" />
+    <Compile Include="Net\Mail\SMTP\Client\SMTP_Client.cs" />
+    <Compile Include="Net\Mail\SMTP\Client\SMTP_Error.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\AuthUser_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\SMTP_Server.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Net\Mail\SMTP\Server\SMTP_Session.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\StoreMessage_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\ValidateMailboxSize_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\ValidateRecipient_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\ValidateSender_EventArgs.cs" />
+    <Compile Include="Net\Mail\SMTP\Server\_SMTP_Cmd_Validator.cs" />
+    <Compile Include="Net\Mail\StreamHelper.cs" />
+    <Compile Include="Net\Mail\_SocketState.cs" />
+    <Compile Include="Recognizable.cs" />
+    <Compile Include="Web\ClientRequest.cs" />
+    <Compile Include="Payment\BoletoProvider.cs" />
+    <Compile Include="Payment\Configuration\ProviderExtrasSection.cs" />
+    <Compile Include="Payment\Configuration\ProviderSection.cs" />
+    <Compile Include="Payment\PaymentMode.cs" />
+    <Compile Include="Payment\PaymentResult.cs" />
+    <Compile Include="Payment\VisaProvider.cs" />
+    <Compile Include="Payment\CreditCard.cs" />
+    <Compile Include="Payment\PaymentProvider.cs" />
+    <Compile Include="Payment\MasterCardProvider.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Runtime\ObjectExtensions.cs" />
+    <Compile Include="Runtime\SerializationHelper.cs" />
+    <Compile Include="Security\Cryptography\Cypher.cs" />
+    <Compile Include="Security\Cryptography\StringExtensions.cs" />
+    <Compile Include="Service References\Payment.MasterCard\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="StringExtensions.cs" />
+    <Compile Include="Text\HtmlToRtf\ByteClass.cs" />
+    <Compile Include="Text\HtmlToRtf\Converter.cs" />
+    <Compile Include="Text\HtmlToRtf\CSS_params.cs" />
+    <Compile Include="Text\HtmlToRtf\CSS_stack_element.cs" />
+    <Compile Include="Text\HtmlToRtf\CSS_styles.cs" />
+    <Compile Include="Text\HtmlToRtf\CSS_tag_type.cs" />
+    <Compile Include="Text\HtmlToRtf\eBorderVisibility.cs" />
+    <Compile Include="Text\HtmlToRtf\eEncoding.cs" />
+    <Compile Include="Text\HtmlToRtf\eFontFace.cs" />
+    <Compile Include="Text\HtmlToRtf\eImageCompatible.cs" />
+    <Compile Include="Text\HtmlToRtf\eImageType.cs" />
+    <Compile Include="Text\HtmlToRtf\eOutputMode.cs" />
+    <Compile Include="Text\HtmlToRtf\eOutputTextFormat.cs" />
+    <Compile Include="Text\HtmlToRtf\ePageAlignment.cs" />
+    <Compile Include="Text\HtmlToRtf\ePageNumbers.cs" />
+    <Compile Include="Text\HtmlToRtf\ePageOrientation.cs" />
+    <Compile Include="Text\HtmlToRtf\ePageSize.cs" />
+    <Compile Include="Text\HtmlToRtf\eRtfLanguage.cs" />
+    <Compile Include="Text\HtmlToRtf\eRtfParts.cs" />
+    <Compile Include="Text\HtmlToRtf\extra_options.cs" />
+    <Compile Include="Text\HtmlToRtf\listStyleType.cs" />
+    <Compile Include="Text\HtmlToRtf\nest_tables.cs" />
+    <Compile Include="Text\HtmlToRtf\position.cs" />
+    <Compile Include="Text\HtmlToRtf\SautinImage.cs" />
+    <Compile Include="Text\HtmlToRtf\table_params.cs" />
+    <Compile Include="Text\HtmlToRtf\table_types.cs" />
+    <Compile Include="Text\RegularExpressions\RegexLib.cs" />
+    <Compile Include="ValueTypeExtensions.cs" />
+    <Compile Include="Web\Auditing\AuditModule.cs" />
+    <Compile Include="Web\Auditing\DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Auditing\ExceptionNotifier.cs" />
+    <Compile Include="Web\Auditing\ExceptionNotifierModule.cs" />
+    <Compile Include="Web\CacheHandler.cs" />
+    <Compile Include="Web\Configuration\Application.extender.cs" />
+    <Compile Include="Web\Configuration\DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Configuration\MaintenanceModule.cs" />
+    <Compile Include="Web\Configuration\WebConfig.cs" />
+    <Compile Include="Web\ClientResponse.cs" />
+    <Compile Include="Web\Services\DataController.cs" />
+    <Compile Include="Web\Services\JavaFilter.cs" />
+    <Compile Include="Web\UserControlHttpHandler.cs" />
+    <Compile Include="Web\DataAccessor.cs" />
+    <Compile Include="Web\HttpDataHandler.cs" />
+    <Compile Include="Web\HttpDataModule.cs" />
+    <Compile Include="Web\Modules\Chat\ChatEngine.cs" />
+    <Compile Include="Web\Modules\Chat\ChatService.cs" />
+    <Compile Include="Payment\Configuration\PaymentSectionGroup.cs" />
+    <Compile Include="Web\Personalization\PersonalizationSection.cs" />
+    <Compile Include="Web\Personalization\WebParts\CookiesPersonalizationProvider.cs" />
+    <Compile Include="Web\Postman.cs" />
+    <Compile Include="Web\Reporting\RdlSchema.cs" />
+    <Compile Include="Web\Reporting\ReportDataType.cs" />
+    <Compile Include="Web\Reporting\ReportDefinitionBuilder.cs" />
+    <Compile Include="Web\Reporting\ReportFilterType.cs" />
+    <Compile Include="Web\Reporting\ReportGeneratorPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Reporting\ReportItems\IReportItemBuilder.cs" />
+    <Compile Include="Web\Reporting\ReportItems\MatrixBuilder.cs" />
+    <Compile Include="Web\Reporting\ReportItems\TableBuilder.cs" />
+    <Compile Include="Web\Reporting\ReportsDataContext2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportsDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Reporting\ReportSettings.cs" />
+    <Compile Include="Web\Reporting\ReportsManager.cs" />
+    <Compile Include="Web\Reporting\ReportStepControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\Reporting\_MethodExtensions.cs" />
+    <Compile Include="Web\ScheduledTasks\DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Web\ScheduledTasks\Scheduler.cs" />
+    <Compile Include="Web\ScheduledTasks\SchedulerManager.cs" />
+    <Compile Include="Web\ScheduledTasks\SchedulerSection.cs" />
+    <Compile Include="Web\ScheduledTasks\ScheduleTask.cs" />
+    <Compile Include="Web\Security\AccessControlIdentity.cs" />
+    <Compile Include="Web\Security\AccessControlPrincipal.cs" />
+    <Compile Include="Web\Security\DataEntities\DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Web\Security\DataEntities\Profile.cs" />
+    <Compile Include="Web\Security\MembershipManager.cs" />
+    <Compile Include="Web\Security\PermissionRequiredAttribute.cs" />
+    <Compile Include="Web\Security\RoleRequiredAttribute.cs" />
+    <Compile Include="Web\Security\SecurityXmlSiteMapProvider.cs" />
+    <Compile Include="Web\Security\VivinaMembershipProvider.cs" />
+    <Compile Include="Web\Security\VivinaMembershipUser.cs" />
+    <Compile Include="Web\Security\VivinaRoleProvider.cs" />
+    <Compile Include="Web\Security\VivinaRoleProviderModule.cs" />
+    <Compile Include="Web\StringResources.cs" />
+    <Compile Include="Web\UI\Adapters\ButtonAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\DropDownListAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\GridViewAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\HyperlinkAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\ImageButtonAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\LabelAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\LinkButtonAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\TextBoxAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\DataWebControlAdapter.cs" />
+    <Compile Include="Web\UI\Adapters\SessionPageStateAdapter.cs" />
+    <Compile Include="Web\UI\CombineScripts.cs" />
+    <Compile Include="Web\UI\ControlHelper.cs" />
+    <Compile Include="Web\UI\DataMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\DataPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\DataUserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\IDataControl.cs" />
+    <Compile Include="Web\UI\MasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\ScriptDeferFilter.cs" />
+    <Compile Include="Web\UI\TableHelper.cs" />
+    <Compile Include="Web\UI\UserControl.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web\UI\WebControlsExtensions.cs" />
+    <Compile Include="Web\UI\WebControls\BarCodeImage.cs" />
+    <Compile Include="Web\UI\WebControls\BarCodeImage.designer.cs">
+      <DependentUpon>BarCodeImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\BarCode\BarType.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\DataMatrixSize.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\EncodationMode.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\DataMatrixEncoder.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\DataMatrixImage.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\DataMatrixReed.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\LinearEncoder.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\LinearImage.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\PDF417Encoder.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Encoder\PDF417Image.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\ImageHandler.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\ImageType.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\Rotation.cs" />
+    <Compile Include="Web\UI\WebControls\BarCode\TextAlignment.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\BoletoBradesco.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\BoletoBrasil.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\BoletoCaixa.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\BoletoHSBC.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\BoletoItau.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\HtmlBoleto.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\HtmlBoleto.Designer.cs">
+      <DependentUpon>HtmlBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\Boleto\IBoletoGenerator.cs" />
+    <Compile Include="Web\UI\WebControls\Boleto\Resources.Designer.cs" />
+    <Compile Include="Web\UI\WebControls\BusinessManagerDataSource.cs" />
+    <Compile Include="Web\UI\WebControls\ContextMenu.cs" />
+    <Compile Include="Web\UI\WebControls\DataCheckBox.cs" />
+    <Compile Include="Web\UI\WebControls\DataDropDownList.cs" />
+    <Compile Include="Web\UI\WebControls\DataLabel.cs" />
+    <Compile Include="Web\UI\WebControls\DataListBox.cs" />
+    <Compile Include="Web\UI\WebControls\DataMaskedTextBox.cs" />
+    <Compile Include="Web\UI\WebControls\DataTextBox.cs" />
+    <Compile Include="Web\UI\WebControls\DraggablePanel.cs" />
+    <Compile Include="Web\UI\WebControls\DualListBox.cs" />
+    <Compile Include="Web\UI\WebControls\ECF\Bematech.cs" />
+    <Compile Include="Web\UI\WebControls\ECF\BematechNaoFiscal.cs" />
+    <Compile Include="Web\UI\WebControls\ECF\Ecf.cs" />
+    <Compile Include="Web\UI\WebControls\ECF\EcfProviderBase.cs" />
+    <Compile Include="Web\UI\WebControls\GroupRadioButton.cs" />
+    <Compile Include="Web\UI\WebControls\IFrame.cs" />
+    <Compile Include="Web\UI\WebControls\IFrame.Designer.cs">
+      <DependentUpon>IFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\ListBoxDual.cs" />
+    <Compile Include="Web\UI\WebControls\MaskedTextBox.cs" />
+    <Compile Include="Web\UI\WebControls\Mirror.cs" />
+    <Compile Include="Web\UI\WebControls\PrintLabel.cs" />
+    <Compile Include="Web\UI\WebControls\PrintLabel.Designer.cs">
+      <DependentUpon>PrintLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\RoundedPanel.cs" />
+    <Compile Include="Web\UI\WebControls\RoundedPanel.Designer.cs">
+      <DependentUpon>RoundedPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UI\WebControls\TooglePanel.cs" />
+    <Compile Include="Web\UI\WebControls\TooglePanel.Designer.cs">
+      <DependentUpon>TooglePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web\UrlRewriting\UrlRewriterModule.cs" />
+    <Compile Include="Web\UrlRewriting\UrlRewriterSectionGroup.cs" />
+    <Compile Include="Web\UrlRewriting\UrlRulesSection.cs" />
+    <Compile Include="Web\Util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web\UI\WebControls\CnpjValidator.cs" />
+    <Compile Include="Web\UI\WebControls\CpfValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Web\UI\WebControls\Resources\script.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Net\Mail\FTP\Server\FTP_Server.resx">
+      <DependentUpon>FTP_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\Mail\IMAP\Server\IMAP_Server.resx">
+      <DependentUpon>IMAP_Server.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Net\Mail\ServersCore\SocketServer.resx">
+      <DependentUpon>SocketServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
+    <None Include="Service References\Payment.MasterCard\cap.wsdl" />
+    <None Include="Web\Auditing\DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <None Include="Web\Configuration\DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Web\Reporting\ReportsDataContext.dbml.layout">
+      <DependentUpon>ReportsDataContext.dbml</DependentUpon>
+    </None>
+    <None Include="Web\ScheduledTasks\DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <None Include="Web\Security\DataEntities\DataClasses.dbml.layout">
+      <DependentUpon>DataClasses.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Web\UI\WebControls\Boleto\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\DataAccessSettings.xsd" />
+    <None Include="Data\DataAccessSettings.xsx">
+      <DependentUpon>DataAccessSettings.xsd</DependentUpon>
+    </None>
+    <None Include="Data\GenClassesFromXSD.bat" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web\Auditing\DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web\Auditing\_sgbak\DataClasses.designer.cs.2009-02-24.21-48-47.6650" />
+    <None Include="Web\Auditing\_sgbak\ExceptionNotifierModule.cs.2006-09-21.22-11-40.8729" />
+    <None Include="Web\Auditing\_sgbak\LoggingDataContext.cs.2006-09-21.22-11-40.8885" />
+    <None Include="Web\Configuration\DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web\Configuration\_sgbak\DataClasses.designer.cs.2009-02-24.21-48-47.0090" />
+    <None Include="Web\Configuration\_sgbak\SystemConfiguration.cs.2006-09-04.19-11-32.6733" />
+    <None Include="Web\InstallControls.bat" />
+    <None Include="Web\Reporting\ReportsDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ReportsDataContext2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web\ScheduledTasks\DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web\Security\DataEntities\DataClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web\UI\WebControls\Captcha\dotNetFreak.WebControls.FormShield.zip" />
+    <None Include="Web\UI\WebControls\_sgbak\RoundedPanel.cs.2006-07-18.21-57-13.1249" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Net\Mail\FTP\Server\readme.txt" />
+    <EmbeddedResource Include="Web\UI\Adapters\ButtonEffects.js" />
+    <EmbeddedResource Include="Web\UI\Adapters\GridViewEffects.js" />
+    <EmbeddedResource Include="Web\UI\Adapters\TextBoxEffects.js" />
+    <None Include="Service References\Payment.MasterCard\cap.disco" />
+    <None Include="Service References\Payment.MasterCard\configuration91.svcinfo" />
+    <None Include="Service References\Payment.MasterCard\configuration.svcinfo" />
+    <None Include="Service References\Payment.MasterCard\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="Web\UI\Resources\BlockContextMenu.js" />
+    <EmbeddedResource Include="Web\UI\Resources\MapFunctionKeys.js" />
+    <Content Include="Web\UI\Resources\_Core.js" />
+    <Content Include="Web\UI\WebControls\BarCodeImage.bmp" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\b.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\barra.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\BBLogo.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\BradescoLogo.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\CEFLogo.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\ComprovanteEntrega.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\Corpo.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\corte.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\HSBCLogo.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\ItauLogo.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\LinhaCorte.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\p.gif" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\ParteBanco.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\ParteBancoFim.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\ReciboSacado.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\ReciboSacadoFim.txt" />
+    <Content Include="Web\UI\WebControls\Boleto\Resources\Stylesheet.css" />
+    <Content Include="Web\UI\WebControls\DataMaskedTextBox.bmp" />
+    <Content Include="Web\UI\WebControls\DataTextBox.bmp" />
+    <Content Include="Web\UI\WebControls\MaskedTextBox.bmp" />
+    <Content Include="Web\UI\WebControls\PrintLabel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Web\Resources\" />
+    <Folder Include="Web\UI\Plugins\" />
+    <Folder Include="Web\UI\WebControls\HtmlEditor\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Payment.MasterCard\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

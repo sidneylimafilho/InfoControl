@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11.5, 11.125" name="ReportsDataContext">
+  <DataContextMoniker Name="/ReportsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1db7bb99-8bcf-4ea2-8bbb-fb51e86ec35f" absoluteBounds="9.25, 3.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/ReportsDataContext/ReportColumn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="90a487cd-0b81-4e41-bbca-b5ef4f483b4e" absoluteBounds="9.265, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84dcb973-9280-4154-a327-a5cf3ccd5a66" absoluteBounds="3.25, 2.375, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/ReportsDataContext/ReportTablesSchema" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bb1efba6-35cf-4921-aa9a-427d7be5fedf" absoluteBounds="3.265, 2.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="808c5a6b-d4f7-4b27-a4ba-c4d5ba2b8a72" absoluteBounds="6.5, 5.75, 2, 2.5401025390624996">
+      <DataClassMoniker Name="/ReportsDataContext/ReportColumnsSchema" />
+      <nestedChildShapes>
+        <elementListCompartment Id="81bf76b3-df29-4246-8b98-adb3f4e07d83" absoluteBounds="6.515, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6c9e0aa8-2e82-4898-abe5-b944bd568069" absoluteBounds="3.5, 5.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ReportsDataContext/ReportDataFunction" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2c0f0cf-9674-4e5b-a2d3-6716360b3e34" absoluteBounds="3.515, 5.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="37392bf5-859b-423f-8b98-c4a435343ef8" absoluteBounds="0.75, 6.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/ReportsDataContext/ReportDataType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f753d39-c077-4b77-bc9a-1ceb8718097c" absoluteBounds="0.765, 6.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="efe3ce5a-0d37-4e98-864f-9452b0d02d92" absoluteBounds="9.25, 9.125, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/ReportsDataContext/ReportFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76273551-91cc-46bb-b010-7c14671ecd4e" absoluteBounds="9.265, 9.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="df7ee27a-746b-4d30-9619-fbf4d4b839bb" absoluteBounds="3.5, 7.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ReportsDataContext/ReportFilterType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f87e7b04-a33b-4d5a-b878-4dd1aee8f669" absoluteBounds="3.515, 7.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7d8f2df-9424-402e-a6b9-7375feae87ac" absoluteBounds="6.5, 3.125, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/ReportsDataContext/Report" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5cc06d8-77ec-4518-86de-eda2be7f633d" absoluteBounds="6.515, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="268ac9e1-5838-4c0c-8fde-72da268da5e0" absoluteBounds="9.25, 6.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/ReportsDataContext/ReportSort" />
+      <nestedChildShapes>
+        <elementListCompartment Id="970f4b9f-e065-4e0f-abc3-878b5b99cd5e" absoluteBounds="9.265, 6.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.5 : 5.75); (8.875 : 5.375); (8.875 : 4.01044840494792); (9.25 : 4.01044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportColumnsSchema/ReportColumnsSchema_ReportColumn" />
+      <nodes>
+        <classShapeMoniker Id="808c5a6b-d4f7-4b27-a4ba-c4d5ba2b8a72" />
+        <classShapeMoniker Id="1db7bb99-8bcf-4ea2-8bbb-fb51e86ec35f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.34375 : 3.7612939453125); (3.34375 : 7.10760076660156); (6.5 : 7.10760076660156)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportTablesSchema/ReportTablesSchema_ReportColumnsSchema" />
+      <nodes>
+        <classShapeMoniker Id="84dcb973-9280-4154-a327-a5cf3ccd5a66" />
+        <classShapeMoniker Id="808c5a6b-d4f7-4b27-a4ba-c4d5ba2b8a72" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.84019653320312); (6.5 : 6.84019653320312)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportDataType/ReportDataType_ReportColumnsSchema" />
+      <nodes>
+        <classShapeMoniker Id="37392bf5-859b-423f-8b98-c4a435343ef8" />
+        <classShapeMoniker Id="808c5a6b-d4f7-4b27-a4ba-c4d5ba2b8a72" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 6.53929768880208); (3.5 : 6.53929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportDataType/ReportDataType_ReportDataFunction" />
+      <nodes>
+        <classShapeMoniker Id="37392bf5-859b-423f-8b98-c4a435343ef8" />
+        <classShapeMoniker Id="6c9e0aa8-2e82-4898-abe5-b944bd568069" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.5 : 8.2901025390625); (7.5 : 10.0104484049479); (9.25 : 10.0104484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportColumnsSchema/ReportColumnsSchema_ReportFilter" />
+      <nodes>
+        <classShapeMoniker Id="808c5a6b-d4f7-4b27-a4ba-c4d5ba2b8a72" />
+        <classShapeMoniker Id="efe3ce5a-0d37-4e98-864f-9452b0d02d92" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 7.56899251302083); (1.75 : 8.2612944453125); (3.5 : 8.2612944453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportDataType/ReportDataType_ReportFilterType" />
+      <nodes>
+        <classShapeMoniker Id="37392bf5-859b-423f-8b98-c4a435343ef8" />
+        <classShapeMoniker Id="df7ee27a-746b-4d30-9619-fbf4d4b839bb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 3.50522420247396); (9.25 : 3.50522420247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/Report/Report_ReportColumn" />
+      <nodes>
+        <classShapeMoniker Id="a7d8f2df-9424-402e-a6b9-7375feae87ac" />
+        <classShapeMoniker Id="1db7bb99-8bcf-4ea2-8bbb-fb51e86ec35f" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.47139320537861 : 4.89589680989583); (9.0625 : 5.48700360451723); (9.0625 : 9.53647220247396); (9.25 : 9.53647220247396)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/Report/Report_ReportFilter" />
+      <nodes>
+        <classShapeMoniker Id="a7d8f2df-9424-402e-a6b9-7375feae87ac" />
+        <classShapeMoniker Id="efe3ce5a-0d37-4e98-864f-9452b0d02d92" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.25 : 3.44314697265625); (6.5 : 3.44314697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportTablesSchema/ReportTablesSchema_Report" />
+      <nodes>
+        <classShapeMoniker Id="84dcb973-9280-4154-a327-a5cf3ccd5a66" />
+        <classShapeMoniker Id="a7d8f2df-9424-402e-a6b9-7375feae87ac" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 7.03929768880208); (8.97916666666667 : 7.03929768880208 : JumpStart); (9.14583333333333 : 7.03929768880208 : JumpEnd); (9.25 : 7.03929768880208)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/ReportColumnsSchema/ReportColumnsSchema_ReportSort" />
+      <nodes>
+        <classShapeMoniker Id="808c5a6b-d4f7-4b27-a4ba-c4d5ba2b8a72" />
+        <classShapeMoniker Id="268ac9e1-5838-4c0c-8fde-72da268da5e0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.5 : 4.83459553570713); (8.81607443490112 : 5.15066997060825 : JumpStart); (8.93392556509888 : 5.26852110080601 : JumpEnd); (8.96875 : 5.30334553570713); (8.96875 : 6.61339684440104); (8.97916666666667 : 6.61339684440104 : JumpStart); (9.14583333333333 : 6.61339684440104 : JumpEnd); (9.25 : 6.61339684440104)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/ReportsDataContext/Report/Report_ReportSort" />
+      <nodes>
+        <classShapeMoniker Id="a7d8f2df-9424-402e-a6b9-7375feae87ac" />
+        <classShapeMoniker Id="268ac9e1-5838-4c0c-8fde-72da268da5e0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

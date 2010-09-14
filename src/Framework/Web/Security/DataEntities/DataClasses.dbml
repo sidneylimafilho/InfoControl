@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="InfoControl" Class="MembershipDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=server-01;Initial Catalog=InfoControl;User ID=sa" SettingsObjectName="InfoControl.Properties.Settings" SettingsPropertyName="InfoControlConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="UserName" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" UpdateCheck="WhenChanged" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(256)" CanBeNull="true" UpdateCheck="WhenChanged" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastPasswordChangedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="LastLockoutDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="CreationDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="FailedPasswordAttemptCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsLockedOut" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="HasChangePassword" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="PasswordQuestion" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="PasswordAnswer" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LastRemoteHost" Type="System.String" DbType="VarChar(255)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="IsOnline" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="ProfileId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="WhenChanged" />
+      <Column Name="PersonalizationRaw" Storage="_Personalization" AccessModifier="Internal" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="User_UsersInRole" Member="UsersInRoles" ThisKey="UserId" OtherKey="UserId" Type="UsersInRole" />
+      <Association Name="User_UserActivityLog" Member="UserActivityLogs" ThisKey="UserId" OtherKey="UserId" Type="UserActivityLog" />
+      <Association Name="Profile_User" Member="Profile" ThisKey="ProfileId" OtherKey="ProfileId" Type="Profile" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UsersInRoles" Member="UsersInRoles">
+    <Type Name="UsersInRole">
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="User_UsersInRole" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="Role_UsersInRole" Member="Role" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Role" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profile" Member="Profiles">
+    <Type Name="Profile">
+      <Column Name="ProfileId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="AddressNumber" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="CPF" Type="System.String" DbType="VarChar(14) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressComp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RG" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="EducationLevelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MaritalStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SexId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Profile_User" Member="Users" ThisKey="ProfileId" OtherKey="ProfileId" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Permissions" Member="Permissions">
+    <Type Name="Permission">
+      <Column Name="PermissionTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FunctionId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Role_Permission" Member="Role" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Role" IsForeignKey="true" />
+      <Association Name="Function_Permission" Member="Function" ThisKey="FunctionId" OtherKey="FunctionId" Type="Function" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Roles" Member="Roles">
+    <Type Name="Role">
+      <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParentRoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ApplicationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Role_UsersInRole" Member="UsersInRoles" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="UsersInRole" />
+      <Association Name="Role_Permission" Member="Permissions" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Permission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Functions" Member="Functions">
+    <Type Name="Function">
+      <Column Name="FunctionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="CodeName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="ParentId" Type="System.Int32" DbType="Int" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="Function_Permission" Member="Permissions" ThisKey="FunctionId" OtherKey="FunctionId" Type="Permission" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserActivityLog" Member="UserActivityLogs">
+    <Type Name="UserActivityLog">
+      <Column Name="SessionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LoginDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LogoffDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_UserActivityLog" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

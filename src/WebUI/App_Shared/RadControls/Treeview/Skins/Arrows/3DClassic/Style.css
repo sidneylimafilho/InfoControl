@@ -1,0 +1,40 @@
+.TreeNode 
+{ 
+	font-family: Tahoma;
+	font-size: 8pt; 
+	color: black;	
+	padding-left: 3px;
+	text-decoration: none;
+}
+
+.TreeNodeOver 
+{ 
+	font-family: Tahoma; 
+	font-size: 8pt; 
+	color: black; 	
+	text-decoration: underline; 
+	cursor: pointer;
+	cursor: hand;
+	padding-left: 3px;
+}
+
+.TreeNodeSelect 
+{ 
+	font-family: Tahoma; 
+	font-size: 8pt; 
+	color: white; 
+	background: #316AC5; 	
+    cursor: pointer;
+	cursor: hand;
+	margin-left: 3px;	
+}
+
+.TreeNodeDisabled
+{ 
+	font-family: Tahoma;
+	font-size: 8pt; 
+	color: gray;	
+	padding-left: 3px;
+	text-decoration: none;
+	cursor: default;
+}

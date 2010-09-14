@@ -1,0 +1,132 @@
+
+
+/*---------------------------------------------------------------------------
+Carrinho de Compras
+----------------------------------------------------------------------------*/
+.basket
+{
+}
+
+.basket .passos
+{
+	background-image: url(../img/bgCarrinho.png);
+	background-repeat: no-repeat;
+	background-position:0px 14px;
+	width: 870px;	
+}
+
+.basket .passos .entrega
+{
+	margin-left:200px;
+}
+
+.basket .passos .entrega, .basket .passos .identificacao, .basket .passos .pagamento
+{
+	display:inline-block;
+	height:48px;
+	width:200px;
+	background-repeat:no-repeat;
+}
+
+.basket .passos .entrega {background-image: url(../img/bgEntrega.png);}
+.basket .passos .entrega.off {background-image: url(../img/bgEntrega-off.png);}
+
+.basket .passos .identificacao {background-image: url(../img/bgIdentificacao.png);}
+.basket .passos .identificacao.off {background-image: url(../img/bgIdentificacao-off.png);}
+
+.basket .passos .pagamento{background-image: url(../img/bgPagamento.png);}
+.basket .passos .pagamento.off{background-image: url(../img/bgPagamento-off.png);}
+
+.basket .navegacao
+{
+	padding:10px;
+}
+
+.basket .excluir, .basket .continueComprando, .basket .avancar
+ {
+ 	display:inline-block;
+	color:transparent;
+	background-position:center center;
+	background-repeat:no-repeat;
+ }
+.basket .excluir
+{
+	background-image: url(../img/botao_excluir.gif);
+	width:52px;
+	height:57px;
+}
+.basket .continueComprando
+{
+	background-image: url(../img/botao_continuar_comprando.gif);	
+	width:174px;
+	height:32px;
+	left:0px;
+	position:relative;
+}
+.basket .avancar
+{
+	background: url(../img/botao_finalizar_compra.gif);
+	width:183px;
+	height:32px;
+	float: right;
+}
+
+.basket thead
+{
+	color:#FFF;
+	font-weight:bold;
+	text-align:center;
+	border-bottom:1px solid #FFF;
+} 
+
+.basket tbody .col1, 
+.basket tbody .col2, 
+.basket tbody .col3, 
+.basket tbody .col4, 
+.basket tbody .col5,
+.basket tbody .col6
+{
+	padding:10px;
+}
+
+.basket thead .col1, .basket thead .col2, .basket thead .col3, .basket thead .col4, .basket thead .col5, .basket tfoot .col5, .basket .frete
+{
+	background-color:#a3463d !important;
+	color:#FFF;
+	text-align:center;
+	padding:2px 15px;	
+}
+
+.basket .col6
+{
+	background-color:#7a3b34;
+	color:#FFF;	
+	padding:2px 15px;
+	text-align:center;
+}
+
+.basket table
+{
+	border-collapse:collapse;
+	white-space:nowrap;
+}
+
+.basket .endereco .col5
+{
+
+}
+
+.basket .frete label
+{
+	padding-right:5px;
+}
+
+.basket .frete
+{
+	text-align:left !important;	
+}
+
+.basket .frete .valor
+{
+	
+}

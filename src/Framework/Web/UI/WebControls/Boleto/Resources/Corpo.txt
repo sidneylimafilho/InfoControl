@@ -1,0 +1,333 @@
+<table bordercolor="#000000" cellspacing="0" cellpadding="0" width="100%" border="1">
+    <tr>
+        <td valign="top" colspan="5">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Local de Pagamento</td>
+                </tr>
+                <tr>
+                    <td class="cp">
+                        &nbsp;[=LocalPagamento=]</td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top" width="140" bgcolor="#cccccc">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Vencimento</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="dtavencto2">[=DataVencimento=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" colspan="5">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Cedente</td>
+                </tr>
+                <tr>
+                    <td class="ld">
+                        &nbsp;<span id="Cedente2">[=CedenteNome=]</span></td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top" width="140">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Agência / Código do Cedente</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="CodCedente2">[=AgenciaCedente=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Data Documento</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="dtadocumento2">[=DataDocumento=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Número Documento</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="numerodocumento2">[=Documento=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Espécie Doc.</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <aspan id="especiedocumento2">
+                        [=pEspecieDoc=]</span></td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Aceite</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="aceite2">[=Aceite=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Data Processamento</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="dtaprocess2">[=DataProcessamento=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top" width="140">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Nosso Número</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="nossonumero12">[=lNossoNumero=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Uso da Empresa</td>
+                </tr>
+                <tr>
+                    <td class="ld">
+                        &nbsp;</td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Carteira</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="carteira2">[=Carteira=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Espécie</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="especie2">[=Especie=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Quantidade</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="quantidade2">[=Quantidade=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Valor</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">
+                        <span id="valor2">[=ValorCobrado=]</span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td valign="top" width="140" bgcolor="#cccccc">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct" colspan="2">
+                        &nbsp;(=) Valor do Documento</td>
+                </tr>
+                <tr>
+                    <td class="ld" width="30">
+                        &nbsp;R$</td>
+                    <td class="ld" align="right">
+                        <span id="valordocumento2">[=Valor=]</span>
+                        &nbsp;</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" colspan="5" rowspan="5">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;Instruções</td>
+                </tr>
+                <tr>
+                    <td class="ld">
+                        &nbsp;<span id="Instrucao12">[=Instrucao=]</span></td>
+                </tr>                
+            </table>
+        </td>
+        <td valign="top" width="140">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;(-) Desconto / Abatimento</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">[=Desconto=]</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="140">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;(-) Outras Deduções</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">[=OutrasDeducoes=]</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="140">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;(+) Mora / Multa</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">[=Multa=]</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="140">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;(+) Outros Acréscimos</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">[=OutrasAcrescimos=]</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" width="140" bgcolor="#cccccc">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct">
+                        &nbsp;(=) Valor Cobrado</td>
+                </tr>
+                <tr>
+                    <td class="ld" align="center">[=ValorCobrado=]</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td valign="top" colspan="6">
+            <table cellspacing="0" cellpadding="0" width="100%" border="0">
+                <tr>
+                    <td class="ct" width="50">
+                        &nbsp;Sacado</td>
+                    <td class="ld">
+                        <span id="Sacado2">[=SacadoNome=]</span>
+                        &nbsp;</td>
+                    <td class="ld" width="35%">
+                        <span id="CPFCNPJSacado2">[=SacadoCPF_CNPJ=]</span>
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td class="ct">
+                    </td>
+                    <td class="ld">
+                        <span id="EnderecoSacado2">[=SacadoEnderecoLinha1=]</span>
+                    </td>
+                    <td class="ld">
+                        <span id="nossonumero22">[=lNossoNumero=]</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ct">
+                    </td>
+                    <td class="ld">
+                        <span id="Cidate2">[=SacadoEnderecoLinha2=]</span>
+                    </td>
+                    <td class="ld">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="ct" valign="top" colspan="3">
+                        &nbsp;Sacador / Avalista</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,42 @@
+.ti
+{
+	font: 9px arial, helvetica, sans-serif;
+}
+.ct
+{
+	font: 9px arial narrow;
+	color: #000000;
+}
+.cn
+{
+	font: 9px arial;
+	color: #000000;
+}
+.cp
+{
+	font: bold 11px arial;
+	color: #000000;
+}
+.ld
+{
+	font: bold 11px arial;
+	color: #000000;
+}
+.bc
+{
+	font: bold 18px arial;
+	color: #000000;
+}
+.lLinhaDigitavel
+{
+	font: bold 15px arial;
+	color: #000000;
+}
+.SaltoDePagina
+{
+	page-break-after: always;
+}
+.nbanco
+{
+	font: bold 25px arial;
+}

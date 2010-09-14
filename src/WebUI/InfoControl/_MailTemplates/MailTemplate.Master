@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="TitleContent" runat="server" />
+    </title>
+</head>
+<body>
+    <table width="600">
+        <tr>
+            <td style="width: 120px;" valign="top">
+                <img src="http://vivina.com.br/site/1/themes/infocontrol/img/background2.jpg?" />&nbsp;&nbsp;
+            </td>
+            <td valign="top">
+                <div style="font-family: 'Segoe UI'; font-size: 14px !important; color: rgb(0, 68, 68);">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <p>
+                        Atenciosamente<br />
+                        <br />
+                        <span style="font-size: 17px;">Sidney Lima Filho</span><br />
+                        Vivina Softhouse<br />
+                        (0xx21) 7867-2321<br />
+                        55*10*68934<br />
+                        <a href="http://www.vivina.com.br/" target="_blank">http://www.vivina.com.br</a>&nbsp;&nbsp;
+                        |&nbsp;&nbsp;&nbsp;<a href="http://twitter.com/sidneyfilho" target="_blank"><span>http://twitter.com/vivina</span></a></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

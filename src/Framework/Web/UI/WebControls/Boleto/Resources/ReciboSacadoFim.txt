@@ -1,0 +1,12 @@
+<table cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tr>
+        <td class="ct">
+            &nbsp;Recebi através do cheque n°
+            <br>
+            &nbsp;do banco:<br>
+            &nbsp;Esta quitação só terá validade após pagamento do cheque pelo Banco sacado.
+        </td>
+        <td class="ct" valign="top" align="center" width="150">
+            Autenticação Mecânica</td>
+    </tr>
+</table>

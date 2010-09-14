@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:schema id="DataAccessSettings" targetNamespace="InfoControl.Data" elementFormDefault="qualified" xmlns="InfoControl.Data" xmlns:s="http://www.w3.org/2001/XMLSchema">
+  <s:element name="dataAccessSettings">
+    <s:complexType>
+      <s:sequence>
+        <s:element minOccurs="1" maxOccurs="1" name="providers">
+          <s:complexType>
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="provider" type="provider" />
+            </s:sequence>
+          </s:complexType>
+        </s:element>
+        <s:element minOccurs="1" maxOccurs="1" name="sources">
+          <s:complexType>
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="source" type="source" />
+            </s:sequence>
+          </s:complexType>
+        </s:element>
+      </s:sequence>
+    </s:complexType>
+  </s:element>
+  <s:complexType name="provider">
+    <s:attribute name="name" type="s:string" use="required" />
+    <s:attribute name="connectionType" type="s:string" use="required" />
+    <s:attribute name="dataAdapterType" type="s:string" />
+    <s:attribute name="commandBuilderType" type="s:string" />
+    <s:attribute name="parameterPrefix" type="s:string" />
+    <s:attribute name="assembly" type="s:string" use="required" />
+  </s:complexType>
+  <s:complexType name="source">
+    <s:attribute name="name" type="s:string" use="required" />
+    <s:attribute name="isDefault" type="s:boolean" use="required" />
+    <s:attribute name="provider" type="s:string" />
+    <s:attribute name="connectionString" type="s:string" use="required" />
+    <s:attribute name="readOnly" type="s:boolean" />
+    <s:attribute name="autoCommit" type="s:boolean" use="required" />
+  </s:complexType>
+</s:schema>

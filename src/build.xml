@@ -1,0 +1,128 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <Import Project="C:\Program Files (x86)\MSBuild\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets"/>
+  <PropertyGroup>
+    <GCProjectName>Vivina.InfoControl</GCProjectName>
+
+    <LibDir>lib</LibDir>
+    <BuildDir>build</BuildDir>
+    <BuildDir2>$(MSBuildProjectDirectory)\$(BuildDir)</BuildDir2>
+    <OutputFolder>D:\Vivina Files\Works\Projects\InfoControl\Publish</OutputFolder>
+    <!--
+    <PackageDir>pkg\</PackageDir>
+    <PackageDir2>$(MSBuildProjectDirectory)\$(PackageDir)</PackageDir2>
+
+
+   
+	<SourceDir>src\</SourceDir>
+    <SourceBaseDir>src-tools\base\</SourceBaseDir>
+    <SourceBaseLibDir>$(SourceBaseDir)\lib\</SourceBaseLibDir>
+	
+
+    <KeyFilePath>$(SourceDir)\Simple.snk</KeyFilePath>
+	-->
+
+    <Configuration>Release</Configuration>
+    <Platform>Any CPU</Platform>
+
+    <ProductMajorVersion>0</ProductMajorVersion>
+    <ProductMinorVersion>9</ProductMinorVersion>
+    <ProductBuildName>Vivina.InfoControl</ProductBuildName>
+    <!-- 
+    <MainLibraryName>Simple.$(ProductBuildName)</MainLibraryName>
+    
+	<TestAssembly>$(BuildDir)\Simple.Tests.exe</TestAssembly> 
+	-->
+  </PropertyGroup>
+<!--
+  <ItemGroup>
+    <SolutionFile Include="InfoControl 3.5.sln" />
+  </ItemGroup>
+  
+  <Import Project="util\msbuild\MSBuild.Community.Tasks.Targets"/>
+  <Import Project="util\msbuild\Simple.Tools.MsBuild.Targets"/>
+-->
+  <Target Name="Clean">
+    <!--
+	<MSBuild Projects="@(SolutionFile)" Targets="Clean" Properties="Configuration=$(Configuration);Platform=$(Platform);"/>
+    -->
+    <RemoveDir Directories="$(BuildDir)" ContinueOnError="true"/>
+  </Target>
+
+  <!--
+  <Target Name="GenerateTag">
+    <SvnVersion LocalPath="." ToolPath="util\svn">
+      <Output TaskParameter="Revision" PropertyName="Revision" />
+    </SvnVersion>
+    <Message Text="Revision: $(Revision)"/>
+
+
+    <CreateProperty
+        Value="$(ProductMajorVersion).$(ProductMinorVersion).$(Revision)">
+      <Output TaskParameter="Value" PropertyName="ProductVersion" />
+    </CreateProperty>
+
+    <Message Text="Product version: $(ProductVersion)"/>
+  </Target>
+
+  <Target Name="GenerateAssemblyInfo" DependsOnTargets="GenerateTag">
+    <AssemblyInfo CodeLanguage="CS"
+               OutputFile="$(SourceDir)\GlobalInfo.cs"
+               AssemblyCompany="Living Consultoria"
+               AssemblyProduct="Simple.Net ($(ProductBuildName))"
+               AssemblyCopyright="Copyright (c) Living Consultoria 2009"
+               AssemblyTrademark=""
+               ComVisible="false"
+               CLSCompliant="false"
+               AssemblyVersion="$(ProductVersion)"
+               AssemblyFileVersion="$(ProductVersion)" />
+  </Target>
+-->
+
+  <Target Name="Build">
+    <MSBuild Projects="@(SolutionFile)" Properties="Configuration=$(Configuration);Platform=$(Platform);"/>
+  </Target>
+
+  <Target Name="Rebuild">
+    <CallTarget Targets="Clean; Build"></CallTarget>
+  </Target>
+
+  <Target Name="Test" DependsOnTargets="Build">
+    <Nunit Assemblies="$(TestAssembly)" ToolPath="util\nunit"/>
+  </Target>
+
+
+  <Target Name="Merge" DependsOnTargets="Build">
+    <ItemGroup>
+      <MergeItems Include="$(BuildDir)\Simple.dll"/>
+      <MergeItems Include="$(BuildDir)\Simple.Data.dll"/>
+      <MergeItems Include="$(BuildDir)\Simple.Web.Mvc.dll"/>
+      <MergeItems Include="$(BuildDir)\Simple.Generator.dll"/>
+      <MergeItems Include="$(BuildDir)\Simple.NVelocity.dll"/>
+      <MergeItems Include="$(BuildDir)\Simple.NHibernate.dll"/>
+      <MergeItems Include="$(BuildDir)\FluentValidation.dll"/>
+      <MergeItems Include="$(BuildDir)\log4net.dll"/>
+    </ItemGroup>
+
+    <MakeDir Directories="$(PackageDir)"/>
+    <ILMerge OutputFile="$(PackageDir)\$(MainLibraryName).dll"
+            InputAssemblies="@(MergeItems)"
+            ToolPath="util\ilmerge"
+            LogFile=""
+            KeyFile="$(KeyFilePath)"
+             />
+  </Target>
+
+
+  <Target Name="Publish">
+    <RemoveDir Directories="$(OutputFolder)" ContinueOnError="true" />
+    <MSBuild Projects="$(MSBuildProjectDirectory)\WebUi\VivinaErp.csproj"
+            Targets="ResolveReferences;_CopyWebApplication"
+            Properties="WebProjectOutputDir=$(OutputFolder);OutDir=$(OutputFolder)\bin\"
+            />
+  </Target>
+
+
+
+
+
+</Project>

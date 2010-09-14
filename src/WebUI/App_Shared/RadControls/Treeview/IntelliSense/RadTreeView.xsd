@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema 
+	targetNamespace="http://schemas.telerik.com/intellisense/RadTreeView"
+	elementFormDefault="qualified"
+	xmlns="http://schemas.telerik.com/intellisense/RadTreeView"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:vs="http://schemas.microsoft.com/Visual-Studio-Intellisense"
+	vs:friendlyname="RadTreeView"
+	vs:ishtmlschema="false"
+	vs:iscasesensitive="false"
+	vs:requireattributequotes="false">
+	<xsd:annotation>
+		<xsd:documentation>r.a.d.treeview schema</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="RadTreeView" type="RadTreeViewDef" />
+	<xsd:simpleType name="RadTreeViewSort">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="None" />
+			<xsd:enumeration value="Ascending" />
+			<xsd:enumeration value="Descending" />
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:complexType vs:noambientcontentmodel="true" name="RadTreeViewDef">
+		<xsd:attribute name="LoadingMessage" type="xsd:string" />
+		<xsd:attribute name="LoadingMessageCssClass" type="xsd:string" />
+		<xsd:attribute name="LoadingMessagePosition" type="LoadingMessagePosition" />
+		<xsd:attribute name="Sort" type="RadTreeViewSort" />
+		<xsd:attribute name="AllowNodeEditing" type="xsd:boolean" />
+		<xsd:attribute name="ExpandDelay" type="xsd:int" />
+		<xsd:attribute name="ShowLineImages" type="xsd:boolean" />
+		<xsd:attribute name="SingleExpandPath" type="xsd:boolean" />
+		<xsd:attribute name="RadControlsDir" type="xsd:string" />
+		<xsd:attribute name="Skin" type="xsd:string" />
+		<xsd:attribute name="ContentFile" type="xsd:string" />
+		<xsd:attribute name="ContextMenuContentFile" type="xsd:string" />
+		<xsd:attribute name="ImagesBaseDir" type="xsd:string" />
+		<xsd:attribute name="AutoPostBack" type="xsd:boolean" />
+		<xsd:attribute name="CheckBoxes" type="xsd:boolean" />
+		<xsd:attribute name="MultipleSelect" type="xsd:boolean" />
+		<xsd:attribute name="DragAndDrop" type="xsd:boolean" />
+		<xsd:attribute name="CausesValidation" type="xsd:boolean" />
+		<xsd:attribute name="NodeSpacing" type="xsd:int" />
+		<xsd:attribute name="AfterClientFocus" type="xsd:string" />
+		<xsd:attribute name="BeforeClientClick" type="xsd:string" />
+		<xsd:attribute name="BeforeClientHighlight" type="xsd:string" />
+		<xsd:attribute name="AfterClientHighlight" type="xsd:string" />
+		<xsd:attribute name="BeforeClientToggle" type="xsd:string" />
+		<xsd:attribute name="AfterClientToggle" type="xsd:string" />
+		<xsd:attribute name="BeforeClientDrop" type="xsd:string" />
+		<xsd:attribute name="BeforeClientDrag" type="xsd:string" />
+		<xsd:attribute name="BeforeClientContextClick" type="xsd:string" />
+		<xsd:attribute name="BeforeClientCheck" type="xsd:string" />
+		<xsd:attribute name="AfterClientCheck" type="xsd:string" />
+		<xsd:attribute name="AfterClientMove" type="xsd:string" />
+		<xsd:attribute name="RetainScrollPosition" type="xsd:boolean" />
+		<xsd:attribute name="NodeCssClass" type="xsd:string" />
+		<xsd:attribute name="NodeCssClassOver" type="xsd:string" />
+		<xsd:attribute name="NodeCssClassSelect" type="xsd:string" />
+		<xsd:attribute name="NodeCssClassDisable" type="xsd:string" />
+		<xsd:attribute name="NodeCssClassEdit" type="xsd:string" />
+		<xsd:attribute name="ContextMenuItemCssClass" type="xsd:string" />
+		<xsd:attribute name="ContextMenuItemOverCssClass" type="xsd:string" />
+		<xsd:attribute name="EnableViewState" type="xsd:boolean" />
+		<xsd:attribute name="AccessKey" type="xsd:string" />
+		<xsd:attribute name="Enabled" type="xsd:boolean" />
+		<xsd:attribute name="Height" type="xsd:unsignedInt" />
+		<xsd:attribute name="TabIndex" type="xsd:short" />
+		<xsd:attribute name="Width" type="xsd:unsignedInt" />
+		<xsd:attribute name="ID" type="xsd:string" />
+		<xsd:attribute name="Visible" type="xsd:boolean" />
+		<xsd:attribute vs:omtype="event" name="OnNodeClick" />
+		<xsd:attribute vs:omtype="event" name="OnNodeDrop" />
+		<xsd:attribute vs:omtype="event" name="OnNodeContextClick" />
+		<xsd:attribute vs:omtype="event" name="OnNodeBound" />
+		<xsd:attribute vs:omtype="event" name="OnNodeExpand" />
+		<xsd:attribute vs:omtype="event" name="OnNodeEdit" />
+		<xsd:attribute name="Runat">
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:enumeration value="server" />
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+	<xsd:simpleType name="LoadingMessagePosition">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="BeforeNodeText" />
+			<xsd:enumeration value="AfterNodeText" />
+			<xsd:enumeration value="BelowNodeText" />
+			<xsd:enumeration value="None" />
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

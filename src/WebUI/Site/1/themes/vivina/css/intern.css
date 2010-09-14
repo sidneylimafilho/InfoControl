@@ -1,0 +1,427 @@
+@import "_format.css";
+@import "_global.css";
+@import "../../litero/css/litero.css";
+@import "../../../../../App_Themes/GlassCyan/Controls/Button/Button.css";
+@import "../../../../../App_Themes/GlassCyan/Controls/Validator/validator.css";
+
+/*---------------------------------------------------------------------------
+Geral
+----------------------------------------------------------------------------*/
+
+.bgLeft
+{
+	background: url(../img/bgLeft.jpg) no-repeat;
+	background-position: -100px 0px;
+	background-attachment: fixed;
+	z-index: 2;
+	vertical-align: top;
+}
+.bgRight
+{
+	background: url(../img/bgRight.jpg) no-repeat;
+	background-attachment: fixed;
+	background-position: 116% 0px;
+	z-index: 2;
+	vertical-align: top;
+}
+
+
+/*---------------------------------------------------------------------------
+Header
+----------------------------------------------------------------------------*/
+.header, .content, .footer
+{
+	width: 870px;
+	border-left: 1px solid #099;
+	border-right: 1px solid #099;
+	background: url(../img/bg.png);
+	padding:0px 10px
+	
+}
+
+.header
+{
+	height: 54px;
+}
+
+.headerHelp
+{
+	filter: alpha(opacity=100) !important;
+	opacity: 1 !important;
+	background-color: #fff;
+	border-left: 0px solid #099;
+	border-right: 0px solid #099;
+	width: auto;
+	height: 44px !important;
+}
+
+.header .logo
+{
+	background: url(../img/logo.gif) no-repeat;
+	height: 53px;
+	float: left;
+	width: 176px;
+	display: block;
+}
+
+.header .right
+{
+	float: right;
+	width: 500px;
+	margin-right: 50px;
+}
+.header .aba
+{
+	width: 100%;
+	height: 24px;
+	background: url(../img/header_aba.gif) no-repeat;
+	background-position: center 0px;
+}
+
+.header .right .menu
+{
+	margin-left: 18px;
+}
+
+.header .products
+{
+	top: 0px;
+	text-align: center;
+	width: 100%;
+}
+
+.header .products a
+{
+	padding: 0px 8px;
+	border-bottom: 2px solid transparent;
+	font-size: 12px;
+	color: #999;
+	vertical-align:top;
+	letter-spacing:0px;
+}
+
+.header .products a:hover, .header .products .selected
+{
+	color: #FFE !important;
+	text-decoration: none;
+}
+
+.header .products .selected
+{
+	font-weight: bold;
+}
+
+
+/*---------------------------------------------------------------------------
+Menu
+----------------------------------------------------------------------------*/
+.menu  a, .header .actions a
+{
+	margin: 0px 6px 0px 6px;
+	color: #0099A0;
+	text-decoration: none;	
+	
+	border-bottom: 2px solid transparent;
+}
+
+.menu  a:hover, .header .actions a:hover
+{
+	color: #033;
+	border-bottom-color: #F90 !important;
+	text-decoration: none;
+}
+
+.menu li
+{
+	float: left;
+	list-style-type: none;
+	position: relative;
+}
+
+/*---------------------------------------------------------------------------
+Content
+----------------------------------------------------------------------------*/
+
+.content
+{
+	min-height: 480px;
+	display: block;
+	filter: DX; /* hack IE8 for border*/
+	padding:10px;
+}
+
+.content ul{ list-style-position:outside; }
+.content li{ list-style:circle; list-style-image:url(../../infocontrol/img/bk_bullet.gif); padding: 0px;}
+
+fieldset
+{
+	padding: 0px;
+	border-top: 1px solid #CCC;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+ul
+{
+	padding-left: 20px;
+	list-style-type: disc;
+}
+
+.content .topic
+{
+	width: 47%;
+	float: left;
+}
+.content .topic, .infocontrol, .pooba
+{
+	display: block;
+	margin: 10px;
+	color: #666666;
+	text-align: justify;
+}
+
+
+.infocontrol
+{
+	background-image: url(../img/logo_infocontrol.jpg);
+	background-position: left center;
+	background-repeat: no-repeat;
+	padding-left: 150px;
+	min-height: 140px;
+}
+
+.pooba
+{
+	background: url(../img/logo_pooba.gif) right;
+	background-repeat: no-repeat;
+	background-position: right center;
+	padding: 0px 310px 0px 0px;
+}
+
+
+.servicos_impulse
+{
+	background-image: url(../img/servicos_impulse_bg.gif);
+	background-repeat: no-repeat;
+	width: 182px;
+	height: 182px;
+}
+
+.contentContainer
+{
+	clear: both;
+}
+.contentContainer .content .inner
+{
+	width: 614px;
+	float: left;
+}
+.contentContainer .content .impulse
+{
+	width: 240px;
+	margin-top: 15px;
+	float: left;
+}
+
+.contentContainer .content .impulse .webLink, .contentContainer .content .impulse .feedItem
+{
+	padding-bottom: 9px;
+}
+
+.contentContainer .content .impulse .webLink a, .contentContainer .content .impulse .feedItem
+{
+	line-height:13px;
+}
+
+.contentHelp
+{
+}
+
+
+
+
+
+/*---------------------------------------------------------------------------
+Footer
+----------------------------------------------------------------------------*/
+.footerConteiner
+{
+	
+	clear: both;
+	
+}
+.footer
+{
+	text-align: center;
+	height: 132px;
+	display:block;
+	
+}
+
+.copyright .logoVivina
+{
+	background-image: url(../img/LOGO_FULL_glasscyan.png);
+	background-repeat: no-repeat;
+	width: 250px;
+	height: 72px;
+	display:block;
+	margin:auto;	
+}
+
+
+
+/*---------------------------------------------------------------------------
+Geral
+----------------------------------------------------------------------------*/
+.faleConosco
+{
+	width: 400px;
+}
+.faleConosco label
+{
+	display: block;
+}
+
+
+.page h1 a
+{
+	color: #00CCD0;
+	text-decoration: none;
+	border-bottom: 2px solid transparent;
+	margin: 0px;
+}
+.page h1 a:hover
+{
+	color: #099;
+	border-bottom-color: #F90 !important;
+}
+
+#post-1 .head, #post-4 span, #post-5 span, #post-6 span, #post-7 span, #post-9 .author, #post-9 .date
+{
+	display: none;
+}
+
+.page .head
+{
+	margin: 0em;
+}
+
+.page .footer
+{
+	margin: 0em;
+	padding:0px;
+}
+
+.page h1, .page h2, .page h3
+{
+}
+
+.page h1, .page .author, .page .date
+{
+	display: inline;
+	font-family: Segoe UI, Arial, Trebuchet MS, sans-serif;
+	margin-right: 10px;
+	letter-spacing: -0.05em;
+}
+
+.page .author
+{
+	color: #FC4;
+	font-size: 140%;
+	font-weight: bold;
+}
+
+.page .date
+{
+	color: #BBB;
+	font-size: 130%;
+}
+
+.page .date .year
+{
+	display: none;
+}
+
+
+.page .head iframe
+{
+	border: 12px solid #00CCD0;
+	width: 640px;
+	height: 320px;
+	display: block;
+}
+
+.page .head div
+{
+	float: left;
+	display: inline;
+}
+
+.page .breadCrumbs a
+{
+	font-size: 84%;
+	color: #999;
+	z-index: 1000;
+}
+
+
+
+
+/*****************************************************************************************************
+Comments
+******************************************************************************************************/
+
+.page .head .comment
+{
+	background: transparent url(../img/comment.gif) no-repeat scroll 0 50%;
+	color: #AAAAAA;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: normal;
+	margin: 0 0 5px;
+	padding: 0 0 0 29px;
+	vertical-align: middle;
+	white-space: nowrap;
+	height: 30px;
+	line-height: 30px;
+	display: inline-block;
+}
+
+
+#commentBody, #commentBody hr
+{
+	background: url(../img/bgComments.jpg) right bottom;
+	background-color: White;
+	background-repeat: repeat-y;
+	background-position: 180px;
+	width: 100%;
+}
+
+#commentPlaceholder
+{
+}
+
+
+#commentPlaceholder iframe
+{
+	position: absolute;
+	border: 1px solid gray;
+	border-collapse: collapse;
+	width: 400px;
+	height: 300px;
+	display: none;
+	background-color: Transparent;
+}
+
+.comment-footer
+{
+	border-top: 1px dotted gray;
+	width: 100%;
+}
+
+.comment-footer .cTxt21b, .comment-footer .cTxt21, .comment-footer a
+{
+	font-size:8pt !important;
+	color:#AAA;
+}

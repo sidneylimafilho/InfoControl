@@ -1,0 +1,812 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AcademicFormation" xml:space="preserve">
+    <value>Formação Acadêmica</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="AdditionalInformations" xml:space="preserve">
+    <value>Informações Adicionais</value>
+  </data>
+  <data name="AddOrganizationLevelDescription" xml:space="preserve">
+    <value>Para adicionar um subnível, selecione um nível</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
+  <data name="AddressComp" xml:space="preserve">
+    <value>Complemento</value>
+  </data>
+  <data name="AddressNumber" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="AdmissionDate" xml:space="preserve">
+    <value>Data de Admissão</value>
+  </data>
+  <data name="Alienation" xml:space="preserve">
+    <value>Motivo do Afastamento</value>
+  </data>
+  <data name="AlienationOrExternalUnit" xml:space="preserve">
+    <value>Afastamento/Órgão externo</value>
+    <comment>Utilizado quando há uma descrição onde poderá ser tanto afastamento ou orgão externo; mas há também variáveis para os dois termos separados</comment>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>Todos</value>
+  </data>
+  <data name="AssistantReportingDynamic" xml:space="preserve">
+    <value>Assistente de Geração de Relatórios Dinâmicos</value>
+  </data>
+  <data name="Alienated" xml:space="preserve">
+    <value>Afastado</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Voltar</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Data de nascimento</value>
+  </data>
+  <data name="Bond" xml:space="preserve">
+    <value>Vínculo</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+    <comment>Usado em botões cancelar</comment>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoria</value>
+  </data>
+  <data name="CategoryClass" xml:space="preserve">
+    <value>Classe da Categoria</value>
+  </data>
+  <data name="CategoryLevel" xml:space="preserve">
+    <value>Nível da Categoria</value>
+  </data>
+  <data name="CboNumber" xml:space="preserve">
+    <value>Número CBO</value>
+  </data>
+  <data name="CellPhone" xml:space="preserve">
+    <value>Telefone Celular</value>
+  </data>
+  <data name="Change" xml:space="preserve">
+    <value>Alterar</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Alterar Senha</value>
+  </data>
+  <data name="ChangePasswordInNextLogin" xml:space="preserve">
+    <value>Trocar senhar no proximo login ?</value>
+  </data>
+  <data name="ChooseOfFactRequiredMessage" xml:space="preserve">
+    <value>A escolha da informação fato é obrigatória!</value>
+  </data>
+  <data name="ChooseTheFilterWhished" xml:space="preserve">
+    <value>Escolha o filtro desejado</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>Cidade</value>
+  </data>
+  <data name="Class" xml:space="preserve">
+    <value>Classe</value>
+  </data>
+  <data name="Cm" xml:space="preserve">
+    <value>cm</value>
+  </data>
+  <data name="CNES" xml:space="preserve">
+    <value>CNES</value>
+  </data>
+  <data name="ComissionPost" xml:space="preserve">
+    <value>Cargo Comissionado</value>
+  </data>
+  <data name="CommercialPhone" xml:space="preserve">
+    <value>Telefone Comercial</value>
+  </data>
+  <data name="CompanyConfiguration" xml:space="preserve">
+    <value>Configurações da Empresa</value>
+  </data>
+  <data name="ComplexityLevel" xml:space="preserve">
+    <value>Nível de complexidade</value>
+  </data>
+  <data name="ConfirmationOfNewPassword" xml:space="preserve">
+    <value>Confirmação da nova senha</value>
+  </data>
+  <data name="ConfirmsPassword" xml:space="preserve">
+    <value>Confirma Senha</value>
+  </data>
+  <data name="ContentOfAddicionalTables" xml:space="preserve">
+    <value>Conteúdo das Tabelas Adicionais</value>
+  </data>
+  <data name="CourseAlreadyAddMessage" xml:space="preserve">
+    <value>Não é permitido adicionar o mesmo curso mais de uma vez!</value>
+  </data>
+  <data name="CPF" xml:space="preserve">
+    <value>CPF</value>
+  </data>
+  <data name="CreateYourOwnReportDescription" xml:space="preserve">
+    <value>Monte seu próprio relatório, selecionando a informação que conterá as variáveis a serem cruzadas!</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="FormationDate" xml:space="preserve">
+    <value>Data da Formação</value>
+  </data>
+  <data name="DeleteRegisterMessage" xml:space="preserve">
+    <value>Deseja realmente excluir esse registro?</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="DescriptionForAddContentInAdditionalTable" xml:space="preserve">
+    <value>Selecione a Informação que irá cadastrar os dados</value>
+  </data>
+  <data name="Display" xml:space="preserve">
+    <value>Exibir</value>
+  </data>
+  <data name="Down" xml:space="preserve">
+    <value>Desce</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Escolaridade</value>
+  </data>
+  <data name="EducationLevel" xml:space="preserve">
+    <value>Nível de Escolaridade</value>
+  </data>
+  <data name="EducationRegistration" xml:space="preserve">
+    <value>Cadastro de escolaridade</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Data de Conclusão</value>
+  </data>
+  <data name="Enrollment" xml:space="preserve">
+    <value>Matrícula</value>
+    <comment>Usado em cabeçalho de grid e em labels</comment>
+  </data>
+  <data name="ExternalUnit" xml:space="preserve">
+    <value>Orgão Receptor</value>
+  </data>
+  <data name="ExternalUnits" xml:space="preserve">
+    <value>Órgãos Externos</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Arquivo...</value>
+  </data>
+  <data name="FileImageDescription" xml:space="preserve">
+    <value>(Arquivo de imagem que contenha o logotipo da empresa. O arquivo de imagem, deverá ter 51px de altura e 183px de largura)</value>
+  </data>
+  <data name="FirstJob" xml:space="preserve">
+    <value>Primeiro Emprego</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Rodapé</value>
+  </data>
+  <data name="Formation" xml:space="preserve">
+    <value>Formação</value>
+  </data>
+  <data name="FormationRegistration" xml:space="preserve">
+    <value>Cadastro de Formação</value>
+  </data>
+  <data name="Function" xml:space="preserve">
+    <value>Atividade Exercida</value>
+  </data>
+  <data name="FunctionalSituation" xml:space="preserve">
+    <value>Situação Funcional</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>Geral</value>
+  </data>
+  <data name="GeneralsData" xml:space="preserve">
+    <value>Dados Gerais</value>
+  </data>
+  <data name="GenerateReport" xml:space="preserve">
+    <value>Gerar relatório</value>
+  </data>
+  <data name="GenerateReportDescription" xml:space="preserve">
+    <value>Depois que todas as seleções foram feitas, você pode visualizar o relatório clicando no botão abaixo. Se for necessária alguma mudança, basta clicar no botão "Voltar" e fazer a alteração.</value>
+  </data>
+  <data name="Given" xml:space="preserve">
+    <value>Cedido</value>
+  </data>
+  <data name="GoForward" xml:space="preserve">
+    <value>Avançar</value>
+  </data>
+  <data name="Header" xml:space="preserve">
+    <value>Cabeçalho</value>
+  </data>
+  <data name="HomePhone" xml:space="preserve">
+    <value>Telefone Residencial</value>
+  </data>
+  <data name="HourOrWeek" xml:space="preserve">
+    <value>Horas / Semana</value>
+  </data>
+  <data name="HoursWeek" xml:space="preserve">
+    <value>Carga Horária</value>
+  </data>
+  <data name="Insert" xml:space="preserve">
+    <value>Inserir</value>
+  </data>
+  <data name="InstitutionalRelationship" xml:space="preserve">
+    <value>Relação Institucional</value>
+  </data>
+  <data name="InvalidPasswordMessage" xml:space="preserve">
+    <value>Senha inválida! Mínimo de caracteres: 6; Caracteres não alfanuméricos obrigatórios: 1.</value>
+  </data>
+  <data name="IsActive" xml:space="preserve">
+    <value>Ativo ?</value>
+  </data>
+  <data name="IsBlocked" xml:space="preserve">
+    <value>Bloqueado ?</value>
+  </data>
+  <data name="JobUnit" xml:space="preserve">
+    <value>Unidade de Trabalho</value>
+  </data>
+  <data name="LastLogin" xml:space="preserve">
+    <value>Último Login</value>
+  </data>
+  <data name="Level" xml:space="preserve">
+    <value>Nível</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logotipo</value>
+  </data>
+  <data name="MarginBottom" xml:space="preserve">
+    <value>Inferior</value>
+  </data>
+  <data name="MarginLeft" xml:space="preserve">
+    <value>Esquerda</value>
+  </data>
+  <data name="MarginRight" xml:space="preserve">
+    <value>Direita</value>
+  </data>
+  <data name="Margins" xml:space="preserve">
+    <value>Margens</value>
+  </data>
+  <data name="MarginTop" xml:space="preserve">
+    <value>Superior</value>
+  </data>
+  <data name="MaritalStatus" xml:space="preserve">
+    <value>Estado Civil</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+    <comment>Usado em cabeçalhos de grid e em labels</comment>
+  </data>
+  <data name="Neighborhood" xml:space="preserve">
+    <value>Bairro</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>Nova Senha</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Não</value>
+  </data>
+  <data name="NominalReport" xml:space="preserve">
+    <value>Relatório Nominal</value>
+  </data>
+  <data name="OperationSucceedMessage" xml:space="preserve">
+    <value>Operação realizada com sucesso!</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>ou...</value>
+  </data>
+  <data name="OrganizationalLevelAccess" xml:space="preserve">
+    <value>Nível Organizacional de Acesso</value>
+  </data>
+  <data name="OrganizationLevel" xml:space="preserve">
+    <value>Nível Organizacional</value>
+  </data>
+  <data name="OrganizationLevelAndService" xml:space="preserve">
+    <value>Nível Organizacional e Serviço</value>
+  </data>
+  <data name="OrganizationsLevels" xml:space="preserve">
+    <value>Níveis Organizacionais</value>
+  </data>
+  <data name="OtherSchool" xml:space="preserve">
+    <value>Curso</value>
+  </data>
+  <data name="OtherSchools" xml:space="preserve">
+    <value>Cursos</value>
+  </data>
+  <data name="OthersCourses" xml:space="preserve">
+    <value>Outros Cursos</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
+  <data name="Permitions" xml:space="preserve">
+    <value>Permissões</value>
+  </data>
+  <data name="PersonalID" xml:space="preserve">
+    <value>RG</value>
+  </data>
+  <data name="PersonalInformations" xml:space="preserve">
+    <value>Informações Pessoais</value>
+  </data>
+  <data name="PersonalRegistration" xml:space="preserve">
+    <value>Cadastro de Pessoal</value>
+  </data>
+  <data name="Phones" xml:space="preserve">
+    <value>Telefones</value>
+  </data>
+  <data name="PointOfWork" xml:space="preserve">
+    <value>Posto de Trabalho</value>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>Cargo</value>
+  </data>
+  <data name="PrintDataInFooterReportDescription" xml:space="preserve">
+    <value>(Dados que serão impressos no rodapé dos relatórios.)</value>
+  </data>
+  <data name="ProfessionalHistory" xml:space="preserve">
+    <value>Histórico Profissional</value>
+  </data>
+  <data name="ProfessionalInformations" xml:space="preserve">
+    <value>Informações Profissionais</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>Perfis</value>
+  </data>
+  <data name="RegistersAssociatedMessage" xml:space="preserve">
+    <value>Não foi possivel apagar o registro selecionado pois há outros registros associados!</value>
+  </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Registro no conselho</value>
+  </data>
+  <data name="RemoveOrganizationLevelDescription" xml:space="preserve">
+    <value>Selecione o item e clique em Excluir</value>
+  </data>
+  <data name="RemovingRegisterMessage" xml:space="preserve">
+    <value>O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?</value>
+  </data>
+  <data name="ReportName" xml:space="preserve">
+    <value>Nome do Relatório</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Relatórios</value>
+  </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Salário</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
+    <comment>Usado em botões salvar</comment>
+  </data>
+  <data name="ScopeExecutive" xml:space="preserve">
+    <value>Esfera Administrativa</value>
+  </data>
+  <data name="SearchPostalCode" xml:space="preserve">
+    <value>Pesquisar Cep</value>
+  </data>
+  <data name="SectorGroup" xml:space="preserve">
+    <value>Área de Trabalho</value>
+  </data>
+  <data name="SectorRegistration" xml:space="preserve">
+    <value>Cadastro de Setor</value>
+  </data>
+  <data name="See" xml:space="preserve">
+    <value>Ver</value>
+  </data>
+  <data name="SeeInMap" xml:space="preserve">
+    <value>Ver no mapa</value>
+  </data>
+  <data name="SelectColumnsInReportDescription" xml:space="preserve">
+    <value>Selecione as Colunas que farão parte do Relatório.</value>
+  </data>
+  <data name="SelectOrderOfColumnsInReportDescription" xml:space="preserve">
+    <value>Selecione a ordem em que as colunas serão mostradas no Relatório.</value>
+  </data>
+  <data name="SelectOrderOfRowsInReportDescription" xml:space="preserve">
+    <value>Selecione a ordem em que as Linhas serão mostradas no Relatório.</value>
+  </data>
+  <data name="SelectRowsInReportDescription" xml:space="preserve">
+    <value>Selecione as Linhas que farão parte do Relatório.</value>
+  </data>
+  <data name="SelectTheMethodCreatedByTeam" xml:space="preserve">
+    <value>Selecione um dos métodos criados pela equipe</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Serviço</value>
+  </data>
+  <data name="ServiceRegistration" xml:space="preserve">
+    <value>Cadastro de Serviço</value>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>Gênero</value>
+  </data>
+  <data name="Shift" xml:space="preserve">
+    <value>Turno</value>
+  </data>
+  <data name="SigrhsWebVersionDescription" xml:space="preserve">
+    <value>Esta versão do sistema é resultado da parceria entre a Estação de Trabalho IMS/UERJ da Rede Observatório de Recursos Humanos em Saúde e o Ministério da Saúde por meio do Departamento de Gestão e da Regulação do Trabalho em Saúde.</value>
+  </data>
+  <data name="Specialty" xml:space="preserve">
+    <value>Especialidade</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="StatisticsReport" xml:space="preserve">
+    <value>Relatório Estatístico</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="StatusOfActivity" xml:space="preserve">
+    <value>Status de Atividade</value>
+  </data>
+  <data name="TransferedDate" xml:space="preserve">
+    <value>Data da Transferência</value>
+  </data>
+  <data name="Up" xml:space="preserve">
+    <value>Sobe</value>
+  </data>
+  <data name="UserData" xml:space="preserve">
+    <value>Dados do usuário</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nome do usuário</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Usuários</value>
+  </data>
+  <data name="WelcomeDescription" xml:space="preserve">
+    <value>Seja bem vindo!
+
+O Sistema de Informação e Gestão de Recursos Humanos em Saúde - SIGRHS foi desenvolvido para apoiar gestores na formulação de políticas de saúde. Trata-se de instrumento de coleta, armazenamento e análise de informações sobre trabalhadores de saúde para planejamento, acompanhamento, formulação de políticas de gestão a ser utilizado em serviços e sistemas locais de saúde. Sua característica principal é ser um software aberto que permite ser adaptado de acordo com a necessidade do gestor.</value>
+  </data>
+  <data name="WhatIsSigrhsDescription" xml:space="preserve">
+    <value>É um sistema de Informações com objetivos direcionados aos processos de administração e gestão de recursos humanos  do SUS. Sua implantação permite proceder a avaliação de RH, o estabelecimento de prioridades em formação e capacitação, o desenho de estratégias adequadas para o empreendimento de ações com vistas a reorientação na utilização e distribuição de pessoal de saúde, permitindo assim, que técnicos e dirigentes, particularmente os responsáveis pelos serviços de saúde no âmbito municipal do SUS, tenham uma visão ampla e global da sua força de trabalho.</value>
+  </data>
+  <data name="WithoutCourseInDBMessage" xml:space="preserve">
+    <value>Não há nenhum curso cadastrado</value>
+  </data>
+  <data name="WithoutDataForDisplayMessage" xml:space="preserve">
+    <value>Não há dados a serem exibidos</value>
+  </data>
+  <data name="WithoutDataInSortMessage" xml:space="preserve">
+    <value>Não há dados à serem exibidos com essa ordenação ...</value>
+    <comment>Usado em grids</comment>
+  </data>
+  <data name="WorkJourney" xml:space="preserve">
+    <value>Jornada de Trabalho</value>
+  </data>
+  <data name="WorkOrganization" xml:space="preserve">
+    <value>Organização do Trabalho</value>
+  </data>
+  <data name="Workunit" xml:space="preserve">
+    <value>Unidade de Saúde</value>
+  </data>
+  <data name="WorkUnits" xml:space="preserve">
+    <value>Unidades de Saúde</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sim</value>
+  </data>
+  <data name="Actives" xml:space="preserve">
+    <value>Ativos</value>
+  </data>
+  <data name="Alienateds" xml:space="preserve">
+    <value>Afastados</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Filtrar</value>
+  </data>
+  <data name="Givens" xml:space="preserve">
+    <value>Cedidos</value>
+  </data>
+  <data name="AdditionalTables" xml:space="preserve">
+    <value>Tabelas Adicionais123</value>
+  </data>
+  <data name="BeIt" xml:space="preserve">
+    <value>Seja</value>
+  </data>
+  <data name="ChangePasswordSuccessMessage" xml:space="preserve">
+    <value>Troca de Senha efetuada com sucesso!</value>
+  </data>
+  <data name="ChangesOfPasswordRequiredMessage" xml:space="preserve">
+    <value>Troca de Senha obrigatória!</value>
+  </data>
+  <data name="CreateFilterBy" xml:space="preserve">
+    <value>Criar filtro por</value>
+  </data>
+  <data name="DataRequired" xml:space="preserve">
+    <value>Preenchimento obrigatório!</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Excluir</value>
+  </data>
+  <data name="FileOfImages" xml:space="preserve">
+    <value>Arquivos de Imagens</value>
+  </data>
+  <data name="FilterReportDescription" xml:space="preserve">
+    <value>Marque os filtros que estarão ativos no relatório. Para cada filtro selecione as opções desejadas que irão definir o relatório.</value>
+  </data>
+  <data name="FooterProofOfSale" xml:space="preserve">
+    <value>Rodapé do Comprovante de Venda</value>
+  </data>
+  <data name="InvalidNumber" xml:space="preserve">
+    <value>Número Inválido</value>
+  </data>
+  <data name="ListOfSelectedFilters" xml:space="preserve">
+    <value>Lista de filtros selecionados</value>
+  </data>
+  <data name="NameRequiredMessage" xml:space="preserve">
+    <value>O Nome é obrigatório!</value>
+  </data>
+  <data name="NewPasswordConfirmation" xml:space="preserve">
+    <value>Confirmação de Nova Senha</value>
+  </data>
+  <data name="NewPasswordDifferentOfOldMessage" xml:space="preserve">
+    <value>A senha e o confirma senha não são iguais!</value>
+  </data>
+  <data name="NewPasswordRequired" xml:space="preserve">
+    <value>Nova Senha obrigatória</value>
+  </data>
+  <data name="PasswordConfirmationRequiredMessage" xml:space="preserve">
+    <value>Confirmação de Senha obrigatória</value>
+  </data>
+  <data name="PasswordRequiredMessage" xml:space="preserve">
+    <value>Senha obrigatória</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Telefone</value>
+  </data>
+  <data name="PostalCode" xml:space="preserve">
+    <value>CEP</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Impressão</value>
+  </data>
+  <data name="PrintDataInHeaderReportDescription" xml:space="preserve">
+    <value>(Dados que serão impressos no cabeçalho dos relatórios.)</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Perfil</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Cadastrar</value>
+  </data>
+  <data name="ReportAppreciatedDescription" xml:space="preserve">
+    <value>Caso você tenha gostado do resultado, clique no botão abaixo para gravar este relatório.</value>
+  </data>
+  <data name="SelectSomeReportCreatedByTeam" xml:space="preserve">
+    <value>Selecione um dos relatórios criados pela equipe</value>
+  </data>
+  <data name="SupplyPasswordDifferentMessage" xml:space="preserve">
+    <value>Por favor entre com uma senha diferente</value>
+  </data>
+  <data name="UserCreation" xml:space="preserve">
+    <value>Criação de Usuário</value>
+  </data>
+  <data name="UserRequired" xml:space="preserve">
+    <value>Usuário obrigatório</value>
+  </data>
+  <data name="WelcomeTextForCompanyDescription" xml:space="preserve">
+    <value>Digite o texto que aparecerá na caixa de boas-vindas dos usuários desta empresa</value>
+  </data>
+  <data name="Where" xml:space="preserve">
+    <value>Onde</value>
+  </data>
+  <data name="AscOrder" xml:space="preserve">
+    <value>Ascendente</value>
+  </data>
+  <data name="CanBe" xml:space="preserve">
+    <value>Possa ser</value>
+  </data>
+  <data name="ChangeExpiredPasswordRequiredDescription" xml:space="preserve">
+    <value>A senha informada, no processo de autenticação está expirada, para melhorar e manter sua segurança e privacidade, torna-se OBRIGATÓRIO que a senha seja trocada!</value>
+  </data>
+  <data name="ChangePasswordRequiredDescription" xml:space="preserve">
+    <value>O administrador do sistema determinou que o usuário deverá OBRIGATORIAMENTE alterar a senha!</value>
+  </data>
+  <data name="Cognitive" xml:space="preserve">
+    <value>Cognitivo</value>
+  </data>
+  <data name="ColumnRequiredMessage" xml:space="preserve">
+    <value>Coluna obrigatória</value>
+  </data>
+  <data name="Competencies" xml:space="preserve">
+    <value>Competências</value>
+  </data>
+  <data name="DescOrder" xml:space="preserve">
+    <value>Descendente</value>
+  </data>
+  <data name="DynamicReport" xml:space="preserve">
+    <value>Relatório Dinâmico</value>
+  </data>
+  <data name="EmailAlreadyExistMessage" xml:space="preserve">
+    <value>Email já existente!</value>
+  </data>
+  <data name="Employee" xml:space="preserve">
+    <value>Trabalhador</value>
+  </data>
+  <data name="GenericReport" xml:space="preserve">
+    <value>Relatório Genérico</value>
+  </data>
+  <data name="Goal" xml:space="preserve">
+    <value>Meta</value>
+  </data>
+  <data name="Indicators" xml:space="preserve">
+    <value>Indicadores</value>
+  </data>
+  <data name="IndicatorsPerformaceOfEmployee" xml:space="preserve">
+    <value>Indicadores de Desempenho do Trabalhador</value>
+  </data>
+  <data name="IndicatorsPerformaceOfService" xml:space="preserve">
+    <value>Indicadores de Desempenho do Serviço</value>
+  </data>
+  <data name="InvalidDate" xml:space="preserve">
+    <value>Data inválida!</value>
+  </data>
+  <data name="InvalidUserNameMessage" xml:space="preserve">
+    <value>Nome de usuário inválido</value>
+  </data>
+  <data name="NoProfilesForUserMessage" xml:space="preserve">
+    <value>Não há mais perfis disponíveis para este usuário</value>
+  </data>
+  <data name="OrderConfigurationDataReportDescription" xml:space="preserve">
+    <value>Faça as configurações de ordem em que os dados serão apresentados</value>
+  </data>
+  <data name="Ordination" xml:space="preserve">
+    <value>Ordenação</value>
+  </data>
+  <data name="Relational" xml:space="preserve">
+    <value>Relacional</value>
+  </data>
+  <data name="SelectColumnRequired" xml:space="preserve">
+    <value>Selecione pelo menos uma coluna!</value>
+  </data>
+  <data name="SelectSomeItemMessage" xml:space="preserve">
+    <value>Selecione um item!</value>
+  </data>
+  <data name="SendData" xml:space="preserve">
+    <value>Enviar Dados</value>
+  </data>
+  <data name="TableSchema" xml:space="preserve">
+    <value>Esquema da Tabela</value>
+  </data>
+  <data name="TechnicalOperational" xml:space="preserve">
+    <value>Técnico-Operacional</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="UserNameAlreadyExistMessage" xml:space="preserve">
+    <value>Nome de usuário já existente!</value>
+  </data>
+  <data name="Variable" xml:space="preserve">
+    <value>Variável</value>
+  </data>
+  <data name="Variables" xml:space="preserve">
+    <value>Variáveis</value>
+  </data>
+  <data name="Vision" xml:space="preserve">
+    <value>Visão</value>
+  </data>
+  <data name="WorkConditions" xml:space="preserve">
+    <value>Condições de Trabalho</value>
+  </data>
+</root>

@@ -1,0 +1,142 @@
+<%@ Master Language='C#' AutoEventWireup='true' %>
+                <%@ Register Src='~/site/_modules/Menu.ascx' TagName='Menu' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/Categories.ascx' TagName='Categories' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/FeedReader.ascx' TagName='FeedReader' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/Products.ascx' TagName='Products' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/Tags.ascx' TagName='Tags' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/PageCategories.ascx' TagName='PageCategories' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/Search.ascx' TagName='Search' TagPrefix='vfx' %>
+                <%@ Register Src='~/App_Modules/AccessControl/Login.ascx' TagName='Login'  TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/WebPage.ascx' TagName='WebPage'  TagPrefix='vfx' %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Vivina</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(duration=0)" />
+    <link rel="shortcut icon" href="themes/vivina/img/vivina.ico" type="image/x-icon" />
+    <link href="themes/vivina/css/intern.css" rel="stylesheet" type="text/css" />
+
+<meta name='generator' content='Vivina InfoControl' />
+<asp:ContentPlaceHolder ID='head' runat='server'></asp:ContentPlaceHolder></head>
+<!--[if lt IE 7]>
+    <script src="/site/1/<%=ResolveUrl("~/App_Shared/js/pngfix.js") %>" type="text/javascript"></script>
+<![endif]-->
+
+                <body>
+                <form id='form1' runat='server'>
+                    <asp:ScriptManager runat='server' EnablePageMethods='true'>
+                        <scripts>
+                            <asp:ScriptReference Path='~/App_Shared/js/jquery.js' />							
+							<asp:ScriptReference Path='~/App_Shared/js/jquery.template.js' />
+							<asp:ScriptReference Path='~/App_Shared/js/jquery.serializer.js' />							
+                            <asp:ScriptReference Path='~/App_Shared/js/jquery.validate.js' />
+							<asp:ScriptReference Path='~/App_Shared/js/jquery.smartclient.js' />
+                        </scripts>
+                    </asp:ScriptManager>
+    <div class="bgLeft">
+        <div class="bgRight">
+            <div class="headerConteiner">
+                <div class="header">
+                    <a href="home.aspx" class="logo"></a>
+                    <div class="right">
+                        <div class="aba">
+                            <div class="products">
+                                <a href="/site/">Vivina</a> <a href="Infocontrol,259B43B5303D3A90.aspx">InfoControl</a><a
+                                    href="/site/Ajuda/InfoControl,2663D3BCEC6B6C58.aspx">Ajuda</a><a href="/site/Blog-da-Vivina,F3E530499FBA0873.aspx?type=blog"
+                                        class="selected">Blog</a>
+                            </div>
+                        </div>
+                        <div class="menu">
+                            <div id="ctl00_Menu1_RadMenu1" class="RadMenu RadMenu_Outlook ">
+                                <!-- 2008.1.515.35 -->
+                                <ul class="rmHorizontal rmRootGroup">
+                                    <li class="rmItem rmFirst rmTemplate "><a href="Empresa,3CCDAD1407BAD0BD.aspx" class="menuItem">
+                                        Empresa</a> </li>
+                                    <li class="rmItem rmFirst rmTemplate "><a href="Servicos,E3513E3F903C2AE8.aspx" class="menuItem">
+                                        Serviços</a> </li>
+                                    <li class="rmItem rmFirst rmTemplate "><a href="Clientes,170529D16C7DA30C.aspx" class="menuItem">
+                                        Clientes</a> </li>
+                                    <li class="rmItem rmTemplate "><a href="Metodologia,AC851311B6E4D917.aspx" class="menuItem">
+                                        Metodologia</a> </li>
+                                    <li class="rmItem rmLast rmTemplate "><a href="ContactUs.aspx" class="menuItem">Fale
+                                        Conosco</a> </li>
+                                </ul>
+                                <input id="ctl00_Menu1_RadMenu1_ClientState" name="ctl00_Menu1_RadMenu1_ClientState"
+                                    type="hidden" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contentContainer">
+                <div class="content">
+                    <div class="inner">
+                        <asp:ContentPlaceHolder ID='ContentPlaceHolder' runat='server'  />
+                    </div>
+                    <div class="impulse">
+                        <div class="item">
+                            <a class="feed" href="http://feeds2.feedburner.com/vivina">Assine o RSS</a> <a class="twitter" href="http://www.twitter.com/sidneyfilho">Me siga no Twitter</a>
+                        </div>
+                        <div class="item">
+                            <h2>
+                                Ultimos posts!</h2>
+                            <vfx:WebPage  runat='server'  webpageid="F3E530499FBA0873" type="list" maxcount="12" />
+                        </div>
+                        <div class="item">
+                            <h2>
+                                Minhas Leituras!</h2>
+                            <vfx:WebPage  runat='server'  webpageid="341BC3243BC11695" />
+                        </div>
+                        <div class="item">
+                            <h2>
+                                Ultimos Comentários!</h2>
+                            <ul command="load" controller="/infocontrol/controller/site/" action="getcomments">
+								<li><$=UserName$> no <a href="<$=pageUrl$>"><$=Name$></a></li>
+							</ul>
+                        </div><!---->
+                        <div class="item">
+                            <h2>
+                                Twittadas!</h2>
+                            <vfx:FeedReader  runat='server'  feedurl="http://twitter.com/statuses/user_timeline/36139719.rss" />
+                        </div>
+                        <div class="item">
+                            <h2>
+                                Recomendo!</h2>
+                            <vfx:WebPage  runat='server'  webpageid="F6FD88A7B08E891D" />
+                        </div>
+                        <div class="item">
+                            <h2>
+                                Li e gostei!</h2>
+
+                            <script pin type="text/javascript" src="/site/1/http://www.google.com/reader/ui/publisher-en.js"></script>
+
+                            <script pin type="text/javascript" src="/site/1/http://www.google.com/reader/public/javascript/user/00548898141397008600/state/com.google/broadcast?n=10&callback=GRC_p(%7Bc%3A%22-%22%2Ct%3A%22%22%2Cs%3A%22true%22%2Cn%3A%22false%22%2Cb%3A%22false%22%7D)%3Bnew%20GRC"></script>
+
+                        </div>
+						
+                    </div>
+                </div>
+            </div>
+            <div class="footerConteiner">
+                <div class="footer">
+                    <div class="copyright">
+                        <a href='http://www.vivina.com.br'><img src="/site/1/themes/vivina/img/LOGO_FULL_WHITE.png" width="250" border="0"/><br />
+                        <small>Os nomes e marcas InfoControl, Pooba, Vivina estão registradas para a Vivina
+                            Softhouse.<br />
+                            © 2009 - Todos os direitos reservados.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                href="Termos-de-Utilizacao,7A2F7321446A1780.aspx" class="fLnk11">Termos de Utilização</a>
+                            | <a href="Politica-de-Privacidade,8E954284957DBF6D.aspx" class="fLnk11">Política de
+                                Privacidade</a></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><vfx:PageCategories runat="server">
+    </vfx:PageCategories>
+</form></body>
+</html>
+
+<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script>
+
+<script type="text/javascript"> try { var pageTracker = _gat._getTracker("UA-10596815-1"); pageTracker._trackPageview(); } catch(err) {}</script>
+

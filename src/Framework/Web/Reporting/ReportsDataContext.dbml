@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="OBSNET_SIGRAS" EntityNamespace="InfoControl.Web.Reporting.DataClasses" ContextNamespace="InfoControl.Web.Reporting.DataClasses" Class="ReportsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\Sqlexpress;Initial Catalog=OBSNET_SIGRAS;Integrated Security=True" SettingsObjectName="InfoControl.Properties.Settings" SettingsPropertyName="OBSNET_SIGRASConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ReportColumns" Member="ReportColumns">
+    <Type Name="ReportColumn">
+      <Column Name="ReportId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportTablesSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportColumnsSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportDataTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsMatrix" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="ReportColumnsSchema_ReportColumn" Member="ReportColumnsSchema" ThisKey="ReportColumnsSchemaId,ReportTablesSchemaId" OtherKey="ReportColumnsSchemaId,ReportTablesSchemaId" Type="ReportColumnsSchema" IsForeignKey="true" />
+      <Association Name="Report_ReportColumn" Member="Report" ThisKey="ReportId" OtherKey="ReportId" Type="Report" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportTablesSchema" Member="ReportTablesSchemas">
+    <Type Name="ReportTablesSchema">
+      <Column Name="ReportTablesSchemaId" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="SqlText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="ReportTablesSchema_ReportColumnsSchema" Member="ReportColumnsSchemas" ThisKey="ReportTablesSchemaId" OtherKey="ReportTablesSchemaId" Type="ReportColumnsSchema" />
+      <Association Name="ReportTablesSchema_Report" Member="Reports" ThisKey="ReportTablesSchemaId" OtherKey="ReportTablesSchemaId" Type="Report" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportColumnsSchema" Member="ReportColumnsSchemas">
+    <Type Name="ReportColumnsSchema">
+      <Column Name="ReportColumnsSchemaId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportTablesSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportDataTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="Source" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="ForeignKey" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="PrimaryKey" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="PrimaryTable" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="PrimaryLabelColumn" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Association Name="ReportColumnsSchema_ReportColumn" Member="ReportColumns" ThisKey="ReportColumnsSchemaId,ReportTablesSchemaId" OtherKey="ReportColumnsSchemaId,ReportTablesSchemaId" Type="ReportColumn" />
+      <Association Name="ReportColumnsSchema_ReportFilter" Member="ReportFilters" ThisKey="ReportColumnsSchemaId,ReportTablesSchemaId" OtherKey="ReportColumnsSchemaId,ReportTablesSchemaId" Type="ReportFilter" />
+      <Association Name="ReportColumnsSchema_ReportSort" Member="ReportSorts" ThisKey="ReportColumnsSchemaId,ReportTablesSchemaId" OtherKey="ReportColumnsSchemaId,ReportTablesSchemaId" Type="ReportSort" />
+      <Association Name="ReportTablesSchema_ReportColumnsSchema" Member="ReportTablesSchema" ThisKey="ReportTablesSchemaId" OtherKey="ReportTablesSchemaId" Type="ReportTablesSchema" IsForeignKey="true" />
+      <Association Name="ReportDataType_ReportColumnsSchema" Member="ReportDataType" ThisKey="ReportDataTypeId" OtherKey="ReportDataTypeId" Type="ReportDataType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportDataFunctions" Member="ReportDataFunctions">
+    <Type Name="ReportDataFunction">
+      <Column Name="ReportDataFunctionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportDataTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="Char(18)" CanBeNull="true" />
+      <Column Name="SqlText" Type="System.String" DbType="Char(18)" CanBeNull="true" />
+      <Association Name="ReportDataType_ReportDataFunction" Member="ReportDataType" ThisKey="ReportDataTypeId" OtherKey="ReportDataTypeId" Type="ReportDataType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportDataType" Member="ReportDataTypes">
+    <Type Name="ReportDataType">
+      <Column Name="ReportDataTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Association Name="ReportDataType_ReportColumnsSchema" Member="ReportColumnsSchemas" ThisKey="ReportDataTypeId" OtherKey="ReportDataTypeId" Type="ReportColumnsSchema" />
+      <Association Name="ReportDataType_ReportDataFunction" Member="ReportDataFunctions" ThisKey="ReportDataTypeId" OtherKey="ReportDataTypeId" Type="ReportDataFunction" />
+      <Association Name="ReportDataType_ReportFilterType" Member="ReportFilterTypes" ThisKey="ReportDataTypeId" OtherKey="ReportDataTypeId" Type="ReportFilterType" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportFilter" Member="ReportFilters">
+    <Type Name="ReportFilter">
+      <Column Name="ReportId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportTablesSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportColumnsSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportFilterTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Value" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Association Name="ReportColumnsSchema_ReportFilter" Member="ReportColumnsSchema" ThisKey="ReportColumnsSchemaId,ReportTablesSchemaId" OtherKey="ReportColumnsSchemaId,ReportTablesSchemaId" Type="ReportColumnsSchema" IsForeignKey="true" />
+      <Association Name="Report_ReportFilter" Member="Report" ThisKey="ReportId" OtherKey="ReportId" Type="Report" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportFilterType" Member="ReportFilterTypes">
+    <Type Name="ReportFilterType">
+      <Column Name="ReportFilterTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ReportDataTypeId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SqlText" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Association Name="ReportDataType_ReportFilterType" Member="ReportDataType" ThisKey="ReportDataTypeId" OtherKey="ReportDataTypeId" Type="ReportDataType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Reports" Member="Reports">
+    <Type Name="Report">
+      <Column Name="ReportId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ReportTablesSchemaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="Tag" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Column Name="ReportUrl" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
+      <Association Name="Report_ReportColumn" Member="ReportColumns" ThisKey="ReportId" OtherKey="ReportId" Type="ReportColumn" />
+      <Association Name="Report_ReportFilter" Member="ReportFilters" ThisKey="ReportId" OtherKey="ReportId" Type="ReportFilter" />
+      <Association Name="Report_ReportSort" Member="ReportSorts" ThisKey="ReportId" OtherKey="ReportId" Type="ReportSort" />
+      <Association Name="ReportTablesSchema_Report" Member="ReportTablesSchema" ThisKey="ReportTablesSchemaId" OtherKey="ReportTablesSchemaId" Type="ReportTablesSchema" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ReportSort" Member="ReportSorts">
+    <Type Name="ReportSort">
+      <Column Name="ReportId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportTablesSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReportColumnsSchemaId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Ascending" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="ReportColumnsSchema_ReportSort" Member="ReportColumnsSchema" ThisKey="ReportColumnsSchemaId,ReportTablesSchemaId" OtherKey="ReportColumnsSchemaId,ReportTablesSchemaId" Type="ReportColumnsSchema" IsForeignKey="true" />
+      <Association Name="Report_ReportSort" Member="Report" ThisKey="ReportId" OtherKey="ReportId" Type="Report" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="InfoControl_Default" CodeBehind="Default.master.cs" %>
+
+<%@ Register Src="../App_Shared/HelpTooltip.ascx" TagName="HelpTooltip" TagPrefix="uc1" %>
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Untitled Page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=0)" />
+    <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        a span
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+    <!-- Print Button -->
+    <!-- Header in print -->
+    <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true" EnablePageMethods="true" CombineScripts="false"
+        ScriptMode="Release">
+        <Scripts>                
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
+            
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.core.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.widget.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.position.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.tabs.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.autocomplete.js" />            
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.duallistbox.js" />
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.datepicker.js" /> 
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.htmlbox.js" /> 
+
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.cookies.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.tooltip.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.validate.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.meioMask.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.template.js" />
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.notification.js" /> 
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.serializer.js" /> 
+
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" /> 
+            
+            
+        </Scripts>
+    </ajaxToolkit:ToolkitScriptManager>
+    <%--<ajaxToolkit:NoBot ID="NoBot1" runat="server" />--%>
+    <table class="cHeader">
+        <tr>
+            <td valign="top">
+                <span id="imgLogo" class="logo">&nbsp;</span>
+                <br />
+            </td>
+            <td valign="top">
+                <asp:Literal ID="lblReportHeader" runat="server"></asp:Literal>
+            </td>
+        </tr>
+    </table>
+    <div style="padding-left: 12px; height: 89%;">
+        <h1 runat="server" id="lblTitle">
+        </h1>
+        <uc1:HelpTooltip ID="helpTooltip" runat="server">
+            <ItemTemplate>
+            </ItemTemplate>
+        </uc1:HelpTooltip>
+        <a href="#" id="imgPrint" runat="server" onclick="self.print(); return false;" class="PrintTip">
+            &nbsp;&nbsp; <span class="msg">
+                <h1>
+                    Dica:</h1>
+                <br />
+                <strong>Antes de iniciar a impressão realize os procedimentos abaixo:</strong><br />
+                <br />
+                <br />
+                <br />
+                <strong>Impressão sem cabeçalho e rodapé:</strong><br />
+                <ul>
+                    <li class="cTxt11">Para excluir o cabeçalho e o rodapé padrão da impressão de relatório,
+                        clique em <strong>&quot;arquivo/file&quot;</strong> no menu principal do seu browser
+                        e em seguida em <strong>&quot;configurar página/page setup&quot;</strong>.</font></li>
+                    <li class="cTxt11">Apague o conteúdo dos campos <strong>&quot;cabeçalho/header&quot;</strong>
+                        e <strong>&quot;rodapé/footer&quot;</strong> e clique em <strong>&quot;OK&quot;</strong>
+                        para encerrar a configuração.</font></li>
+                </ul>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <%-- <strong>Impressão em formato paisagem (horizontal):</strong>
+                <ul>
+                    <li class="cTxt11">É recomendado que para a impressão dos relatórios seja utilizado
+                        o formato paisagem, devido ao grande volume de informações apresentadas.
+                        <br>
+                        Para realizar tal configuração, clique em <strong>&quot;arquivo/file&quot;</strong>
+                        no menu principal do seu browser e em seguida em <strong>&quot;configurar página/page
+                            setup&quot;</strong>.</font></li>
+                    <li class="cTxt11">Selecione a opção <strong>&quot;paisagem/landscape&quot;</strong>
+                        no item <strong>&quot;orientação/orientation&quot;</strong> e clique em <strong>&quot;OK&quot;</strong>
+                        para encerrar a configuração.</font></li>
+                </ul>--%>
+                <br />
+                Estas configurações precisarão ser feitas apenas uma vez. No próximo acesso, o browser
+                já estará configurado. Esta configuração será válida para qualquer impressão feita
+                através do seu browser.<br />
+                <br />
+            </span><span class="footer"></span></a><span class="breadcrumbs" id="Breadcumbs"
+                runat="server"></span>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">  
+    //
+    // Only here, because is required in huge set of pages
+    //
+    if(window.Telerik) if(Telerik.Web.UI.Editor) if(Telerik.Web.UI.Editor.CommandList) Telerik.Web.UI.Editor.CommandList["CustomFileManager"] = function(commandName, editor, args)
+    {
+       window.open('filemanager/ckfinder.html', '_blank', 'width=' + top.$(top).width()-80 + ', height=' + top.$(top).height()-100); return false;
+    };
+    
+    <% if(!InfoControl.Web.Configuration.WebConfig.Web.Compilation.Debug){ %>if(!top.header) top.location = '/';<% } %>
+    window.onbeforeunload = function(e) {if(top.header.loading)top.header.loading.style.display = '';}
+    window.onload = function(e) {if(top.header.loading)top.header.loading.style.display = 'none';}       
+   
+    
+</script>

@@ -1,0 +1,36 @@
+
+body, span, div, ul, li, a, br, input, textarea, select, table, tr, td, p, h1, h2, h3
+{
+	font-family: Tahoma, Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 8pt;	
+}
+
+
+h1 {font-family: Trebuchet MS; font-size: 16pt; color:#EEAD03;}
+h2 {font-family: Trebuchet MS; font-size: 13pt; color:#EEAD03; }
+h3 {font-family: Trebuchet MS; font-size: 10pt; z-index:2; color:#EEAD03;}
+h3 a {color:#00AAAA;}
+h3 a:hover {color:#1A5E5A;}
+h3 p {color:#003333; font-weight:normal;}
+h3.background{position:absolute; margin-top:-18px; font-size: 500%; z-index:-1; color:#DDDDDD;}
+
+
+.cTxt11, .cTxt11b, .cTxt12, .cTxt12b, .cTxt13, .cTxt13b, .cTxt14, .cTxt14b{font-size:8pt;}
+.cTxt21, .cTxt21b, .cTxt22, .cTxt22b, .cTxt23, .cTxt23b, .cTxt24, .cTxt24b{font-size:10pt;}
+.cTxt31, .cTxt31b, .cTxt32, .cTxt32b, .cTxt33, .cTxt33b, .cTxt34, .cTxt34b{font-size:12pt;}
+.cTxt41, .cTxt41b, .cTxt42, .cTxt42b, .cTxt43, .cTxt43b, .cTxt44, .cTxt44b{font-size:16pt;}
+
+.cTxt11, .cTxt11b, .cTxt21, .cTxt21b, .cTxt31, .cTxt31b, .cTxt41, .cTxt41b {color:#00AAAA;}
+.cTxt12, .cTxt12b, .cTxt22, .cTxt22b, .cTxt32, .cTxt32b, .cTxt42, .cTxt42b {color:#1A5E5A;}
+.cTxt13, .cTxt13b, .cTxt23, .cTxt23b, .cTxt33, .cTxt33b, .cTxt43, .cTxt43b {color:#009999;}
+.cTxt14, .cTxt14b, .cTxt24, .cTxt24b, .cTxt34, .cTxt34b, .cTxt44, .cTxt44b {color:#779999;}
+
+
+.cTxt11b,  .cTxt12b,  .cTxt13b,  .cTxt14b,
+.cTxt21b,  .cTxt22b,  .cTxt23b,  .cTxt24b,
+.cTxt31b,  .cTxt32b,  .cTxt33b,  .cTxt34b,
+.cTxt41b,  .cTxt42b,  .cTxt43b,  .cTxt44b {font-weight:bold;}
+
+
+p.hide{display:none;}
+p.show{display:block;}

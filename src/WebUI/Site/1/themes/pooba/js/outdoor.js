@@ -1,0 +1,1 @@
+document.write('<embed class="banner" src="1/img/outdoor.swf"  width="750" height="240" pluginspage="http://www.macromedia.com/go/getflashplayer"></embed>');

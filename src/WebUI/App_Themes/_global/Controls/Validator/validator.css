@@ -1,0 +1,14 @@
+﻿.cErr11
+{
+	color:#FF7200;	
+}
+
+.cErr21
+{	
+	display:-moz-inline-box;
+	display:inline-block;
+	padding:2px 10px 2px 0px;
+	bottom:0px;
+	background-image:url(fieldError.gif);
+	background-repeat: no-repeat;	
+}
