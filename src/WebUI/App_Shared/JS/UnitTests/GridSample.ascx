@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" %>
 
-<table id="table1" command="load" controller="<%=ResolveUrl("~/controller/SearchService/") %>"
-    action="GetSampleData" params="{companyId:1, itemId:null}" template="#table1 .template"
+<table id="table1" command="load" controller="<%=ResolveUrl("~/infocontrol/SearchService.svc/") %>"
+    action="GetSampleData" params="{companyId:1, teste:{ casa:'JPA', status:'Atrasado', data: new Date(2010, 11, 31)}, itemId:null}" template="#table1 .template"
     target="#table1 .body" selectedclass="myselected">
     <thead>
         <tr>
@@ -28,7 +28,7 @@
 
 <h1>Arvore Recursiva 1</h1>
 
-<table id="table2" command="load" controller="<%=ResolveUrl("~/controller/SearchService/") %>"
+<table id="table2" command="load" controller="<%=ResolveUrl("~/infocontrol/SearchService.svc/") %>"
     action="GetSampleData" params="{companyId:1}" template="#table2 .template" target="#table2 .body"
     selecteditemclass="myselected">
     <thead>

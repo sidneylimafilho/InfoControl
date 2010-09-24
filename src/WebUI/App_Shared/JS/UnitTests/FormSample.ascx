@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" %>
 
-<div command="load" controller="<%=ResolveUrl("~/controller/SearchService/GetOneSampleData") %>"          
+<div command="load" controller="<%=ResolveUrl("~/Infocontrol/SearchService/GetOneSampleData") %>"          
      selecteditemclass="myselected">
      <!--
     <label>Nome:</label>
