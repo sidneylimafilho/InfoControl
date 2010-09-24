@@ -42,30 +42,40 @@ namespace Vivina.Erp.WebUI
         }
 
         [JsonFilter]
-        public ActionResult GetOneSampleData(Hashtable Params, Hashtable FormData)
+        [OperationContract]
+        public ClientResponse  GetOneSampleData(Hashtable Params, Hashtable FormData)
         {
-            return ClientResponse(() => (new[]{
-                new {Nome = "asfdasd", ID=1},
-                new {Nome = "fdgfjfgf", ID=2},
-                new {Nome = " gk lyui yui ", ID=3},
-                new {Nome = "645retyy", ID=4},
-                new {Nome = "sdgfhdfrd", ID=5},
-                new {Nome = "fde wertewrtw", ID=6},
-                new {Nome = "Haroldo de Andrade", ID=7}
-            }).FirstOrDefault(x => x.ID == Convert.ToInt32(Params["itemId"])), JsonRequestBehavior.AllowGet);
+            return new ClientResponse
+            {
+                Data = (new[]{
+                    new {Nome = "asfdasd", ID=1},
+                    new {Nome = "fdgfjfgf", ID=2},
+                    new {Nome = " gk lyui yui ", ID=3},
+                    new {Nome = "645retyy", ID=4},
+                    new {Nome = "sdgfhdfrd", ID=5},
+                    new {Nome = "fde wertewrtw", ID=6},
+                    new {Nome = "Haroldo de Andrade", ID=7}
+                }).FirstOrDefault(x => x.ID == Convert.ToInt32(Params["itemId"]))
+            };
         }
 
         [JsonFilter]
-        public ActionResult GetSampleData(Hashtable Params, Hashtable FormData)
-        {
-            return ClientResponse(() => new[]{
+        [OperationContract]
+        [WebInvoke(RequestFormat=WebMessageFormat.Json)]
+        public ClientResponse GetSampleData(Hashtable Params, Hashtable FormData)
+        {            
+
+            return new ClientResponse
+            {
+                Data = new[]{
                 new {Nome = Convert.ToString(Params["itemId"]) + "1) asfdasd", ID=1},
                 new {Nome = Convert.ToString(Params["itemId"]) + "2) fdgfjfgf", ID=2},
                 new {Nome = Convert.ToString(Params["itemId"]) + "3) gk lyui yui ", ID=3},
                 new {Nome = Convert.ToString(Params["itemId"]) + "4) 645retyy", ID=4},
                 new {Nome = Convert.ToString(Params["itemId"]) + "5) sdgfhdfrd", ID=5},
                 new {Nome = Convert.ToString(Params["itemId"]) + "6) fde wertewrtw", ID=6},
-                new {Nome = Convert.ToString(Params["itemId"]) + "7) Haroldo de Andrade", ID=7}}, JsonRequestBehavior.AllowGet);
+                new {Nome = Convert.ToString(Params["itemId"]) + "7) Haroldo de Andrade", ID=7}}
+            };
 
 
 
@@ -106,8 +116,8 @@ namespace Vivina.Erp.WebUI
         [JsonFilter]
         public JsonResult SearchSuppliers(string q, int limit)
         {
-           
-                return ClientResponse(() => new SupplierManager(this).SearchSupplier(Company.CompanyId, q, limit).ToArray());
+
+            return ClientResponse(() => new SupplierManager(this).SearchSupplier(Company.CompanyId, q, limit).ToArray());
         }
 
         [JsonFilter]
