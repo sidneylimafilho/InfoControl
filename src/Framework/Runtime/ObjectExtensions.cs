@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Collections.Generic;
 using System.Text;
 
+using InfoControl.Runtime;
 
-namespace InfoControl.Runtime
+
+namespace InfoControl
 {
 
     public static partial class ObjectExtensions
