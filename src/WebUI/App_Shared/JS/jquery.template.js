@@ -6,12 +6,13 @@
         render: function(data) {
             if (this.size() == 0) throw new Error("Zero element selected!");
 
+            var template = this.html();
+
             // Convert the template into pure JavaScript
             var script = "var p=[], print=function(){ p.push.apply(p,arguments); }; " +
             "dataItem = dataItem || [];" +
             "with(dataItem){" +
-            "   p.push('" + // Introduce the data as local variables using with(){}
-                this.html()
+            "   p.push('" + template // Introduce the data as local variables using with(){}
                     .split("&lt;").join("<")
                     .split("%3C").join("<")
                     .split("&gt;").join(">")
@@ -35,7 +36,7 @@
                 // Generate a reusable function that will serve as a template
                 // generator (and which will be cached).
                 //var fn = !/\W/.test(this.id) ? cache[this.id] = (cache[this.id] || $(this).template()) :
-                var fn = $.cache[this.selector] || ($.cache[this.selector] = new Function("dataItem", script));
+                var fn = $.cache[template] || ($.cache[template] = new Function("dataItem", script));
 
                 var html = "";
                 if ($.isArray(data)) {
@@ -45,7 +46,7 @@
                 }
 
             } catch (err) {
-                alert("The template is mal-formed!\n\n" + err + "\n\n" + script);
+                $("<pre class='error' />").html("The template is mal-formed, because " + err + "\n\n" + script).appendTo("body");
             }
 
 
