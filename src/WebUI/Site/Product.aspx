@@ -73,7 +73,7 @@
     </div>
     <div class="outrosProdutos">
         <div>
-            Produtos Mais Vendidos:</div>
+            Produtos Relacionados:</div>
         <uc2:Products runat="server" Qtd="5" Ordem="QuantitySold"></uc2:Products>
     </div>
 
