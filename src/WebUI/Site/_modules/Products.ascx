@@ -15,8 +15,8 @@
                 <div class="corpo">
                     <div class="imagem">
                         <a id="A1" class="" runat="server" href='<%#Eval("Url") %>'>
-                            <img runat="server" alt='<%#Eval("Name")%>'  height="120" src='<%#Eval("ImageUrl") %>'
-                                border="0" />
+                            <img runat="server" alt='<%#Eval("Name")%>' src='<%#Eval("ImageUrl") %>'
+                                border="0"/>
                         </a>
                     </div>
                     <div class="nome">
