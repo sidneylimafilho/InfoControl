@@ -119,8 +119,8 @@ namespace Vivina.Erp.BusinessRules
         /// <param name=entity>entity</param> 
         public void Insert(Sale entity)
         {
-            if (!entity.SaleStatusId.HasValue)
-                entity.SaleStatusId = 2; //aguardando expedição 
+            if (entity.SaleStatusId == 0)
+                entity.SaleStatusId = 1; //aguardando expedição 
 
             entity.CreatedDate = DateTime.Now;
 
