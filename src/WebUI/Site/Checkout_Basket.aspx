@@ -75,7 +75,7 @@
                 <EmptyDataTemplate>
                     <tr>
                         <td>
-                            O carrinho está vazio, conheça nossas ofertas clicando <a href="Products.aspx">aqui</a>:<br />
+                            O carrinho está vazio, conheça nossas ofertas <a href="~/site/loja/" runat="server">clicando aqui</a>:<br />
                         </td>
                     </tr>
                 </EmptyDataTemplate>
@@ -90,19 +90,18 @@
                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                         <ContentTemplate>
                             <asp:Panel runat="server" Visible="false" ID="pnlDeliveryPrices">
-                                <fieldset>
-                                    <legend>Serviços de Entrega </legend>
-                                    <asp:RadioButtonList ID="rbtListDelivery" OnSelectedIndexChanged="rbtListDelivery_SelectedIndexChanged"
-                                        AutoPostBack="true" runat="server" RepeatDirection="Vertical" RepeatLayout="Table"
-                                        ValidationGroup="delivery">
-                                        <asp:ListItem Text="Pac: R$ "></asp:ListItem>
-                                        <asp:ListItem Text="Sedex: R$ "></asp:ListItem>
-                                        <asp:ListItem Text="Sedex10: R$ "></asp:ListItem>
-                                    </asp:RadioButtonList>
-                                    <asp:RequiredFieldValidator runat="server" ID="reqRbtListDeliveryPrices" ControlToValidate="rbtListDelivery"
-                                        ValidationGroup="delivery" ErrorMessage="Escolha um modo de entrega!">
-                                    </asp:RequiredFieldValidator>
-                                </fieldset>
+                                Serviços de Entrega:
+                                <asp:RadioButtonList ID="rbtListDelivery" OnSelectedIndexChanged="rbtListDelivery_SelectedIndexChanged"
+                                    AutoPostBack="true" runat="server" RepeatDirection="Vertical" RepeatLayout="Table"
+                                    ValidationGroup="delivery">
+                                    <asp:ListItem Text="Pac: R$ "></asp:ListItem>
+                                    <asp:ListItem Text="Sedex: R$ "></asp:ListItem>
+                                    <asp:ListItem Text="Sedex10: R$ "></asp:ListItem>
+                                    <asp:ListItem Text="Sob Consulta" Value="-1"></asp:ListItem>
+                                </asp:RadioButtonList>
+                                <asp:RequiredFieldValidator runat="server" ID="reqRbtListDeliveryPrices" ControlToValidate="rbtListDelivery"
+                                    ValidationGroup="delivery" ErrorMessage="Escolha um modo de entrega!">
+                                </asp:RequiredFieldValidator>
                             </asp:Panel>
                         </ContentTemplate>
                     </asp:UpdatePanel>

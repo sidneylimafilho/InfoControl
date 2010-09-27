@@ -59,7 +59,11 @@ namespace Vivina.Erp.WebUI.Site
 
             }
 
-            if (!IsPostBack)
+            //
+            // Adicionei a clausula "Budget.BudgetItems.Count==0" 
+            // para resolver um bug quando adiciona um item no carrinho pela primeira vez.
+            //
+            if (!IsPostBack || Budget.BudgetItems.Count==0)
             {
                 /*
                  * Aqui carrega o Budget
@@ -153,9 +157,15 @@ namespace Vivina.Erp.WebUI.Site
 
         protected void rbtListDelivery_SelectedIndexChanged(object sender, EventArgs e)
         {
-            FreightType = rbtListDelivery.SelectedItem.Text.Trim().Split(':')[0];
-            Freight = Convert.ToDecimal(rbtListDelivery.SelectedItem.Value);
-            Total = SubTotal + Freight;
+            FreightType = rbtListDelivery.SelectedItem.Text;
+            FreightValue = 0;
+            if (rbtListDelivery.SelectedValue != "-1")
+            {
+                FreightType = rbtListDelivery.SelectedItem.Text.Trim().Split(':')[0];
+                FreightValue = Convert.ToDecimal(rbtListDelivery.SelectedItem.Value);               
+            }
+
+            Total = SubTotal + FreightValue;
         }
 
         #region Private methods
