@@ -602,7 +602,7 @@ namespace Vivina.Erp.BusinessRules
 
         private Decimal CalculateNetWorth(Contract contract)
         {
-            return (contract.ContractValue.Value * contract.FinancierCondition.MonthlyTax.Value *
+            return (contract.ContractValue.Value * contract.FinancierCondition.MonthlyTax *
                     contract.FinancierCondition.ParcelCount) - CalculateOtherDebits(contract);
         }
 

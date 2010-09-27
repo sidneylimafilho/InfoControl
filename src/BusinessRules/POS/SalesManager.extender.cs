@@ -233,7 +233,8 @@ namespace Vivina.Erp.BusinessRules
 
         public Sale SaveSale(Sale sale, Budget budget, Int32 userId, DateTime firstDatePayment, FinancierCondition condition)
         {
-            List<SaleItem> saleItemlist = sale.SaleItems.ToList();
+            var saleItemlist = (sale.SaleItems != null) ? sale.SaleItems.ToList() : new List<SaleItem>();
+
             //
             // Save Budget
             //
@@ -257,7 +258,7 @@ namespace Vivina.Erp.BusinessRules
             //
             // Save Sale
             //            
-            var parcelList = CreateParcelList(saleItemlist.Sum(i => i.UnitPrice.Value), firstDatePayment, condition);
+            var parcelList = CreateParcelList(saleItemlist.Sum(i => i.Quantity * i.UnitPrice), firstDatePayment, condition);
 
             return SaveSale(sale, saleItemlist, userId, parcelList);
         }
@@ -272,7 +273,7 @@ namespace Vivina.Erp.BusinessRules
                     CompanyId = row.Budget.CompanyId,
                     ModifiedDate = DateTime.Now,
                     Quantity = row.Quantity,
-                    UnitPrice = row.UnitPrice,
+                    UnitPrice = row.UnitPrice.Value,
                     UnitCost = row.UnitCost,
                     ProductId = row.ProductId,
                     SpecialProductName = row.SpecialProductName
