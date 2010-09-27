@@ -196,7 +196,7 @@ namespace Vivina.Erp.WebUI.POS
                 saleItem.Quantity = sItem.Quantity;
                 saleItem.SerialNumber = sItem.SerialNumber;
                 saleItem.UnitCost = sItem.UnitCost;
-                saleItem.UnitPrice = sItem.Price;
+                saleItem.UnitPrice = sItem.Price.Value;
                 //saleItem.UserId = User.Identity.UserId;
                 saleItem.ProductId = sItem.ProductId;
 

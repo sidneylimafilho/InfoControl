@@ -44,7 +44,7 @@ namespace Vivina.Erp.SystemFramework
 
                 string seoText = "";
                 while ((webPage = webPage.WebPage1) != null)
-                    seoText = webPage.Name.RemoveSpecialChars() + "/" + seoText;
+                    seoText = webPage.Name.Trim().RemoveSpecialChars() + "/" + seoText;
 
                 return GenerateUrl((page as WebPage).WebPageId,
                                    (page as WebPage).Name,

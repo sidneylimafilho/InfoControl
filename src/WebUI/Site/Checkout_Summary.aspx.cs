@@ -53,10 +53,13 @@ namespace Vivina.Erp.WebUI.Site
                 #endregion
 
 
-                Sale = new Sale();
+                Sale = new Sale(SaleStatus.WaitingPayment);
                 Sale.SaleDate = Sale.ShipDate = Sale.OrderDate = DateTime.Now.Date;
                 Sale.CompanyId = Company.CompanyId;
                 Sale.CustomerId = Budget.CustomerId;
+
+                Sale.FreightValue = FreightValue;
+                Sale.FreightType = FreightType;
 
                 Sale = saleManager.SaveSale(Sale, Budget, User.Identity.UserId, DateTime.Now, condition);
 

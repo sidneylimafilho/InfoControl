@@ -61,8 +61,8 @@ public partial class Company_POS_SaleViewer : Vivina.Erp.SystemFramework.PageBas
         if (sale.SaleDate != null)
             lblSaleDate.Text = sale.SaleDate.Value.ToShortDateString();
 
-        if (sale.SaleStatusId.HasValue)
-            lblSaleStatus.Text = sale.SaleStatus.Name;
+
+        lblSaleStatus.Text = sale.SaleStatus.Name;
 
         if (sale.ReceiptId != null)
         {

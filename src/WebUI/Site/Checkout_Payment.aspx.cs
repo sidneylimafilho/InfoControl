@@ -90,7 +90,7 @@ namespace Vivina.Erp.WebUI.Site
                 saleItem.CompanyId = Company.CompanyId;
                 saleItem.ProductId = item.ProductId;
                 saleItem.UnitCost = item.UnitCost;
-                saleItem.UnitPrice = item.UnitPrice;
+                saleItem.UnitPrice = item.UnitPrice.Value;
                 saleItem.Quantity = item.Quantity;
                 saleItem.SpecialProductName = item.SpecialProductName;
                 saleItem.Observation = item.Observation;

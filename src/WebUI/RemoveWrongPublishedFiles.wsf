@@ -1,6 +1,6 @@
-﻿<package xmlns="http://schemas.microsoft.com/WindowsScriptHost">
-    <job>
-        <script language="VBScript">
+﻿<job>
+
+    <script language="VBScript">
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 '
 '   VBScript  REFERENCES
@@ -71,14 +71,11 @@ function IsWrongObject(name)
                    (InStr(name, ".rar") > 0) or _
                    (InStr(name, "lastcodeanalysissucceeded") > 0) or _
                    (InStr(name, "AjaxControlToolkit") > 0) or _
-                   (InStr(name, "App_Licenses") > 0) or _
-                   (InStr(name, "Boleto") > 0) or _
+                   (InStr(name, "App_Licenses") > 0) or _                   
                    (InStr(name, "Dundas") > 0) or _
                    (InStr(name, "Microsoft") > 0) or _
                    (InStr(name, "SharpZipLib") > 0) or _
                    (InStr(name, "Telerik") > 0) or _
-                   (name = "Properties") or _
-                   (name = "Service References") or _
                    (name = "_svn") or _
                    (name = ".svn"))
                    
@@ -91,7 +88,7 @@ function DeleteWrongFiles(path)
 
     Set folder = objfso.GetFolder(path)
     For Each subFolder in folder.SubFolders
-        If (IsWrongObject(subFolder.name)) Then
+        If (IsWrongObject(subFolder.name)) or (subFolder.Files.Count=0 and subFolder.SubFolders.Count = 0)  Then
             objFSO.DeleteFolder(path & "\" & subFolder.name), DeleteReadOnly
         Else
             DeleteWrongFiles(path & "\" & subFolder.name)           
@@ -106,13 +103,7 @@ function DeleteWrongFiles(path)
         End If
     Next
     
-    
-    '
-    ' Remove pastas vazias
-    '
-    If folder.SubFolders.Count = 0 and folder.Files.Count = 0 Then
-        objFSO.DeleteFile(path), DeleteReadOnly
-    End If
+   
 
 end function
 
@@ -137,7 +128,6 @@ function WriteFile(FileName, Contents)
     Set OutStream = FS.OpenTextFile(currentExecutionPath & FileName, 2, True)
     OutStream.Write Contents
 End Function
-        </script>
+    </script>
 
-    </job>
-</package>
+</job>

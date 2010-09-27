@@ -48,7 +48,7 @@ namespace Vivina.Erp.WebUI.Site
             set { Session["total"] = value; }
         }
 
-        public decimal Freight
+        public decimal FreightValue
         {
             get { return Convert.ToDecimal(Session["freight"]); }
             set { Session["freight"] = value; }
