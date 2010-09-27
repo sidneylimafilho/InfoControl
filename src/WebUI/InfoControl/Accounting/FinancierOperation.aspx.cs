@@ -107,7 +107,7 @@ public partial class InfoControl_Accounting_FinancierOperation : PageBase
                                      {
                                          CompanyId = Company.CompanyId,
                                          FinancierOperationId = OriginalFinancierOperation.FinancierOperationId,
-                                         MonthlyTax = ucCurrFieldMonthlyTax.CurrencyValue,
+                                         MonthlyTax = ucCurrFieldMonthlyTax.CurrencyValue.Value,
                                          ParcelCount = ucCurrFieldParcelCount.IntValue
                                      };
 
