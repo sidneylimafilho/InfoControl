@@ -13,7 +13,7 @@
             <div class="email"><%=User.Identity.Email %></div>
         </div>
         <div class="details">
-            <div class="status">Pedido Confirmado (Pendente Pagamento)</div>
+            <div class="status">Pedido Confirmado (<%=Sale.SaleStatus.Name%>)</div>
             <div class="payment">
             <table>
             <tr><td>Forma de Pagamento:</td><td><%=Sale.FinancierOperation.PaymentMethod.Name %></td></tr>
