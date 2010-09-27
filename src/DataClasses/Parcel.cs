@@ -31,9 +31,13 @@ namespace Vivina.Erp.DataClasses
             var b = new Boleto(DueDate,
                                Convert.ToDouble(Amount),
                                FinancierOperation.OperationNumber,
-                               ParcelId.ToString().PadLeft(13, '0'),
-                               FinancierOperation.Account.Agency,
-                               FinancierOperation.Account.AccountNumber);
+                               CompanyId.ToString(),
+                               FinancierOperation.Account.Agency.Split('-')[0],
+                               FinancierOperation.Account.AccountNumber.Split('-')[0]);
+
+            b.DataDocumento = DueDate;
+            b.DataProcessamento = DateTime.Now;
+            b.NumeroDocumento = ParcelId.ToString();
 
             b.Banco = new Banco(Convert.ToInt32(FinancierOperation.Account.Bank.BankNumber));
 
@@ -43,9 +47,12 @@ namespace Vivina.Erp.DataClasses
             b.Cedente = new Cedente(
                 Company.LegalEntityProfile.CNPJ,
                 Company.LegalEntityProfile.CompanyName,
-                FinancierOperation.Account.Agency,
-                FinancierOperation.Account.AccountNumber,
-                FinancierOperation.Account.AccountNumberDigit.ToString());
+                FinancierOperation.Account.Agency.Split('-')[0],
+                FinancierOperation.Account.AccountNumber.Split('-')[0],
+                FinancierOperation.Account.AccountNumberDigit.ToString())
+                {
+                    Codigo = Convert.ToInt32(FinancierOperation.MembershipNumber)
+                };
 
             //
             // Cliente
@@ -62,7 +69,7 @@ namespace Vivina.Erp.DataClasses
                      UF = Invoice.Customer.Address.State
                  }
             );
-
+                        
             return b;
         }
 

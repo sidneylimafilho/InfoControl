@@ -21,15 +21,20 @@ public partial class Site_Boleto : PageBase
         if (!String.IsNullOrEmpty(Request["parcelId"]))
         {
             var parcel = (new ParcelsManager(this)).GetParcel(Convert.ToInt32(Request["parcelId"]), Company.CompanyId);
-            BoletoBancario.Boleto = parcel.GenerateBoleto();
+            var boleto = parcel.GenerateBoleto();
+            boleto.Valida();
+            BoletoBancario.CodigoBanco = (short)boleto.Banco.Codigo;
+            BoletoBancario.Boleto = boleto;           
         }
 
         if (!String.IsNullOrEmpty(Request["saleId"]))
         {
-            var sale = (new SaleManager(this)).GetSale(Company.CompanyId, Convert.ToInt32(Request["saleId"]));
-            var boleto = sale.Invoice.Parcels.First().GenerateBoleto();
+            var sale = (new SaleManager(this)).GetSale(Company.CompanyId, Convert.ToInt32(Request["saleId"]));            
+            var boleto = sale.GenerateBoleto();
+            boleto.Valida();
             BoletoBancario.CodigoBanco = (short)boleto.Banco.Codigo;
             BoletoBancario.Boleto = boleto;
+                     
         }
     }
 }

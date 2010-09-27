@@ -16,7 +16,7 @@
             Contrato="1341888" DataEmissao="2008-02-20" DataProcessamento="2008-02-20" 
             Documento="123" OutrasAcrescimos="0" pEspecieDoc="DM" Quantidade="0">
         </VFX:HtmlBoleto>--%>
-        <bn:BoletoBancario ID="BoletoBancario" runat="server" CodigoBanco="001">
+        <bn:BoletoBancario ID="BoletoBancario" runat="server" >
         </bn:BoletoBancario>
         <script type="text/javascript">
             window.print();
