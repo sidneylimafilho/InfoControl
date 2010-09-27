@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Vivina_InfoControl" Class="InfoControlDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=Vivina_InfoControl;Integrated Security=True" SettingsObjectName="Vivina.Erp.DataClasses.Properties.Settings" SettingsPropertyName="Vivina_InfoControlConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Vivina_InfoControl" Class="InfoControlDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Table Name="dbo.Account" Member="Accounts">
     <Type Name="Account">
       <Column Name="AccountId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -16,7 +16,7 @@
       <Association Name="Account_FinancierOperation" Member="FinancierOperations" ThisKey="AccountId,CompanyId" OtherKey="AccountId,CompanyId" Type="FinancierOperation" />
       <Association Name="Account_Parcel" Member="Parcels" ThisKey="AccountId,CompanyId" OtherKey="AccountId,CompanyId" Type="Parcel" />
       <Association Name="Bank_Account" Member="Bank" ThisKey="BankId" OtherKey="BankId" Type="Bank" IsForeignKey="true" DeleteRule="CASCADE" />
-      <Association Name="Company_Account" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Account" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.WorkJourney" Member="WorkJourneys">
@@ -38,7 +38,7 @@
       <Association Name="AccountingPlan_Bill" Member="Bills" ThisKey="AccountingPlanId,CompanyId" OtherKey="AccountingPlanId,CompanyId" Type="Bill" />
       <Association Name="AccountingPlan_Invoice" Member="Invoices" ThisKey="AccountingPlanId,CompanyId" OtherKey="AccountingPlanId,CompanyId" Type="Invoice" />
       <Association Name="AccountingPlan_AccountingPlan" Member="AccountingPlan1" ThisKey="ParentId,CompanyId" OtherKey="AccountingPlanId,CompanyId" Type="AccountingPlan" IsForeignKey="true" />
-      <Association Name="Company_AccountingPlan" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_AccountingPlan" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.AdditionalInformation" Member="AdditionalInformations">
@@ -152,7 +152,7 @@
       <Association Name="Bill_PurchaseOrder" Member="PurchaseOrders" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="PurchaseOrder" />
       <Association Name="Bill_Statement" Member="Statements" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="Statement" />
       <Association Name="AccountingPlan_Bill" Member="AccountingPlan" ThisKey="AccountingPlanId,CompanyId" OtherKey="AccountingPlanId,CompanyId" Type="AccountingPlan" IsForeignKey="true" />
-      <Association Name="Company_Bill" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Bill" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="CostCenter_Bill" Member="CostCenter" ThisKey="CostCenterId,CompanyId" OtherKey="CostCenterId,CompanyId" Type="CostCenter" IsForeignKey="true" />
       <Association Name="Supplier_Bill" Member="Supplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="Supplier" IsForeignKey="true" />
     </Type>
@@ -215,8 +215,8 @@
       <Association Name="Budget_Sale" Member="Sales" ThisKey="BudgetId" OtherKey="BudgetId" Type="Sale" />
       <Association Name="Budget_ServiceOrder" Member="ServiceOrders" ThisKey="BudgetId" OtherKey="BudgetId" Type="ServiceOrder" />
       <Association Name="BudgetStatus_Budget" Member="BudgetStatus" ThisKey="BudgetStatusId" OtherKey="BudgetStatusId" Type="BudgetStatus" IsForeignKey="true" />
-      <Association Name="Company_Budget" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Customer_Budget" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Company_Budget" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Customer_Budget" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
       <Association Name="Employee_Budget" Member="Employee" ThisKey="VendorId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
     </Type>
   </Table>
@@ -260,7 +260,7 @@
       <Association Name="Category_Category" Member="Categories" ThisKey="CategoryId" OtherKey="ParentId" Type="Category" />
       <Association Name="Category_Product" Member="Products" ThisKey="CategoryId" OtherKey="CategoryId" Type="Product" />
       <Association Name="Category_Category" Member="Category1" ThisKey="ParentId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" />
-      <Association Name="Company_Category" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Category" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CFOP" Member="CFOPs">
@@ -313,7 +313,7 @@
       <Column Name="Website" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
       <Column Name="FileName" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
       <Column Name="FileUrl" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
-      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Company_Comment" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
@@ -358,6 +358,8 @@
       <Association Name="Company_ContractPendency" Member="ContractPendencies" ThisKey="CompanyId" OtherKey="CompanyId" Type="ContractPendency" />
       <Association Name="Company_ContractType" Member="ContractTypes" ThisKey="CompanyId" OtherKey="CompanyId" Type="ContractType" />
       <Association Name="Company_CostCenter" Member="CostCenters" ThisKey="CompanyId" OtherKey="CompanyId" Type="CostCenter" />
+      <Association Name="Company_CostCenter1" Member="CostCenters1" ThisKey="CompanyId" OtherKey="CompanyId" Type="CostCenter" />
+      <Association Name="Company_Customer" Member="Customers" ThisKey="CompanyId" OtherKey="CompanyId" Type="Customer" />
       <Association Name="Company_CustomerCall" Member="CustomerCalls" ThisKey="CompanyId" OtherKey="CompanyId" Type="CustomerCall" />
       <Association Name="Company_CustomerContact" Member="CustomerContacts" ThisKey="CompanyId" OtherKey="CompanyId" Type="CustomerContact" />
       <Association Name="Company_CustomerFollowupAction" Member="CustomerFollowupActions" ThisKey="CompanyId" OtherKey="CompanyId" Type="CustomerFollowupAction" />
@@ -365,20 +367,16 @@
       <Association Name="Company_CustomFunction" Member="CustomFunctions" ThisKey="CompanyId" OtherKey="CompanyId" Type="CustomFunction" />
       <Association Name="Company_Deposit" Member="Deposits" ThisKey="CompanyId" OtherKey="CompanyId" Type="Deposit" />
       <Association Name="Company_DocumentTemplate" Member="DocumentTemplates" ThisKey="CompanyId" OtherKey="CompanyId" Type="DocumentTemplate" />
+      <Association Name="Company_DropPayout" Member="DropPayouts" ThisKey="CompanyId" OtherKey="CompanyId" Type="DropPayout" />
       <Association Name="Company_Employee" Member="Employees" ThisKey="CompanyId" OtherKey="CompanyId" Type="Employee" />
       <Association Name="Company_EmployeeAdditionalInformation" Member="EmployeeAdditionalInformations" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation1" Member="EmployeeAdditionalInformations1" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation2" Member="EmployeeAdditionalInformations2" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation3" Member="EmployeeAdditionalInformations3" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation4" Member="EmployeeAdditionalInformations4" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation5" Member="EmployeeAdditionalInformations5" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation6" Member="EmployeeAdditionalInformations6" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation7" Member="EmployeeAdditionalInformations7" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
-      <Association Name="Company_EmployeeAdditionalInformation8" Member="EmployeeAdditionalInformations8" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeAdditionalInformation" />
+      <Association Name="Company_EmployeeFunction" Member="EmployeeFunctions" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeFunction" />
       <Association Name="Company_EmployeeFunctionHistory" Member="EmployeeFunctionHistories" ThisKey="CompanyId" OtherKey="CompanyId" Type="EmployeeFunctionHistory" />
       <Association Name="Company_ExpenditureAuthorization" Member="ExpenditureAuthorizations" ThisKey="CompanyId" OtherKey="CompanyId" Type="ExpenditureAuthorization" />
       <Association Name="Company_FinancierCondition" Member="FinancierConditions" ThisKey="CompanyId" OtherKey="CompanyId" Type="FinancierCondition" />
       <Association Name="Company_FinancierOperation" Member="FinancierOperations" ThisKey="CompanyId" OtherKey="CompanyId" Type="FinancierOperation" />
+      <Association Name="Company_Inventory" Member="Inventories" ThisKey="CompanyId" OtherKey="CompanyId" Type="Inventory" />
+      <Association Name="Company_InventoryHistory" Member="InventoryHistories" ThisKey="CompanyId" OtherKey="CompanyId" Type="InventoryHistory" />
       <Association Name="Company_InventoryMoviment" Member="InventoryMoviments" ThisKey="CompanyId" OtherKey="CompanyDestinationId" Type="InventoryMoviment" />
       <Association Name="Company_InventoryMoviment1" Member="InventoryMoviments1" ThisKey="CompanyId" OtherKey="CompanyId" Type="InventoryMoviment" />
       <Association Name="Company_InventoryRMA" Member="InventoryRMAs" ThisKey="CompanyId" OtherKey="CompanyId" Type="InventoryRMA" />
@@ -387,7 +385,9 @@
       <Association Name="Company_OtherSchool" Member="OtherSchools" ThisKey="CompanyId" OtherKey="CompanyId" Type="OtherSchool" />
       <Association Name="Company_PackageAdditional" Member="PackageAdditionals" ThisKey="CompanyId" OtherKey="CompanyId" Type="PackageAdditional" />
       <Association Name="Company_Parcel" Member="Parcels" ThisKey="CompanyId" OtherKey="CompanyId" Type="Parcel" />
+      <Association Name="Company_Permission" Member="Permissions" ThisKey="CompanyId" OtherKey="CompanyId" Type="Permission" />
       <Association Name="Company_Post" Member="Posts" ThisKey="CompanyId" OtherKey="CompanyId" Type="Post" />
+      <Association Name="Company_Post1" Member="Posts1" ThisKey="CompanyId" OtherKey="CompanyId" Type="Post" />
       <Association Name="Company_Product" Member="Products" ThisKey="CompanyId" OtherKey="CompanyId" Type="Product" />
       <Association Name="Company_PurchaseOrder" Member="PurchaseOrders" ThisKey="CompanyId" OtherKey="CompanyId" Type="PurchaseOrder" />
       <Association Name="Company_PurchaseRequest" Member="PurchaseRequests" ThisKey="CompanyId" OtherKey="CompanyId" Type="PurchaseRequest" />
@@ -396,6 +396,7 @@
       <Association Name="Company_ReceiptFieldConfiguration" Member="ReceiptFieldConfigurations" ThisKey="CompanyId" OtherKey="CompanyId" Type="ReceiptFieldConfiguration" />
       <Association Name="Company_Representant" Member="Representants" ThisKey="CompanyId" OtherKey="CompanyId" Type="Representant" />
       <Association Name="Company_Role" Member="Roles" ThisKey="CompanyId" OtherKey="CompanyId" Type="Role" />
+      <Association Name="Company_Sale" Member="Sales" ThisKey="CompanyId" OtherKey="CompanyId" Type="Sale" />
       <Association Name="Company_Service" Member="Services" ThisKey="CompanyId" OtherKey="CompanyId" Type="Service" />
       <Association Name="Company_ServiceOrder" Member="ServiceOrders" ThisKey="CompanyId" OtherKey="CompanyId" Type="ServiceOrder" />
       <Association Name="Company_ServiceOrderBook" Member="ServiceOrderBooks" ThisKey="CompanyId" OtherKey="CompanyId" Type="ServiceOrderBook" />
@@ -408,9 +409,6 @@
       <Association Name="Company_ServiceOrderType" Member="ServiceOrderTypes" ThisKey="CompanyId" OtherKey="CompanyId" Type="ServiceOrderType" />
       <Association Name="Company_ServiceType" Member="ServiceTypes" ThisKey="CompanyId" OtherKey="CompanyId" Type="ServiceType" />
       <Association Name="Company_Statement" Member="Statements" ThisKey="CompanyId" OtherKey="CompanyId" Type="Statement" />
-      <Association Name="Company_Statement1" Member="Statements1" ThisKey="CompanyId" OtherKey="CompanyId" Type="Statement" />
-      <Association Name="Company_Statement2" Member="Statements2" ThisKey="CompanyId" OtherKey="CompanyId" Type="Statement" />
-      <Association Name="Company_Statement3" Member="Statements3" ThisKey="CompanyId" OtherKey="CompanyId" Type="Statement" />
       <Association Name="Company_StatusHistory" Member="StatusHistories" ThisKey="CompanyId" OtherKey="CompanyId" Type="StatusHistory" />
       <Association Name="Company_Supplier" Member="Suppliers" ThisKey="CompanyId" OtherKey="CompanyId" Type="Supplier" />
       <Association Name="Company_SupplierCategory" Member="SupplierCategories" ThisKey="CompanyId" OtherKey="CompanyId" Type="SupplierCategory" />
@@ -422,7 +420,6 @@
       <Association Name="LegalEntityProfile_Company" Member="LegalEntityProfile" ThisKey="LegalEntityProfileId" OtherKey="LegalEntityProfileId" Type="LegalEntityProfile" IsForeignKey="true" />
       <Association Name="Plan_Company" Member="Plan" ThisKey="PlanId" OtherKey="PlanId" Type="Plan" IsForeignKey="true" />
       <Association Name="ProfitAssessment_Company" Member="ProfitAssessment" ThisKey="ProfitAssessmentId" OtherKey="ProfitAssessmentId" Type="ProfitAssessment" IsForeignKey="true" />
-      <Association Name="Role_Company" Member="Role" ThisKey="RoleAdminId,CompanyId" OtherKey="RoleId,CompanyId" Type="Role" IsForeignKey="true" />
       <Association Name="User_Company" Member="User" ThisKey="CreatorUserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
@@ -460,7 +457,7 @@
       <Column Name="DepositId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="IsMain" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Association Name="CompanyUser_UsersInRole" Member="UsersInRoles" ThisKey="CompanyId,UserId" OtherKey="CompanyId,UserId" Type="UsersInRole" />
-      <Association Name="Company_CompanyUser" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_CompanyUser" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Deposit_CompanyUser" Member="Deposit" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Deposit" IsForeignKey="true" />
       <Association Name="User_CompanyUser" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
@@ -473,7 +470,7 @@
       <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ProductPackageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ProductManufacturerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Product_CompositeProduct" Member="Product" ThisKey="CompositeProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Product_CompositeProduct" Member="Product" ThisKey="CompositeProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" />
       <Association Name="Product_CompositeProduct1" Member="Product1" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" />
       <Association Name="ProductManufacturer_CompositeProduct" Member="ProductManufacturer" ThisKey="ProductManufacturerId" OtherKey="ProductManufacturerId" Type="ProductManufacturer" IsForeignKey="true" />
       <Association Name="ProductPackage_CompositeProduct" Member="ProductPackage" ThisKey="ProductPackageId" OtherKey="ProductPackageId" Type="ProductPackage" IsForeignKey="true" />
@@ -502,13 +499,13 @@
       <Association Name="Contact_SupplierContact" Member="SupplierContacts" ThisKey="ContactId" OtherKey="ContactId" Type="SupplierContact" />
       <Association Name="Address_Contact" Member="Address" ThisKey="PostalCode" OtherKey="PostalCode" Type="Address" IsForeignKey="true" />
       <Association Name="Company_Contact" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="User_Contact" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+      <Association Name="User_Contact" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Contract" Member="Contracts">
     <Type Name="Contract">
-      <Column Name="ContractId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ContractId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CustomerId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="BeginDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="HH" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
@@ -544,11 +541,11 @@
       <Association Name="Bill_Contract" Member="Bill" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="Bill" IsForeignKey="true" />
       <Association Name="ContractStatus_Contract" Member="ContractStatus" ThisKey="ContractStatusId" OtherKey="ContractStatusId" Type="ContractStatus" IsForeignKey="true" />
       <Association Name="ContractType_Contract" Member="ContractType" ThisKey="ContractTypeId,CompanyId" OtherKey="ContractTypeId,CompanyId" Type="ContractType" IsForeignKey="true" />
-      <Association Name="Customer_Contract" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
+      <Association Name="Customer_Contract" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Employee_Contract" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
-      <Association Name="FinancierCondition_Contract" Member="FinancierCondition" ThisKey="FinancierConditionId,CompanyId,FinancierOperationId" OtherKey="FinancierConditionId,CompanyId,FinancierOperationId" Type="FinancierCondition" IsForeignKey="true" />
+      <Association Name="FinancierCondition_Contract" Member="FinancierCondition" ThisKey="CompanyId,FinancierOperationId,FinancierConditionId" OtherKey="CompanyId,FinancierOperationId,FinancierConditionId" Type="FinancierCondition" IsForeignKey="true" />
       <Association Name="FinancierOperation_Contract" Member="FinancierOperation" ThisKey="FinancierOperationId,CompanyId" OtherKey="FinancierOperationId,CompanyId" Type="FinancierOperation" IsForeignKey="true" />
-      <Association Name="Invoice_Contract" Member="Invoice" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Invoice_Contract" Member="Invoice" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" />
       <Association Name="Representant_Contract" Member="Representant" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="Representant" IsForeignKey="true" />
     </Type>
   </Table>
@@ -559,7 +556,7 @@
       <Column Name="PaidDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="DueDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="ContractId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Contract_ContractAssociated" Member="Contract" ThisKey="ContractId,CompanyId" OtherKey="ContractId,CompanyId" Type="Contract" IsForeignKey="true" />
     </Type>
   </Table>
@@ -569,7 +566,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
       <Column Name="TermDays" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Company_ContractPendency" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ContractPendency" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ContractStatus" Member="ContractStatus">
@@ -585,7 +582,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
       <Association Name="ContractType_Contract" Member="Contracts" ThisKey="ContractTypeId,CompanyId" OtherKey="ContractTypeId,CompanyId" Type="Contract" />
-      <Association Name="Company_ContractType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ContractType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CostCenter" Member="CostCenters">
@@ -600,6 +597,7 @@
       <Association Name="CostCenter_PurchaseRequest" Member="PurchaseRequests" ThisKey="CostCenterId,CompanyId" OtherKey="CostCenterId,CompanyId" Type="PurchaseRequest" />
       <Association Name="Company_CostCenter" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="CostCenter_CostCenter" Member="CostCenter1" ThisKey="ParentId,CompanyId" OtherKey="CostCenterId,CompanyId" Type="CostCenter" IsForeignKey="true" />
+      <Association Name="Company_CostCenter1" Member="Company1" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CurrencyRate" Member="CurrencyRates">
@@ -647,6 +645,7 @@
       <Association Name="Customer_Sale" Member="Sales" ThisKey="CustomerId" OtherKey="CustomerId" Type="Sale" />
       <Association Name="Customer_ServiceOrder" Member="ServiceOrders" ThisKey="CustomerId" OtherKey="CustomerId" Type="ServiceOrder" />
       <Association Name="Bank_Customer" Member="Bank" ThisKey="BankId" OtherKey="BankId" Type="Bank" IsForeignKey="true" />
+      <Association Name="Company_Customer" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="CustomerType_Customer" Member="CustomerType" ThisKey="CustomerTypeId,CompanyId" OtherKey="CustomerTypeId,CompanyId" Type="CustomerType" IsForeignKey="true" />
       <Association Name="Employee_Customer" Member="Employee" ThisKey="SalesPersonId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
       <Association Name="Employee_Customer1" Member="Employee1" ThisKey="SupplementalSalesPersonId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
@@ -684,13 +683,13 @@
       <Association Name="CustomerCall_ExpenditureAuthorization" Member="ExpenditureAuthorizations" ThisKey="CustomerCallId,CompanyId" OtherKey="CustomerCallId,CompanyId" Type="ExpenditureAuthorization" />
       <Association Name="CustomerCall_ServiceOrder" Member="ServiceOrders" ThisKey="CustomerCallId,CompanyId" OtherKey="CustomerCallId,CompanyId" Type="ServiceOrder" />
       <Association Name="Customer_CustomerCall" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="Company_CustomerCall" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Company_CustomerCall" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="CustomerCallStatus_CustomerCall" Member="CustomerCallStatus" ThisKey="CustomerCallStatusId" OtherKey="CustomerCallStatusId" Type="CustomerCallStatus" IsForeignKey="true" />
       <Association Name="CustomerCallType_CustomerCall" Member="CustomerCallType" ThisKey="CustomerCallTypeId" OtherKey="CustomerCallTypeId" Type="CustomerCallType" IsForeignKey="true" />
       <Association Name="CustomerEquipment_CustomerCall" Member="CustomerEquipment" ThisKey="CustomerId,CustomerEquipmentId" OtherKey="CustomerId,CustomerEquipmentId" Type="CustomerEquipment" IsForeignKey="true" />
       <Association Name="Employee_CustomerCall" Member="Employee" ThisKey="TechnicalEmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
       <Association Name="Event_CustomerCall" Member="Event" ThisKey="EventId" OtherKey="EventId" Type="Event" IsForeignKey="true" />
-      <Association Name="Representant_CustomerCall" Member="Representant" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="Representant" IsForeignKey="true" />
+      <Association Name="Representant_CustomerCall" Member="Representant" ThisKey="CompanyId,RepresentantId" OtherKey="CompanyId,RepresentantId" Type="Representant" IsForeignKey="true" />
       <Association Name="User_CustomerCall" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
@@ -714,7 +713,7 @@
       <Column Name="ContactId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="CustomerContact_CustomerFollowup" Member="CustomerFollowups" ThisKey="CustomerId,ContactId,CompanyId" OtherKey="CustomerId,ContactId,CompanyId" Type="CustomerFollowup" />
-      <Association Name="Company_CustomerContact" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Company_CustomerContact" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="Customer_CustomerContact" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Contact_CustomerContact" Member="Contact" ThisKey="ContactId" OtherKey="ContactId" Type="Contact" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
@@ -754,7 +753,7 @@
       <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CustomerFollowupActionId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="CustomerContact_CustomerFollowup" Member="CustomerContact" ThisKey="CustomerId,ContactId,CompanyId" OtherKey="CustomerId,ContactId,CompanyId" Type="CustomerContact" IsForeignKey="true" />
+      <Association Name="CustomerContact_CustomerFollowup" Member="CustomerContact" ThisKey="CustomerId,ContactId,CompanyId" OtherKey="CustomerId,ContactId,CompanyId" Type="CustomerContact" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="Contact_CustomerFollowup" Member="Contact" ThisKey="ContactId" OtherKey="ContactId" Type="Contact" IsForeignKey="true" />
       <Association Name="CustomerFollowupAction_CustomerFollowup" Member="CustomerFollowupAction" ThisKey="CustomerFollowupActionId,CompanyId" OtherKey="CustomerFollowupActionId,CompanyId" Type="CustomerFollowupAction" IsForeignKey="true" />
       <Association Name="Employee_CustomerFollowup" Member="Employee" ThisKey="UserId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
@@ -777,7 +776,7 @@
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="CustomerType_Customer" Member="Customers" ThisKey="CustomerTypeId,CompanyId" OtherKey="CustomerTypeId,CompanyId" Type="Customer" />
-      <Association Name="Company_CustomerType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_CustomerType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.CustomFunction" Member="CustomFunctions">
@@ -809,7 +808,7 @@
       <Association Name="Deposit_InventoryMoviment" Member="InventoryMoviments" ThisKey="DepositId,CompanyId" OtherKey="DepositDestinationId,CompanyDestinationId" Type="InventoryMoviment" />
       <Association Name="Deposit_PurchaseRequest" Member="PurchaseRequests" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="PurchaseRequest" />
       <Association Name="Deposit_Sale" Member="Sales" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Sale" />
-      <Association Name="Company_Deposit" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Deposit" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Address_Deposit" Member="Address" ThisKey="PostalCode" OtherKey="PostalCode" Type="Address" IsForeignKey="true" />
     </Type>
   </Table>
@@ -820,7 +819,7 @@
       <Column Name="FileUrl" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="DocumentTemplateTypeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Company_DocumentTemplate" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_DocumentTemplate" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="DocumentTemplateType_DocumentTemplate" Member="DocumentTemplateType" ThisKey="DocumentTemplateTypeId" OtherKey="DocumentTemplateTypeId" Type="DocumentTemplateType" IsForeignKey="true" />
     </Type>
   </Table>
@@ -842,6 +841,7 @@
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Deposit_DropPayout" Member="Deposit" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Deposit" IsForeignKey="true" />
+      <Association Name="Company_DropPayout" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="User_DropPayout" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
@@ -930,7 +930,7 @@
       <Association Name="Alienation_Employee" Member="Alienation" ThisKey="AlienationId" OtherKey="AlienationId" Type="Alienation" IsForeignKey="true" />
       <Association Name="Bond_Employee" Member="Bond" ThisKey="BondId" OtherKey="BondId" Type="Bond" IsForeignKey="true" />
       <Association Name="WorkJourney_Employee" Member="WorkJourney" ThisKey="WorkJourneyId" OtherKey="WorkJourneyId" Type="WorkJourney" IsForeignKey="true" />
-      <Association Name="Company_Employee" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Employee" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Bank_Employee" Member="Bank" ThisKey="BankId" OtherKey="BankId" Type="Bank" IsForeignKey="true" DeleteRule="SET NULL" />
       <Association Name="OrganizationLevel_Employee" Member="OrganizationLevel" ThisKey="OrganizationlevelId" OtherKey="OrganizationlevelId" Type="OrganizationLevel" IsForeignKey="true" />
       <Association Name="Post_Employee" Member="Post" ThisKey="PostId" OtherKey="PostId" Type="Post" IsForeignKey="true" />
@@ -951,14 +951,6 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="AdditionalInformation_EmployeeAdditionalInformation" Member="AdditionalInformation" ThisKey="AddonInfoId" OtherKey="AddonInfoId" Type="AdditionalInformation" IsForeignKey="true" />
       <Association Name="Company_EmployeeAdditionalInformation" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation1" Member="Company1" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation2" Member="Company2" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation3" Member="Company3" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation4" Member="Company4" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation5" Member="Company5" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation6" Member="Company6" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation7" Member="Company7" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_EmployeeAdditionalInformation8" Member="Company8" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="Employee_EmployeeAdditionalInformation" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
       <Association Name="AdditionalInformationData_EmployeeAdditionalInformation" Member="AdditionalInformationData" ThisKey="AddonInfoDataId,AddonInfoId" OtherKey="AddonInfoDataId,AddonInfoId" Type="AdditionalInformationData" IsForeignKey="true" />
     </Type>
@@ -970,7 +962,7 @@
       <Column Name="EmployeeId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Rating" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Employee_EmployeeCompetency" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_EmployeeCompetency" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.EmployeeDependent" Member="EmployeeDependents">
@@ -990,6 +982,7 @@
       <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="EmployeeFunction_EmployeeFunctionHistory" Member="EmployeeFunctionHistories" ThisKey="EmployeeFunctionId" OtherKey="EmployeeFunctionId" Type="EmployeeFunctionHistory" />
+      <Association Name="Company_EmployeeFunction" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.EmployeeFunctionHistory" Member="EmployeeFunctionHistories">
@@ -1001,7 +994,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="EmployeeFunction_EmployeeFunctionHistory" Member="EmployeeFunction" ThisKey="EmployeeFunctionId" OtherKey="EmployeeFunctionId" Type="EmployeeFunction" IsForeignKey="true" />
       <Association Name="Company_EmployeeFunctionHistory" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Employee_EmployeeFunctionHistory" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_EmployeeFunctionHistory" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.EmployeeOtherSchool" Member="EmployeeOtherSchools">
@@ -1011,7 +1004,7 @@
       <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Employee_EmployeeOtherSchool" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_EmployeeOtherSchool" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="OtherSchool_EmployeeOtherSchool" Member="OtherSchool" ThisKey="OtherSchoolId,CompanyId" OtherKey="OtherSchoolId,CompanyId" Type="OtherSchool" IsForeignKey="true" />
     </Type>
   </Table>
@@ -1059,7 +1052,7 @@
       <Column Name="ExpenditureAuthorizationId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Association Name="Bill_ExpenditureAuthorization" Member="Bill" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="Bill" IsForeignKey="true" />
       <Association Name="CustomerCall_ExpenditureAuthorization" Member="CustomerCall" ThisKey="CustomerCallId,CompanyId" OtherKey="CustomerCallId,CompanyId" Type="CustomerCall" IsForeignKey="true" />
-      <Association Name="Company_ExpenditureAuthorization" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ExpenditureAuthorization" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.FamilyRendInterval" Member="FamilyRendIntervals">
@@ -1071,12 +1064,12 @@
   </Table>
   <Table Name="dbo.FinancierCondition" Member="FinancierConditions">
     <Type Name="FinancierCondition">
-      <Column Name="FinancierConditionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="FinancierOperationId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FinancierConditionId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ParcelCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="MonthlyTax" Type="System.Decimal" DbType="Decimal(12,8)" CanBeNull="true" />
-      <Association Name="FinancierCondition_Contract" Member="Contracts" ThisKey="FinancierConditionId,CompanyId,FinancierOperationId" OtherKey="FinancierConditionId,CompanyId,FinancierOperationId" Type="Contract" />
+      <Column Name="MonthlyTax" Type="System.Decimal" DbType="Decimal(12,8) NOT NULL" CanBeNull="false" />
+      <Association Name="FinancierCondition_Contract" Member="Contracts" ThisKey="CompanyId,FinancierOperationId,FinancierConditionId" OtherKey="CompanyId,FinancierOperationId,FinancierConditionId" Type="Contract" />
       <Association Name="Company_FinancierCondition" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="FinancierOperation_FinancierCondition" Member="FinancierOperation" ThisKey="FinancierOperationId,CompanyId" OtherKey="FinancierOperationId,CompanyId" Type="FinancierOperation" IsForeignKey="true" />
     </Type>
@@ -1100,7 +1093,7 @@
       <Association Name="FinancierOperation_Contract" Member="Contracts" ThisKey="FinancierOperationId,CompanyId" OtherKey="FinancierOperationId,CompanyId" Type="Contract" />
       <Association Name="FinancierOperation_FinancierCondition" Member="FinancierConditions" ThisKey="FinancierOperationId,CompanyId" OtherKey="FinancierOperationId,CompanyId" Type="FinancierCondition" />
       <Association Name="FinancierOperation_Parcel" Member="Parcels" ThisKey="FinancierOperationId,CompanyId" OtherKey="FinancierOperationId,CompanyId" Type="Parcel" />
-      <Association Name="Company_FinancierOperation" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_FinancierOperation" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Account_FinancierOperation" Member="Account" ThisKey="AccountId,CompanyId" OtherKey="AccountId,CompanyId" Type="Account" IsForeignKey="true" />
       <Association Name="PaymentMethod_FinancierOperation" Member="PaymentMethod" ThisKey="PaymentMethodId" OtherKey="PaymentMethodId" Type="PaymentMethod" IsForeignKey="true" />
     </Type>
@@ -1153,9 +1146,10 @@
       <Column Name="ProductPackageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Inventory_InventoryMoviment" Member="InventoryMoviments" ThisKey="DepositId,InventoryId,CompanyId" OtherKey="DepositId,InventoryId,CompanyDestinationId" Type="InventoryMoviment" />
       <Association Name="Inventory_InventorySerial" Member="InventorySerials" ThisKey="DepositId,InventoryId,CompanyId" OtherKey="DepositId,InventoryId,CompanyId" Type="InventorySerial" />
-      <Association Name="Deposit_Inventory" Member="Deposit" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Deposit" IsForeignKey="true" />
+      <Association Name="Deposit_Inventory" Member="Deposit" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Deposit" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="CurrencyRate_Inventory" Member="CurrencyRate" ThisKey="CurrencyRateId" OtherKey="CurrencyRateId" Type="CurrencyRate" IsForeignKey="true" />
-      <Association Name="Product_Inventory" Member="Product" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Company_Inventory" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Product_Inventory" Member="Product" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" />
       <Association Name="ProductPackage_Inventory" Member="ProductPackage" ThisKey="ProductPackageId" OtherKey="ProductPackageId" Type="ProductPackage" IsForeignKey="true" />
       <Association Name="Supplier_Inventory" Member="Supplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="Supplier" IsForeignKey="true" />
     </Type>
@@ -1202,8 +1196,9 @@
       <Association Name="InventoryDropType_InventoryHistory" Member="InventoryDropType" ThisKey="InventoryDropTypeId" OtherKey="InventoryDropTypeId" Type="InventoryDropType" IsForeignKey="true" />
       <Association Name="InventoryEntryType_InventoryHistory" Member="InventoryEntryType" ThisKey="InventoryEntryTypeId" OtherKey="InventoryEntryTypeId" Type="InventoryEntryType" IsForeignKey="true" />
       <Association Name="Deposit_InventoryHistory" Member="Deposit" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Deposit" IsForeignKey="true" />
-      <Association Name="Product_InventoryHistory" Member="Product" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="Sale_InventoryHistory" Member="Sale" ThisKey="SaleId,CompanyId" OtherKey="SaleId,CompanyId" Type="Sale" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Company_InventoryHistory" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Product_InventoryHistory" Member="Product" ThisKey="ProductId" OtherKey="ProductId" Type="Product" IsForeignKey="true" />
+      <Association Name="Sale_InventoryHistory" Member="Sale" ThisKey="SaleId,CompanyId" OtherKey="SaleId,CompanyId" Type="Sale" IsForeignKey="true" />
       <Association Name="User_InventoryHistory" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
     </Type>
   </Table>
@@ -1250,7 +1245,7 @@
       <Column Name="Lot" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="DueDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="InventoryId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Inventory_InventorySerial" Member="Inventory" ThisKey="DepositId,InventoryId,CompanyId" OtherKey="DepositId,InventoryId,CompanyId" Type="Inventory" IsForeignKey="true" />
+      <Association Name="Inventory_InventorySerial" Member="Inventory" ThisKey="DepositId,InventoryId,CompanyId" OtherKey="DepositId,InventoryId,CompanyId" Type="Inventory" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Invoice" Member="Invoices">
@@ -1269,11 +1264,11 @@
       <Association Name="Invoice_Contract" Member="Contracts" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Contract" />
       <Association Name="Invoice_Parcel" Member="Parcels" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Parcel" />
       <Association Name="Invoice_Sale" Member="Sales" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Sale" />
-      <Association Name="Invoice_Statement" Member="Statements" ThisKey="InvoiceId,CompanyId" OtherKey="HostInvoiceId,HostCompanyId" Type="Statement" />
-      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Invoice_Statement" Member="Statements" ThisKey="InvoiceId,CompanyId" OtherKey="HostInvoiceId,CompanyId" Type="Statement" />
+      <Association Name="Customer_Invoice" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
       <Association Name="CostCenter_Invoice" Member="CostCenter" ThisKey="CostCenterId,CompanyId" OtherKey="CostCenterId,CompanyId" Type="CostCenter" IsForeignKey="true" />
       <Association Name="AccountingPlan_Invoice" Member="AccountingPlan" ThisKey="AccountingPlanId,CompanyId" OtherKey="AccountingPlanId,CompanyId" Type="AccountingPlan" IsForeignKey="true" />
-      <Association Name="Company_Invoice" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Invoice" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.IrrfInterval" Member="IrrfIntervals">
@@ -1356,7 +1351,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="OrganizationLevel_Employee" Member="Employees" ThisKey="OrganizationlevelId" OtherKey="OrganizationlevelId" Type="Employee" />
       <Association Name="OrganizationLevel_OrganizationLevel" Member="OrganizationLevels" ThisKey="OrganizationlevelId" OtherKey="Parentid" Type="OrganizationLevel" />
-      <Association Name="Company_OrganizationLevel" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_OrganizationLevel" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" />
       <Association Name="OrganizationLevel_OrganizationLevel" Member="OrganizationLevel1" ThisKey="Parentid" OtherKey="OrganizationlevelId" Type="OrganizationLevel" IsForeignKey="true" />
     </Type>
   </Table>
@@ -1366,7 +1361,7 @@
       <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="OtherSchool_EmployeeOtherSchool" Member="EmployeeOtherSchools" ThisKey="OtherSchoolId,CompanyId" OtherKey="OtherSchoolId,CompanyId" Type="EmployeeOtherSchool" />
-      <Association Name="Company_OtherSchool" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_OtherSchool" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Package" Member="Packages">
@@ -1442,9 +1437,9 @@
       <Column Name="IdentificationNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="FinancierOperationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="OperationDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="Company_Parcel" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Invoice_Parcel" Member="Invoice" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" DeleteRule="CASCADE" />
-      <Association Name="Bill_Parcel" Member="Bill" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="Bill" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Company_Parcel" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Invoice_Parcel" Member="Invoice" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" />
+      <Association Name="Bill_Parcel" Member="Bill" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="Bill" IsForeignKey="true" />
       <Association Name="Account_Parcel" Member="Account" ThisKey="AccountId,CompanyId" OtherKey="AccountId,CompanyId" Type="Account" IsForeignKey="true" />
       <Association Name="FinancierOperation_Parcel" Member="FinancierOperation" ThisKey="FinancierOperationId,CompanyId" OtherKey="FinancierOperationId,CompanyId" Type="FinancierOperation" IsForeignKey="true" />
       <Association Name="PaymentMethod_Parcel" Member="PaymentMethod" ThisKey="PaymentMethodId" OtherKey="PaymentMethodId" Type="PaymentMethod" IsForeignKey="true" />
@@ -1468,6 +1463,7 @@
       <Column Name="PermissionTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Function_Permission" Member="Function" ThisKey="FunctionId" OtherKey="FunctionId" Type="Function" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Company_Permission" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="PermissionType_Permission" Member="PermissionType" ThisKey="PermissionTypeId" OtherKey="PermissionTypeId" Type="PermissionType" IsForeignKey="true" />
       <Association Name="Role_Permission" Member="Role" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Role" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
@@ -1503,6 +1499,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Post_Employee" Member="Employees" ThisKey="PostId" OtherKey="PostId" Type="Employee" />
       <Association Name="Company_Post" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Post1" Member="Company1" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Product" Member="Products">
@@ -1560,7 +1557,7 @@
       <Association Name="Product_SaleItem" Member="SaleItems" ThisKey="ProductId" OtherKey="ProductId" Type="SaleItem" />
       <Association Name="Product_ServiceOrderItem" Member="ServiceOrderItems" ThisKey="ProductId" OtherKey="ProductId" Type="ServiceOrderItem" />
       <Association Name="Company_Product" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Category_Product" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Category_Product" Member="Category" ThisKey="CategoryId" OtherKey="CategoryId" Type="Category" IsForeignKey="true" DeleteRule="SET NULL" />
       <Association Name="BarCodeType_Product" Member="BarCodeType" ThisKey="BarCodeTypeId" OtherKey="BarCodeTypeId" Type="BarCodeType" IsForeignKey="true" />
       <Association Name="Manufacturer_Product" Member="Manufacturer" ThisKey="ManufacturerId" OtherKey="ManufacturerId" Type="Manufacturer" IsForeignKey="true" />
     </Type>
@@ -1692,8 +1689,8 @@
       <Column Name="LegalEntityProfileId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="AddressComp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="AddressNumber" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-      <Association Name="LegalEntityProfile_ProfileAddress" Member="LegalEntityProfile" ThisKey="LegalEntityProfileId" OtherKey="LegalEntityProfileId" Type="LegalEntityProfile" IsForeignKey="true" />
-      <Association Name="Profile_ProfileAddress" Member="Profile" ThisKey="ProfileId" OtherKey="ProfileId" Type="Profile" IsForeignKey="true" />
+      <Association Name="LegalEntityProfile_ProfileAddress" Member="LegalEntityProfile" ThisKey="LegalEntityProfileId" OtherKey="LegalEntityProfileId" Type="LegalEntityProfile" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Profile_ProfileAddress" Member="Profile" ThisKey="ProfileId" OtherKey="ProfileId" Type="Profile" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.ProfitAssessment" Member="ProfitAssessments">
@@ -1863,10 +1860,10 @@
       <Association Name="Receipt_Sale" Member="Sales" ThisKey="ReceiptId,CompanyId" OtherKey="ReceiptId,CompanyId" Type="Sale" />
       <Association Name="Receipt_ServiceOrder" Member="ServiceOrders" ThisKey="ReceiptId,CompanyId" OtherKey="ReceiptId,CompanyId" Type="ServiceOrder" />
       <Association Name="Company_Receipt" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
-      <Association Name="Customer_Receipt" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Customer_Receipt" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
       <Association Name="CFOP_Receipt" Member="CFOP" ThisKey="CfopId" OtherKey="CfopId" Type="CFOP" IsForeignKey="true" />
       <Association Name="Supplier_Receipt" Member="Supplier" ThisKey="SupplierId" OtherKey="SupplierId" Type="Supplier" IsForeignKey="true" />
-      <Association Name="Transporter_Receipt" Member="Transporter" ThisKey="TransporterId,CompanyId" OtherKey="TransporterId,CompanyId" Type="Transporter" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Transporter_Receipt" Member="Transporter" ThisKey="TransporterId,CompanyId" OtherKey="TransporterId,CompanyId" Type="Transporter" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.ReceiptFieldConfiguration" Member="ReceiptFieldConfigurations">
@@ -2009,7 +2006,7 @@
       <Column Name="Rating" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Representant_Contract" Member="Contracts" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="Contract" />
       <Association Name="Representant_Customer" Member="Customers" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="Customer" />
-      <Association Name="Representant_CustomerCall" Member="CustomerCalls" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="CustomerCall" />
+      <Association Name="Representant_CustomerCall" Member="CustomerCalls" ThisKey="CompanyId,RepresentantId" OtherKey="CompanyId,RepresentantId" Type="CustomerCall" />
       <Association Name="Representant_RepresentantUser" Member="RepresentantUsers" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="RepresentantUser" />
       <Association Name="Representant_ServiceOrderBook" Member="ServiceOrderBooks" ThisKey="RepresentantId,CompanyId" OtherKey="RepresentantId,CompanyId" Type="ServiceOrderBook" />
       <Association Name="Profile_Representant" Member="Profile" ThisKey="ProfileId" OtherKey="ProfileId" Type="Profile" IsForeignKey="true" />
@@ -2028,22 +2025,22 @@
   </Table>
   <Table Name="dbo.Roles" Member="Roles">
     <Type Name="Role">
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ParentRoleId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ApplicationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="LastUpdatedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
       <Column Name="Description" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
-      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Role_Company" Member="Companies" ThisKey="RoleId,CompanyId" OtherKey="RoleAdminId,CompanyId" Type="Company" />
       <Association Name="Role_Permission" Member="Permissions" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Permission" />
       <Association Name="Role_UsersInRole" Member="UsersInRoles" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="UsersInRole" />
       <Association Name="Application_Role" Member="Application" ThisKey="ApplicationId" OtherKey="ApplicationId" Type="Application" IsForeignKey="true" />
-      <Association Name="Company_Role" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Role" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Sale" Member="Sales">
     <Type Name="Sale">
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SaleId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Discount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="OrderDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
@@ -2054,24 +2051,26 @@
       <Column Name="VendorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DepositId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="BudgetId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ReceiptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="LegalTicketNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="InvoiceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="IsCanceled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="SaleStatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaleStatusId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="CreatedByUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="ModifiedByUser" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FreightValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FreightType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Sale_InventoryHistory" Member="InventoryHistories" ThisKey="SaleId,CompanyId" OtherKey="SaleId,CompanyId" Type="InventoryHistory" />
       <Association Name="Sale_SaleItem" Member="SaleItems" ThisKey="SaleId,CompanyId" OtherKey="SaleId,CompanyId" Type="SaleItem" />
-      <Association Name="Customer_Sale" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" />
+      <Association Name="Customer_Sale" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" />
       <Association Name="Deposit_Sale" Member="Deposit" ThisKey="DepositId,CompanyId" OtherKey="DepositId,CompanyId" Type="Deposit" IsForeignKey="true" />
       <Association Name="Budget_Sale" Member="Budget" ThisKey="BudgetId" OtherKey="BudgetId" Type="Budget" IsForeignKey="true" />
       <Association Name="Employee_Sale" Member="Employee" ThisKey="VendorId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
       <Association Name="Invoice_Sale" Member="Invoice" ThisKey="InvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" />
       <Association Name="Receipt_Sale" Member="Receipt" ThisKey="ReceiptId,CompanyId" OtherKey="ReceiptId,CompanyId" Type="Receipt" IsForeignKey="true" />
+      <Association Name="Company_Sale" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="SaleStatus_Sale" Member="SaleStatus" ThisKey="SaleStatusId" OtherKey="SaleStatusId" Type="SaleStatus" IsForeignKey="true" />
     </Type>
   </Table>
@@ -2079,11 +2078,11 @@
     <Type Name="SaleItem">
       <Column Name="SaleItemsId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="SaleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="UnitCost" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="Observation" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
-      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="ProductId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="SerialNumber" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
       <Column Name="SpecialProductName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
@@ -2122,7 +2121,7 @@
       <Association Name="Service_BudgetItem" Member="BudgetItems" ThisKey="ServiceId" OtherKey="ServiceId" Type="BudgetItem" />
       <Association Name="Service_ReceiptItem" Member="ReceiptItems" ThisKey="ServiceId" OtherKey="ServiceId" Type="ReceiptItem" />
       <Association Name="Service_ServiceOrderItem" Member="ServiceOrderItems" ThisKey="ServiceId" OtherKey="ServiceId" Type="ServiceOrderItem" />
-      <Association Name="Company_Service" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Service" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrder" Member="ServiceOrders">
@@ -2158,7 +2157,7 @@
       <Association Name="ServiceOrder_ServiceOrderItem" Member="ServiceOrderItems" ThisKey="CompanyId,ServiceOrderId" OtherKey="CompanyId,ServiceOrderId" Type="ServiceOrderItem" />
       <Association Name="Customer_ServiceOrder" Member="Customer" ThisKey="CustomerId" OtherKey="CustomerId" Type="Customer" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="CustomerCall_ServiceOrder" Member="CustomerCall" ThisKey="CustomerCallId,CompanyId" OtherKey="CustomerCallId,CompanyId" Type="CustomerCall" IsForeignKey="true" />
-      <Association Name="Company_ServiceOrder" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Company_ServiceOrder" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
       <Association Name="CustomerEquipment_ServiceOrder" Member="CustomerEquipment" ThisKey="CustomerId,CustomerEquipmentId" OtherKey="CustomerId,CustomerEquipmentId" Type="CustomerEquipment" IsForeignKey="true" />
       <Association Name="Contract_ServiceOrder" Member="Contract" ThisKey="ContractId,CompanyId" OtherKey="ContractId,CompanyId" Type="Contract" IsForeignKey="true" />
       <Association Name="Receipt_ServiceOrder" Member="Receipt" ThisKey="ReceiptId,CompanyId" OtherKey="ReceiptId,CompanyId" Type="Receipt" IsForeignKey="true" />
@@ -2187,7 +2186,7 @@
       <Column Name="ServiceOrderEquipmentDamageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Company_ServiceOrderEquipmentDamage" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceOrderEquipmentDamage" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrderHaltType" Member="ServiceOrderHaltTypes">
@@ -2195,7 +2194,7 @@
       <Column Name="ServiceOrderHaltTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
-      <Association Name="Company_ServiceOrderHaltType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceOrderHaltType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrderInstallType" Member="ServiceOrderInstallTypes">
@@ -2203,7 +2202,7 @@
       <Column Name="ServiceOrderInstallTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
-      <Association Name="Company_ServiceOrderInstallType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceOrderInstallType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrderItem" Member="ServiceOrderItems">
@@ -2229,7 +2228,7 @@
       <Column Name="ServiceOrderProductDamageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Company_ServiceOrderProductDamage" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceOrderProductDamage" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrderProductType" Member="ServiceOrderProductTypes">
@@ -2237,7 +2236,7 @@
       <Column Name="ServiceOrderProductTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
-      <Association Name="Company_ServiceOrderProductType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceOrderProductType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrderStatus" Member="ServiceOrderStatus">
@@ -2252,7 +2251,7 @@
       <Column Name="ServiceOrderTestId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Association Name="Company_ServiceOrderTest" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceOrderTest" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ServiceOrderType" Member="ServiceOrderTypes">
@@ -2269,7 +2268,7 @@
       <Column Name="ServiceTypeId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="VarChar(120) NOT NULL" CanBeNull="false" />
       <Column Name="CompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Company_ServiceType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_ServiceType" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.Sex" Member="Sexes">
@@ -2303,17 +2302,14 @@
       <Column Name="PeriodBegin" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="PeriodEnd" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Column Name="StatementTotal" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="HostCompanyId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="BillId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="HostInvoiceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Statement_StatementItem" Member="StatementItems" ThisKey="StatementId" OtherKey="StatementId" Type="StatementItem" />
-      <Association Name="Company_Statement" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_Statement1" Member="Company1" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_Statement2" Member="Company2" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Company_Statement3" Member="Company3" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Statement" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Bill_Statement" Member="Bill" ThisKey="BillId,CompanyId" OtherKey="BillId,CompanyId" Type="Bill" IsForeignKey="true" />
-      <Association Name="Invoice_Statement" Member="Invoice" ThisKey="HostInvoiceId,HostCompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" />
+      <Association Name="Invoice_Statement" Member="Invoice" ThisKey="HostInvoiceId,CompanyId" OtherKey="InvoiceId,CompanyId" Type="Invoice" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.StatementItem" Member="StatementItems">
@@ -2324,7 +2320,8 @@
       <Column Name="Value" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="UnitCost" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="StatementId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Statement_StatementItem" Member="Statement" ThisKey="StatementId" OtherKey="StatementId" Type="Statement" IsForeignKey="true" />
+      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Statement_StatementItem" Member="Statement" ThisKey="StatementId" OtherKey="StatementId" Type="Statement" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.StatusHistory" Member="StatusHistories">
@@ -2337,7 +2334,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Alienation_StatusHistory" Member="Alienation" ThisKey="AlienationId" OtherKey="AlienationId" Type="Alienation" IsForeignKey="true" />
       <Association Name="Company_StatusHistory" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
-      <Association Name="Employee_StatusHistory" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" />
+      <Association Name="Employee_StatusHistory" Member="Employee" ThisKey="EmployeeId,CompanyId" OtherKey="EmployeeId,CompanyId" Type="Employee" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Supplier" Member="Suppliers">
@@ -2369,7 +2366,7 @@
       <Association Name="Supplier_Quotation" Member="Quotations" ThisKey="SupplierId" OtherKey="SupplierId" Type="Quotation" />
       <Association Name="Supplier_Receipt" Member="Receipts" ThisKey="SupplierId" OtherKey="SupplierId" Type="Receipt" />
       <Association Name="Supplier_SupplierContact" Member="SupplierContacts" ThisKey="SupplierId" OtherKey="SupplierId" Type="SupplierContact" />
-      <Association Name="Company_Supplier" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Supplier" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Address_Supplier" Member="Address" ThisKey="PostalCode" OtherKey="PostalCode" Type="Address" IsForeignKey="true" />
       <Association Name="Profile_Supplier" Member="Profile" ThisKey="ProfileId" OtherKey="ProfileId" Type="Profile" IsForeignKey="true" />
       <Association Name="LegalEntityProfile_Supplier" Member="LegalEntityProfile" ThisKey="LegalEntityProfileId" OtherKey="LegalEntityProfileId" Type="LegalEntityProfile" IsForeignKey="true" />
@@ -2455,7 +2452,7 @@
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="Transporter_Receipt" Member="Receipts" ThisKey="TransporterId,CompanyId" OtherKey="TransporterId,CompanyId" Type="Receipt" />
       <Association Name="LegalEntityProfile_Transporter" Member="LegalEntityProfile" ThisKey="LegalEntityProfileId" OtherKey="LegalEntityProfileId" Type="LegalEntityProfile" IsForeignKey="true" />
-      <Association Name="Company_Transporter" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" />
+      <Association Name="Company_Transporter" Member="Company" ThisKey="CompanyId" OtherKey="CompanyId" Type="Company" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="State_Transporter" Member="State" ThisKey="StateId" OtherKey="StateId" Type="State" IsForeignKey="true" />
     </Type>
   </Table>
@@ -2514,11 +2511,11 @@
   <Table Name="dbo.UsersInRoles" Member="UsersInRoles">
     <Type Name="UsersInRole">
       <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="RoleId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="User_UsersInRole" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
-      <Association Name="Role_UsersInRole" Member="Role" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Role" IsForeignKey="true" />
-      <Association Name="CompanyUser_UsersInRole" Member="CompanyUser" ThisKey="CompanyId,UserId" OtherKey="CompanyId,UserId" Type="CompanyUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="CompanyUser_UsersInRole" Member="CompanyUser" ThisKey="CompanyId,UserId" OtherKey="CompanyId,UserId" Type="CompanyUser" IsForeignKey="true" />
+      <Association Name="Role_UsersInRole" Member="Role" ThisKey="RoleId,CompanyId" OtherKey="RoleId,CompanyId" Type="Role" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.VacationInterval" Member="VacationIntervals">
