@@ -78,12 +78,10 @@
         },
         getAddress: function() {
             // Prepare the url
-            var url = this.attrUp("href") || this.attrUp("source");
+            var url = this.attrUp("source") || this.attrUp("href");
 
             if (this.attr("action")) {
-                url = this.attrUp("controller");
-                if (this.attrUp("action"))
-                    url += this.attrUp("action");
+                url += "/" + this.attrUp("action");
             }
             return url;
         },
@@ -162,20 +160,26 @@
                                             }
                                         }
 
-                                        if (result.Data) {
-                                            if (result.Data.length == 0 && $(ctrl.attrUp("emptytemplate")).size() > 0) {
-                                                result.isEmpty = true;
-                                                html = $(ctrl.attrUp("emptytemplate")).html();
-                                                target = ctrl.attrUp("emptytarget");
-                                            } else {
-                                                // Get template tag     
-                                                tpl = ctrl;
-                                                if ($(ctrl.attrUp("template")).size() > 0)
-                                                    tpl = $(ctrl.attrUp("template"));
+                                        //
+                                        // result.Data   = ClientResponse
+                                        // result.d      = ASMX/WCF JSON return
+                                        // result.d.Data = ASMX/WCF JSON return ClientResponse
+                                        // 
+                                        var data = result.Data || result.d || result.d.Data || result;
 
-                                                html = tpl.render(result.Data);
-                                            }
+                                        if (data.length == 0 && $(ctrl.attrUp("emptytemplate")).size() > 0) {
+                                            result.isEmpty = true;
+                                            html = $(ctrl.attrUp("emptytemplate")).html();
+                                            target = ctrl.attrUp("emptytarget");
+                                        } else {
+                                            // Get template tag     
+                                            tpl = ctrl;
+                                            if ($(ctrl.attrUp("template")).size() > 0)
+                                                tpl = $(ctrl.attrUp("template"));
+
+                                            html = tpl.render(data);
                                         }
+
                                     }
 
                                     ctrl.attachHtmlInTarget(html, target);

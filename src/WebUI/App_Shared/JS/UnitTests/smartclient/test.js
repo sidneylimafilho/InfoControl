@@ -23,8 +23,30 @@ $(document).ready(function() {
         equal(outerHtml, "index.html");
     });
 
-    test("getAddress: Deve retornar o endereço do recurso a ser acessado. CONTROLLER ", function() {
-        var html = "<a command=\"click\"  controller='/infocontrol/controller/SearchService/' " +
+    test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE ", function() {
+        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService' " +
+                 "params='{companyId:1, itemId:null}'></a>";
+        var outerHtml = sandbox.html(html).find("A").getAddress();
+        equal(outerHtml, "/infocontrol/controller/SearchService");
+    });
+
+    test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE ends with slash ", function() {
+        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService/' " +
+                 "params='{companyId:1, itemId:null}'></a>";
+        var outerHtml = sandbox.html(html).find("A").getAddress();
+        equal(outerHtml, "/infocontrol/controller/SearchService");
+    });
+
+
+    test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE w/ACTION ends with slash", function() {
+        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService' " +
+                "action='GetSampleData' params='{companyId:1, itemId:null}'></a>";
+        var outerHtml = sandbox.html(html).find("A").getAddress();
+        equal(outerHtml, "/infocontrol/controller/SearchService/GetSampleData");
+    });
+
+    test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE w/ACTION ends with slash", function() {
+        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService/' " +
                 "action='GetSampleData' params='{companyId:1, itemId:null}'></a>";
         var outerHtml = sandbox.html(html).find("A").getAddress();
         equal(outerHtml, "/infocontrol/controller/SearchService/GetSampleData");

@@ -377,7 +377,7 @@ public partial class Company_Customer_General : Vivina.Erp.SystemFramework.PageB
         user.HasChangePassword = membershipEntity.HasChangePassword;
         user.IsActive = membershipEntity.IsActive;
         user.IsLockedOut = membershipEntity.IsLockedOut;
-        user.IsOnline = membershipEntity.IsOnline;
+        
         user.LastActivityDate = membershipEntity.LastActivityDate;
         user.LastLockoutDate = membershipEntity.LastLockoutDate;
         user.LastLoginDate = membershipEntity.LastLoginDate;
