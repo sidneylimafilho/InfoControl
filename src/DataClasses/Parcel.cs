@@ -31,9 +31,13 @@ namespace Vivina.Erp.DataClasses
             var b = new Boleto(DueDate,
                                Convert.ToDouble(Amount),
                                FinancierOperation.OperationNumber,
-                               CompanyId.ToString(),
+
+                               // Nosso Numero identifica o boleto no banco
+                               ParcelId.ToString(),
+
                                FinancierOperation.Account.Agency.Split('-')[0],
                                FinancierOperation.Account.AccountNumber.Split('-')[0]);
+
 
             b.DataDocumento = DueDate;
             b.DataProcessamento = DateTime.Now;
@@ -69,7 +73,7 @@ namespace Vivina.Erp.DataClasses
                      UF = Invoice.Customer.Address.State
                  }
             );
-                        
+
             return b;
         }
 
