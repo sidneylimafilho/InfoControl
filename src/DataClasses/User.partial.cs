@@ -7,6 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.ComponentModel;
 using System;
+using System.Web.Security;
 
 namespace Vivina.Erp.DataClasses
 {
@@ -33,6 +34,14 @@ namespace Vivina.Erp.DataClasses
             get
             {
                 return Profile.Employees.FirstOrDefault();
+            }
+        }
+
+        public bool IsOnline
+        {
+            get
+            {
+                return LastActivityDate.AddMinutes(Membership.UserIsOnlineTimeWindow) > DateTime.Now ;
             }
         }
 

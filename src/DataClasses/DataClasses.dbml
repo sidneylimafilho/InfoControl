@@ -2483,7 +2483,6 @@
       <Column Name="PasswordAnswer" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="LastRemoteHost" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
       <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="IsOnline" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="ProfileId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="PersonalizationRaw" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="User_Alert" Member="Alerts" ThisKey="UserId" OtherKey="UserId" Type="Alert" />
