@@ -95,9 +95,13 @@ public partial class Users_Login : InfoControl.Web.UI.DataUserControl
 
     protected void Login_Error(object sender, EventArgs e)
     {
-        using (MembershipManager manager = new MembershipManager(null))
+        using (var manager = new CompanyManager(null))
         {
-            InfoControl.Web.Security.DataEntities.User user = manager.GetUserByName(Login.UserName);
+            //
+            // Verifies if the user has relationship with companyUsers table
+            //
+            var user = new CompanyManager(null).GetUserByUserName(Login.UserName);
+
 
             if (user == null)
             {
@@ -105,11 +109,12 @@ public partial class Users_Login : InfoControl.Web.UI.DataUserControl
                 return;
             }
 
-            //
-            // Verifies if the user has relationship with companyUsers table
-            //
-            var dataClassesUser = new CompanyManager(null).GetUserByUserName(Login.UserName);
-            
+            if (!user.CompanyUsers.Any())
+            {
+                Login.FailureText = "Usuário sem empresa!";
+                return;
+            }
+
             if (user.IsOnline)
             {
                 Login.FailureText = "Usuário logado <br /> em outro terminal!";
@@ -121,13 +126,6 @@ public partial class Users_Login : InfoControl.Web.UI.DataUserControl
                 Login.FailureText = "Usuário BLOQUEADO <br /> Contate o administrador!";
                 return;
             }
-            
-            if (!dataClassesUser.CompanyUsers.Any())
-            {
-                Login.FailureText = "Usuário sem empresa!";
-                return;
-            }
-                        
 
             Login.FailureText = "Senha incorreta!";
         }
@@ -141,7 +139,7 @@ public partial class Users_Login : InfoControl.Web.UI.DataUserControl
     protected void Login_LoggingIn(object sender, LoginCancelEventArgs e)
     {
         if (LoggingIn != null)
-            LoggingIn(sender, e);        
+            LoggingIn(sender, e);
     }
 
     public event EventHandler LoggedIn;
