@@ -106,11 +106,14 @@ namespace InfoControl.Web.Security
                     }
                     else
                     {
-                        node.ResourceKey = function.FunctionId.ToString();
-                        node.Description = function.Description;
-                        if (node.ParentNode != null && !String.IsNullOrEmpty(node.ParentNode.ResourceKey))
-                            function.ParentId = Convert.ToInt32(node.ParentNode.ResourceKey);
-                        manager.DbContext.SubmitChanges();
+                        if (node.ResourceKey != function.FunctionId.ToString() || node.Description == function.Description)
+                        {
+                            node.ResourceKey = function.FunctionId.ToString();
+                            node.Description = function.Description;
+                            if (node.ParentNode != null && !String.IsNullOrEmpty(node.ParentNode.ResourceKey))
+                                function.ParentId = Convert.ToInt32(node.ParentNode.ResourceKey);
+                            manager.DbContext.SubmitChanges();
+                        }
                     }
                 }
             }
