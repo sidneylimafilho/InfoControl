@@ -1,8 +1,11 @@
-﻿/// <reference path="jquery.debug.js" />
+﻿/// <reference path="jquery-vsdoc.js" />
 /// <summary>
 /// SmartClient 
 /// </summary> 
 (function($) {
+
+
+
 
     /***************************************************************************************************
     Extend jQuery
@@ -286,31 +289,29 @@
                     if (!$(this).hasControl()) {
                         $(this).hasControl(true);
 
-                        var height = $(this).css("height") || "100px";
-                        var weight = $(this).css("weight") || "610px";
-                        $(this).css("height", height).css("weight", weight).htmlbox({
+                        var options = {
                             toolbars: [
-                        	    [
-                                "separator", "cut", "copy", "paste",
-                                "separator", "undo", "redo",
-                                "separator", "bold", "italic", "underline", "strike", "sup", "sub",
-                                "separator", "justify", "left", "center", "right",
-                                "separator", "ol", "ul", "indent", "outdent",
-                                "separator", "link", "unlink", "image",
+                        	            [
+                                        "separator", "cut", "copy", "paste",
+                                        "separator", "undo", "redo",
+                                        "separator", "bold", "italic", "underline", "strike", "sup", "sub",
+                                        "separator", "justify", "left", "center", "right",
+                                        "separator", "ol", "ul", "indent", "outdent",
+                                        "separator", "link", "unlink", "image",
                             //Strip tags
-                        		"separator", "removeformat", "striptags", "hr", "paragraph"
+                        		        "separator", "removeformat", "striptags", "hr", "paragraph"
                             // Styles, Source code syntax buttons
                             //, "separator", "quote", "styles", "syntax"
-                        		],
-                        		[
+                        		        ],
+                        		        [
                             // Formats, Font size, Font family, Font color, Font, Background
-                                "separator", "formats", "fontsize", "fontfamily",
-                        		"separator", "fontcolor", "highlight",
+                                        "separator", "formats", "fontsize", "fontfamily",
+                        		        "separator", "fontcolor", "highlight",
                             // Show code
-                        		"separator", "code"
-                        		]
-                        	],
-                            idir: "/App_themes/glasscyan/controls/Editor/",
+                        		        "separator", "code"
+                        		        ]
+                        	        ],
+                            idir: "../../App_themes/glasscyan/controls/Editor/",
                             icons: "default",  // Icon set
                             about: false,
                             skin: "silver",  // Skin, silver
@@ -323,7 +324,15 @@
                             css: "body{margin:3px;font-family:verdana;font-size:11px; background-image:none;}p{margin:0px;}",
                             success: function(data) { alert(data); }, // AJAX on success
                             error: function(a, b, c) { return this; }   // AJAX on error
-                        });
+                        };
+
+                        options = $.extend(options, eval("(" + $(this).attr("options") + ")"));
+
+                        var height = $(this).css("height") || "100px";
+                        var weight = $(this).css("weight") || "610px";
+                        $(this).css("height", height)
+                               .css("weight", weight)
+                               .htmlbox(options);
                     }
                 });
             }
