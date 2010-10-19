@@ -91,7 +91,7 @@
                         <tr>
                             <td>
                                 Mensagem:<br />
-                                <input type="text" runat="server" id="txtMessage" name="txtMessage" plugin="htmlbox"
+                                <textarea runat="server" id="txtMessage" name="txtMessage" plugin="htmlbox"
                                     style="width: 100%; height: 150px" />
                             </td>
                         </tr>
