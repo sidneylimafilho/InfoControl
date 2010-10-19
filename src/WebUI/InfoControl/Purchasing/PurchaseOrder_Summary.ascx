@@ -4,10 +4,7 @@
 <h1>
     Observações Gerais</h1>
 <br />
-<telerik:RadEditor ID="DescriptionTextBox" runat="server" SkinID="Telerik">
-    <Content>
-    </Content>
-</telerik:RadEditor>
+ <textarea plugin="htmlbox" runat="server"  ID="DescriptionTextBox" />
 <br />
 <br />
 <br />

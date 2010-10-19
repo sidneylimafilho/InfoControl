@@ -115,8 +115,7 @@
                     <tr>
                         <td colspan="4">
                             Descrição:<br />
-                            <telerik:RadEditor ID="DescriptionTextBox" runat="server" SkinID="Telerik">
-                            </telerik:RadEditor>
+                             <textarea plugin="htmlbox" runat="server"  ID="DescriptionTextBox" />
                         </td>
                         <asp:TextBox runat="server" ID="txtKeyWord" Visible="false"> </asp:TextBox>
                     </tr>

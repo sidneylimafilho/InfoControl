@@ -26,22 +26,26 @@
                         <tr>
                             <td>
                                 Superior:<br />
-                                <asp:TextBox ID="txtReportUp" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtReportUp" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                    runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                             <td>
                                 Direita:<br />
-                                <asp:TextBox ID="txtReportRight"  Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtReportRight" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                    runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                             <td>
                                 Inferior:<br />
-                                <asp:TextBox ID="txtReportBottom"  Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtReportBottom" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                    runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                             <td>
                                 Esquerda:<br />
-                                <asp:TextBox ID="txtReportLeft"  Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtReportLeft" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                    runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                         </tr>
@@ -52,20 +56,14 @@
                     Font-Size="Small" ForeColor="#F79928" Font-Names="Trebuchet MS"></asp:Label><br />
                 <asp:Label ID="Label2" runat="server" Text="(Dados que serão impressos no cabeçalho.)"
                     Font-Size="Smaller"></asp:Label>
-                <telerik:RadEditor ID="txtHeader" runat="server" SkinID="Telerik">
-                    <Content>
-                    </Content>
-                </telerik:RadEditor>
+                <textarea plugin="htmlbox" options="{idir:'../App_themes/glasscyan/controls/Editor/'}" runat="server" id="txtHeader" />
                 <br />
                 <asp:Label ID="Label3" runat="server" Text="Rodapé:&amp;nbsp;" Font-Bold="True" Font-Names="Trebuchet MS"
                     Font-Size="Small" ForeColor="Orange"></asp:Label><br />
                 <asp:Label ID="Label4" runat="server" Text="(Dados que serão impressos no rodapé.)"
                     Font-Size="Smaller"></asp:Label>
-                <telerik:RadEditor ID="txtFooter" runat="server" SkinID="Telerik">
-                    <Content>
-                    </Content>
-                </telerik:RadEditor>
-                <div align="right" >
+                <textarea plugin="htmlbox" options="{idir:'../App_themes/glasscyan/controls/Editor/'}" runat="server"  ID="txtFooter" />
+                <div align="right">
                     <asp:Button ID="btnSave" runat="server" Text="Salvar" OnClick="btnSave_Click" />
                     <asp:Button ID="btnCancel" runat="server" Text="Cancelar" />
                 </div>

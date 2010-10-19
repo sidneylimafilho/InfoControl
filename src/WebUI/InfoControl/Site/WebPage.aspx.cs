@@ -56,7 +56,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
         chkCanComment.Checked = OriginalPage.CanComment;
         chkIsInMenu.Checked = OriginalPage.IsInMenu;
         chkIsPublished.Checked = OriginalPage.IsPublished;
-        txtDescription.Content = OriginalPage.Description;
+        txtDescription.Value = OriginalPage.Description;
         txtRedirectUrl.Text = OriginalPage.RedirectUrl;
 
         if (OriginalPage.ParentPageId.HasValue)
@@ -89,7 +89,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
 
         page.Name = txtName.Text;        
         page.CompanyId = Company.CompanyId;
-        page.Description = txtDescription.Content.Replace("$0", "<br/>");
+        page.Description = txtDescription.Value.Replace("$0", "<br/>");
         page.IsInMenu = chkIsInMenu.Checked;
 
         page.IsPublished = chkIsPublished.Checked;

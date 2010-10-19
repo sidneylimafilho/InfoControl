@@ -67,7 +67,7 @@ namespace Vivina.Erp.WebUI.Administration
             txtIdentificationOrPlaca.Text = product.IdentificationOrPlaca;
             txtPatrimonioOrRenavam.Text = product.PatrimonioOrRenavam;
             txtSerialNumberOrChassi.Text = product.SerialNumberOrChassi;
-            DescriptionTextBox.Content = product.Description;
+            DescriptionTextBox.Value = product.Description;
             ucCurrFieldIPI.CurrencyValue = product.IPI;
             ucCurrFieldICMS.CurrencyValue = product.ICMS;
             ucCurrFieldWarrantyDays.CurrencyValue = product.WarrantyDays;
@@ -163,7 +163,7 @@ namespace Vivina.Erp.WebUI.Administration
             product.FiscalClass = txtFiscalClass.Text;
             product.WarrantyDays = ucCurrFieldWarrantyDays.IntValue;
 
-            product.Description = DescriptionTextBox.Content;
+            product.Description = DescriptionTextBox.Value;
             product.IsActive = ChkIsActive.Checked;
             product.DropCompositeInStock = Convert.ToBoolean(chkDropCompositeInStock.Checked);
             product.AddCustomerEquipmentInSale = Convert.ToBoolean(chkAddCustomerEquipment.Checked);

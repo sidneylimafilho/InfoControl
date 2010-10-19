@@ -24,7 +24,7 @@ public partial class Company_POS_PurchaseOrder_Summary : Vivina.Erp.SystemFramew
                 {
                     name = supplier.Profile.Name;
                 }
-                DescriptionTextBox.Html =
+                DescriptionTextBox.Value =
                     @"<p align=center>Sem mais para o momento e no aguardo de um contato, 
                     antecipamos agradecimentos<br><br>Atenciosamente,<br>____________________________________<br>" +
                     Page.Company.LegalEntityProfile.FantasyName +
@@ -34,7 +34,7 @@ public partial class Company_POS_PurchaseOrder_Summary : Vivina.Erp.SystemFramew
 
             }
 
-        Page.ViewState["DescriptionCompany"] = DescriptionTextBox.Content;
+        Page.ViewState["DescriptionCompany"] = DescriptionTextBox.Value;
 
     }
 }

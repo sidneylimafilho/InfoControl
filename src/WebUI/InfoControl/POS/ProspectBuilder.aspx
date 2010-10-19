@@ -109,10 +109,7 @@
                     </table>
                     <asp:Panel ID="pnlEdit" runat="server" Visible="false"><br />
                         <br />
-                        <telerik:RadEditor ID="DescriptionTextBox" runat="server" SkinID="Telerik">
-                            <Content>
-                            </Content>
-                        </telerik:RadEditor>
+                         <textarea plugin="htmlbox" runat="server"  ID="DescriptionTextBox" />
                     </asp:Panel>
                     <asp:GridView ID="grdProducts" runat="server" AutoGenerateColumns="False" DataKeyNames="BudgetItemId,BudgetId,ProductId,ServiceId,UnitCost,UnitPrice,Quantity,SpecialProductName,Observation,ProductDescription,Sector,ModifiedDate,ProductCode,Reference"
                         Width="100%" OnRowDataBound="grdProducts_RowDataBound" Rowselectable="false" OnRowDeleting="grdProducts_RowDeleting">

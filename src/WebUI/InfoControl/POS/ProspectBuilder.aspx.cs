@@ -334,7 +334,7 @@ public partial class Company_POS_ProspectBuilder : Vivina.Erp.SystemFramework.Pa
         {
             if (pnlEdit.Visible && Convert.ToInt32(Page.ViewState["InsertItemID"]) == Convert.ToInt32(Page.ViewState["EditItemID"]))
             {
-                product.Description = DescriptionTextBox.Content;
+                product.Description = DescriptionTextBox.Value;
                 pnlEdit.Visible = false;
             }
 
@@ -343,7 +343,7 @@ public partial class Company_POS_ProspectBuilder : Vivina.Erp.SystemFramework.Pa
             budgetItem.SpecialProductName = product.Name;
 
 
-            budgetItem.ProductDescription = pnlEdit.Visible ? DescriptionTextBox.Content : product.Description;
+            budgetItem.ProductDescription = pnlEdit.Visible ? DescriptionTextBox.Value : product.Description;
             pnlEdit.Visible = false;
         }
 
@@ -352,7 +352,7 @@ public partial class Company_POS_ProspectBuilder : Vivina.Erp.SystemFramework.Pa
             Page.ViewState["InsertItemID"] = service.ServiceId;
             budgetItem.ServiceId = service.ServiceId;
             budgetItem.SpecialProductName = service.Name;
-            budgetItem.ProductDescription = pnlEdit.Visible ? DescriptionTextBox.Content : String.Empty;
+            budgetItem.ProductDescription = pnlEdit.Visible ? DescriptionTextBox.Value : String.Empty;
             pnlEdit.Visible = false;
         }
 
@@ -384,7 +384,7 @@ public partial class Company_POS_ProspectBuilder : Vivina.Erp.SystemFramework.Pa
         grdProducts.DataBind();
 
         ClearFields();
-        DescriptionTextBox.Content = String.Empty;
+        DescriptionTextBox.Value = String.Empty;
         SelProductAndService.ClearField();
     }
 
@@ -411,12 +411,12 @@ public partial class Company_POS_ProspectBuilder : Vivina.Erp.SystemFramework.Pa
         if (product != null)
         {
             Page.ViewState["EditItemID"] = product.ProductId;
-            DescriptionTextBox.Content = product.Description;
+            DescriptionTextBox.Value = product.Description;
         }
         else if (service != null)
         {
             Page.ViewState["EditItemID"] = service.ServiceId;
-            DescriptionTextBox.Content = service.Name;
+            DescriptionTextBox.Value = service.Name;
         }
     }
 

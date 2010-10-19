@@ -78,13 +78,12 @@
                     </tr>
                 </table>
                 Descrição:<br />
-                <telerik:RadEditor ID="txtDescription" runat="server" SkinID="Telerik" Height="300px">
-                    <Content></Content>
-                </telerik:RadEditor>
+                <textarea plugin="htmlbox" runat="server" id="txtDescription" />
+                <br />
                 <label>
                     Tags:</label><br />
                 <asp:TextBox ID="txtTags" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
-                <br />                
+                <br />
                 <label>
                     Categorias:</label><br />
                 <asp:TextBox ID="txtCategories" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
@@ -121,9 +120,10 @@
             </td>
         </tr>
     </table>
+
     <script type="text/javascript">
 
-        $().ready(function () {
+        $().ready(function() {
 
             var webPageId = document.URL.substring(66, document.URL.length);
             var treeNode = parent.content.$("a[webpageid=" + webPageId + "]");
@@ -131,6 +131,7 @@
     
     
     </script>
+
     <VFX:BusinessManagerDataSource ID="odsSiteMap" runat="server" onselecting="odsSiteMap_Selecting"
         SelectMethod="GetChildPagesAsTable" TypeName="Vivina.Erp.BusinessRules.WebSites.SiteManager">
         <selectparameters>

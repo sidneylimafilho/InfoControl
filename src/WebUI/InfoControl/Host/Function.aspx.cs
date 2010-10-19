@@ -49,7 +49,7 @@ namespace Vivina.Erp.WebUI.Host
 
                     txtName.Text = originalFunction.Name;
                     txtCode.Text = originalFunction.CodeName;
-                    txtDescription.Content = originalFunction.Description ?? "";
+                    txtDescription.Value = originalFunction.Description ?? "";
 
                 }
 
@@ -73,7 +73,7 @@ namespace Vivina.Erp.WebUI.Host
 
             function.Name = txtName.Text;
             function.CodeName = txtCode.Text;
-            function.Description = txtDescription.Content;
+            function.Description = txtDescription.Value;
 
             SiteMapNode node = SiteMap.RootNode.GetAllNodes().Cast<SiteMapNode>().Where(n => n.ResourceKey == function.FunctionId.ToString()).FirstOrDefault();
             if (node != null)

@@ -46,7 +46,7 @@
                         <td>
                             Mensagem:
                             <br />
-                            <input type="text" plugin="htmlbox" param="message" style="width: 80%; height: 200px"
+                            <textarea plugin="htmlbox" param="message" style="width: 80%; height: 200px"
                                 id="txtMessage" />
                         </td>
                     </tr>

@@ -33,7 +33,7 @@ namespace Vivina.Erp.WebUI
             string file = txtImageUpload.PostedFile.FileName;
             string fileExtension = Path.GetExtension(file);
 
-            companyConfigurationUpdated.WelcomeText = txtWelcomeText.Text;
+            companyConfigurationUpdated.WelcomeText = txtWelcomeText.Value;
             
             if (fileExtension.ToUpper() != ".GIF" && fileExtension.ToUpper() != ".JPG" && fileExtension.ToUpper() != ".PNG")
                 companyConfigurationUpdated.Logo = Company.CompanyConfiguration.Logo;

@@ -31,7 +31,7 @@ public partial class InfoControl_Host_ScheduleTask : Vivina.Erp.SystemFramework.
         if (!String.IsNullOrEmpty(Request["ScheduledTaskId"]))
             scheduledTaskId = Convert.ToInt32(Request["ScheduledTaskId"].DecryptFromHex());
 
-        txtLastRunStatus.Enabled = false;
+        //txtLastRunStatus.Enabled = false;
 
         if (!IsPostBack)
         {
@@ -45,7 +45,7 @@ public partial class InfoControl_Host_ScheduleTask : Vivina.Erp.SystemFramework.
                 ucCurrFieldTxtPeriod.CurrencyValue = scheduledTask.Period;
                 chkEnabled.Checked = scheduledTask.Enabled;
                 txtTypeFullName.Text = scheduledTask.TypeFullName;
-                txtLastRunStatus.Content = scheduledTask.LastRunStatus;
+                txtLastRunStatus.Value = scheduledTask.LastRunStatus;
             }
         }
 

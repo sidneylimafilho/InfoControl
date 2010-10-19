@@ -63,10 +63,7 @@
                                 Último Status:<br />
                                 <%--<asp:Label runat="server" ID="lblLastRunStatus" BorderWidth="1" Height="50" Width="510"></asp:Label>--%>
                                 <div style="overflow: auto">
-                                    <telerik:RadEditor ID="txtLastRunStatus" runat="server" SkinID="Telerik" Height="300"
-                                        Width="100%">
-                                        <Content></Content>
-                                    </telerik:RadEditor>
+                                     <textarea plugin="htmlbox" runat="server"  ID="txtLastRunStatus" />
                                 </div>
                             </td>
                         </tr>

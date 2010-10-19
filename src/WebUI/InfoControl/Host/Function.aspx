@@ -44,9 +44,7 @@
                         <td>
                             <br />
                             Descrição:<br />
-                            <telerik:RadEditor ID="txtDescription" runat="server" SkinID="Telerik">
-                                <Content></Content>
-                            </telerik:RadEditor>
+                             <textarea plugin="htmlbox" runat="server"  ID="txtDescription" />
                         </td>
                     </tr>
                 </table>

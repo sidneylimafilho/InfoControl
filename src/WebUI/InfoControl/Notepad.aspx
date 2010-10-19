@@ -12,10 +12,6 @@
 <%@ Register Src="../App_Shared/Date.ascx" TagName="Date" TagPrefix="uc5" %>
 <%@ Register Src="../App_Shared/LeafBox.ascx" TagName="LeafBox" TagPrefix="uc6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
-    <telerik:RadEditor ID="txtDescription" runat="server" SkinID="Telerik" Width="100%"
-        EnableResize="true" Height="400px">
-        <Content></Content>
-    </telerik:RadEditor>
-    <asp:Button ID="btnSave" runat="server" Text="Salvar Texto" UseSubmitBehavior="false"
-        OnClick="btnSave_Click" />
+     <textarea plugin="htmlbox" options="{idir:'../App_themes/glasscyan/controls/Editor/'}" runat="server"  ID="txtDescription" />
+   
 </asp:Content>

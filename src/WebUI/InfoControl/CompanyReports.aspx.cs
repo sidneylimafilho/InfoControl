@@ -32,8 +32,8 @@ namespace Vivina.Erp.WebUI
             companyManager = new CompanyManager(this);
             companyConfigurationUpdated.CopyPropertiesFrom(Company.CompanyConfiguration);
 
-            companyConfigurationUpdated.ReportFooter = txtFooter.Text;
-            companyConfigurationUpdated.ReportHeader = txtHeader.Text;
+            companyConfigurationUpdated.ReportFooter = txtFooter.Value;
+            companyConfigurationUpdated.ReportHeader = txtHeader.Value;
             companyConfigurationUpdated.ReportMarginTop = txtReportUp.Text;
             companyConfigurationUpdated.ReportMarginRight = txtReportRight.Text;
             companyConfigurationUpdated.ReportMarginLeft = txtReportLeft.Text;
@@ -50,8 +50,8 @@ namespace Vivina.Erp.WebUI
             RefreshCredentials();
             CompanyConfiguration companyConfiguration = new CompanyManager(this).GetCompanyConfiguration(Company.CompanyConfiguration.CompanyConfigurationId);
 
-            txtFooter.Content = companyConfiguration.ReportFooter;
-            txtHeader.Content = companyConfiguration.ReportHeader;
+            txtFooter.Value = companyConfiguration.ReportFooter;
+            txtHeader.Value = companyConfiguration.ReportHeader;
             txtReportBottom.Text = companyConfiguration.ReportMargimBottom;
             txtReportLeft.Text = companyConfiguration.ReportMarginLeft;
             txtReportRight.Text = companyConfiguration.ReportMarginRight;

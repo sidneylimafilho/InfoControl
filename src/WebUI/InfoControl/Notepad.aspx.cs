@@ -18,12 +18,12 @@ public partial class InfoControl_Notepad : Vivina.Erp.SystemFramework.PageBase
     {
         txtDescription.Focus();
         if (!IsPostBack)
-            txtDescription.Content = Convert.ToString(User.Personalization["Notepad"]);
+            txtDescription.Value  = Convert.ToString(User.Personalization["Notepad"]);
     }
 
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        User.Personalization["Notepad"] = txtDescription.Content;
+        User.Personalization["Notepad"] = txtDescription.Value;
     }
 
 }

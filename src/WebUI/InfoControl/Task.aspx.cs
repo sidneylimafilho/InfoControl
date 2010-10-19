@@ -136,7 +136,7 @@ public partial class InfoControl_Task : Vivina.Erp.SystemFramework.PageBase
             task.AlertMinutesBefore = Convert.ToInt32(cboAlertMinutesBefore.SelectedValue);
 
         if (CanChange)
-            task.Description = txtDescription.Content.Replace("$0", "<br/>");
+            task.Description = txtDescription.Value.Replace("$0", "<br/>");
 
         if (!String.IsNullOrEmpty(cboParentTasks.SelectedValue))
             task.ParentTaskId = Convert.ToInt32(cboParentTasks.SelectedValue);
@@ -197,17 +197,17 @@ public partial class InfoControl_Task : Vivina.Erp.SystemFramework.PageBase
         if (OriginalTask.TaskStatusId.HasValue)
             cboTaskStatus.SelectedValue = OriginalTask.TaskStatusId.ToString();
 
-        txtDescription.Content = OriginalTask.Description;
+        txtDescription.Value = OriginalTask.Description;
 
         if (!CanChange)
         {
             txtName.Enabled = false;
 
-            txtDescription.Enabled = false;
-            txtDescription.Content = "<br/><p>" + txtDescription.Content + "</p><br/>";
-            txtDescription.Content += "<p class='comment-footer'><span class='cTxt11b'>" + OriginalTask.User.Profile.Name + "</span></p><br/>";
-            txtDescription.AutoResizeHeight = true;
-            txtDescription.Height = Unit.Percentage(1);
+            //txtDescription.Visible = false;
+            txtDescription.Value = "<br/><p>" + txtDescription.Value + "</p><br/>";
+            txtDescription.Value += "<p class='comment-footer'><span class='cTxt11b'>" + OriginalTask.User.Profile.Name + "</span></p><br/>";
+            //txtDescription.AutoResizeHeight = true;
+            //txtDescription.Height = Unit.Percentage(1);
 
             cboParentTasks.Enabled = false;
             rtnRanking.Enabled = false;
@@ -270,7 +270,7 @@ public partial class InfoControl_Task : Vivina.Erp.SystemFramework.PageBase
     private void ClearFields()
     {
         txtName.Text = String.Empty;
-        txtDescription.Content = String.Empty;
+        txtDescription.Value = String.Empty;
         cboParentTasks.SelectedValue = string.Empty;
         ClearListUser();
         Page.ViewState["TaskId"] = null;
