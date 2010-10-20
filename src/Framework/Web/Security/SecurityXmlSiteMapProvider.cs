@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Specialized;
 using System.Web;
 using InfoControl.Data;
 using InfoControl.Properties;
 using InfoControl.Web.Security.DataEntities;
+using System.Collections.Generic;
 
 namespace InfoControl.Web.Security
 {
@@ -11,6 +13,7 @@ namespace InfoControl.Web.Security
     {
         public DataManager _dataManager = new DataManager(false);
         private bool isRegisterFunctions = false;
+        private List<Function> functions = null;
 
         #region Events
 
@@ -28,6 +31,9 @@ namespace InfoControl.Web.Security
         {
             base.Initialize(name, attributes);
             CreatingSiteMapNodeEventHandler += OnCreatingSiteMapNode;
+
+            using (var manager = new FunctionManager(null))
+                functions = manager.GetAllFunctions().ToList();
 
             RegisterFunctions(RootNode);
         }
@@ -95,19 +101,24 @@ namespace InfoControl.Web.Security
                 }
                 title = title.Trim().Trim('>').Trim();
 
-                using (var manager = new FunctionManager(null))
+
+                function = functions.Where(f => f.Name == title).FirstOrDefault() ?? new Function();
+                function.Name = title;
+                if (function.FunctionId == 0)
                 {
-                    function = manager.GetFunction(title) ?? new Function();
-                    function.Name = title;
-                    if (function.FunctionId == 0)
-                    {
-                        function.CodeName = node[permissionRequiredKey].Trim();
+                    function.CodeName = node[permissionRequiredKey].Trim();
+                    using (var manager = new FunctionManager(null))
                         manager.Insert(function);
-                    }
-                    else
+                }
+                else
+                {
+                    if (node.ResourceKey != function.FunctionId.ToString() || node.Description == function.Description)
                     {
-                        if (node.ResourceKey != function.FunctionId.ToString() || node.Description == function.Description)
+                        using (var manager = new FunctionManager(null))
                         {
+                            // Recupera do banco para criar o link e deixar o objeto ativo
+                            function = manager.GetFunction(title); 
+
                             node.ResourceKey = function.FunctionId.ToString();
                             node.Description = function.Description;
                             if (node.ParentNode != null && !String.IsNullOrEmpty(node.ParentNode.ResourceKey))
@@ -116,6 +127,7 @@ namespace InfoControl.Web.Security
                         }
                     }
                 }
+
             }
 
             var args = new CreatingSiteMapNodeArgs(node, node[permissionRequiredKey], function.FunctionId);
