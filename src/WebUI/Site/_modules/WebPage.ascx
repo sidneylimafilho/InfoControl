@@ -22,7 +22,7 @@
                         <%#Convert.ToDateTime(Eval("PublishedDate")).Year%></span> </span>&nbsp;
                 <a href='<%# ResolveUrl(Util.GenerateWebPageUrl(Container.DataItem)) %>#comments' class="comment" >
                     <uc1:Comments ID="Comments" runat="server" PageName="comments.aspx" SubjectId='<%#Eval("WebPageId") %>'
-                        ShowStatistics="true" visible='<%#Convert.ToBoolean(Eval("CanComment")) %>' />
+                        ShowStatistics="true"  Visible='<%#CanShowComments(Eval("CanComment"), Eval("WebPageId")) %>' />
                 </a>
             </div>
             <div class="body">
@@ -62,7 +62,7 @@
                 </asp:ListView>
             </div>
             <uc1:Comments ID="Comments1" runat="server" PageName="comments.aspx" ShowButtons="true"
-                SubjectId='<%#Eval("WebPageId") %>' Visible='<%#Convert.ToBoolean(Eval("CanComment")) && Eval("WebPageId").EncryptToHex() == Request["p"].Split(","[0])[0] %>' />
+                SubjectId='<%#Eval("WebPageId") %>' Visible='<%#CanShowComments(Eval("CanComment"), Eval("WebPageId")) %>' />
         </div>
     </ItemTemplate>
 </asp:Repeater>

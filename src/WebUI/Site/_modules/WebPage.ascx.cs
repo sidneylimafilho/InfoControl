@@ -143,4 +143,10 @@ public partial class Site_WebPage : Vivina.Erp.SystemFramework.UserControlBase
 
         return childPages.Take(MaxCount).ToList();
     }
+
+
+    public bool CanShowComments(object canShow, object pageId)
+    {
+        return Convert.ToBoolean(canShow) && pageId.ToString() == Request["p"].Split(',').First();
+    }
 }
