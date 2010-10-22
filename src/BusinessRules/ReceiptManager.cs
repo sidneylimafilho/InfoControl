@@ -35,9 +35,9 @@ namespace Vivina.Erp.BusinessRules
         /// <returns></returns>
         private Boolean ExistReceiptNumber(Int32 companyId, Int32 receiptNumber)
         {
-            return
-                DbContext.Receipts.Where(r => r.CompanyId == companyId && r.ReceiptNumber == receiptNumber).
-                    FirstOrDefault() != null;
+            return DbContext.Receipts
+                            .Where(r => r.CompanyId == companyId && r.ReceiptNumber == receiptNumber)
+                            .Any();
         }
 
         /// <summary>
@@ -60,8 +60,8 @@ namespace Vivina.Erp.BusinessRules
             if (original_entity.ReceiptId == 0)
             {
                 //insert the Receipt
-                if (ExistReceiptNumber(entity.CompanyId, Convert.ToInt32(entity.ReceiptNumber)))
-                    throw new InvalidOperationException();
+                //if (ExistReceiptNumber(entity.CompanyId, Convert.ToInt32(entity.ReceiptNumber)))
+                //    throw new InvalidOperationException();
 
                 DbContext.Receipts.InsertOnSubmit(entity);
             }
