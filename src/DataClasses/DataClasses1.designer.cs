@@ -1847,16 +1847,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<FinancierOperation> _FinancierOperations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -2325,7 +2389,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		private bool serializing;
@@ -2485,19 +2565,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<bool> _CanDelete;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<AccountingPlan> _AccountingPlans;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<AccountingPlan> _AccountingPlan1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -2887,13 +3047,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<AdditionalInformationData> _AdditionalInformationDatas;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -3143,13 +3351,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<AdditionalInformation> _AdditionalInformation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -3429,22 +3685,118 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _SubName;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contact> _Contacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Deposit> _Deposits;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<LegalEntityProfile> _LegalEntityProfiles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
 		private bool serializing;
@@ -3810,7 +4162,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _UserId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
@@ -4045,10 +4413,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<StatusHistory> _StatusHistories;
 		
 		private bool serializing;
@@ -4242,16 +4642,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<System.DateTime> _NextVersionDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Event> _Events;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Plan> _Plans;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Role> _Roles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<SystemParameter> _SystemParameters;
 		
 		private bool serializing;
@@ -4620,19 +5084,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ShortName;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Account> _Accounts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Check> _Checks;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
 		private bool serializing;
@@ -4981,7 +5525,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _BarCodeName;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Product> _Products;
 		
 		private bool serializing;
@@ -5155,31 +5715,175 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ExpenditureAuthorization> _ExpenditureAuthorizations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Statement> _Statements;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<AccountingPlan> _AccountingPlan;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
 		private bool serializing;
@@ -5872,7 +6576,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		private bool serializing;
@@ -6024,13 +6744,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<BranchFunction> _BranchFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<LegalEntityProfile> _LegalEntityProfiles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Plan> _Plans;
 		
 		private bool serializing;
@@ -6246,10 +7014,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _FunctionId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Branch> _Branch;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Function> _Function;
 		
     #region Extensibility Method Definitions
@@ -6483,25 +7283,137 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<BudgetItem> _BudgetItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<BudgetStatus> _BudgetStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		private bool serializing;
@@ -7497,13 +8409,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ServiceId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Budget> _Budget;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Service> _Service;
 		
     #region Extensibility Method Definitions
@@ -8000,7 +8960,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
 		private bool serializing;
@@ -8162,16 +9138,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ExternalSourceId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Category> _Categories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Product> _Products;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Category> _Category1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -8550,7 +9590,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _Code;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
 		private bool serializing;
@@ -8737,7 +9793,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _BankId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
     #region Extensibility Method Definitions
@@ -9022,10 +10094,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _PostalCode;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Neighborhood> _Neighborhoods;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<State> _State;
 		
 		private bool serializing;
@@ -9262,7 +10366,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
 		private bool serializing;
@@ -9432,7 +10552,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -9828,235 +10964,1467 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<System.DateTime> _LastSyncDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Account> _Accounts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<AccountingPlan> _AccountingPlans;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<AdditionalInformation> _AdditionalInformations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<AdditionalInformationData> _AdditionalInformationDatas;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Category> _Categories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Comment> _Comments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompanyUser> _CompanyUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contact> _Contacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ContractPendency> _ContractPendencies;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ContractType> _ContractTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CostCenter> _CostCenters;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CostCenter> _CostCenters1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerContact> _CustomerContacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerFollowupAction> _CustomerFollowupActions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerType> _CustomerTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomFunction> _CustomFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Deposit> _Deposits;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<DocumentTemplate> _DocumentTemplates;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<DropPayout> _DropPayouts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeFunction> _EmployeeFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeFunctionHistory> _EmployeeFunctionHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ExpenditureAuthorization> _ExpenditureAuthorizations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<FinancierCondition> _FinancierConditions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<FinancierOperation> _FinancierOperations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryRMA> _InventoryRMAs;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<OrganizationLevel> _OrganizationLevels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<OtherSchool> _OtherSchools;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PackageAdditional> _PackageAdditionals;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Permission> _Permissions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Post> _Posts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Post> _Posts1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Product> _Products;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Quotation> _Quotations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReceiptFieldConfiguration> _ReceiptFieldConfigurations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Representant> _Representants;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Role> _Roles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Service> _Services;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderBook> _ServiceOrderBooks;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderEquipmentDamage> _ServiceOrderEquipmentDamages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderHaltType> _ServiceOrderHaltTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderInstallType> _ServiceOrderInstallTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderProductDamage> _ServiceOrderProductDamages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderProductType> _ServiceOrderProductTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderTest> _ServiceOrderTests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderType> _ServiceOrderTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceType> _ServiceTypes;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Statement> _Statements;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<StatusHistory> _StatusHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<SupplierCategory> _SupplierCategories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Transporter> _Transporters;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<WebPage> _WebPages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Cnae> _Cnae;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CompanyConfiguration> _CompanyConfiguration;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<JudicialNature> _JudicialNature;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Plan> _Plan;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProfitAssessment> _ProfitAssessment;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -13258,7 +15626,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _BudgetTemplate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
 		private bool serializing;
@@ -13874,16 +16258,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private bool _IsMain;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<UsersInRole> _UsersInRoles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -14208,16 +16656,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ProductManufacturerId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductManufacturer> _ProductManufacturer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
     #region Extensibility Method Definitions
@@ -14597,22 +17109,118 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerContact> _CustomerContacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerFollowup> _CustomerFollowups;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<SupplierContact> _SupplierContacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Address> _Address;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -15323,43 +17931,251 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _BillId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ContractAssociated> _ContractAssociateds;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerEquipment> _CustomerEquipments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ContractStatus> _ContractStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ContractType> _ContractType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<FinancierCondition> _FinancierCondition;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<FinancierOperation> _FinancierOperation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Invoice> _Invoice;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
 		private bool serializing;
@@ -16633,7 +19449,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Contract> _Contract;
 		
     #region Extensibility Method Definitions
@@ -16878,7 +19710,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _TermDays;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -17067,7 +19915,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		private bool serializing;
@@ -17221,10 +20085,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -17442,25 +20338,137 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ParentId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CostCenter> _CostCenters;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company1;
 		
 		private bool serializing;
@@ -17875,7 +20883,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.DateTime _ModifiedDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
 		private bool serializing;
@@ -18138,58 +21162,346 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerContact> _CustomerContacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerEquipment> _CustomerEquipments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerType> _CustomerType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -19481,37 +22793,213 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ExpenditureAuthorization> _ExpenditureAuthorizations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerCallStatus> _CustomerCallStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerCallType> _CustomerCallType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerEquipment> _CustomerEquipment;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Event> _Event;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -20535,7 +24023,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		private bool serializing;
@@ -20687,7 +24191,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		private bool serializing;
@@ -20841,16 +24361,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerFollowup> _CustomerFollowups;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Contact> _Contact;
 		
 		private bool serializing;
@@ -21172,16 +24756,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Contract> _Contract;
 		
 		private bool serializing;
@@ -21806,16 +25454,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerContact> _CustomerContact;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Contact> _Contact;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerFollowupAction> _CustomerFollowupAction;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
@@ -22229,10 +25941,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerFollowup> _CustomerFollowups;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -22473,10 +26217,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -22713,10 +26489,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Function> _Function;
 		
     #region Extensibility Method Definitions
@@ -22918,31 +26726,175 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _AddressNumber;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompanyUser> _CompanyUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<DropPayout> _DropPayouts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Address> _Address;
 		
 		private bool serializing;
@@ -23600,10 +27552,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _DocumentTemplateTypeId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<DocumentTemplateType> _DocumentTemplateType;
 		
     #region Extensibility Method Definitions
@@ -23854,7 +27838,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<DocumentTemplate> _DocumentTemplates;
 		
 		private bool serializing;
@@ -24018,13 +28018,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _UserId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
@@ -24385,7 +28433,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
 		private bool serializing;
@@ -24645,97 +28709,593 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerFollowup> _CustomerFollowups;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeCompetency> _EmployeeCompetencies;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeDependent> _EmployeeDependents;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeFunctionHistory> _EmployeeFunctionHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeOtherSchool> _EmployeeOtherSchools;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderBook> _ServiceOrderBooks;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderItem> _ServiceOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<StatusHistory> _StatusHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Alienation> _Alienation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bond> _Bond;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<WorkJourney> _WorkJourney;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<OrganizationLevel> _OrganizationLevel;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Post> _Post;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Shift> _Shift;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier2;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier3;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier4;
 		
 		private bool serializing;
@@ -27191,16 +31751,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<AdditionalInformation> _AdditionalInformation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<AdditionalInformationData> _AdditionalInformationData;
 		
     #region Extensibility Method Definitions
@@ -27516,7 +32140,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _Rating;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
@@ -27742,7 +32382,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
@@ -27985,10 +32641,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeFunctionHistory> _EmployeeFunctionHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -28208,13 +32896,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<EmployeeFunction> _EmployeeFunction;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
@@ -28512,10 +33248,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<OtherSchool> _OtherSchool;
 		
     #region Extensibility Method Definitions
@@ -28806,16 +33574,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _Rating;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Application> _Application;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<EventStatus> _EventStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -29452,7 +34284,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Event> _Events;
 		
 		private bool serializing;
@@ -29614,13 +34462,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ExpenditureAuthorizationId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerCall> _CustomerCall;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -30092,13 +34988,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private decimal _MonthlyTax;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<FinancierOperation> _FinancierOperation;
 		
 		private bool serializing;
@@ -30423,22 +35367,118 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _AccountId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<FinancierCondition> _FinancierConditions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Account> _Account;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PaymentMethod> _PaymentMethod;
 		
 		private bool serializing;
@@ -31057,16 +36097,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Url;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<BranchFunction> _BranchFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomFunction> _CustomFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PackageFunction> _PackageFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Permission> _Permissions;
 		
 		private bool serializing;
@@ -31597,28 +36701,156 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ProductPackageId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventorySerial> _InventorySerials;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CurrencyRate> _CurrencyRate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
 		private bool serializing;
@@ -32500,7 +37732,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.DateTime _ModifiedDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
 		private bool serializing;
@@ -32677,7 +37925,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.DateTime _ModifiedDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
 		private bool serializing;
@@ -32890,25 +38154,137 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _SaleId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<InventoryDropType> _InventoryDropType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<InventoryEntryType> _InventoryEntryType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Sale> _Sale;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
@@ -33742,19 +39118,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _InventoryId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Inventory> _Inventory;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
     #region Extensibility Method Definitions
@@ -34259,13 +39715,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
     #region Extensibility Method Definitions
@@ -34634,7 +40138,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _InventoryId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Inventory> _Inventory;
 		
     #region Extensibility Method Definitions
@@ -34922,28 +40442,156 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Statement> _Statements;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<AccountingPlan> _AccountingPlan;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -35734,7 +41382,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
 		private bool serializing;
@@ -35924,28 +41588,156 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _MunicipalRegister;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProfileAddress> _ProfileAddresses;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Representant> _Representants;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Transporter> _Transporters;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Address> _Address;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Branch> _Branch;
 		
 		private bool serializing;
@@ -36774,7 +42566,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _BranchId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Product> _Products;
 		
 		private bool serializing;
@@ -36949,7 +42757,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
 		private bool serializing;
@@ -37103,7 +42927,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<City> _City;
 		
     #region Extensibility Method Definitions
@@ -37273,16 +43113,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<OrganizationLevel> _OrganizationLevels;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<OrganizationLevel> _OrganizationLevel1;
 		
 		private bool serializing;
@@ -37592,10 +43496,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<EmployeeOtherSchool> _EmployeeOtherSchools;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -37827,13 +43763,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<decimal> _ComissionPerSale;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PackageAdditional> _PackageAdditionals;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PackageFunction> _PackageFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Plan> _Plans;
 		
 		private bool serializing;
@@ -38262,10 +44246,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Package> _Package;
 		
     #region Extensibility Method Definitions
@@ -38516,10 +44532,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _FunctionId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Package> _Package;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Function> _Function;
 		
     #region Extensibility Method Definitions
@@ -38705,7 +44753,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<WebPage> _WebPage;
 		
     #region Extensibility Method Definitions
@@ -38904,7 +44968,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<WebPage> _WebPage;
 		
     #region Extensibility Method Definitions
@@ -39127,22 +45207,118 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<System.DateTime> _OperationDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Invoice> _Invoice;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Account> _Account;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<FinancierOperation> _FinancierOperation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PaymentMethod> _PaymentMethod;
 		
     #region Extensibility Method Definitions
@@ -39816,10 +45992,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.DateTime _ModifiedDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<FinancierOperation> _FinancierOperations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
 		private bool serializing;
@@ -40076,16 +46284,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Function> _Function;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PermissionType> _PermissionType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Role> _Role;
 		
     #region Extensibility Method Definitions
@@ -40395,7 +46667,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Description;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Permission> _Permissions;
 		
 		private bool serializing;
@@ -40582,16 +46870,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ApplicationId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Branch> _Branch;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Package> _Package;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Application> _Application;
 		
 		private bool serializing;
@@ -41000,13 +47352,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company1;
 		
 		private bool serializing;
@@ -41319,70 +47719,422 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<BudgetItem> _BudgetItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryRMA> _InventoryRMAs;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProductCertificate> _ProductCertificates;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProductImage> _ProductImages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProductManufacturer> _ProductManufacturers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProductPackage> _ProductPackages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProductPart> _ProductParts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReceiptItem> _ReceiptItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<SaleItem> _SaleItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderItem> _ServiceOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Category> _Category;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<BarCodeType> _BarCodeType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Manufacturer> _Manufacturer;
 		
 		private bool serializing;
@@ -42972,7 +49724,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
     #region Extensibility Method Definitions
@@ -43142,7 +49910,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Description;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
     #region Extensibility Method Definitions
@@ -43333,16 +50117,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ProductId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		private bool serializing;
@@ -43624,19 +50472,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private bool _RequiresQuotationInPurchasing;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		private bool serializing;
@@ -43977,13 +50905,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ProductId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProductPart> _ProductParts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductPart> _ProductPart1;
 		
 		private bool serializing;
@@ -44403,34 +51379,194 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<decimal> _CreditLimit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ProfileAddress> _ProfileAddresses;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Representant> _Representants;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<User> _Users;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<EducationLevel> _EducationLevel;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<MaritalStatus> _MaritalStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Address> _Address;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Sex> _Sex;
 		
 		private bool serializing;
@@ -46033,10 +53169,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _AddressNumber;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
     #region Extensibility Method Definitions
@@ -46310,7 +53478,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
 		private bool serializing;
@@ -46502,37 +53686,213 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ReceiptEmployeeId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Quotation> _Quotations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PurchaseOrderStatus> _PurchaseOrderStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User2;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User3;
 		
 		private bool serializing;
@@ -47549,22 +54909,118 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _ProductManufacturerId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<QuotationItem> _QuotationItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PurchaseOrder> _PurchaseOrder;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductManufacturer> _ProductManufacturer;
 		
 		private bool serializing;
@@ -48117,7 +55573,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
 		private bool serializing;
@@ -48289,25 +55761,137 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _Amount;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Address> _Address;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -48943,19 +56527,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PurchaseRequest> _PurchaseRequest;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ProductManufacturer> _ProductManufacturer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PurchaseOrderItem> _PurchaseOrderItem;
 		
     #region Extensibility Method Definitions
@@ -49435,16 +57099,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<decimal> _TotalPrice;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<QuotationItem> _QuotationItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PurchaseOrder> _PurchaseOrder;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
 		private bool serializing;
@@ -49817,10 +57545,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _SupplierId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Quotation> _Quotation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<PurchaseOrderItem> _PurchaseOrderItem;
 		
     #region Extensibility Method Definitions
@@ -50175,28 +57935,156 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _DeliveryAddressComplement;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReceiptItem> _ReceiptItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CFOP> _CFOP;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Transporter> _Transporter;
 		
 		private bool serializing;
@@ -51052,7 +58940,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _MarginLeft;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -51282,13 +59186,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<decimal> _ICMS;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Receipt> _Receipt;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Service> _Service;
 		
     #region Extensibility Method Definitions
@@ -51726,10 +59678,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ReportId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportColumnsSchema> _ReportColumnsSchema;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Report> _Report;
 		
     #region Extensibility Method Definitions
@@ -51977,19 +59961,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _PrimaryLabelColumn;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportColumn> _ReportColumns;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportFilter> _ReportFilters;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportSort> _ReportSorts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportDataType> _ReportDataType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportTablesSchema> _ReportTablesSchema;
 		
 		private bool serializing;
@@ -52448,7 +60512,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _SqlText;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportDataType> _ReportDataType;
 		
     #region Extensibility Method Definitions
@@ -52637,13 +60717,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportColumnsSchema> _ReportColumnsSchemas;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportDataFunction> _ReportDataFunctions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportFilterType> _ReportFilterTypes;
 		
 		private bool serializing;
@@ -52863,10 +60991,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ReportId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportColumnsSchema> _ReportColumnsSchema;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Report> _Report;
 		
     #region Extensibility Method Definitions
@@ -53104,7 +61264,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _SqlText;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportDataType> _ReportDataType;
 		
     #region Extensibility Method Definitions
@@ -53303,16 +61479,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Tag;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportColumn> _ReportColumns;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportFilter> _ReportFilters;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportSort> _ReportSorts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportTablesSchema> _ReportTablesSchema;
 		
 		private bool serializing;
@@ -53686,10 +61926,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ReportColumnsSchemaId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Report> _Report;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ReportColumnsSchema> _ReportColumnsSchema;
 		
     #region Extensibility Method Definitions
@@ -53925,10 +62197,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _SqlText;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReportColumnsSchema> _ReportColumnsSchemas;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Report> _Reports;
 		
 		private bool serializing;
@@ -54149,28 +62453,156 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _Rating;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<RepresentantUser> _RepresentantUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderBook> _ServiceOrderBooks;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -54730,10 +63162,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _UserId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
@@ -54954,16 +63418,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Description;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Permission> _Permissions;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<UsersInRole> _UsersInRoles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Application> _Application;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -55380,34 +63908,194 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _FreightType;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<SaleItem> _SaleItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Budget> _Budget;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Invoice> _Invoice;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Receipt> _Receipt;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<SaleStatus> _SaleStatus;
 		
 		private bool serializing;
@@ -56389,10 +65077,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Sale> _Sale;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
     #region Extensibility Method Definitions
@@ -56787,7 +65507,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
 		private bool serializing;
@@ -57198,16 +65934,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<decimal> _ISS;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<BudgetItem> _BudgetItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ReceiptItem> _ReceiptItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderItem> _ServiceOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -57606,34 +66406,194 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _DepositId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrderItem> _ServiceOrderItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerCall> _CustomerCall;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CustomerEquipment> _CustomerEquipment;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Contract> _Contract;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Receipt> _Receipt;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Budget> _Budget;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ServiceOrderStatus> _ServiceOrderStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ServiceOrderType> _ServiceOrderType;
 		
 		private bool serializing;
@@ -58754,13 +67714,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ServiceOrderBookId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
     #region Extensibility Method Definitions
@@ -59125,7 +68133,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -59293,7 +68317,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -59461,7 +68501,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -59643,16 +68699,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _Quantity;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<ServiceOrder> _ServiceOrder;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Service> _Service;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Product> _Product;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
@@ -60106,7 +69226,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -60274,7 +69410,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -60440,7 +69592,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		private bool serializing;
@@ -60594,7 +69762,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -60762,10 +69946,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -60981,7 +70197,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<int> _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
     #region Extensibility Method Definitions
@@ -61147,7 +70379,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
 		private bool serializing;
@@ -61299,7 +70547,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		private bool serializing;
@@ -61453,10 +70717,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.DateTime _ModifiedDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<City> _Cities;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Transporter> _Transporters;
 		
 		private bool serializing;
@@ -61679,16 +70975,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<StatementItem> _StatementItems;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Invoice> _Invoice;
 		
 		private bool serializing;
@@ -62155,7 +71515,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Statement> _Statement;
 		
     #region Extensibility Method Definitions
@@ -62421,13 +71797,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Alienation> _Alienation;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
     #region Extensibility Method Definitions
@@ -62768,58 +72192,346 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _ModifiedByUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees2;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees3;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Employee> _Employees4;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryRMA> _InventoryRMAs;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Quotation> _Quotations;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<SupplierContact> _SupplierContacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Address> _Address;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<SupplierCategory> _SupplierCategory;
 		
 		private bool serializing;
@@ -63858,10 +73570,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		private bool serializing;
@@ -64077,10 +73821,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _SupplierId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Contact> _Contact;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
     #region Extensibility Method Definitions
@@ -64293,7 +74069,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _ApplicationId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Application> _Application;
 		
     #region Extensibility Method Definitions
@@ -64554,19 +74346,99 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<decimal> _Cost;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Task> _Tasks;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<TaskUser> _TaskUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Task> _Task1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<TaskStatus> _TaskStatus;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
@@ -65166,7 +75038,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _Name;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Task> _Tasks;
 		
 		private bool serializing;
@@ -65318,10 +75206,42 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _UserId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Task> _Task;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
@@ -65511,16 +75431,80 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _CompanyId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<State> _State;
 		
 		private bool serializing;
@@ -65885,7 +75869,23 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<System.DateTime> _LogoffDate;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
     #region Extensibility Method Definitions
@@ -66106,64 +76106,384 @@ namespace Vivina.Erp.DataClasses
 		
 		private string _PersonalizationRaw;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Alert> _Alerts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CompanyUser> _CompanyUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Contact> _Contacts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<DropPayout> _DropPayouts;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Event> _Events;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders2;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders3;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<RepresentantUser> _RepresentantUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<Task> _Tasks;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<TaskUser> _TaskUsers;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<UserActivityLog> _UserActivityLogs;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<UsersInRole> _UsersInRoles;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<WebPage> _WebPages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
 		private bool serializing;
@@ -67300,13 +77620,61 @@ namespace Vivina.Erp.DataClasses
 		
 		private int _UserId;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<CompanyUser> _CompanyUser;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Role> _Role;
 		
     #region Extensibility Method Definitions
@@ -67706,22 +78074,118 @@ namespace Vivina.Erp.DataClasses
 		
 		private System.Nullable<bool> _IsMainPage;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PageCategory> _PageCategories;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<PageTag> _PageTags;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntitySet<WebPage> _WebPages;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<WebPage> _WebPage1;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<Company> _Company;
 		
-		[NonSerialized] 
+		 
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ [NonSerialized] 
  private EntityRef<User> _User;
 		
 		private bool serializing;
