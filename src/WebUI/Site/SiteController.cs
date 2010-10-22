@@ -14,7 +14,7 @@ namespace Vivina.Erp.WebUI
     {
         #region WebPages
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public ActionResult GetComments()
         {
             return ClientResponse(() =>
@@ -27,7 +27,7 @@ namespace Vivina.Erp.WebUI
         #endregion
 
         #region E-Shop
-        [JsonFilter]
+        [JavaScriptSerializer]
         public ActionResult GetServiceOrdersByCustomer(Hashtable Params, Hashtable FormData)
         {
             return ClientResponse(

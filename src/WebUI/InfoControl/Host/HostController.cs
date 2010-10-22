@@ -13,7 +13,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Host
     public class HostController : DataControllerBase
     {
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public ActionResult SendEmail(Hashtable Params, Hashtable FormData)
         {
 

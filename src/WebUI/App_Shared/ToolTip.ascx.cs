@@ -137,7 +137,7 @@ public partial class Commons_ToolTip : InfoControl.Web.UI.DataUserControl
 
 public class ToolTipController : DataControllerBase
 {
-    [JsonFilter]    
+    [JavaScriptSerializer]    
     public void SetToolTipClosed(string page, string toolTipId)
     {
         if (User.Personalization[page] == null)

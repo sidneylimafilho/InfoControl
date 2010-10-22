@@ -159,7 +159,8 @@ namespace InfoControl.Web.Services
         }
 
         #endregion
-        [JsonFilter]
+
+        [JavaScriptSerializer ]
         public ActionResult GetSession(string key)
         {
             return ClientResponse(() => Session[key], JsonRequestBehavior.AllowGet);

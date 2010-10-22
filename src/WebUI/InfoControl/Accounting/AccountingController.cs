@@ -20,7 +20,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
 {
     public class AccountingController : DataControllerBase
     {
-        [JsonFilter]
+        [JavaScriptSerializer]
         public ActionResult GetCashFlowByYear(Hashtable Params, Hashtable FormData)
         {
 

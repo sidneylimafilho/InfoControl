@@ -21,7 +21,7 @@ namespace Vivina.Erp.WebUI
     [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class SearchServiceController : DataControllerBase
     {
-        [JsonFilter]
+        [JavaScriptSerializer]
         [ServiceKnownType(typeof (Customer))]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         public object HelloWorld(Customer formData, params object[] parameters)
@@ -33,7 +33,7 @@ namespace Vivina.Erp.WebUI
             return request;
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         [OperationContract]
         public ClientResponse GetOneSampleData(Hashtable parameters, Hashtable formData)
         {
@@ -52,7 +52,7 @@ namespace Vivina.Erp.WebUI
                        };
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         [OperationContract]
         [WebInvoke(RequestFormat = WebMessageFormat.Json)]
         public ClientResponse GetSampleData(Hashtable parameters, Hashtable formData)
@@ -74,74 +74,74 @@ namespace Vivina.Erp.WebUI
 
         #region auto-complete services
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult FindCustomers(Hashtable parameters, Hashtable formData)
         {
             return SearchCustomers(Convert.ToString(formData["txtSearch"]), Convert.ToInt32(parameters["limit"]));
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchCustomers(string q, int limit)
         {
             return ClientResponse(() => new CustomerManager(this).SearchCustomers(Company.CompanyId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchSuppliers(string q, int limit)
         {
             return ClientResponse(() => new SupplierManager(this).SearchSupplier(Company.CompanyId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchProduct(string q, int limit)
         {
             using (var manager = new ProductManager(null))
                 return ClientResponse(() => manager.SearchProduct((int) Company.MatrixId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchContact(string q, int limit)
         {
             using (var manager = new ContactManager(null))
                 return ClientResponse(() => manager.SearchContacts(Company.CompanyId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchProductAndService(String q, Int32 limit)
         {
             using (var receiptManager = new ReceiptManager(null))
                 return ClientResponse(() => receiptManager.SearchProductAndService((Int32) Company.MatrixId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchManufacturer(string q, int limit)
         {
             using (var manager = new ManufacturerManager(null))
                 return ClientResponse(() => manager.SearchManufacturer((int) Company.MatrixId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchTransporter(string q, int limit)
         {
             using (var transporterManager = new TransporterManager(null))
                 return ClientResponse(() => transporterManager.SearchTransporter((int) Company.MatrixId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchProductInInventory(string q, int limit)
         {
             using (var manager = new ProductManager(null))
                 return ClientResponse(() => manager.SearchProductInInventory(User.Identity.UserId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchUser(string q, int limit)
         {
             using (var companyManager = new CompanyManager(null))
                 return ClientResponse(() => companyManager.SearchUser(Company.CompanyId, q, limit).ToArray());
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         [ScriptMethod]
         public JsonResult SearchReport(string prefixText, int count)
         {
@@ -149,7 +149,7 @@ namespace Vivina.Erp.WebUI
                 return ClientResponse(() => reportsManager.SearchReportAsArray(prefixText, count));
         }
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchEmployees(string q, int limit)
         {
             if (String.IsNullOrEmpty(q)) return null;
@@ -181,7 +181,7 @@ namespace Vivina.Erp.WebUI
         //}
 
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchContacts(string text)
         {
             if (String.IsNullOrEmpty(text))
@@ -197,7 +197,7 @@ namespace Vivina.Erp.WebUI
         }
 
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchProducts(string text)
         {
             if (String.IsNullOrEmpty(text))
@@ -214,7 +214,7 @@ namespace Vivina.Erp.WebUI
         }
 
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchBills(string text)
         {
             if (String.IsNullOrEmpty(text))
@@ -230,7 +230,7 @@ namespace Vivina.Erp.WebUI
         }
 
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchInvoices(string text)
         {
             if (String.IsNullOrEmpty(text))
@@ -246,7 +246,7 @@ namespace Vivina.Erp.WebUI
         }
 
 
-        [JsonFilter]
+        [JavaScriptSerializer]
         public JsonResult SearchHelpPages(string text)
         {
             if (String.IsNullOrEmpty(text))
