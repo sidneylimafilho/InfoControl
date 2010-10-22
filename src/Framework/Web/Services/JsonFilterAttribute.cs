@@ -15,6 +15,9 @@ using System.Xml;
 using System.Xml.Serialization;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.ServiceModel.Web;
+using System.Net;
 
 namespace InfoControl.Web.Services
 {
@@ -87,6 +90,8 @@ namespace InfoControl.Web.Services
         public void ApplyDispatchBehavior(OperationDescription operationDescription,
                                             System.ServiceModel.Dispatcher.DispatchOperation dispatchOperation)
         {
+            var SerializerBehavior = operationDescription.Behaviors.Find<DataContractSerializerOperationBehavior>();
+
             dispatchOperation.Formatter = new JsonFormatter(dispatchOperation.Formatter, operationDescription);
         }
 
@@ -169,9 +174,47 @@ namespace InfoControl.Web.Services
                 return null;
             }
 
+           
+
+            /// <summary>
+            /// 
+            /// </summary>
+            /// <param name="messageVersion"></param>
+            /// <param name="parameters"></param>
+            /// <param name="result"></param>
+            /// <returns></returns>
             public Message SerializeReply(MessageVersion messageVersion, object[] parameters, object result)
             {
-                return original.SerializeReply(messageVersion, parameters, result);
+                //
+                // Pega os tipos de retorno aceitos pelo navegador
+                //
+                Message request = OperationContext.Current.RequestContext.RequestMessage;
+                var prop = (HttpRequestMessageProperty)request.Properties[HttpRequestMessageProperty.Name];
+                string accepts = prop.Headers[HttpRequestHeader.Accept];
+
+                if (accepts.Contains("text/xml") || accepts.Contains("application/xml"))
+                {
+                    return null;
+                }
+
+
+                //
+                // Referencias 
+                // http://www.israelaece.com/post/Por-dentro-da-classe-Message.aspx
+                // http://www.codeproject.com/Articles/34632/How-to-pass-arbitrary-data-in-a-Message-object-usi.aspx
+                // 
+
+                var message = Message.CreateMessage(MessageVersion.None,
+                                                    null,
+                                                    new TextBodyWriter(result.SerializeToJson()));
+
+                //
+                // Raw significa que haverá serialização
+                //
+                message.Properties[WebBodyFormatMessageProperty.Name] = new WebBodyFormatMessageProperty(WebContentFormat.Raw);
+                WebOperationContext.Current.OutgoingResponse.ContentType = "application/json";
+
+                return message;
             }
 
 
@@ -185,5 +228,27 @@ namespace InfoControl.Web.Services
 
 
     }
-    
+
+    /// <summary>
+    /// Necessary to write out the contents as text (used with the Raw return type)
+    /// </summary>
+    public class TextBodyWriter : BodyWriter
+    {
+        byte[] messageBytes;
+
+        public TextBodyWriter(string message)
+            : base(true)
+        {
+            this.messageBytes = Encoding.UTF8.GetBytes(message);
+        }
+
+        protected override void OnWriteBodyContents(XmlDictionaryWriter writer)
+        {
+            writer.WriteStartElement("Binary");
+            writer.WriteBase64(this.messageBytes, 0, this.messageBytes.Length);
+            writer.WriteEndElement();
+        }
+    }
+
+
 }
