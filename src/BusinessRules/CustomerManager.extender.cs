@@ -1291,10 +1291,10 @@ namespace Vivina.Erp.BusinessRules
                         message = "Obrigado por ter reclamado dos nossos serviços, somente assim podemos aprender, corrigir e saber o que fazer para não errar mais.<br /><br />Muito Obrigado!";
                         break;
                     case CustomerCallType.ERROR:
-                        message = String.Format("<center>Sabe um erro que deu em {0} no dia {1} foi corrigido! Essas joaninhas aprenderam a lição!" + 
+                        message = String.Format("<center>O erro que deu em {0} no dia {1} foi corrigido! Conosco essas joaninhas não tem vez!" + 
                                                 "<br /><br />"+
                                                 "<a href='javascript:;' onclick=\"top.tb_show('Chamado', 'CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId={2}');\">" + 
-                                                "   Clique aqui para ver o chamado!"+
+                                                "   Clique aqui para ver o chamado gerado!"+
                                                 "</a>"+
                                                 "</center>",
                                                 entity.Sector,
