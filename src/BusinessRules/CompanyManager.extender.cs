@@ -565,18 +565,18 @@ namespace Vivina.Erp.BusinessRules
             if (_hostCompany != null)
                 return _hostCompany;
 
-            Company hostCompany = (from company in DbContext.Companies
+            _hostCompany = (from company in DbContext.Companies
                                    where company.CompanyId == 1
                                    select company).FirstOrDefault();
 
-            hostCompany.LegalEntityProfile.GetHashCode();
-            hostCompany.LegalEntityProfile.Address.GetHashCode();
-            hostCompany.LegalEntityProfile.Address.City.GetHashCode();
-            hostCompany.LegalEntityProfile.Address.Neighborhood.GetHashCode();
-            hostCompany.Plan.GetHashCode();
-            hostCompany.User.GetHashCode();
+            _hostCompany.LegalEntityProfile.GetHashCode();
+            _hostCompany.LegalEntityProfile.Address.GetHashCode();
+            _hostCompany.LegalEntityProfile.Address.City.GetHashCode();
+            _hostCompany.LegalEntityProfile.Address.Neighborhood.GetHashCode();
+            _hostCompany.Plan.GetHashCode();
+            _hostCompany.User.GetHashCode();
 
-            return _hostCompany = hostCompany;
+            return _hostCompany;
         }
 
         /// <summary>
