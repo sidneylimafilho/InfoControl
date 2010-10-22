@@ -51,15 +51,16 @@
                     <br />
                 </div>
                 <%--Conteúdo--%>
-                <fieldset id="pnlCustomers" controller="../Controller/SearchService/" action="FindCustomers"
-                    template="#lvCustomer" target="#lvCustomer" onsucess="$('#pnlCustomers').show(); $('#pnlCustomers legend > span').text(result.Data.length);"
+                <fieldset id="pnlCustomers" source="SearchService.svc" action="FindCustomers"
+                    template="#pnlCustomers .template" target="#pnlCustomers .target" onsucess="$('#pnlCustomers').show(); $('#pnlCustomers legend > span').text(result.Data.length);"
                     style="display: none">
                     <legend>Clientes (<span>0</span>)</legend>
-                    <div id="lvCustomer">
-                        <div class="namedListItem">
+                    <div class="template">
+                        <!--<div class="namedListItem">
                             <a href="Administration/Customer.aspx?CustomerId=<$=Id$>"><$=Name$></a>
-                        </div>
+                        </div>-->
                     </div>
+                    <div class="target"></div>
                 </fieldset>
                 <%-- 
                 <fieldset id="pnlSuppliers" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
