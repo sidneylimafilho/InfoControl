@@ -72,6 +72,41 @@
                 <table width="100%">
                     <tr>
                         <td>
+                            <%-- 
+                        - Este template separado pois será usado recursivamente sendo colocado uma UL dentro de outra UL criando assim 
+                          uma arvore de tarefas.
+                        - Este template está com display none para não ser apresentado na tela
+                        --%>
+                            <ul class="template" style="display: none">
+                                <!-- -->
+                                <li>
+                                    <table cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" id="chkCompleteTask" onclick="CompleteTask(this)" />
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <font runat="server" id="date"></font>
+                                            </td>
+                                            <td style="white-space: nowrap">
+                                                <a class="inline" id="lnkTask"><font><$= Name.Trim('-')$> </font>
+                                                </a>&nbsp;
+                                            </td>
+                                            <td style="width: 100px;">
+                                                <div id="rating" runat="server" title="Classificação" class="inline">
+                                                </div>
+                                                &nbsp;
+                                                <div href='javascript:;' id="shared" class='shared' title="Tarefa Compartilhada Aguardando">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+                            </ul>
+                            <ul source="taskService.svc" method="GetTasksByUser" command="click">
+                                <li></li>
+                            </ul>
                             <telerik:RadTreeView runat="server" ID="rtvTasks" DataFieldID="TaskId" DataFieldParentID="ParentTaskId"
                                 DataSourceID="odsTaskByUser" DataTextField="Name" DataValueField="TaskId" OnNodeDataBound="rtvTasks_NodeDataBound"
                                 CheckBoxes="False" AllowNodeEditing="false" MultipleSelect="false" OnDataBinding="rtvTasks_DataBinding"
@@ -89,8 +124,7 @@
                                             <td style="white-space: nowrap">
                                                 <a class="inline" runat="server" id="lnkTask"><font runat="server" id="name">
                                                     <%#Eval("Name").ToString().Trim('-')%>
-                                                </font></a>
-                                                &nbsp;
+                                                </font></a>&nbsp;
                                             </td>
                                             <td style="width: 100px;">
                                                 <div id="rating" runat="server" title="Classificação" class="inline">

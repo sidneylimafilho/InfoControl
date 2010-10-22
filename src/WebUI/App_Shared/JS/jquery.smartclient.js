@@ -328,8 +328,8 @@
 
                         options = $.extend(options, eval("(" + $(this).attr("options") + ")"));
 
-                        var height = $(this).css("height") || "100px";
-                        var weight = $(this).css("weight") || "610px";
+                        var height = $(this).css("height") || "400px";
+                        var weight = $(this).css("weight") || "100%";
                         $(this).css("height", height)
                                .css("weight", weight)
                                .htmlbox(options);

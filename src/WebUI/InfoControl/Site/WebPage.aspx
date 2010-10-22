@@ -78,7 +78,7 @@
                     </tr>
                 </table>
                 Descrição:<br />
-                <textarea plugin="htmlbox" runat="server" id="txtDescription" />
+                <textarea plugin="htmlbox" style="height:400px; width:100%;" runat="server" id="txtDescription" />
                 <br />
                 <label>
                     Tags:</label><br />
