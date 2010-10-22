@@ -447,6 +447,9 @@
     <Compile Include="InfoControl\InfoControlDataService.svc.cs">
       <DependentUpon>InfoControlDataService.svc</DependentUpon>
     </Compile>
+    <Compile Include="InfoControl\TaskService.svc.cs">
+      <DependentUpon>TaskService.svc</DependentUpon>
+    </Compile>
     <Compile Include="InfoControl\_SystemFramework\Auditing\CustomerCallNotifier.cs" />
     <Compile Include="InfoControl\_SystemFramework\MasterPageBase.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -2755,6 +2758,34 @@
     <Content Include="App_Shared\JS\lightbox\themes\default\images\jquery-lightbox-theme.png" />
     <Content Include="App_Shared\JS\lightbox\themes\default\images\loading.gif" />
     <Content Include="App_Shared\JS\lightbox\themes\default\jquery.lightbox.css" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\bold.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\center.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\code.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\copy.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\cut.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\hr.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\image.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\indent.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\italic.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\justify.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\left.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\link.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\ol.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\outdent.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\paragraph.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\paste.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\redo.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\removeformat.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\right.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\separator.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\strike.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\striptags.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\sub.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\sup.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\ul.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\underline.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\undo.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\Editor\unlink.gif" />
     <Content Include="InfoControl\Accounting\AccountSearch.ascx" />
     <Content Include="App_Shared\CurrencyField.ascx" />
     <Content Include="App_Shared\Date.ascx" />
@@ -3629,6 +3660,7 @@
     <Content Include="InfoControl\Site\WebPages.aspx.js" />
     <Content Include="InfoControl\Task.aspx.js" />
     <Content Include="InfoControl\Tasks.aspx.js" />
+    <Content Include="InfoControl\TaskService.svc" />
     <Content Include="InfoControl\tour.aspx" />
     <Content Include="InfoControl\_companies\hardmed.com.br\Administration\Customer_Equipment.aspx" />
     <Content Include="InfoControl\_companies\hardmed.com.br\Administration\Product_General.aspx" />
