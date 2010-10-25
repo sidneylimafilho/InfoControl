@@ -186,6 +186,7 @@
     <Compile Include="Generics\Activator.cs" />
     <Compile Include="IO\Compact.cs" />
     <Compile Include="IO\StringExtensions.cs" />
+    <Compile Include="JsonObject.cs" />
     <Compile Include="Recognizable.cs" />
     <Compile Include="Management\DomainNameServer.cs" />
     <Compile Include="Multimedia\Sound.cs" />
@@ -429,7 +430,7 @@
     <Compile Include="Web\Security\VivinaMembershipUser.cs" />
     <Compile Include="Web\Security\VivinaRoleProvider.cs" />
     <Compile Include="Web\Security\VivinaRoleProviderModule.cs" />
-    <Compile Include="Web\Services\DataController.cs" />
+    <Compile Include="Web\Services\DataService.cs" />
     <Compile Include="Web\Services\JsonFilterAttribute.cs" />
     <Compile Include="Web\StringResources.cs" />
     <Compile Include="Web\UI\Adapters\ButtonAdapter.cs" />

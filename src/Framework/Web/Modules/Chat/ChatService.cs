@@ -8,7 +8,7 @@ namespace InfoControl.Web.Modules.Chat
     // NOTE: If you change the class name "TooltipService" here, you must also update the reference to "TooltipService" in Web.config.
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     [ServiceContract(Namespace = "$")]
-    public class ChatService : InfoControl.Web.Services.DataController
+    public class ChatService : InfoControl.Web.Services.DataService
     {
         [OperationContract]        
         public List<ChatMessage> CheckMessages()
