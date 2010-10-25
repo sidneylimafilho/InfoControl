@@ -11,7 +11,7 @@ namespace InfoControl.Web.UI
 {
     [ServiceContract(Namespace = "")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
-    public class Alerts : DataControllerBase
+    public class Alerts : DataServiceBase
     {
         // Add [WebGet] attribute to use HTTP GET
         [OperationContract]

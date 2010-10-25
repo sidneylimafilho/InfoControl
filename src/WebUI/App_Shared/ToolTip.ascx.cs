@@ -135,7 +135,7 @@ public partial class Commons_ToolTip : InfoControl.Web.UI.DataUserControl
     }
 }
 
-public class ToolTipController : DataControllerBase
+public class ToolTipController : DataServiceBase
 {
     [JavaScriptSerializer]    
     public void SetToolTipClosed(string page, string toolTipId)

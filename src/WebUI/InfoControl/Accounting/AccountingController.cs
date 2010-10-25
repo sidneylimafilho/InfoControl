@@ -18,7 +18,7 @@ using Vivina.Erp.BusinessRules.Services;
 
 namespace Vivina.Erp.WebUI.InfoControl.Accounting
 {
-    public class AccountingController : DataControllerBase
+    public class AccountingController : DataServiceBase
     {
         [JavaScriptSerializer]
         public ActionResult GetCashFlowByYear(Hashtable Params, Hashtable FormData)

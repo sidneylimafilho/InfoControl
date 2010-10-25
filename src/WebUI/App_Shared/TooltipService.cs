@@ -12,7 +12,7 @@ using Vivina.Erp.SystemFramework;
 // NOTE: If you change the class name "TooltipService" here, you must also update the reference to "TooltipService" in Web.config.
 [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 [ServiceContract(Namespace = "Http://InfoControl")]
-public class TooltipService : DataControllerBase
+public class TooltipService : DataServiceBase
 {
     [OperationContract]
     public void SetToolTipClosed(string page, string toolTipId)

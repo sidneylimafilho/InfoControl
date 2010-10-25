@@ -10,7 +10,7 @@ using System.Collections;
 
 namespace Vivina.Erp.WebUI.InfoControl.Host
 {
-    public class HostController : DataControllerBase
+    public class HostController : DataServiceBase
     {
 
         [JavaScriptSerializer]

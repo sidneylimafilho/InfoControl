@@ -5,7 +5,7 @@ using Vivina.Erp.DataClasses;
 
 namespace Vivina.Erp.SystemFramework
 {
-    public class DataControllerBase : DataController
+    public class DataServiceBase : DataService
     {
         private Company _company;
 

@@ -19,7 +19,7 @@ namespace Vivina.Erp.WebUI
     [ServiceContract(Namespace = "")]
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
-    public class SearchService : DataControllerBase
+    public class SearchService : DataServiceBase
     {
         [JavaScriptSerializer]
         [ServiceKnownType(typeof(Customer))]

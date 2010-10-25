@@ -10,7 +10,7 @@ using Vivina.Erp.SystemFramework;
 
 namespace Vivina.Erp.WebUI
 {
-    public class SiteController : DataControllerBase
+    public class SiteController : DataServiceBase 
     {
         #region WebPages
 
