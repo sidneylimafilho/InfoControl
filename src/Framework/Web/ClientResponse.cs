@@ -15,6 +15,18 @@ namespace InfoControl.Web
     [DataContract]
     public class ClientResponse
     {
+        public ClientResponse() { }
+        public ClientResponse(Func<object> data) {
+            try
+            {
+                Data = data();
+            }
+            catch (Exception ex)
+            {
+                Errors = ex.Message;
+            }
+        }
+
         [DataMember]
         public string Script { get; set; }
 
