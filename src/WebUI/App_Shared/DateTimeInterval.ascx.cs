@@ -75,9 +75,9 @@ namespace InfoControl.Web.UI
             if (dateTimeInterval != null)
             {
                 if (dateTimeInterval.BeginDate > DateTime.MinValue.Sql2005MinValue())
-                    txtBeginDate.Text = dateTimeInterval.BeginDate.ToShortDateString();
+                    txtBeginDate.Text = dateTimeInterval.BeginDate.ToLocalDateString();
                 if (dateTimeInterval.EndDate < DateTime.MaxValue.Date)
-                    txtEndDate.Text = dateTimeInterval.EndDate.ToShortDateString();
+                    txtEndDate.Text = dateTimeInterval.EndDate.ToLocalDateString();
             }
         }
 
