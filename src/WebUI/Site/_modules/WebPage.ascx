@@ -10,7 +10,7 @@
             </div>
             <div class="head">
                 <h1>
-                    <a title='Permanent Link to <%# Eval("Name") %>' href='<%# ResolveUrl(Util.GenerateWebPageUrl(Container.DataItem)) %>'
+                    <a title='Permanent Link to <%# Eval("Name") %>' href='<%# ResolveUrl((Container.DataItem as WebPage).Url) %>'
                         rel="bookmark">
                         <%#Eval("Name")%></a></h1>
                 <span class="author">
@@ -20,7 +20,7 @@
                         <%#Convert.ToDateTime(Eval("PublishedDate")).ToString("MMM").ToUpper()%></span>
                     <span class="year">
                         <%#Convert.ToDateTime(Eval("PublishedDate")).Year%></span> </span>&nbsp;
-                <a href='<%# ResolveUrl(Util.GenerateWebPageUrl(Container.DataItem)) %>#comments' class="comment" >
+                <a href='<%# ResolveUrl((Container.DataItem as WebPage).Url) %>#comments' class="comment" >
                     <uc1:Comments ID="Comments" runat="server" PageName="comments.aspx" SubjectId='<%#Eval("WebPageId") %>'
                         ShowStatistics="true"  Visible='<%#CanShowComments(Eval("CanComment"), Eval("WebPageId")) %>' />
                 </a>
@@ -37,7 +37,7 @@
                             <span runat="server" id="itemPlaceHolder"></span></span>
                     </LayoutTemplate>
                     <ItemTemplate>
-                        <span><a title='<%# Container.DataItem %>' href='<%# ResolveUrl(Util.GenerateWebPageUrl(WebPage.WebPage1)) %>?tag=<%# Server.UrlEncode((string) Container.DataItem ) %>'
+                        <span><a title='<%# Container.DataItem %>' href='<%# ResolveUrl((Container.DataItem as WebPage).WebPage1.Url) %>?tag=<%# Server.UrlEncode((string) Container.DataItem ) %>'
                             rel="bookmark">
                             <%#Container.DataItem%></a></span>
                     </ItemTemplate>
@@ -53,7 +53,7 @@
                             <span runat="server" id="itemPlaceHolder"></span></span>
                     </LayoutTemplate>
                     <ItemTemplate>
-                        <span><a title='<%# Container.DataItem %>' href='<%# ResolveUrl(Util.GenerateWebPageUrl(WebPage.WebPage1)) %>?pagecat=<%# Server.UrlEncode((string) Container.DataItem ) %>'
+                        <span><a title='<%# Container.DataItem %>' href='<%# ResolveUrl((Container.DataItem as WebPage).WebPage1.Url) %>?pagecat=<%# Server.UrlEncode((string) Container.DataItem ) %>'
                             rel="bookmark">
                             <%#Container.DataItem%></a></span>
                     </ItemTemplate>
@@ -75,7 +75,7 @@
         </div>
     </LayoutTemplate>
     <ItemTemplate>
-        <li><a title='<%# Eval("Name") %>' href='<%# ResolveUrl(Util.GenerateWebPageUrl(Container.DataItem)) %>'
+        <li><a title='<%# Eval("Name") %>' href='<%# ResolveUrl((Container.DataItem as WebPage).Url) %>'
             rel="bookmark">
             <%#Eval("Name")%></a></li>
     </ItemTemplate>

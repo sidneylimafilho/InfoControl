@@ -40,7 +40,7 @@ namespace Vivina.Erp.WebUI.Site
 
         private string FormatCData(WebPage page)
         {
-            string link = Request.Url.Host + ResolveUrl(Util.GenerateWebPageUrl(page));
+            string link = Request.Url.Host + ResolveUrl(page.Url );
             string creator = page.User.UserName + " (" + page.User.Profile.AbreviatedName;
             var builder = new StringBuilder();
             builder.Append("<item>");
@@ -87,7 +87,7 @@ namespace Vivina.Erp.WebUI.Site
             builder.Append("<item>");
             builder.Append("<title>" + WebPage.Name + "</title>");
             builder.Append("<description>" + WebPage.Description + "</description>");
-            builder.Append("<link>" + Request.Url.Host + ResolveUrl(Util.GenerateWebPageUrl(WebPage)) + "</link>");
+            builder.Append("<link>" + Request.Url.Host + ResolveUrl(WebPage.Url ) + "</link>");
             builder.Append("<generator>Vivina InfoControl</generator>");
             builder.Append("<language>pt-br</language>");
             builder.Append("<sy:updatePeriod>dialy</sy:updatePeriod>");

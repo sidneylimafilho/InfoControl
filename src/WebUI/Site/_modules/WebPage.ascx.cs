@@ -105,7 +105,7 @@ public partial class Site_WebPage : Vivina.Erp.SystemFramework.UserControlBase
         int i = 0;
         while ((parent = parent.WebPage1) != null)
         {
-            breacrumbsHtml = "<a href='" + Page.ResolveUrl(Util.GenerateWebPageUrl(parent)) + "'>" + parent.Name +
+            breacrumbsHtml = "<a href='" + Page.ResolveUrl(parent.Url ) + "'>" + parent.Name +
                              "</a> &raquo; " + breacrumbsHtml;
             i++;
         }

@@ -7,7 +7,7 @@
     DataFieldID="WebPageId" DataFieldParentID="ParentPageId" CssClass="radMenu"
     EnableAutoScroll="False" EnableEmbeddedSkins="False" Skin="Outlook">
     <ItemTemplate>
-        <a runat="server" href='<%# Util.GenerateWebPageUrl(Container.DataItem)%>'><%#Eval("Name")%></a>
+        <a runat="server" href='<%# (Container.DataItem as WebPage).Url%>'><%#Eval("Name")%></a>
     </ItemTemplate>
     <CollapseAnimation Type="OutQuint" Duration="200"></CollapseAnimation>
 </telerik:RadMenu>

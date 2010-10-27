@@ -13,7 +13,7 @@
             </ul>
         </LayoutTemplate>
         <ItemTemplate>
-            <li class="categoria"><a runat="server" href='<%# Util.GenerateWebPageUrl(WebPage) + "?pagecat="+ Eval("Name") %>'
+            <li class="categoria"><a runat="server" href='<%# (Container.DataItem as WebPage).Url + "?pagecat="+ Eval("Name") %>'
                 ><%# Eval("Name")%>&nbsp;<span>(<%# Eval("Count")%>)</span></a> </li>
         </ItemTemplate>
     </asp:ListView>
