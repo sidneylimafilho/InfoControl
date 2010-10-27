@@ -122,8 +122,8 @@ namespace InfoControl.Web.Services
                 //
                 // Get a shortcut to context objects
                 //
-                var request = HttpContext.Current.Request;
-                var server = HttpContext.Current.Server;
+                //var request = HttpContext.Current.Request;
+                //var server = HttpContext.Current.Server;
 
                 var doc = new XmlDocument();
                 doc.Load(message.GetReaderAtBodyContents());
@@ -133,48 +133,68 @@ namespace InfoControl.Web.Services
 
                 for (int i = 0; i < inputMsg.Body.Parts.Count; i++)
                 {
-                    var type = inputMsg.Body.Parts[i].Type;
-                    var paramNode = doc.ChildNodes[0].ChildNodes[i];
+                    var part = inputMsg.Body.Parts[i];
+                    var paramNode = doc.FirstChild.ChildNodes.Cast<XmlNode>()
+                                                  .Where(n => n.Name.ToLower() == part.Name.ToLower())
+                                                  .FirstOrDefault();
+                    if (paramNode == null)
+                        throw new ArgumentException("O argumento não foi enviado!", part.Name);
 
-                    parameters[i] = Deserialize(type, paramNode);
+                    parameters[i] = Deserialize(part.Type, paramNode);
                 }
 
             }
 
             private object Deserialize(Type type, XmlNode node)
             {
+                string rawObject = node.Value ?? node.InnerXml;
+                var attr = node.Attributes["type"];
+
+
+                //
+                // Convert CLI Native Types
+                //
+                if (type == null)
+                {
+                    Double resultDouble = default(Double);
+                    DateTime resultDateTime = default(DateTime);
+
+                    if (attr != null)
+                    {
+                        if (attr.Value == "number")
+                            if (Double.TryParse(rawObject, out resultDouble)) return resultDouble;
+
+                        if (attr.Value == "string")
+                            if (DateTime.TryParse(rawObject, out resultDateTime)) return resultDateTime;
+
+                        return rawObject;
+                    }
+                }
+
+                if (attr == null)
+                    return Convert.ChangeType(rawObject, type);
+
+                if (attr.Value != "object")
+                    return Convert.ChangeType(rawObject, type);
+
+               
+
+
+                //
+                // Convert complex types
+                //
                 var obj = Activator.CreateInstance(type);
 
                 foreach (var n in node.ChildNodes.Cast<XmlNode>())
-                    if (!n.ChildNodes.Cast<XmlNode>().Any(it => it.NodeType == XmlNodeType.Element))
-                        obj.SetPropertyValue(n.Name, TryGetValue(n));
-                    else
-                        obj.SetPropertyValue(n.Name, Deserialize(type, n));
+                    if (n.Attributes["type"].Value != "object")
+                        obj.SetPropertyValue(n.Name, Deserialize(null, n));
 
                 return obj;
             }
 
-            private object TryGetValue(XmlNode node)
-            {
-                Double resultDouble = default(Double);
-                DateTime resultDateTime = default(DateTime);
-                string possibleValue = node.Value ?? node.InnerText;
 
-                var attr = node.Attributes["type"];
-                if (attr != null)
-                {
-                    if (attr.Value == "number")
-                        if (Double.TryParse(possibleValue, out resultDouble)) return resultDouble;
 
-                    if (attr.Value == "string")
-                        if (DateTime.TryParse(possibleValue, out resultDateTime)) return resultDateTime;
 
-                    return possibleValue;
-                }
-                return null;
-            }
-
-           
 
             /// <summary>
             /// 

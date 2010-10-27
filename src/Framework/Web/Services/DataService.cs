@@ -14,7 +14,7 @@ namespace InfoControl.Web.Services
     /// <summary>
     /// Represents a InfoControl.Web.UI.Page with capabilities of the data access and maintenance of transactions in context, through of a DataManager
     /// </summary>    
-    public class DataService : Controller, IDataAccessor, IRequiresSessionState 
+    public class DataService : Controller, IDataAccessor, IRequiresSessionState
     {
         internal Application _application;
 
@@ -32,6 +32,16 @@ namespace InfoControl.Web.Services
         public new HttpContext HttpContext
         {
             get { return HttpContext.Current; }
+        }
+
+        public new HttpRequest Request
+        {
+            get { return HttpContext.Request; }
+        }
+
+        public new HttpResponse Response
+        {
+            get { return HttpContext.Response; }
         }
 
         /// <summary>
