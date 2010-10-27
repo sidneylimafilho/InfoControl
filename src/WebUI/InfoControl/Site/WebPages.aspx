@@ -84,7 +84,7 @@
                                                                 <%#Eval("Name").ToString().Trim('-')%></font></a>
                                                     </td>
                                                     <td>
-                                                        <a class="inline" id="lnkExternal" runat="server" href='<%# Util.GenerateWebPageUrl(Container.DataItem) %>'
+                                                        <a class="inline" id="lnkExternal" runat="server" href='<%# (Container.DataItem as WebPage).Url %>'
                                                             target="_new">&nbsp;</a>
                                                     </td>
                                                 </tr>
