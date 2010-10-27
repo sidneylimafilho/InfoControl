@@ -37,7 +37,7 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtSupplier.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchSuppliers");
+        
         
         //valSupplier.ValidationGroup = Required ? ValidationGroup : "_NonValidation";
     }

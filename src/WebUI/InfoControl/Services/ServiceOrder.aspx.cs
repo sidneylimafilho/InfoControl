@@ -228,7 +228,7 @@ public partial class InfoControl_Services_ServiceOrder : Vivina.Erp.SystemFramew
     #region events
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtProduct.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchProductInInventory");
+        
 
         if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
             serviceOrderId = Convert.ToInt32(Request["ServiceOrderId"].DecryptFromHex());

@@ -50,7 +50,7 @@
                             <asp:TextBox ID="txtManufacturer" runat="server" CssClass="cDynDat11" MaxLength="50" />
                             <ajaxToolkit:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" TargetControlID="txtManufacturer"
                                 CompletionInterval="1000" FirstRowSelected="True" MinimumPrefixLength="3" ServiceMethod="SearchManufacturer"
-                                ServicePath="~/InfoControl/SearchService.asmx">
+                                source="~/InfoControl/SearchService.asmx">
                             </ajaxToolkit:AutoCompleteExtender>
                             <p style="font-size: 7pt; color: gray">
                                 Dica: Digite parte do texto, que o completará automaticamente!</p>

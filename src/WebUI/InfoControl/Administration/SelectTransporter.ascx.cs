@@ -24,7 +24,7 @@ public partial class App_Shared_SelectTransporter : Vivina.Erp.SystemFramework.U
     Transporter transporter;
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtTransporter.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchTransporter");
+        
     }
 
 

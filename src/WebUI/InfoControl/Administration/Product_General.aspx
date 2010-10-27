@@ -47,14 +47,10 @@
                         <td>
                             Fabricante:<br />
                             <asp:TextBox ID="txtManufacturer" Width="250px" runat="server" CssClass="cDynDat11" MaxLength="50"
-                             plugin="autocomplete" servicepath='/InfoControl/InfoControl/SearchService.svc/SearchManufacturer'
+                             plugin="autocomplete" source='~/InfoControl/SearchService.svc/FindManufacturer'
                                    options="{max: 10}">
                              </asp:TextBox>
-                            <%--
-                            <ajaxToolkit:AutoCompleteExtender ID="AutoCompleteExtender2" runat="server" TargetControlID="txtManufacturer"
-                                CompletionInterval="1000" FirstRowSelected="True" MinimumPrefixLength="3" ServiceMethod="SearchManufacturer"
-                                ServicePath="~/InfoControl/SearchService.asmx">
-                            </ajaxToolkit:AutoCompleteExtender>--%>
+                            
                             <p style="font-size: 7pt; color: gray">
                                 Dica: Digite parte do texto, que o completará automaticamente!</p>
                             <br />

@@ -8,7 +8,7 @@
             <asp:TextBox ID="txtCustomer" runat="server" Width="250px" CssClass="cDynDat11" AutoPostBack="True"
                 OnTextChanged="txtCustomer_TextChanged"
                 plugin="autocomplete"
-                servicepath='/InfoControl/InfoControl/SearchService.svc/SearchCustomers'
+                source='~/InfoControl/SearchService.svc/FindCustomers'
                 options="{max: 10}"
                 MaxLength="100"></asp:TextBox>
             <p style="font-size: 7pt; color: gray">

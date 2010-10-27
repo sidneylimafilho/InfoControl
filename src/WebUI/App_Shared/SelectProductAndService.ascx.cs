@@ -23,7 +23,7 @@ namespace InfoControl.Web.UI
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtItem.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchProductAndService");
+           
             valtxtItem.ValidationGroup = Required ? ValidationGroup : "_NonValidation";
         }
 

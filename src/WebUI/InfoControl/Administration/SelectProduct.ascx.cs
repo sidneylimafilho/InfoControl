@@ -66,7 +66,7 @@ public partial class App_Shared_SelectProduct : Vivina.Erp.SystemFramework.UserC
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtProduct.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchProduct");
+       
 
         valProduct.ValidationGroup = Required
                                          ? ValidationGroup

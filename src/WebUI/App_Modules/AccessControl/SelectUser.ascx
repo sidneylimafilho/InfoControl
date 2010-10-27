@@ -7,7 +7,7 @@
             <asp:TextBox ID="txtUser" runat="server" Width="300px" CssClass="cDynDat11" AutoPostBack="True"
                 OnTextChanged="txtUser_TextChanged" MaxLength="100"
                  plugin="autocomplete"
-                servicepath='/InfoControl/InfoControl/SearchService.svc/SearchUser'
+                source='~/InfoControl/SearchService.svc/FindUser'
                  options="{max: 10}">  </asp:TextBox>
         </td>
         <td valign="bottom">           
@@ -30,7 +30,4 @@
         </tr>
     </table>
 </asp:Panel>
-<%--<ajaxToolkit:AutoCompleteExtender ID="completeTxtUser" runat="server" CompletionInterval="1000"
-    CompletionSetCount="10" MinimumPrefixLength="3" ServiceMethod="SearchUser" ServicePath="~/Controller/SearchService"
-    TargetControlID="txtUser" BehaviorID="completetxtCustomer">
-</ajaxToolkit:AutoCompleteExtender>--%>
+

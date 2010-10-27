@@ -19,7 +19,7 @@ namespace Vivina.Erp.WebUI.Administration
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            txtManufacturer.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchManufacturer");
+           
 
             //
             // Se for inserção então essa página é mostrada fora do iframe, logo precisa 

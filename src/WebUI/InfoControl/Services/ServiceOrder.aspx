@@ -257,7 +257,7 @@
                                         <td>
                                             Produto:<br />
                                             <asp:TextBox ID="txtProduct" runat="server" Columns="40" CssClass="cDynDat11" plugin="autocomplete"
-                                                servicepath='/InfoControl/InfoControl/SearchService.svc/SearchProductInInventory'
+                                                source='~/InfoControl/SearchService.svc/FindProductInInventory'
                                                 options="{max: 10}">
                                             </asp:TextBox>
                                             <asp:RequiredFieldValidator ID="valProduct" runat="server" ControlToValidate="txtProduct"

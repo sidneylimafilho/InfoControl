@@ -9,7 +9,7 @@ public partial class App_Shared_SelectUser : Vivina.Erp.SystemFramework.UserCont
     User user;
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtUser.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchUser");
+        
     }
 
     protected void onSelectingUser(Object sender, SelectingUserEventArgs e)

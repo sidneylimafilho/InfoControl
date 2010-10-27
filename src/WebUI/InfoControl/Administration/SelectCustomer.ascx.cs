@@ -51,7 +51,7 @@ public partial class App_Shared_SelectCustomer : Vivina.Erp.SystemFramework.User
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        txtCustomer.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchCustomers");
+        
 
         imgUnselect.Visible = txtCustomer.Enabled = Enabled;
         if (Convert.ToBoolean(Request["ReadOnly"]))

@@ -8,7 +8,7 @@
             <asp:TextBox ID="txtSupplier" runat="server" Width="250px" CssClass="cDynDat11" 
                 OnTextChanged="txtSupplier_TextChanged" AutoPostBack="true"                 
                 plugin="autocomplete"
-                servicepath='/InfoControl/InfoControl/SearchService.svc/SearchSuppliers'
+                source='~/InfoControl/SearchService.svc/FindSuppliers'
                  options="{max: 10}"
                   MaxLength="100"> </asp:TextBox>
             <p style="font-size: 7pt; color: gray">
@@ -41,7 +41,4 @@
 </asp:Panel>
 <input id="<%=this.ClientID %>" type="text" value="<%=ViewState["SupplierId"] %>"
     style="display: none" />
-<%--<ajaxToolkit:AutoCompleteExtender ID="comptxtSupplier" runat="server" CompletionInterval="1000"
-    CompletionSetCount="10" MinimumPrefixLength="3" ServiceMethod="SearchSupplier"
-    ServicePath="~/Controller/SearchService" TargetControlID="txtSupplier" BehaviorID="comptxtSupplier">
-</ajaxToolkit:AutoCompleteExtender>--%>
+

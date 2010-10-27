@@ -10,15 +10,10 @@
                     <asp:TextBox ID="txtTransporter" runat="server" Width="300px" CssClass="cDynDat11"
                         AutoPostBack="True" OnTextChanged="txtTransporter_TextChanged" MaxLength="100"
                           plugin="autocomplete"
-                          servicepath='/InfoControl/InfoControl/SearchService.svc/SearchTransporter'
+                          source='~/InfoControl/SearchService.svc/FindTransporter'
                           options="{max: 10}"> </asp:TextBox>
                         
-                     <%--    <asp:TextBox ID="txtSupplier" runat="server" Width="250px" CssClass="cDynDat11" 
-                OnTextChanged="txtSupplier_TextChanged"                
-                plugin="autocomplete"
-                servicepath='/InfoControl/InfoControl/SearchService.svc/SearchSuppliers'
-                 options="{max: 10}"
-                  MaxLength="100"> </asp:TextBox>--%>
+                    
                   
                   <p style="font-size: 7pt; color: gray">
                         
@@ -50,10 +45,6 @@
                 </tr>
             </table>
         </asp:Panel>
-<%--        <ajaxToolkit:AutoCompleteExtender ID="completetxtTransporter" runat="server" CompletionInterval="1000"
-            CompletionSetCount="10" MinimumPrefixLength="3" ServiceMethod="SearchTransporter"
-            ServicePath="~/Controller/SearchService" TargetControlID="txtTransporter"
-            BehaviorID="completetxtTransporter">
-        </ajaxToolkit:AutoCompleteExtender>--%>
+
     </ContentTemplate>
 </asp:UpdatePanel>

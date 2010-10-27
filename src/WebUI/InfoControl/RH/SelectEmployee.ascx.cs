@@ -25,7 +25,7 @@ public partial class App_Shared_SelectEmployee : Vivina.Erp.SystemFramework.User
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtEmployee.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchEmployees");
+        
 
         txtEmployee.Enabled = Enabled;
         _humanResourcesManager = new HumanResourcesManager(this);

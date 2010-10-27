@@ -6,7 +6,7 @@
             Nome do produto/Serviço:<br />
             <asp:TextBox ID="txtItem" runat="server" Width="250px" CssClass="cDynDat11" MaxLength="128"
                 plugin="autocomplete"
-                servicepath='/InfoControl/InfoControl/SearchService.svc/SearchProductAndService'
+                source='~/InfoControl/SearchService.svc/FindProductAndService'
                 options="{max: 10}"></asp:TextBox>
             <asp:RequiredFieldValidator ID="valtxtItem" ControlToValidate="txtItem" runat="server"
                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;

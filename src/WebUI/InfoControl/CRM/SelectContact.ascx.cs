@@ -89,7 +89,7 @@ namespace Vivina.Erp.WebUI.InfoControl.CRM
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            txtContact.Attributes["servicepath"] = ResolveUrl("~/Controller/SearchService/SearchContact");
+            
             //reqTxtContact.ValidationGroup = Required ? ValidationGroup : "_NonValidation";
         }
 
