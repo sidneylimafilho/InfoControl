@@ -112,20 +112,20 @@ namespace InfoControl.Web.Security
                 }
                 else
                 {
-                    if (node.ResourceKey != function.FunctionId.ToString() || node.Description == function.Description)
-                    {
-                        using (var manager = new FunctionManager(null))
-                        {
-                            // Recupera do banco para criar o link e deixar o objeto ativo
-                            function = manager.GetFunction(title); 
+                    node.ResourceKey = function.FunctionId.ToString();
+                    if (!String.IsNullOrEmpty(function.Description))
+                        node.Description = function.Description;
 
-                            node.ResourceKey = function.FunctionId.ToString();
-                            node.Description = function.Description;
-                            if (node.ParentNode != null && !String.IsNullOrEmpty(node.ParentNode.ResourceKey))
+
+                    if (!String.IsNullOrEmpty(node.ParentNode.ResourceKey))
+                        if (function.ParentId.ToString() != node.ParentNode.ResourceKey)
+                            using (var manager = new FunctionManager(null))
+                            {
+                                // Recupera do banco para criar o link e deixar o objeto ativo
+                                function = manager.GetFunction(title);
                                 function.ParentId = Convert.ToInt32(node.ParentNode.ResourceKey);
-                            manager.DbContext.SubmitChanges();
-                        }
-                    }
+                                manager.DbContext.SubmitChanges();
+                            }
                 }
 
             }
