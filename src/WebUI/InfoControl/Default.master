@@ -16,7 +16,9 @@
             display: none;
         }
     </style>
+    
 </head>
+<script pin="pin">window.applicationPath='<%=Request.Url.Scheme + ":/"+"/" + Request.Url.Host + Request.ApplicationPath%>'</script>
 <body>
     <form id="form1" runat="server" autocomplete="off">
     <!-- Print Button -->
