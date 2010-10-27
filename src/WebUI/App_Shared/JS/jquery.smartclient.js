@@ -86,129 +86,135 @@
             if (this.attr("action")) {
                 url += "/" + this.attrUp("action");
             }
-            return url;
+            return url.replace("~", window.applicationPath || "");
         },
         dataBind: function(options) {
-            for (var i = 0, l = this.length; i < l; i++) {
-                options = options || {};
-                var self = $(this[i]);
-
-                if (self.attr("onbinding")) eval(self.attr("onbinding"));
-                if (options.onbinding) options.onbinding();
-
-                var formData = {};
-
-                var form = self.closest("[asForm]") || self.closest("FORM");
-
-                // Get All html form controls
-                var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]")
-                        .map(function(i, elem) { return '"' + elem.name + '": "' + elem.value + '"'; });
-
-                options.params = options.params || {};
-                if (self.attrUp("params") && self.attrUp("params") != "") {
-                    $.extend(options.params, eval("(" + self.attrUp("params") + ")"));
-                }
-
-                // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
-                // is fired otherwise prepares the data Request Payload
-                if (!options.data)
-                    options.data = ('{"Params":<0>, "FormData":{<1>}}')
-                                        .replace("<0>", $.toJSON(options.params))
-                                        .replace("<1>", fields.get().join(","));
-
-                // Allow fire DataBinding in controls that has TRIGGER atribute
-                if (self.attrUp("trigger")) {
-                    self.closest("[trigger]").find("[param]").each(function() {
-                        options.params[self.attr("param")] = self.val();
-                    });
-
-                    $(self.attrUp("trigger")).dataBind(options);
-                    return;
-                }
-
-                // save the control that is fire dataBind, because closure "sucess" dont access
-                var ctrl = self;
-
-                var type = self.attrUp("method") || "POST";
-
-                // Prepare the url
-                var url = self.getAddress();
-
-                // Only fires ajax if there are url
-                if (url)
-                    $.ajax({
-                        type: type,
-                        url: url,
-                        data: options.data,
-                        contentType: "application/json",
-                        ifModified: true,
-                        success: function(result, status, request) {
+            for (var i = 0, l = this.length; i < l; i++)
+                $(this[i])._dataBind(options);
 
 
-                            // If Not Modified then get cached content file by iframe
-                            if (request.status == 304) {
-                                ctrl.ajaxIframe(url, ctrl, options.onsucess);
-                            } else {
-                                // If Http Status 200 then OK, process JSON because data should be transform on html
-                                var html = result;
-                                var target = ctrl.attrUp("target");
 
-                                if (request.responseText != "") {
-                                    if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
+            return this;
+        }, /* End DataBind*/
 
-                                        if (result.Errors) {
-                                            if ($.isArray(result.Errors)) {
-                                                for (var item in result.Errors)
-                                                    alert(item);
-                                            }
-                                        }
+        _dataBind: function(options) {
+            options = options || {};
+            var $this = $(this[0]);
 
-                                        //
-                                        // result.Data   = ClientResponse
-                                        // result.d      = ASMX/WCF JSON return
-                                        // result.d.Data = ASMX/WCF JSON return ClientResponse
-                                        // 
-                                        var data = result.Data || result.d || result.d.Data || result;
+            if ($this.attr("onbinding")) eval($this.attr("onbinding"));
+            if (options.onbinding) options.onbinding();
 
-                                        if (data.length == 0 && $(ctrl.attrUp("emptytemplate")).size() > 0) {
-                                            result.isEmpty = true;
-                                            html = $(ctrl.attrUp("emptytemplate")).html();
-                                            target = ctrl.attrUp("emptytarget");
+            var formData = {};
+
+            options.params = options.params || {};
+            if ($this.attrUp("params") && $this.attrUp("params") != "") {
+                $.extend(options.params, eval("(" + $this.attrUp("params") + ")"));
+            }
+
+            var form = $this.closest("[asForm]") || $this.closest("FORM");
+
+            // Get All html form controls
+            var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]")
+                        .map(function(i, elem) { options.params[elem.name] = elem.value; return true; });
+
+            // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
+            // is fired otherwise prepares the data Request Payload
+            if (!options.data)
+                options.data = $.toJSON(options.params);
+
+            // Allow fire DataBinding in controls that has TRIGGER atribute
+            if ($this.attrUp("trigger")) {
+                $this.closest("[trigger]").find("[param]").each(function() {
+                    options.params[$this.attr("param")] = $this.val();
+                });
+
+                $($this.attrUp("trigger")).dataBind(options);
+                return;
+            }
+
+            // save the control that is fire dataBind, because closure "sucess" dont access
+            //var ctrl = $this;
+
+            var type = $this.attrUp("method") || "POST";
+
+            // Prepare the url
+            var url = $this.getAddress();
+
+            // Only fires ajax if there are url
+            if (url) {
+                $.ajax({
+                    type: type,
+                    url: url,
+                    data: options.data,
+                    contentType: "application/json",
+                    ifModified: true,
+                    success: function(result, status, request) {
+
+
+                        // If Not Modified then get cached content file by iframe
+                        if (request.status == 304) {
+                            $this.ajaxIframe(url, $this, options.onsucess);
+                        } else {
+                            // If Http Status 200 then OK, process JSON because data should be transform on html
+                            var html = result;
+                            var target = $this.attrUp("target");
+
+                            if (request.responseText != "") {
+                                if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
+
+                                    if (result.Errors) {
+                                        if ($.isArray(result.Errors)) {
+                                            for (var item in result.Errors)
+                                                alert(item);
                                         } else {
-                                            // Get template tag     
-                                            tpl = ctrl;
-                                            if ($(ctrl.attrUp("template")).size() > 0)
-                                                tpl = $(ctrl.attrUp("template"));
-
-                                            html = tpl.render(data);
+                                            alert(result.Errors);
                                         }
-
                                     }
 
-                                    ctrl.attachHtmlInTarget(html, target);
+                                    //
+                                    // result.Data   = ClientResponse
+                                    // result.d      = ASMX/WCF JSON return
+                                    // result.d.Data = ASMX/WCF JSON return ClientResponse
+                                    // 
+                                    var data = result.Data || result.d || result.d.Data || result;
+
+                                    if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
+                                        result.isEmpty = true;
+                                        html = $($this.attrUp("emptytemplate")).html();
+                                        target = $this.attrUp("emptytarget");
+                                    } else {
+                                        // Get template tag
+                                        tpl = $this;
+                                        if ($($this.attrUp("template")).size() > 0)
+                                            tpl = $($this.attrUp("template"));
+
+                                        html = tpl.render(data);
+                                    }
 
                                 }
 
-                                if (options.onsucess) options.onsucess(result, status, request);
+                                $this.attachHtmlInTarget(html, target);
 
                             }
 
-                            if (ctrl.attr("onsucess")) eval(ctrl.attr("onsucess"));
+                            if (options.onsucess) options.onsucess(result, status, request);
 
-                            if (ctrl.attrUp("once")) ctrl.unbind(ctrl.attr("command"));
-
-
-                        },
-                        error: function(result, status, event) {
-                            eval(ctrl.attrUp("onerror"));
-                            if (result.status == "404")
-                                throw PageNotFoundException(ctrl);
                         }
-                    });
 
+                        if ($this.attr("onsucess")) eval($this.attr("onsucess"));
+
+                        if ($this.attrUp("once")) $this.unbind($this.attr("command"));
+
+
+                    },
+                    error: function(result, status, event) {
+                        eval($this.attrUp("onerror"));
+                        if (result.status == "404")
+                            throw PageNotFoundException($this);
+                    }
+                });
             }
-            return this;
-        }, /* End DataBind*/
+        },
 
         /***************************************************************************************************
         Live controls, this allow load html with plugins and load it dynamically
@@ -348,7 +354,7 @@
                     $(this).hasControl(true);
 
                     $(this).autocomplete({
-                        url: $(this).attrUp("controller") || $(this).attr("servicepath"),
+                        url: $(this).getAddress(),
                         minChars: $(this).attr("minChars") || 1,
                         parse: function(response) {
                             var parsed = [];
