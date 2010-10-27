@@ -23,10 +23,12 @@ namespace Vivina.Erp.BusinessRules
         public IQueryable<Contact> GetContacts(Int32 companyId, String text, string sortExpression, int startRowIndex,
                                       int maximumRows)
         {
-            if (!String.IsNullOrEmpty(text))
-                return new ContactManager(this).GetAllContacts().Where(contact => contact.CompanyId == companyId && contact.Name.Contains(text)).SortAndPage(sortExpression, startRowIndex, maximumRows, "ContactId");
+            if (String.IsNullOrEmpty(text)) 
+                return null;
 
-            return null;
+            return new ContactManager(this).GetAllContacts()
+                                           .Where(contact => contact.CompanyId == companyId && contact.Name.Contains(text))
+                                           .SortAndPage(sortExpression, startRowIndex, maximumRows, "ContactId");
         }
 
         //public IQueryable<Customer> GetCustomersByName(Int32 companyId, String text, string sortExpression,
@@ -56,83 +58,70 @@ namespace Vivina.Erp.BusinessRules
         public IQueryable<Supplier> GetSuppliersByName(Int32 companyId, String text, string sortExpression,
                                                        int startRowIndex, int maximumRows)
         {
-            if (!String.IsNullOrEmpty(text))
-            {
-                return
-                    new SupplierManager(this).GetSupplierByCompany(companyId).Where(
-                        supplier =>
-                        supplier.Profile.Name.Contains(text) || supplier.LegalEntityProfile.CompanyName.Contains(text)).
-                        SortAndPage(sortExpression, startRowIndex, maximumRows, "SupplierId");
-            }
-            return null;
+            if (String.IsNullOrEmpty(text)) 
+                return null;
+
+            return new SupplierManager(this).GetSupplierByCompany(companyId)
+                                         .Where(s => s.Profile.Name.Contains(text) || s.LegalEntityProfile.CompanyName.Contains(text))
+                                         .SortAndPage(sortExpression, startRowIndex, maximumRows, "SupplierId");
+
+
         }
 
 
-        public Int32 GetSuppliersByNameCount(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                             int maximumRows)
+        public Int32 GetSuppliersByNameCount(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
             return GetSuppliersByName(companyId, text, sortExpression, startRowIndex, maximumRows).Count();
         }
 
-       
-
-       
-
-       
-
-        public IQueryable<Bill> GetBills(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                         int maximumRows)
+        public IQueryable<Bill> GetBills(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
-            if (!String.IsNullOrEmpty(text))
-                return
-                    new FinancialManager(this).GetBillByCompany(companyId).Where(bill => bill.Description.Contains(text)).
-                        SortAndPage(sortExpression, startRowIndex, maximumRows, "Description");
-            return null;
+            if (String.IsNullOrEmpty(text)) 
+                return null;
+
+            return new FinancialManager(this).GetBillByCompany(companyId)
+                                             .Where(b => b.Description.Contains(text))
+                                             .SortAndPage(sortExpression, startRowIndex, maximumRows, "Description");
         }
 
 
-        public Int32 GetBillsCount(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                   int maximumRows)
+        public Int32 GetBillsCount(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
             return GetBills(companyId, text, sortExpression, startRowIndex, maximumRows).Count();
         }
 
-        public IQueryable<Invoice> GetInvoices(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                               int maximumRows)
+        public IQueryable<Invoice> GetInvoices(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
-            if (!String.IsNullOrEmpty(text))
-                return
-                    new FinancialManager(this).GetInvoicesByCompany(companyId).Where(
-                        invoice => invoice.Description.Contains(text)).SortAndPage(sortExpression, startRowIndex,
-                                                                                   maximumRows, "Description");
-            return null;
+            if (String.IsNullOrEmpty(text))
+                return null;
+
+            return new FinancialManager(this).GetInvoicesByCompany(companyId)
+                                             .Where(i => i.Description.Contains(text))
+                                             .SortAndPage(sortExpression, startRowIndex, maximumRows, "Description");
+
         }
 
-        public Int32 GetInvoicesCount(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                      int maximumRows)
+        public Int32 GetInvoicesCount(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
             return GetInvoices(companyId, text, sortExpression, startRowIndex, maximumRows).Count();
         }
 
 
-        public IQueryable<WebPage> GetHelpPages(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                                int maximumRows)
+        public IQueryable<WebPage> GetHelpPages(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
-            if (!String.IsNullOrEmpty(text))
-            {
-                return
-                    new SiteManager(this).GetAllWebPages().Where(
-                        webPage =>
-                        webPage.CompanyId == companyId && webPage.MasterPage.Equals("ajuda") &&
-                        webPage.ParentPageId != null && webPage.Name.Contains(text)).SortAndPage(sortExpression,
-                                                                                                 startRowIndex,
-                                                                                                 maximumRows, "Name");
-            }
-            return null;
+            if (String.IsNullOrEmpty(text))
+                return null;
+
+            return new SiteManager(this).GetAllWebPages()
+                                        .Where(p => p.CompanyId == companyId)
+                                        .Where(p => p.MasterPage.ToLower().Equals("help"))
+                                        .Where(p => p.ParentPageId.HasValue)
+                                        .Where(p => p.Name.Contains(text))
+                                        .SortAndPage(sortExpression, startRowIndex, maximumRows, "Name");
+
         }
 
-        public Int32 GetHelpPagesCount(Int32 companyId, String text, string sortExpression, int startRowIndex,
-                                       int maximumRows)
+        public Int32 GetHelpPagesCount(Int32 companyId, String text, string sortExpression, int startRowIndex, int maximumRows)
         {
             return GetHelpPages(companyId, text, sortExpression, startRowIndex, maximumRows).Count();
         }
