@@ -67,41 +67,40 @@ namespace InfoControl.Web.Auditing
 
         public void OnErrorRequest(object sender, EventArgs e)
         {
-            
-            HttpContext context = HttpContext.Current;
-            Exception exception = null;
-            notifier = Activator.CreateInstance(notifierType) as InfoControl.Web.Auditing.ExceptionManager;
+            if (HttpContext.Current != null)
+            {
+                Exception exception = null;
+                notifier = Activator.CreateInstance(notifierType) as InfoControl.Web.Auditing.ExceptionManager;
 
-            context.Trace.Warn("Exception Module Begin");
-            try
-            {
-                exception = context.Error;
-                while (exception.InnerException != null)
+                try
                 {
-                    exception = exception.InnerException;
-                }
+                    HttpContext.Current.Trace.Warn("Exception Module Begin");
+                    exception = HttpContext.Current.Error;
+                    while (exception.InnerException != null)
+                    {
+                        exception = exception.InnerException;
+                    }
 
-                notifier.Notify(exception);
-            }
-            catch (Exception ex)
-            {
-                exception = ex;
-                //
-                // Retry to notify
-                //
-                notifier.Notify(exception);
-            }
-            finally
-            {
-                //
-                // Guarda no cache o erro para ser mostrado amigavelmente no Custom Error pages
-                //
-                if (context.Session != null)
+                    notifier.Notify(exception);
+                }
+                catch (Exception ex)
                 {
-                    context.Session["Error"] = exception;
+                    exception = ex;
+                    //
+                    // Retry to notify
+                    //
+                    notifier.Notify(exception);
+                }
+                finally
+                {
+                    //
+                    // Guarda no cache o erro para ser mostrado amigavelmente no Custom Error pages
+                    //
+                    if (HttpContext.Current.Session != null)
+                        HttpContext.Current.Session["Error"] = exception;
+                    HttpContext.Current.Trace.Warn("Exception Module End");
                 }
             }
-            context.Trace.Warn("Exception Module End");
         }
 
 
