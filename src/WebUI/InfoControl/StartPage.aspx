@@ -35,8 +35,8 @@
             <td class="left">
                 &nbsp;
             </td>
-            <td class="center">
-                <div asform="true" trigger="#pnlCustomers" params="{'limit':15}">
+            <td class="center" source="SearchService.svc">
+                <div asform="true" trigger="#pnlCustomers, #pnlHelpPages, #pnlEmployees, #pnlSuppliers, #pnlContacts, #pnlProducts" params="{'limit':15}">
                     <center>
                         <h2 style='font-weight: lighter'>
                             Busque rapidamente o que está no sistema:</h2>
@@ -44,15 +44,16 @@
                         (Dica: Pesquise por clientes, fornecedores, contas a pagar/receber, páginas, contatos,
                         produtos, e muito mais)<br />
                         <br />
-                        <input type="text" name="txtSearch" />
+                        <input type="text" name="q" />
                         <asp:Button runat="server" Text="ENCONTRAR AGORA!" UseSubmitBehavior="false" OnClientClick="return false;"
                             command="click" /></center>
                     <br />
                     <br />
                 </div>
                 <%--Conteúdo--%>
-                <fieldset id="pnlCustomers" source="SearchService.svc" action="FindCustomers"
-                    template="#pnlCustomers .template" target="#pnlCustomers .target" onsucess="$('#pnlCustomers').show(); $('#pnlCustomers legend > span').text(result.Data.length);"
+                <fieldset id="pnlCustomers" action="FindCustomers"
+                    template="#pnlCustomers .template" target="#pnlCustomers .target" 
+                    onsucess="$('#pnlCustomers').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Clientes (<span>0</span>)</legend>
                     <div class="template">
@@ -62,51 +63,77 @@
                     </div>
                     <div class="target"></div>
                 </fieldset>
+                
+                 <fieldset id="pnlHelpPages" action="FindHelpPages"
+                    template="#pnlHelpPages .template" target="#pnlHelpPages .target" 
+                    onsucess="$('#pnlHelpPages').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                    style="display: none">
+                    <legend>Páginas de Ajuda (<span>0</span>)</legend>
+                    <div class="template">
+                        <!--<div class="namedListItem">
+                            <a href="<$=Id$>"><$=Name$></a>
+                        </div>-->
+                    </div>
+                    <div class="target"></div>
+                </fieldset>
+                
+                 <fieldset id="pnlEmployees" action="FindEmployees"
+                    template="#pnlEmployees .template" target="#pnlEmployees .target" 
+                    onsucess="$('#pnlEmployees').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                    style="display: none">
+                    <legend>Funcionários (<span>0</span>)</legend>
+                    <div class="template">
+                        <!--<div class="namedListItem">
+                            <a href="RH/Employee.aspx?EmployeeId=<$=Id$>"><$=Name$></a>
+                        </div>-->
+                    </div>
+                    <div class="target"></div>
+                </fieldset>
+                
+                 <fieldset id="pnlSuppliers" action="FindSuppliers"
+                    template="#pnlSuppliers .template" target="#pnlSuppliers .target" 
+                    onsucess="$('#pnlSuppliers').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                    style="display: none">
+                    <legend>Fornecedores (<span>0</span>)</legend>
+                    <div class="template">
+                        <!--<div class="namedListItem">
+                            <a href="Administration/Supplier.aspx?SupplierId=<$=Id$>"><$=Name$></a>
+                        </div>-->
+                    </div>
+                    <div class="target"></div>
+                </fieldset>
+                
+                <fieldset id="pnlContacts" action="FindContacts"
+                    template="#pnlContacts .template" target="#pnlContacts .target" 
+                    onsucess="$('#pnlContacts').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                    style="display: none">
+                    <legend>Contatos (<span>0</span>)</legend>
+                    <div class="template">
+                        <!--<div class="namedListItem">
+                            <a href="Administration/Contact.aspx?ContactId=<$=Id$>"><$=Name$></a>
+                        </div>-->
+                    </div>
+                    <div class="target"></div>
+                </fieldset>
+                
+                <fieldset id="pnlProducts" action="FindProducts"
+                    template="#pnlProducts .template" target="#pnlProducts .target" 
+                    onsucess="$('#pnlProducts').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                    style="display: none">
+                    <legend>Produtos (<span>0</span>)</legend>
+                    <div class="template">
+                        <!--<div class="namedListItem">
+                            <a href="Administration/Product.aspx?ProductId=<$=Id$>"><$=Name$></a>
+                        </div>-->
+                    </div>
+                    <div class="target"></div>
+                </fieldset>
+                
                 <%-- 
-                <fieldset id="pnlSuppliers" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
-                    dataview:autofetch="false" dataview:dataprovider="SearchService.svc" dataview:fetchoperation="SearchSuppliers"
-                    dataview:itemtemplate="#lvSupplier" dataview:itemplaceholder="#lvSupplier" dataview:fetchparameters="{{ {text: ''} }}"
-                    class="sys-template">
-                    <legend>Fornecedores <span>(0)</span></legend>
-                    <div id="lvSupplier">
-                        <div class="namedListItem">
-                            <a sys:href="{{ 'Administration/Supplier.aspx?SupplierId=' + Id }}">{{ Name }}</a>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset id="pnlContacts" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
-                    dataview:autofetch="false" dataview:dataprovider="SearchService.svc" dataview:fetchoperation="SearchContacts"
-                    dataview:itemtemplate="#lvContact" dataview:itemplaceholder="#lvContact" dataview:fetchparameters="{{ {text: ''} }}"
-                    class="sys-template">
-                    <legend>Contatos <span>(0)</span></legend>
-                    <div id="lvContact">
-                        <div class="namedListItem">
-                            <a sys:href="{{ 'Administration/Contact.aspx?ContactId=' + Id }}">{{ Name }}</a>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset id="pnlProducts" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
-                    dataview:autofetch="false" dataview:dataprovider="SearchService.svc" dataview:fetchoperation="SearchProducts"
-                    dataview:itemtemplate="#lvProduct" dataview:itemplaceholder="#lvProduct" dataview:fetchparameters="{{ {text: ''} }}"
-                    class="sys-template">
-                    <legend>Produtos <span>(0)</span></legend>
-                    <div id="lvProduct">
-                        <div class="namedListItem">
-                            <a sys:href="{{ 'Administration/Product.aspx?ProductId=' + Id }}">{{ Name }}</a>
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset id="pnlEmployees" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
-                    dataview:autofetch="false" dataview:dataprovider="SearchService.svc" dataview:fetchoperation="SearchEmployees"
-                    dataview:itemtemplate="#lvEmployee" dataview:itemplaceholder="#lvEmployee" dataview:fetchparameters="{{ {text: '', limit : 12} }}"
-                    class="sys-template">
-                    <legend>Empregados <span>(0)</span></legend>
-                    <div id="lvEmployee">
-                        <div class="namedListItem">
-                            <a sys:href="{{ 'RH/Employee.aspx?EmployeeId=' + Id }}">{{ Name }}</a>
-                        </div>
-                    </div>
-                </fieldset>
+                
+                
+               
+                
                 <fieldset id="pnlBills" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
                     dataview:autofetch="false" dataview:dataprovider="SearchService.svc" dataview:fetchoperation="SearchBills"
                     dataview:itemtemplate="#lvBill" dataview:itemplaceholder="#lvBill" dataview:fetchparameters="{{ {text: ''} }}"
@@ -128,19 +155,9 @@
                             <a sys:href="{{ 'Accounting/Invoice.aspx?InvoiceId=' + Id }}">{{ Name }}</a>
                         </div>
                     </div>
-                </fieldset>
-                <fieldset id="pnlHelpPages" sys:attach="dataview" dataview:onrendered="{{ onrendered }}"
-                    dataview:autofetch="false" dataview:dataprovider="SearchService.svc" dataview:fetchoperation="SearchHelpPages"
-                    dataview:itemtemplate="#lvHelpPage" dataview:itemplaceholder="#lvHelpPage" dataview:fetchparameters="{{ {text: ''} }}"
-                    class="sys-template">
-                    <legend>Páginas de Ajuda <span>(0)</span></legend>
-                    <div id="lvHelpPage">
-                        <div class="namedListItem">
-                            <a sys:href="{{ 'Site/WebPage.aspx?WebPageId=' + Id }}">{{ Name }}</a>
-                        </div>
-                    </div>
-                </fieldset>
-                --%>
+                </fieldset>--%>
+               
+                
             </td>
             <td class="right">
                 &nbsp;
