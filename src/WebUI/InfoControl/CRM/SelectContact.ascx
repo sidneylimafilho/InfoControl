@@ -5,7 +5,7 @@
         <td>
             Contato:<br />
             <asp:TextBox ID="txtContact" runat="server" Width="250px" CssClass="cDynDat11" AutoPostBack="True"
-                OnTextChanged="txtContact_TextChanged" plugin="autocomplete" source='~/InfoControl/SearchService.svc/FindContact'
+                OnTextChanged="txtContact_TextChanged" plugin="autocomplete" source='~/InfoControl/SearchService.svc/FindContacts'
                 options="{max: 10}" MaxLength="100"></asp:TextBox>
             <p style="font-size: 7pt; color: gray">
                 Dica: Digite parte do texto, que o mesmo será completado automaticamente!</p>
