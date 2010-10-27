@@ -1,2 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Service="Vivina.Erp.WebUI.SearchService" CodeBehind="SearchService.svc.cs" 
-Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
+﻿<%@ ServiceHost Language="C#" Service="Vivina.Erp.WebUI.SearchService" CodeBehind="SearchService.svc.cs" %>

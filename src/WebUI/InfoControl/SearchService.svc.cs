@@ -13,6 +13,7 @@ using Vivina.Erp.BusinessRules;
 using Vivina.Erp.BusinessRules.Reports;
 using Vivina.Erp.DataClasses;
 using Vivina.Erp.SystemFramework;
+using System.Web;
 
 namespace Vivina.Erp.WebUI
 {
@@ -21,6 +22,7 @@ namespace Vivina.Erp.WebUI
     [ServiceBehavior(IncludeExceptionDetailInFaults = true)]
     public class SearchService : DataServiceBase
     {
+        #region Sample Methods
         [JavaScriptSerializer]
         [ServiceKnownType(typeof(Customer))]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
@@ -71,196 +73,168 @@ namespace Vivina.Erp.WebUI
                                       }
                        };
         }
+        #endregion
+
 
         #region auto-complete services
 
-        [JavaScriptSerializer]
-        [OperationContract]
-        public object FindCustomers(Hashtable parameters, Hashtable formData)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindCustomers(string q, int limit)
         {
-            return new ClientResponse
+            return new ClientResponse(() =>
             {
-                Data = new CustomerManager(this).SearchCustomers(Company.CompanyId,
-                    Convert.ToString(formData["txtSearch"]), Convert.ToInt32(parameters["limit"])).ToArray()
-            };
+                using (var manager = new CustomerManager(null))
+                    return manager.SearchCustomers(Company.CompanyId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchSuppliers(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindHelpPages(string q, int limit)
         {
-            return ClientResponse(() => new SupplierManager(this).SearchSupplier(Company.CompanyId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var manager = new SearchManager(null))
+                    return manager.GetHelpPages(Company.CompanyId, q, "", 0, limit)
+                                  .Select(p => new Recognizable(p.Url.Replace("~", Request.Url.Scheme + "://" + Request.Url.Host + Request.ApplicationPath),
+                                                                p.Name))
+                                  .ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchProduct(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindSuppliers(string q, int limit)
         {
-            using (var manager = new ProductManager(null))
-                return ClientResponse(() => manager.SearchProduct((int)Company.MatrixId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var manager = new SupplierManager(null))
+                    return manager.SearchSupplier(Company.CompanyId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchContact(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindProducts(string q, int limit)
         {
-            using (var manager = new ContactManager(null))
-                return ClientResponse(() => manager.SearchContacts(Company.CompanyId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var manager = new ProductManager(null))
+                    return manager.SearchProduct((int)Company.MatrixId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchProductAndService(String q, Int32 limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindContacts(string q, int limit)
         {
-            using (var receiptManager = new ReceiptManager(null))
-                return ClientResponse(() => receiptManager.SearchProductAndService((Int32)Company.MatrixId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var manager = new ContactManager(null))
+                    return manager.SearchContacts(Company.CompanyId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchManufacturer(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindProductAndService(String q, Int32 limit)
         {
-            using (var manager = new ManufacturerManager(null))
-                return ClientResponse(() => manager.SearchManufacturer((int)Company.MatrixId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var receiptManager = new ReceiptManager(null))
+                    return receiptManager.SearchProductAndService((Int32)Company.MatrixId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchTransporter(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindManufacturer(string q, int limit)
         {
-            using (var transporterManager = new TransporterManager(null))
-                return ClientResponse(() => transporterManager.SearchTransporter((int)Company.MatrixId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var manager = new ManufacturerManager(null))
+                    return manager.SearchManufacturer((int)Company.MatrixId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchProductInInventory(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindTransporter(string q, int limit)
         {
-            using (var manager = new ProductManager(null))
-                return ClientResponse(() => manager.SearchProductInInventory(User.Identity.UserId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var transporterManager = new TransporterManager(null))
+                    return transporterManager.SearchTransporter((int)Company.MatrixId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchUser(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindProductInInventory(string q, int limit)
         {
-            using (var companyManager = new CompanyManager(null))
-                return ClientResponse(() => companyManager.SearchUser(Company.CompanyId, q, limit).ToArray());
+            return new ClientResponse(() =>
+            {
+                using (var manager = new ProductManager(null))
+                    return manager.SearchProductInInventory(User.Identity.UserId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        [ScriptMethod]
-        public JsonResult SearchReport(string prefixText, int count)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindUser(string q, int limit)
         {
-            using (var reportsManager = new ReportsManager(null))
-                return ClientResponse(() => reportsManager.SearchReportAsArray(prefixText, count));
+            return new ClientResponse(() =>
+            {
+                using (var companyManager = new CompanyManager(null))
+                    return companyManager.SearchUser(Company.CompanyId, q, limit).ToArray();
+            });
         }
 
-        [JavaScriptSerializer]
-        public JsonResult SearchEmployees(string q, int limit)
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindReport(string prefixText, int count)
         {
-            if (String.IsNullOrEmpty(q)) return null;
+            return new ClientResponse(() =>
+            {
+                using (var reportsManager = new ReportsManager(null))
+                    return reportsManager.SearchReportAsArray(prefixText, count);
+            });
+        }
 
-            using (var humanResourcesManager = new HumanResourcesManager(null))
-                return ClientResponse(() => humanResourcesManager.SearchEmployees(Company.CompanyId, q, limit).ToArray());
+        [OperationContract, JavaScriptSerializer]
+        public ClientResponse FindEmployees(string q, int limit)
+        {
+            return new ClientResponse(() =>
+            {
+                using (var humanResourcesManager = new HumanResourcesManager(null))
+                    return humanResourcesManager.SearchEmployees(Company.CompanyId, q, limit).ToArray();
+            });
         }
 
         #endregion
 
-        #region Start Page Search
+      
 
-        //[JsonFilter]
-        //public Recognizable[] SearchSuppliers(string text)
+        //[JavaScriptSerializer]
+        //public JsonResult SearchBills(string text)
         //{
         //    if (String.IsNullOrEmpty(text))
         //        return null;
 
         //    using (var manager = new SearchManager(null))
         //    {
-        //        var suppliersList = from supplier in manager.GetSuppliersByName(Company.CompanyId, text, "", 0, 12)
-        //                            select new Recognizable(supplier.SupplierId.EncryptToHex(),
-        //                                                    supplier.Profile != null ?
-        //                                                        supplier.Profile.Name :
-        //                                                        supplier.LegalEntityProfile.CompanyName);
+        //        IQueryable<Recognizable> billList = from bill in manager.GetBills(Company.CompanyId, text, "", 0, 12)
+        //                                            select new Recognizable(bill.BillId.EncryptToHex(), bill.Description);
 
-        //        return suppliersList.ToArray();
+        //        return ClientResponse(() => billList.ToArray());
         //    }
         //}
 
 
-        [JavaScriptSerializer]
-        public JsonResult SearchContacts(string text)
-        {
-            if (String.IsNullOrEmpty(text))
-                return null;
+        //[JavaScriptSerializer]
+        //public JsonResult SearchInvoices(string text)
+        //{
+        //    if (String.IsNullOrEmpty(text))
+        //        return null;
 
-            using (var manager = new SearchManager(null))
-            {
-                IQueryable<Recognizable> contactsList = from contact in manager.GetContacts(Company.CompanyId, text, "", 0, 12)
-                                                        select new Recognizable(contact.ContactId.EncryptToHex(), contact.Name);
+        //    using (var manager = new SearchManager(null))
+        //    {
+        //        IQueryable<Recognizable> invoiceList = from invoice in manager.GetInvoices(Company.CompanyId, text, "", 0, 12)
+        //                                               select new Recognizable(invoice.InvoiceId.EncryptToHex(), invoice.Description);
 
-                return ClientResponse(() => contactsList.ToArray());
-            }
-        }
-
-
-        [JavaScriptSerializer]
-        public JsonResult SearchProducts(string text)
-        {
-            if (String.IsNullOrEmpty(text))
-                return null;
-
-            using (var manager = new ProductManager(null))
-            {
-                IQueryable<Recognizable> productList = from product in manager.GetProducts(Company.CompanyId, null, true, null, text, text,
-                                                                                           false, null, null, null, "", 0, 12)
-                                                       select new Recognizable(product.ProductId.EncryptToHex(), product.Name);
-
-                return ClientResponse(() => productList.ToArray());
-            }
-        }
-
-
-        [JavaScriptSerializer]
-        public JsonResult SearchBills(string text)
-        {
-            if (String.IsNullOrEmpty(text))
-                return null;
-
-            using (var manager = new SearchManager(null))
-            {
-                IQueryable<Recognizable> billList = from bill in manager.GetBills(Company.CompanyId, text, "", 0, 12)
-                                                    select new Recognizable(bill.BillId.EncryptToHex(), bill.Description);
-
-                return ClientResponse(() => billList.ToArray());
-            }
-        }
-
-
-        [JavaScriptSerializer]
-        public JsonResult SearchInvoices(string text)
-        {
-            if (String.IsNullOrEmpty(text))
-                return null;
-
-            using (var manager = new SearchManager(null))
-            {
-                IQueryable<Recognizable> invoiceList = from invoice in manager.GetInvoices(Company.CompanyId, text, "", 0, 12)
-                                                       select new Recognizable(invoice.InvoiceId.EncryptToHex(), invoice.Description);
-
-                return ClientResponse(() => invoiceList.ToArray());
-            }
-        }
-
-
-        [JavaScriptSerializer]
-        public JsonResult SearchHelpPages(string text)
-        {
-            if (String.IsNullOrEmpty(text))
-                return null;
-
-            using (var manager = new SearchManager(null))
-            {
-                IQueryable<Recognizable> helpPageList = from helpPage in manager.GetHelpPages(Company.CompanyId, text, "", 0, 12)
-                                                        select new Recognizable(helpPage.WebPageId.EncryptToHex(), helpPage.Name);
-
-                return ClientResponse(() => helpPageList.ToArray());
-            }
-        }
-
-        #endregion
+        //        return ClientResponse(() => invoiceList.ToArray());
+        //    }
+        //}
 
         //[JsonFilter]
         //public JsonResult GetServiceOrders(Hashtable Params, Hashtable FormData)
