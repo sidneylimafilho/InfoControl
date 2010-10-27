@@ -31,50 +31,7 @@ namespace Vivina.Erp.SystemFramework
             return DateTime.Now.ToString("yyMMddHHmmss");
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="page"></param>
-        /// <returns></returns>
-        public static string GenerateWebPageUrl(object page)
-        {
-            if (page != null)
-            {
-                var webPage = page as WebPage;
-
-                string seoText = "";
-                while ((webPage = webPage.WebPage1) != null)
-                    seoText = webPage.Name.Trim().RemoveSpecialChars() + "/" + seoText;
-
-                return GenerateUrl((page as WebPage).WebPageId,
-                                   (page as WebPage).Name,
-                                   (page as WebPage).RedirectUrl,
-                                   seoText);
-            }
-
-            return "";
-        }
-
-      
-
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="text"></param>
-        /// <param name="redirectUrl"></param>
-        /// <param name="page"></param>
-        /// <returns></returns>
-        public static string GenerateUrl(object id, object text, object redirectUrl, string page)
-        {
-            text = text ?? "";
-
-            if (String.IsNullOrEmpty(Convert.ToString(redirectUrl)))
-                return "~/site/" + page + HttpUtility.UrlEncode(text.ToString().RemoveSpecialChars()) + "," + id + ".aspx";
-
-            return Convert.ToString(redirectUrl);
-        }
+       
 
 
 
