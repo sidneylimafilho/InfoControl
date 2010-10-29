@@ -11,5 +11,5 @@
             OnNodeDataBound="tree_NodeDataBound">
         </telerik:RadTreeView>
     </div>
-    <input id="<%=this.ClientID %>" type="text" value="<%=this.SelectedValue %>" style="display: none" />
+    <input id="<%=this.ClientID %>" type="hidden" value="<%=this.SelectedValue %>" style="display: none" />
 </div>

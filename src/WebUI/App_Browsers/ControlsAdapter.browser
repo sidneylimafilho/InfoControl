@@ -15,9 +15,9 @@
       <adapter
         controlType="System.Web.UI.WebControls.Button"
         adapterType="InfoControl.Web.UI.Adapters.ButtonAdapter" />
-      <adapter
+      <!--<adapter
         controlType="System.Web.UI.WebControls.TextBox"
-        adapterType="InfoControl.Web.UI.Adapters.TextBoxAdapter" />
+        adapterType="InfoControl.Web.UI.Adapters.TextBoxAdapter" />-->
       <adapter
         controlType="System.Web.UI.WebControls.GridView"
         adapterType="InfoControl.Web.UI.Adapters.GridViewAdapter" />
