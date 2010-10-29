@@ -2745,6 +2745,8 @@
     <Content Include="App_Modules\Chat\ChatRoom.aspx" />
     <Content Include="App_Shared\JS\jquery-1.4.2.js" />
     <Content Include="App_Shared\JS\jquery-vsdoc.js" />
+    <Content Include="App_Shared\JS\jquery.glob.js" />
+    <Content Include="App_Shared\JS\jquery.glob.pt-br.js" />
     <Content Include="App_Shared\JS\jquery.ui.accordion.js" />
     <Content Include="App_Shared\JS\jquery.ui.button.js" />
     <Content Include="App_Shared\JS\jquery.ui.droppable.js" />

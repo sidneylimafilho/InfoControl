@@ -40,15 +40,6 @@ public partial class InfoControl_Project_Tasks {
     protected global::System.Web.UI.WebControls.TextBox txtTask;
     
     /// <summary>
-    /// ucDateTimeInterval control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::InfoControl.Web.UI.DateTimeIntervalControl ucDateTimeInterval;
-    
-    /// <summary>
     /// rbtlTaskStatus control.
     /// </summary>
     /// <remarks>
@@ -85,15 +76,6 @@ public partial class InfoControl_Project_Tasks {
     protected global::System.Web.UI.HtmlControls.HtmlGenericControl rating;
     
     /// <summary>
-    /// rtvTasks control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::Telerik.Web.UI.RadTreeView rtvTasks;
-    
-    /// <summary>
     /// btnNewTask control.
     /// </summary>
     /// <remarks>
@@ -101,15 +83,6 @@ public partial class InfoControl_Project_Tasks {
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
     protected global::System.Web.UI.WebControls.Button btnNewTask;
-    
-    /// <summary>
-    /// odsTaskByUser control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::InfoControl.Web.UI.WebControls.BusinessManagerDataSource odsTaskByUser;
     
     /// <summary>
     /// odsTaskStatus control.

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web.Caching;
 using System.Web.UI;
 using System.Xml.Linq;
-using InfoControl.Data;
+using InfoControl;
 
 public partial class Site_FeedReader : Vivina.Erp.SystemFramework.UserControlBase
 {

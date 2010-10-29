@@ -12,7 +12,7 @@ using System.Web.UI.HtmlControls;
 using Vivina.Erp.DataClasses;
 using Vivina.Erp.BusinessRules;
 using Vivina.Erp.SystemFramework;
-using InfoControl.Data;
+using InfoControl;
 
 using Telerik.Web.UI;
 

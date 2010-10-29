@@ -4,7 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace InfoControl.Data
+namespace InfoControl
 {
     public static class SequenceExtensions
     {
@@ -114,6 +114,11 @@ namespace InfoControl.Data
         public static IQueryable<T> SortAndPage<T>(this IQueryable<T> source, string sortExpression, int startRowIndex, int maximumRows, string defaultSortExpression)
         {
             return Page(Sort(source, sortExpression, defaultSortExpression), startRowIndex, maximumRows);
+        }
+
+        public static IQueryable<T> Offline<T>(this IQueryable<T> source)
+        {
+            return source.Select(t => t.Duplicate());
         }
 
         #region Nested type: SortClause

@@ -136,46 +136,15 @@ namespace Vivina.Erp.BusinessRules
         /// <returns></returns>
 
 
-        public IQueryable GetTasks(Int32? userId,
-                                   String sortExpression,
-                                   Int32 status,
-                                   FilterType filterType,
-                                   String name,
-                                   DateTimeInterval dtInterval,
-                                   int? parentId,
-                                   int? subjectId,
-                                   string pageName,
-                                   Int32? companyId,
-                                   String competency
-            )
+        public IQueryable<Task> GetTasks(Int32? userId, String sortExpression, Int32 status, FilterType filterType, String name,
+                                   DateTimeInterval dtInterval, int? parentId, int? subjectId, string pageName, Int32? companyId,
+                                   String competency)
         {
             //
             // returns all tasks and users releated  
             //
 
-            var query = from task in GetAllTasks()
-                        join taskUser in DbContext.TaskUsers on task.TaskId equals taskUser.TaskId
-                        select new
-                                   {
-                                       taskUser.UserId,
-                                       task,
-                                       taskUser.User,
-                                       task.AlertMinutesBefore,
-                                       task.Cost,
-                                       task.CreatorUserId,
-                                       task.Deadline,
-                                       task.Description,
-                                       FinishDate = task.FinishDate ?? DateTime.MaxValue,
-                                       task.ModifiedDate,
-                                       task.Name,
-                                       task.PageName,
-                                       task.ParentTaskId,
-                                       task.Priority,
-                                       task.StartDate,
-                                       task.SubjectId,
-                                       task.TaskId,
-                                       task.TaskStatusId
-                                   };
+            var query = GetAllTasks();
 
             //
             // Returns all tasks from users in one specific company
@@ -198,31 +167,27 @@ namespace Vivina.Erp.BusinessRules
             }
 
             if (userId.HasValue && String.IsNullOrEmpty(competency))
-                query = query.Where(task => task.UserId == userId);
+                query = query.Where(task => task.TaskUsers.Any(tu => tu.UserId == userId));
 
             if (dtInterval != null)
-                query =
-                    query.Where(t => t.task.StartDate >= dtInterval.BeginDate && t.task.FinishDate <= dtInterval.EndDate);
+                query = query.Where(t => t.StartDate >= dtInterval.BeginDate && t.FinishDate <= dtInterval.EndDate);
 
             if (!String.IsNullOrEmpty(pageName))
-                query = query.Where(t => t.task.PageName == pageName);
+                query = query.Where(t => t.PageName == pageName);
 
-            if (filterType == FilterType.Date || !String.IsNullOrEmpty(name))
+            if (!String.IsNullOrEmpty(name))
+                query = query.Where(t => t.Name.Contains(name));    
+
+            if (filterType == FilterType.Date)
             {
-                query = query.Where(t => !t.task.Tasks.Any());
-
-                if (!String.IsNullOrEmpty(name))
-                    query = query.Where(t => t.task.Name.Contains(name));
-
-                if (dtInterval != null)
-                    query =
-                        query.Where(
-                            t => t.task.StartDate >= dtInterval.BeginDate && t.task.StartDate <= dtInterval.EndDate);
+                query = query.Where(t => !t.Tasks.Any());
             }
             else if (filterType == FilterType.Hierarchy)
+            {
                 query = parentId.HasValue
-                            ? query.Where(t => t.task.ParentTaskId == parentId)
-                            : query.Where(t => !t.task.ParentTaskId.HasValue);
+                            ? query.Where(t => t.ParentTaskId == parentId)
+                            : query.Where(t => !t.ParentTaskId.HasValue);
+            }
 
             if (status != 0)
                 query = query.Where(s => s.TaskStatusId.Equals(status));

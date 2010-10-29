@@ -28,7 +28,7 @@
                 <fieldset id="filter" class="closed">
                     <legend onmouseover='setTimeout("$(\"#filter .body\").show(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"open\"})", 300);'>
                         Escolha o filtro desejado: </legend>
-                    <div class="body">
+                    <div class="body" asform="true" trigger="#tasks">
                         Modo de Exibição:<br />
                         <table>
                             <tr>
@@ -42,10 +42,23 @@
                                 <td>
                                     Parte do nome:
                                     <br />
-                                    <asp:TextBox ID="txtTask" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="txtTask" runat="server" field="name"></asp:TextBox>
                                 </td>
                                 <td>
-                                    <uc1:DateTimeInterval ID="ucDateTimeInterval" ValidationGroup="_None" runat="server" />
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                Início:<br />
+                                                <input type="text" ID="txtBeginDate" columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999"
+                                                     field="inicio" options="{relatedCalendar:'#txtEndDate'}" />
+                                            </td>
+                                            <td>
+                                                Fim:<br />
+                                                <input type="text" ID="txtEndDate" columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999"
+                                                     field="fim" />
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
@@ -59,7 +72,7 @@
                                 </td>
                             </tr>
                         </table>
-                        <asp:Button ID="btSearch" runat="server" Text="Pesquisar" OnClick="btSearch_Click" />
+                        <asp:Button ID="btSearch" command="click" runat="server" Text="Pesquisar" OnClientClick="return false;" />
                     </div>
                     <span class="closeButton" onmouseover='setTimeout("$(\"#filter .body\").hide(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"closed\"})", 950);'>
                         &nbsp;</span>
@@ -90,8 +103,7 @@
                                                 <font runat="server" id="date"></font>
                                             </td>
                                             <td style="white-space: nowrap">
-                                                <a class="inline" id="lnkTask"><font><$= Name.Trim('-')$> </font>
-                                                </a>&nbsp;
+                                                <a class="inline" id="lnkTask"><font><$= Name$> </font></a>&nbsp;
                                             </td>
                                             <td style="width: 100px;">
                                                 <div id="rating" runat="server" title="Classificação" class="inline">
@@ -104,41 +116,9 @@
                                     </table>
                                 </li>
                             </ul>
-                            <ul source="taskService.svc" method="GetTasksByUser" command="click">
-                                <li></li>
+                            <ul id="tasks" source="~/Infocontrol/TaskService.svc" action="GetTasks" command="load"
+                                options="{name:''}" template=".template">
                             </ul>
-                            <telerik:RadTreeView runat="server" ID="rtvTasks" DataFieldID="TaskId" DataFieldParentID="ParentTaskId"
-                                DataSourceID="odsTaskByUser" DataTextField="Name" DataValueField="TaskId" OnNodeDataBound="rtvTasks_NodeDataBound"
-                                CheckBoxes="False" AllowNodeEditing="false" MultipleSelect="false" OnDataBinding="rtvTasks_DataBinding"
-                                OnNodeExpand="rtvTasks_NodeExpand" LoadingStatusPosition="None">
-                                <NodeTemplate>
-                                    <table cellpadding="0" cellspacing="0">
-                                        <tr>
-                                            <td>
-                                                <input type="checkbox" runat="server" id="chkCompleteTask" onclick="CompleteTask(this)" />
-                                                &nbsp;
-                                            </td>
-                                            <td>
-                                                <font runat="server" id="date"></font>
-                                            </td>
-                                            <td style="white-space: nowrap">
-                                                <a class="inline" runat="server" id="lnkTask"><font runat="server" id="name">
-                                                    <%#Eval("Name").ToString().Trim('-')%>
-                                                </font></a>&nbsp;
-                                            </td>
-                                            <td style="width: 100px;">
-                                                <div id="rating" runat="server" title="Classificação" class="inline">
-                                                </div>
-                                                &nbsp;
-                                                <div href='javascript:;' id="shared" runat="server" class='shared' title="Tarefa Compartilhada Aguardando">
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </NodeTemplate>
-                                <CollapseAnimation Type="OutQuint" Duration="100"></CollapseAnimation>
-                                <ExpandAnimation Duration="100"></ExpandAnimation>
-                            </telerik:RadTreeView>
                             <br />
                             <br />
                             <br />
@@ -167,7 +147,7 @@
             </td>
         </tr>
     </table>
-    <VFX:BusinessManagerDataSource ID="odsTaskByUser" runat="server" TypeName="Vivina.Erp.BusinessRules.TaskManager"
+    <%--<VFX:BusinessManagerDataSource ID="odsTaskByUser" runat="server" TypeName="Vivina.Erp.BusinessRules.TaskManager"
         OldValuesParameterFormatString="original_{0}" onselecting="odsTaskByUser_Selecting"
         SelectMethod="GetTasksByUser">
         <selectparameters>
@@ -180,8 +160,8 @@
              <asp:Parameter Name="subjectId" Type="Int32" />
              <asp:Parameter Name="pageName" Type="String" />
         </selectparameters>
-    </VFX:BusinessManagerDataSource>
+    </VFX:BusinessManagerDataSource>--%>
     <VFX:BusinessManagerDataSource ID="odsTaskStatus" runat="server" SelectMethod="GetTaskStatus"
-        TypeName="Vivina.Erp.BusinessRules.TaskManager" onselected="odsTaskStatus_Selected">
+        TypeName="Vivina.Erp.BusinessRules.TaskManager">
     </VFX:BusinessManagerDataSource>
 </asp:Content>

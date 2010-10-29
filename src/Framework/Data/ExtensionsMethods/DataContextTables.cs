@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Linq.Mapping;
 using System.Reflection;
+using InfoControl.Data;
+
+
 #if !CompactFramework
 #if LinqCTP
 using System.Data.Linq;
@@ -11,7 +14,7 @@ using System.Data.Linq;
 #endif
 #endif
 
-namespace InfoControl.Data
+namespace InfoControl
 {
     public static class DataContextExtensions
     {

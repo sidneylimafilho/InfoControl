@@ -106,31 +106,33 @@
 
             var formData = {};
 
-            options.params = options.params || {};
-            if ($this.attrUp("params") && $this.attrUp("params") != "") {
-                $.extend(options.params, eval("(" + $this.attrUp("params") + ")"));
+            options.data = options.data || {};
+            if ($this.attrUp("options") && $this.attrUp("options") != "") {
+                $.extend(options.data, eval("(" + $this.attrUp("options") + ")"));
             }
 
             var form = $this.closest("[asForm]") || $this.closest("FORM");
 
             // Get All html form controls
             var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]")
-                        .map(function(i, elem) { options.params[elem.name] = elem.value; return true; });
+                        .map(function(i, elem) { options.params[$(elem).attr("field") || elem.name || elem.id] = elem.value; return true; });
 
-            // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
-            // is fired otherwise prepares the data Request Payload
-            if (!options.data)
-                options.data = $.toJSON(options.params);
+            
 
             // Allow fire DataBinding in controls that has TRIGGER atribute
             if ($this.attrUp("trigger")) {
-                $this.closest("[trigger]").find("[param]").each(function() {
-                    options.params[$this.attr("param")] = $this.val();
+                $this.closest("[trigger]").find("[options]").each(function() {
+                    options.data[$this.attr("options")] = $this.val();
                 });
 
                 $($this.attrUp("trigger")).dataBind(options);
                 return;
             }
+
+            // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
+            // is fired otherwise prepares the data Request Payload
+//            if (!options.data)
+//                options.data = $.toJSON(options.data);
 
             // save the control that is fire dataBind, because closure "sucess" dont access
             //var ctrl = $this;
@@ -145,7 +147,7 @@
                 $.ajax({
                     type: type,
                     url: url,
-                    data: options.data,
+                    data: $.toJSON(options.data),
                     contentType: "application/json",
                     ifModified: true,
                     success: function(result, status, request) {
@@ -230,6 +232,8 @@
 
             this._initializeAutocomplete();
 
+            this._initializeThemeStyle();
+
             return this;
 
 
@@ -262,21 +266,39 @@
                 if (!$(this).hasControl()) {
                     $(this).hasControl(true);
 
-                    $(this).datepicker({
-                        inline: false,
-                        showOn: "button",
+                    var dateOptions = {
+                        inline: true,
+                        showOn: "both",
                         changeMonth: true,
                         changeYear: true,
                         constrainInput: false,
-                        showOtherMonths: true,
                         nextText: "Próximo",
                         prevText: "Anterior",
                         dateFormat: "dd/mm/yy",
-                        monthNamesShort: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
-                                          'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
-                        dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
-                        dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
-                    });
+                        // monthNamesShort: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho',
+                        //                   'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                        // dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+                        // dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+                        numberOfMonths: 2,
+                        showOtherMonths: true,
+                        selectOtherMonths: true,
+                        showButtonPanel: false,
+                        // minDate: 0,
+                        // maxDate: "+12M",
+                        onSelect: function(selectedDate) {
+                            var option = "minDate",
+                                instance = $(this).data("datepicker"),
+                                date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat,
+                                                              selectedDate,
+                                                              instance.settings);
+
+                            $(instance.settings.relatedCalendar).datepicker("option", option, date);
+                        }
+                    };
+
+                    dateOptions = $.extend(true, dateOptions, eval("(" + $(this).attr("options") + ")"));
+
+                    $(this).datepicker(dateOptions);
 
                     $(this).setMask({ mask: "39/19/9999" });
                 }
@@ -377,6 +399,16 @@
                     });
                 }
             });
+        },
+        _initializeThemeStyle: function() {
+            $(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
+            $(":text", this).focusin(function() { $(this).parent().addClass('cDat11_focus'); })
+                            .focusout(function() { $(this).parent().removeClass().addClass('cDat11'); })
+                            .mouseenter(function() { $(this).parent().addClass('cDat11_hover'); })
+                            .mouseleave(function() { $(this).parent().removeClass('cDat11_hover'); })
+                            .after("<span />");
+
+
         }
 
 
