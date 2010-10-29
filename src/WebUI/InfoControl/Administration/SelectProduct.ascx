@@ -18,6 +18,5 @@
         </td>
     </tr>
 </table>
-<input id="<%=this.ClientID %>" type="text" value="<%=ViewState["CustomerId"] %>"
-    style="display: none" />
+
 

@@ -43,5 +43,4 @@
         </tr>
     </table>
 </asp:Panel>
-<input id="<%=this.ClientID %>" type="text" value="<%=ViewState["CustomerId"] %>"
-    style="display: none" />
+

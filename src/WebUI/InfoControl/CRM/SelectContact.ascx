@@ -34,6 +34,5 @@
             </td>
         </tr>
     </table>
-    <input id="<%=this.ClientID %>" type="text" value="<%=ViewState["ContactId"] %>"
-        style="display: none" />
+ 
 </asp:Panel>
