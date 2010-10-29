@@ -108,7 +108,7 @@ namespace Vivina.Erp.BusinessRules.Comments
         #endregion
 
         #region CustomerCall
-        public void AddCommentInCustomerCall(int id, string description)
+        public void AddCommentInCustomerCall(int companyId, int id, string description)
         {
             var user = new CustomerManager(this).GetCustomerCall(id).User;
 
@@ -123,6 +123,7 @@ namespace Vivina.Erp.BusinessRules.Comments
 
             AddCommentInCustomerCall(new Comment()
             {
+                CompanyId = companyId,
                 SubjectId = id,
                 Description = description,
                 UserName = userName,

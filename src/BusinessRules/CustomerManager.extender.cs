@@ -11,39 +11,11 @@ using InfoControl.Data;
 using InfoControl.Web.Security;
 using Vivina.Erp.BusinessRules.Comments;
 using Vivina.Erp.DataClasses;
-using User=InfoControl.Web.Security.DataEntities.User;
+using User = InfoControl.Web.Security.DataEntities.User;
 
 namespace Vivina.Erp.BusinessRules
 {
     //this region contains all enums used in Customer
-
-    #region enums
-
-    public enum CustomerStatus
-    {
-        DuplicatedCPF,
-        DuplicatedCNPJ,
-        Success
-    }
-
-    //public enum CustomerCallStatus
-    //{
-    //    Open,
-    //    Close,
-    //    Pendent
-    //}
-
-    //public enum CustomerCallStatus
-    //{
-    //    All = 1, Open, Closed
-    //}
-
-    //public enum ContractPeriods
-    //{
-
-    //}
-
-    #endregion
 
     public partial class CustomerManager
     {
@@ -731,10 +703,10 @@ namespace Vivina.Erp.BusinessRules
                 queryCustomerCall = queryCustomerCall.Where(cc => cc.CustomerCallTypeId == customerCallType);
 
             if (technicalEmployeeId.HasValue)
-                queryCustomerCall = queryCustomerCall.Where(cc => cc.TechnicalEmployeeId == (Int32) technicalEmployeeId);
+                queryCustomerCall = queryCustomerCall.Where(cc => cc.TechnicalEmployeeId == (Int32)technicalEmployeeId);
 
             if (customerId.HasValue)
-                queryCustomerCall = queryCustomerCall.Where(cc => cc.CustomerId == (Int32) customerId);
+                queryCustomerCall = queryCustomerCall.Where(cc => cc.CustomerId == (Int32)customerId);
 
             if (String.IsNullOrEmpty(sortExpression))
                 sortExpression = "OpenedDate DESC";
@@ -1237,11 +1209,12 @@ namespace Vivina.Erp.BusinessRules
         /// This method verifies if a customer is generating the same customerCall
         /// return false if exist the same customerCall  
         /// </summary>
-        public bool CheckCustomerCallFromCustomer(Int32 customerId, string exceptionSubject, string callNumberAssociated)
+        public bool CheckCustomerCallFromCustomer(CustomerCall entity)
         {
             CustomerCall customerCall =
-                DbContext.CustomerCalls.Where(x => x.CustomerId == customerId && x.Subject == exceptionSubject &&
-                                                   x.CallNumberAssociated == callNumberAssociated).FirstOrDefault();
+                DbContext.CustomerCalls.Where(x => x.CustomerId == entity.CustomerId &&
+                                                   x.Subject == entity.Subject &&
+                                                   x.CallNumberAssociated == entity.CallNumberAssociated).FirstOrDefault();
 
             if (customerCall == null)
                 return true;
@@ -1257,7 +1230,7 @@ namespace Vivina.Erp.BusinessRules
                 DbContext.SubmitChanges();
 
                 var commManager = new CommentsManager(this);
-                commManager.AddCommentInCustomerCall(customerCall.CustomerCallId,
+                commManager.AddCommentInCustomerCall(customerCall.CompanyId, customerCall.CustomerCallId,
                                                      "Chamado foi reaberto automaticamente pelo sistema!");
             }
 
@@ -1291,11 +1264,11 @@ namespace Vivina.Erp.BusinessRules
                         message = "Obrigado por ter reclamado dos nossos serviços, somente assim podemos aprender, corrigir e saber o que fazer para não errar mais.<br /><br />Muito Obrigado!";
                         break;
                     case CustomerCallType.ERROR:
-                        message = String.Format("<center>O erro que deu em {0} no dia {1} foi corrigido! Conosco essas joaninhas não tem vez!" + 
-                                                "<br /><br />"+
-                                                "<a href='javascript:;' onclick=\"top.tb_show('Chamado', 'CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId={2}');\">" + 
-                                                "   Clique aqui para ver o chamado gerado!"+
-                                                "</a>"+
+                        message = String.Format("<center>O erro que deu em {0} no dia {1} foi corrigido! Conosco essas joaninhas não tem vez!" +
+                                                "<br /><br />" +
+                                                "<a href='javascript:;' onclick=\"top.tb_show('Chamado', 'CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId={2}');\">" +
+                                                "   Clique aqui para ver o chamado gerado!" +
+                                                "</a>" +
                                                 "</center>",
                                                 entity.Sector,
                                                 entity.OpenedDate.ToShortDateString(),
@@ -1361,7 +1334,7 @@ namespace Vivina.Erp.BusinessRules
             {
                 var manager = new AlertManager(this);
                 Employee employee = new HumanResourcesManager(this).GetEmployee(entity.CompanyId,
-                                                                                (int) entity.TechnicalEmployeeId);
+                                                                                (int)entity.TechnicalEmployeeId);
 
                 manager.InsertAlert(entity.UserId.Value,
                                     "Olá " + original_entity.User.Profile.FirstName + ", prazer!<br /> Meu nome é " +
@@ -1384,7 +1357,7 @@ namespace Vivina.Erp.BusinessRules
         /// <param name="endTime"></param>
         public void InsertCustomerCall(CustomerCall entity, Int32? employeeId, DateTime? beginTime, DateTime? endTime)
         {
-            if (!CheckCustomerCallFromCustomer(entity.CustomerId, entity.Subject, entity.CallNumberAssociated))
+            if (!CheckCustomerCallFromCustomer(entity))
                 return;
 
             if (entity.CustomerEquipmentId == 0)
@@ -1475,11 +1448,11 @@ namespace Vivina.Erp.BusinessRules
                             customerType.CustomerTypeId
                         join saleItem in DbContext.SaleItems on sale.SaleId equals saleItem.SaleId
                         group saleItem by customerType.Name
-                        into gSaleItems
+                            into gSaleItems
                             select new
                                        {
                                            tipo = gSaleItems.Key,
-                                           total = (gSaleItems.Sum(x => x.UnitPrice*x.Quantity))
+                                           total = (gSaleItems.Sum(x => x.UnitPrice * x.Quantity))
                                        };
             return query.ToDataTable();
         }
@@ -1818,4 +1791,32 @@ namespace Vivina.Erp.BusinessRules
 
         //this region contains all functions of CustomerFollowupAction 
     }
+
+    #region enums
+
+    public enum CustomerStatus
+    {
+        DuplicatedCPF,
+        DuplicatedCNPJ,
+        Success
+    }
+
+    //public enum CustomerCallStatus
+    //{
+    //    Open,
+    //    Close,
+    //    Pendent
+    //}
+
+    //public enum CustomerCallStatus
+    //{
+    //    All = 1, Open, Closed
+    //}
+
+    //public enum ContractPeriods
+    //{
+
+    //}
+
+    #endregion
 }

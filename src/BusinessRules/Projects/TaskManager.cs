@@ -134,19 +134,7 @@ namespace Vivina.Erp.BusinessRules
         /// <param name="status"></param>
         /// <param name="filterType"></param>
         /// <returns></returns>
-        public IQueryable GetTasksByUser(Int32 userId,
-                                         String sortExpression,
-                                         int status,
-                                         FilterType filterType,
-                                         String name,
-                                         DateTimeInterval dtInterval,
-                                         int? parentId,
-                                         int? subjectId,
-                                         string pageName)
-        {
-            return GetTasks(userId, sortExpression, status, filterType, name, dtInterval, parentId, subjectId, pageName,
-                            null, null);
-        }
+
 
         public IQueryable GetTasks(Int32? userId,
                                    String sortExpression,
@@ -235,6 +223,7 @@ namespace Vivina.Erp.BusinessRules
                 query = parentId.HasValue
                             ? query.Where(t => t.task.ParentTaskId == parentId)
                             : query.Where(t => !t.task.ParentTaskId.HasValue);
+
             if (status != 0)
                 query = query.Where(s => s.TaskStatusId.Equals(status));
 
@@ -302,8 +291,8 @@ namespace Vivina.Erp.BusinessRules
         /// <returns></returns>
         public IQueryable GetNotClosedTasksAsDataTable(Int32 userId, String sortExpression)
         {
-            return GetTasksByUser(userId, String.Empty, TaskStatus.Concluded, FilterType.Hierarchy, String.Empty, null,
-                                  null, null, null);
+            return GetTasks(userId, String.Empty, TaskStatus.Concluded, FilterType.Hierarchy, String.Empty, null,
+                                  null, null, null, null, null);
         }
 
         /// <summary>
