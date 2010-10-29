@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using InfoControl;
 using InfoControl.Data;
 using Vivina.Erp.DataClasses;
 

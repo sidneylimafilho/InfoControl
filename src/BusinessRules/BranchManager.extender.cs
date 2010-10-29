@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using InfoControl.Data;
+using InfoControl;
 using Vivina.Erp.DataClasses;
 
 namespace Vivina.Erp.BusinessRules

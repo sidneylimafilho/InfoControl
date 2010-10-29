@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using InfoControl;
 using InfoControl.Data;
 using Vivina.Erp.BusinessRules.WebSites;
 using Vivina.Erp.DataClasses;

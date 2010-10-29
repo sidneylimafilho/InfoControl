@@ -1,5 +1,5 @@
 using System.Data;
-using InfoControl.Data;
+using InfoControl;
 
 namespace Vivina.Erp.BusinessRules
 {
