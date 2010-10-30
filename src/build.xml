@@ -20,7 +20,7 @@
     <KeyFilePath>$(SourceDir)\Simple.snk</KeyFilePath>
 	-->
 
-    <Configuration>CCNET</Configuration>
+    <Configuration>Debug</Configuration>
     <Platform>Any CPU</Platform>
 
     <ProductMajorVersion>0</ProductMajorVersion>
