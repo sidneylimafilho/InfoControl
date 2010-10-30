@@ -31,8 +31,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PostBuildEvent>
-      cd $(ProjectDir) 
-RemoveWrongPublishedFiles.wsf
+      cd $(MSBuildProjectDirectory)
+      RemoveWrongPublishedFiles.wsf
     </PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
