@@ -20,7 +20,7 @@
     <KeyFilePath>$(SourceDir)\Simple.snk</KeyFilePath>
 	-->
 
-    <Configuration>Release</Configuration>
+    <Configuration>CCNET</Configuration>
     <Platform>Any CPU</Platform>
 
     <ProductMajorVersion>0</ProductMajorVersion>
@@ -32,13 +32,13 @@
 	<TestAssembly>$(BuildDir)\Simple.Tests.exe</TestAssembly> 
 	-->
 
-    <PostBuildEvent>
-      RemoveWrongPublishedFiles.wsf
-    </PostBuildEvent>
+ 
+   
   </PropertyGroup>
 
   <ItemGroup>
     <SolutionFile Include="InfoControl 3.5.sln" />
+    
   </ItemGroup>
 <!--  
   <Import Project="util\msbuild\MSBuild.Community.Tasks.Targets"/>
@@ -82,7 +82,9 @@
 -->
 
   <Target Name="Build">
-    <MSBuild Projects="@(SolutionFile)" Properties="Configuration=$(Configuration);Platform=$(Platform);"/>
+    <MSBuild Projects="@(SolutionFile)" Properties="Configuration=$(Configuration);Platform=$(Platform);" >
+     
+    </MSBuild>
   </Target>
 
   <Target Name="Rebuild">
