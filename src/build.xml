@@ -31,6 +31,10 @@
     
 	<TestAssembly>$(BuildDir)\Simple.Tests.exe</TestAssembly> 
 	-->
+
+    <PostBuildEvent>
+      RemoveWrongPublishedFiles.wsf
+    </PostBuildEvent>
   </PropertyGroup>
 
   <ItemGroup>
