@@ -1884,10 +1884,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<FinancierOperation> _FinancierOperations;
 		
 		 
+  
   
   
   
@@ -1964,10 +1966,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
 		 
+  
   
   
   
@@ -2510,6 +2514,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
@@ -2707,10 +2712,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<AccountingPlan> _AccountingPlans;
 		
 		 
+  
   
   
   
@@ -2787,6 +2794,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
@@ -2827,10 +2835,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<AccountingPlan> _AccountingPlan1;
 		
 		 
+  
   
   
   
@@ -3294,6 +3304,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<AdditionalInformationData> _AdditionalInformationDatas;
 		
@@ -3334,10 +3345,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
 		 
+  
   
   
   
@@ -3661,6 +3674,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
@@ -3701,10 +3715,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<AdditionalInformation> _AdditionalInformation;
 		
 		 
+  
   
   
   
@@ -4058,10 +4074,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contact> _Contacts;
 		
 		 
+  
   
   
   
@@ -4138,10 +4156,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<LegalEntityProfile> _LegalEntityProfiles;
 		
 		 
+  
   
   
   
@@ -4218,10 +4238,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
 		 
+  
   
   
   
@@ -4661,6 +4683,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<User> _User;
 		
@@ -4933,10 +4956,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		 
+  
   
   
   
@@ -5204,10 +5229,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Event> _Events;
 		
 		 
+  
   
   
   
@@ -5284,10 +5311,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Role> _Roles;
 		
 		 
+  
   
   
   
@@ -5730,10 +5759,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Account> _Accounts;
 		
 		 
+  
   
   
   
@@ -5810,6 +5841,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
@@ -5850,10 +5882,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		 
+  
   
   
   
@@ -6276,6 +6310,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Product> _Products;
 		
@@ -6487,10 +6522,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		 
+  
   
   
   
@@ -6567,10 +6604,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
 		 
+  
   
   
   
@@ -6647,10 +6686,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Statement> _Statements;
 		
 		 
+  
   
   
   
@@ -6727,6 +6768,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -6767,10 +6809,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter;
 		
 		 
+  
   
   
   
@@ -7537,6 +7581,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
@@ -7726,6 +7771,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<BranchFunction> _BranchFunctions;
 		
@@ -7766,10 +7812,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<LegalEntityProfile> _LegalEntityProfiles;
 		
 		 
+  
   
   
   
@@ -8059,10 +8107,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Branch> _Branch;
 		
 		 
+  
   
   
   
@@ -8370,10 +8420,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<BudgetItem> _BudgetItems;
 		
 		 
+  
   
   
   
@@ -8450,10 +8502,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		 
+  
   
   
   
@@ -8530,6 +8584,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -8570,10 +8625,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -9643,6 +9700,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Budget> _Budget;
 		
@@ -9683,10 +9741,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -10257,6 +10317,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
@@ -10456,10 +10517,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Category> _Categories;
 		
 		 
+  
   
   
   
@@ -10536,10 +10599,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Category> _Category1;
 		
 		 
+  
   
   
   
@@ -10992,6 +11057,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
@@ -11180,6 +11246,7 @@ namespace Vivina.Erp.DataClasses
 		private System.Nullable<int> _BankId;
 		
 		 
+  
   
   
   
@@ -11538,10 +11605,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Neighborhood> _Neighborhoods;
 		
 		 
+  
   
   
   
@@ -11852,6 +11921,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
@@ -12023,6 +12093,7 @@ namespace Vivina.Erp.DataClasses
 		private int _CompanyId;
 		
 		 
+  
   
   
   
@@ -12492,10 +12563,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Account> _Accounts;
 		
 		 
+  
   
   
   
@@ -12572,10 +12645,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<AdditionalInformation> _AdditionalInformations;
 		
 		 
+  
   
   
   
@@ -12652,10 +12727,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
 		 
+  
   
   
   
@@ -12732,10 +12809,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Category> _Categories;
 		
 		 
+  
   
   
   
@@ -12812,10 +12891,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CompanyUser> _CompanyUsers;
 		
 		 
+  
   
   
   
@@ -12892,10 +12973,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		 
+  
   
   
   
@@ -12972,10 +13055,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ContractType> _ContractTypes;
 		
 		 
+  
   
   
   
@@ -13052,10 +13137,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CostCenter> _CostCenters1;
 		
 		 
+  
   
   
   
@@ -13132,10 +13219,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		 
+  
   
   
   
@@ -13212,10 +13301,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerFollowupAction> _CustomerFollowupActions;
 		
 		 
+  
   
   
   
@@ -13292,10 +13383,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomFunction> _CustomFunctions;
 		
 		 
+  
   
   
   
@@ -13372,10 +13465,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<DocumentTemplate> _DocumentTemplates;
 		
 		 
+  
   
   
   
@@ -13452,10 +13547,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		 
+  
   
   
   
@@ -13532,10 +13629,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeFunction> _EmployeeFunctions;
 		
 		 
+  
   
   
   
@@ -13612,10 +13711,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ExpenditureAuthorization> _ExpenditureAuthorizations;
 		
 		 
+  
   
   
   
@@ -13692,10 +13793,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<FinancierOperation> _FinancierOperations;
 		
 		 
+  
   
   
   
@@ -13772,10 +13875,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
 		 
+  
   
   
   
@@ -13852,10 +13957,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments1;
 		
 		 
+  
   
   
   
@@ -13932,10 +14039,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
 		 
+  
   
   
   
@@ -14012,10 +14121,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<OtherSchool> _OtherSchools;
 		
 		 
+  
   
   
   
@@ -14092,10 +14203,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
 		 
+  
   
   
   
@@ -14172,10 +14285,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Post> _Posts;
 		
 		 
+  
   
   
   
@@ -14252,10 +14367,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Product> _Products;
 		
 		 
+  
   
   
   
@@ -14332,10 +14449,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
 		 
+  
   
   
   
@@ -14412,10 +14531,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
 		 
+  
   
   
   
@@ -14492,10 +14613,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Representant> _Representants;
 		
 		 
+  
   
   
   
@@ -14572,10 +14695,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
 		 
+  
   
   
   
@@ -14652,10 +14777,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		 
+  
   
   
   
@@ -14732,10 +14859,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderEquipmentDamage> _ServiceOrderEquipmentDamages;
 		
 		 
+  
   
   
   
@@ -14812,10 +14941,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderInstallType> _ServiceOrderInstallTypes;
 		
 		 
+  
   
   
   
@@ -14892,10 +15023,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderProductType> _ServiceOrderProductTypes;
 		
 		 
+  
   
   
   
@@ -14972,10 +15105,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderType> _ServiceOrderTypes;
 		
 		 
+  
   
   
   
@@ -15052,10 +15187,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Statement> _Statements;
 		
 		 
+  
   
   
   
@@ -15132,10 +15269,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
 		 
+  
   
   
   
@@ -15212,10 +15351,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Transporter> _Transporters;
 		
 		 
+  
   
   
   
@@ -15292,10 +15433,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Cnae> _Cnae;
 		
 		 
+  
   
   
   
@@ -15372,10 +15515,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<JudicialNature> _JudicialNature;
 		
 		 
+  
   
   
   
@@ -15452,6 +15597,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Plan> _Plan;
 		
@@ -15492,10 +15638,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ProfitAssessment> _ProfitAssessment;
 		
 		 
+  
   
   
   
@@ -18771,6 +18919,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
@@ -19424,10 +19573,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<UsersInRole> _UsersInRoles;
 		
 		 
+  
   
   
   
@@ -19504,10 +19655,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
 		 
+  
   
   
   
@@ -19906,10 +20059,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -19986,10 +20141,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ProductManufacturer> _ProductManufacturer;
 		
 		 
+  
   
   
   
@@ -20443,10 +20600,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerContact> _CustomerContacts;
 		
 		 
+  
   
   
   
@@ -20523,10 +20682,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<SupplierContact> _SupplierContacts;
 		
 		 
+  
   
   
   
@@ -20603,10 +20764,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -21391,10 +21554,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ContractAssociated> _ContractAssociateds;
 		
 		 
+  
   
   
   
@@ -21471,10 +21636,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		 
+  
   
   
   
@@ -21551,10 +21718,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
 		 
+  
   
   
   
@@ -21631,10 +21800,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ContractType> _ContractType;
 		
 		 
+  
   
   
   
@@ -21711,10 +21882,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		 
+  
   
   
   
@@ -21791,6 +21964,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<FinancierOperation> _FinancierOperation;
 		
@@ -21831,10 +22005,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Invoice> _Invoice;
 		
 		 
+  
   
   
   
@@ -23182,6 +23358,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Contract> _Contract;
 		
@@ -23464,6 +23641,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -23654,6 +23832,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -23881,10 +24060,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		 
+  
   
   
   
@@ -24176,10 +24357,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
 		 
+  
   
   
   
@@ -24256,10 +24439,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Invoice> _Invoices;
 		
 		 
+  
   
   
   
@@ -24336,6 +24521,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -24376,10 +24562,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter1;
 		
 		 
+  
   
   
   
@@ -24868,6 +25056,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
@@ -25168,10 +25357,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
 		 
+  
   
   
   
@@ -25248,10 +25439,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		 
+  
   
   
   
@@ -25328,10 +25521,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerEquipment> _CustomerEquipments;
 		
 		 
+  
   
   
   
@@ -25408,10 +25603,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
 		 
+  
   
   
   
@@ -25488,10 +25685,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		 
+  
   
   
   
@@ -25568,10 +25767,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -25648,10 +25849,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		 
+  
   
   
   
@@ -25728,10 +25931,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
 		 
+  
   
   
   
@@ -25808,10 +26013,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
 		 
+  
   
   
   
@@ -27177,10 +27384,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ExpenditureAuthorization> _ExpenditureAuthorizations;
 		
 		 
+  
   
   
   
@@ -27257,10 +27466,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -27337,10 +27548,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerCallStatus> _CustomerCallStatus;
 		
 		 
+  
   
   
   
@@ -27417,10 +27630,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerEquipment> _CustomerEquipment;
 		
 		 
+  
   
   
   
@@ -27497,6 +27712,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Event> _Event;
 		
@@ -27537,10 +27753,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
 		 
+  
   
   
   
@@ -28638,6 +28856,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
@@ -28791,6 +29010,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -29018,10 +29238,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerFollowup> _CustomerFollowups;
 		
 		 
+  
   
   
   
@@ -29098,10 +29320,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -29497,10 +29721,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		 
+  
   
   
   
@@ -29577,10 +29803,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -30279,10 +30507,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerContact> _CustomerContact;
 		
 		 
+  
   
   
   
@@ -30359,10 +30589,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerFollowupAction> _CustomerFollowupAction;
 		
 		 
+  
   
   
   
@@ -30850,10 +31082,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerFollowup> _CustomerFollowups;
 		
 		 
+  
   
   
   
@@ -31168,10 +31402,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
 		 
+  
   
   
   
@@ -31482,10 +31718,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -31761,10 +31999,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CompanyUser> _CompanyUsers;
 		
 		 
+  
   
   
   
@@ -31841,10 +32081,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
 		 
+  
   
   
   
@@ -31921,10 +32163,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments;
 		
 		 
+  
   
   
   
@@ -32001,6 +32245,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
@@ -32041,10 +32286,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -32776,10 +33023,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -33104,6 +33353,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<DocumentTemplate> _DocumentTemplates;
 		
@@ -33305,6 +33555,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
@@ -33345,10 +33596,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -33783,6 +34036,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
@@ -34080,10 +34334,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Budget> _Budgets;
 		
 		 
+  
   
   
   
@@ -34160,10 +34416,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
 		 
+  
   
   
   
@@ -34240,10 +34498,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		 
+  
   
   
   
@@ -34320,10 +34580,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeAdditionalInformation> _EmployeeAdditionalInformations;
 		
 		 
+  
   
   
   
@@ -34400,10 +34662,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeDependent> _EmployeeDependents;
 		
 		 
+  
   
   
   
@@ -34480,10 +34744,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeOtherSchool> _EmployeeOtherSchools;
 		
 		 
+  
   
   
   
@@ -34560,10 +34826,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequest> _PurchaseRequests;
 		
 		 
+  
   
   
   
@@ -34640,10 +34908,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderBook> _ServiceOrderBooks;
 		
 		 
+  
   
   
   
@@ -34720,10 +34990,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<StatusHistory> _StatusHistories;
 		
 		 
+  
   
   
   
@@ -34800,10 +35072,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bond> _Bond;
 		
 		 
+  
   
   
   
@@ -34880,10 +35154,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -34960,10 +35236,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<OrganizationLevel> _OrganizationLevel;
 		
 		 
+  
   
   
   
@@ -35040,10 +35318,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
 		 
+  
   
   
   
@@ -35120,10 +35400,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
 		 
+  
   
   
   
@@ -35200,6 +35482,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Supplier> _Supplier2;
 		
@@ -35240,10 +35523,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Supplier> _Supplier3;
 		
 		 
+  
   
   
   
@@ -37773,10 +38058,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<AdditionalInformation> _AdditionalInformation;
 		
 		 
+  
   
   
   
@@ -37853,10 +38140,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		 
+  
   
   
   
@@ -38246,6 +38535,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
@@ -38473,6 +38763,7 @@ namespace Vivina.Erp.DataClasses
 		private int _CompanyId;
 		
 		 
+  
   
   
   
@@ -38789,10 +39080,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeFunctionHistory> _EmployeeFunctionHistories;
 		
 		 
+  
   
   
   
@@ -39086,6 +39379,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<EmployeeFunction> _EmployeeFunction;
 		
@@ -39126,10 +39420,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -39501,10 +39797,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		 
+  
   
   
   
@@ -39869,10 +40167,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		 
+  
   
   
   
@@ -39949,10 +40249,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<EventStatus> _EventStatus;
 		
 		 
+  
   
   
   
@@ -40663,6 +40965,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Event> _Events;
 		
@@ -40862,6 +41165,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
@@ -40902,10 +41206,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerCall> _CustomerCall;
 		
 		 
+  
   
   
   
@@ -41451,6 +41757,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
@@ -41491,10 +41798,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -41893,10 +42202,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		 
+  
   
   
   
@@ -41973,10 +42284,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Parcel> _Parcels;
 		
 		 
+  
   
   
   
@@ -42053,10 +42366,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Account> _Account;
 		
 		 
+  
   
   
   
@@ -42749,10 +43064,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<BranchFunction> _BranchFunctions;
 		
 		 
+  
   
   
   
@@ -42829,10 +43146,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PackageFunction> _PackageFunctions;
 		
 		 
+  
   
   
   
@@ -43437,10 +43756,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryMoviment> _InventoryMoviments;
 		
 		 
+  
   
   
   
@@ -43517,10 +43838,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
 		 
+  
   
   
   
@@ -43597,10 +43920,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -43677,10 +44002,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
 		 
+  
   
   
   
@@ -44636,6 +44963,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
@@ -44814,6 +45142,7 @@ namespace Vivina.Erp.DataClasses
 		private System.DateTime _ModifiedDate;
 		
 		 
+  
   
   
   
@@ -45100,10 +45429,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<InventoryDropType> _InventoryDropType;
 		
 		 
+  
   
   
   
@@ -45180,10 +45511,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
 		 
+  
   
   
   
@@ -45260,6 +45593,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
@@ -45300,10 +45634,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Sale> _Sale;
 		
 		 
+  
   
   
   
@@ -46211,10 +46547,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -46291,6 +46629,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Deposit> _Deposit;
 		
@@ -46331,10 +46670,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company1;
 		
 		 
+  
   
   
   
@@ -46913,6 +47254,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -46953,10 +47295,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -47399,6 +47743,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Inventory> _Inventory;
 		
@@ -47724,10 +48069,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		 
+  
   
   
   
@@ -47804,10 +48151,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Sale> _Sales;
 		
 		 
+  
   
   
   
@@ -47884,10 +48233,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -47964,10 +48315,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<AccountingPlan> _AccountingPlan;
 		
 		 
+  
   
   
   
@@ -48832,6 +49185,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
@@ -49059,10 +49413,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
 		 
+  
   
   
   
@@ -49139,10 +49495,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ProfileAddress> _ProfileAddresses;
 		
 		 
+  
   
   
   
@@ -49219,10 +49577,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
 		 
+  
   
   
   
@@ -49299,10 +49659,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Address> _Address;
 		
 		 
+  
   
   
   
@@ -50205,6 +50567,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Product> _Products;
 		
@@ -50417,6 +50780,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
@@ -50572,6 +50936,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -50815,10 +51180,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
 		 
+  
   
   
   
@@ -50895,10 +51262,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -51282,10 +51651,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<EmployeeOtherSchool> _EmployeeOtherSchools;
 		
 		 
+  
   
   
   
@@ -51591,6 +51962,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PackageAdditional> _PackageAdditionals;
 		
@@ -51631,10 +52003,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PackageFunction> _PackageFunctions;
 		
 		 
+  
   
   
   
@@ -52137,10 +52511,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -52465,10 +52841,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Package> _Package;
 		
 		 
+  
   
   
   
@@ -52728,6 +53106,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<WebPage> _WebPage;
 		
@@ -52928,6 +53307,7 @@ namespace Vivina.Erp.DataClasses
 		private int _CompanyId;
 		
 		 
+  
   
   
   
@@ -53224,10 +53604,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -53304,10 +53686,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
 		 
+  
   
   
   
@@ -53384,10 +53768,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<FinancierOperation> _FinancierOperation;
 		
 		 
+  
   
   
   
@@ -54135,10 +54521,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<FinancierOperation> _FinancierOperations;
 		
 		 
+  
   
   
   
@@ -54469,10 +54857,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Function> _Function;
 		
 		 
+  
   
   
   
@@ -54549,10 +54939,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<PermissionType> _PermissionType;
 		
 		 
+  
   
   
   
@@ -54936,6 +55328,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Permission> _Permissions;
 		
@@ -55160,10 +55553,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
 		 
+  
   
   
   
@@ -55240,10 +55635,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Package> _Package;
 		
 		 
+  
   
   
   
@@ -55726,6 +56123,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees;
 		
@@ -55766,10 +56164,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -56156,10 +56556,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<BudgetItem> _BudgetItems;
 		
 		 
+  
   
   
   
@@ -56236,10 +56638,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts1;
 		
 		 
+  
   
   
   
@@ -56316,10 +56720,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
 		 
+  
   
   
   
@@ -56396,10 +56802,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryRMA> _InventoryRMAs;
 		
 		 
+  
   
   
   
@@ -56476,10 +56884,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ProductImage> _ProductImages;
 		
 		 
+  
   
   
   
@@ -56556,10 +56966,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ProductPackage> _ProductPackages;
 		
 		 
+  
   
   
   
@@ -56636,10 +57048,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
 		 
+  
   
   
   
@@ -56716,10 +57130,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
 		 
+  
   
   
   
@@ -56796,10 +57212,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<SaleItem> _SaleItems;
 		
 		 
+  
   
   
   
@@ -56876,10 +57294,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -56956,10 +57376,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<BarCodeType> _BarCodeType;
 		
 		 
+  
   
   
   
@@ -58623,6 +59045,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
@@ -58794,6 +59217,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Description;
 		
 		 
+  
   
   
   
@@ -59058,10 +59482,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts;
 		
 		 
+  
   
   
   
@@ -59138,10 +59564,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
 		 
+  
   
   
   
@@ -59497,10 +59925,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CompositeProduct> _CompositeProducts;
 		
 		 
+  
   
   
   
@@ -59577,6 +60007,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
@@ -59617,10 +60048,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
 		 
+  
   
   
   
@@ -60035,6 +60468,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ProductPart> _ProductParts;
 		
@@ -60075,10 +60509,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -60572,10 +61008,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
 		 
+  
   
   
   
@@ -60652,10 +61090,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ProfileAddress> _ProfileAddresses;
 		
 		 
+  
   
   
   
@@ -60732,10 +61172,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
 		 
+  
   
   
   
@@ -60812,10 +61254,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<EducationLevel> _EducationLevel;
 		
 		 
+  
   
   
   
@@ -60892,10 +61336,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Address> _Address;
 		
 		 
+  
   
   
   
@@ -62572,10 +63018,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
 		 
+  
   
   
   
@@ -62923,6 +63371,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Company> _Companies;
 		
@@ -63152,10 +63601,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrderItem> _PurchaseOrderItems;
 		
 		 
+  
   
   
   
@@ -63232,10 +63683,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -63312,10 +63765,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		 
+  
   
   
   
@@ -63392,10 +63847,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
 		 
+  
   
   
   
@@ -63472,6 +63929,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<User> _User1;
 		
@@ -63512,10 +63970,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<User> _User2;
 		
 		 
+  
   
   
   
@@ -64606,10 +65066,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
 		 
+  
   
   
   
@@ -64686,10 +65148,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<PurchaseOrder> _PurchaseOrder;
 		
 		 
+  
   
   
   
@@ -64766,10 +65230,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
 		 
+  
   
   
   
@@ -65396,6 +65862,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
@@ -65605,10 +66072,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseRequestItem> _PurchaseRequestItems;
 		
 		 
+  
   
   
   
@@ -65685,10 +66154,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CostCenter> _CostCenter;
 		
 		 
+  
   
   
   
@@ -65765,6 +66236,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Address> _Address;
 		
@@ -65805,10 +66277,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -66518,10 +66992,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -66598,6 +67074,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ProductPackage> _ProductPackage;
 		
@@ -66638,10 +67115,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ProductManufacturer> _ProductManufacturer;
 		
 		 
+  
   
   
   
@@ -67195,10 +67674,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<QuotationItem> _QuotationItems;
 		
 		 
+  
   
   
   
@@ -67275,10 +67756,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -67725,10 +68208,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Quotation> _Quotation;
 		
 		 
+  
   
   
   
@@ -68157,10 +68642,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReceiptItem> _ReceiptItems;
 		
 		 
+  
   
   
   
@@ -68237,10 +68724,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		 
+  
   
   
   
@@ -68317,10 +68806,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -68397,10 +68888,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Supplier> _Supplier;
 		
 		 
+  
   
   
   
@@ -69330,6 +69823,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -69597,6 +70091,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Receipt> _Receipt;
 		
@@ -69637,10 +70132,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -70152,10 +70649,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ReportColumnsSchema> _ReportColumnsSchema;
 		
 		 
+  
   
   
   
@@ -70477,10 +70976,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportColumn> _ReportColumns;
 		
 		 
+  
   
   
   
@@ -70557,6 +71058,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportSort> _ReportSorts;
 		
@@ -70597,10 +71099,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ReportDataType> _ReportDataType;
 		
 		 
+  
   
   
   
@@ -71133,6 +71637,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ReportDataType> _ReportDataType;
 		
@@ -71359,6 +71864,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportColumnsSchema> _ReportColumnsSchemas;
 		
@@ -71399,10 +71905,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportDataFunction> _ReportDataFunctions;
 		
 		 
+  
   
   
   
@@ -71696,10 +72204,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ReportColumnsSchema> _ReportColumnsSchema;
 		
 		 
+  
   
   
   
@@ -72011,6 +72521,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ReportDataType> _ReportDataType;
 		
@@ -72247,10 +72758,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportColumn> _ReportColumns;
 		
 		 
+  
   
   
   
@@ -72327,10 +72840,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportSort> _ReportSorts;
 		
 		 
+  
   
   
   
@@ -72778,10 +73293,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Report> _Report;
 		
 		 
+  
   
   
   
@@ -73091,10 +73608,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ReportColumnsSchema> _ReportColumnsSchemas;
 		
 		 
+  
   
   
   
@@ -73389,10 +73908,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Contract> _Contracts;
 		
 		 
+  
   
   
   
@@ -73469,10 +73990,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CustomerCall> _CustomerCalls;
 		
 		 
+  
   
   
   
@@ -73549,10 +74072,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderBook> _ServiceOrderBooks;
 		
 		 
+  
   
   
   
@@ -73629,10 +74154,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<LegalEntityProfile> _LegalEntityProfile;
 		
 		 
+  
   
   
   
@@ -74266,10 +74793,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Representant> _Representant;
 		
 		 
+  
   
   
   
@@ -74564,10 +75093,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Permission> _Permissions;
 		
 		 
+  
   
   
   
@@ -74644,10 +75175,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Application> _Application;
 		
 		 
+  
   
   
   
@@ -75138,10 +75671,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
 		 
+  
   
   
   
@@ -75218,10 +75753,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Customer> _Customer;
 		
 		 
+  
   
   
   
@@ -75298,10 +75835,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Budget> _Budget;
 		
 		 
+  
   
   
   
@@ -75378,10 +75917,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Invoice> _Invoice;
 		
 		 
+  
   
   
   
@@ -75458,10 +75999,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -76517,10 +77060,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Sale> _Sale;
 		
 		 
+  
   
   
   
@@ -76953,6 +77498,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -77437,10 +77983,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<BudgetItem> _BudgetItems;
 		
 		 
+  
   
   
   
@@ -77517,10 +78065,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderItem> _ServiceOrderItems;
 		
 		 
+  
   
   
   
@@ -77993,10 +78543,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrderItem> _ServiceOrderItems;
 		
 		 
+  
   
   
   
@@ -78073,10 +78625,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerCall> _CustomerCall;
 		
 		 
+  
   
   
   
@@ -78153,10 +78707,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CustomerEquipment> _CustomerEquipment;
 		
 		 
+  
   
   
   
@@ -78233,10 +78789,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Receipt> _Receipt;
 		
 		 
+  
   
   
   
@@ -78313,10 +78871,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ServiceOrderStatus> _ServiceOrderStatus;
 		
 		 
+  
   
   
   
@@ -79511,6 +80071,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -79551,10 +80112,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Employee> _Employee;
 		
 		 
+  
   
   
   
@@ -79993,6 +80556,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -80198,6 +80762,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -80367,6 +80932,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -80622,10 +81188,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<ServiceOrder> _ServiceOrder;
 		
 		 
+  
   
   
   
@@ -80702,10 +81270,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Product> _Product;
 		
 		 
+  
   
   
   
@@ -81233,6 +81803,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -81402,6 +81973,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -81641,6 +82213,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
@@ -81796,6 +82369,7 @@ namespace Vivina.Erp.DataClasses
 		private int _CompanyId;
 		
 		 
+  
   
   
   
@@ -82037,10 +82611,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<ServiceOrder> _ServiceOrders;
 		
 		 
+  
   
   
   
@@ -82330,6 +82906,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
@@ -82533,6 +83110,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Profile> _Profiles;
 		
@@ -82686,6 +83264,7 @@ namespace Vivina.Erp.DataClasses
 		private string _Name;
 		
 		 
+  
   
   
   
@@ -82913,10 +83492,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<City> _Cities;
 		
 		 
+  
   
   
   
@@ -83213,10 +83794,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<StatementItem> _StatementItems;
 		
 		 
+  
   
   
   
@@ -83293,10 +83876,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bill> _Bill;
 		
 		 
+  
   
   
   
@@ -83837,6 +84422,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Statement> _Statement;
 		
@@ -84140,6 +84726,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Alienation> _Alienation;
 		
@@ -84180,10 +84767,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -84598,10 +85187,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Bill> _Bills;
 		
 		 
+  
   
   
   
@@ -84678,10 +85269,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees1;
 		
 		 
+  
   
   
   
@@ -84758,10 +85351,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Employee> _Employees3;
 		
 		 
+  
   
   
   
@@ -84838,10 +85433,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Inventory> _Inventories;
 		
 		 
+  
   
   
   
@@ -84918,10 +85515,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders;
 		
 		 
+  
   
   
   
@@ -84998,10 +85597,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
 		 
+  
   
   
   
@@ -85078,10 +85679,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -85158,10 +85761,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Profile> _Profile;
 		
 		 
+  
   
   
   
@@ -85238,10 +85843,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Bank> _Bank;
 		
 		 
+  
   
   
   
@@ -86354,10 +86961,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Supplier> _Suppliers;
 		
 		 
+  
   
   
   
@@ -86647,10 +87256,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Contact> _Contact;
 		
 		 
+  
   
   
   
@@ -86901,6 +87512,7 @@ namespace Vivina.Erp.DataClasses
 		private int _ApplicationId;
 		
 		 
+  
   
   
   
@@ -87235,10 +87847,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Task> _Tasks;
 		
 		 
+  
   
   
   
@@ -87315,6 +87929,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Task> _Task1;
 		
@@ -87355,10 +87970,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<TaskStatus> _TaskStatus;
 		
 		 
+  
   
   
   
@@ -88032,6 +88649,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Task> _Tasks;
 		
@@ -88221,10 +88839,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Task> _Task;
 		
 		 
+  
   
   
   
@@ -88488,10 +89108,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Receipt> _Receipts;
 		
 		 
+  
   
   
   
@@ -88568,10 +89190,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
@@ -89010,6 +89634,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<User> _User;
 		
@@ -89268,10 +89893,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Alert> _Alerts;
 		
 		 
+  
   
   
   
@@ -89348,10 +89975,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<CompanyUser> _CompanyUsers;
 		
 		 
+  
   
   
   
@@ -89428,10 +90057,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Customer> _Customers;
 		
 		 
+  
   
   
   
@@ -89508,10 +90139,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<DropPayout> _DropPayouts;
 		
 		 
+  
   
   
   
@@ -89588,10 +90221,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<InventoryHistory> _InventoryHistories;
 		
 		 
+  
   
   
   
@@ -89668,10 +90303,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders1;
 		
 		 
+  
   
   
   
@@ -89748,10 +90385,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PurchaseOrder> _PurchaseOrders3;
 		
 		 
+  
   
   
   
@@ -89828,10 +90467,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<Task> _Tasks;
 		
 		 
+  
   
   
   
@@ -89908,10 +90549,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<UserActivityLog> _UserActivityLogs;
 		
 		 
+  
   
   
   
@@ -89988,10 +90631,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<WebPage> _WebPages;
 		
 		 
+  
   
   
   
@@ -91202,6 +91847,7 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<User> _User;
 		
@@ -91242,10 +91888,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<CompanyUser> _CompanyUser;
 		
 		 
+  
   
   
   
@@ -91719,10 +92367,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<PageCategory> _PageCategories;
 		
 		 
+  
   
   
   
@@ -91799,10 +92449,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntitySet<WebPage> _WebPages;
 		
 		 
+  
   
   
   
@@ -91879,10 +92531,12 @@ namespace Vivina.Erp.DataClasses
   
   
   
+  
  [NonSerialized] 
  private EntityRef<Company> _Company;
 		
 		 
+  
   
   
   
