@@ -4,7 +4,7 @@
     <GCProjectName>Vivina.InfoControl</GCProjectName>
 
     <LibDir>lib</LibDir>
-    <BuildDir>$(MSBuildProjectDirectory)\$(BuildDir)</BuildDir>
+    <BuildDir>$(MSBuildProjectDirectory)\bin</BuildDir>
     <OutputFolder>D:\Vivina Files\Works\Projects\InfoControl\Publish</OutputFolder>
     <!--
     <PackageDir>pkg\</PackageDir>
