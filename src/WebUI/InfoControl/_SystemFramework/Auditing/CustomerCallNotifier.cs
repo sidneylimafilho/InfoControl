@@ -43,7 +43,7 @@ namespace Vivina.Erp.SystemFramework.Auditing
                         customerCall.CustomerCallStatusId = CustomerCallStatus.New;
                         customerCall.Rating = 5;
 
-                        customerCall.CallNumberAssociated = context.Request.FilePath;
+                        customerCall.CallNumberAssociated = context.Request.RawUrl;
                         customerCall.Sector = Convert.ToString(context.Session["_lastPageTitle"]);
 
                         if (context.User != null)
