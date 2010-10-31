@@ -19,8 +19,8 @@ currentExecutionPath = replace(WScript.ScriptFullName, WScript.ScriptName, "")
 '
 fileContents = GetFile("web.config")
 
-fileContents = replace(fileContents, "connectionStringName=""Notebook""", "connectionStringName=""Production""", 1, -1, 1)
-fileContents = replace(fileContents, "connectionStringName=""DevServer""", "connectionStringName=""Production""", 1, -1, 1)
+'fileContents = replace(fileContents, "connectionStringName=""Notebook""", "connectionStringName=""Production""", 1, -1, 1)
+'fileContents = replace(fileContents, "connectionStringName=""DevServer""", "connectionStringName=""Production""", 1, -1, 1)
 fileContents = replace(fileContents, "<trace enabled=""true""", "<trace enabled=""false""", 1, -1, 1)
 fileContents = replace(fileContents, "<compilation debug=""true""", "<compilation debug=""false""", 1, -1, 1)
 fileContents = replace(fileContents, "<customErrors mode=""Off""", "<customErrors mode=""On""", 1, -1, 1)
