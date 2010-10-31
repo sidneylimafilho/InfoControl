@@ -66,7 +66,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
             cboMasterPage.SelectedValue = OriginalPage.MasterPage;
 
         txtTags.Text = String.Join(", ", OriginalPage.PageTags.Select(x => x.Name).ToArray());
-        txtCategories.Text = String.Join(", ", OriginalPage.PageCategories.Select(x => x.Name).ToArray());
+        //txtCategories.Text = String.Join(", ", OriginalPage.PageCategories.Select(x => x.Name).ToArray());
     }
 
     protected void odsSiteMap_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
@@ -113,7 +113,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
         if (!page.UserId.HasValue)
             page.UserId = User.Identity.UserId;
 
-        SiteManager.Save(page, txtTags.Text, txtCategories.Text);
+        SiteManager.Save(page, txtTags.Text);
 
         if (((WebControl)sender).ID == "btnSaveAndNew")
         {

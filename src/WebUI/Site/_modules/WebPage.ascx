@@ -37,29 +37,14 @@
                             <span runat="server" id="itemPlaceHolder"></span></span>
                     </LayoutTemplate>
                     <ItemTemplate>
-                        <span><a title='<%# Container.DataItem %>' href='<%# ResolveUrl((Container.DataItem as WebPage).WebPage1.Url) %>?tag=<%# Server.UrlEncode((string) Container.DataItem ) %>'
+                        <span><a title='<%# Container.DataItem %>' href='?tag=<%# Server.UrlEncode((string) Container.DataItem ) %>'
                             rel="bookmark">
                             <%#Container.DataItem%></a></span>
                     </ItemTemplate>
                     <ItemSeparatorTemplate>
                         ,&nbsp;
                     </ItemSeparatorTemplate>
-                </asp:ListView>
-                <asp:ListView runat="server" DataSource='<%#(Container.DataItem as WebPage).PageCategories.Select(x => x.Name).ToArray() %>'>
-                    <LayoutTemplate>
-                        <span class="category">
-                            <label>
-                                Categorias:</label>
-                            <span runat="server" id="itemPlaceHolder"></span></span>
-                    </LayoutTemplate>
-                    <ItemTemplate>
-                        <span><a title='<%# Container.DataItem %>' href='<%# ResolveUrl((Container.DataItem as WebPage).WebPage1.Url) %>?pagecat=<%# Server.UrlEncode((string) Container.DataItem ) %>'
-                            rel="bookmark">
-                            <%#Container.DataItem%></a></span>
-                    </ItemTemplate>
-                    <ItemSeparatorTemplate>
-                        ,&nbsp;</ItemSeparatorTemplate>
-                </asp:ListView>
+                </asp:ListView>                
             </div>
             <uc1:Comments ID="Comments1" runat="server" PageName="comments.aspx" ShowButtons="true"
                 SubjectId='<%#Eval("WebPageId") %>' Visible='<%#CanShowComments(Eval("CanComment"), Eval("WebPageId")) %>' />

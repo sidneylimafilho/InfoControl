@@ -19,7 +19,7 @@ namespace Vivina.Erp.BusinessRules.WebSites
 
         #region Site
 
-        public void Save(WebPage page, string tags, string categories)
+        public void Save(WebPage page, string tags)
         {
             WebPage originalPage = GetWebPage(page.CompanyId, page.WebPageId);
             page.ModifiedDate = originalPage.ModifiedDate = DateTime.Now;
@@ -60,23 +60,23 @@ namespace Vivina.Erp.BusinessRules.WebSites
             //
             // Categories
             //
-            if (!String.IsNullOrEmpty(categories))
-            {
-                list = categories.Split(',');
-                DbContext.PageCategories.DeleteAllOnSubmit(
-                    DbContext.PageCategories.Where(p => p.WebPageId == page.WebPageId));
-                DbContext.SubmitChanges();
+            //if (!String.IsNullOrEmpty(categories))
+            //{
+            //    list = categories.Split(',');
+            //    DbContext.PageCategories.DeleteAllOnSubmit(
+            //        DbContext.PageCategories.Where(p => p.WebPageId == page.WebPageId));
+            //    DbContext.SubmitChanges();
 
-                foreach (string item in list)
-                    if (!String.IsNullOrEmpty(item))
-                        DbContext.PageCategories.InsertOnSubmit(new PageCategory
-                                                                    {
-                                                                        CompanyId = page.CompanyId,
-                                                                        WebPageId = page.WebPageId,
-                                                                        Name = item.Trim()
-                                                                    });
-                DbContext.SubmitChanges();
-            }
+            //    foreach (string item in list)
+            //        if (!String.IsNullOrEmpty(item))
+            //            DbContext.PageCategories.InsertOnSubmit(new PageCategory
+            //                                                        {
+            //                                                            CompanyId = page.CompanyId,
+            //                                                            WebPageId = page.WebPageId,
+            //                                                            Name = item.Trim()
+            //                                                        });
+            //    DbContext.SubmitChanges();
+            //}
 
             //
             // Rollup tree with configs

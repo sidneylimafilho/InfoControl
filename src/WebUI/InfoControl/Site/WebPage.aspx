@@ -85,8 +85,8 @@
                 <asp:TextBox ID="txtTags" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
                 <br />
                 <label>
-                    Categorias:</label><br />
-                <asp:TextBox ID="txtCategories" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
+                <%--    Categorias:</label><br />
+                <asp:TextBox ID="txtCategories" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>--%>
                 <br />
                 <label>
                     Redirecionar URL:</label>
