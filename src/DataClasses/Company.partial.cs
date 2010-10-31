@@ -76,6 +76,9 @@ namespace Vivina.Erp.DataClasses
 
                     localPath = localPathByDomain;
                     tempPath = tempPathByDomain;
+
+                    if (!Directory.Exists(localPath))
+                        Directory.CreateDirectory(localPath);
                 }
                 else
                 {
@@ -83,9 +86,7 @@ namespace Vivina.Erp.DataClasses
                     tempPath = tempPathById;
                 }
 
-                if (!Directory.Exists(localPath))
-                    Directory.CreateDirectory(localPath);
-
+               
                 return tempPath;
             }
 
@@ -101,8 +102,8 @@ namespace Vivina.Erp.DataClasses
         {
             path = GetHomePath() + path + "/";
             string tempPath = Thread.GetDomain().BaseDirectory + path.Replace("~", "").Replace("/", "\\");
-            if (!Directory.Exists(tempPath))
-                Directory.CreateDirectory(tempPath);
+            //if (!Directory.Exists(tempPath))
+            //    Directory.CreateDirectory(tempPath);
 
             return path;
         }
@@ -116,8 +117,8 @@ namespace Vivina.Erp.DataClasses
         {
             string virtualPath = GetFilesDirectory() + "templates/";
             string fisicalPath = Thread.GetDomain().BaseDirectory + virtualPath.Replace("~", "").Replace("/", "\\");
-            if (!Directory.Exists(fisicalPath))
-                Directory.CreateDirectory(fisicalPath);
+            //if (!Directory.Exists(fisicalPath))
+            //    Directory.CreateDirectory(fisicalPath);
             return virtualPath;
         }
 
@@ -125,8 +126,8 @@ namespace Vivina.Erp.DataClasses
         {
             string virtualPath = GetFilesDirectory() + "budgets/";
             string fisicalPath = Thread.GetDomain().BaseDirectory + virtualPath.Replace("~", "").Replace("/", "\\");
-            if (!Directory.Exists(fisicalPath))
-                Directory.CreateDirectory(fisicalPath);
+            //if (!Directory.Exists(fisicalPath))
+            //    Directory.CreateDirectory(fisicalPath);
             return virtualPath;
         }
 
