@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using InfoControl;
 using InfoControl.Web.Mail;
 using Vivina.Erp.BusinessRules;
 using Vivina.Erp.BusinessRules.Comments;
@@ -82,7 +83,13 @@ namespace Vivina.Erp.WebUI.Site
             else if (!String.IsNullOrEmpty(Request["p"]))
             {
                 string[] pageId = Request["p"].Split(',');
-                _page = manager.GetWebPage(Company.CompanyId, Convert.ToInt32(pageId[0]));
+
+                int possibleInt = 0;
+                if (!Int32.TryParse(pageId[0], out possibleInt))
+                    possibleInt = Convert.ToInt32(pageId[0].DecryptFromHex());
+
+                _page = manager.GetWebPage(Company.CompanyId, possibleInt);
+
                 MasterPageFile = Company.GetMasterPagePath(_page);
             }
             else
@@ -163,7 +170,8 @@ namespace Vivina.Erp.WebUI.Site
 
         #region Actions
 
-        private void ProcessBudget(){
+        private void ProcessBudget()
+        {
 
             //
             // Verify if the request is not null ["nome"] and  ["email"]
@@ -176,12 +184,13 @@ namespace Vivina.Erp.WebUI.Site
             //
             // Populate Budget
             //
-            var budget = new Budget{
-                                 CustomerName = Request["nome"],
-                                 CustomerMail = Request["email"],
-                                 CompanyId = Company.CompanyId,
-                                 BudgetCode = "OR" + Util.GenerateUniqueID()
-                             };
+            var budget = new Budget
+            {
+                CustomerName = Request["nome"],
+                CustomerMail = Request["email"],
+                CompanyId = Company.CompanyId,
+                BudgetCode = "OR" + Util.GenerateUniqueID()
+            };
             //saleManager.Insert(budget);
 
             //
