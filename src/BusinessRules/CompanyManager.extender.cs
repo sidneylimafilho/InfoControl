@@ -353,7 +353,7 @@ namespace Vivina.Erp.BusinessRules
                                  ModifiedDate = DateTime.Now,
                                  IsMainPage = true,
                                  UserId = userId
-                             }, null, null);
+                             }, null);
         }
 
         private void ConfigureDNSRecords(Company company)
