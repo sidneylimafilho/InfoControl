@@ -41,6 +41,7 @@
                                     <asp:DropDownList ID="cboStatus" runat="server" AppendDataBoundItems="true" DataSourceID="odsCustomerCallStatus"
                                         DataTextField="Name" DataValueField="CustomerCallStatusId">
                                         <asp:ListItem Value="" Text="Todos"></asp:ListItem>
+                                        <asp:ListItem Value="4" Text="Abertos"></asp:ListItem>
                                     </asp:DropDownList>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 </td>

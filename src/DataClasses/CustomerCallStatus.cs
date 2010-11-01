@@ -11,6 +11,6 @@ namespace Vivina.Erp.DataClasses
         public const int Closed = 2;
         public const int Waiting = 3;
         // the const open, represents the New or Waiting
-        public const int Open = 4;
+        public const int Opened = 4;
     }
 }

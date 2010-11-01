@@ -689,12 +689,8 @@ namespace Vivina.Erp.BusinessRules
 
             if (customerCallStatusId.HasValue)
             {
-                if (customerCallStatusId == CustomerCallStatus.Open)
-                    queryCustomerCall =
-                        queryCustomerCall.Where(
-                            cc =>
-                            cc.CustomerCallStatusId == CustomerCallStatus.New ||
-                            cc.CustomerCallStatusId == CustomerCallStatus.Waiting);
+                if (customerCallStatusId == CustomerCallStatus.Opened)
+                    queryCustomerCall = queryCustomerCall.Where(cc => cc.CustomerCallStatusId == CustomerCallStatus.New || cc.CustomerCallStatusId == CustomerCallStatus.Waiting);
                 else
                     queryCustomerCall = queryCustomerCall.Where(cc => cc.CustomerCallStatusId == customerCallStatusId);
             }
@@ -1225,7 +1221,7 @@ namespace Vivina.Erp.BusinessRules
 
             if (customerCall.CustomerCallStatusId == CustomerCallStatus.Closed)
             {
-                customerCall.CustomerCallStatusId = Convert.ToInt32(CustomerCallStatus.New);
+                customerCall.CustomerCallStatusId = CustomerCallStatus.New;
                 customerCall.OpenedDate = DateTime.Now;
                 DbContext.SubmitChanges();
 
@@ -1365,6 +1361,9 @@ namespace Vivina.Erp.BusinessRules
 
             entity.CreatedDate = entity.ModifiedDate = DateTime.Now;
             entity.OpenedDate = DateTime.Now;
+
+            if (!entity.CustomerCallStatusId.HasValue)
+                entity.CustomerCallStatusId = CustomerCallStatus.New;
 
             SetCustomerCallPriority(entity);
             DbContext.CustomerCalls.InsertOnSubmit(entity);

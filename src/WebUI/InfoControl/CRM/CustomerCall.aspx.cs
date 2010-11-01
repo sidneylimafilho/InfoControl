@@ -32,7 +32,7 @@ public partial class InfoControl_Services_CustomerCall : Vivina.Erp.SystemFramew
             cboCustomerCallStatus.DataBind();
             cboCustomerCallType.DataBind();
 
-            cboCustomerCallStatus.SelectedValue = CustomerCallStatus.Open.ToString();
+            cboCustomerCallStatus.SelectedValue = CustomerCallStatus.Opened.ToString();
 
             if (IsRestricted)
                 btnGenerateServiceOrder.Visible = txtCallNumber.Enabled = tblAdditionalInformation.Visible = false;
