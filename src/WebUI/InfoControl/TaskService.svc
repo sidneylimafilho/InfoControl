@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Vivina.Erp.WebUI.InfoControl.TaskService" CodeBehind="TaskService.svc.cs" %>
