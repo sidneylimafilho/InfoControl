@@ -27,6 +27,15 @@
                 this.before(html).remove() :
                 jQuery("<p>").append(this.eq(0).clone()).html();
         },
+        getAddress: function() {
+            // Prepare the url
+            var url = this.attrUp("source") || this.attrUp("href");
+
+            if (this.attr("action")) {
+                url += "/" + this.attrUp("action");
+            }
+            return url.replace("~", window.applicationPath || "");
+        },
         attachHtmlInTarget: function(html, t, m) {
             // Get target tag
             var target = t || this.attrUp("target") || this;
@@ -78,16 +87,7 @@
                 }
 
             });
-        },
-        getAddress: function() {
-            // Prepare the url
-            var url = this.attrUp("source") || this.attrUp("href");
-
-            if (this.attr("action")) {
-                url += "/" + this.attrUp("action");
-            }
-            return url.replace("~", window.applicationPath || "");
-        },
+        },        
         dataBind: function(options) {
             for (var i = 0, l = this.length; i < l; i++)
                 $(this[i])._dataBind(options);
@@ -111,7 +111,7 @@
                 $.extend(options.data, eval("(" + $this.attrUp("options") + ")"));
             }
 
-            var form = $this.closest("[asForm]") || $this.closest("FORM");
+            var form = $this.closest("[form]") || $this.closest("FORM");
 
             // Get All html form controls
             var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]")
