@@ -102,13 +102,13 @@
                 $.extend(options.data, eval("(" + $this.attrUp("options") + ")"));
             }
 
-            var form = $this.closest("[form]") || $this.closest("FORM");
+            var form = $this.closest("[form=true]") || $this.closest("FORM");
 
             // Get All html form controls
-            var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]").map(function(i, elem) {
-                options.params[$(elem).attr("field") || elem.name || elem.id] = elem.value;
-                return true;
-            });
+            $.each(form.find(":input, select, textarea, :password, [type=hidden]").serializeArray(),
+                   function(i, elem) {
+                       options.data[$(elem).attr("field") || elem.name || elem.id] = $(elem).val();
+                   });
 
 
 
@@ -152,7 +152,7 @@
                             var html = result;
                             var target = $this.attrUp("target");
 
-                            if (request.responseText != "") {
+                            if (result && request.responseText != "") {
                                 if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
 
                                     if (result.Errors) {
@@ -424,24 +424,16 @@
 
 
     /***************************************************************************************************
-    Format Numbers
+    DAteTime Extensions
     ***************************************************************************************************/
 
-    Number.prototype.format = function(format) {
-        if (format && format != "") {
-            var i = parseFloat(this);
-            if (isNaN(i)) i = 0.00;
-            i = parseInt((Math.abs(i) + .005) * 100) / 100;
-
-
-            var s = new String(i);
-            //if (s.indexOf('.') < 0) s += ',00';
-            if (s.indexOf('.') == (s.length - 2)) s += '0';
-
-            s = (i < 0 ? '-' : '') + s;
-            return s.replace(".", ",");
+    String.prototype.JsonToDate = function() {
+        if (this && this != "") {
+            var result = new Date(parseFloat(this.replace(/(\/)|\)|Date\(/g, "")));
+            return new Date(result.valueOf() + result.getTimezoneOffset() * 60000);
         }
-        return this;
+
+        return null;
     }
 
 
