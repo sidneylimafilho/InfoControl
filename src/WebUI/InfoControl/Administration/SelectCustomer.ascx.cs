@@ -56,8 +56,7 @@ public partial class App_Shared_SelectCustomer : Vivina.Erp.SystemFramework.User
         imgUnselect.Visible = txtCustomer.Enabled = Enabled;
         if (Convert.ToBoolean(Request["ReadOnly"]))
         {
-            lnkCustomerName.Enabled = false;
-            lnkCustomerName.OnClientClick = "";
+           
             imgUnselect.Visible = false;
         }
     }
@@ -130,7 +129,7 @@ public partial class App_Shared_SelectCustomer : Vivina.Erp.SystemFramework.User
 
                     lblPostalCode.Text = "CEP: " + customer.LegalEntityProfile.Address.PostalCode;
                 }
-                lnkCustomerName.Text = customer.LegalEntityProfile.CompanyName;
+              
                 if (customer.LegalEntityProfile.Phone != "(__)____-____" && customer.LegalEntityProfile.Phone.Trim() != "-")
                     lblCustomerPhone.Text = "Tel: " + customer.LegalEntityProfile.Phone.Replace("(__)____-____", "");
                 else
@@ -151,7 +150,7 @@ public partial class App_Shared_SelectCustomer : Vivina.Erp.SystemFramework.User
 
                     lblPostalCode.Text = "CEP: " + customer.Profile.Address.PostalCode;
                 }
-                lnkCustomerName.Text = customer.Profile.Name;
+              
                 if (customer.Profile.Phone != "(__)____-____" && customer.Profile.Phone.Trim() != "-")
                     lblCustomerPhone.Text = "Tel: " + customer.Profile.Phone.Replace("(__)____-____", "");
                 else
@@ -159,7 +158,7 @@ public partial class App_Shared_SelectCustomer : Vivina.Erp.SystemFramework.User
                 lblCNPJ.Text = customer.Profile.CPF;
             }
             OnSelectingCustomer(this, new SelectingCustomerEventArgs() { CustomerName = txtCustomer.Text });
-            lnkCustomerName.OnClientClick = "top.tb_show('Cadastro de Clientes','Administration/Customer.aspx?CustomerId=" + customer.CustomerId.EncryptToHex() + "' );return;";
+            
             pnlCustomer.Visible = true;
             pnlCustomerSearch.Style.Add(HtmlTextWriterStyle.Display, "none");
             OnSelectedCustomer(this, new SelectedCustomerEventArgs() { Customer = customer });

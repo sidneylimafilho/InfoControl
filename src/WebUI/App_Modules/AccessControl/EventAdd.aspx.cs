@@ -115,14 +115,13 @@ public partial class AccessControl_EventInsertion : Vivina.Erp.SystemFramework.P
 
         txtName.Text = eventEntity.Name;
         ltrErrorMessage.Text = eventEntity.Message;
-      //  cboTechnicalUser.SelectedValue = Convert.ToString(eventEntity.TechnicalUserId);
+
         cboEventStatus.SelectedValue = Convert.ToString(eventEntity.EventStatusId);
         rtnPriority.CurrentRating = Convert.ToInt32(eventEntity.Rating);
 
-     //   lnkOpenModal.Text = eventEntity.Company.LegalEntityProfile.CompanyName;
+  
         lnkOpenModal.NavigateUrl = "javascript:void(0);";
-        //lnkOpenModal.Attributes["onclick"] = "top.tb_show('Empresa','Administration/Company.aspx?CompanyId=" + 
-        //    eventEntity.CompanyId.EncryptToHex() + "'); return false;";
+        
 
         ltrCurrentDate.Text = Convert.ToString(eventEntity.CurrentDate);
         ltrPath.Text = eventEntity.Path;

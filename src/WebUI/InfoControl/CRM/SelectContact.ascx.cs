@@ -135,7 +135,7 @@ namespace Vivina.Erp.WebUI.InfoControl.CRM
                 pnlContactSearch.Style.Add(HtmlTextWriterStyle.Display, "none");
 
                 lnkContactName.Text = contact.Name;
-                lnkContactName.OnClientClick = "top.tb_show('Contato','Administration/Contact.aspx?ContactId=" + contact.ContactId.EncryptToHex() + "' );return;";
+                lnkContactName.OnClientClick = "top.$.lightbox('Administration/Contact.aspx?ContactId=" + contact.ContactId.EncryptToHex() + "&lightbox[iframe]=true' );return;";
                 OnSelectedContact(this, new SelectedContactEventArgs() { Contact = contact });
             }
             else

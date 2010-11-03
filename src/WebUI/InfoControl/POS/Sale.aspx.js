@@ -39,5 +39,5 @@ function CalculateDiscount(control) {
 function ApplyPaymentMethod() {
     if (lblTotal) $cookies('total', lblTotal.firstChild.nodeValue, { expires: 999999 });
 
-    top.tb_show('Formas de Pagamento', 'POS/Sale_Parcels.aspx')
+    top.$.lightbox('POS/Sale_Parcels.aspx?lightbox[iframe]=true')
 }

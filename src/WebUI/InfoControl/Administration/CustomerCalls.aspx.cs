@@ -26,7 +26,7 @@ public partial class Company_Administration_CustomerCalls : Vivina.Erp.SystemFra
     protected void grdCustomerCalls_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
-            e.Row.Attributes["onclick"] = "top.tb_show('Chamado','CRM/CustomerCall.aspx?CustomerCallId=" + grdCustomerCalls.DataKeys[e.Row.RowIndex]["CustomerCallId"].EncryptToHex() + "' );return;";
+            e.Row.Attributes["onclick"] = "top.$.lightbox('CRM/CustomerCall.aspx?CustomerCallId=" + grdCustomerCalls.DataKeys[e.Row.RowIndex]["CustomerCallId"].EncryptToHex() + "&lightbox[iframe]=true' );return;";
 
     }
 }

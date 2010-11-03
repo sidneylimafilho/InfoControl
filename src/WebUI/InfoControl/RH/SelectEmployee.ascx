@@ -15,7 +15,7 @@
         </td>
         <td valign="bottom">
             <img id="imgAddEmployee" src="~/App_Themes/_global/Company/user_add.gif" runat="server"
-                alt="Inserir Funcionário" border="0" onclick="top.tb_show('Cadastro de Funcionário','RH/Employee_PersonalData.aspx?w=modal');" />
+                alt="Inserir Funcionário" border="0" onclick="top.$.lightbox('RH/Employee_PersonalData.aspx?w=modal&lightbox[iframe]=true');" />
             &nbsp;&nbsp;&nbsp;&nbsp;
         </td>
     </tr>

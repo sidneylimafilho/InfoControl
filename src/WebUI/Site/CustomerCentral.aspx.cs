@@ -51,7 +51,7 @@ public partial class Site_CustomerCentral : SitePageBase
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Attributes["onclick"] =
-                "top.tb_show('Chamado', '../InfoControl/CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId=" +
+                "top.$.lightbox('../InfoControl/CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId=" +
                 e.Row.DataItem.GetPropertyValue("CustomerCallId").EncryptToHex() + "');";
         }
     }
@@ -61,7 +61,7 @@ public partial class Site_CustomerCentral : SitePageBase
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Attributes["onclick"] =
-                "top.tb_show('Ordem de Serviço', '../InfoControl/Services/ServiceOrder.aspx?ModalPopUp=1&ReadOnly=true&ServiceOrderId=" +
+                "top.$.lightbox('../InfoControl/Services/ServiceOrder.aspx?ModalPopUp=1&ReadOnly=true&ServiceOrderId=" +
                 e.Row.DataItem.GetPropertyValue("ServiceOrderId").EncryptToHex() + "');";
         }
     }
@@ -71,7 +71,7 @@ public partial class Site_CustomerCentral : SitePageBase
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Attributes["onclick"] =
-                "top.tb_show('Nota Fiscal', '../InfoControl/Accounting/Receipt.aspx?ModalPopUp=1&ReadOnly=true&ReceiptId=" +
+                "top.$.lightbox('../InfoControl/Accounting/Receipt.aspx?ModalPopUp=1&ReadOnly=true&ReceiptId=" +
                 e.Row.DataItem.GetPropertyValue("ReceiptId").EncryptToHex() + "');";
         }
     }
@@ -81,7 +81,7 @@ public partial class Site_CustomerCentral : SitePageBase
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Attributes["onclick"] =
-                "top.tb_show('Venda', '../InfoControl/POS/SaleViewer.aspx?ModalPopUp=1&ReadOnly=true&SaleId=" +
+                "top.$.lightbox('../InfoControl/POS/SaleViewer.aspx?ModalPopUp=1&ReadOnly=true&SaleId=" +
                 e.Row.DataItem.GetPropertyValue("SaleId").EncryptToHex() + "');";
         }
     }

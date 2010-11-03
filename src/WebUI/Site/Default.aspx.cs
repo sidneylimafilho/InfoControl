@@ -67,6 +67,7 @@ namespace Vivina.Erp.WebUI.Site
 
         protected override void OnPreInit(EventArgs e)
         {
+            Trace.Warn("SitePageBase", "Begin OnPreInit");
             base.OnPreInit(e);
 
             var manager = new SiteManager(this);
@@ -97,6 +98,8 @@ namespace Vivina.Erp.WebUI.Site
                 _page = manager.WebPageNotFound();
                 MasterPageFile = Company.GetMasterPagePath();
             }
+
+            Trace.Warn("SitePageBase", "End OnPreInit");
         }
 
         protected override void OnLoad(EventArgs e)

@@ -12,7 +12,7 @@
         </td>
         <td>
             <img id="Img1" src="~/app_themes/_global/company/user_add.gif" runat="server" alt="Inserir Contato"
-                border="0" class="noprintable" style="cursor: pointer" onclick="top.tb_show('Cadastro de Contato','Administration/Contact.aspx?w=true');" />
+                border="0" class="noprintable" style="cursor: pointer" onclick="top.$.lightbox('Administration/Contact.aspx?w=true&lightbox[iframe]=true');" />
         </td>
     </tr>
 </table>

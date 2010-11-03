@@ -98,7 +98,7 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
                     lblPostalCode.Text = "CEP: " + supplier.LegalEntityProfile.Address.PostalCode;
                 }
 
-                lnkSupplierName.Text = supplier.LegalEntityProfile.CompanyName;
+           
 
                 lblSupplierPhone.Text = "Tel: " + supplier.LegalEntityProfile.Phone.Replace("(__)____-____", "");
 
@@ -120,14 +120,14 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
                     lblPostalCode.Text = "CEP: " + supplier.Profile.Address.PostalCode;
                 }
 
-                lnkSupplierName.Text = supplier.Profile.Name + "/";
+             
 
                 lblSupplierPhone.Text = "Tel: " + supplier.Profile.Phone.Replace("(__)____-____", "");
 
                 lblCNPJ.Text = supplier.Profile.CPF;
             }
             String encripted = supplier.SupplierId.EncryptToHex();
-            lnkSupplierName.OnClientClick = "top.tb_show('Cadastro de Fornecedor','Administration/Supplier.aspx?w=modal&SupplierId=" + encripted + "');return;";
+            
             pnlSupplier.Visible = true;
             pnlSupplierSearch.Style.Add(HtmlTextWriterStyle.Display, "none");
             //attach the event Selectd(end)

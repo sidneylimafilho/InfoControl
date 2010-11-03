@@ -16,7 +16,7 @@
         </td>
         <td>
             <img src="~/App_Themes/_global/Company/user_add.gif" alt="Inserir Fornecedor" border="0"
-                runat="server" style="cursor:pointer" onclick="top.tb_show('Cadastro de Fornecedor','Administration/Supplier_General.aspx?w=modal');" />&nbsp;&nbsp;&nbsp;&nbsp;
+                runat="server" style="cursor:pointer" plugin="lightbox" source='Administration/Supplier_General.aspx?w=modal&lightbox[iframe]=true' />&nbsp;&nbsp;&nbsp;&nbsp;
         </td>
     </tr>
 </table>
@@ -25,7 +25,8 @@
         <tr>
             <td>
                 <b>
-                    <asp:LinkButton ID="lnkSupplierName" runat="server"></asp:LinkButton></b><br />
+                    <a plugin="lightbox" href="Administration/Supplier.aspx?w=modal&SupplierId=<%=Supplier.SupplierId.EncryptToHex() %>&lightbox[iframe]=true">
+                    <%=Supplier.Name%></a></b><br />
                 <asp:Label ID="lblCNPJ" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="lblSupplierAddress" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="lblSupplierLocalization" runat="server" Text=""></asp:Label><br />

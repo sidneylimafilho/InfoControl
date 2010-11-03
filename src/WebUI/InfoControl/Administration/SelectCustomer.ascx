@@ -6,18 +6,16 @@
         <td>
             Cliente:<br />
             <asp:TextBox ID="txtCustomer" runat="server" Width="250px" CssClass="cDynDat11" AutoPostBack="True"
-                OnTextChanged="txtCustomer_TextChanged"
-                plugin="autocomplete"
-                source='~/InfoControl/SearchService.svc/FindCustomers'
-                options="{max: 10}"
-                MaxLength="100"></asp:TextBox>
+                OnTextChanged="txtCustomer_TextChanged" plugin="autocomplete" source='~/InfoControl/SearchService.svc/FindCustomers'
+                options="{max: 10}" MaxLength="100"></asp:TextBox>
             <p style="font-size: 7pt; color: gray">
                 Dica: Digite parte do texto, que o completará automaticamente!</p>
         </td>
         <td valign="bottom">
-            <br />           
+            <br />
             <img src="~/App_Themes/_global/Company/user_add.gif" runat="server" alt="Inserir Cliente"
-                border="0" class="noPrintable" onclick="top.tb_show('Cadastro de Cliente','Administration/Customer_General.aspx?w=modal');" />
+                border="0" class="noPrintable" source="Administration/Customer_General.aspx?w=modal"
+                plugin="lightbox" />
             <br />
         </td>
     </tr>
@@ -26,8 +24,8 @@
     <table border="0">
         <tr>
             <td>
-                <b>
-                    <asp:LinkButton ID="lnkCustomerName" runat="server"></asp:LinkButton></b>
+                <b><a plugin="lightbox" href="Administration/Customer.aspx?CustomerId=<%=Customer.CustomerId.EncryptToHex() %>&lightbox[iframe]=true">
+                    <%=Customer.Name  %></a></b>
                 <br />
                 <asp:Label ID="lblCNPJ" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="lblCustomerAddress" runat="server" Text=""></asp:Label><br />
@@ -43,4 +41,3 @@
         </tr>
     </table>
 </asp:Panel>
-

@@ -1730,11 +1730,3 @@
     window['DP_jQuery_' + dpuuid] = $;
 
 })(jQuery);
-
-$(function () {
-    $(':text[plugin=calendar]').datepicker({ 
-        showOn: 'button',
-        buttonImage: '../../App_Themes/GlassCyan/Controls/Calendar/img/btnCalendar.gif',
-        buttonImageOnly: true
-    });
-});

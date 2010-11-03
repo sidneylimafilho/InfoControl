@@ -121,10 +121,10 @@ public partial class Address : DataUserControl
         if (ScriptManager.GetCurrent(Page) != null)
             ScriptManager.GetCurrent(Page).Scripts.Add(new ScriptReference("~/App_shared/address/address.ascx.js"));
 
-        btnCorreios.Visible = btnGoogle.Visible = Page.User.IsAuthenticated;
+        //btnCorreios.Visible = btnGoogle.Visible = Page.User.IsAuthenticated;
 
         lblTitle.Text = FieldsetTitle;
-        btnGoogle.Attributes["onclick"] = "top.InfoControl.Address.ShowMap('" + txtPostalCode.ClientID + "');";
+       // btnGoogle.Attributes["onclick"] = "top.InfoControl.Address.ShowMap('" + txtPostalCode.ClientID + "');";
         if (!Required)
             addressPanel.Style.Add("display", "none");
 

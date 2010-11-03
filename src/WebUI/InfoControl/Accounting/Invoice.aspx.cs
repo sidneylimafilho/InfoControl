@@ -212,7 +212,7 @@ public partial class Accouting_Invoice : Vivina.Erp.SystemFramework.PageBase
         }
 
         SaveInvoice();
-        ClientScript.RegisterClientScriptBlock(this.GetType(), "", " top.tb_show('Gerar Boleto', '../../InfoControl/Site/Boleto.aspx?parcelId=" + Request.Form["parcelId"] + "');", true);
+        ClientScript.RegisterClientScriptBlock(this.GetType(), "", "top.$.lightbox('../../InfoControl/Site/Boleto.aspx?parcelId=" + Request.Form["parcelId"] + "&lightbox[iframe]=true');", true);
     }
 
     private void ExportInvoiceDocument(Invoice invoice, Int32 parcelId, string fileName, Int32 documentTemplateId)

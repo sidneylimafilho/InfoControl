@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="Commons_menu" CodeBehind="menu.aspx.cs" %>
 
-<%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls"
-    TagPrefix="VFX" %>
+<%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls" TagPrefix="VFX" %>
 <%--<%@ Register Assembly="Telerik.WebControls" Namespace="Telerik.WebControls" TagPrefix="radP" %>--%>
 <%@ Register Assembly="Telerik.Web.UI, Version=2008.1.515.35, Culture=neutral, PublicKeyToken=121fae78165ba3d4"
     Namespace="Telerik.Web.UI" TagPrefix="radP" %>
@@ -15,7 +14,6 @@
         {
             background-color: transparent;
         }
- 
         .startPage
         {
             position: absolute;
@@ -35,6 +33,10 @@
     <form id="form1" runat="server">
     <div id="menu">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
+                <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" />
+            </Scripts>
         </asp:ScriptManager>
         <asp:Label ID="lblAdminCompany" runat="server" Text="Administrar a empresa:">
         </asp:Label><br />
@@ -48,7 +50,6 @@
                 <asp:Parameter Name="userId" Type="Int32" />
             </SelectParameters>
         </VFX:BusinessManagerDataSource>
-        
         <!--
         <a href="<%=System.Web.SiteMap.RootNode.Url %>" target="content" class="homeLink">
         </a>

@@ -100,7 +100,7 @@
                                             <legend>Administre seu Site</legend>
                                             <br />
                                             <br />
-                                            <asp:Button ID="btnNewTask" runat="server" Text="Inserir novo Item" OnClientClick="top.tb_show('Página do Site','Site/WebPage.aspx'); return false;" />
+                                            <asp:Button ID="btnNewTask" runat="server" Text="Inserir novo Item" plugin="lightbox" source='Site/WebPage.aspx?lightbox[iframe]=true' OnClientClick=" return false;" />
                                             <br />
                                             <br />
                                             <asp:Button ID="Button1" runat="server" Text="Gerenciador de Arquivos" UseSubmitBehavior="false"

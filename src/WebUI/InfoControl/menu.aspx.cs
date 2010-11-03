@@ -72,7 +72,7 @@ public partial class Commons_menu : Vivina.Erp.SystemFramework.PageBase
                 panelItem.Text = child.Title;
 
                 if (!String.IsNullOrEmpty(child["startPageUrl"]))
-                    panelItem.Text += "</span></a><a class='startPage' href='" + ResolveClientUrl(child["startPageUrl"]) + "' target='content'><span>";
+                    panelItem.Text += "</span></a><a plugin='lightbox' class='startPage' href='" + ResolveClientUrl(child["startPageUrl"]) + "?lightbox[iframe]=true' target='content'><span>";
 
                 items.Add(panelItem);
 

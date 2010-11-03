@@ -19,7 +19,7 @@ public partial class Company_Administration_WebUserControl : Vivina.Erp.SystemFr
     protected void grdSaleByCustomer_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
-            e.Row.Attributes["onclick"] = "top.tb_show('Visualizador de Vendas','POS/SaleViewer.aspx?SaleId=" + grdSaleByCustomer.DataKeys[e.Row.RowIndex]["SaleId"].EncryptToHex() + "' );return;";
+            e.Row.Attributes["onclick"] = "top.$.lightbox('POS/SaleViewer.aspx?SaleId=" + grdSaleByCustomer.DataKeys[e.Row.RowIndex]["SaleId"].EncryptToHex() + "&lightbox[iframe]=true' );return;";
 
     }
 }

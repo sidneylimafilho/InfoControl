@@ -249,7 +249,7 @@ namespace Vivina.Erp.WebUI.POS
             Session["CustomerId"] = Page.ViewState["CustomerId"];
             Session["BudgetId"] = Page.ViewState["budgetId"];
             Page.ClientScript.RegisterStartupScript(this.GetType(), "",
-                   "top.tb_show('Formas de Pagamento','POS/Sale_Parcels2.aspx') ", true);
+                   "top.$.lightbox('POS/Sale_Parcels2.aspx?lightbox[iframe]=true') ", true);
 
 
         }

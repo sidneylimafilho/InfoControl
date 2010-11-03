@@ -27,14 +27,7 @@
                             <asp:RequiredFieldValidator ID="valPostalCode" ControlToValidate="txtPostalCode"
                                 runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21" meta:resourcekey="valPostalCodeResource1"></asp:RequiredFieldValidator>&nbsp;
                             &nbsp;&nbsp;
-                            <!--
-                             <a id="btnGoogle" runat="server" style="cursor: pointer;">
-                                <asp:Literal runat="server" Text="<%$ Resources:SeeInMap %>" />
-                            </a>&nbsp; &nbsp;&nbsp; <a id="btnCorreios" runat="server" style="cursor: pointer;"
-                                onclick="top.tb_show('Pesquisa por CEP','../App_Shared/Address_Search.htm');">
-                                <asp:Literal ID="Literal2" runat="server" Text="<%$ Resources: SearchPostalCode %>" />
-                            </a>
-                            -->
+                           
                             <asp:CustomValidator ID="checkCep" runat="server" OnServerValidate="customValidator_OnServerValidate"
                                 ControlToValidate="txtPostalCode" ErrorMessage="*" CssClass="cErr21" Visible="False"
                                 meta:resourcekey="checkCepResource1">

@@ -5,27 +5,21 @@
 (function($) {
 
 
-
-
     /***************************************************************************************************
     Extend jQuery
     ***************************************************************************************************/
     $.fn.extend({
         hasControl: function(bool) {
-            if (bool)
-                this[0].control = bool;
+            if (bool) this[0].control = bool;
 
             return this[0].control != undefined;
         },
         attrUp: function(name) {
-            if (this.length > 0)
-                return this.attr(name) || this.parent().attrUp(name);
+            if (this.length > 0) return this.attr(name) || this.parent().attrUp(name);
             return undefined;
         },
         outerHtml: function(html) {
-            return html ?
-                this.before(html).remove() :
-                jQuery("<p>").append(this.eq(0).clone()).html();
+            return html ? this.before(html).remove() : jQuery("<p>").append(this.eq(0).clone()).html();
         },
         getAddress: function() {
             // Prepare the url
@@ -40,8 +34,7 @@
             // Get target tag
             var target = t || this.attrUp("target") || this;
 
-            if ($(target).size() == 0)
-                throw TargetMissingException(this);
+            if ($(target).size() == 0) throw TargetMissingException(this);
 
             var mode = m || this.attrUp("mode");
 
@@ -63,8 +56,7 @@
             iframe.unbind("load").bind("load", function() {
                 var html = $("body", iframe.contents()).html();
                 ctrl.attachHtmlInTarget(html);
-                if (onsucess)
-                    onsucess(html, "notmodified", null);
+                if (onsucess) onsucess(html, "notmodified", null);
                 iframe.unbind("load");
             });
             iframe.hide().attr("src", url);
@@ -77,17 +69,15 @@
 
                 if (e.shiftKey) {
                     // Lower case letters are seen while depressing the Shift key, therefore Caps Lock is on
-                    if ((myKeyCode >= 97 && myKeyCode <= 122))
-                        callback();
+                    if ((myKeyCode >= 97 && myKeyCode <= 122)) callback();
                 }
                 else {
                     // Upper case letters are seen without depressing the Shift key, therefore Caps Lock is on
-                    if ((myKeyCode >= 65 && myKeyCode <= 90))
-                        callback();
+                    if ((myKeyCode >= 65 && myKeyCode <= 90)) callback();
                 }
 
             });
-        },        
+        },
         dataBind: function(options) {
             for (var i = 0, l = this.length; i < l; i++)
                 $(this[i])._dataBind(options);
@@ -95,7 +85,8 @@
 
 
             return this;
-        }, /* End DataBind*/
+        },
+        /* End DataBind*/
 
         _dataBind: function(options) {
             options = options || {};
@@ -114,10 +105,12 @@
             var form = $this.closest("[form]") || $this.closest("FORM");
 
             // Get All html form controls
-            var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]")
-                        .map(function(i, elem) { options.params[$(elem).attr("field") || elem.name || elem.id] = elem.value; return true; });
+            var fields = form.find(":text, select, textarea, :checked, :password, [type=hidden]").map(function(i, elem) {
+                options.params[$(elem).attr("field") || elem.name || elem.id] = elem.value;
+                return true;
+            });
 
-            
+
 
             // Allow fire DataBinding in controls that has TRIGGER atribute
             if ($this.attrUp("trigger")) {
@@ -131,12 +124,10 @@
 
             // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
             // is fired otherwise prepares the data Request Payload
-//            if (!options.data)
-//                options.data = $.toJSON(options.data);
-
+            //            if (!options.data)
+            //                options.data = $.toJSON(options.data);
             // save the control that is fire dataBind, because closure "sucess" dont access
             //var ctrl = $this;
-
             var type = $this.attrUp("method") || "POST";
 
             // Prepare the url
@@ -187,8 +178,7 @@
                                     } else {
                                         // Get template tag
                                         tpl = $this;
-                                        if ($($this.attrUp("template")).size() > 0)
-                                            tpl = $($this.attrUp("template"));
+                                        if ($($this.attrUp("template")).size() > 0) tpl = $($this.attrUp("template"));
 
                                         html = tpl.render(data);
                                     }
@@ -211,8 +201,7 @@
                     },
                     error: function(result, status, event) {
                         eval($this.attrUp("onerror"));
-                        if (result.status == "404")
-                            throw PageNotFoundException($this);
+                        if (result.status == "404") throw PageNotFoundException($this);
                     }
                 });
             }
@@ -231,6 +220,8 @@
             this._initializeHtmlBox();
 
             this._initializeAutocomplete();
+
+            this._initializeLightboxEvolution();
 
             this._initializeThemeStyle();
 
@@ -288,9 +279,7 @@
                         onSelect: function(selectedDate) {
                             var option = "minDate",
                                 instance = $(this).data("datepicker"),
-                                date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat,
-                                                              selectedDate,
-                                                              instance.settings);
+                                date = $.datepicker.parseDate(instance.settings.dateFormat || $.datepicker._defaults.dateFormat, selectedDate, instance.settings);
 
                             $(instance.settings.relatedCalendar).datepicker("option", option, date);
                         }
@@ -300,7 +289,9 @@
 
                     $(this).datepicker(dateOptions);
 
-                    $(this).setMask({ mask: "39/19/9999" });
+                    $(this).setMask({
+                        mask: "39/19/9999"
+                    });
                 }
             });
 
@@ -319,48 +310,51 @@
 
                         var options = {
                             toolbars: [
-                        	            [
-                                        "separator", "cut", "copy", "paste",
-                                        "separator", "undo", "redo",
-                                        "separator", "bold", "italic", "underline", "strike", "sup", "sub",
-                                        "separator", "justify", "left", "center", "right",
-                                        "separator", "ol", "ul", "indent", "outdent",
-                                        "separator", "link", "unlink", "image",
+                                ["separator", "cut", "copy", "paste", "separator", "undo", "redo", "separator", "bold", "italic", "underline", "strike", "sup", "sub", "separator", "justify", "left", "center", "right", "separator", "ol", "ul", "indent", "outdent", "separator", "link", "unlink", "image",
                             //Strip tags
-                        		        "separator", "removeformat", "striptags", "hr", "paragraph"
+                                "separator", "removeformat", "striptags", "hr", "paragraph"
                             // Styles, Source code syntax buttons
                             //, "separator", "quote", "styles", "syntax"
-                        		        ],
-                        		        [
+                                ],
+                                [
                             // Formats, Font size, Font family, Font color, Font, Background
-                                        "separator", "formats", "fontsize", "fontfamily",
-                        		        "separator", "fontcolor", "highlight",
+                                "separator", "formats", "fontsize", "fontfamily", "separator", "fontcolor", "highlight",
                             // Show code
-                        		        "separator", "code"
-                        		        ]
-                        	        ],
+                                "separator", "code"]
+                            ],
                             idir: "../../App_themes/glasscyan/controls/Editor/",
-                            icons: "default",  // Icon set
+                            icons: "default",
+                            // Icon set
                             about: false,
-                            skin: "silver",  // Skin, silver
-                            output: "xhtml",  // Output
-                            toolbar_height: 24, // Toolbar height
-                            tool_height: 16,   // Tools height
-                            tool_width: 16,    // Tools width
-                            tool_image_height: 16,  // Tools image height
-                            tool_image_width: 16,  // Tools image width
+                            skin: "silver",
+                            // Skin, silver
+                            output: "xhtml",
+                            // Output
+                            toolbar_height: 24,
+                            // Toolbar height
+                            tool_height: 16,
+                            // Tools height
+                            tool_width: 16,
+                            // Tools width
+                            tool_image_height: 16,
+                            // Tools image height
+                            tool_image_width: 16,
+                            // Tools image width
                             css: "body{margin:3px;font-family:verdana;font-size:11px; background-image:none;}p{margin:0px;}",
-                            success: function(data) { alert(data); }, // AJAX on success
-                            error: function(a, b, c) { return this; }   // AJAX on error
+                            success: function(data) {
+                                alert(data);
+                            },
+                            // AJAX on success
+                            error: function(a, b, c) {
+                                return this;
+                            } // AJAX on error
                         };
 
                         options = $.extend(options, eval("(" + $(this).attr("options") + ")"));
 
                         var height = $(this).css("height") || "400px";
                         var weight = $(this).css("weight") || "100%";
-                        $(this).css("height", height)
-                               .css("weight", weight)
-                               .htmlbox(options);
+                        $(this).css("height", height).css("weight", weight).htmlbox(options);
                     }
                 });
             }
@@ -400,20 +394,33 @@
                 }
             });
         },
+        _initializeLightboxEvolution: function() {
+
+
+            $("[plugin*=lightbox]", this).click(function(ev) {
+                top.$.lightbox($(this).getAddress(), {});
+                ev.preventDefault();
+            });
+
+
+        },
         _initializeThemeStyle: function() {
-            $(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
-            $(":text", this).focusin(function() { $(this).parent().addClass('cDat11_focus'); })
-                            .focusout(function() { $(this).parent().removeClass().addClass('cDat11'); })
-                            .mouseenter(function() { $(this).parent().addClass('cDat11_hover'); })
-                            .mouseleave(function() { $(this).parent().removeClass('cDat11_hover'); })
-                            .after("<span />");
+            top.$(":text", this).wrap("<span class='ui-theme-textbox cDat11' />");
+            top.$(":text", this).focusin(function() {
+                $(this).parent().addClass('cDat11_focus');
+            }).focusout(function() {
+                $(this).parent().removeClass().addClass('cDat11');
+            }).mouseenter(function() {
+                $(this).parent().addClass('cDat11_hover');
+            }).mouseleave(function() {
+                $(this).parent().removeClass('cDat11_hover');
+            }).after("<span />");
 
 
         }
 
 
     }); // End Initialize Controls
-
 
 
     /***************************************************************************************************
@@ -456,8 +463,3 @@ function PageNotFoundException(sender) {
 function TargetMissingException(sender) {
     Exception(" Não foi encontrado o elemento html '" + sender.attrUp("target") + "'! \n\n Html Trace: " + sender.outerHtml());
 }
-
-
-
-
-

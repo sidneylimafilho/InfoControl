@@ -7,7 +7,8 @@ overflow: hidden;">
 <head id="head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
-    <link rel="Stylesheet" href="../App_Shared/JS/jquery.jgrowl.css" type="text/css" />
+    <link rel="Stylesheet" href="../App_Shared/JS/lightbox/themes/default/jquery.lightbox.css" type="text/css" />
+     <link rel="Stylesheet" href="../App_Shared/JS/jquery.jgrowl.css" type="text/css" />
     <title></title>
 </head>
 <script defer="defer" type="text/javascript">
@@ -38,9 +39,12 @@ overflow: hidden;">
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.widget.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.draggable.js" />  
             <asp:ScriptReference Path="~/App_Shared/js/jquery.thickbox.js" />
+            
+            <asp:ScriptReference Path="~/App_Shared/js/lightbox/jquery.lightbox.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.dimensions.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.jgrowl.js" />
             <asp:ScriptReference Path="~/App_Modules/Alerts/Alerts.svc.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" />
         </Scripts>
         <Services>
             <asp:ServiceReference Path="~/App_Shared/Tooltip.svc" />

@@ -13,7 +13,7 @@ public partial class InfoControl_Judicial_Contracts : Vivina.Erp.SystemFramework
     protected void grdContracts_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
-            e.Row.Attributes["onclick"] = "top.tb_show('Contrato','Accounting/Contract.aspx?ContractId=" + grdContracts.DataKeys[e.Row.RowIndex]["ContractId"].EncryptToHex() + "' );return;";
+            e.Row.Attributes["onclick"] = "top.$.lightbox('Accounting/Contract.aspx?ContractId=" + grdContracts.DataKeys[e.Row.RowIndex]["ContractId"].EncryptToHex() + "&lightbox[iframe]=true' );return;";
     }
 
 

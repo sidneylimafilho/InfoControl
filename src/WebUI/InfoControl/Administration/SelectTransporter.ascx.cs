@@ -61,7 +61,7 @@ public partial class App_Shared_SelectTransporter : Vivina.Erp.SystemFramework.U
             lblCNPJ.Text = transporter.LegalEntityProfile.CNPJ;
             lnkTransporterName.Text = transporter.LegalEntityProfile.CompanyName;
             String encripted = transporter.TransporterId.EncryptToHex();
-            lnkTransporterName.OnClientClick = "top.tb_show('Cadastro de Transportadoras','Administration/Transporter.aspx?TransporterId=" + encripted + "');return;";
+            lnkTransporterName.OnClientClick = "top.$.lightbox('Administration/Transporter.aspx?TransporterId=" + encripted + "&lightbox[iframe]=true');return;";
             pnlTransporter.Visible = true;
         }
         txtTransporter.Text = "";

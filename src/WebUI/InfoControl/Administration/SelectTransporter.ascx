@@ -21,7 +21,7 @@
                 </td>
                 <td>
                     <img id="Img1" src="~/App_Themes/_global/Company/user_add.gif" runat="server" alt="Inserir Transportadora"
-                        border="0" onclick="top.tb_show('Cadastro de Transportadora','Administration/Transporter.aspx?w=modal);" />
+                        border="0" onclick="top.$.lightbox('Administration/Transporter.aspx?w=modal&lightbox[iframe]=true);" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
             </tr>

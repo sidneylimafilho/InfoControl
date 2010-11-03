@@ -274,7 +274,7 @@ public partial class InfoControl_Services_ServiceOrder : Vivina.Erp.SystemFramew
             //verify the existence of ServiceOrder
             if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
             {
-                btnShowAppointments.OnClientClick = "top.tb_show('Agenda' , '../infocontrol/Appointments.aspx?ServiceOrderId=" + Request["ServiceOrderId"] + "'); return false;";
+                btnShowAppointments.OnClientClick = "top.$.lightbox('Appointments.aspx?ServiceOrderId=" + Request["ServiceOrderId"] + "&lightbox[iframe]=true'); return false;";
 
                 btnGenerateReceipt.Visible = true;
 

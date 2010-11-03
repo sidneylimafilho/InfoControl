@@ -28,7 +28,7 @@ namespace Vivina.Erp.WebUI.POS
                 showInventory();
                 SetUnitPriceNames();
 
-                btnPrintBarCode.OnClientClick = "top.tb_show(" + "'Impressão de Código de Barras'," + "'../InfoControl/BarCode_Print.aspx?DepositId=" +
+                btnPrintBarCode.OnClientClick = "top.$.lightbox('BarCode_Print.aspx?lightbox[iframe]=true&DepositId=" +
                                                 Page.ViewState["DepositId"].EncryptToHex() +
                                                 "&ProductId=" + Page.ViewState["ProductId"].EncryptToHex() +
                                                 "'); return false;";
