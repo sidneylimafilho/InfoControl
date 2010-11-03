@@ -18,10 +18,7 @@ namespace InfoControl.Web.UI
         {
             ClientScript.RegisterStartupScript(this.GetType(), "", "document.cookie = 'NoBot=' + encodeURIComponent('" + Request["ASP.NET_SessionId"] + "')+ ';';", true);
 
-            if (IsPostBack && Request.Cookies["NoBot"] == null)
-                Response.End();
-
-
+            
             //
             // Crack Telerik
             //
