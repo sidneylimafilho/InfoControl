@@ -136,9 +136,9 @@ namespace Vivina.Erp.BusinessRules
         /// <returns></returns>
 
 
-        public IQueryable<Task> GetTasks(Int32? userId, String sortExpression, Int32 status, FilterType filterType, String name,
+        public IQueryable<Task> GetTasks(Int32? userId, Int32 status, FilterType filterType, String name,
                                    DateTimeInterval dtInterval, int? parentId, int? subjectId, string pageName, Int32? companyId,
-                                   String competency)
+                                   String competency, String sortExpression)
         {
             //
             // returns all tasks and users releated  
@@ -256,8 +256,8 @@ namespace Vivina.Erp.BusinessRules
         /// <returns></returns>
         public IQueryable GetNotClosedTasksAsDataTable(Int32 userId, String sortExpression)
         {
-            return GetTasks(userId, String.Empty, TaskStatus.Concluded, FilterType.Hierarchy, String.Empty, null,
-                                  null, null, null, null, null);
+            return GetTasks(userId, TaskStatus.Concluded, FilterType.Hierarchy, String.Empty, null,
+                                  null, null, null, null, null, String.Empty);
         }
 
         /// <summary>
