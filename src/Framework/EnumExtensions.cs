@@ -6,9 +6,9 @@ namespace InfoControl
 {
     public static partial class EnumExtensions
     {
-        public static T ToObject<T>(this Enum graph, object value)
+        public static T ToEnum<T>(this int graph)
         {
-            return (T) Enum.ToObject(typeof(T), value);
-        }       
+            return (T)Enum.ToObject(typeof(T), graph);
+        }
     }
 }
