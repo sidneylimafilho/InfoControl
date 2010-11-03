@@ -222,8 +222,7 @@ namespace InfoControl
             {
                 PropertyInfo[] currentProps = current.GetType().GetProperties();
                 foreach (PropertyInfo prop in currentProps)
-                    if ((prop.GetCustomAttributes(typeof(AssociationAttribute), true).Length == 0) &&
-                        (prop.GetCustomAttributes(typeof(ColumnAttribute), true).Length == 1))
+                    if ((prop.GetCustomAttributes(typeof(AssociationAttribute), true).Length == 0))
                     {
                         object newValue = prop.GetValue(current, null);
                         original.GetType().GetProperty(prop.Name).SetValue(original, newValue, null);
