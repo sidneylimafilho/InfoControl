@@ -28,34 +28,32 @@
                 <fieldset id="filter" class="closed">
                     <legend onmouseover='setTimeout("$(\"#filter .body\").show(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"open\"})", 300);'>
                         Escolha o filtro desejado: </legend>
-                    <div class="body" asform="true" trigger="#tasks">
+                    <div class="body" form="true" trigger="#tasks">
                         Modo de Exibição:<br />
                         <table>
                             <tr>
                                 <td colspan="9" style="border-bottom: 1px solid #099">
-                                    <asp:RadioButton ID="rbtHierarchy" Text="Hierarquia" GroupName="rbtlTaskView" Value="2"
-                                        runat="server" />
-                                    <asp:RadioButton Text="Data" ID="rbtDate" GroupName="rbtlTaskView" Value="1" runat="server" />
+                                    <input type="radio" value="2" name="view" field="view" checked="checked" /><label>Hierarquia</label>
+                                    <input type="radio" value="1" name="view" field="view" /><label>Data</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     Parte do nome:
                                     <br />
-                                    <asp:TextBox ID="txtTask" runat="server" field="name"></asp:TextBox>
+                                    <input type="text" name="name" />
                                 </td>
                                 <td>
                                     <table>
                                         <tr>
                                             <td>
                                                 Início:<br />
-                                                <input type="text" ID="txtBeginDate" columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999"
-                                                     field="inicio" options="{relatedCalendar:'#txtEndDate'}" />
+                                                <input type="text" name="inicio" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999"
+                                                    options="{relatedCalendar:'#txtEndDate'}" />
                                             </td>
                                             <td>
                                                 Fim:<br />
-                                                <input type="text" ID="txtEndDate" columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999"
-                                                     field="fim" />
+                                                <input type="text" name="fim" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999" />
                                             </td>
                                         </tr>
                                     </table>
@@ -63,12 +61,9 @@
                             </tr>
                             <tr>
                                 <td colspan="9">
-                                    <asp:RadioButtonList ID="rbtlTaskStatus" GroupName="rbtlTaskStatus" RepeatDirection="Horizontal"
-                                        RepeatLayout="Table" runat="server">
-                                        <asp:ListItem Value="" Text="Todos"></asp:ListItem>
-                                        <asp:ListItem Value="1" Text="Abertas"></asp:ListItem>
-                                        <asp:ListItem Value="3" Text="Completas"></asp:ListItem>
-                                    </asp:RadioButtonList>
+                                    <input type="radio" value="" name="status" /><label>Todos</label>
+                                    <input type="radio" value="1" name="status" checked="checked" /><label>Abertas</label>
+                                    <input type="radio" value="3" name="status" /><label>Completas</label>
                                 </td>
                             </tr>
                         </table>
@@ -84,29 +79,34 @@
                 <br />
                 <table width="100%">
                     <tr>
-                        <td>
+                        <td source="~/Infocontrol/TaskService.svc">
                             <%-- 
                         - Este template separado pois será usado recursivamente sendo colocado uma UL dentro de outra UL criando assim 
                           uma arvore de tarefas.
                         - Este template está com display none para não ser apresentado na tela
                         --%>
                             <ul class="template" style="display: none">
-                                <!-- -->
-                                <li>
+                                <!-- 
+                                <li id="task_<$=TaskId$>">
                                     <table cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td>
-                                                <input type="checkbox" id="chkCompleteTask" onclick="CompleteTask(this)" />
-                                                &nbsp;
+                                            <td style="width:30px">
+                                                <$ if(!HasChildTasks){ $>
+                                                <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}" onsucess="$('#task_<$=TaskId$>').hide()" />
+                                                &nbsp; 
+                                                <$}else{$> 
+                                                <a href="javascript:;" command="click"  trigger="#task_<$=TaskId$> > ul">+++</a> <$}$>
                                             </td>
                                             <td>
-                                                <font runat="server" id="date"></font>
+                                                <font id="date"><$=$.format((FinishDate||"").JsonToDate(), "d")$></font>
                                             </td>
-                                            <td style="white-space: nowrap">
-                                                <a class="inline" id="lnkTask"><font><$= Name$> </font></a>&nbsp;
+                                            <td style="white-space: nowrap; font-weight:<$=HasChildTasks?"bold":"normal"$>">
+                                                <a href="task.aspx?taskid=<$=TaskId$>" class="inline" id="lnkTask"><font><$=Name$> </font></a>&nbsp;
                                             </td>
                                             <td style="width: 100px;">
-                                                <div id="rating" runat="server" title="Classificação" class="inline">
+                                                <div id="rating" title="Classificação" class="inline">
+                                                    <$ for (var i=0; i < Priority; i++){$> <span class='ratingStar emptyRatingStar' style='float: left;'>
+                                                        &nbsp;</span> <$}$>
                                                 </div>
                                                 &nbsp;
                                                 <div href='javascript:;' id="shared" class='shared' title="Tarefa Compartilhada Aguardando">
@@ -114,10 +114,13 @@
                                             </td>
                                         </tr>
                                     </table>
-                                </li>
+                                    <ul action="GetTasks" options="{parentId:<$=TaskId$> }"
+                                        template=".template">
+                                    </ul>
+                                </li>-->
                             </ul>
-                            <ul id="tasks" source="~/Infocontrol/TaskService.svc" action="GetTasks" command="load"
-                                options="{name:''}" template=".template">
+                            <ul id="tasks" action="GetTasks" command="load" options="{name:'', view:2, status:1}"
+                                template=".template">
                             </ul>
                             <br />
                             <br />
@@ -130,8 +133,6 @@
                         </td>
                     </tr>
                 </table>
-                
-                
             </td>
             <td class="right">
                 &nbsp;
