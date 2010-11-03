@@ -33,17 +33,7 @@
     void Application_Error(object sender, EventArgs e)
     {
         // Code that runs when an unhandled error occurs
-HttpContext ctx = HttpContext.Current;
-        Exception exception = ctx.Server.GetLastError();
 
-        string errorInfo =
-                "<br>Offending URL: " + ctx.Request.Url.ToString() +
-                "<br>Source: " + exception.Source +
-                "<br>Message: " + exception.Message +
-                "<br>Stack trace: " + exception.StackTrace;
-        System.IO.File.AppendAllText("c:\\error.log", errorInfo);
-
-        ctx.Server.ClearError();
 
     }
 
