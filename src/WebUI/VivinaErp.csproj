@@ -2797,7 +2797,6 @@
     <Content Include="App_Shared\DateTimeInterval.ascx" />
     <Content Include="App_Shared\HelpTooltip.ascx" />
     <Content Include="App_Shared\JS\jquery.dimensions.js" />
-    <Content Include="App_Shared\JS\jquery.thickbox.js" />
     <Content Include="App_Shared\JS\jquery.ui.draggable.js" />
     <Content Include="App_Shared\JS\jquery.jgrowl.css" />
     <Content Include="App_Shared\JS\jquery.jgrowl.js" />
