@@ -45,6 +45,9 @@
             <asp:ScriptReference Path="~/App_Shared/js/jquery.template.js" />
             <asp:ScriptReference Path="~/App_Shared/JS/jquery.notification.js" /> 
             <asp:ScriptReference Path="~/App_Shared/JS/jquery.serializer.js" /> 
+            
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.js" /> 
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.pt-br.js" />
 
             <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" /> 
             
