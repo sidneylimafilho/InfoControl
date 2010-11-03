@@ -33,12 +33,13 @@ namespace Vivina.Erp.WebUI.InfoControl
 
         [OperationContract]
         [JavaScriptSerializer]
-        public ClientResponse GetTasks(string name)
+        public ClientResponse GetTasks(string name, int status, int view, string inicio, string fim, int? parentId)
         {
+            view = view != 0 ? view : 1;
             return new ClientResponse(() =>
             {
-                return new TaskManager(null).GetTasks(User.Identity.UserId, "", TaskStatus.Proposed, FilterType.Date, name,
-                                                      null, null, null, null, null, null).Offline().ToArray();
+                return new TaskManager(null).GetTasks(User.Identity.UserId, status, view.ToEnum<FilterType>(), name,
+                                                      null, parentId, null, null, null, null, "").Select(t => t.Duplicate()).ToArray();
             });
         }
     }
