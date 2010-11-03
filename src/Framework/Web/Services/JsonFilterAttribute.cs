@@ -137,10 +137,8 @@ namespace InfoControl.Web.Services
                     var paramNode = doc.FirstChild.ChildNodes.Cast<XmlNode>()
                                                   .Where(n => n.Name.ToLower() == part.Name.ToLower())
                                                   .FirstOrDefault();
-                    if (paramNode == null)
-                        throw new ArgumentException("O argumento não foi enviado!", part.Name);
-
-                    parameters[i] = Deserialize(part.Type, paramNode);
+                    if (paramNode != null)
+                        parameters[i] = Deserialize(part.Type, paramNode);
                 }
 
             }
@@ -174,11 +172,21 @@ namespace InfoControl.Web.Services
                 if (attr == null)
                     return Convert.ChangeType(rawObject, type);
 
+                //
+                // Tipos nullable
+                //
+                if (type.IsGenericType)
+                {
+                    if (!String.IsNullOrEmpty(rawObject))
+                        return Convert.ChangeType(rawObject, type.GetGenericArguments()[0]);
+                    else
+                        return null;
+                }
+
+
                 if (attr.Value != "object")
                     return Convert.ChangeType(rawObject, type);
-
-               
-
+                
 
                 //
                 // Convert complex types
