@@ -105,10 +105,10 @@
             var form = $this.closest("[form=true]") || $this.closest("FORM");
 
             // Get All html form controls
-            $.each(form.find(":input, select, textarea, :password, [type=hidden]").serializeArray(),
-                   function(i, elem) {
-                       options.data[$(elem).attr("field") || elem.name || elem.id] = $(elem).val();
-                   });
+            var fields = form.find(":input, select, textarea, :password, [type=hidden]").serializeArray();
+            $.each(fields, function(i, elem) {
+                options.data[$(elem).attr("field") || elem.name || elem.id] = $(elem).val();
+            });
 
 
 
