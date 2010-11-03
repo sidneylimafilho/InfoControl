@@ -46,7 +46,7 @@
                 }
 
             } catch (err) {
-                $("<pre class='error' />").html("The template is mal-formed, because " + err + "\n\n" + script).appendTo("body");
+                $("<pre class='error' />").text("The template is mal-formed, because " + err + "\n\n" + script).appendTo("body");
             }
 
 
