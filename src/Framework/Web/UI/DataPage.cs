@@ -173,8 +173,9 @@ namespace InfoControl.Web.UI
 
         protected override void OnPreInit(EventArgs e)
         {
-            Trace.Warn("DataPage", "OnPreInit");
+            Trace.Warn("DataPage", "Begin OnPreInit");
             base.OnPreInit(e);
+            Trace.Warn("DataPage", "End OnPreInit");
         }
 
         protected override void OnLoad(EventArgs e)
