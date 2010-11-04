@@ -172,7 +172,7 @@ public partial class Company_POS_Sale_Parcels : Vivina.Erp.SystemFramework.PageB
             Page.ClientScript.RegisterStartupScript(
                     this.GetType(),
                     "CloseModal",
-                    "top.tb_remove();" +
+                    "top.$.LightBoxObject.close();" +
                     "top.content.location.href='../Accounting/Receipt.aspx?SaleId=" + sale.SaleId.EncryptToHex() + "';",
                     true);
 
@@ -182,7 +182,7 @@ public partial class Company_POS_Sale_Parcels : Vivina.Erp.SystemFramework.PageB
             Page.ClientScript.RegisterStartupScript(
                     this.GetType(),
                     "CloseModal",
-                    "top.tb_remove();" +
+                    "top.$.LightBoxObject.close();" +
                     "top.content.location.href+='?';",
                     true);
         }
