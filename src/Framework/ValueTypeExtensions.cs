@@ -225,7 +225,9 @@ namespace InfoControl
                     if ((prop.GetCustomAttributes(typeof(AssociationAttribute), true).Length == 0))
                     {
                         object newValue = prop.GetValue(current, null);
-                        original.GetType().GetProperty(prop.Name).SetValue(original, newValue, null);
+                        var propOriginal = original.GetType().GetProperty(prop.Name);
+                        if (propOriginal.GetSetMethod() != null)
+                            propOriginal.SetValue(original, newValue, null);
                     }
             }
         }
