@@ -79,7 +79,7 @@ public partial class InfoControl_Task : Vivina.Erp.SystemFramework.PageBase
             Users = null;
             if (!String.IsNullOrEmpty(Request["TaskId"]))
             {
-                Page.ViewState["TaskId"] = Convert.ToInt32(Request["TaskId"].DecryptFromHex());
+                Page.ViewState["TaskId"] = Convert.ToInt32(Request["TaskId"]);
                 ShowTask();
             }
             else
