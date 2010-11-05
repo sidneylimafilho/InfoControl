@@ -19,7 +19,7 @@ namespace Vivina.Erp.WebUI.Administration
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
+
 
             //
             // Se for inserção então essa página é mostrada fora do iframe, logo precisa 
@@ -125,7 +125,6 @@ namespace Vivina.Erp.WebUI.Administration
         {
             _productManager = new ProductManager(this);
             product = new Product();
-            originalProduct = new Product();
 
             if (Page.ViewState["ProductId"] != null)
             {
@@ -152,7 +151,7 @@ namespace Vivina.Erp.WebUI.Administration
             InsertManufacturer(product);
 
             product.ProductCode = txtProductCode.Text;
-            product.BarCodeTypeId = Convert.ToInt32(cboBarCodeType.SelectedValue);
+                        
             product.BarCode = txtBarCode.Text;
             product.IdentificationOrPlaca = txtIdentificationOrPlaca.Text;
             product.PatrimonioOrRenavam = txtPatrimonioOrRenavam.Text;
@@ -179,6 +178,9 @@ namespace Vivina.Erp.WebUI.Administration
              * Here is made a verification if there's value in the control to not assign a value
              * to the DataBank from a null control and prevent exceptions
              */
+
+            if (!String.IsNullOrEmpty(cboBarCodeType.SelectedValue))
+                product.BarCodeTypeId = Convert.ToInt32(cboBarCodeType.SelectedValue);
 
             if (txtUnit != null)
                 product.Unit = txtUnit.Text;
@@ -207,7 +209,7 @@ namespace Vivina.Erp.WebUI.Administration
 
             string redirectUrl = "";
 
-            if (originalProduct.ProductId == 0)
+            if (originalProduct == null)
             {
                 product.CreatedByUser = User.Identity.UserName;
                 _productManager.Insert(product);
@@ -249,7 +251,7 @@ namespace Vivina.Erp.WebUI.Administration
 
             if (!String.IsNullOrEmpty(txtManufacturer.Text))
                 product.ManufacturerId = manufacturerManager.TryManufacturer(txtManufacturer.Text);
-            
+
             return product;
         }
 
