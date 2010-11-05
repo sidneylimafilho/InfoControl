@@ -17,7 +17,7 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.Name : LegalEntityProfile.CompanyName;
+                return (Profile != null) ? Profile.Name : (LegalEntityProfile != null) ? LegalEntityProfile.CompanyName : "";
             }
         }
 
@@ -25,7 +25,7 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.CPF : LegalEntityProfile.CNPJ;
+                return (Profile != null) ? Profile.CPF : (LegalEntityProfile != null) ? LegalEntityProfile.CNPJ : "";
             }
         }
         
@@ -33,7 +33,7 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.Email : LegalEntityProfile.Email;
+                return (Profile != null) ? Profile.Email : (LegalEntityProfile != null) ? LegalEntityProfile.Email : "";
             }
         }
 
@@ -41,7 +41,7 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.Phone : LegalEntityProfile.Phone;
+                return (Profile != null) ? Profile.Phone : (LegalEntityProfile != null) ? LegalEntityProfile.Phone : "";
             }
         }
 
@@ -49,7 +49,7 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.Address : LegalEntityProfile.Address;
+                return (Profile != null) ? Profile.Address : (LegalEntityProfile != null) ? LegalEntityProfile.Address : null;
             }
         }
 
@@ -57,7 +57,7 @@ namespace Vivina.Erp.DataClasses
 		{
 			get
 			{
-				return (Profile != null) ? Profile.AddressComp : LegalEntityProfile.AddressComp;
+                return (Profile != null) ? Profile.AddressComp : (LegalEntityProfile != null) ? LegalEntityProfile.AddressComp : "";
 			}
 		}
 
@@ -65,7 +65,7 @@ namespace Vivina.Erp.DataClasses
 		{
 			get
 			{
-				return (Profile != null) ? Profile.AddressNumber : LegalEntityProfile.AddressNumber;
+                return (Profile != null) ? Profile.AddressNumber : (LegalEntityProfile != null) ? LegalEntityProfile.AddressNumber : "";
 			}
 		}
     }

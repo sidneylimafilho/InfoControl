@@ -131,11 +131,11 @@ namespace Vivina.Erp.BusinessRules
         /// </summary>
         /// <param name=SupplierId>SupplierId</param>
         /// <param name=CompanyId>CompanyId</param>
-        public Supplier GetSupplier(Int32 SupplierId, string cpfOrCnpj)
+        public Supplier GetSupplier(Int32 companyId, string cpfOrCnpj)
         {
-            return
-                DbContext.Suppliers.Where(x => x.Profile.CPF == cpfOrCnpj || x.LegalEntityProfile.CNPJ == cpfOrCnpj).
-                    FirstOrDefault();
+            return GetSupplierByCompany(companyId)
+                        .Where(x => x.Profile.CPF == cpfOrCnpj || x.LegalEntityProfile.CNPJ == cpfOrCnpj)
+                        .FirstOrDefault();
         }
 
         /// <summary>

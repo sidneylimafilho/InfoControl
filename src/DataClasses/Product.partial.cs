@@ -24,7 +24,11 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return this.Category.Url + this.Name.RemoveSpecialChars() + "," + this.ProductId + ".aspx";
+                string url = Name.RemoveSpecialChars() + "," + ProductId + ".aspx";
+                if (Category != null)
+                    url = Category.Url + url;
+
+                return  url;
             }
         }
     }

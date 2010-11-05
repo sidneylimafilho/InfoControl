@@ -224,12 +224,7 @@ namespace Vivina.Erp.BusinessRules
         /// <returns>a FirstOrDefault customer that contains the parameter cpf and companyId</returns>
         private Customer GetCustomerByCPF(Int32 companyId, String cpf)
         {
-            IQueryable<Customer> query = from customer in DbContext.Customers
-                                         join profile in DbContext.Profiles on customer.ProfileId equals
-                                             profile.ProfileId
-                                         where customer.CompanyId.Equals(companyId) && profile.CPF.Equals(cpf)
-                                         select customer;
-            return query.FirstOrDefault();
+            return GetCustomerByCompany(companyId).Where(x => x.Profile.CPF.Equals(cpf)).FirstOrDefault();
         }
 
         /// <summary>
@@ -239,13 +234,8 @@ namespace Vivina.Erp.BusinessRules
         /// <param name="CNPJ"></param>
         /// <returns>a FirstOrDefault customer that contains the parameter CNPJ and companyID</returns>
         private Customer GetCustomerByCNPJ(Int32 companyID, String CNPJ)
-        {
-            IQueryable<Customer> query = from customer in DbContext.Customers
-                                         join legalProfile in DbContext.LegalEntityProfiles on
-                                             customer.LegalEntityProfileId equals legalProfile.LegalEntityProfileId
-                                         where customer.CompanyId.Equals(companyID) && legalProfile.CNPJ.Equals(CNPJ)
-                                         select customer;
-            return query.FirstOrDefault();
+        {           
+            return GetCustomerByCompany(companyID).Where(x => x.LegalEntityProfile.CNPJ.Equals(CNPJ)).FirstOrDefault();
         }
 
         /// <summary>

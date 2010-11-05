@@ -17,7 +17,7 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.Name : LegalEntityProfile.CompanyName;
+                return (Profile != null) ? Profile.Name : (LegalEntityProfile != null) ? LegalEntityProfile.CompanyName : "";
             }
         }
 
@@ -25,15 +25,15 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.CPF : LegalEntityProfile.CNPJ;
+                return (Profile != null) ? Profile.CPF : (LegalEntityProfile != null) ? LegalEntityProfile.CNPJ : "";
             }
         }
-        
+
         public string Email
         {
             get
             {
-                return (Profile != null) ? Profile.Email : LegalEntityProfile.Email;
+                return (Profile != null) ? Profile.Email : (LegalEntityProfile != null) ? LegalEntityProfile.Email : "";
             }
         }
 
@@ -41,26 +41,26 @@ namespace Vivina.Erp.DataClasses
         {
             get
             {
-                return (Profile != null) ? Profile.Phone : LegalEntityProfile.Phone;
+                return (Profile != null) ? Profile.Phone : (LegalEntityProfile != null) ? LegalEntityProfile.Phone : "";
             }
         }
 
         
 
-		public string AddressComp
-		{
-			get
-			{
-				return (Profile != null) ? Profile.AddressComp : LegalEntityProfile.AddressComp;
-			}
-		}
+        public string AddressComp
+        {
+            get
+            {
+                return (Profile != null) ? Profile.AddressComp : (LegalEntityProfile != null) ? LegalEntityProfile.AddressComp : "";
+            }
+        }
 
-		public string AddressNumber
-		{
-			get
-			{
-				return (Profile != null) ? Profile.AddressNumber : LegalEntityProfile.AddressNumber;
-			}
-		}
+        public string AddressNumber
+        {
+            get
+            {
+                return (Profile != null) ? Profile.AddressNumber : (LegalEntityProfile != null) ? LegalEntityProfile.AddressNumber : "";
+            }
+        }
     }
 }
