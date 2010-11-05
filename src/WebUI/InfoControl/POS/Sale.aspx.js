@@ -1,9 +1,13 @@
 ﻿
-$(function () {
+$(function() {
 
     var discount = $("#ctl00_ContentPlaceHolder_txtDiscount");
 
-    discount.blur(function () {
+    window.lblTotal = $('[id*=lblTotal]');
+    window.lblSubTotal = $('[id*=lblSubtotal]');
+    window.txtDiscount = $('[id*=txtDiscount]');
+
+    discount.blur(function() {
         if (isNaN($(this).val().replace("%", "").replace(",", "."))) {
             $(this).attr("value", "0,00");
             return;
@@ -16,7 +20,7 @@ function CalculateDiscount(control) {
     // Pegar os valores do SubTotal e do desconto, no momento em que é executada a função.
     // Evitando assim, erros nos cálculos matemáticos.
     //
-    if (lblSubTotal) var subTotal = lblSubTotal.innerHTML.replace(".", "").replace(",", ".");
+    if (lblSubTotal) var subTotal = lblSubTotal.html().replace(".", "").replace(",", ".");
     var discount = control.value.replace(".", "").replace(",", ".");
 
     //
@@ -33,11 +37,11 @@ function CalculateDiscount(control) {
         subTotal = parseFloat("0" + subTotal) - parseFloat("0" + discount);
     }
 
-    lblTotal.innerHTML = subTotal.localeFormat("N");
+    lblTotal.html($.format(subTotal, "N"));
 }
 
-function ApplyPaymentMethod() {
-    if (lblTotal) $cookies('total', lblTotal.firstChild.nodeValue, { expires: 999999 });
-
-    top.$.lightbox('POS/Sale_Parcels.aspx?lightbox[iframe]=true')
+function ApplyPaymentMethod() {    
+    top.$.lightbox('POS/Sale_Parcels.aspx?lightbox[iframe]=true&total=' + lblTotal.html())
 }
+
+

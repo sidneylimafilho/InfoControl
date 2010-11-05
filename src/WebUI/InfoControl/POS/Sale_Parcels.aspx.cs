@@ -45,13 +45,13 @@ public partial class Company_POS_Sale_Parcels : Vivina.Erp.SystemFramework.PageB
             ucDueDate.DateTime = DateTime.Now.Date;
 
             ucCurrFieldQuantityParcels.Text = "1";
-            if (Server.UrlDecode(Request.Cookies["total"].Value) != null)
-                ucCurrFieldAmount.Text = Server.UrlDecode(Request.Cookies["total"].Value);
+            if (Server.UrlDecode(Request["total"]) != null)
+                ucCurrFieldAmount.Text = Server.UrlDecode(Request["total"]);
 
             btnFinishSale.Attributes["accesskey"] = "F10";
             ttpEmployee.Visible = cboEmployee.Items.Count > 0;
 
-            Page.ViewState["totalSale"] = Server.UrlDecode(Request.Cookies["total"].Value);
+            Page.ViewState["totalSale"] = Server.UrlDecode(Request["total"]);
         }
     }
 
