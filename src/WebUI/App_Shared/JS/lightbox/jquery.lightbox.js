@@ -474,8 +474,8 @@ function($) {
                 b = k[0];
                 title = k[1] || '';
                 c = $.extend(true, c || {}, {
-                    'width': top.$(top).width() - 130,
-                    'height': top.$(top).height() - 150,
+                    'width': top.$(top).width() - 230,
+                    'height': top.$(top).height() - 250,
                     'modal': 0,
                     'force': '',
                     'title': title,
