@@ -107,7 +107,7 @@ public partial class InfoControl_Services_CustomerCall : Vivina.Erp.SystemFramew
         Page.ClientScript.RegisterStartupScript(
                     this.GetType(),
                     "CloseModal",
-                    "top.tb_remove();" +
+                    "top.$.LightBoxObject.close();" +
                     "top.content.location.href+='?';",
                     true);
     }
@@ -119,7 +119,7 @@ public partial class InfoControl_Services_CustomerCall : Vivina.Erp.SystemFramew
             Page.ClientScript.RegisterStartupScript(
                     this.GetType(),
                     "CloseModal",
-                    "top.tb_remove();" +
+                    "top.$.LightBoxObject.close();" +
                     "top.content.location.href+='?';",
                     true);
             return;

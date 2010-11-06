@@ -123,7 +123,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
         //
         //Close the modal popup and redirect for WebPages.aspx
         //
-        ClientScript.RegisterClientScriptBlock(this.GetType(), "", "top.tb_remove();", true);
+        ClientScript.RegisterClientScriptBlock(this.GetType(), "", "top.$.LightboxObject.close();", true);
 
         //Response.Redirect("WebPages.aspx");
 

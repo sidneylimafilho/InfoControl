@@ -200,7 +200,7 @@ public partial class Company_Supplier_General : Vivina.Erp.SystemFramework.PageB
             Page.ClientScript.RegisterStartupScript(
                 GetType(),
                 "CloseModal",
-                "top.tb_remove();" +
+                "top.$.LightBoxObject.close();" +
                 "top.content.location.href+='?';",
                 true);
     }

@@ -22,7 +22,7 @@ public partial class Company_Customer_General : Vivina.Erp.SystemFramework.PageB
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!String.IsNullOrEmpty(Request["w"]))
-            btnCancel.OnClientClick = "top.tb_remove();return false;";
+            btnCancel.OnClientClick = "top.$.LightBoxObject.close();return false;";
         else
         {
             btnCancel.OnClientClick = "location='Customers.aspx';return false;";

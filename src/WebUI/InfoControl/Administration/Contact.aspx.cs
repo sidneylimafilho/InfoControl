@@ -129,7 +129,7 @@ namespace Vivina.Erp.WebUI.Administration
         /// </summary>
         private void CloseModalPopup()
         {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "CloseModal", "top.tb_remove();", true);
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "CloseModal", "top.$.LightBoxObject.close()();", true);
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)

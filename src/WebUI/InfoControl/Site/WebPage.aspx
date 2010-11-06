@@ -99,7 +99,7 @@
                             <asp:Button ID="btnSaveAndNew" runat="server" Text="Salvar Novo" OnClick="btnSave_Click"
                                 ValidationGroup="SaveTask" />
                             <asp:Button ID="btnSave" runat="server" Text="Salvar" OnClick="btnSave_Click" ValidationGroup="SaveTask" />
-                            <asp:Button ID="btnCancel" runat="server" Text="Cancelar" OnClientClick="top.tb_remove();  return false;" />
+                            <asp:Button ID="btnCancel" runat="server" Text="Cancelar" OnClientClick="top.$.LightBoxObject.close();  return false;" />
                         </td>
                     </tr>
                 </table>

@@ -54,7 +54,7 @@ public partial class Company_Accounting_PayParcel : Vivina.Erp.SystemFramework.P
 
     protected void btnCancel_Click(object sender, EventArgs e)
     {
-        Page.ClientScript.RegisterStartupScript(this.GetType(), "CloseModal", "top.tb_remove();", true);
+        Page.ClientScript.RegisterStartupScript(this.GetType(), "CloseModal", "top.$.LightBoxObject.close();", true);
     }
 
     protected void btnOK_Click(object sender, EventArgs e)

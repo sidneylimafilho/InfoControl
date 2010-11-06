@@ -50,7 +50,7 @@ namespace Vivina.Erp.WebUI.RH
 
             if (Request["w"] == "modal")
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "top.tb_remove();", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "", "top.$.LightBoxObject.close();", true);
                 return;
             }
 

@@ -131,7 +131,7 @@
                         <br />
                         <br />
                         &nbsp;&nbsp;
-                        <input id="" accesskey="F7" onclick="top.tb_remove();top.content.focus();return false;"
+                        <input id="" accesskey="F7" onclick="top.$.LightBoxObject.close();top.content.focus();return false;"
                             src="../../app_Themes/_global/Company/bt_cancelar_pagamento.gif" type="image" />
                         &nbsp;&nbsp;
                         <asp:ImageButton ID="btnFinishSale" runat="server" ImageUrl="~/app_Themes/_global/Company/bt_concluir_venda2.gif"
