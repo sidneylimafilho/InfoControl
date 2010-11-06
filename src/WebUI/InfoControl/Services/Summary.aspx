@@ -42,7 +42,7 @@
                                     SortExpression="OpenedDate" />
                                 <asp:TemplateField HeaderText="OS Relacionada" SortExpression="ServiceOrderNumber">
                                     <ItemTemplate>
-                                        <a style="cursor: pointer" onclick="event.cancelBubble=true; top.tb_show('Ordem de Serviço', '<%# "Services/ServiceOrder.aspx?ServiceOrderId=" + Eval("ServiceOrderId").EncryptToHex()  %>');">
+                                        <a style="cursor: pointer" onclick="event.cancelBubble=true; top.$.LightBoxObject.show('<%# "Services/ServiceOrder.aspx?ServiceOrderId=" + Eval("ServiceOrderId").EncryptToHex()  %>');">
                                             <%# Eval("ServiceOrderNumber") %>
                                         </a>
                                     </ItemTemplate>

@@ -20,13 +20,13 @@ namespace Vivina.Erp.WebUI.InfoControl.Services
         protected void grdCustomerCalls_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
-                e.Row.Attributes["onclick"] = "top.tb_show('Chamado','CRM/CustomerCall.aspx?CustomerCallId=" + grdCustomerCalls.DataKeys[e.Row.RowIndex]["CustomerCallId"].EncryptToHex() + "');";
+                e.Row.Attributes["onclick"] = "top.$.LightBoxObject.show('CRM/CustomerCall.aspx?lightbox[iframe]=true&CustomerCallId=" + grdCustomerCalls.DataKeys[e.Row.RowIndex]["CustomerCallId"].EncryptToHex() + "');";
         }
 
         protected void grdServiceOrders_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
-                e.Row.Attributes["onclick"] = "top.tb_show('Ordem de Serviço','Services/ServiceOrder.aspx?ServiceOrderId=" + grdServiceOrders.DataKeys[e.Row.RowIndex]["ServiceOrderId"].EncryptToHex() + "');";
+                e.Row.Attributes["onclick"] = "top.$.LightBoxObject.show('Services/ServiceOrder.aspx?lightbox[iframe]=true&ServiceOrderId=" + grdServiceOrders.DataKeys[e.Row.RowIndex]["ServiceOrderId"].EncryptToHex() + "');";
         }
 
 

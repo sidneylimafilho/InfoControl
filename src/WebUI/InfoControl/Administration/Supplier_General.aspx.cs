@@ -116,8 +116,7 @@ public partial class Company_Supplier_General : Vivina.Erp.SystemFramework.PageB
                 }
             }
         }
-        //if (Session["w"] != null)
-        //    btnCancel.OnClientClick = "top.tb_remove(); return false;";
+
     }
 
     protected void btnSave_Click(object sender, EventArgs e)
