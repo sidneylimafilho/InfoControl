@@ -24,32 +24,32 @@ $(document).ready(function() {
     });
 
     test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE ", function() {
-        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService' " +
+        var html = "<a command=\"click\"  source='/infocontrol/SearchService.svc' " +
                  "params='{companyId:1, itemId:null}'></a>";
         var outerHtml = sandbox.html(html).find("A").getAddress();
-        equal(outerHtml, "/infocontrol/controller/SearchService");
+        equal(outerHtml, "/infocontrol/SearchService.svc");
     });
 
     test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE ends with slash ", function() {
-        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService/' " +
+        var html = "<a command=\"click\"  source='/infocontrol/SearchService.svc/' " +
                  "params='{companyId:1, itemId:null}'></a>";
         var outerHtml = sandbox.html(html).find("A").getAddress();
-        equal(outerHtml, "/infocontrol/controller/SearchService");
+        equal(outerHtml, "/infocontrol/SearchService.svc");
     });
 
 
     test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE w/ACTION ends with slash", function() {
-        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService' " +
+        var html = "<a command=\"click\"  source='/infocontrol/SearchService.svc' " +
                 "action='GetSampleData' params='{companyId:1, itemId:null}'></a>";
         var outerHtml = sandbox.html(html).find("A").getAddress();
-        equal(outerHtml, "/infocontrol/controller/SearchService/GetSampleData");
+        equal(outerHtml, "/infocontrol/SearchService.svc/GetSampleData");
     });
 
     test("getAddress: Deve retornar o endereço do recurso a ser acessado. SOURCE w/ACTION ends with slash", function() {
-        var html = "<a command=\"click\"  source='/infocontrol/controller/SearchService/' " +
-                "action='GetSampleData' params='{companyId:1, itemId:null}'></a>";
+        var html = "<a command=\"click\"  source='/infocontrol/SearchService.svc/' " +
+                "action='GetSampleData' ></a>";
         var outerHtml = sandbox.html(html).find("A").getAddress();
-        equal(outerHtml, "/infocontrol/controller/SearchService/GetSampleData");
+        equal(outerHtml, "/infocontrol/SearchService.svc/GetSampleData");
     });
 
     module("COMMAND");
@@ -106,8 +106,8 @@ $(document).ready(function() {
 
     asyncTest("chama recursos de dados em JSON assincronamente", function() {
         stop();
-        sandbox.html("<div><span command='click' controller='/infocontrol/controller/SearchService/' " +
-                     "action='GetSampleData' params='{companyId:1, itemId:null}' /></div>")
+        sandbox.html("<div><span command='click' source='/infocontrol/infocontrol/SearchService.svc/' " +
+                     "action='GetSampleData' options='{parameters:{companyId:1, itemId:null}, formData:{}}' /></div>")
                 .initializeControls()
                 .find("span")
                 .dataBind({
@@ -131,26 +131,27 @@ $(document).ready(function() {
     });
 
 
-    asyncTest("TRIGGER: Ao disparar o DataBind deve chamar o DataBind do elemento que está do atributo trigger", function() {
+    asyncTest("TRIGGER: Ao disparar a tag A deve passar o parametro options", function() {
         stop();
         var c = sandbox
-                .html("<p id='test'  onbinding='ok(options.params.teste, \"dataBind do Test: \" + options.params.teste); start();' /><p>" + 
-                      "<a command='click' trigger='#test' params='{\"teste\":\"ok\"}' /></p>")
+                .html("<p id='test'  onbinding='ok(options.data.teste, \"dataBind do Test: \" + options.data.teste); start();' /><p>" +
+                      "<a command='click' trigger='#test' options='{\"teste\":\"ok\"}' /></p>")
                 .initializeControls()
                 .find("A")
                 .dataBind();
     });
 
 
-    asyncTest("TRIGGER: Ao disparar o DataBind deve chamar o DataBind do elemento que está do atributo trigger", function() {
+    asyncTest("TRIGGER: Ao disparar a tag A deve chamar o DataBind do elemento que está do atributo trigger", function() {
         stop();
         var c = sandbox
-                .html("<span command='click' controller='/infocontrol/controller/SearchService/' action='GetSampleData' id='test' " +
-                      " onsucess='ok(result.Data[0].Nome[0] == options.params.itemId, request.responseText); start();' /><p>" +
-                      "<a command='click' trigger='#test' params='{\"companyId\":1, \"itemId\":9}' />")
+                .html("<span id='test' command='click' source='/infocontrol/infocontrol/SearchService.svc/' action='GetSampleData' " +
+                      " onsucess='ok(true, request.responseText); start();' " + 
+                      " options='{parameters:{companyId:1, itemId:null}, formData:{}}'  ></span>" +
+                      "<a command='click' trigger='#test'  ></a>")
                 .initializeControls()
                 .find("A")
-                .click();
+                .dataBind();
     });
 
     module("NOT MODIFIED")
@@ -223,11 +224,11 @@ $(document).ready(function() {
     asyncTest("TARGET: Ao disparar o DataBind o retorno da requisição deve ser enviada para o controle identificado no atributo TARGET", function() {
         stop();
         expect(1);
-        
+
         if ($("#test").size() == 0)
             $(document.body).prepend("<p id='test' />");
         $("#test").hide();
-        
+
         sandbox.html("<p><a command='click' href='../formsample.ascx' target='#test' /></p>")
                .initializeControls()
                .find("A")
@@ -290,7 +291,7 @@ $(document).ready(function() {
         ok(false);
     });
 
-    
+
 
 });
 
