@@ -2791,6 +2791,9 @@
     <Content Include="App_Themes\GlassCyan\Controls\Editor\underline.gif" />
     <Content Include="App_Themes\GlassCyan\Controls\Editor\undo.gif" />
     <Content Include="App_Themes\GlassCyan\Controls\Editor\unlink.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\TreeView\line.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\TreeView\minus.gif" />
+    <Content Include="App_Themes\GlassCyan\Controls\TreeView\plus.gif" />
     <Content Include="InfoControl\Accounting\AccountSearch.ascx" />
     <Content Include="App_Shared\CurrencyField.ascx" />
     <Content Include="App_Shared\Date.ascx" />
