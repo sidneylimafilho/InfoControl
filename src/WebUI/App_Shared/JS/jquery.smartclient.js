@@ -23,20 +23,19 @@
         },
         getAddress: function() {
             // Prepare the url
-            var url = this.attrUp("source") || this.attrUp("href");
+            var url = this.attrUp("source") || this.attrUp("href") || "";
+            url = url.replace(/(.*)\/$/, "$1");
 
-            if (this.attr("action")) {
+            if (this.attrUp("action")) {
                 url += "/" + this.attrUp("action");
             }
             return url.replace("~", window.applicationPath || "");
         },
-        attachHtmlInTarget: function(html, t, m) {
+        attachHtmlInTarget: function(html, t, mode) {
             // Get target tag
-            var target = t || this.attrUp("target") || this;
+            var target = t || this;
 
-            if ($(target).size() == 0) throw TargetMissingException(this);
-
-            var mode = m || this.attrUp("mode");
+            if ($(target).size() == 0)  TargetMissingException(this);
 
             if (mode === "after") {
                 $(target).after(html);
@@ -79,7 +78,7 @@
             });
         },
         dataBind: function(options) {
-            for (var i = 0, l = this.length; i < l; i++)
+            for (var i = 0; i < this.length; i++)
                 $(this[i])._dataBind(options);
 
 
@@ -88,8 +87,8 @@
         },
         /* End DataBind*/
 
-        _dataBind: function(options) {
-            options = options || {};
+        _dataBind: function(opt) {
+            var options = opt || {};
             var $this = $(this[0]);
 
             if ($this.attr("onbinding")) eval($this.attr("onbinding"));
@@ -99,10 +98,10 @@
 
             options.data = options.data || {};
             if ($this.attrUp("options") && $this.attrUp("options") != "") {
-                $.extend(options.data, eval("(" + $this.attrUp("options") + ")"));
+                options.data = $.extend(eval("(" + $this.attrUp("options") + ")"), options.data);
             }
 
-            var form = $this.closest("[form=true]") || $this.closest("FORM");
+            var form = $this.closest("[action]") || $this.closest("FORM");
 
             // Get All html form controls
             var fields = form.find(":input, select, textarea, :password, [type=hidden]").serializeArray();
@@ -111,6 +110,29 @@
             });
 
 
+            // Get target tag
+            if (!options.target) {
+                options.target = this;
+                if ($this.attrUp("target"))
+                    options.target = $($this.attrUp("target"));
+            }
+
+            // Get target tag
+            if (!options.mode && $this.attrUp("mode")) {
+                options.mode = $($this.attrUp("mode"));
+            }
+
+
+            // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
+            // is fired otherwise prepares the data Request Payload
+            //            if (!options.data)
+            //                options.data = $.toJSON(options.data);
+            // save the control that is fire dataBind, because closure "sucess" dont access
+            //var ctrl = $this;
+            options.type = $this.attrUp("method") || "POST";
+
+            // Prepare the url
+            options.url = $this.getAddress();
 
             // Allow fire DataBinding in controls that has TRIGGER atribute
             if ($this.attrUp("trigger")) {
@@ -122,22 +144,11 @@
                 return;
             }
 
-            // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
-            // is fired otherwise prepares the data Request Payload
-            //            if (!options.data)
-            //                options.data = $.toJSON(options.data);
-            // save the control that is fire dataBind, because closure "sucess" dont access
-            //var ctrl = $this;
-            var type = $this.attrUp("method") || "POST";
-
-            // Prepare the url
-            var url = $this.getAddress();
-
             // Only fires ajax if there are url
-            if (url) {
+            if (options.url) {
                 $.ajax({
-                    type: type,
-                    url: url,
+                    type: options.type,
+                    url: options.url,
                     data: $.toJSON(options.data),
                     contentType: "application/json",
                     ifModified: true,
@@ -146,11 +157,11 @@
 
                         // If Not Modified then get cached content file by iframe
                         if (request.status == 304) {
-                            $this.ajaxIframe(url, $this, options.onsucess);
+                            $this.ajaxIframe(options.url, $this, options.onsucess);
                         } else {
                             // If Http Status 200 then OK, process JSON because data should be transform on html
                             var html = result;
-                            var target = $this.attrUp("target");
+                            var target = options.target;
 
                             if (result && request.responseText != "") {
                                 if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
@@ -201,7 +212,7 @@
                     },
                     error: function(result, status, event) {
                         eval($this.attrUp("onerror"));
-                        if (result.status == "404") throw PageNotFoundException($this);
+                        if (result.status == "404")  PageNotFoundException($this);
                     }
                 });
             }
@@ -445,7 +456,9 @@
 
 
 function Exception(msg) {
-    msg = " Module: SmartClient \n Function: " + arguments.callee + " \n" + msg;
+    msg = " SmartClient Error:  \n" + msg;
+    alert(msg);
+    throw ReferenceError(msg);
 };
 
 function PageNotFoundException(sender) {
