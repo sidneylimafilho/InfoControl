@@ -19,6 +19,10 @@
         {
             background: url(../app_themes/GlassCyan/Controls/treeview/plus.gif) no-repeat;
         }
+        #tasks .minus
+        {
+            background: url(../app_themes/GlassCyan/Controls/treeview/minus.gif) no-repeat;
+        }
         #tasks td
         {
             padding: 2px;
@@ -43,7 +47,7 @@
                 &nbsp;
             </td>
             <td class="center">
-                <fieldset id="filter" class="closed" form="true" action="GetTasks" command="load"
+                <fieldset id="filter" class="closed" asform="true" action="GetTasks" command="load"
                     template=".template" target="#tasks">
                     <legend onmouseover='setTimeout("$(\"#filter .body\").show(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"open\"})", 300);'>
                         Escolha o filtro desejado: </legend>
@@ -57,10 +61,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" value="1" name="view" field="view" onclick="$('#otherFilters').slideDown('slow')" /><label>Data</label>
+                                    <input type="radio" value="1" name="view" field="view" onclick="$('#otherFilters').fadeIn('slow')" /><label>Data</label>
                                 </td>
                                 <td>
-                                    <table id="otherFilters" style="display:none">
+                                    <table id="otherFilters" style="display: none">
                                         <tr>
                                             <td>
                                                 Parte do nome:
@@ -118,12 +122,12 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td class='<$=HasChildTasks?"plus":"line"$>' command="click" options="{parentId:<$=TaskId$>}"
-                                                target="#task_<$=TaskId$> > ul" trigger="#filter" onclick="$(this).toggleClass('minus')">
+                                                target="#task_<$=TaskId$> > ul" trigger="#filter" onclick="$(this).attr({className:'minus'});">
                                             </td>
                                             <td>
                                                 <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}"
-                                                    onsucess="$('#task_<$=TaskId$>').hide()" onbinding="if(!confirm('Deseja realmente?')) {this[0].checked=false; return false;}" />
-                                                &nbsp; <font id="date"><$=$.format((FinishDate||"").JsonToDate(), "d")$></font>
+                                                    onsucess="$('#task_<$=TaskId$>').hide()" onbinding="if(!confirm('Esta tarefa está realmente COMPLETA?')) {this[0].checked=false; return false;}" />
+                                                &nbsp; <font id="date"><$=$.format((FinishDate||Deadline||"").JsonToDate(), "d")$></font>
                                             </td>
                                             <td style='white-space: nowrap; font-weight: <$=HasChildTasks?"bold":"normal"$>'>
                                                 <a href="task.aspx?taskid=<$=TaskId$>" class="inline" id="lnkTask"><font><$=Name$> </font>
