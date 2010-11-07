@@ -36,7 +36,8 @@
                 &nbsp;
             </td>
             <td class="center" source="SearchService.svc">
-                <div asform="true" trigger="#pnlCustomers, #pnlHelpPages, #pnlEmployees, #pnlSuppliers, #pnlContacts, #pnlProducts" params="{'limit':15}">
+                <div asform="true" trigger="#pnlCustomers, #pnlHelpPages, #pnlEmployees, #pnlSuppliers, #pnlContacts, #pnlProducts"
+                    options="{'limit':15}">
                     <center>
                         <h2 style='font-weight: lighter'>
                             Busque rapidamente o que está no sistema:</h2>
@@ -51,9 +52,8 @@
                     <br />
                 </div>
                 <%--Conteúdo--%>
-                <fieldset id="pnlCustomers" action="FindCustomers"
-                    template="#pnlCustomers .template" target="#pnlCustomers .target" 
-                    onsucess="$('#pnlCustomers').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                <fieldset id="pnlCustomers" action="FindCustomers" template="#pnlCustomers .template"
+                    target="#pnlCustomers .target" onsucess="$('#pnlCustomers').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Clientes (<span>0</span>)</legend>
                     <div class="template">
@@ -61,12 +61,11 @@
                             <a href="Administration/Customer.aspx?CustomerId=<$=Id$>"><$=Name$></a>
                         </div>-->
                     </div>
-                    <div class="target"></div>
+                    <div class="target">
+                    </div>
                 </fieldset>
-                
-                 <fieldset id="pnlHelpPages" action="FindHelpPages"
-                    template="#pnlHelpPages .template" target="#pnlHelpPages .target" 
-                    onsucess="$('#pnlHelpPages').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                <fieldset id="pnlHelpPages" action="FindHelpPages" template="#pnlHelpPages .template"
+                    target="#pnlHelpPages .target" onsucess="$('#pnlHelpPages').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Páginas de Ajuda (<span>0</span>)</legend>
                     <div class="template">
@@ -74,12 +73,11 @@
                             <a href="<$=Id$>"><$=Name$></a>
                         </div>-->
                     </div>
-                    <div class="target"></div>
+                    <div class="target">
+                    </div>
                 </fieldset>
-                
-                 <fieldset id="pnlEmployees" action="FindEmployees"
-                    template="#pnlEmployees .template" target="#pnlEmployees .target" 
-                    onsucess="$('#pnlEmployees').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                <fieldset id="pnlEmployees" action="FindEmployees" template="#pnlEmployees .template"
+                    target="#pnlEmployees .target" onsucess="$('#pnlEmployees').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Funcionários (<span>0</span>)</legend>
                     <div class="template">
@@ -87,12 +85,11 @@
                             <a href="RH/Employee.aspx?EmployeeId=<$=Id$>"><$=Name$></a>
                         </div>-->
                     </div>
-                    <div class="target"></div>
+                    <div class="target">
+                    </div>
                 </fieldset>
-                
-                 <fieldset id="pnlSuppliers" action="FindSuppliers"
-                    template="#pnlSuppliers .template" target="#pnlSuppliers .target" 
-                    onsucess="$('#pnlSuppliers').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                <fieldset id="pnlSuppliers" action="FindSuppliers" template="#pnlSuppliers .template"
+                    target="#pnlSuppliers .target" onsucess="$('#pnlSuppliers').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Fornecedores (<span>0</span>)</legend>
                     <div class="template">
@@ -100,12 +97,11 @@
                             <a href="Administration/Supplier.aspx?SupplierId=<$=Id$>"><$=Name$></a>
                         </div>-->
                     </div>
-                    <div class="target"></div>
+                    <div class="target">
+                    </div>
                 </fieldset>
-                
-                <fieldset id="pnlContacts" action="FindContacts"
-                    template="#pnlContacts .template" target="#pnlContacts .target" 
-                    onsucess="$('#pnlContacts').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                <fieldset id="pnlContacts" action="FindContacts" template="#pnlContacts .template"
+                    target="#pnlContacts .target" onsucess="$('#pnlContacts').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Contatos (<span>0</span>)</legend>
                     <div class="template">
@@ -113,12 +109,11 @@
                             <a href="Administration/Contact.aspx?ContactId=<$=Id$>"><$=Name$></a>
                         </div>-->
                     </div>
-                    <div class="target"></div>
+                    <div class="target">
+                    </div>
                 </fieldset>
-                
-                <fieldset id="pnlProducts" action="FindProducts"
-                    template="#pnlProducts .template" target="#pnlProducts .target" 
-                    onsucess="$('#pnlProducts').toggle(result.Data.length>0).find('span').text(result.Data.length);"
+                <fieldset id="pnlProducts" action="FindProducts" template="#pnlProducts .template"
+                    target="#pnlProducts .target" onsucess="$('#pnlProducts').toggle(result.Data.length>0).find('span').text(result.Data.length);"
                     style="display: none">
                     <legend>Produtos (<span>0</span>)</legend>
                     <div class="template">
@@ -126,9 +121,9 @@
                             <a href="Administration/Product.aspx?ProductId=<$=Id$>"><$=Name$></a>
                         </div>-->
                     </div>
-                    <div class="target"></div>
+                    <div class="target">
+                    </div>
                 </fieldset>
-                
                 <%-- 
                 
                 
@@ -156,8 +151,6 @@
                         </div>
                     </div>
                 </fieldset>--%>
-               
-                
             </td>
             <td class="right">
                 &nbsp;
