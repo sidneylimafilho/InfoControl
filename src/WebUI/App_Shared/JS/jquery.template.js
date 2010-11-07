@@ -17,6 +17,7 @@
                     .split("%3C").join("<")
                     .split("&gt;").join(">")
                     .split("%3E").join(">")
+                    .split("&quot;").join('"')
                     .replace("<!--", " ")
                     .replace("-->", " ")
                     .replace(/'/g, "\\'")
