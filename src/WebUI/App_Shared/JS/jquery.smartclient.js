@@ -24,7 +24,7 @@
         getAddress: function() {
             // Prepare the url
             var url = this.attrUp("source") || this.attrUp("href") || "";
-            url = url.replace(/(.*)\/$/, "$1");
+            url = url.replace(/(.*)\/$/, "$1"); // remove a trailing "/"
 
             if (this.attrUp("action")) {
                 url += "/" + this.attrUp("action");
@@ -35,13 +35,13 @@
             // Get target tag
             var target = t || this;
 
-            if ($(target).size() == 0)  TargetMissingException(this);
+            if ($(target).size() == 0) TargetMissingException(this);
 
             if (mode === "after") {
                 $(target).after(html);
                 $(target).parent().initializeControls();
             } else {
-                $(target).html(html).initializeControls();
+                $(target).hide().html(html).initializeControls().fadeIn('slow');
             }
 
         },
@@ -81,14 +81,12 @@
             for (var i = 0; i < this.length; i++)
                 $(this[i])._dataBind(options);
 
-
-
             return this;
         },
         /* End DataBind*/
 
         _dataBind: function(opt) {
-            var options = opt || {};
+            var options = $.extend({}, opt);
             var $this = $(this[0]);
 
             if ($this.attr("onbinding")) eval($this.attr("onbinding"));
@@ -101,7 +99,7 @@
                 options.data = $.extend(eval("(" + $this.attrUp("options") + ")"), options.data);
             }
 
-            var form = $this.closest("[action]") || $this.closest("FORM");
+            var form = $this.closest("[asform]") || $this.closest("[action]") || $this.closest("FORM");
 
             // Get All html form controls
             var fields = form.find(":input, select, textarea, :password, [type=hidden]").serializeArray();
@@ -111,16 +109,20 @@
 
 
             // Get target tag
-            if (!options.target) {
-                options.target = this;
-                if ($this.attrUp("target"))
-                    options.target = $($this.attrUp("target"));
+            if (!options.target && $this.attrUp("target")) {
+                options.target = $this.attrUp("target");
             }
 
-            // Get target tag
-            if (!options.mode && $this.attrUp("mode")) {
-                options.mode = $($this.attrUp("mode"));
+            // Get template tag
+            if (!options.template && $this.attrUp("template")) {
+                options.template = $this.attrUp("template");
             }
+
+
+            // Get mode
+//            if ($this.attrUp("mode")) {
+//                options.mode = $this.attrUp("mode");
+//            }
 
 
             // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
@@ -161,7 +163,7 @@
                         } else {
                             // If Http Status 200 then OK, process JSON because data should be transform on html
                             var html = result;
-                            var target = options.target;
+                            var target = options.target || $this;
 
                             if (result && request.responseText != "") {
                                 if (request.getResponseHeader("Content-type").indexOf("json") > -1) {
@@ -189,7 +191,9 @@
                                     } else {
                                         // Get template tag
                                         tpl = $this;
-                                        if ($($this.attrUp("template")).size() > 0) tpl = $($this.attrUp("template"));
+                                        if ($(options.template).size() > 0) {
+                                            tpl = $(options.template);
+                                        }
 
                                         html = tpl.render(data);
                                     }
@@ -212,7 +216,7 @@
                     },
                     error: function(result, status, event) {
                         eval($this.attrUp("onerror"));
-                        if (result.status == "404")  PageNotFoundException($this);
+                        if (result.status == "404") PageNotFoundException($this);
                     }
                 });
             }
