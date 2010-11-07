@@ -167,10 +167,10 @@ public partial class Company_POS_Sale_Parcels : Vivina.Erp.SystemFramework.PageB
         Session["PaymentDataTable"] = null;
 
         string script = "top.$.LightBoxObject.close();" +
-                chkReceipt.Checked ?
+                (chkReceipt.Checked ?
                     "top.content.location.href='../Accounting/Receipt.aspx?SaleId=" + sale.SaleId.EncryptToHex() + "';" :
-                    "top.content.location.href+='?';";
-        
+                    "top.content.location.href+='?';");
+
         Page.ClientScript.RegisterStartupScript(this.GetType(), "CloseModal", script, true);
         return sale;
     }

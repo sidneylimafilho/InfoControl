@@ -6,9 +6,27 @@
 <%@ Register Src="../App_Shared/DateTimeInterval.ascx" TagName="DateTimeInterval"
     TagPrefix="uc1" %>
 <asp:Content ID="Content" ContentPlaceHolderID="Header" runat="server">
+    <style>
+        #tasks ul, #tasks li
+        {
+            list-style: none;
+        }
+        #tasks .plus, #tasks .minus, #tasks .line
+        {
+            width: 22px;
+        }
+        #tasks .plus
+        {
+            background: url(../app_themes/GlassCyan/Controls/treeview/plus.gif) no-repeat;
+        }
+        #tasks td
+        {
+            padding: 2px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
-    <table class="cLeafBox21" width="100%">
+    <table class="cLeafBox21" width="100%" source="~/Infocontrol/TaskService.svc">
         <tr class="top">
             <td class="left">
                 &nbsp;
@@ -25,51 +43,60 @@
                 &nbsp;
             </td>
             <td class="center">
-                <fieldset id="filter" class="closed">
+                <fieldset id="filter" class="closed" form="true" action="GetTasks" command="load"
+                    template=".template" target="#tasks">
                     <legend onmouseover='setTimeout("$(\"#filter .body\").show(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"open\"})", 300);'>
                         Escolha o filtro desejado: </legend>
-                    <div class="body" form="true" trigger="#tasks">
+                    <div class="body">
                         Modo de Exibição:<br />
-                        <table>
+                        <table width="100%">
                             <tr>
                                 <td colspan="9" style="border-bottom: 1px solid #099">
-                                    <input type="radio" value="2" name="view" field="view" checked="checked" /><label>Hierarquia</label>
-                                    <input type="radio" value="1" name="view" field="view" /><label>Data</label>
+                                    <input type="radio" value="2" name="view" field="view" checked="checked" onclick="$('#otherFilters').hide('slow')" /><label>Hierarquia</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    Parte do nome:
-                                    <br />
-                                    <input type="text" name="name" />
+                                    <input type="radio" value="1" name="view" field="view" onclick="$('#otherFilters').slideDown('slow')" /><label>Data</label>
                                 </td>
                                 <td>
-                                    <table>
+                                    <table id="otherFilters" style="display:none">
                                         <tr>
                                             <td>
-                                                Início:<br />
-                                                <input type="text" name="inicio" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999"
-                                                    options="{relatedCalendar:'#txtEndDate'}" />
+                                                Parte do nome:
+                                                <br />
+                                                <input type="text" name="name" />
                                             </td>
                                             <td>
-                                                Fim:<br />
-                                                <input type="text" name="fim" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999" />
+                                                <table>
+                                                    <tr>
+                                                        <td>
+                                                            Início:<br />
+                                                            <input type="text" name="inicio" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999"
+                                                                options="{relatedCalendar:'#txtEndDate'}" />
+                                                        </td>
+                                                        <td>
+                                                            Fim:<br />
+                                                            <input type="text" name="fim" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999" />
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="9">
+                                                <input type="radio" value="" name="status" /><label>Todos</label>
+                                                <input type="radio" value="1" name="status" checked="checked" /><label>Abertas</label>
+                                                <input type="radio" value="3" name="status" /><label>Completas</label>
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="9">
-                                    <input type="radio" value="" name="status" /><label>Todos</label>
-                                    <input type="radio" value="1" name="status" checked="checked" /><label>Abertas</label>
-                                    <input type="radio" value="3" name="status" /><label>Completas</label>
-                                </td>
-                            </tr>
                         </table>
-                        <asp:Button ID="btSearch" command="click" runat="server" Text="Pesquisar" OnClientClick="return false;" />
+                        <asp:Button ID="btSearch" command="click" runat="server" Text="Pesquisar" OnClientClick="$('#filter').toggleClass('closed').find('.body').hide('slow');return false;" />
                     </div>
-                    <span class="closeButton" onmouseover='setTimeout("$(\"#filter .body\").hide(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"closed\"})", 950);'>
+                    <span class="closeButton" onmouseover="$('#filter').toggleClass('closed').find('.body').hide('slow');">
                         &nbsp;</span>
                 </fieldset>
                 <br />
@@ -86,22 +113,21 @@
                         - Este template está com display none para não ser apresentado na tela
                         --%>
                             <ul class="template" style="display: none">
-                                <!-- 
+                                <!-- -->
                                 <li id="task_<$=TaskId$>">
                                     <table cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td style="width:30px">
-                                                <$ if(!HasChildTasks){ $>
-                                                <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}" onsucess="$('#task_<$=TaskId$>').hide()" />
-                                                &nbsp; 
-                                                <$}else{$> 
-                                                <a href="javascript:;" command="click"  trigger="#task_<$=TaskId$> > ul">+++</a> <$}$>
+                                            <td class='<$=HasChildTasks?"plus":"line"$>' command="click" options="{parentId:<$=TaskId$>}"
+                                                target="#task_<$=TaskId$> > ul" trigger="#filter" onclick="$(this).toggleClass('minus')">
                                             </td>
                                             <td>
-                                                <font id="date"><$=$.format((FinishDate||"").JsonToDate(), "d")$></font>
+                                                <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}"
+                                                    onsucess="$('#task_<$=TaskId$>').hide()" onbinding="if(!confirm('Deseja realmente?')) {this[0].checked=false; return false;}" />
+                                                &nbsp; <font id="date"><$=$.format((FinishDate||"").JsonToDate(), "d")$></font>
                                             </td>
-                                            <td style="white-space: nowrap; font-weight:<$=HasChildTasks?"bold":"normal"$>">
-                                                <a href="task.aspx?taskid=<$=TaskId$>" class="inline" id="lnkTask"><font><$=Name$> </font></a>&nbsp;
+                                            <td style='white-space: nowrap; font-weight: <$=HasChildTasks?"bold":"normal"$>'>
+                                                <a href="task.aspx?taskid=<$=TaskId$>" class="inline" id="lnkTask"><font><$=Name$> </font>
+                                                </a>&nbsp;
                                             </td>
                                             <td style="width: 100px;">
                                                 <div id="rating" title="Classificação" class="inline">
@@ -114,13 +140,11 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <ul action="GetTasks" options="{parentId:<$=TaskId$> }"
-                                        template=".template">
+                                    <ul>
                                     </ul>
-                                </li>-->
+                                </li>
                             </ul>
-                            <ul id="tasks" action="GetTasks" command="load" options="{name:'', view:2, status:1}"
-                                template=".template">
+                            <ul id="tasks">
                             </ul>
                             <br />
                             <br />

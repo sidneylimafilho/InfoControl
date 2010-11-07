@@ -64,7 +64,7 @@ public partial class InfoControl_Task : Vivina.Erp.SystemFramework.PageBase
 
         if (!IsPostBack)
         {
-            ucEndDate.DateTime = ucBeginDate.DateTime = DateTime.Today;
+            //ucEndDate.DateTime = ucBeginDate.DateTime = DateTime.Today;
 
             if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
                 Page.ViewState["ServiceOrderId"] = Request["ServiceOrderId"].DecryptFromHex();
