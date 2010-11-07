@@ -201,8 +201,7 @@ public partial class InfoControl_Services_CustomerCall : Vivina.Erp.SystemFramew
             cboTechnicalEmployee.DataBind();
             cboTechnicalEmployee.SelectedValue = customerCall.TechnicalEmployeeId.ToString();
         }
-
-        btnGenerateServiceOrder.Visible = true;
+                   
     }
 
     /// <summary>
