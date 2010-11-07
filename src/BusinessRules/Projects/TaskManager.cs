@@ -145,6 +145,7 @@ namespace Vivina.Erp.BusinessRules
             //
 
             var query = GetAllTasks();
+                        
 
             //
             // Returns all tasks from users in one specific company
@@ -176,7 +177,7 @@ namespace Vivina.Erp.BusinessRules
                 query = query.Where(t => t.PageName == pageName);
 
             if (!String.IsNullOrEmpty(name))
-                query = query.Where(t => t.Name.Contains(name));    
+                query = query.Where(t => t.Name.Contains(name));
 
             if (filterType == FilterType.Date)
             {
@@ -192,7 +193,7 @@ namespace Vivina.Erp.BusinessRules
             if (status != 0)
                 query = query.Where(s => s.TaskStatusId.Equals(status));
 
-            return query.Sort(sortExpression);
+            return query.OrderBy(t => t.Deadline ?? DateTime.MaxValue).OrderByDescending(t => t.Priority);
         }
 
         /// <summary>
@@ -374,7 +375,7 @@ namespace Vivina.Erp.BusinessRules
 
                 //Set the original CreatorUser
                 entity.CreatorUserId = original_entity.CreatorUserId;
-                original_entity.CopyPropertiesFrom(entity);
+                original_entity.Detach().CopyPropertiesFrom(entity);
 
                 DbContext.SubmitChanges();
             }

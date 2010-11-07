@@ -21,7 +21,7 @@ namespace Vivina.Erp.BusinessRules.WebSites
 
         public void Save(WebPage page, string tags)
         {
-            WebPage originalPage = GetWebPage(page.CompanyId, page.WebPageId);
+            WebPage originalPage = GetWebPage(page.CompanyId, page.WebPageId).Detach();
             page.ModifiedDate = originalPage.ModifiedDate = DateTime.Now;
 
             //
