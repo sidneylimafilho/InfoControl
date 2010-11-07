@@ -253,20 +253,33 @@ namespace InfoControl
         //}
 
         /// <summary>
-        /// Copy the properties from a Entity to another entity
+        /// Remove lazy loading pointers that create connections with database
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="original"></param>
-        public static T Detach<T>(this T original) where T : class
+        public static T Detach<T>(this T original)
         {
             if (original != null)
             {
                 FieldInfo[] currentFields = original.GetType().GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
                 foreach (FieldInfo fieldInfo in currentFields)
+                {
                     if (fieldInfo.FieldType.Name.Contains("EntityRef"))
                         fieldInfo.SetValue(original, null);
+
+                    if (fieldInfo.FieldType.Name.Contains("EntitySet"))
+                    {
+                        var list = fieldInfo.GetValue(original);
+                        list.GetType().GetMethod("Load").Invoke(list, null);
+                    }
+                }
             }
             return original;
+        }
+
+        public static IQueryable<T> Detach<T>(this IQueryable<T> original)
+        {
+            return original.Select(t => t.Detach());
         }
 
         /// <summary>
