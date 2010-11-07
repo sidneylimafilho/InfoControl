@@ -23,9 +23,7 @@ namespace Vivina.Erp.WebUI
     public class SearchService : DataServiceBase
     {
         #region Sample Methods
-        [JavaScriptSerializer]
-        [ServiceKnownType(typeof(Customer))]
-        [WebInvoke(BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        [OperationContract, JavaScriptSerializer]
         public object HelloWorld(Customer formData, params object[] parameters)
         {
             var request = new Customer();
@@ -35,8 +33,7 @@ namespace Vivina.Erp.WebUI
             return request;
         }
 
-        [JavaScriptSerializer]
-        [OperationContract]
+        [OperationContract, JavaScriptSerializer]
         public ClientResponse GetOneSampleData(Hashtable parameters, Hashtable formData)
         {
             return new ClientResponse
@@ -54,9 +51,7 @@ namespace Vivina.Erp.WebUI
                        };
         }
 
-        [JavaScriptSerializer]
-        [OperationContract]
-        [WebInvoke(RequestFormat = WebMessageFormat.Json)]
+        [OperationContract, JavaScriptSerializer]
         public ClientResponse GetSampleData(Hashtable parameters, Hashtable formData)
         {
             return new ClientResponse
