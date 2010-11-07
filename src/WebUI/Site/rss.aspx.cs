@@ -23,7 +23,7 @@ namespace Vivina.Erp.WebUI.Site
             Response.Write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             Response.Write(FormatHeader(WebPage));
             Response.Write("<channel>");
-            //Response.Write(FormatBlogSettings(WebPage));
+            Response.Write(FormatBlogSettings(WebPage));
 
             IOrderedEnumerable<WebPage> query = from pages in WebPage.WebPages
                                                 where pages.IsPublished
@@ -40,25 +40,22 @@ namespace Vivina.Erp.WebUI.Site
 
         private string FormatCData(WebPage page)
         {
-            string link = Request.Url.Host + ResolveUrl(page.Url );
+            string link = Request.Url.Scheme + "://" + Request.Url.Host + ResolveUrl(page.Url);
             string creator = page.User.UserName + " (" + page.User.Profile.AbreviatedName;
             var builder = new StringBuilder();
             builder.Append("<item>");
             builder.Append("<author>" + creator + ")</author>");
-            builder.Append("<dc:creator>" + creator + ")</dc:creator>");
-            builder.Append("<managingEditor>" + creator + ")</managingEditor>");
+            // builder.Append("<dc:creator>" + creator + ")</dc:creator>");
+            // builder.Append("<managingEditor>" + creator + ")</managingEditor>");
             builder.Append("<title><![CDATA[ " + page.Name + " ]]> </title>");
             builder.Append("<link>" + link + "</link>");
             builder.Append("<comments>" + link + "?#comments</comments>");
-            builder.Append("<guid isPermaLink=\"true\">" + page.WebPageId.EncryptToHex() + "</guid>");
+            builder.Append("<guid isPermaLink=\"true\">" + link + "</guid>");
             builder.Append("<description><![CDATA[ " + page.Description + " ]]> </description>");
             builder.Append("<pubDate>" + page.PublishedDate.Value.ToUniversalTime().ToString("R") + "</pubDate>");
 
-            foreach (PageCategory cat in page.PageCategories)
-                builder.Append("<category><![CDATA[ " + cat.Name + " ]]> </category>");
-
-            foreach (PageTag tag in page.PageTags)
-                builder.Append("<tag><![CDATA[ " + tag.Name + " ]]> </tag>");
+            //foreach (PageTag tag in page.PageTags)
+            //    builder.Append("<tag><![CDATA[ " + tag.Name + " ]]> </tag>");
 
             var manager = new CommentsManager(this);
             builder.Append("<slash:comments>" + manager.GetComments(page.WebPageId, "comments.aspx").Count() +
@@ -84,15 +81,15 @@ namespace Vivina.Erp.WebUI.Site
         private string FormatBlogSettings(WebPage page)
         {
             var builder = new StringBuilder();
-            builder.Append("<item>");
+            // builder.Append("<item>");
             builder.Append("<title>" + WebPage.Name + "</title>");
-            builder.Append("<description>" + WebPage.Description + "</description>");
-            builder.Append("<link>" + Request.Url.Host + ResolveUrl(WebPage.Url ) + "</link>");
-            builder.Append("<generator>Vivina InfoControl</generator>");
-            builder.Append("<language>pt-br</language>");
-            builder.Append("<sy:updatePeriod>dialy</sy:updatePeriod>");
-            builder.Append("<sy:updateFrequency>1</sy:updateFrequency>");
-            builder.Append("</item>");
+            builder.Append("<description><![CDATA[" + WebPage.Description + "]]></description>");
+            builder.Append("<link>" + Request.Url.Scheme + "://" + Request.Url.Host + ResolveUrl(WebPage.Url) + "</link>");
+            //builder.Append("<generator>Vivina InfoControl</generator>");
+            //builder.Append("<language>pt-br</language>");
+            //builder.Append("<sy:updatePeriod>dialy</sy:updatePeriod>");
+            //builder.Append("<sy:updateFrequency>1</sy:updateFrequency>");
+            //builder.Append("</item>");
             return builder.ToString();
         }
     }
