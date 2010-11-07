@@ -547,6 +547,9 @@ namespace Vivina.Erp.BusinessRules
         /// <param name="userId"></param>
         private Boolean TaskContainsUser(Task task, Int32 userId)
         {
+            if (task == null)
+                return true;
+
             return GetTaskUser(task.TaskId, userId) != null;
         }
 
