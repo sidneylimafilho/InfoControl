@@ -1252,7 +1252,7 @@ namespace Vivina.Erp.BusinessRules
                     case CustomerCallType.ERROR:
                         message = String.Format("<center>O erro que deu em {0} no dia {1} foi corrigido! Conosco essas joaninhas não tem vez!" +
                                                 "<br /><br />" +
-                                                "<a href='javascript:;' onclick=\"top.tb_show('Chamado', 'CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId={2}');\">" +
+                                                "<a href='javascript:;' onclick=\"top.$.LightBoxObject.show('CRM/CustomerCall.aspx?lightbox[iframe]=true&ModalPopUp=1&ReadOnly=true&CustomerCallId={2}');\">" +
                                                 "   Clique aqui para ver o chamado gerado!" +
                                                 "</a>" +
                                                 "</center>",

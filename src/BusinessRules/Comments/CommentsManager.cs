@@ -152,7 +152,7 @@ namespace Vivina.Erp.BusinessRules.Comments
                 //
                 string alertDescription = string.Format(@"
                     No chamado <a href='javascript:;' 
-                                  onclick=""top.tb_show('Tarefas','CRM/CustomerCall.aspx?CustomerCallId={0}&ReadOnly=true&ModalPopup=1')"" 
+                                  onclick=""top.$.LightBoxObject.show('CRM/CustomerCall.aspx?lightbox[iframe]=true&CustomerCallId={0}&ReadOnly=true&ModalPopup=1')"" 
                                   target='content'>{1}</a>, {2} disse: {3} &nbsp;&nbsp;&nbsp;&nbsp;<br />
                     <center>
                         <a href='javascript:;' onclick='$(this).next().show()'>Clique aqui para responder!</a>

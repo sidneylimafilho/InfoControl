@@ -640,7 +640,7 @@ namespace Vivina.Erp.BusinessRules
         {
             return
                 String.Format(
-                    "<a target='content' href='javascript:;' onclick='top.tb_show(\"Tarefas\",\"Task.aspx?taskId={0}\");'>\"{1}\"</a>",
+                    "<a target='content' href='javascript:;' onclick='top.$.LightBoxObject.show(\"Task.aspx?lightbox[iframe]=true&taskId={0}\");'>\"{1}\"</a>",
                     task.TaskId.EncryptToHex(),
                     task.Name);
         }
