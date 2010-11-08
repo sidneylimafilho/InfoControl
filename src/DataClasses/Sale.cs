@@ -17,7 +17,7 @@ namespace Vivina.Erp.DataClasses
 
         public decimal Total
         {
-            get { return SaleItems.Sum(si => si.Quantity * si.UnitPrice) + FreightValue.Value; }
+            get { return SaleItems.Sum(si => si.Quantity * si.UnitPrice) + (FreightValue ?? 0m); }
         }
 
         public FinancierOperation FinancierOperation
