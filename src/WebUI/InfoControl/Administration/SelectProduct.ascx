@@ -6,7 +6,8 @@
             Código de barras, código do produto ou parte do nome:<br />
             <asp:TextBox ID="txtProduct" runat="server" Width="250px" CssClass="cDynDat11"
                 plugin="autocomplete"
-                source='~/InfoControl/SearchService.svc/FindProducts'
+                source='~/InfoControl/SearchService.svc'
+                action='FindProducts'
                 options="{max: 10}"
                 MaxLength="100"> </asp:TextBox>
             

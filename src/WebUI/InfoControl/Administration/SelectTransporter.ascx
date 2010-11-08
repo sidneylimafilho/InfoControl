@@ -10,7 +10,8 @@
                     <asp:TextBox ID="txtTransporter" runat="server" Width="300px" CssClass="cDynDat11"
                         AutoPostBack="True" OnTextChanged="txtTransporter_TextChanged" MaxLength="100"
                           plugin="autocomplete"
-                          source='~/InfoControl/SearchService.svc/FindTransporter'
+                          source='~/InfoControl/SearchService.svc'
+                          action='FindTransporter'
                           options="{max: 10}"> </asp:TextBox>
                         
                     

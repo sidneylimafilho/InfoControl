@@ -8,7 +8,8 @@
             <asp:TextBox ID="txtSupplier" runat="server" Width="250px" CssClass="cDynDat11" 
                 OnTextChanged="txtSupplier_TextChanged" AutoPostBack="true"                 
                 plugin="autocomplete"
-                source='~/InfoControl/SearchService.svc/FindSuppliers'
+                source='~/InfoControl/SearchService.svc'
+                action='FindSuppliers'
                  options="{max: 10}"
                   MaxLength="100"> </asp:TextBox>
             <p style="font-size: 7pt; color: gray">

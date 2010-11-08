@@ -6,7 +6,9 @@
         <td>
             Cliente:<br />
             <asp:TextBox ID="txtCustomer" runat="server" Width="250px" CssClass="cDynDat11" AutoPostBack="True"
-                OnTextChanged="txtCustomer_TextChanged" plugin="autocomplete" source='~/InfoControl/SearchService.svc/FindCustomers'
+                OnTextChanged="txtCustomer_TextChanged" plugin="autocomplete" 
+                source='~/InfoControl/SearchService.svc'
+                action='FindCustomers'
                 options="{max: 10}" MaxLength="100"></asp:TextBox>
             <p style="font-size: 7pt; color: gray">
                 Dica: Digite parte do texto, que o completará automaticamente!</p>

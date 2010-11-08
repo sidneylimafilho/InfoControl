@@ -7,7 +7,8 @@
             <asp:TextBox ID="txtEmployee" runat="server" Width="300px" CssClass="cDynDat11" AutoPostBack="true"
                 OnTextChanged="txtEmployee_TextChanged" MaxLength="100" 
                 plugin="autocomplete"
-                source='~/InfoControl/SearchService.svc/FindEmployees'
+                source='~/InfoControl/SearchService.svc'
+                action='FindEmployees'
                 options="{max: 10}"
                 ></asp:TextBox>
             <p style="font-size: 7pt; color: gray">

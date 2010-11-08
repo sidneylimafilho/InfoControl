@@ -47,7 +47,7 @@
                         <td>
                             Fabricante:<br />
                             <asp:TextBox ID="txtManufacturer" Width="250px" runat="server" CssClass="cDynDat11" MaxLength="50"
-                             plugin="autocomplete" source='~/InfoControl/SearchService.svc/FindManufacturer'
+                             plugin="autocomplete" source='~/InfoControl/SearchService.svc' action='FindManufacturer'
                                    options="{max: 10}">
                              </asp:TextBox>
                             

@@ -7,7 +7,8 @@
             <asp:TextBox ID="txtUser" runat="server" Width="300px" CssClass="cDynDat11" AutoPostBack="True"
                 OnTextChanged="txtUser_TextChanged" MaxLength="100"
                  plugin="autocomplete"
-                source='~/InfoControl/SearchService.svc/FindUser'
+                 source='~/InfoControl/SearchService.svc'
+                 action='FindUser'
                  options="{max: 10}">  </asp:TextBox>
         </td>
         <td valign="bottom">           
