@@ -22,14 +22,18 @@
             return html ? this.before(html).remove() : jQuery("<p>").append(this.eq(0).clone()).html();
         },
         getAddress: function() {
+
+            var appPath = (window.applicationPath || "").replace(/(.*)\/$/, "$1"); // remove a trailing "/"
+
             // Prepare the url
             var url = this.attrUp("source") || this.attrUp("href") || "";
-            url = url.replace(/(.*)\/$/, "$1"); // remove a trailing "/"
+            url = url.replace(/(.*)\/$/, "$1") // remove a trailing "/"
+                     .replace("~", appPath);
 
             if (this.attrUp("action")) {
                 url += "/" + this.attrUp("action");
             }
-            return url.replace("~", window.applicationPath || "");
+            return url;
         },
         attachHtmlInTarget: function(html, t, mode) {
             // Get target tag
@@ -274,7 +278,7 @@
 
                     var dateOptions = {
                         inline: true,
-                        showOn: "both",
+                        showOn: "button",
                         changeMonth: true,
                         changeYear: true,
                         constrainInput: false,
