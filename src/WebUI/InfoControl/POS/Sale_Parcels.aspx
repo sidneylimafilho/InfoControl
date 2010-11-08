@@ -127,7 +127,7 @@
                     <div style="text-align: center;">
                         <asp:CheckBox ID="chkPrint" runat="server" Text="Imprimir Comprovante" />
                         &nbsp;&nbsp;&nbsp;
-                        <asp:CheckBox ID="chkReceipt" runat="server" Text="Gerar nota fiscal" />
+                        <asp:CheckBox ID="chkReceipt" runat="server" Text="Gerar nota fiscal" Enabled="true" Checked="true" />
                         <br />
                         <br />
                         &nbsp;&nbsp;
