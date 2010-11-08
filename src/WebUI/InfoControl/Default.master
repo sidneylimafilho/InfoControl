@@ -16,9 +16,10 @@
             display: none;
         }
     </style>
-    
 </head>
-<script pin="pin">window.applicationPath='<%=Request.Url.Scheme + ":/"+"/" + Request.Url.Host + Request.ApplicationPath%>'</script>
+
+<script pin="pin">    window.applicationPath = '<%=Request.Url.Scheme + ":/"+"/" + Request.Url.Host + Request.ApplicationPath%>'</script>
+
 <body>
     <form id="form1" runat="server" autocomplete="off">
     <!-- Print Button -->
@@ -26,32 +27,26 @@
     <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
         EnableScriptLocalization="true" EnablePageMethods="true" CombineScripts="false"
         ScriptMode="Release">
-        <Scripts>                
+        <Scripts>
             <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
-            
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.core.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.widget.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.position.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.tabs.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.autocomplete.js" />            
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.autocomplete.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.duallistbox.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.datepicker.js" /> 
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.htmlbox.js" /> 
-
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.datepicker.js" />
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.htmlbox.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.cookies.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.tooltip.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.validate.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.meioMask.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.template.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.notification.js" /> 
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.serializer.js" /> 
-            
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.js" /> 
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.notification.js" />
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.serializer.js" />
+            <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.js" />
             <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.pt-br.js" />
-
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" /> 
-            
-            
+            <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" />
         </Scripts>
     </ajaxToolkit:ToolkitScriptManager>
     <%--<ajaxToolkit:NoBot ID="NoBot1" runat="server" />--%>
@@ -121,6 +116,7 @@
     </form>
 </body>
 </html>
+
 <script type="text/javascript">  
     //
     // Only here, because is required in huge set of pages
@@ -130,9 +126,12 @@
        window.open('filemanager/ckfinder.html', '_blank', 'width=' + top.$(top).width()-80 + ', height=' + top.$(top).height()-100); return false;
     };
     
-    <% if(!InfoControl.Web.Configuration.WebConfig.Web.Compilation.Debug){ %>if(!top.header) top.location = '/';<% } %>
+    <% if(!InfoControl.Web.Configuration.WebConfig.Web.Compilation.Debug && Company.CompanyId > 1){ %>
+    if(!top.header) top.location = '/';
+    <% } %>
     window.onbeforeunload = function(e) {if(top.header.loading)top.header.loading.style.display = '';}
     window.onload = function(e) {if(top.header.loading)top.header.loading.style.display = 'none';}       
    
     
 </script>
+
