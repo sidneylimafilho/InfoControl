@@ -110,7 +110,7 @@
                 <br />
                 <table width="100%">
                     <tr>
-                        <td source="~/Infocontrol/TaskService.svc">
+                        <td>
                             <%-- 
                         - Este template separado pois será usado recursivamente sendo colocado uma UL dentro de outra UL criando assim 
                           uma arvore de tarefas.
@@ -179,21 +179,5 @@
             </td>
         </tr>
     </table>
-    <%--<VFX:BusinessManagerDataSource ID="odsTaskByUser" runat="server" TypeName="Vivina.Erp.BusinessRules.TaskManager"
-        OldValuesParameterFormatString="original_{0}" onselecting="odsTaskByUser_Selecting"
-        SelectMethod="GetTasksByUser">
-        <selectparameters>
-            <asp:Parameter Name="userId" Type="Int32" />
-            <asp:Parameter Name="sortExpression" Type="String" defaultValue="TaskStatusId, Deadline, FinishDate, Priority Desc" />
-            <asp:Parameter Name="status" Type="Int32" />
-            <asp:Parameter Name="filterType" Type="Object" />
-            <asp:Parameter Name="name" Type="String" />
-             <asp:Parameter Name="dtInterval" Type="Object" />
-             <asp:Parameter Name="subjectId" Type="Int32" />
-             <asp:Parameter Name="pageName" Type="String" />
-        </selectparameters>
-    </VFX:BusinessManagerDataSource>--%>
-    <VFX:BusinessManagerDataSource ID="odsTaskStatus" runat="server" SelectMethod="GetTaskStatus"
-        TypeName="Vivina.Erp.BusinessRules.TaskManager">
-    </VFX:BusinessManagerDataSource>
+
 </asp:Content>
