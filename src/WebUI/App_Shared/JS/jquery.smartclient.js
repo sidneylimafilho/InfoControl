@@ -26,8 +26,8 @@
             var url = this.attrUp("source") || this.attrUp("href") || "";
             url = url.replace(/(.*)\/$/, "$1"); // remove a trailing "/"
 
-            if (this.attr("action")) {
-                url += "/" + this.attr("action");
+            if (this.attrUp("action")) {
+                url += "/" + this.attrUp("action");
             }
             return url.replace("~", window.applicationPath || "");
         },
@@ -120,9 +120,9 @@
 
 
             // Get mode
-//            if ($this.attrUp("mode")) {
-//                options.mode = $this.attrUp("mode");
-//            }
+            //            if ($this.attrUp("mode")) {
+            //                options.mode = $this.attrUp("mode");
+            //            }
 
 
             // Makes the comparison "options.data || {}" because options.data can be filled, when trigger 
