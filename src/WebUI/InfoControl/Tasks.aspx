@@ -122,7 +122,7 @@
                                     <table cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td class='<$=HasChildTasks?"plus":"line"$>' command="click" options="{parentId:<$=TaskId$>}"
-                                                target="#task_<$=TaskId$> > ul" trigger="#filter" onclick="$(this).attr({className:'minus'});">
+                                                target="#task_<$=TaskId$> > ul" trigger="#filter" onclick="$(this).attr({className:'minus'});$('#task_<$=TaskId$> > ul').show()">
                                             </td>
                                             <td>
                                                 <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}"
@@ -144,7 +144,8 @@
                                             </td>
                                         </tr>
                                     </table>
-                                    <ul>
+                                    <ul style="display: none">
+                                        <li>Carregando...</li>
                                     </ul>
                                 </li>
                             </ul>
