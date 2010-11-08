@@ -125,8 +125,8 @@
     {
        window.open('filemanager/ckfinder.html', '_blank', 'width=' + top.$(top).width()-80 + ', height=' + top.$(top).height()-100); return false;
     };
-    
-    <% if(!InfoControl.Web.Configuration.WebConfig.Web.Compilation.Debug && Company.CompanyId > 1){ %>
+     
+    <% if(!InfoControl.Web.Configuration.WebConfig.Web.Compilation.Debug && PageBase.Company.CompanyId > 1){ %>
     if(!top.header) top.location = '/';
     <% } %>
     window.onbeforeunload = function(e) {if(top.header.loading)top.header.loading.style.display = '';}
