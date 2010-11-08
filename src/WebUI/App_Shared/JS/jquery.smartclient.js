@@ -26,8 +26,8 @@
             var url = this.attrUp("source") || this.attrUp("href") || "";
             url = url.replace(/(.*)\/$/, "$1"); // remove a trailing "/"
 
-            if (this.attrUp("action")) {
-                url += "/" + this.attrUp("action");
+            if (this.attr("action")) {
+                url += "/" + this.attr("action");
             }
             return url.replace("~", window.applicationPath || "");
         },
