@@ -93,7 +93,7 @@ $(document).ready(function() {
 
     asyncTest("chama arquivos assincronamente GRIDSAMPLE.ASCX", function() {
         stop();
-        sandbox.html("<p><a command='click' href='../GridSample.ascx' /></p>")
+        sandbox.html("<p><a command='click' href='../gridsample.ascx' /></p>")
                .initializeControls()
                .find("A")
                .dataBind({
@@ -237,7 +237,8 @@ $(document).ready(function() {
                        ok($("#test").html(), "OK, Pegou o conteúdo: " + $("#test").html());
                        start();
                    }
-               });
+               })
+               .closest("#test").hide();
     });
 
     test("Outer HTML: Deve retornar o conteúdo do html incluindo ele mesmo", function() {
