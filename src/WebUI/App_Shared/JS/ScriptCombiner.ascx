@@ -13,7 +13,6 @@
         Server.Execute("jquery.jGrowl.js", Response.Output);
         Server.Execute("jquery.meioMask.js", Response.Output);
         Server.Execute("jquery.validate.js", Response.Output);
-        Server.Execute("jquery.thickbox.js", Response.Output);
         Server.Execute("jquery.tooltip.js", Response.Output);
         Server.Execute("jquery.serializer.js", Response.Output);
         Server.Execute("jquery.template.js", Response.Output);
