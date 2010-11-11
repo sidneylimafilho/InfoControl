@@ -35,7 +35,7 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
                 <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
-                <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" />
+                <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
             </Scripts>
         </asp:ScriptManager>
         <asp:Label ID="lblAdminCompany" runat="server" Text="Administrar a empresa:">

@@ -22,8 +22,8 @@
         Server.Execute("jquery.UI.autocomplete.js", Response.Output);
         Server.Execute("jquery.UI.duallistbox.js", Response.Output);
         Server.Execute("jquery.ui.datepicker.js", Response.Output);
-        
-        Server.Execute("jquery.smartclient.js", Response.Output);
+
+        Server.Execute("smartclient/jquery.smartclient.js", Response.Output);
 
     }
 </script>

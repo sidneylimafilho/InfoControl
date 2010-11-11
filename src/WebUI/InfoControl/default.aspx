@@ -44,7 +44,7 @@ overflow: hidden;">
             <asp:ScriptReference Path="~/App_Shared/js/jquery.dimensions.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.jgrowl.js" />
             <asp:ScriptReference Path="~/App_Modules/Alerts/Alerts.svc.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
         </Scripts>
         <Services>
             <asp:ServiceReference Path="~/App_Shared/Tooltip.svc" />

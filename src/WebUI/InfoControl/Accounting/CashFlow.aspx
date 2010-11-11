@@ -90,7 +90,8 @@
                 Agora que você viu as configurações da TABLE vamos para o TEMPLATE em <tbody class="template">
 
                 --%>
-                <table id="cashFlow" border="1" class="cGrd11" width="100%" auto="true" action="<%=ResolveUrl("~/controller/accounting/GetCashFlowByYear") %>"
+                <table id="cashFlow" border="1" class="cGrd11" width="100%" 
+                    auto="true" action="<%=ResolveUrl("~/controller/accounting/GetCashFlowByYear") %>"
                     onsucess="if (result.Data.length>0){ $('#cashFlow tfoot').html($('#cashFlow tfoot').template(total)).show()}else{$('#cashFlow tfoot').hide();}"
                     selectedcss="" emptytemplate="#cashFlow .empty" template="#cashFlow .template"
                     target="#cashFlow .body">

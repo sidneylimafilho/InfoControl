@@ -46,7 +46,7 @@
             <asp:ScriptReference Path="~/App_Shared/JS/jquery.serializer.js" />
             <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.js" />
             <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.pt-br.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.smartclient.js" />
+            <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
         </Scripts>
     </ajaxToolkit:ToolkitScriptManager>
     <%--<ajaxToolkit:NoBot ID="NoBot1" runat="server" />--%>

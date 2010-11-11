@@ -36,6 +36,9 @@ public partial class _Default : DataPage
 
         if (Request.Url.OriginalString.ToLower().Contains("pooba.com.br"))
             Response.RedirectLocation = ResolveClientUrl("~/pooba/");
+
+        if (Request.Url.OriginalString.ToLower().Contains("blog.vivina.com.br"))
+            Response.RedirectLocation = "http://www.vivina.com.br/site/Blog-da-Vivina,9.aspx?type=blog";
             
         if (Request.Url.OriginalString.ToLower().Contains("infocontrol.com.br"))
             Response.RedirectLocation = "http://www.vivina.com.br/site/InfoControl/Infocontrol,53.aspx";
