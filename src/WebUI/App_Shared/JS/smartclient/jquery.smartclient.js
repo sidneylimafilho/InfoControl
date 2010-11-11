@@ -191,7 +191,7 @@
                                     if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
                                         result.isEmpty = true;
                                         html = $($this.attrUp("emptytemplate")).html();
-                                        target = $this.attrUp("emptytarget");
+                                        target = $this.attrUp("emptytarget") || options.target;
                                     } else {
                                         // Get template tag
                                         tpl = $this;
@@ -208,13 +208,18 @@
 
                             }
 
-                            if (options.onsucess) options.onsucess(result, status, request);
+
 
                         }
 
-                        if ($this.attr("onsucess")) eval($this.attr("onsucess"));
+                        if (options.onsucess)
+                            options.onsucess(result, status, request);
 
-                        if ($this.attrUp("once")) $this.unbind($this.attr("command"));
+                        if ($this.attr("onsucess"))
+                            eval($this.attr("onsucess"));
+
+                        if ($this.attrUp("once"))
+                            $this.unbind($this.attr("command"));
 
 
                     },
@@ -459,6 +464,8 @@
 
     $(document).initializeControls();
 
+
+    $.preferCulture("pt-BR");
 
 })(jQuery);
 
