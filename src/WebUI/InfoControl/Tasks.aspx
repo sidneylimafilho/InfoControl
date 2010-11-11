@@ -56,12 +56,12 @@
                         <table width="100%">
                             <tr>
                                 <td colspan="9" style="border-bottom: 1px solid #099">
-                                    <input type="radio" value="2" name="view" field="view" checked="checked" onclick="$('#otherFilters').hide('slow')" /><label>Hierarquia</label>
+                                    <input type="radio" value="2" name="view" field="view" onclick="$('#otherFilters').hide('slow')" /><label>Hierarquia</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" value="1" name="view" field="view" onclick="$('#otherFilters').fadeIn('slow')" /><label>Data</label>
+                                    <input type="radio" value="1" name="view" field="view" checked="checked" onclick="$('#otherFilters').fadeIn('slow')" /><label>Data</label>
                                 </td>
                                 <td>
                                     <table id="otherFilters" style="display: none">
@@ -126,7 +126,7 @@
                                             </td>
                                             <td>
                                                 <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}"
-                                                    onsucess="$('#task_<$=TaskId$>').hide()" onbinding="if(!confirm('Esta tarefa está realmente COMPLETA?')) {this[0].checked=false; return false;}" />
+                                                    onsucess="$('#task_<$=TaskId$>').hide()" onbinding="if(!confirm('Esta tarefa está realmente COMPLETA?')) {this[0].checked=false;}" />
                                                 &nbsp; <font id="date"><$=$.format((FinishDate||Deadline||"").JsonToDate(), "d")$></font>
                                             </td>
                                             <td style='white-space: nowrap; font-weight: <$=HasChildTasks?"bold":"normal"$>'>
@@ -179,5 +179,4 @@
             </td>
         </tr>
     </table>
-
 </asp:Content>
