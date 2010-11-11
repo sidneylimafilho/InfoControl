@@ -23,13 +23,13 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
     public class AccountingService : DataServiceBase
     {
         [OperationContract, JavaScriptSerializer]
-        public ActionResult GetCashFlowByYear(Hashtable Params, Hashtable FormData)
+        public ActionResult GetCashFlowByYear(int accountPlanId, int year)
         {
-
-            using (var manager = new AccountManager(null))
-                return ClientResponse(() => manager.GetCashFlowByYear(Company.CompanyId,
-                                                                      Convert.ToInt32(Params["accountPlanId"]),
-                                                                      Convert.ToInt32(Params["year"])));
+            return new ClientResponse(() =>
+            {
+                using (var manager = new AccountManager(null))
+                    return manager.GetCashFlowByYear(Company.CompanyId, accountPlanId, year);
+            });
         }
     }
 }
