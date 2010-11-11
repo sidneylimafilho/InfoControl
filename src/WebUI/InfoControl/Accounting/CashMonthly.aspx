@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/InfoControl/Default.master"
-    CodeBehind="CashMonthly.aspx.cs" Title="Fluxo de Caixa" Inherits="Vivina.Erp.WebUI.InfoControl.Accounting.CashMonthly" %>
+    CodeBehind="CashMonthly.aspx.cs" Title="Fluxo de Caixa Mensal" Inherits="Vivina.Erp.WebUI.InfoControl.Accounting.CashMonthly" %>
 
 <%@ Register Assembly="System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
     Namespace="System.Web.UI.WebControls" TagPrefix="asp" %>
