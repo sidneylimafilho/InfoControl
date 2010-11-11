@@ -23,7 +23,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
     public class AccountingService : DataServiceBase
     {
         [OperationContract, JavaScriptSerializer]
-        public ClientResponse GetCashFlowByYear(int accountPlanId, int year)
+        public ClientResponse GetCashFlowByYear(int? accountPlanId, int year)
         {
             return new ClientResponse(() =>
             {

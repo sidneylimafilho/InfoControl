@@ -8,12 +8,20 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
     <table class="cLeafBox21" width="100%">
         <tr class="top">
-            <td class="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-            <td class="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-            <td class="right">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+            <td class="left">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td class="center">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td class="right">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
         </tr>
         <tr class="middle">
-            <td class="left">&nbsp; </td>
+            <td class="left">
+                &nbsp;
+            </td>
             <td class="center">
                 <%-- 
                 Aqui explicarei como funciona cada detalhe desta tela super dinamica usando o smart client
@@ -34,22 +42,22 @@
                       jQuery do controle que tem o atributo ACTION
 
 
-                --%>
-                <div id="filterGrid" trigger="#cashFlow">
-                    Escolha o ano:
-                    <%-- 
-                    Foi colocada o campo hidden para que o param accountPlanId seja limpo a cada vez que fizer uma nova busca
+                --%>   
+                
+                <%-- 
+                    Foi colocada um atributo options para que o param accountPlanId seja limpo a cada vez que fizer uma nova busca
                     assim sempre começa a busca pelos planos de contas que tenham parentId null
                      --%>
-                    <input type="hidden" value="" param="accountPlanId" />
-                    <asp:TextBox runat="server" param="year"></asp:TextBox>
-                    <asp:Button runat="server" command="load" OnClientClick="return false;" UseSubmitBehavior="false"
+                <div asform="true" id="filterGrid" trigger="#cashFlow" options="{accountPlanId:''}">
+                    Escolha o ano:
+                 
+       
+                    <input type="text" name="year" />
+                    <asp:Button runat="server" command="click" OnClientClick="return false;" UseSubmitBehavior="false"
                         Text="Carregar" />
                 </div>
-                <br />          
                 <br />
-
-
+                <br />
                 <%-- 
                 
                 Vamos ao controle TABLE que irá popular os resultados encontrados.
@@ -90,29 +98,53 @@
                 Agora que você viu as configurações da TABLE vamos para o TEMPLATE em <tbody class="template">
 
                 --%>
-                <table id="cashFlow" border="1" class="cGrd11" width="100%" 
-                    auto="true" action="<%=ResolveUrl("~/controller/accounting/GetCashFlowByYear") %>"
-                    onsucess="if (result.Data.length>0){ $('#cashFlow tfoot').html($('#cashFlow tfoot').template(total)).show()}else{$('#cashFlow tfoot').hide();}"
+                <table id="cashFlow" border="1" class="cGrd11" width="100%" command="load" source="AccountingService.svc"
+                    action="GetCashFlowByYear" onsucess="if (result.Data.length>0){ $('#cashFlow thead').show(); $('#cashFlow tfoot').html($('#cashFlow tfoot').render(total)).show();}else{$('#cashFlow tfoot, #cashFlow thead').hide();}"
                     selectedcss="" emptytemplate="#cashFlow .empty" template="#cashFlow .template"
                     target="#cashFlow .body">
                     <thead>
                         <tr>
-                            <th>Plano de Contas </th>
-                            <th>Janeiro </th>
-                            <th>Fevereiro </th>
-                            <th>Março</th>
-                            <th>Abril </th>
-                            <th>Maio</th>
-                            <th>Junho </th>
-                            <th>Julho </th>
-                            <th>Agosto </th>
-                            <th>Setembro </th>
-                            <th>Outubro </th>
-                            <th>Novembro </th>
-                            <th>Dezembro </th>
+                            <th>
+                                Plano de Contas
+                            </th>
+                            <th>
+                                Janeiro
+                            </th>
+                            <th>
+                                Fevereiro
+                            </th>
+                            <th>
+                                Março
+                            </th>
+                            <th>
+                                Abril
+                            </th>
+                            <th>
+                                Maio
+                            </th>
+                            <th>
+                                Junho
+                            </th>
+                            <th>
+                                Julho
+                            </th>
+                            <th>
+                                Agosto
+                            </th>
+                            <th>
+                                Setembro
+                            </th>
+                            <th>
+                                Outubro
+                            </th>
+                            <th>
+                                Novembro
+                            </th>
+                            <th>
+                                Dezembro
+                            </th>
                         </tr>
                     </thead>
-
                     <tbody class="template">
                         <%-- 
 
@@ -146,21 +178,21 @@
 
                         --%>
                         <!-- 
-                        <tr command="load" once="true" params="{'accountPlanId':<$=AccountingPlanId$>}" style="cursor:pointer;" 
+                        <tr once="true" options="{'accountPlanId':<$=AccountingPlanId$>}" style="cursor:pointer;" 
                             target="this" mode="after" emptytemplate="clear">
                             <td><$=Name$></td>
-                            <td><$=January.format()$></td>
-                            <td><$=February.format()$></td>
-                            <td><$=March.format()$></td>
-                            <td><$=April.format()$></td>
-                            <td><$=May.format()$></td>
-                            <td><$=June.format()$></td>
-                            <td><$=July.format()$></td>
-                            <td><$=August.format()$></td>
-                            <td><$=September.format()$></td>
-                            <td><$=October.format()$></td>
-                            <td><$=November.format()$></td>
-                            <td><$=December.format()$></td>
+                            <td><$=$.format(January, "c")$></td>
+                            <td><$=$.format(February,"C")$></td>
+                            <td><$=$.format(March,"C")$></td>
+                            <td><$=$.format(April,"C")$></td>
+                            <td><$=$.format(May,"C")$></td>
+                            <td><$=$.format(June,"C")$></td>
+                            <td><$=$.format(July,"C")$></td>
+                            <td><$=$.format(August,"C")$></td>
+                            <td><$=$.format(September,"C")$></td>
+                            <td><$=$.format(October,"C")$></td>
+                            <td><$=$.format(November,"C")$></td>
+                            <td><$=$.format(December,"C")$></td>
                         </tr>
                         -->
                         <%-- 
@@ -190,7 +222,6 @@
                         for undefined retorna 0 e soma com o valor atual de January
 
                         --%>
-                        
                         <!--
                         <$
                         window.total = window["total"] || {};
@@ -208,38 +239,35 @@
                         total.December = (total.December || 0) + December;                        
                         $>
                        -->
-
-
                     </tbody>
-
                     <%--  Modelo de HTML para quando não houver resultados disponiveis na consulta.  --%>
                     <tbody class="empty" style="display: none;">
                         <tr>
-                            <td colspan="99">Nenhum resultado encontrado!</td>
+                            <td colspan="99">
+                                Nenhum resultado encontrado!
+                            </td>
                         </tr>
                     </tbody>
-
                     <%-- Aqui será o lugar onde entrará o html gerado pelo resultado da consulta --%>
                     <tbody class="body">
                     </tbody>
-
                     <%-- Aqui está o rodapé da tabela, que será gerado pelo código descrito na linha 70, usando a variável TOTAL criada --%>
                     <tfoot style="font-weight: bold">
                         <!--
                         <tr>
                             <td>SubTotal</td>
-                            <td><$=(total.January || 0).format()$></td>
-                            <td><$=(total.February || 0).format()$></td>
-                            <td><$=(total.March || 0).format()$></td>
-                            <td><$=(total.April || 0).format()$></td>
-                            <td><$=(total.May || 0).format()$></td>
-                            <td><$=(total.June || 0).format()$></td>
-                            <td><$=(total.July || 0).format()$></td>
-                            <td><$=(total.August || 0).format()$></td>
-                            <td><$=(total.September || 0).format()$></td>
-                            <td><$=(total.October || 0).format()$></td>
-                            <td><$=(total.November || 0).format()$></td>
-                            <td><$=(total.December || 0).format()$></td>
+                            <td><$=$.format(total.January || 0, "c")$></td>
+                            <td><$=$.format(total.February || 0, "c")$></td>
+                            <td><$=$.format(total.March || 0, "c")$></td>
+                            <td><$=$.format(total.April || 0, "c")$></td>
+                            <td><$=$.format(total.May || 0, "c")$></td>
+                            <td><$=$.format(total.June || 0, "c")$></td>
+                            <td><$=$.format(total.July || 0, "c")$></td>
+                            <td><$=$.format(total.August || 0, "c")$></td>
+                            <td><$=$.format(total.September || 0, "c")$></td>
+                            <td><$=$.format(total.October || 0, "c")$></td>
+                            <td><$=$.format(total.November || 0, "c")$></td>
+                            <td><$=$.format(total.December || 0, "c")$></td>
                         </tr>
                         <$                      
                         
@@ -258,18 +286,18 @@
                         $>
                         <tr>
                             <td>Total Acumulado:</td>
-                            <td><$=total.January.format()$></td>
-                            <td><$=total.February.format()$></td>
-                            <td><$=total.March.format()$></td>
-                            <td><$=total.April.format()$></td>
-                            <td><$=total.May.format()$></td>
-                            <td><$=total.June.format()$></td>
-                            <td><$=total.July.format()$></td>
-                            <td><$=total.August.format()$></td>
-                            <td><$=total.September.format()$></td>
-                            <td><$=total.October.format()$></td>
-                            <td><$=total.November.format()$></td>
-                            <td><$=total.December.format()$></td>
+                            <td><$=$.format(total.January, "c")$></td>
+                            <td><$=$.format(total.February, "c")$></td>
+                            <td><$=$.format(total.March, "c")$></td>
+                            <td><$=$.format(total.April, "c")$></td>
+                            <td><$=$.format(total.May, "c")$></td>
+                            <td><$=$.format(total.June, "c")$></td>
+                            <td><$=$.format(total.July, "c")$></td>
+                            <td><$=$.format(total.August, "c")$></td>
+                            <td><$=$.format(total.September, "c")$></td>
+                            <td><$=$.format(total.October, "c")$></td>
+                            <td><$=$.format(total.November, "c")$></td>
+                            <td><$=$.format(total.December, "c")$></td>
                         </tr>
                         <$ window.total = {};$>
                         -->
@@ -278,12 +306,20 @@
                 <uc2:ToolTip ID="tipCashFlow" runat="server" Message="Garanta a qualidade de vida do seu negócio.No fluxo de caixa que o sistema mostra algumas das informações mais importantes."
                     Title="Dica:" Indication="top" Top="90px" Left="200px" Visible="true" />
             </td>
-            <td class="right">&nbsp; </td>
+            <td class="right">
+                &nbsp;
+            </td>
         </tr>
         <tr class="bottom">
-            <td class="left">&nbsp; </td>
-            <td class="center">&nbsp; </td>
-            <td class="right">&nbsp; </td>
+            <td class="left">
+                &nbsp;
+            </td>
+            <td class="center">
+                &nbsp;
+            </td>
+            <td class="right">
+                &nbsp;
+            </td>
         </tr>
     </table>
 </asp:Content>
