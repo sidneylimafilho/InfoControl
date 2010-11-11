@@ -17,8 +17,7 @@ namespace Vivina.Erp.WebUI.InfoControl
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
     public class TaskService : DataServiceBase
     {
-        [OperationContract]
-        [JavaScriptSerializer]
+        [OperationContract, JavaScriptSerializer]
         public void CompleteTask(Int32 companyId, Int32 taskId, Int32 userId)
         {
             using (var manager = new TaskManager(null))
@@ -31,8 +30,7 @@ namespace Vivina.Erp.WebUI.InfoControl
             }
         }
 
-        [OperationContract]
-        [JavaScriptSerializer]
+        [OperationContract, JavaScriptSerializer]
         public ClientResponse GetTasks(string name, int status, int view, string inicio, string fim, int? parentId)
         {
             view = view != 0 ? view : 1;
