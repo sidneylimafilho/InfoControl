@@ -213,8 +213,8 @@
       <siteMapNode url="~/InfoControl/Accounting/AccountRegister.aspx"  title="Conciliação Bancária" roles="" permissionRequired="AccountRegister" ></siteMapNode>
       <siteMapNode url="~/InfoControl/Accounting/Bills.aspx" permissionRequired="Bills" title="Contas a Pagar" roles=""></siteMapNode>
       <siteMapNode url="~/InfoControl/Accounting/Invoices.aspx" permissionRequired="Invoices" title="Contas a Receber" roles=""></siteMapNode>
-      <siteMapNode url="~/InfoControl/Accounting/CashMonthly.aspx" title="Fluxo de Caixa" ></siteMapNode>
-      <siteMapNode url="~/InfoControl/Accounting/CashFlow.aspx" title="Fluxo de Caixa Mensal" ></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/CashMonthly.aspx" title="Fluxo de Caixa Mensal" ></siteMapNode>
+      <siteMapNode url="~/InfoControl/Accounting/CashFlow.aspx" title="Fluxo de Caixa" ></siteMapNode>
 
       <siteMapNode title=" Contrato">
         <siteMapNode url="~/InfoControl/Accounting/Contracts.aspx" permissionRequired="Contracts" title="Cadastro"  roles=""  ></siteMapNode>

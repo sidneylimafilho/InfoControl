@@ -8,6 +8,7 @@ FileContents = GetFile(FileName)
 'replace all string In the source file
 'FileContents = replace(FileContents, "Serializable, ", "", 1, -1, 1)
 'FileContents = replace(FileContents, "System.Runtime.Serialization.DataMember, ", "", 1, -1, 1)
+FileContents = replace(FileContents, vbCrLf & vbCrLf , vbCrLf, 1, -1, 1)
 FileContents = replace(FileContents, "[NonSerialized]", "", 1, -1, 1)
 
 
