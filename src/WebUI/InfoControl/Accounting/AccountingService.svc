@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Vivina.Erp.WebUI.InfoControl.AccountingService" 
+CodeBehind="AccountingService.svc.cs" %>
