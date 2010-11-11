@@ -191,7 +191,7 @@
                                     if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
                                         result.isEmpty = true;
                                         html = $($this.attrUp("emptytemplate")).html();
-                                        target = $this.attrUp("emptytarget") || options.target;
+                                        
                                     } else {
                                         // Get template tag
                                         tpl = $this;
@@ -460,12 +460,12 @@
         return null;
     }
 
-
-
+    // Inicializa todos os controles da tela.
     $(document).initializeControls();
 
-
-    $.preferCulture("pt-BR");
+    // Se o globalization for declarado então começa com pt-BR para facilitar o desenvolvimento 
+    if ($.preferCulture)
+        $.preferCulture("pt-BR");
 
 })(jQuery);
 
