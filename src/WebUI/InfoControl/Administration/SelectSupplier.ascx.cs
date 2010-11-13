@@ -33,12 +33,12 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
     SupplierManager supplierManager;
 
     ProfileManager profileManager;
-  //  private bool _required = false;
+    //  private bool _required = false;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-        
+
+
         //valSupplier.ValidationGroup = Required ? ValidationGroup : "_NonValidation";
     }
 
@@ -51,6 +51,8 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
 
     protected void OnSelectedSupplier(object sender, SelectedSupplierEventArgs e)
     {
+        supplier = e.Supplier;
+
         if (SelectedSupplier != null)
             SelectedSupplier(sender, e);
     }
@@ -80,7 +82,7 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
     }
 
     public void ShowSupplier(Supplier supplier)
-    {
+    {        
         if (supplier != null)
         {
             ViewState["SupplierId"] = supplier.SupplierId;
@@ -98,7 +100,7 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
                     lblPostalCode.Text = "CEP: " + supplier.LegalEntityProfile.Address.PostalCode;
                 }
 
-           
+
 
                 lblSupplierPhone.Text = "Tel: " + supplier.LegalEntityProfile.Phone.Replace("(__)____-____", "");
 
@@ -120,14 +122,14 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
                     lblPostalCode.Text = "CEP: " + supplier.Profile.Address.PostalCode;
                 }
 
-             
+
 
                 lblSupplierPhone.Text = "Tel: " + supplier.Profile.Phone.Replace("(__)____-____", "");
 
                 lblCNPJ.Text = supplier.Profile.CPF;
             }
             String encripted = supplier.SupplierId.EncryptToHex();
-            
+
             pnlSupplier.Visible = true;
             pnlSupplierSearch.Style.Add(HtmlTextWriterStyle.Display, "none");
             //attach the event Selectd(end)
@@ -174,12 +176,12 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
 }
 
 
-    public class SelectingSupplierEventArgs : EventArgs
-    {
-        public string SupplierName { get; set; }
-    }
+public class SelectingSupplierEventArgs : EventArgs
+{
+    public string SupplierName { get; set; }
+}
 
-    public class SelectedSupplierEventArgs : EventArgs
-    {
-        public Supplier Supplier { get; set; }
-    }
+public class SelectedSupplierEventArgs : EventArgs
+{
+    public Supplier Supplier { get; set; }
+}
