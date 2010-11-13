@@ -101,7 +101,7 @@ namespace Vivina.Erp.BusinessRules.WebSites
 
         public void Delete(WebPage entity)
         {
-            foreach (WebPage page in entity.WebPages.ToList())
+            foreach (WebPage page in entity.WebPages)
                 Delete(page);
 
             DbContext.WebPages.DeleteOnSubmit(entity);
