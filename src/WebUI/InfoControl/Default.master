@@ -49,7 +49,6 @@
             <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
         </Scripts>
     </ajaxToolkit:ToolkitScriptManager>
-    <%--<ajaxToolkit:NoBot ID="NoBot1" runat="server" />--%>
     <table class="cHeader">
         <tr>
             <td valign="top">
