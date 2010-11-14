@@ -16,7 +16,15 @@ namespace InfoControl.Web.UI
     {
         protected override void OnPreInit(EventArgs e)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "", "document.cookie = 'NoBot=' + encodeURIComponent('" + Request["ASP.NET_SessionId"] + "')+ ';';", true);
+            if (Request.HttpMethod == "POST" && String.IsNullOrEmpty(Request["NoBot"]))
+            {
+                //
+                // 412 Precondition Failed
+                // The server does not meet one of the preconditions that the requester put on the request
+                //
+                Response.StatusCode = 412;
+                Response.StatusDescription = "Precondition Failed";
+            }
 
             
             //
@@ -181,6 +189,8 @@ namespace InfoControl.Web.UI
             {
                 base.Render(writer);
             }
+
+            writer.WriteLine("<script>document.cookie=\"NoBot='" + Request["ASP.NET_SessionId"] + "'\";</script>");
         }
 
         /// <summary>
