@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.ComponentModel;
 using System.IO;
 using System.Text;
@@ -96,7 +97,9 @@ namespace Vivina.Erp.WebUI.Site
             else
             {
                 _page = manager.WebPageNotFound();
-                MasterPageFile = Company.GetMasterPagePath();
+
+                if (!Company.CompanyUsers.Any(user => user.UserId == User.Identity.UserId))
+                    MasterPageFile = Company.GetMasterPagePath();
             }
 
             Trace.Warn("SitePageBase", "End OnPreInit");
