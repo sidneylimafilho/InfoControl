@@ -11,6 +11,8 @@ public partial class Site_CustomerCentral : SitePageBase
     private Customer customer;
     private CustomerManager customerManager;
 
+  
+
     protected void Page_Load(object sender, EventArgs e)
     {
         customerManager = new CustomerManager(this);
