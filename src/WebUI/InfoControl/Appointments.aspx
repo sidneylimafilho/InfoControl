@@ -75,7 +75,7 @@
                     OnAppointmentUpdate="radAppointment_AppointmentUpdate" MonthVisibleAppointmentsPerDay="1"
                     AllowEdit="true">
                     <ResourceTypes>
-                        <telerik:ResourceType KeyField="UserId" TextField="AbreviatedName" ForeignKeyField="UserId"
+                        <telerik:ResourceType KeyField="UserId" TextField="AbreviatedName" ForeignKeyField="CreatorUserId"
                             DataSourceID="odsEmployeesList" Name="UserName" />
                     </ResourceTypes>
                     <Localization AllDay="O Dia Todo" HeaderDay="Dia" HeaderMonth="Mês" HeaderNextDay="Próximo Dia"
