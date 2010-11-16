@@ -2761,11 +2761,12 @@
     <Content Include="App_Shared\JS\smartclient\jquery.smartclient.js" />
     <Content Include="App_Shared\JS\smartclient\license.htm" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\blank.htm" />
-    <Content Include="App_Shared\JS\smartclient\UnitTests\default.aspx" />
+    <Content Include="App_Shared\JS\smartclient\UnitTests\data.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\FormSample.ascx" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\GridSample.ascx" />
     <Content Include="App_Shared\JS\qunit\qunit.css" />
     <Content Include="App_Shared\JS\qunit\qunit.js" />
+    <Content Include="App_Shared\JS\smartclient\UnitTests\json.aspx" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\SampleAll.ascx" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\index.html" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\test.js" />
