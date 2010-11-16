@@ -24,7 +24,7 @@ public partial class InfoControl_CRM_CustomerFollowupAction : Vivina.Erp.SystemF
         {
             if (Request["CustomerFollowupActionId"] != null)
             {
-                Page.ViewState["CustomerFollowupActionId"] = Request["CustomerFollowupActionId"].DecryptFromHex();
+                Page.ViewState["CustomerFollowupActionId"] = Request["CustomerFollowupActionId"];
                 frmFollowupAction.ChangeMode(FormViewMode.Edit);
             }
         }

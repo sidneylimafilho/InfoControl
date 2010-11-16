@@ -23,14 +23,14 @@ namespace Vivina.Erp.WebUI.POS
         {
             if (!IsPostBack && Request["ProductId"] != null)
             {
-                Page.ViewState["ProductId"] = Request["ProductId"].DecryptFromHex();
-                Page.ViewState["DepositId"] = Request["DepositId"].DecryptFromHex();
+                Page.ViewState["ProductId"] = Request["ProductId"];
+                Page.ViewState["DepositId"] = Request["DepositId"];
                 showInventory();
                 SetUnitPriceNames();
 
                 btnPrintBarCode.OnClientClick = "top.$.lightbox('BarCode_Print.aspx?lightbox[iframe]=true&DepositId=" +
-                                                Page.ViewState["DepositId"].EncryptToHex() +
-                                                "&ProductId=" + Page.ViewState["ProductId"].EncryptToHex() +
+                                                Page.ViewState["DepositId"] +
+                                                "&ProductId=" + Page.ViewState["ProductId"] +
                                                 "'); return false;";
             }
         }

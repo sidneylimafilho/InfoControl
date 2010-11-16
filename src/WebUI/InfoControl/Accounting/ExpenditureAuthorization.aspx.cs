@@ -36,7 +36,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
         /// </summary>
         private void ShowExpenditureAuthorization()
         {
-            var expenditureAuthorizationId = Convert.ToInt32(Request["ExpenditureAuthorizationId"].DecryptFromHex());
+            var expenditureAuthorizationId = Convert.ToInt32(Request["ExpenditureAuthorizationId"]);
             var expenditureAuthorization = AccountManager.GetExpenditureAuthorization(expenditureAuthorizationId);
 
             Page.ViewState["customerCallId"] = expenditureAuthorization.CustomerCallId;
@@ -59,7 +59,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
             var expenditureAuthorization = new Vivina.Erp.DataClasses.ExpenditureAuthorization();
 
             if (!String.IsNullOrEmpty(Request["ExpenditureAuthorizationId"]))
-                expenditureAuthorization = AccountManager.GetExpenditureAuthorization(Convert.ToInt32(Request["ExpenditureAuthorizationId"].DecryptFromHex()));
+                expenditureAuthorization = AccountManager.GetExpenditureAuthorization(Convert.ToInt32(Request["ExpenditureAuthorizationId"]));
 
             expenditureAuthorization.CustomerCallId = Convert.ToInt32(Page.ViewState["customerCallId"]);
 

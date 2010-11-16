@@ -57,7 +57,7 @@ namespace Vivina.Erp.WebUI.Site
                 if (User.IsAuthenticated)
                 {
                     customer = new CustomerManager(this).GetCustomerByUserName(Company.CompanyId, User.Identity.UserName);
-                    Response.Redirect(nextUrl + "?CustomerId=" + customer.CustomerId.EncryptToHex());
+                    Response.Redirect(nextUrl + "?CustomerId=" + customer.CustomerId);
                     if (!String.IsNullOrEmpty(Request["b"]))
                         GenerateServiceOrderAndReceipt();
                     return;
@@ -65,8 +65,8 @@ namespace Vivina.Erp.WebUI.Site
 
                 if (!String.IsNullOrEmpty(Request["m"]))
                 {
-                    txtUserEmail.Text = Request["m"].DecryptFromHex();
-                    User user = new MembershipManager(this).GetUserByEmail(Request["m"].DecryptFromHex());
+                    txtUserEmail.Text = Request["m"];
+                    User user = new MembershipManager(this).GetUserByEmail(Request["m"]);
 
                     if (user != null)
                     {
@@ -118,7 +118,7 @@ namespace Vivina.Erp.WebUI.Site
                     return;
 
                 case MembershipCreateStatus.Success:
-                    nextUrl += "?CustomerId=" + customer.CustomerId.EncryptToHex();
+                    nextUrl += "?CustomerId=" + customer.CustomerId;
                     if (!String.IsNullOrEmpty(Request["b"]))
                         GenerateServiceOrderAndReceipt();
 
@@ -149,12 +149,12 @@ namespace Vivina.Erp.WebUI.Site
                 GenerateServiceOrderAndReceipt();
 
             var login = (sender as System.Web.UI.WebControls.Login);
-            login.DestinationPageUrl = (nextUrl + "?b=" + Request["b"] + "&CustomerId=" + customer.CustomerId.EncryptToHex());
+            login.DestinationPageUrl = (nextUrl + "?b=" + Request["b"] + "&CustomerId=" + customer.CustomerId);
         }
 
         private void GenerateServiceOrderAndReceipt()
         {
-            int budgetId = Convert.ToInt32(Request["b"].DecryptFromHex());
+            int budgetId = Convert.ToInt32(Request["b"]);
             new SaleManager(this).SetBudgetStatus(Company.CompanyId, budgetId, (int)BudgetStatus.Accepted);
 
             int serviceOrderId = CreateServiceOrderFromBudget(budgetId, customer.CustomerId);

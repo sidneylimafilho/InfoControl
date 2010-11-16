@@ -23,7 +23,7 @@ namespace Vivina.Erp.WebUI.Administration
         private void ShowContact()
         {
             contactManager = new ContactManager(this);
-            contact = contactManager.GetContact(Convert.ToInt32(Request["ContactId"].DecryptFromHex()));
+            contact = contactManager.GetContact(Convert.ToInt32(Request["ContactId"]));
 
             txtName.Text = contact.Name;
             txtCellPhone.Text = contact.CellPhone;
@@ -48,7 +48,7 @@ namespace Vivina.Erp.WebUI.Administration
 
             if (!String.IsNullOrEmpty(Request["ContactId"]))
             {
-                originalContact = contactManager.GetContact(Convert.ToInt32(Request["ContactId"].DecryptFromHex()));
+                originalContact = contactManager.GetContact(Convert.ToInt32(Request["ContactId"]));
                 contact.CopyPropertiesFrom(originalContact);
             }
             else contact.UserId = User.Identity.UserId;
@@ -79,7 +79,7 @@ namespace Vivina.Erp.WebUI.Administration
                 {
                     var customerContact = new CustomerContact();
                     customerContact.CompanyId = Company.CompanyId;
-                    customerContact.CustomerId = Convert.ToInt32(Session["CustomerId"].ToString().DecryptFromHex());
+                    customerContact.CustomerId = Convert.ToInt32(Session["CustomerId"].ToString());
                     customerContact.ContactId = contact.ContactId;
                     contactManager.InsertCustomerContact(customerContact);
                 }
@@ -87,7 +87,7 @@ namespace Vivina.Erp.WebUI.Administration
                 {
                     var supplierContact = new SupplierContact();
                     supplierContact.CompanyId = Company.CompanyId;
-                    supplierContact.SupplierId = Convert.ToInt32(Session["SupplierId"].ToString().DecryptFromHex());
+                    supplierContact.SupplierId = Convert.ToInt32(Session["SupplierId"].ToString());
                     supplierContact.ContactId = contact.ContactId;
                     contactManager.InsertSupplierContact(supplierContact);
                 }
@@ -112,15 +112,15 @@ namespace Vivina.Erp.WebUI.Administration
 
             if (Session["CustomerId"] != null)
             {
-                var customerId = Convert.ToString(Session["CustomerId"]).DecryptFromHex();
+                var customerId = Convert.ToString(Session["CustomerId"]);
                 Session["CustomerId"] = null;
-                Response.Redirect("Contacts.aspx?CustomerId=" + customerId.EncryptToHex());
+                Response.Redirect("Contacts.aspx?CustomerId=" + customerId);
             }
             else
             {
-                var supplierId = Convert.ToString(Session["SupplierId"]).DecryptFromHex();
+                var supplierId = Convert.ToString(Session["SupplierId"]);
                 Session["SupplierId"] = null;
-                Response.Redirect("Contacts.aspx?SupplierId=" + supplierId.EncryptToHex());
+                Response.Redirect("Contacts.aspx?SupplierId=" + supplierId);
             }
         }
 

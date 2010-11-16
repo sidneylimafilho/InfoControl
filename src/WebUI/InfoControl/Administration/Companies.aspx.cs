@@ -22,7 +22,7 @@ public partial class Company_Companies : Vivina.Erp.SystemFramework.PageBase
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='Company.aspx?CompanyId=" + e.Row.DataItem.GetPropertyValue("CompanyId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Company.aspx?CompanyId=" + e.Row.DataItem.GetPropertyValue("CompanyId") + "';";
 
             //
             // Cancel a nested event fires

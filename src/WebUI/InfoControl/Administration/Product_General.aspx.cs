@@ -42,7 +42,7 @@ namespace Vivina.Erp.WebUI.Administration
                     return;
                 }
 
-                Page.ViewState["ProductId"] = Request["pid"].DecryptFromHex();
+                Page.ViewState["ProductId"] = Request["pid"];
                 ShowProduct();
             }
         }
@@ -228,7 +228,7 @@ namespace Vivina.Erp.WebUI.Administration
                 if (product.IsTemp == true)
                     redirectUrl += "location='../Purchasing/PurchaseRequests.aspx';";
                 else
-                    redirectUrl += "location='Product.aspx?ProductId=" + product.ProductId.EncryptToHex() + "'";
+                    redirectUrl += "location='Product.aspx?ProductId=" + product.ProductId + "'";
             }
 
             Page.ClientScript.RegisterClientScriptBlock(GetType(), "", redirectUrl, true);

@@ -36,7 +36,7 @@ public partial class Administration_Company_Suppliers : Vivina.Erp.SystemFramewo
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
-            e.Row.Attributes["onclick"] = "location='Supplier.aspx?SupplierId=" + e.Row.DataItem.GetPropertyValue("SupplierId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Supplier.aspx?SupplierId=" + e.Row.DataItem.GetPropertyValue("SupplierId") + "';";
         }
     }
     protected void grdSuppliers_Sorting(object sender, GridViewSortEventArgs e)

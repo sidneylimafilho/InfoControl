@@ -13,7 +13,7 @@ public partial class Company_Administration_Customer_Equipment : Vivina.Erp.Syst
         if (!IsPostBack)
         {
             frmEquipment.Visible = false;
-            Page.ViewState["CustomerId"] = Request["CustomerId"].DecryptFromHex();
+            Page.ViewState["CustomerId"] = Request["CustomerId"];
         }
     }
 

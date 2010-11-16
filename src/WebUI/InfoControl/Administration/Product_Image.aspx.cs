@@ -14,7 +14,7 @@ public partial class InfoControl_Administration_ProductImage : Vivina.Erp.System
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!String.IsNullOrEmpty(Request["pid"])) 
-            productId = Convert.ToInt32(Request["pid"].DecryptFromHex());
+            productId = Convert.ToInt32(Request["pid"]);
 
         DataBind();
     }

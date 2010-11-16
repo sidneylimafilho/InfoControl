@@ -98,7 +98,7 @@ public partial class EventViewer : Vivina.Erp.SystemFramework.PageBase
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='EventAdd.aspx?EventId=" + grdEventViewer.DataKeys[e.Row.RowIndex]["EventId"].EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='EventAdd.aspx?EventId=" + grdEventViewer.DataKeys[e.Row.RowIndex]["EventId"] + "';";
 
             //
             //paint line of red if event type equals Error and visualization mode equals All Events

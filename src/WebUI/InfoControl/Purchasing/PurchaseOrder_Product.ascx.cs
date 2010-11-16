@@ -157,7 +157,7 @@ public partial class Company_POS_PurchaseOrder_Product : Vivina.Erp.SystemFramew
             if (purchaseRequestItemId > 0)
                 ProductList.Add(
                     new PurchaseOrderQuotedItem(
-                        item[item.Length - 1].DecryptFromHex(),
+                        item[item.Length - 1],
                         requestAmount,
                         requestAmount,
                         "",

@@ -47,7 +47,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Host
         protected void grdCompanies_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
-                e.Row.Attributes["onclick"] = "location='../Administration/Company.aspx?CompanyId=" + grdCompanies.DataKeys[e.Row.RowIndex]["CompanyId"].EncryptToHex() + "&host=true';";
+                e.Row.Attributes["onclick"] = "location='../Administration/Company.aspx?CompanyId=" + grdCompanies.DataKeys[e.Row.RowIndex]["CompanyId"] + "&host=true';";
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)

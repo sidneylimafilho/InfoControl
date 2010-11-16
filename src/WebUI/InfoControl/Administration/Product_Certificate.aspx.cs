@@ -17,7 +17,7 @@ namespace Vivina.Erp.WebUI.Administration
         int productId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            productId = Convert.ToInt32(Request["pid"].DecryptFromHex());
+            productId = Convert.ToInt32(Request["pid"]);
         }
 
         protected void btnSaveCetification_Click(object sender, ImageClickEventArgs e)

@@ -19,7 +19,7 @@ public partial class Accounting_Account : Vivina.Erp.SystemFramework.PageBase
         {
             if (!String.IsNullOrEmpty(Request["AccountId"]))
             {
-                Page.ViewState["AccountId"] = Convert.ToInt32(Request["AccountId"].DecryptFromHex());
+                Page.ViewState["AccountId"] = Convert.ToInt32(Request["AccountId"]);
                 ShowAccount();
             }
         }

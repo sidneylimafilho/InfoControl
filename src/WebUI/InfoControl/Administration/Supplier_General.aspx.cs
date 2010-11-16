@@ -18,7 +18,7 @@ public partial class Company_Supplier_General : Vivina.Erp.SystemFramework.PageB
 
         //retrieve the SupplierId from Modal Popup
         if (!String.IsNullOrEmpty(Request["SupplierId"]))
-            Page.ViewState["SupplierId"] = Request["SupplierId"].DecryptFromHex();
+            Page.ViewState["SupplierId"] = Request["SupplierId"];
 
         if (Context.Items["SupplierId"] != null)
             Page.ViewState["SupplierId"] = Context.Items["SupplierId"];
@@ -194,7 +194,7 @@ public partial class Company_Supplier_General : Vivina.Erp.SystemFramework.PageB
         }
 
         if (String.IsNullOrEmpty(Request["w"]))
-            Page.ClientScript.RegisterStartupScript(GetType(), "", "top.location = Supplier.aspx?SupplierId=" + supplier.SupplierId.EncryptToHex(), true);
+            Page.ClientScript.RegisterStartupScript(GetType(), "", "top.location = Supplier.aspx?SupplierId=" + supplier.SupplierId, true);
         else
             Page.ClientScript.RegisterStartupScript(
                 GetType(),

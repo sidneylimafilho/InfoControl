@@ -83,8 +83,8 @@ public partial class InfoControl_Accounting_AccountRegister : Vivina.Erp.SystemF
             var link = e.Row.FindControl("lblParcelDescription") as HyperLink;
             if (link != null)
                 link.NavigateUrl = (billId != null) ?
-                    "Bill.aspx?BillId=" + billId.Value.EncryptToHex() :
-                    "Invoice.aspx?InvoiceId=" + invoiceId.Value.EncryptToHex();
+                    "Bill.aspx?BillId=" + billId.Value :
+                    "Invoice.aspx?InvoiceId=" + invoiceId.Value;
         }
     }
 

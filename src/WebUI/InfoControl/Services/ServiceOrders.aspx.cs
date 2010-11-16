@@ -125,7 +125,7 @@ public partial class InfoControl_Services_ServiceOrders : Vivina.Erp.SystemFrame
     {
         if (e.Item.ItemType == GridItemType.Item || e.Item.ItemType == GridItemType.EditFormItem || e.Item.ItemType == GridItemType.AlternatingItem)
         {
-            e.Item.Attributes["onclick"] = "location='ServiceOrder.aspx?ServiceOrderId=" + e.Item.DataItem.GetPropertyValue("ServiceOrderId").EncryptToHex() + "';";
+            e.Item.Attributes["onclick"] = "location='ServiceOrder.aspx?ServiceOrderId=" + e.Item.DataItem.GetPropertyValue("ServiceOrderId") + "';";
             //
             // Cancel a nested event fires
             //

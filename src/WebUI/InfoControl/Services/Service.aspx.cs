@@ -29,7 +29,7 @@ public partial class InfoControl_Services_Service : Vivina.Erp.SystemFramework.P
         {
             if (!String.IsNullOrEmpty(Request["ServiceId"]))
             {
-                Page.ViewState["ServiceId"] = Convert.ToInt32(Request["ServiceId"].DecryptFromHex());
+                Page.ViewState["ServiceId"] = Convert.ToInt32(Request["ServiceId"]);
                 frmServices.ChangeMode(FormViewMode.Edit); 
             }
         }

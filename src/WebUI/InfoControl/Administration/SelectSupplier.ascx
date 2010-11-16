@@ -26,7 +26,7 @@
         <tr>
             <td>
                 <b>
-                    <a plugin="lightbox" href="Administration/Supplier.aspx?w=modal&SupplierId=<%=Supplier.SupplierId.EncryptToHex() %>&lightbox[iframe]=true">
+                    <a plugin="lightbox" href="Administration/Supplier.aspx?w=modal&SupplierId=<%=Supplier.SupplierId %>&lightbox[iframe]=true">
                     <%=Supplier.Name%></a></b><br />
                 <asp:Label ID="lblCNPJ" runat="server" Text=""></asp:Label><br />
                 <asp:Label ID="lblSupplierAddress" runat="server" Text=""></asp:Label><br />

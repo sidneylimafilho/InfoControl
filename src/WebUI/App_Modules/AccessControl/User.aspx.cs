@@ -20,7 +20,7 @@ public partial class UserGeneral : Vivina.Erp.SystemFramework.PageBase
         if (!IsPostBack)
         {
             if (Request["UserId"] != null)
-                Context.Items["UserId"] = Request["UserId"].DecryptFromHex();
+                Context.Items["UserId"] = Request["UserId"];
 
             if (Context.Items["UserId"] != null)
             {

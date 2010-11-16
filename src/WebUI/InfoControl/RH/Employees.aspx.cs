@@ -66,7 +66,7 @@ public partial class Company_RH_Employees : Vivina.Erp.SystemFramework.PageBase
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='Employee.aspx?EmployeeId=" + e.Row.DataItem.GetPropertyValue("EmployeeId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Employee.aspx?EmployeeId=" + e.Row.DataItem.GetPropertyValue("EmployeeId") + "';";
             //
             // Cancel a nested event fires
             //

@@ -76,7 +76,7 @@ public partial class Site_ProductsControl : Vivina.Erp.SystemFramework.UserContr
 
         e.InputParameters["manufacturerId"] = null;
         if (!String.IsNullOrEmpty(Fabricante))
-            e.InputParameters["manufacturerId"] = Convert.ToInt32(Fabricante.DecryptFromHex());
+            e.InputParameters["manufacturerId"] = Convert.ToInt32(Fabricante);
     }
 
     protected void Page_Load(object sender, EventArgs e)

@@ -19,7 +19,7 @@ public partial class Company_Products_Print : Vivina.Erp.SystemFramework.PageBas
     protected void Page_Load(object sender, EventArgs e)
     {
         InventoryManager manager = new InventoryManager(this);
-        DataTable table = manager.GetProductsInInventory(Convert.ToInt32(Request.QueryString["ProductId"].DecryptFromHex()), Request.QueryString["DepositId"].DecryptFromHex(), Company.CompanyId);
+        DataTable table = manager.GetProductsInInventory(Convert.ToInt32(Request.QueryString["ProductId"]), Request.QueryString["DepositId"], Company.CompanyId);
         _row = table.Rows[0];
         pnlError.Visible = false;
 

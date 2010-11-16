@@ -71,7 +71,7 @@ public partial class InfoControl_Administration_Contract : Vivina.Erp.SystemFram
             if (parcel != null)
             {
                 lnkParcelValue.Text = "Valor da parcelas: " + parcel.Amount.ToString();
-                lnkParcelValue.NavigateUrl = "Invoice.aspx?InvoiceId=" + parcel.InvoiceId.EncryptToHex();
+                lnkParcelValue.NavigateUrl = "Invoice.aspx?InvoiceId=" + parcel.InvoiceId;
             }
         }
 
@@ -175,7 +175,7 @@ public partial class InfoControl_Administration_Contract : Vivina.Erp.SystemFram
             if (!String.IsNullOrEmpty(Request["ContractId"]))
             {
                 Int32 contractID = 0;
-                if (!Int32.TryParse(Request["ContractId"].DecryptFromHex(), out contractID))
+                if (!Int32.TryParse(Request["ContractId"], out contractID))
                     return;
                 Page.ViewState["ContractId"] = contractID;
             }

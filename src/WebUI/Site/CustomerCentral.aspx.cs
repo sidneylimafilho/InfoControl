@@ -54,7 +54,7 @@ public partial class Site_CustomerCentral : SitePageBase
         {
             e.Row.Attributes["onclick"] =
                 "top.$.lightbox('../InfoControl/CRM/CustomerCall.aspx?ModalPopUp=1&ReadOnly=true&CustomerCallId=" +
-                e.Row.DataItem.GetPropertyValue("CustomerCallId").EncryptToHex() + "');";
+                e.Row.DataItem.GetPropertyValue("CustomerCallId") + "');";
         }
     }
 
@@ -64,7 +64,7 @@ public partial class Site_CustomerCentral : SitePageBase
         {
             e.Row.Attributes["onclick"] =
                 "top.$.lightbox('../InfoControl/Services/ServiceOrder.aspx?ModalPopUp=1&ReadOnly=true&ServiceOrderId=" +
-                e.Row.DataItem.GetPropertyValue("ServiceOrderId").EncryptToHex() + "');";
+                e.Row.DataItem.GetPropertyValue("ServiceOrderId") + "');";
         }
     }
 
@@ -74,7 +74,7 @@ public partial class Site_CustomerCentral : SitePageBase
         {
             e.Row.Attributes["onclick"] =
                 "top.$.lightbox('../InfoControl/Accounting/Receipt.aspx?ModalPopUp=1&ReadOnly=true&ReceiptId=" +
-                e.Row.DataItem.GetPropertyValue("ReceiptId").EncryptToHex() + "');";
+                e.Row.DataItem.GetPropertyValue("ReceiptId") + "');";
         }
     }
 
@@ -84,7 +84,7 @@ public partial class Site_CustomerCentral : SitePageBase
         {
             e.Row.Attributes["onclick"] =
                 "top.$.lightbox('../InfoControl/POS/SaleViewer.aspx?ModalPopUp=1&ReadOnly=true&SaleId=" +
-                e.Row.DataItem.GetPropertyValue("SaleId").EncryptToHex() + "');";
+                e.Row.DataItem.GetPropertyValue("SaleId") + "');";
         }
     }
 }

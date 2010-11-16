@@ -231,7 +231,7 @@ public partial class InfoControl_Services_ServiceOrder : Vivina.Erp.SystemFramew
         
 
         if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
-            serviceOrderId = Convert.ToInt32(Request["ServiceOrderId"].DecryptFromHex());
+            serviceOrderId = Convert.ToInt32(Request["ServiceOrderId"]);
 
         if (!IsPostBack)
         {
@@ -566,7 +566,7 @@ public partial class InfoControl_Services_ServiceOrder : Vivina.Erp.SystemFramew
     {
         var serviceOrderId = SaveServiceOrder();
         if (serviceOrderId.HasValue)
-            Response.Redirect("../Accounting/Receipt.aspx?ServiceOrderId=" + serviceOrderId.EncryptToHex());
+            Response.Redirect("../Accounting/Receipt.aspx?ServiceOrderId=" + serviceOrderId);
     }
 
     protected void odsCustomerContracts_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

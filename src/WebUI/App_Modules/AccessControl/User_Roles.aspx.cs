@@ -23,7 +23,7 @@ public partial class User_Roles : Vivina.Erp.SystemFramework.PageBase
 
         if (!String.IsNullOrEmpty(Request["UserId"]))
         {
-            userId = Convert.ToInt32(Request["UserId"].DecryptFromHex());
+            userId = Convert.ToInt32(Request["UserId"]);
         }
     }
 

@@ -138,7 +138,7 @@ public partial class InfoControl_Administration_Receipt : Vivina.Erp.SystemFrame
                 Page.ViewState["ReceiptId"] = Context.Items["ReceiptId"];
 
             if (!String.IsNullOrEmpty(Request["ReceiptId"]))
-                Page.ViewState["ReceiptId"] = Request["ReceiptId"].DecryptFromHex();
+                Page.ViewState["ReceiptId"] = Request["ReceiptId"];
 
             if (IsLoaded)
                 ShowReceipt();
@@ -146,12 +146,12 @@ public partial class InfoControl_Administration_Receipt : Vivina.Erp.SystemFrame
             {
                 if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
                 {
-                    LoadServiceOrder(Convert.ToInt32(Request["ServiceOrderId"].DecryptFromHex()));
-                    cboSaleAndOs.Items.Remove(cboSaleAndOs.Items.FindByValue(Request["ServiceOrderId"].DecryptFromHex()));
+                    LoadServiceOrder(Convert.ToInt32(Request["ServiceOrderId"]));
+                    cboSaleAndOs.Items.Remove(cboSaleAndOs.Items.FindByValue(Request["ServiceOrderId"]));
                 }
 
                 if (!String.IsNullOrEmpty(Request["SaleId"]))
-                    LoadSale(Convert.ToInt32(Request["SaleId"].DecryptFromHex()));
+                    LoadSale(Convert.ToInt32(Request["SaleId"]));
             }
         }
     }

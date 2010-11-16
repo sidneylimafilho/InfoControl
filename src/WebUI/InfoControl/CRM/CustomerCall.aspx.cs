@@ -39,7 +39,7 @@ public partial class InfoControl_Services_CustomerCall : Vivina.Erp.SystemFramew
 
             if (!String.IsNullOrEmpty(Request["CustomerCallId"]))
             {
-                Page.ViewState["CustomerCallId"] = Convert.ToInt32(Request["CustomerCallId"].DecryptFromHex());
+                Page.ViewState["CustomerCallId"] = Convert.ToInt32(Request["CustomerCallId"]);
 
                 ShowCustomerCall();
 

@@ -34,7 +34,7 @@ public partial class Users_Register : Vivina.Erp.SystemFramework.PageBase
             Page.ViewState["CompanyId"] = Context.Items["CompanyId"];
 
         if (Request.QueryString["CompanyId"] != null)
-            Page.ViewState["CompanyId"] = Request.QueryString["CompanyId"].DecryptFromHex();
+            Page.ViewState["CompanyId"] = Request.QueryString["CompanyId"];
 
         if (Page.ViewState["CompanyId"] != null)
         {

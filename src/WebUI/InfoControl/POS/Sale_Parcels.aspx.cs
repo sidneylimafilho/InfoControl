@@ -168,7 +168,7 @@ public partial class Company_POS_Sale_Parcels : Vivina.Erp.SystemFramework.PageB
 
         string script = "top.$.LightBoxObject.close();";
         script += (chkReceipt.Checked ?
-            "top.content.location='../Accounting/Receipt.aspx?SaleId=" + sale.SaleId.EncryptToHex() + "';" :
+            "top.content.location='../Accounting/Receipt.aspx?SaleId=" + sale.SaleId + "';" :
             "top.content.location='Sale.aspx';");
 
         ClientScript.RegisterStartupScript(this.GetType(), "CloseModal", script, true);

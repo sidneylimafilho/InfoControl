@@ -115,7 +115,7 @@ public partial class InfoControl_CRM_CustomerCalls : Vivina.Erp.SystemFramework.
             //
             //paint line of red if event type equals Error and visualization mode equals All Events
             //
-            e.Row.Attributes["onclick"] = "location='CustomerCall.aspx?CustomerCallId=" + e.Row.DataItem.GetPropertyValue("CustomerCallId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='CustomerCall.aspx?CustomerCallId=" + e.Row.DataItem.GetPropertyValue("CustomerCallId") + "';";
             if ((Convert.ToInt32(grdCustomerCalls.DataKeys[e.Row.RowIndex]["CustomerCallTypeId"]) == CustomerCallType.ERROR))
                 e.Row.ForeColor = Color.Red;
 

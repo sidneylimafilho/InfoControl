@@ -25,7 +25,7 @@ public partial class InfoControl_Services_Services : Vivina.Erp.SystemFramework.
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
 
-            e.Row.Attributes["onclick"] = "location='Service.aspx?ServiceId=" + e.Row.DataItem.GetPropertyValue("ServiceId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Service.aspx?ServiceId=" + e.Row.DataItem.GetPropertyValue("ServiceId") + "';";
             PostBackOptions postOptions = new PostBackOptions(this.grvServices, "Select$" + e.Row.RowIndex.ToString());
             String insertScript = ClientScript.GetPostBackEventReference(postOptions);
 

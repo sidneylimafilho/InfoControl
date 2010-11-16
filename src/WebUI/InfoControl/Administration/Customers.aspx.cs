@@ -63,7 +63,7 @@ public partial class Company_Customers : Vivina.Erp.SystemFramework.PageBase
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
-            e.Row.Attributes["onclick"] = "location='Customer.aspx?CustomerId=" + grdCustomers.DataKeys[e.Row.RowIndex]["CustomerId"].EncryptToHex() + "' ;";
+            e.Row.Attributes["onclick"] = "location='Customer.aspx?CustomerId=" + grdCustomers.DataKeys[e.Row.RowIndex]["CustomerId"] + "' ;";
         }
     }
 

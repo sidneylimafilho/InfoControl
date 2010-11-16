@@ -40,10 +40,10 @@ public partial class InfoControl_Site_SiteMaps : Vivina.Erp.SystemFramework.Page
     {
         var page = e.Node.DataItem as WebPage;
 
-        //e.Node.FindControl<HtmlAnchor>("lnkSiteMaps").HRef = "WebPage.aspx?PageId=" + page.WebPageId.EncryptToHex();
+        //e.Node.FindControl<HtmlAnchor>("lnkSiteMaps").HRef = "WebPage.aspx?PageId=" + page.WebPageId;
 
         var lnkSiteMaps = e.Node.FindControl<HtmlAnchor>("lnkSiteMaps");
-        lnkSiteMaps.Attributes["onclick"] = "top.$.lightbox('Site/WebPage.aspx?PageId=" + page.WebPageId.EncryptToHex() + "&lightbox[iframe]=true');";
+        lnkSiteMaps.Attributes["onclick"] = "top.$.lightbox('Site/WebPage.aspx?PageId=" + page.WebPageId + "&lightbox[iframe]=true');";
         lnkSiteMaps.Style.Add(HtmlTextWriterStyle.Color, page.IsPublished ? "default" : "grey");
 
         var lnkExternal = e.Node.FindControl<HtmlAnchor>("lnkExternal");

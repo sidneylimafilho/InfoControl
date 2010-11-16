@@ -8,7 +8,7 @@ public partial class Company_Administration_WebUserControl : Vivina.Erp.SystemFr
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!String.IsNullOrEmpty(Request["CustomerId"]))
-            Page.ViewState["CustomerId"] = Request["CustomerId"].DecryptFromHex();
+            Page.ViewState["CustomerId"] = Request["CustomerId"];
     }
     protected void odsCustomerSales_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
@@ -19,7 +19,7 @@ public partial class Company_Administration_WebUserControl : Vivina.Erp.SystemFr
     protected void grdSaleByCustomer_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
-            e.Row.Attributes["onclick"] = "top.$.lightbox('POS/SaleViewer.aspx?SaleId=" + grdSaleByCustomer.DataKeys[e.Row.RowIndex]["SaleId"].EncryptToHex() + "&lightbox[iframe]=true' );return;";
+            e.Row.Attributes["onclick"] = "top.$.lightbox('POS/SaleViewer.aspx?SaleId=" + grdSaleByCustomer.DataKeys[e.Row.RowIndex]["SaleId"] + "&lightbox[iframe]=true' );return;";
 
     }
 }

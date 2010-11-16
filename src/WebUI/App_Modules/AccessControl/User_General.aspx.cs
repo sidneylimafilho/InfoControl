@@ -135,7 +135,7 @@ public partial class User_General : Vivina.Erp.SystemFramework.PageBase
         if (!String.IsNullOrEmpty(Request["UserId"]))
         {
             Title = "";
-            Page.ViewState["UserId"] = Convert.ToInt32(Request["UserId"].DecryptFromHex());
+            Page.ViewState["UserId"] = Convert.ToInt32(Request["UserId"]);
 
             if (!IsPostBack)
                 LoadUser();
@@ -196,7 +196,7 @@ public partial class User_General : Vivina.Erp.SystemFramework.PageBase
             CompanyManager.UpdateUser(Company.CompanyId, oldUser.UserId, depositId, representantId, ucProfile.ProfileEntity, SaveUser());
 
             RefreshCredentials();
-            Response.Redirect("User.aspx?UserId=" + oldUser.UserId.EncryptToHex());
+            Response.Redirect("User.aspx?UserId=" + oldUser.UserId);
             return;
         }
 
@@ -222,7 +222,7 @@ newUser, ucProfile.ProfileEntity);
                 break;
             case InsertCompanyStatus.Success:
 
-                Response.Redirect("User.aspx?UserId=" + newUser.UserId.EncryptToHex());
+                Response.Redirect("User.aspx?UserId=" + newUser.UserId);
                 break;
         }
         RefreshCredentials();

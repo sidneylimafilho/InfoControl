@@ -29,7 +29,7 @@ public partial class InfoControl_Host_ScheduleTask : Vivina.Erp.SystemFramework.
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!String.IsNullOrEmpty(Request["ScheduledTaskId"]))
-            scheduledTaskId = Convert.ToInt32(Request["ScheduledTaskId"].DecryptFromHex());
+            scheduledTaskId = Convert.ToInt32(Request["ScheduledTaskId"]);
 
         //txtLastRunStatus.Enabled = false;
 

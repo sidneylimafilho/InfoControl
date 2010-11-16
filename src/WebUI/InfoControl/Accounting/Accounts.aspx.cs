@@ -23,7 +23,7 @@ public partial class Accounting_Accounts : Vivina.Erp.SystemFramework.PageBase
             //
             // Cancel a nested event fires
             //
-            e.Row.Attributes["onclick"] = "location='Account.aspx?AccountId=" + e.Row.DataItem.GetPropertyValue("AccountId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Account.aspx?AccountId=" + e.Row.DataItem.GetPropertyValue("AccountId") + "';";
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Clear();
 
         }

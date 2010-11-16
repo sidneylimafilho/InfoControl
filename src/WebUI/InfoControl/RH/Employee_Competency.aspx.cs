@@ -17,7 +17,7 @@ namespace Vivina.Erp.WebUI.RH
         private Int32 employeeId;
         protected void Page_Load(object sender, EventArgs e)
         {
-            employeeId = Convert.ToInt32(Request["eid"].DecryptFromHex());
+            employeeId = Convert.ToInt32(Request["eid"]);
             if (!IsPostBack)
                 grdCompetency.DataBind();
         }

@@ -29,7 +29,7 @@ namespace Vivina.Erp.WebUI.Administration
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                e.Row.Attributes["onclick"] = "location='Deposit.aspx?DepositId=" + Convert.ToString(grdDeposits.DataKeys[e.Row.RowIndex]["DepositId"]).EncryptToHex() + "';";
+                e.Row.Attributes["onclick"] = "location='Deposit.aspx?DepositId=" + Convert.ToString(grdDeposits.DataKeys[e.Row.RowIndex]["DepositId"]) + "';";
 
 
             }

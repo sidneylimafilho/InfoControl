@@ -61,7 +61,7 @@ public partial class Users_Login : InfoControl.Web.UI.DataUserControl
         try
         {
             MembershipManager manager = new MembershipManager(this);
-            InfoControl.Web.Security.DataEntities.User user = manager.GetUser(Convert.ToInt32(ActivationCode.Text.DecryptFromHex()));
+            InfoControl.Web.Security.DataEntities.User user = manager.GetUser(Convert.ToInt32(ActivationCode.Text));
             if (user != null)
             {
                 manager.UnlockUser(user.UserName);

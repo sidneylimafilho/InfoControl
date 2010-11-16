@@ -24,7 +24,7 @@ public partial class Accouting_Invoice : Vivina.Erp.SystemFramework.PageBase
             pnlInvoiceSource.Visible = false;
 
             if (Request["InvoiceId"] != null)
-                Context.Items["InvoiceId"] = Request["InvoiceId"].DecryptFromHex();
+                Context.Items["InvoiceId"] = Request["InvoiceId"];
 
             if (Context.Items["InvoiceId"] != null)
                 Page.ViewState["InvoiceId"] = Context.Items["InvoiceId"];
@@ -106,13 +106,13 @@ public partial class Accouting_Invoice : Vivina.Erp.SystemFramework.PageBase
         {
             lblSale.Visible = true;
             lnkSale.Text = sale.SaleId.ToString();
-            lnkSale.NavigateUrl = "../POS/SaleViewer.aspx?SaleId=" + sale.SaleId.EncryptToHex();
+            lnkSale.NavigateUrl = "../POS/SaleViewer.aspx?SaleId=" + sale.SaleId;
 
             if (sale.ReceiptId.HasValue)
             {
                 lblReceipt.Visible = true;
                 lnkReceipt.Text = sale.Receipt.ReceiptNumber.ToString();
-                lnkReceipt.NavigateUrl = "../Accounting/Receipt.aspx?ReceiptId=" + Convert.ToString(sale.ReceiptId).EncryptToHex();
+                lnkReceipt.NavigateUrl = "../Accounting/Receipt.aspx?ReceiptId=" + Convert.ToString(sale.ReceiptId);
             }
             pnlInvoiceSource.Visible = true;
         }
@@ -122,7 +122,7 @@ public partial class Accouting_Invoice : Vivina.Erp.SystemFramework.PageBase
         {
             lblContract.Visible = true;
             lnkContract.Text = String.IsNullOrEmpty(contract.ContractNumber) ? Convert.ToString(contract.ContractId) : contract.ContractNumber;
-            lnkContract.NavigateUrl = "Contract.aspx?ContractId=" + Convert.ToString(contract.ContractId).EncryptToHex();
+            lnkContract.NavigateUrl = "Contract.aspx?ContractId=" + Convert.ToString(contract.ContractId);
             pnlInvoiceSource.Visible = true;
         }
 

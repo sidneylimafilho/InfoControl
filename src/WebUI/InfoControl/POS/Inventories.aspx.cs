@@ -58,7 +58,7 @@ public partial class Company_Inventory : Vivina.Erp.SystemFramework.PageBase
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             if (cboDeposit.SelectedValue != "Matrix" && cboDeposit.SelectedValue != "Company")
-                e.Row.Attributes["onclick"] = "location='Inventory.aspx?ProductId=" + grdProducts.DataKeys[e.Row.RowIndex]["ProductId"].EncryptToHex() + "&DepositId=" + cboDeposit.SelectedValue.EncryptToHex() + "&InventoryId=" + grdProducts.DataKeys[e.Row.RowIndex]["InventoryId"].EncryptToHex() + "';";
+                e.Row.Attributes["onclick"] = "location='Inventory.aspx?ProductId=" + grdProducts.DataKeys[e.Row.RowIndex]["ProductId"] + "&DepositId=" + cboDeposit.SelectedValue + "&InventoryId=" + grdProducts.DataKeys[e.Row.RowIndex]["InventoryId"] + "';";
         }
     }
     protected void btnSearch_Click(object sender, EventArgs e)

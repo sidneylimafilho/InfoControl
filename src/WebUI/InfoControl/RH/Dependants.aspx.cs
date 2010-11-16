@@ -14,7 +14,7 @@ namespace Vivina.Erp.WebUI.RH
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty((Request["eid"])))
-                employeeId = Convert.ToInt32(Request["eid"].DecryptFromHex()); 
+                employeeId = Convert.ToInt32(Request["eid"]); 
         }
 
         protected void odsDependents_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

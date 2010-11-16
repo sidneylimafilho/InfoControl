@@ -209,7 +209,7 @@ namespace Vivina.Erp.WebUI
         //    using (var manager = new SearchManager(null))
         //    {
         //        IQueryable<Recognizable> billList = from bill in manager.GetBills(Company.CompanyId, text, "", 0, 12)
-        //                                            select new Recognizable(bill.BillId.EncryptToHex(), bill.Description);
+        //                                            select new Recognizable(bill.BillId, bill.Description);
 
         //        return ClientResponse(() => billList.ToArray());
         //    }
@@ -225,7 +225,7 @@ namespace Vivina.Erp.WebUI
         //    using (var manager = new SearchManager(null))
         //    {
         //        IQueryable<Recognizable> invoiceList = from invoice in manager.GetInvoices(Company.CompanyId, text, "", 0, 12)
-        //                                               select new Recognizable(invoice.InvoiceId.EncryptToHex(), invoice.Description);
+        //                                               select new Recognizable(invoice.InvoiceId, invoice.Description);
 
         //        return ClientResponse(() => invoiceList.ToArray());
         //    }

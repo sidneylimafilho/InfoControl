@@ -33,7 +33,7 @@ public partial class Company_Transporter : Vivina.Erp.SystemFramework.PageBase
             //retrieve the transporterId from modalPopup
             //
             if (Request["TransporterId"] != null)
-                Context.Items["TransporterId"] = Request["TransporterId"].DecryptFromHex();
+                Context.Items["TransporterId"] = Request["TransporterId"];
 
             if (Context.Items["TransporterId"] != null)
                 Page.ViewState["TransporterId"] = Context.Items["TransporterId"];

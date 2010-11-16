@@ -16,7 +16,7 @@ public partial class AccessControl_EventInsertion : Vivina.Erp.SystemFramework.P
 
             if (!String.IsNullOrEmpty(Request["EventId"]))
             {
-                Page.ViewState["EventId"] = Request["EventId"].DecryptFromHex();
+                Page.ViewState["EventId"] = Request["EventId"];
                 loadEvent(Convert.ToInt32(Page.ViewState["EventId"]));
             }
         }

@@ -23,7 +23,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
 
-                e.Row.Attributes["onclick"] = "location='Statement.aspx?StatementId=" + grdStatements.DataKeys[e.Row.RowIndex]["StatementId"].EncryptToHex() + "';";
+                e.Row.Attributes["onclick"] = "location='Statement.aspx?StatementId=" + grdStatements.DataKeys[e.Row.RowIndex]["StatementId"] + "';";
 
             }
         }

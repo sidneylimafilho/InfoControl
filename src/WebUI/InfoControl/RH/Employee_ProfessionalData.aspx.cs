@@ -31,7 +31,7 @@ namespace Vivina.Erp.WebUI.RH
             pnlAdditionalFields.Visible = dtlAdditionalInformation.Items.Count > 0;
 
             if (!String.IsNullOrEmpty(Request["eid"]))
-                employeeId = Convert.ToInt32(Request["eid"].DecryptFromHex());
+                employeeId = Convert.ToInt32(Request["eid"]);
 
             if (!IsPostBack && employeeId != 0)
                 ShowEmployee();
@@ -318,7 +318,7 @@ namespace Vivina.Erp.WebUI.RH
         protected void CancelButton_Click(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(Request["eid"]))
-                employeeId = Convert.ToInt32(Request["eid"].DecryptFromHex());
+                employeeId = Convert.ToInt32(Request["eid"]);
 
             if (employeeId != 0)
                 Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "parent.location='Employees.aspx';", true);

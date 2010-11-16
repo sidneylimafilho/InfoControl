@@ -47,7 +47,7 @@ public partial class InfoControl_POS_PurchaseOrders : Vivina.Erp.SystemFramework
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Attributes["onclick"] = "location='PurchaseOrder.aspx?pid=" +
-                                          e.Row.DataItem.GetPropertyValue("PurchaseOrderId").EncryptToHex() + "';";
+                                          e.Row.DataItem.GetPropertyValue("PurchaseOrderId") + "';";
         }
     }
 

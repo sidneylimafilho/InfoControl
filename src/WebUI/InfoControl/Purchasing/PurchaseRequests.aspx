@@ -67,11 +67,11 @@
                                                      Eval("CityId") + "|" +
                                                      Eval("PurchaseRequestItemId") + "|" +
                                                      Eval("PurchaseRequestId") + "|" +
-                                                     Eval("Name").EncryptToHex() %>' />&nbsp;&nbsp;
+                                                     Eval("Name") %>' />&nbsp;&nbsp;
                                     <%# (Eval("PurchaseOrderCode") != null) ?"-->":"" %>
                                     <%#Eval("Name") %>
                                     <span style="color:red">
-                                       <a href='PurchaseOrder.aspx?pid=<%#Convert.ToString(Eval("PurchaseOrderId")).EncryptToHex() %>'>
+                                       <a href='PurchaseOrder.aspx?pid=<%#Convert.ToString(Eval("PurchaseOrderId")) %>'>
                                         <%# String.IsNullOrEmpty(Convert.ToString(Eval("PurchaseOrderCode")))? "" : "&nbsp;&nbsp;&nbsp;&nbsp;&raquo;&nbsp;&nbsp;&nbsp;&nbsp;" + Convert.ToString(Eval("PurchaseOrderCode")) + "&nbsp;&nbsp;&nbsp;&nbsp;&raquo;&nbsp;&nbsp;&nbsp;&nbsp;" + Convert.ToString(Eval("PurchaseOrderStatus"))%></a></span>
                                 </ItemTemplate>
                             </telerik:GridTemplateColumn>

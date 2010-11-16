@@ -45,7 +45,7 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Código" SortExpression="RepresentantId">
                             <ItemTemplate>
-                                <%# Eval("RepresentantId").EncryptToHex() %>&nbsp;
+                                <%# Eval("RepresentantId") %>&nbsp;
                             </ItemTemplate>
                             <ItemStyle Width="1%" />
                         </asp:TemplateField>

@@ -43,7 +43,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
 
             if (!String.IsNullOrEmpty(Request["PageId"]))
             {
-                Page.ViewState["PageId"] = Request["PageId"].DecryptFromHex();
+                Page.ViewState["PageId"] = Request["PageId"];
                 ShowPage();
             }
         }

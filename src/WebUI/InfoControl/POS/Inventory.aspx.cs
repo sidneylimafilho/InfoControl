@@ -25,8 +25,8 @@ public partial class POS_Company_Inventory : Vivina.Erp.SystemFramework.PageBase
     {
         if (!IsPostBack && Request["ProductId"] != null)
         {
-            Page.ViewState["ProductId"] = Request["ProductId"].DecryptFromHex();
-            Page.ViewState["DepositId"] = Request["DepositId"].DecryptFromHex();
+            Page.ViewState["ProductId"] = Request["ProductId"];
+            Page.ViewState["DepositId"] = Request["DepositId"];
         }
     }
 }

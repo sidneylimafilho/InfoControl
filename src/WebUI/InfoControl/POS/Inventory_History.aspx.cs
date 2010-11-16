@@ -21,8 +21,8 @@ namespace Vivina.Erp.WebUI.POS
         {
             if (!String.IsNullOrEmpty(Request["ProductId"]))
             {
-                Session["ProductId"] = Request["ProductId"].DecryptFromHex();
-                Session["DepositId"] = Request["DepositId"].DecryptFromHex();
+                Session["ProductId"] = Request["ProductId"];
+                Session["DepositId"] = Request["DepositId"];
             }
         }
     }

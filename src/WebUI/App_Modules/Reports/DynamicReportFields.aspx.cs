@@ -21,7 +21,7 @@ namespace Vivina.Erp.WebUI.App_Reports
                 grdReportColumnsSchema.Columns[2].HeaderText = "<a href='DynamicReportField.aspx?ReportTablesSchemaId=" + Request["ReportTablesSchemaId"] + "'> <div class='insert' title='inserir'>    </div> </a> ";
 
             if (!String.IsNullOrEmpty(Request["ReportTablesSchemaId"]))
-                reportTablesSchemaId = Convert.ToInt32(Request["ReportTablesSchemaId"].DecryptFromHex());
+                reportTablesSchemaId = Convert.ToInt32(Request["ReportTablesSchemaId"]);
 
         }
 
@@ -36,7 +36,7 @@ namespace Vivina.Erp.WebUI.App_Reports
             {
                 e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
 
-                e.Row.Attributes["onclick"] = "location='DynamicReportField.aspx?ReportColumnsSchemaId=" + Convert.ToString(grdReportColumnsSchema.DataKeys[e.Row.RowIndex]["ReportColumnsSchemaId"].EncryptToHex()) + "&ReportTablesSchemaId=" + Convert.ToString(grdReportColumnsSchema.DataKeys[e.Row.RowIndex]["ReportTablesSchemaId"].EncryptToHex()) + "';";
+                e.Row.Attributes["onclick"] = "location='DynamicReportField.aspx?ReportColumnsSchemaId=" + Convert.ToString(grdReportColumnsSchema.DataKeys[e.Row.RowIndex]["ReportColumnsSchemaId"]) + "&ReportTablesSchemaId=" + Convert.ToString(grdReportColumnsSchema.DataKeys[e.Row.RowIndex]["ReportTablesSchemaId"]) + "';";
 
             }
         }

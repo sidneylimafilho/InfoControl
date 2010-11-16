@@ -25,7 +25,7 @@ public partial class Host_Packages : Vivina.Erp.SystemFramework.PageBase
             //
             // Cancel a nested event fires
             //
-            e.Row.Attributes["onclick"] = "location='Package.aspx?PackageId=" + grdPackages.DataKeys[e.Row.RowIndex]["PackageId"].EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Package.aspx?PackageId=" + grdPackages.DataKeys[e.Row.RowIndex]["PackageId"] + "';";
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble == true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
 
 

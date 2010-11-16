@@ -10,7 +10,7 @@ public partial class Company_RH_Employee_History : Vivina.Erp.SystemFramework.Pa
     int employeeId;
     protected void Page_Load(object sender, EventArgs e)
     {
-        employeeId = Convert.ToInt32(Request["eid"].DecryptFromHex());
+        employeeId = Convert.ToInt32(Request["eid"]);
         grdEmployeeStatusHistory.DataBind();
     }
 

@@ -46,7 +46,7 @@ namespace Vivina.Erp.WebUI.Administration
         protected void grdBirthDayCustomers_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
-                e.Row.Attributes["onclick"] = "location='Customer.aspx?CustomerId=" + e.Row.DataItem.GetPropertyValue("CustomerId").EncryptToHex() + "' ;";
+                e.Row.Attributes["onclick"] = "location='Customer.aspx?CustomerId=" + e.Row.DataItem.GetPropertyValue("CustomerId") + "' ;";
 
         }
 

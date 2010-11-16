@@ -22,7 +22,7 @@ namespace Vivina.Erp.WebUI.Site
             if (String.IsNullOrEmpty(Request["CustomerId"]))
                 throw new ArgumentNullException("The customer don't selected or the user not is logged!");
 
-            Budget.Detach().CustomerId = Convert.ToInt32(Request["CustomerId"].DecryptFromHex());
+            Budget.Detach().CustomerId = Convert.ToInt32(Request["CustomerId"]);
             
             //customer = new CustomerManager(this).GetCustomer(customerId, Company.CompanyId);
         }
@@ -47,7 +47,7 @@ namespace Vivina.Erp.WebUI.Site
 
             if (!String.IsNullOrEmpty(Request["b"]))
             {
-                budget = new SaleManager(this).GetBudget(Convert.ToInt32(Request["b"].DecryptFromHex()),
+                budget = new SaleManager(this).GetBudget(Convert.ToInt32(Request["b"]),
                                                            Company.CompanyId);
                 sale.BudgetId = budget.BudgetId;
                 sale.Discount = Convert.ToDecimal(budget.Discount);
@@ -79,7 +79,7 @@ namespace Vivina.Erp.WebUI.Site
 
             if (!String.IsNullOrEmpty(Request["b"]))
                 budgetItemList =
-                    saleManager.GetBudgetItemByBudget(Convert.ToInt32(Request["b"].DecryptFromHex()),
+                    saleManager.GetBudgetItemByBudget(Convert.ToInt32(Request["b"]),
                                                         Company.CompanyId).ToList();
             else
                 budgetItemList = Session["basket"] as List<BudgetItem>;

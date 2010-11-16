@@ -27,7 +27,7 @@ namespace Vivina.Erp.WebUI.App_Reports
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(Request["ReportTablesSchemaId"]))
-                reportTablesSchemaId = Convert.ToInt32(Request["ReportTablesSchemaId"].DecryptFromHex());
+                reportTablesSchemaId = Convert.ToInt32(Request["ReportTablesSchemaId"]);
 
             if (!IsPostBack)
             {
@@ -58,12 +58,12 @@ namespace Vivina.Erp.WebUI.App_Reports
             else
             {
                 reportsManager.Insert(reportTablesSchema);
-                Response.Redirect("DynamicReport.aspx?ReportTablesSchemaId=" + reportTablesSchema.ReportTablesSchemaId.EncryptToHex());
+                Response.Redirect("DynamicReport.aspx?ReportTablesSchemaId=" + reportTablesSchema.ReportTablesSchemaId);
             }
 
 
             // Server.Transfer("dynamicReports.aspx");
-            // Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId.EncryptToHex() + "';", true);
+            // Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId + "';", true);
 
         }
 

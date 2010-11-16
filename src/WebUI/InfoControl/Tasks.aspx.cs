@@ -106,7 +106,7 @@ public partial class InfoControl_Project_Tasks : Vivina.Erp.SystemFramework.Page
     //    //
     //    var lnkTask = e.Node.FindControl("lnkTask") as HtmlAnchor;
     //    if (lnkTask != null)
-    //        lnkTask.HRef = "task.aspx?taskid=" + task.TaskId.EncryptToHex();
+    //        lnkTask.HRef = "task.aspx?taskid=" + task.TaskId;
 
     //    //
     //    // Date

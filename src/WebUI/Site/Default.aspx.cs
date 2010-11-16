@@ -88,7 +88,7 @@ namespace Vivina.Erp.WebUI.Site
 
                 int possibleInt = 0;
                 if (!Int32.TryParse(pageId[0], out possibleInt))
-                    possibleInt = Convert.ToInt32(pageId[0].DecryptFromHex());
+                    possibleInt = Convert.ToInt32(pageId[0]);
 
                 _page = manager.GetWebPage(Company.CompanyId, possibleInt);
 

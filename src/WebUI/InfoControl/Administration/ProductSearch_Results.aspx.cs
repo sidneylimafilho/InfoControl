@@ -37,7 +37,7 @@ public partial class Company_ProductSearch_Results : Vivina.Erp.SystemFramework.
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='Product.aspx?ProductId=" + e.Row.DataItem.GetPropertyValue("ProductId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Product.aspx?ProductId=" + e.Row.DataItem.GetPropertyValue("ProductId") + "';";
             if (e.Row.Cells[4].Text.ToLower() == "true")
             {
                 e.Row.Cells[4].Text = "Sim";

@@ -44,7 +44,7 @@ namespace Vivina.Erp.WebUI.Host
         {
             planManager = new PlanManager(this);
 
-            originalPlan = planManager.GetPlan(Convert.ToInt32(Request["PlanId"].DecryptFromHex()));
+            originalPlan = planManager.GetPlan(Convert.ToInt32(Request["PlanId"]));
 
 
             txtName.Text = originalPlan.Name;
@@ -69,7 +69,7 @@ namespace Vivina.Erp.WebUI.Host
 
             plan = new DataClasses.Plan();
             if(!String.IsNullOrEmpty(Request["PlanId"]))
-               plan =  planManager.GetPlan(Convert.ToInt32(Request["PlanId"].DecryptFromHex()));
+               plan =  planManager.GetPlan(Convert.ToInt32(Request["PlanId"]));
 
             plan.Name = txtName.Text;
             plan.AvailableStartDate = ucDateTimeInterval.DateInterval.BeginDate;

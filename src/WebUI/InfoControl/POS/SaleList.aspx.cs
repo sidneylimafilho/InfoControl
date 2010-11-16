@@ -93,14 +93,14 @@ public partial class Company_POS_SaleList : Vivina.Erp.SystemFramework.PageBase
         }
 
         ///retrieve the SaleId and show the sale related with this saleId
-        Response.Redirect("SaleViewer.aspx?SaleId=" + sale.SaleId.EncryptToHex());
+        Response.Redirect("SaleViewer.aspx?SaleId=" + sale.SaleId);
 
     }
 
     protected void grdSalesList_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
-            e.Row.Attributes["onclick"] = "location='SaleViewer.aspx?SaleId=" + grdSalesList.DataKeys[e.Row.RowIndex]["SaleId"].EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='SaleViewer.aspx?SaleId=" + grdSalesList.DataKeys[e.Row.RowIndex]["SaleId"] + "';";
     }
 
     protected void SelCustomer_SelectedCustomer(object sender, SelectedCustomerEventArgs e)

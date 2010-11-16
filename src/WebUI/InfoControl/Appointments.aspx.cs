@@ -23,7 +23,7 @@ public partial class Company_Administration_Agenda : Vivina.Erp.SystemFramework.
         employee = new Employee();
 
         if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
-            serviceOrderId = Convert.ToInt32(Request["ServiceOrderId"].DecryptFromHex());
+            serviceOrderId = Convert.ToInt32(Request["ServiceOrderId"]);
 
         if (!IsPostBack)
         {
@@ -67,7 +67,7 @@ public partial class Company_Administration_Agenda : Vivina.Erp.SystemFramework.
         if (e.Container.Mode == SchedulerFormMode.AdvancedEdit)
         {
             var taskManager = new TaskManager(this);
-            string redirect = "Task.aspx?TaskId=" + taskManager.GetTask((int)e.Appointment.ID).TaskId.EncryptToHex();
+            string redirect = "Task.aspx?TaskId=" + taskManager.GetTask((int)e.Appointment.ID).TaskId;
 
             Response.Redirect(redirect);
         }

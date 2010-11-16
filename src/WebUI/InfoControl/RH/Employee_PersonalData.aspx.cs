@@ -26,7 +26,7 @@ namespace Vivina.Erp.WebUI.RH
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(Request["eid"]))
-                employeeId = Convert.ToInt32(Request["eid"].DecryptFromHex());
+                employeeId = Convert.ToInt32(Request["eid"]);
             else
                 litTitle.Visible = true;
 
@@ -55,9 +55,9 @@ namespace Vivina.Erp.WebUI.RH
             }
 
             if (employeeId != 0)
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "parent.location='Employee.aspx?EmployeeId=" + employee.EmployeeId.EncryptToHex() + "';", true);
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "parent.location='Employee.aspx?EmployeeId=" + employee.EmployeeId + "';", true);
             else
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Employee.aspx?EmployeeId=" + employee.EmployeeId.EncryptToHex() + "';", true);
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Employee.aspx?EmployeeId=" + employee.EmployeeId + "';", true);
         }
 
         protected void CancelButton_Click(object sender, EventArgs e)

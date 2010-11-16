@@ -14,7 +14,7 @@ namespace Vivina.Erp.WebUI.Administration
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(Request["pid"]))
-                productId = Convert.ToInt32(Request["pid"].DecryptFromHex());
+                productId = Convert.ToInt32(Request["pid"]);
         }
 
         protected void odsProductManufactures_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

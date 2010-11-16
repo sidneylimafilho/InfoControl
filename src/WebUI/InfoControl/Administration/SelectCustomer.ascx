@@ -26,7 +26,7 @@
     <table border="0">
         <tr>
             <td>
-                <b><a plugin="lightbox" href="Administration/Customer.aspx?CustomerId=<%=Customer.CustomerId.EncryptToHex() %>&lightbox[iframe]=true">
+                <b><a plugin="lightbox" href="Administration/Customer.aspx?CustomerId=<%=Customer.CustomerId %>&lightbox[iframe]=true">
                     <%=Customer.Name  %></a></b>
                 <br />
                 <asp:Label ID="lblCNPJ" runat="server" Text=""></asp:Label><br />

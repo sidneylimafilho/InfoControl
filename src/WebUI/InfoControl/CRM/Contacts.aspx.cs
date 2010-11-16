@@ -46,7 +46,7 @@ public partial class InfoControl_CRM_Contacts : Vivina.Erp.SystemFramework.PageB
     protected void grdContacts_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
-            e.Row.Attributes["onclick"] = "location='../Administration/Contact.aspx?ContactId=" + e.Row.DataItem.GetPropertyValue("ContactId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='../Administration/Contact.aspx?ContactId=" + e.Row.DataItem.GetPropertyValue("ContactId") + "';";
     }
 
     protected void odsOwner_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

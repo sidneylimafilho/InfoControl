@@ -51,7 +51,7 @@ public partial class ListUsers : Vivina.Erp.SystemFramework.PageBase
                 e.Row.Cells[e.Row.Cells.Count - 1].Attributes["style"] = "display:none";
 
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
-            e.Row.Attributes["onclick"] = "location='User.aspx?UserId=" + e.Row.DataItem.GetPropertyValue("UserId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='User.aspx?UserId=" + e.Row.DataItem.GetPropertyValue("UserId") + "';";
         }
     }
 

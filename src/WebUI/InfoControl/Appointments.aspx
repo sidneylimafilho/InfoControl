@@ -84,7 +84,7 @@
                     <AppointmentTemplate>
                         <div class="<%#Eval("Subject").ToString().StartsWith("OS")?"serviceorder":""%> 
                         <%#Convert.ToDateTime(Eval("End")) < DateTime.Now?"delayed":""%>">
-                            <a href='Task.aspx?TaskId=<%#Eval("ID").EncryptToHex() %>&app=true'>
+                            <a href='Task.aspx?TaskId=<%#Eval("ID") %>&app=true'>
                                 <%#Eval("Subject")%>
                             </a>
                         </div>

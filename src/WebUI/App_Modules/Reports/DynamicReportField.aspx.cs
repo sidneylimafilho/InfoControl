@@ -20,10 +20,10 @@ namespace Vivina.Erp.WebUI.App_Reports
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            reportTablesSchemaId = Convert.ToInt32(Request["ReportTablesSchemaId"].DecryptFromHex());
+            reportTablesSchemaId = Convert.ToInt32(Request["ReportTablesSchemaId"]);
 
             if (!String.IsNullOrEmpty(Request["ReportColumnsSchemaId"]))
-                reportColumnsSchemaId = Convert.ToInt32(Request["ReportColumnsSchemaId"].DecryptFromHex());
+                reportColumnsSchemaId = Convert.ToInt32(Request["ReportColumnsSchemaId"]);
 
             if (!IsPostBack)
                 ShowReportColumnsSchema();

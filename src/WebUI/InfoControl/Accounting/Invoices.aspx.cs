@@ -90,7 +90,7 @@ public partial class Accounting_Invoices : Vivina.Erp.SystemFramework.PageBase
     protected void grdInvoices_ItemDataBound(object sender, GridItemEventArgs e)
     {
         if (e.Item.ItemType == GridItemType.Item || e.Item.ItemType == GridItemType.AlternatingItem)
-            e.Item.Attributes["onclick"] = "location='Invoice.aspx?InvoiceId=" + e.Item.DataItem.GetPropertyValue("InvoiceId").EncryptToHex() + "';";
+            e.Item.Attributes["onclick"] = "location='Invoice.aspx?InvoiceId=" + e.Item.DataItem.GetPropertyValue("InvoiceId") + "';";
 
         if (e.Item.ItemType == GridItemType.GroupFooter)
             e.Item.Cells[e.Item.Cells.Count - 1].Visible = false;

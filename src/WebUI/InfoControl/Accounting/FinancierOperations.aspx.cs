@@ -21,7 +21,7 @@ public partial class InfoControl_Accounting_FinancierOperations : Vivina.Erp.Sys
     protected void grdFinancierOperations_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
     {
 
-        Response.Redirect("FinancierOperation.aspx?FinancierOperationId=" + Convert.ToString(grdFinancierOperations.DataKeys[e.NewSelectedIndex]["FinancierOperationId"]).EncryptToHex());
+        Response.Redirect("FinancierOperation.aspx?FinancierOperationId=" + Convert.ToString(grdFinancierOperations.DataKeys[e.NewSelectedIndex]["FinancierOperationId"]));
     }
 
     [WebMethod]

@@ -56,7 +56,7 @@ public partial class Company_POS_PurchaseOrder : Vivina.Erp.SystemFramework.Page
     {
         Wizard = wzdPurchaseOrder;
         if (Request["pid"] != null)
-            purchaseOrderId = Convert.ToInt32(Request["pid"].DecryptFromHex());
+            purchaseOrderId = Convert.ToInt32(Request["pid"]);
 
         if (!IsPostBack)
         {

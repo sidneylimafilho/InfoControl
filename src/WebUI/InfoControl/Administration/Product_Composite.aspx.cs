@@ -12,7 +12,7 @@ public partial class Company_Products_Composite : Vivina.Erp.SystemFramework.Pag
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        productId = Convert.ToInt32(Request["pid"].DecryptFromHex());
+        productId = Convert.ToInt32(Request["pid"]);
     }
 
     protected void odsComposite_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)

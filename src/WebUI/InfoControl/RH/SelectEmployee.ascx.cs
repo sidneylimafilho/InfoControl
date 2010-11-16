@@ -116,7 +116,7 @@ public partial class App_Shared_SelectEmployee : Vivina.Erp.SystemFramework.User
             lblEmployeePhone.Text = "Tel: " + employee.Profile.Phone.Replace("(__)____-____", "");
             lblCPF.Text = employee.Profile.CPF;
 
-            lnkEmployeeName.OnClientClick = "top.$.lightbox('RH/Employee.aspx?EmployeeId=" + employee.EmployeeId.EncryptToHex() + "&lightbox[iframe]=true');return;";
+            lnkEmployeeName.OnClientClick = "top.$.lightbox('RH/Employee.aspx?EmployeeId=" + employee.EmployeeId + "&lightbox[iframe]=true');return;";
             pnlEmployee.Visible = true;
         }
 

@@ -24,7 +24,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
             {
                 if (!String.IsNullOrEmpty(Request["StatementId"]))
                 {
-                    Page.ViewState["StatementId"] = Request["StatementId"].DecryptFromHex();
+                    Page.ViewState["StatementId"] = Request["StatementId"];
 
                     var companyManager = new CompanyManager(this);
                     var statement = companyManager.GetStatement(Convert.ToInt32(Page.ViewState["StatementId"]));

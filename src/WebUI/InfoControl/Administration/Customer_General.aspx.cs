@@ -35,7 +35,7 @@ public partial class Company_Customer_General : Vivina.Erp.SystemFramework.PageB
         lblMessage.Text = String.Empty;
 
         if (!String.IsNullOrEmpty(Request["CustomerId"]))
-            Page.ViewState["CustomerId"] = Request["CustomerId"].DecryptFromHex();
+            Page.ViewState["CustomerId"] = Request["CustomerId"];
 
         //
         // Update
@@ -252,14 +252,14 @@ public partial class Company_Customer_General : Vivina.Erp.SystemFramework.PageB
 
 
                 if (status == MembershipCreateStatus.Success)
-                    Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId.EncryptToHex() + "';", true);
+                    Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId + "';", true);
 
                 return;
             }
 
             customer.CreatedByUser = User.Identity.UserName;
             customerManager.Insert(customer);
-            Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId.EncryptToHex() + "';", true);
+            Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId + "';", true);
 
         } // Update
         else
@@ -330,7 +330,7 @@ public partial class Company_Customer_General : Vivina.Erp.SystemFramework.PageB
             // the register.
             //
             if (Page.ViewState["CustomerId"] == null)
-                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId.EncryptToHex() + "';", true);
+                Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "", "location='Customer.aspx?CustomerId=" + customer.CustomerId + "';", true);
         }
     }
 

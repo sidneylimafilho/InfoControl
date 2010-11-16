@@ -19,7 +19,7 @@ public partial class Accounting_Bill : Vivina.Erp.SystemFramework.PageBase
                 if (Request["BillId"] != null)
                 {
                     var financialManager = new FinancialManager(this);
-                    _bill = financialManager.GetBill(Convert.ToInt32(Request["BillId"].DecryptFromHex()), Company.CompanyId);
+                    _bill = financialManager.GetBill(Convert.ToInt32(Request["BillId"]), Company.CompanyId);
                 }
             return _bill ?? (_bill = new Bill());
         }
@@ -35,7 +35,7 @@ public partial class Accounting_Bill : Vivina.Erp.SystemFramework.PageBase
 
             if (Request["BillId"] != null)
             {
-                Page.ViewState["BillId"] = Request["BillId"].DecryptFromHex();
+                Page.ViewState["BillId"] = Request["BillId"];
 
                 showBill();
             }

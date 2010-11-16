@@ -20,7 +20,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Host
 
                 if (!String.IsNullOrEmpty(Request["CompanyId"]))
                 {
-                    Page.ViewState["CompanyId"] = Request["CompanyId"].DecryptFromHex();
+                    Page.ViewState["CompanyId"] = Request["CompanyId"];
                     ShowCompany();
                 }
 

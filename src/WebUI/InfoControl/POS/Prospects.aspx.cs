@@ -108,7 +108,7 @@ public partial class InfoControl_POS_Prospects : Vivina.Erp.SystemFramework.Page
         {
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
 
-            e.Row.Attributes["onclick"] = "location='ProspectBuilder.aspx?BudgetId=" + grdProspects.DataKeys[e.Row.RowIndex]["BudgetId"].EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='ProspectBuilder.aspx?BudgetId=" + grdProspects.DataKeys[e.Row.RowIndex]["BudgetId"] + "';";
 
         }
     }

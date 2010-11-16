@@ -32,7 +32,7 @@ public partial class App_Reports_DinamicReports : InfoControl.Web.UI.DataPage
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('" + Resources.Resource.RemovingRegisterMessage + "') == false) return false;");
-            e.Row.Attributes["onclick"] = "location='DynamicReport.aspx?ReportTablesSchemaId=" + Convert.ToInt32(grdDinamicReports.DataKeys[e.Row.RowIndex]["ReportTablesSchemaId"]).EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='DynamicReport.aspx?ReportTablesSchemaId=" + Convert.ToInt32(grdDinamicReports.DataKeys[e.Row.RowIndex]["ReportTablesSchemaId"]) + "';";
              
         }
     }

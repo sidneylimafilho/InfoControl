@@ -37,7 +37,7 @@ public partial class InfoControl_Host_ScheduleTasks : Vivina.Erp.SystemFramework
             // Cancel a nested event fires
             //
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
-            e.Row.Attributes["onclick"] = "location='ScheduleTask.aspx?ScheduledTaskId=" + e.Row.DataItem.GetPropertyValue("ScheduledTaskId").EncryptToHex() + "' ;";
+            e.Row.Attributes["onclick"] = "location='ScheduleTask.aspx?ScheduledTaskId=" + e.Row.DataItem.GetPropertyValue("ScheduledTaskId") + "' ;";
         }
     }
 

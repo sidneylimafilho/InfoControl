@@ -67,7 +67,7 @@ public partial class InfoControl_Task : Vivina.Erp.SystemFramework.PageBase
             //ucEndDate.DateTime = ucBeginDate.DateTime = DateTime.Today;
 
             if (!String.IsNullOrEmpty(Request["ServiceOrderId"]))
-                Page.ViewState["ServiceOrderId"] = Request["ServiceOrderId"].DecryptFromHex();
+                Page.ViewState["ServiceOrderId"] = Request["ServiceOrderId"];
 
             // In case of task has been generated from appointment
             if (!String.IsNullOrEmpty(Request["StartDate"]) && !String.IsNullOrEmpty(Request["EndDate"]))

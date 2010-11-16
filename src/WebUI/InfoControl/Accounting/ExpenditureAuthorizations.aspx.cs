@@ -42,7 +42,7 @@ namespace Vivina.Erp.WebUI.InfoControl.Accounting
         {
             if (e.Row.RowType == DataControlRowType.DataRow)
             {
-                e.Row.Attributes["onclick"] = "location='ExpenditureAuthorization.aspx?ExpenditureAuthorizationId=" + e.Row.DataItem.GetPropertyValue("ExpenditureAuthorizationId").EncryptToHex() + "';";
+                e.Row.Attributes["onclick"] = "location='ExpenditureAuthorization.aspx?ExpenditureAuthorizationId=" + e.Row.DataItem.GetPropertyValue("ExpenditureAuthorizationId") + "';";
 
                 e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble == true;javascript:if(confirm('Deseja realmente excluir esse item ?') == false) return false;");
 

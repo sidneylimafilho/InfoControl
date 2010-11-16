@@ -24,9 +24,9 @@ namespace Vivina.Erp.WebUI.POS
         {
             if (!String.IsNullOrEmpty(Request["ProductId"]))
             {
-                productId = Convert.ToInt32(Request["ProductId"].DecryptFromHex());
-                inventoryId = Convert.ToInt32(Request["InventoryId"].DecryptFromHex());
-                depositId = Convert.ToInt32(Request["DepositId"].DecryptFromHex());
+                productId = Convert.ToInt32(Request["ProductId"]);
+                inventoryId = Convert.ToInt32(Request["InventoryId"]);
+                depositId = Convert.ToInt32(Request["DepositId"]);
             }
         }
 

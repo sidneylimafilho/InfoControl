@@ -36,7 +36,7 @@ public partial class Company_Deposit : Vivina.Erp.SystemFramework.PageBase
         {
             if (!String.IsNullOrEmpty(Request["DepositId"]))
             {
-                Page.ViewState["DepositId"] = Request["DepositId"].DecryptFromHex();
+                Page.ViewState["DepositId"] = Request["DepositId"];
                 ShowDeposit();
             }
         }

@@ -19,7 +19,7 @@ namespace Vivina.Erp.WebUI.Site
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!String.IsNullOrEmpty(Request["b"]))
-                Budget.BudgetId = Convert.ToInt32(Request["b"].DecryptFromHex());
+                Budget.BudgetId = Convert.ToInt32(Request["b"]);
 
             //
             // Caso já exista um carrinho carregado na memória, limpa para começar uma nova compra.
@@ -186,7 +186,7 @@ namespace Vivina.Erp.WebUI.Site
                 nextUrl = "~/site/Checkout_Identification.aspx?";
 
                 if (Budget.BudgetId > 0 && Budget.CustomerId.HasValue)
-                    nextUrl = "~/site/Checkout_Payment.aspx?customerId=" + Budget.CustomerId.EncryptToHex();
+                    nextUrl = "~/site/Checkout_Payment.aspx?customerId=" + Budget.CustomerId;
 
                 //                FormsAuthentication.Encrypt(new FormsAuthenticationTicket("Budget", true, Int32.MaxValue));
             }

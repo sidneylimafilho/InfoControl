@@ -23,7 +23,7 @@ public partial class Site_PageCategoriesControl : Vivina.Erp.SystemFramework.Use
         get { return Convert.ToString(ViewState["SubjectId"]); }
         set
         {
-            ViewState["SubjectId"] = value.DecryptFromHex();
+            ViewState["SubjectId"] = value;
 
             WebPage = Manager.GetWebPage(Page.Company.CompanyId, Convert.ToInt32(ViewState["SubjectId"]));
         }

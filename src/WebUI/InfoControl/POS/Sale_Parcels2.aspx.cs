@@ -296,7 +296,7 @@ namespace Vivina.Erp.WebUI.POS
                         this.GetType(),
                         "CloseModal",
                         "top.$.modal.Hide();" +
-                        "top.content.location.href='../Accounting/Receipt.aspx?SaleId=" + sale.SaleId.EncryptToHex() + "';",
+                        "top.content.location.href='../Accounting/Receipt.aspx?SaleId=" + sale.SaleId + "';",
                         true);
 
             }

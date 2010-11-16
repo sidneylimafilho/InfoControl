@@ -71,7 +71,7 @@ public partial class Company_POS_ProspectBuilder : Vivina.Erp.SystemFramework.Pa
             BudgetItemList = null;
 
             if (!String.IsNullOrEmpty(Request["BudgetId"]))
-                BudgetId = Convert.ToInt32(Request["BudgetId"].DecryptFromHex());
+                BudgetId = Convert.ToInt32(Request["BudgetId"]);
 
             cboVendor.DataSource = new HumanResourcesManager(this).GetSalesPerson(Company.CompanyId);
             cboVendor.DataBind();

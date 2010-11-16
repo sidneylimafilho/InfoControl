@@ -25,7 +25,7 @@ public partial class InfoControl_CRM_CustomerFollowup : Vivina.Erp.SystemFramewo
 
             if (!String.IsNullOrEmpty(Request["CustomerFollowupId"]))
             {
-                Page.ViewState["CustomerFollowupId"] = Convert.ToInt32(Request["CustomerFollowupId"].DecryptFromHex());
+                Page.ViewState["CustomerFollowupId"] = Convert.ToInt32(Request["CustomerFollowupId"]);
                 ShowCustomerFollowup();
 
                 customerFollowUpId.Value = Convert.ToString(Page.ViewState["CustomerFollowupId"]);

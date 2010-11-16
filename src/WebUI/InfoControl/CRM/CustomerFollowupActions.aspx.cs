@@ -34,7 +34,7 @@ public partial class InfoControl_CRM_CustomerFollowupActions : Vivina.Erp.System
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='CustomerFollowupAction.aspx?CustomerFollowupActionId=" + e.Row.DataItem.GetPropertyValue("CustomerFollowupActionId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='CustomerFollowupAction.aspx?CustomerFollowupActionId=" + e.Row.DataItem.GetPropertyValue("CustomerFollowupActionId") + "';";
 
             //
             // Cancel a nested event fires

@@ -52,7 +52,7 @@ public partial class Company_Administration_Contacts : Vivina.Erp.SystemFramewor
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='Contact.aspx?ContactId=" + grdContacts.DataKeys[e.Row.RowIndex]["ContactId"].EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Contact.aspx?ContactId=" + grdContacts.DataKeys[e.Row.RowIndex]["ContactId"] + "';";
 
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
         }
@@ -62,11 +62,11 @@ public partial class Company_Administration_Contacts : Vivina.Erp.SystemFramewor
     {
         if (!String.IsNullOrEmpty(Request["SupplierId"]))
         {
-            e.InputParameters["supplierId"] = Convert.ToInt32(Request["SupplierId"].DecryptFromHex());
+            e.InputParameters["supplierId"] = Convert.ToInt32(Request["SupplierId"]);
             return;
         }
 
-        e.InputParameters["customerId"] = Convert.ToInt32(Request["CustomerId"].DecryptFromHex());
+        e.InputParameters["customerId"] = Convert.ToInt32(Request["CustomerId"]);
 
     }
 
@@ -114,7 +114,7 @@ public partial class Company_Administration_Contacts : Vivina.Erp.SystemFramewor
     private bool ExitsCustomerContact()
     {
 
-        return ContactManager.GetCustomerContact(selContact.ContactId.Value, Convert.ToInt32(Request["CustomerId"].DecryptFromHex())) != null;
+        return ContactManager.GetCustomerContact(selContact.ContactId.Value, Convert.ToInt32(Request["CustomerId"])) != null;
 
     }
 
@@ -124,7 +124,7 @@ public partial class Company_Administration_Contacts : Vivina.Erp.SystemFramewor
     /// <returns></returns>
     private bool ExitsSupplierContact()
     {
-        return ContactManager.GetSupplierContact(selContact.ContactId.Value, Convert.ToInt32(Request["SupplierId"].DecryptFromHex())) != null;
+        return ContactManager.GetSupplierContact(selContact.ContactId.Value, Convert.ToInt32(Request["SupplierId"])) != null;
 
     }
 
@@ -136,7 +136,7 @@ public partial class Company_Administration_Contacts : Vivina.Erp.SystemFramewor
         var customerContact = new CustomerContact();
 
         customerContact.CompanyId = Company.CompanyId;
-        customerContact.CustomerId = Convert.ToInt32(Request["CustomerId"].DecryptFromHex());
+        customerContact.CustomerId = Convert.ToInt32(Request["CustomerId"]);
         customerContact.ContactId = Convert.ToInt32(selContact.ContactId);
         ContactManager.InsertCustomerContact(customerContact);
         grdContacts.DataBind();
@@ -150,7 +150,7 @@ public partial class Company_Administration_Contacts : Vivina.Erp.SystemFramewor
         var supplierContact = new SupplierContact();
 
         supplierContact.CompanyId = Company.CompanyId;
-        supplierContact.SupplierId = Convert.ToInt32(Request["SupplierId"].DecryptFromHex());
+        supplierContact.SupplierId = Convert.ToInt32(Request["SupplierId"]);
         supplierContact.ContactId = Convert.ToInt32(selContact.ContactId);
         ContactManager.InsertSupplierContact(supplierContact);
         grdContacts.DataBind();

@@ -21,7 +21,7 @@ public partial class InfoControl_Representant : Vivina.Erp.SystemFramework.PageB
         //retrieve the RepresentantId from Modal Popup
         if (!String.IsNullOrEmpty(Request["RepresentantId"]))
         {
-            Page.ViewState["RepresentantId"] = Request["RepresentantId"].DecryptFromHex();
+            Page.ViewState["RepresentantId"] = Request["RepresentantId"];
             lblRepresentantCode.Visible = true;
             lblRepresentantCode.Text = "Código do Representante: " + Request["RepresentantId"];
         }
@@ -164,7 +164,7 @@ public partial class InfoControl_Representant : Vivina.Erp.SystemFramework.PageB
         if (!String.IsNullOrEmpty(Request["RepresentantId"]))
             Response.Redirect("Representants.aspx");
         else
-            Response.Redirect("Representant.aspx?RepresentantId=" + representant.RepresentantId.EncryptToHex());
+            Response.Redirect("Representant.aspx?RepresentantId=" + representant.RepresentantId);
     }
 
     protected void Page_PreRender(object sender, EventArgs e)

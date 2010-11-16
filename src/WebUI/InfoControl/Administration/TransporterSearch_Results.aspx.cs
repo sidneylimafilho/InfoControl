@@ -36,7 +36,7 @@ public partial class InfoControl_Administration_TransporterSearch_Results : Vivi
     {
         if(e.Row.RowType == DataControlRowType.DataRow)
 
-        e.Row.Attributes["onclick"] = "location='Transporter.aspx?TransporterId=" + e.Row.DataItem.GetPropertyValue("TransporterId").EncryptToHex() + "';";
+        e.Row.Attributes["onclick"] = "location='Transporter.aspx?TransporterId=" + e.Row.DataItem.GetPropertyValue("TransporterId") + "';";
     }
    
 }

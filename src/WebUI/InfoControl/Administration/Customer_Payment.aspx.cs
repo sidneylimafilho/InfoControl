@@ -16,7 +16,7 @@ public partial class Company_Administration_Customer_Payment : Vivina.Erp.System
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!String.IsNullOrEmpty(Request["CustomerId"]))
-            Page.ViewState["CustomerId"] = Request["CustomerId"].DecryptFromHex();
+            Page.ViewState["CustomerId"] = Request["CustomerId"];
     }
     protected void odsCustomerPayment_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {

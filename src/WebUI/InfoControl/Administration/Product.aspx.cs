@@ -28,7 +28,7 @@ public partial class Company_Product : Vivina.Erp.SystemFramework.PageBase
         {
             if (!String.IsNullOrEmpty(Request["ProductId"]))
             {
-                Page.ViewState["ProductId"] = Convert.ToInt32(Request["ProductId"].DecryptFromHex());
+                Page.ViewState["ProductId"] = Convert.ToInt32(Request["ProductId"]);
             }
         }
     }

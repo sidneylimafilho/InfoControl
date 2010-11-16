@@ -18,7 +18,7 @@ public partial class Company_POS_SaleViewer : Vivina.Erp.SystemFramework.PageBas
         if (!IsPostBack)
             if (!String.IsNullOrEmpty(Request["SaleId"]))
             {
-                Page.ViewState["SaleId"] = Request["SaleId"].DecryptFromHex();
+                Page.ViewState["SaleId"] = Request["SaleId"];
                 showSale(Convert.ToInt32(Page.ViewState["SaleId"]));
                 HidrateCustomer(Convert.ToInt32(Page.ViewState["SaleId"]));
             }
@@ -49,7 +49,7 @@ public partial class Company_POS_SaleViewer : Vivina.Erp.SystemFramework.PageBas
         var sale = saleManager.GetSale(Company.CompanyId, saleId) ?? new Sale();
         lblSaleNumber.Text = saleId.ToString();
 
-        btnGenerateFiscalSale.OnClientClick = "location='../Accounting/Receipt.aspx?SaleId=" + Convert.ToString(sale.SaleId).EncryptToHex() + "'; return false;";
+        btnGenerateFiscalSale.OnClientClick = "location='../Accounting/Receipt.aspx?SaleId=" + Convert.ToString(sale.SaleId) + "'; return false;";
         btnGenerateFiscalSale.UseSubmitBehavior = false;
 
         if (sale.IsCanceled)
@@ -67,7 +67,7 @@ public partial class Company_POS_SaleViewer : Vivina.Erp.SystemFramework.PageBas
         if (sale.ReceiptId != null)
         {
             lnkReceipt.Text = sale.Receipt.ReceiptNumber.ToString();
-            lnkReceipt.NavigateUrl = "../Accounting/Receipt.aspx?ReceiptId=" + Convert.ToString(sale.ReceiptId).EncryptToHex();
+            lnkReceipt.NavigateUrl = "../Accounting/Receipt.aspx?ReceiptId=" + Convert.ToString(sale.ReceiptId);
 
             if (sale.Receipt.IssueDate.HasValue)
                 lblReceiptDate.Text = sale.Receipt.IssueDate.Value.ToShortDateString();

@@ -24,7 +24,7 @@ public partial class Host_Plans : Vivina.Erp.SystemFramework.PageBase
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='Plan.aspx?PlanId=" + grdPlans.DataKeys[e.Row.RowIndex]["PlanId"].EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Plan.aspx?PlanId=" + grdPlans.DataKeys[e.Row.RowIndex]["PlanId"] + "';";
 
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
         }

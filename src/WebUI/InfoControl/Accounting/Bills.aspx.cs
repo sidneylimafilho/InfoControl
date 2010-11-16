@@ -61,7 +61,7 @@ public partial class Accounting_Bills : Vivina.Erp.SystemFramework.PageBase
     protected void grdBill_ItemDataBound(object sender, GridItemEventArgs e)
     {
         if (e.Item.ItemType == GridItemType.Item || e.Item.ItemType == GridItemType.AlternatingItem)
-            e.Item.Attributes["onclick"] = "location='Bill.aspx?BillId=" + e.Item.DataItem.GetPropertyValue("BillId").EncryptToHex() + "';";
+            e.Item.Attributes["onclick"] = "location='Bill.aspx?BillId=" + e.Item.DataItem.GetPropertyValue("BillId") + "';";
 
         if (e.Item.ItemType == GridItemType.GroupFooter)
         {

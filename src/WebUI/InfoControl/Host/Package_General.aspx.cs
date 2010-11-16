@@ -42,7 +42,7 @@ namespace Vivina.Erp.WebUI.Host
         {
             packagesManager = new PackagesManager(this);
 
-            package = packagesManager.GetPackages(Convert.ToInt32(Request["PackageId"].DecryptFromHex()));
+            package = packagesManager.GetPackages(Convert.ToInt32(Request["PackageId"]));
 
             txtName.Text = package.Name;
             txtNumberItems.Text = Convert.ToString(package.NumberItems);
@@ -62,7 +62,7 @@ namespace Vivina.Erp.WebUI.Host
 
             if (!String.IsNullOrEmpty(Request["PackageId"]))
             {
-                originalPackage = packagesManager.GetPackages(Convert.ToInt32(Request["PackageId"].DecryptFromHex()));
+                originalPackage = packagesManager.GetPackages(Convert.ToInt32(Request["PackageId"]));
                 package.CopyPropertiesFrom(originalPackage);
             }
 
@@ -78,7 +78,7 @@ namespace Vivina.Erp.WebUI.Host
             if (String.IsNullOrEmpty(Request["PackageId"]))
             {
                 packagesManager.Insert(package);
-                Response.Redirect("Package.aspx?PackageId=" + package.PackageId.EncryptToHex());
+                Response.Redirect("Package.aspx?PackageId=" + package.PackageId);
             }
             else
                 packagesManager.Update(originalPackage, package);

@@ -23,7 +23,7 @@ public partial class Site_TagsControl : Vivina.Erp.SystemFramework.UserControlBa
         get { return Convert.ToString(ViewState["SubjectId"]); }
         set
         {
-            ViewState["SubjectId"] = value.DecryptFromHex();
+            ViewState["SubjectId"] = value;
 
             WebPage = Manager.GetWebPage(Page.Company.CompanyId, Convert.ToInt32(ViewState["SubjectId"]));
         }

@@ -26,7 +26,7 @@ public partial class Administration_Company_Supplier : Vivina.Erp.SystemFramewor
             }
 
             if (Request["SupplierId"] != null)
-                Page.ViewState["SupplierId"] = Request["SupplierId"].DecryptFromHex();
+                Page.ViewState["SupplierId"] = Request["SupplierId"];
         }
     }
 }

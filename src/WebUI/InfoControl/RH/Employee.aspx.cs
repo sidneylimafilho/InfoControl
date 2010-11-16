@@ -25,7 +25,7 @@ public partial class Company_RH_Employee : Vivina.Erp.SystemFramework.PageBase
             //retrieve the customerId from Modal Popup
             //
             if (Request["EmployeeId"] != null)
-                Page.ViewState["EmployeeId"] = Request["EmployeeId"].DecryptFromHex();
+                Page.ViewState["EmployeeId"] = Request["EmployeeId"];
         }
         if (Page.ViewState["EmployeeId"] != null)
         {

@@ -79,7 +79,7 @@
                                                         </a>
                                                     </td>
                                                     <td>
-                                                        <a class="InfoTip1 inline" runat="server" webpageid='<%#Eval("WebPageId").EncryptToHex()%>'
+                                                        <a class="InfoTip1 inline" runat="server" webpageid='<%#Eval("WebPageId")%>'
                                                             id="lnkSiteMaps"><font runat="server" id="name">
                                                                 <%#Eval("Name").ToString().Trim('-')%></font></a>
                                                     </td>

@@ -47,7 +47,7 @@ public partial class InfoControl_Administration_Representants : Vivina.Erp.Syste
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
             e.Row.Cells[e.Row.Cells.Count - 1].Attributes.Add("onclick", "event.cancelBubble=true;javascript:if(confirm('O registro será excluido e não poderá mais ser recuperado, deseja realmente efetuar a operação?') == false) return false;");
-            e.Row.Attributes["onclick"] = "location='Representant.aspx?RepresentantId=" + e.Row.DataItem.GetPropertyValue("RepresentantId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Representant.aspx?RepresentantId=" + e.Row.DataItem.GetPropertyValue("RepresentantId") + "';";
         }
     }
     protected void grdRepresentants_Sorting(object sender, GridViewSortEventArgs e)

@@ -24,15 +24,15 @@ public partial class InfoControl_Host_PakageByFunctions : Vivina.Erp.SystemFrame
     }
     protected void odsRemainingFunctions_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
-        e.InputParameters["packageId"] = Convert.ToInt32(Request["PackageId"].DecryptFromHex());
+        e.InputParameters["packageId"] = Convert.ToInt32(Request["PackageId"]);
     }
     protected void odsFunctionsByPackages_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
     {
-        e.InputParameters["packageId"] = Convert.ToInt32(Request["PackageId"].DecryptFromHex());
+        e.InputParameters["packageId"] = Convert.ToInt32(Request["PackageId"]);
     }
     protected void btnSave_Click(object sender, EventArgs e)
     {
-        Int32 packageId = Convert.ToInt32(Request["PackageId"].DecryptFromHex());
+        Int32 packageId = Convert.ToInt32(Request["PackageId"]);
 
         IEnumerable<Function> functionsByPackage = (Session["FunctionPackage"] as List<Function>).AsEnumerable();
 

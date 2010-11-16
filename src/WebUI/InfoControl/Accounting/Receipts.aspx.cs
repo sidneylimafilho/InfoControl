@@ -88,7 +88,7 @@ public partial class InfoControl_Administration_Receipts : Vivina.Erp.SystemFram
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            e.Row.Attributes["onclick"] = "location='Receipt.aspx?ReceiptId=" + e.Row.DataItem.GetPropertyValue("ReceiptId").EncryptToHex() + "';";
+            e.Row.Attributes["onclick"] = "location='Receipt.aspx?ReceiptId=" + e.Row.DataItem.GetPropertyValue("ReceiptId") + "';";
             //
             // Cancel the SELECT click and throw a Confirm Window to delete a line
             //

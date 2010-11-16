@@ -58,7 +58,7 @@ public partial class InfoControl_Accounting_FinancierOperation : PageBase
             ClearFields();
             if (!String.IsNullOrEmpty(Request["FinancierOperationId"]))
             {
-                Page.ViewState["FinancierOperationId"] = Request["FinancierOperationId"].DecryptFromHex();
+                Page.ViewState["FinancierOperationId"] = Request["FinancierOperationId"];
                 ShowFinancierOperation();
             }
         }

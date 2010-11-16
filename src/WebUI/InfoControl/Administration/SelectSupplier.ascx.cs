@@ -128,7 +128,7 @@ public partial class App_Shared_SelectSupplier : Vivina.Erp.SystemFramework.User
 
                 lblCNPJ.Text = supplier.Profile.CPF;
             }
-            String encripted = supplier.SupplierId.EncryptToHex();
+         
 
             pnlSupplier.Visible = true;
             pnlSupplierSearch.Style.Add(HtmlTextWriterStyle.Display, "none");

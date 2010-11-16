@@ -17,7 +17,7 @@ public partial class Company_Customer : Vivina.Erp.SystemFramework.PageBase
         {
             //retrieve the customerId from Modal Popup
             if (!String.IsNullOrEmpty(Request["CustomerId"]))
-                Context.Items["CustomerId"] = Request["CustomerId"].DecryptFromHex();
+                Context.Items["CustomerId"] = Request["CustomerId"];
 
             if (Context.Items["CustomerId"] != null)
             {
