@@ -1,11 +1,8 @@
 <%@ Page Language="C#" %>
-
 <script runat="server">
     [System.Web.Services.WebMethod]
-    public static object GetSampleData(Hashtable parameters, Hashtable formData)
-    {
-        return new
-        {
+    public static object GetSampleData(Hashtable parameters, Hashtable formData) {
+        return new {
             Data = new[]{
                 new {Nome = Convert.ToString(parameters["itemId"]) + "1) asfdasd", ID = 1},
                 new {Nome = Convert.ToString(parameters["itemId"]) + "2) fdgfjfgf", ID = 2},
@@ -17,6 +14,4 @@
             }
         };
     }
-</script>
-
-.
+</script>.
