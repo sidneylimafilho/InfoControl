@@ -16,6 +16,9 @@ namespace InfoControl.Web.UI
     {
         protected override void OnPreInit(EventArgs e)
         {
+            //
+            // Recupera o cookie NoBot que foi criado no script injetado pelo evento OnRender 
+            //
             if (Request.HttpMethod == "POST" && String.IsNullOrEmpty(Request["NoBot"]))
             {
                 //
@@ -26,7 +29,7 @@ namespace InfoControl.Web.UI
                 Response.StatusDescription = "Precondition Failed";
             }
 
-            
+
             //
             // Crack Telerik
             //
@@ -190,7 +193,12 @@ namespace InfoControl.Web.UI
                 base.Render(writer);
             }
 
-            writer.WriteLine("<script>document.cookie=\"NoBot='" + Request["ASP.NET_SessionId"] + "'\";</script>");
+
+            //
+            // Adiciona este javascript pois muitos webbot não processam javascript, logo as requisições não conterão este cookie
+            // 
+            //
+            writer.WriteLine("<script>document.cookie=\"NoBot=" + Request["ASP.NET_SessionId"] + "; path=/;\";</script>");
         }
 
         /// <summary>
