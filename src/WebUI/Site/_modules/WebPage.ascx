@@ -20,9 +20,10 @@
                         <%#Convert.ToDateTime(Eval("PublishedDate")).ToString("MMM").ToUpper()%></span>
                     <span class="year">
                         <%#Convert.ToDateTime(Eval("PublishedDate")).Year%></span> </span>&nbsp;
-                <a href='<%# ResolveUrl((Container.DataItem as WebPage).Url) %>#comments' class="comment" >
+                
+                <a href='<%# ResolveUrl((Container.DataItem as WebPage).Url) %>#comments' class="comment" runat="server"  Visible='<%#CanShowComments(Eval("CanComment"), Eval("WebPageId")) %>' >
                     <uc1:Comments ID="Comments" runat="server" PageName="comments.aspx" SubjectId='<%#Eval("WebPageId") %>'
-                        ShowStatistics="true"  Visible='<%#CanShowComments(Eval("CanComment"), Eval("WebPageId")) %>' />
+                        ShowStatistics="true" />
                 </a>
             </div>
             <div class="body">
