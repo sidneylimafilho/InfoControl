@@ -16,7 +16,7 @@
         <td valign="bottom">
             <br />
             <img src="~/App_Themes/_global/Company/user_add.gif" runat="server" alt="Inserir Cliente"
-                border="0" class="noPrintable" source="Administration/Customer_General.aspx?w=modal"
+                border="0" class="noPrintable" source="Administration/Customer_General.aspx?w=modal&lightbox[iframe]=true"
                 plugin="lightbox" />
             <br />
         </td>
