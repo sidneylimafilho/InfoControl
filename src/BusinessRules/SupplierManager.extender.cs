@@ -271,7 +271,7 @@ namespace Vivina.Erp.BusinessRules
                              supplier.CompanyId == _companyId &&
                              (profile.Name.Contains(_name) || legalEntityProfile.CompanyName.Contains(_name) ||
                               legalEntityProfile.FantasyName.Contains(_name))
-                         select new Recognizable(supplier.SupplierId.EncryptToHex(),
+                         select new Recognizable(supplier.SupplierId.ToString(),
                              (profile.CPF ?? legalEntityProfile.CNPJ) + " | " +
                              (profile.Name ?? legalEntityProfile.FantasyName ?? legalEntityProfile.CompanyName))).Take(_maximumRows));
             }

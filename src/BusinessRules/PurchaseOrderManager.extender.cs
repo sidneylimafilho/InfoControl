@@ -945,7 +945,7 @@ namespace Vivina.Erp.BusinessRules
                 new AlertManager(this).InsertAlert(
                     user.UserId,
                     "Uma requisição de compra pendente, <a href='Purchasing/PurchaseOrder.aspx?pid=" +
-                    purchaseOrder.PurchaseOrderId.EncryptToHex() + "' target='content'>clique aqui</a> para analisá-la!");
+                    purchaseOrder.PurchaseOrderId.ToString() + "' target='content'>clique aqui</a> para analisá-la!");
 
                 return;
             }
@@ -978,7 +978,7 @@ namespace Vivina.Erp.BusinessRules
                 new AlertManager(this).InsertAlert(
                     user.UserId,
                     "Uma requisição de compra pendente, <a href='Purchasing/PurchaseOrder.aspx?pid=" +
-                    purchaseOrder.PurchaseOrderId.EncryptToHex() + "' target='content'>clique aqui</a> para analisá-la!");
+                    purchaseOrder.PurchaseOrderId.ToString() + "' target='content'>clique aqui</a> para analisá-la!");
             }
 
             Update(purchaseOrder, purchaseOrder);

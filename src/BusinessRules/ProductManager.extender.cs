@@ -372,7 +372,7 @@ namespace Vivina.Erp.BusinessRules
                                                      join product in GetAllProducts() on inv.ProductId equals product.ProductId
                                                      where (cUsers.UserId == userId && cUsers.IsMain &&
                                                             (product.Name.Contains(name) || product.ProductCode.Contains(name)))
-                                                     select new Recognizable(product.ProductId.EncryptToHex(), product.Name)).Take(maximumRows));
+                                                     select new Recognizable(product.ProductId.ToString(), product.Name)).Take(maximumRows));
 
             var method = (Func<InfoControlDataContext, int, string, int, IQueryable<Recognizable>>)
         DataManager.CacheCommands[methodName];
@@ -433,7 +433,7 @@ namespace Vivina.Erp.BusinessRules
                                                                          (product.Name.Contains(_name) ||
                                                                           product.ProductCode.Contains(_name)))
                                                                   orderby product.Name, productPackages.Name
-                                                                  select new Recognizable(product.ProductId.EncryptToHex(),
+                                                                  select new Recognizable(product.ProductId.ToString(),
                                                                          (product.ProductCode ?? "") + " | " +
                                                                          product.Name + " | " +
                                                                          (productPackages.Name ?? "") + " | " +

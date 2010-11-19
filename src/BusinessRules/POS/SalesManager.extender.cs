@@ -1906,17 +1906,17 @@ namespace Vivina.Erp.BusinessRules
                 mailBody = ApplyBudgetTemplate(budget, budgetDocumentTemplateId).Replace("</body>",
                    "<br /><br />Caso tenha gostado do orçamento e deseja concluir a compra " +
                             "basta clicar no link abaixo:<br />" +
-                            "<a href='http://" + company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.EncryptToHex() +
+                            "<a href='http://" + company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.ToString() +
                             " '>Efetuar Compra</a> ou copie o seguinte endereço no seu navegador: " +
-                            company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.EncryptToHex() + "</body>");
+                            company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.ToString() + "</body>");
             }
             else
             {
                 mailBody = "<br />Caso tenha gostado do orçamento(veja o orçamento no arquivo em anexo) e deseja concluir a compra " +
                                 "basta clicar no link abaixo:<br />" +
-                                "<a href='http://" + company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.EncryptToHex() +
+                                "<a href='http://" + company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.ToString() +
                                 " '>Efetuar Compra</a> ou copie o seguinte endereço no seu navegador: " +
-                                company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.EncryptToHex();
+                                company.LegalEntityProfile.Website + "/site/Checkout_Basket.aspx?b=" + budgetId.ToString();
             }
 
             Postman.Send(

@@ -474,7 +474,7 @@ namespace Vivina.Erp.BusinessRules
                                   legalEntityProfile.FantasyName.Contains(_name) ||
                                   legalEntityProfile.CNPJ.Contains(_name)
                               )
-                        select new Recognizable(customer.CustomerId.EncryptToHex(),
+                        select new Recognizable(customer.CustomerId.ToString(),
                                                 (profile.CPF ?? legalEntityProfile.CNPJ) + " | " +
                                                 (profile.Name ??
                                                  legalEntityProfile.FantasyName ?? legalEntityProfile.CompanyName))
@@ -1258,7 +1258,7 @@ namespace Vivina.Erp.BusinessRules
                                                 "</center>",
                                                 entity.Sector,
                                                 entity.OpenedDate.ToShortDateString(),
-                                                entity.CustomerCallId.EncryptToHex());
+                                                entity.CustomerCallId.ToString());
                         break;
                     case CustomerCallType.SUGESTION:
                         message = "Obrigado pela sugestão, nós iremos cuidar para que sua idéia seja levada em consideração na próxima versão!";

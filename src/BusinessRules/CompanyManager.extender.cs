@@ -1905,7 +1905,7 @@ WHERE 1=1 ");
 
             var query = (from user in GetUsersByCompany(companyId)
                          where user.IsActive && !user.IsLockedOut && user.Profile.Name.Contains(name)
-                         select new Recognizable(user.UserId.EncryptToHex(), user.Profile.CPF + " | " + user.Profile.Name)).Take(maximumRows);
+                         select new Recognizable(user.UserId.ToString(), user.Profile.CPF + " | " + user.Profile.Name)).Take(maximumRows);
 
             return query;
 

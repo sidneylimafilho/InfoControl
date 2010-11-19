@@ -38,7 +38,7 @@ namespace Vivina.Erp.BusinessRules
                                                              join manuf in DbContext.Manufacturers on profile.BranchId equals
                                                                  manuf.BranchId
                                                              where (comp.CompanyId == companyId && manuf.Name.Contains(name))
-                                                             select new Recognizable(manuf.ManufacturerId.EncryptToHex(), manuf.Name)).Take(maximumRows));
+                                                             select new Recognizable(manuf.ManufacturerId.ToString(), manuf.Name)).Take(maximumRows));
 
             //   IQueryable<string> query = 
 

@@ -380,7 +380,7 @@ namespace Vivina.Erp.BusinessRules
         {
             var query = from e in GetEmployeesByStatus(companyId, (int)EmployeeStatus.Active)
                         where e.Profile.Name.Contains(text)
-                        select new Recognizable(e.EmployeeId.EncryptToHex(), e.Profile.CPF + " | " + e.Profile.Name);
+                        select new Recognizable(e.EmployeeId.ToString(), e.Profile.CPF + " | " + e.Profile.Name);
 
             return query;
         }

@@ -157,7 +157,7 @@ namespace Vivina.Erp.BusinessRules.Comments
                     <center>
                         <a href='javascript:;' onclick='$(this).next().show()'>Clique aqui para responder!</a>
                         <iframe id=""comments"" style='display:none' src='../app_shared/comments.aspx?id={4}&pageName=customercall.aspx'>
-                    </center>", call.CustomerCallId.EncryptToHex(),
+                    </center>", call.CustomerCallId.ToString(),
                                call.CallNumber,
                                     comment.UserName,
                                     comment.Description.Shortly(140),

@@ -165,7 +165,7 @@ namespace Vivina.Erp.BusinessRules
                                                                  transporter.CompanyId == companyId &&
                                                                  (transporter.LegalEntityProfile.CompanyName.Contains(name) ||
                                                                   transporter.LegalEntityProfile.FantasyName.Contains(name))
-                                                             select new Recognizable(transporter.TransporterId.EncryptToHex(),
+                                                             select new Recognizable(transporter.TransporterId.ToString(),
                                                                  (transporter.LegalEntityProfile.CNPJ) + " | " +
                                                                  (transporter.LegalEntityProfile.CompanyName))).Take(maximumRows));
 

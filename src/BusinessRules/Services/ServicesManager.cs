@@ -54,7 +54,7 @@ namespace Vivina.Erp.BusinessRules.Services
                                <InfoControlDataContext, int, string, int, IQueryable<Recognizable>>(
                                (ctx, _companyId, _name, _maximumRows) => (from service in DbContext.Services
                                                                           where service.CompanyId == companyId && service.Name.Contains(name)
-                                                                          select new Recognizable(service.ServiceId.EncryptToHex(), service.Name)).Take(maximumRows));
+                                                                          select new Recognizable(service.ServiceId.ToString(), service.Name)).Take(maximumRows));
             //}
 
             var method = (Func<InfoControlDataContext, int, string, int, IQueryable<Recognizable>>)DataManager.CacheCommands[methodName];
