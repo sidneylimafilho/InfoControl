@@ -193,7 +193,7 @@ namespace Vivina.Erp.BusinessRules
             if (status != 0)
                 query = query.Where(s => s.TaskStatusId.Equals(status));
 
-            return query.OrderBy(t => t.Name).OrderByDescending(t => t.Priority).OrderBy(t => t.Deadline ?? DateTime.Now);
+            return query.OrderBy(t => t.Name).OrderByDescending(t => t.Priority).OrderBy(t => t.Deadline ?? DateTime.Now.AddDays(2));
         }
 
         /// <summary>

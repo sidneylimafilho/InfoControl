@@ -177,7 +177,6 @@
     <Content Include="Default.aspx" />
     <Content Include="InfoControl\_MailTemplates\MailTemplate.Master" />
     <Content Include="App_Browsers\ControlsAdapter.browser" />
-    <None Include="Properties\DataSources\System.Xml.XmlNode.datasource" />
     <Content Include="InfoControl\Accounting\ExpenditureAuthorization.aspx" />
     <Content Include="InfoControl\Accounting\ExpenditureAuthorizations.aspx" />
     <Content Include="InfoControl\Administration\MyInfoControl\Statement.aspx" />
@@ -3750,6 +3749,7 @@
   <ItemGroup>
     <Folder Include="App_Themes\_global\Reporting\" />
     <Folder Include="InfoControl\_companies\hardmed.com.br\Accounting\" />
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
