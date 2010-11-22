@@ -9,7 +9,7 @@ using InfoControl.Web.UI;
 using Vivina.Erp.BusinessRules.Comments;
 using Vivina.Erp.DataClasses;
 using Vivina.Erp.BusinessRules;
-
+using InfoControl;
 using InfoControl.Web;
 
 public partial class App_Shared_Comments : Vivina.Erp.SystemFramework.UserControlBase
@@ -82,7 +82,7 @@ public partial class App_Shared_Comments : Vivina.Erp.SystemFramework.UserContro
     protected void btnInsert_Click(object sender, EventArgs e)
     {
 
-        if (!String.IsNullOrEmpty(txtDescription.Text.Trim()) || fupComments.HasFile)
+        if (!String.IsNullOrEmpty(txtDescription.Text.Trim()) && txtMail.Text.IsValidMail())
         {
 
             var comment = new Comment
