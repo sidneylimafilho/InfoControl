@@ -145,7 +145,7 @@ namespace Vivina.Erp.BusinessRules
             //
 
             var query = GetAllTasks();
-                        
+
 
             //
             // Returns all tasks from users in one specific company
@@ -193,7 +193,7 @@ namespace Vivina.Erp.BusinessRules
             if (status != 0)
                 query = query.Where(s => s.TaskStatusId.Equals(status));
 
-            return query.OrderByDescending(t => t.Priority).OrderBy(t => t.Deadline ?? DateTime.MaxValue);
+            return query.OrderByDescending(t => t.Priority).OrderBy(t => t.Deadline ?? DateTime.Now);
         }
 
         /// <summary>
