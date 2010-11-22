@@ -668,7 +668,6 @@
     <Content Include="Web\UI\WebControls\Boleto\Resources\Stylesheet.css" />
     <Content Include="Web\UI\WebControls\DataMaskedTextBox.bmp" />
     <Content Include="Web\UI\WebControls\DataTextBox.bmp" />
-    <Content Include="Web\UI\WebControls\DualListBox.js" />
     <Content Include="Web\UI\WebControls\MaskedTextBox.bmp" />
     <Content Include="Web\UI\WebControls\PrintLabel.xml" />
   </ItemGroup>
