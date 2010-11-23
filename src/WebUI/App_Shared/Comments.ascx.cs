@@ -79,12 +79,22 @@ public partial class App_Shared_Comments : Vivina.Erp.SystemFramework.UserContro
         }
     }
 
+    protected bool IsValidComment
+    {
+        get
+        {
+            return txtMail.Text.IsValidMail() &&
+                   !String.IsNullOrEmpty(txtDescription.Text.Trim()) &&
+                   !txtDescription.Text.Contains("http") &&
+                   !txtName.Text.Contains("http")
+                   ;
+        }
+    }
+
     protected void btnInsert_Click(object sender, EventArgs e)
     {
-
-        if (!String.IsNullOrEmpty(txtDescription.Text.Trim()) && txtMail.Text.IsValidMail())
+        if (IsValidComment)
         {
-
             var comment = new Comment
                           {
                               Website = txtSite.Text,
