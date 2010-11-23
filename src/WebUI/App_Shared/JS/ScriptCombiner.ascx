@@ -1,29 +1,47 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" %>
+
 <script runat="server">
+    public string GetFileContentInCache(string path)
+    {
+        var text = System.IO.File.ReadAllText(Server.MapPath(path));
+
+        return Convert.ToString(Cache[path] ?? Cache.Add(path, text, new CacheDependency(path),
+                                                        System.Web.Caching.Cache.NoAbsoluteExpiration,
+                                                        System.Web.Caching.Cache.NoSlidingExpiration,
+                                                        CacheItemPriority.Normal,
+                                                        (string key, object value, CacheItemRemovedReason reason) => { GetFileContentInCache(key); }));
+    }
+
+    public void Include(string path)
+    {
+        Response.Write(GetFileContentInCache(path));
+    }
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.ContentType = "text/javascript";
+        Response.ContentType = Request["type"] ?? "text/javascript";
 
-        Server.Execute("jquery.js", Response.Output);
-        
-        Server.Execute("jquery.cookies.js", Response.Output);
-        Server.Execute("jquery.dimensions.js", Response.Output);
-        Server.Execute("jquery.template.js", Response.Output);
+        Include("jquery.js");
 
-        Server.Execute("jquery.jGrowl.js", Response.Output);
-        Server.Execute("jquery.meioMask.js", Response.Output);
-        Server.Execute("jquery.validate.js", Response.Output);
-        Server.Execute("jquery.tooltip.js", Response.Output);
-        Server.Execute("jquery.serializer.js", Response.Output);
-        Server.Execute("jquery.template.js", Response.Output);
+        Include("jquery.cookies.js");
+        Include("jquery.dimensions.js");
+        Include("jquery.template.js");
 
-        Server.Execute("jquery.UI.core.js", Response.Output);
-        Server.Execute("jquery.UI.widget.js", Response.Output);
-        Server.Execute("jquery.UI.autocomplete.js", Response.Output);
-        Server.Execute("jquery.UI.duallistbox.js", Response.Output);
-        Server.Execute("jquery.ui.datepicker.js", Response.Output);
+        Include("jquery.jGrowl.js");
+        Include("jquery.meioMask.js");
+        Include("jquery.validate.js");
+        Include("jquery.tooltip.js");
+        Include("jquery.serializer.js");
+        Include("jquery.template.js");
 
-        Server.Execute("smartclient/jquery.smartclient.js", Response.Output);
+        Include("jquery.UI.core.js");
+        Include("jquery.UI.widget.js");
+        Include("jquery.UI.autocomplete.js");
+        Include("jquery.UI.duallistbox.js");
+        Include("jquery.ui.datepicker.js");
+
+        Include("smartclient/jquery.smartclient.js");
 
     }
 </script>
+
