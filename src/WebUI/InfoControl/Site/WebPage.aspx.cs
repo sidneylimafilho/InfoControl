@@ -61,7 +61,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
 
         if (OriginalPage.ParentPageId.HasValue)
             cboParentPages.SelectedValue = OriginalPage.ParentPageId.ToString();
-        
+
         if (cboMasterPage.Items.FindByText(OriginalPage.MasterPage) != null)
             cboMasterPage.SelectedValue = OriginalPage.MasterPage;
 
@@ -87,7 +87,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
         if (!String.IsNullOrEmpty(cboParentPages.SelectedValue))
             page.ParentPageId = Convert.ToInt32(cboParentPages.SelectedValue);
 
-        page.Name = txtName.Text;        
+        page.Name = txtName.Text;
         page.CompanyId = Company.CompanyId;
         page.Description = txtDescription.Value.Replace("$0", "<br/>");
         page.IsInMenu = chkIsInMenu.Checked;
@@ -123,7 +123,7 @@ public partial class InfoControl_Site_SiteMap : Vivina.Erp.SystemFramework.PageB
         //
         //Close the modal popup and redirect for WebPages.aspx
         //
-        ClientScript.RegisterClientScriptBlock(this.GetType(), "close", "top.$.LightboxObject.close();", true);
+        ClientScript.RegisterStartupScript(this.GetType(), "close", "top.$.LightboxObject.close();", true);
 
         //Response.Redirect("WebPages.aspx");
 

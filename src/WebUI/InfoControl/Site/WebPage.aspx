@@ -121,16 +121,7 @@
         </tr>
     </table>
 
-    <script type="text/javascript">
-
-        $().ready(function() {
-
-            var webPageId = document.URL.substring(66, document.URL.length);
-            var treeNode = parent.content.$("a[webpageid=" + webPageId + "]");
-        });
-    
-    
-    </script>
+   
 
     <VFX:BusinessManagerDataSource ID="odsSiteMap" runat="server" onselecting="odsSiteMap_Selecting"
         SelectMethod="GetChildPagesAsTable" TypeName="Vivina.Erp.BusinessRules.WebSites.SiteManager">
