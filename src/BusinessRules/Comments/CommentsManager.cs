@@ -108,29 +108,29 @@ namespace Vivina.Erp.BusinessRules.Comments
         #endregion
 
         #region CustomerCall
-        public void AddCommentInCustomerCall(int companyId, int id, string description)
-        {
-            var user = new CustomerManager(this).GetCustomerCall(id).User;
+        //public void AddCommentInCustomerCall(int companyId, int id, string description)
+        //{
+        //    var user = new CustomerManager(this).GetCustomerCall(id).User;
 
-            string userName = "Usuário não identificado";
-            string email = "user@default.com";
+        //    string userName = "Usuário não identificado";
+        //    string email = "user@default.com";
 
-            if (user != null)
-            {
-                userName = user.Profile.Name;
-                email = user.UserName;
-            }
+        //    if (user != null)
+        //    {
+        //        userName = user.Profile.Name;
+        //        email = user.UserName;
+        //    }
 
-            AddCommentInCustomerCall(new Comment()
-            {
-                CompanyId = companyId,
-                SubjectId = id,
-                Description = description,
-                UserName = userName,
-                Email = email,
-                PageName = "customercall.aspx"
-            });
-        }
+        //    AddCommentInCustomerCall(new Comment()
+        //    {
+        //        CompanyId = companyId,
+        //        SubjectId = id,
+        //        Description = description,
+        //        UserName = userName,
+        //        Email = email,
+        //        PageName = "customercall.aspx"
+        //    });
+        //}
 
         public void AddCommentInCustomerCall(Comment comment)
         {
