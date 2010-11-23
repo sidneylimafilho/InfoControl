@@ -1401,15 +1401,6 @@
       <Association Name="Function_PackageFunction" Member="Function" ThisKey="FunctionId" OtherKey="FunctionId" Type="Function" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.PageCategory" Member="PageCategories">
-    <Type Name="PageCategory">
-      <Column Name="PageCategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Name" Type="System.String" DbType="VarChar(1024) NOT NULL" CanBeNull="false" />
-      <Column Name="WebPageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CompanyId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="WebPage_PageCategory" Member="WebPage" ThisKey="WebPageId,CompanyId" OtherKey="WebPageId,CompanyId" Type="WebPage" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.PageTag" Member="PageTags">
     <Type Name="PageTag">
       <Column Name="PageTagId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -2541,7 +2532,6 @@
       <Column Name="MasterPage" Type="System.String" DbType="VarChar(1024)" CanBeNull="true" />
       <Column Name="Keywords" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="IsMainPage" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Association Name="WebPage_PageCategory" Member="PageCategories" ThisKey="WebPageId,CompanyId" OtherKey="WebPageId,CompanyId" Type="PageCategory" />
       <Association Name="WebPage_PageTag" Member="PageTags" ThisKey="WebPageId,CompanyId" OtherKey="WebPageId,CompanyId" Type="PageTag" />
       <Association Name="WebPage_WebPage" Member="WebPages" ThisKey="WebPageId,CompanyId" OtherKey="ParentPageId,CompanyId" Type="WebPage" />
       <Association Name="WebPage_WebPage" Member="WebPage1" ThisKey="ParentPageId,CompanyId" OtherKey="WebPageId,CompanyId" Type="WebPage" IsForeignKey="true" />
