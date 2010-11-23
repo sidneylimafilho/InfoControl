@@ -131,11 +131,7 @@ public partial class Site_WebPage : Vivina.Erp.SystemFramework.UserControlBase
             childPages = childPages.Where(wp => wp.PageTags.Any(tag => tag.Name == Tag));
         }
 
-        if (!String.IsNullOrEmpty(Category))
-        {
-            Type = "blog";
-            childPages = childPages.Where(wp => wp.PageCategories.Any(cat => cat.Name == Category));
-        }
+       
 
         // sibling 
         //if (webPage.WebPage1 != null)

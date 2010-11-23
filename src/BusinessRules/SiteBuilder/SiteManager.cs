@@ -211,23 +211,6 @@ namespace Vivina.Erp.BusinessRules.WebSites
 
         #endregion
 
-        #region Categories
-        /// <summary>
-        /// Retrieve a set of PageCategories and count for hierarchy
-        /// </summary>
-        /// <param name="companyid"></param>
-        /// <param name="webpageId"></param>
-        /// <returns></returns>
-        public IQueryable GetPageCategoriesByPage(int companyid, int webpageId)
-        {
-            var query = from page in GetChildPages(companyid, webpageId, true)
-                        join cat in DbContext.PageCategories on page.WebPageId equals cat.WebPageId
-                        where cat.Name != "" && cat.Name != null && page.IsPublished
-                        group cat by cat.Name into gTags
-                        select new { Name = gTags.Key, Count = gTags.Count() };
-            return query;
-
-        }
-        #endregion
+        
     }
 }
