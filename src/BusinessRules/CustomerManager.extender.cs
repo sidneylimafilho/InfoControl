@@ -1213,11 +1213,7 @@ namespace Vivina.Erp.BusinessRules
             {
                 customerCall.CustomerCallStatusId = CustomerCallStatus.New;
                 customerCall.OpenedDate = DateTime.Now;
-                DbContext.SubmitChanges();
-
-                var commManager = new CommentsManager(this);
-                commManager.AddCommentInCustomerCall(customerCall.CompanyId, customerCall.CustomerCallId,
-                                                     "Chamado foi reaberto automaticamente pelo sistema!");
+                DbContext.SubmitChanges(); 
             }
 
             return false;
