@@ -1,10 +1,24 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" %>
 
 <script runat="server">
+    public string RemoveComments(string text)
+    {
+        // Remove comments in /**/ style
+        var regex = new System.Text.RegularExpressions.Regex(@"(/)(\*)(.*)(\*)(/)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+        text = regex.Replace(text, "");
+        
+        // Remove comments in // style
+        regex = new System.Text.RegularExpressions.Regex(@"(\/)(\/)(.*)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
+        text = regex.Replace(text, "");
+        
+        return text.Replace("\n", "");
+    }
+    
     public string GetFileContentInCache(string path)
     {
         var text = System.IO.File.ReadAllText(Server.MapPath(path));
-
+        text = RemoveComments(text);
+        
         return Convert.ToString(Cache[path] ?? Cache.Add(path, text, new CacheDependency(path),
                                                         System.Web.Caching.Cache.NoAbsoluteExpiration,
                                                         System.Web.Caching.Cache.NoSlidingExpiration,
