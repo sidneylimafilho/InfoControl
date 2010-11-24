@@ -18,8 +18,8 @@
     {
         var text = System.IO.File.ReadAllText(Server.MapPath(path));
         text = RemoveComments(text);
-        
-        return Convert.ToString(Cache[path] ?? Cache.Add(path, text, new CacheDependency(path),
+
+        return Convert.ToString(Cache[path] ?? Cache.Add(path, text, new CacheDependency(Server.MapPath(path)),
                                                         System.Web.Caching.Cache.NoAbsoluteExpiration,
                                                         System.Web.Caching.Cache.NoSlidingExpiration,
                                                         CacheItemPriority.Normal,
