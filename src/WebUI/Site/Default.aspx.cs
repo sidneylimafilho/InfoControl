@@ -102,6 +102,13 @@ namespace Vivina.Erp.WebUI.Site
                     MasterPageFile = Company.GetMasterPagePath();
             }
 
+            if ((Request["format"] ?? "").ToUpper() == "RAW")
+            {
+                Response.Clear();
+                Response.Write(_page.Description);
+                Response.End();
+            }
+
             Trace.Warn("SitePageBase", "End OnPreInit");
         }
 
