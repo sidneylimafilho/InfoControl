@@ -3,27 +3,35 @@
 <script runat="server">
     public string RemoveComments(string text)
     {
-        // Remove comments in /**/ style
-        var regex = new System.Text.RegularExpressions.Regex(@"(/)(\*)(.*)(\*)(/)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
-        text = regex.Replace(text, "");
-         
+        System.Text.RegularExpressions.Regex regex;
+
         // Remove comments in // style
-        regex = new System.Text.RegularExpressions.Regex(@"(\/)(\/)(.*)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
-        text = regex.Replace(text, "");
+        text = new System.Text.RegularExpressions.Regex("(\\/)(\\/)(.*)").Replace(text, "");
+
+        // Remove line break
+        //text = new System.Text.RegularExpressions.Regex("\\r|\\n|\\t").Replace(text, "");
+
+        // Remove exceeding whitespaces
+        text = new System.Text.RegularExpressions.Regex(" +").Replace(text, " ");
+
+        // Remove comments in /**/ style
+        //text = new System.Text.RegularExpressions.Regex(@"/\*(.|\n)*\*/[^*]").Replace(text, "");
         
-        return text.Replace("\n", "");
+
+        return text;
     }
-    
+
     public string GetFileContentInCache(string path)
     {
-        var text = System.IO.File.ReadAllText(Server.MapPath(path));
-        text = RemoveComments(text);
-
-        return Convert.ToString(Cache[path] ?? Cache.Add(path, text, new CacheDependency(Server.MapPath(path)),
-                                                        System.Web.Caching.Cache.NoAbsoluteExpiration,
-                                                        System.Web.Caching.Cache.NoSlidingExpiration,
-                                                        CacheItemPriority.Normal,
-                                                        (string key, object value, CacheItemRemovedReason reason) => { GetFileContentInCache(key); }));
+        if (Cache[path] == null)
+        {
+            var text = System.IO.File.ReadAllText(Server.MapPath(path));
+            text = RemoveComments(text);
+            Cache.Add(path, text, new CacheDependency(Server.MapPath(path)),
+                System.Web.Caching.Cache.NoAbsoluteExpiration, System.Web.Caching.Cache.NoSlidingExpiration,
+                CacheItemPriority.Normal, (string key, object value, CacheItemRemovedReason reason) => { GetFileContentInCache(key); });
+        }
+        return Cache[path].ToString();
     }
 
     public void Include(string path)
@@ -34,6 +42,7 @@
     protected void Page_Load(object sender, EventArgs e)
     {
         Response.ContentType = Request["type"] ?? "text/javascript";
+        Response.Clear();
 
         Include("jquery.js");
 
@@ -55,6 +64,8 @@
         Include("jquery.ui.datepicker.js");
 
         Include("smartclient/jquery.smartclient.js");
+
+        Response.End();
 
     }
 </script>
