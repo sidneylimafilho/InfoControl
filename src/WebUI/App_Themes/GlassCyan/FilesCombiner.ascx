@@ -41,29 +41,45 @@
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.ContentType = Request["type"] ?? "text/javascript";
+        Response.ContentType = Request["type"] ?? "text/css";
         Response.Clear();
 
-        Include("jquery.js");
+        Include("global.cssx");
+        Include("text.cssx");
+        
+        Include("../_global/global.cssx");
+        Include("../_global/controls/ToolTip/ToolTip.cssx");
+        Include("../_global/controls/Alert/Alert.cssx");
+        Include("../_global/Leafbox/Cyan/Leafbox.cssx");
+        Include("../_global/Leafbox/Orange/Leafbox.cssx");
+        Include("../_global/Leafbox/Purple/Leafbox.cssx");
+        Include("../_global/Leafbox/Yellow/Leafbox.cssx");
+        
+        Include("../../App_Shared/js/jquery.jgrowl.css");                
+        
+        Include("button/button.cssx");
 
-        Include("jquery.cookies.js");
-        Include("jquery.dimensions.js");
-        Include("jquery.template.js");
+        Include("calendar/calendar.cssx");
+        Include("calendar/jquery.ui.core.cssx");
+        Include("calendar/jquery.ui.theme.cssx");        
+        
+        Include("gridview/gridview.cssx");
+        
+        Include("menu/menu.cssx");
+        
+        Include("numericUpDown.cssx");
 
-        Include("jquery.jGrowl.js");
-        Include("jquery.meioMask.js");
-        Include("jquery.validate.js");
-        Include("jquery.tooltip.js");
-        Include("jquery.serializer.js");
-        Include("jquery.template.js");
-
-        Include("jquery.UI.core.js");
-        Include("jquery.UI.widget.js");
-        Include("jquery.UI.autocomplete.js");
-        Include("jquery.UI.duallistbox.js");
-        Include("jquery.ui.datepicker.js");
-
-        Include("smartclient/jquery.smartclient.js");
+        Include("RadScheduler/RadScheduler.cssx");
+                
+        Include("Rating/Rating.cssx");
+        
+        Include("TabStrip/Tabs.cssx");
+        
+        Include("TextBox/textcontrol.cssx");
+        
+        Include("Tooltip/tooltip.cssx");
+        
+        Include("validator/validator.cssx");        
 
         Response.End();
 

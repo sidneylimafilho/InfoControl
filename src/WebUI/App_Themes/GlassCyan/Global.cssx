@@ -1,7 +1,3 @@
-@import "../_global/global.css";
-@import "../../App_Shared/js/jquery.jgrowl.css";
-
-
 
 hr
 {
