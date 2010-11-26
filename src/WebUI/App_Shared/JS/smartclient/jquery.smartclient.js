@@ -30,7 +30,7 @@
             url = url.replace(/(.*)\/$/, "$1") // remove a trailing "/"
                      .replace("~", appPath);
 
-            if (this.attrUp("action")) {
+            if (this.attrUp("source") && this.attrUp("action")) {
                 url += "/" + this.attrUp("action");
             }
             return url;
@@ -191,7 +191,7 @@
                                     if (data.length == 0 && $($this.attrUp("emptytemplate")).size() > 0) {
                                         result.isEmpty = true;
                                         html = $($this.attrUp("emptytemplate")).html();
-                                        
+
                                     } else {
                                         // Get template tag
                                         tpl = $this;
@@ -269,6 +269,7 @@
                         $(ctrl).bind(eventType, function(event) {
                             $(ctrl).dataBind();
                             event.stopPropagation();
+                            event.preventDefault();
                             return false;
                         });
                     }
