@@ -6,7 +6,7 @@
         // Remove comments in /**/ style
         var regex = new System.Text.RegularExpressions.Regex(@"(/)(\*)(.*)(\*)(/)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
         text = regex.Replace(text, "");
-        
+         
         // Remove comments in // style
         regex = new System.Text.RegularExpressions.Regex(@"(\/)(\/)(.*)", RegexOptions.Multiline | RegexOptions.IgnoreCase);
         text = regex.Replace(text, "");
