@@ -23,7 +23,7 @@
     <script type="text/javascript">        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script>
     <script type="text/javascript">        try { var pageTracker = _gat._getTracker("UA-10596815-1"); pageTracker._trackPageview(); } catch (err) { }</script>
 </head>
- <script type="text/javascript" src="<%=ResolveUrl("~")%>App_Shared/js/ScriptCombiner.ascx" ></script>
+ <script type="text/javascript" src="<%=ResolveUrl("~")%>App_Shared/js/FilesCombiner.ascx" ></script>
 <body>
     <form id='form1' runat='server'>
      <asp:ScriptManager ID="ScriptManager1" runat='server' EnablePageMethods='true'>
