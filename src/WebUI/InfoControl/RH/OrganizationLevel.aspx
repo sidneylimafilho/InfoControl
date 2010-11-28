@@ -52,7 +52,7 @@
                         <td style="padding-left: 10px;" valign="top">
                             Selecione um nível para alterar ou digite um novo nível para inserir:<br />
                             <asp:TextBox ID="txtOL" MaxLength="50" runat="server" Text="" />
-                            <asp:RequiredFieldValidator ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqtxtOL" runat="server"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqtxtOL" runat="server"
                                 ControlToValidate="txtOL" ValidationGroup="save"></asp:RequiredFieldValidator>
                             <br />
                             Selecione um nível pai:<br />

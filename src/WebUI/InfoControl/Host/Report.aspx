@@ -31,8 +31,8 @@
                             Nome:<br />
                             <asp:TextBox runat="server" ID="txtName" Columns="30" MaxLength="1024">
                             </asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqTxtName" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                ControlToValidate="txtName" CssClass="cErr21" ValidationGroup="Report"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtName" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                ControlToValidate="txtName"  ValidationGroup="Report"></asp:RequiredFieldValidator>
                         </td>
                         <td>
                             Url:<br />

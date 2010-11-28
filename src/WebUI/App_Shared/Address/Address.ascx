@@ -7,7 +7,7 @@
     <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
         <ProgressTemplate>
             <div class="cLoading11" style="position: absolute; width: 530px; height: 120px;">
-                <img id="Img1" runat="server" alt="Carregando" src="~/App_Themes/_global/loading3.gif" />
+                <img id="Img1" runat="server" alt="Carregando" src="~/App_Shared/themes/glasscyan/loading3.gif" />
             </div>
         </ProgressTemplate>
     </asp:UpdateProgress>
@@ -24,12 +24,12 @@
                         <td nowrap="nowrap" valign="bottom" style="vertical-align: bottom;" colspan="3">
                             <asp:TextBox CssClass="cDat11" ID="txtPostalCode" runat="server" MaxLength="9" Columns="7" OnTextChanged="txtPostalCode_TextChanged"
                                 AutoPostBack="True" meta:resourcekey="txtPostalCodeResource1"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="valPostalCode" ControlToValidate="txtPostalCode"
-                                runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21" meta:resourcekey="valPostalCodeResource1"></asp:RequiredFieldValidator>&nbsp;
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valPostalCode" ControlToValidate="txtPostalCode"
+                                runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic"  meta:resourcekey="valPostalCodeResource1"></asp:RequiredFieldValidator>&nbsp;
                             &nbsp;&nbsp;
                            
                             <asp:CustomValidator ID="checkCep" runat="server" OnServerValidate="customValidator_OnServerValidate"
-                                ControlToValidate="txtPostalCode" ErrorMessage="*" CssClass="cErr21" Visible="False"
+                                ControlToValidate="txtPostalCode" ErrorMessage="*"  Visible="False"
                                 meta:resourcekey="checkCepResource1">
                                 <asp:Literal ID="Literal17" runat="server" Text="<%$ Resources:PostalCodeNotFoundMessage %>" />
                             </asp:CustomValidator>
@@ -48,16 +48,16 @@
                             <asp:Literal ID="Literal3" runat="server" Text="<%$ Resources:Address %>" />:
                             <br />
                             <asp:TextBox CssClass="cDat11" ID="txtAddress" runat="server" Columns="40" MaxLength="50" meta:resourcekey="txtAddressResource1"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="valAddress" ControlToValidate="txtAddress" runat="server"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" Display="Dynamic" meta:resourcekey="valAddressResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valAddress" ControlToValidate="txtAddress" runat="server"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;"  Display="Dynamic" meta:resourcekey="valAddressResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td style="white-space: nowrap;">
                             <asp:Literal ID="Literal4" runat="server" Text="<%$ Resources:AddressNumber %>" />:
                             <br />
                             <asp:TextBox CssClass="cDat11" ID="txtNumber" Text='<%# Bind("AddressNumber") %>' runat="server" MaxLength="8"
                                 Columns="5" meta:resourcekey="txtNumberResource1"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="valNumber" ControlToValidate="txtNumber" runat="server"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" Display="Dynamic" meta:resourcekey="valNumberResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valNumber" ControlToValidate="txtNumber" runat="server"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;"  Display="Dynamic" meta:resourcekey="valNumberResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td style="white-space: nowrap;">
                             <asp:Literal ID="Literal5" runat="server" Text="<%$ Resources:AddressComp %>" />:
@@ -73,15 +73,15 @@
                             <asp:Literal ID="Literal6" runat="server" Text="<%$ Resources:Neighborhood %>" />:
                             <br />
                             <asp:TextBox CssClass="cDat11" ID="txtNeighborhood" runat="server" Columns="25" MaxLength="50" meta:resourcekey="txtNeighborhoodResource1"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="valNeighborhood" ControlToValidate="txtNeighborhood"
-                                runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" Display="Dynamic" meta:resourcekey="valNeighborhoodResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valNeighborhood" ControlToValidate="txtNeighborhood"
+                                runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"  Display="Dynamic" meta:resourcekey="valNeighborhoodResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td style="white-space: nowrap;">
                             <asp:Literal ID="Literal7" runat="server" Text="<%$ Resources:City %>" />:
                             <br />
                             <asp:TextBox CssClass="cDat11" ID="txtCity" runat="server" Columns="18" MaxLength="50" meta:resourcekey="txtCityResource1"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="valCity" ControlToValidate="txtCity" runat="server"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" Display="Dynamic" meta:resourcekey="valCityResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valCity" ControlToValidate="txtCity" runat="server"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;"  Display="Dynamic" meta:resourcekey="valCityResource1"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td style="white-space: nowrap;">
                             <asp:Literal ID="Literal8" runat="server" Text="Estado" meta:resourcekey="Literal8Resource1" />:
@@ -115,8 +115,8 @@
                                 <asp:ListItem Value="SE" meta:resourcekey="ListItemResource26">Sergipe</asp:ListItem>
                                 <asp:ListItem Value="TO" meta:resourcekey="ListItemResource27">Tocantins</asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="valStates" ControlToValidate="cboStates" runat="server"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" Display="Dynamic" meta:resourcekey="valStatesResource1"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valStates" ControlToValidate="cboStates" runat="server"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;"  Display="Dynamic" meta:resourcekey="valStatesResource1"></asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                     </tr>

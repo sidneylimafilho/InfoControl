@@ -1,0 +1,246 @@
+﻿.ToolTip_left h1, .ToolTip_top h1, .ToolTip_left p, .ToolTip_top p
+{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.ToolTip_left *, .ToolTip_top *, .PrintTip *, .HelpTip *
+{
+	color: #DBDBDB;	
+}
+
+.ToolTip_left b, .ToolTip_top b, .PrintTip b, .HelpTip b, .HelpTip h3, .HelpTip h2, .HelpTip h4
+{
+    color:White;
+}
+
+.ToolTip_left, .ToolTip_top
+{
+	width: 386px;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-color: Transparent;
+	position: absolute;
+	z-index: 100;
+	display:block;
+}
+.ToolTip_left a, .ToolTip_top a
+{
+	color: Yellow !important;
+	text-decoration: underline !important;
+}
+.ToolTip_left
+{
+	background-image: url(img/left.gif);
+	padding-top: 10px;
+}
+.ToolTip_top
+{
+	background-image: url(img/top.gif);
+	padding-top: 20px;
+}
+
+.ToolTip_left #footer, .ToolTip_top #footer
+{
+	background-image: url(img/footer.gif);
+	background-position: bottom;
+	background-repeat: no-repeat;
+	height: 24px;
+	z-index: 100;
+}
+
+
+.ToolTip_left #footer .closer, .ToolTip_top #footer .closer
+{
+	background-color: #FFFFFF;
+	color: #2B576D;
+	text-decoration: none;
+	padding: 2px 2px 2px 2px;
+	border: 0px;
+	display: block;
+	font-weight: bold;
+	font-size: 9px;
+	z-index: 100;
+}
+
+.ToolTip_left #footer .persistentText, .ToolTip_top #footer .persistentText
+{
+	color: #FFEEDD;
+}
+
+/*********************************************************************************
+HELPTIP
+*********************************************************************************/
+.HelpTip, .PrintTip
+{
+	position: relative;
+	z-index: 20;
+	text-decoration: none;
+	cursor: help;
+	color: #EBEBEB;
+	height:16px;
+	width:16px;
+	margin:0px 4px;
+	top:-2px;
+	display:inline-block;	
+	background-repeat:no-repeat;
+	background-position:0px 0px;
+}
+.HelpTip {background-image:url(img/ico_ajuda.gif);}
+.PrintTip {background-image:url(../../printer.gif);}
+
+.HelpTip:hover, .PrintTip:hover
+{
+	z-index: 21;
+	text-decoration: none;
+}
+.HelpTip span, .PrintTip span
+{
+	display: none;
+}
+
+.HelpTip:hover span, .PrintTip:hover span
+{
+	display: block;
+	position: absolute;
+	width: 348px;
+}
+.HelpTip:hover span.msg, .HelpTip:hover span.buttonTip
+{
+	padding: 20px 23px 17px 23px;
+	z-index: 100;
+	font-weight: normal;
+	background-image: url(img/top.png);
+	background-position:0px 0px;
+	text-decoration: none;
+}
+.HelpTip:hover span.buttonTip
+{
+	top: 96px;
+	left: -15px;
+	text-align: justify;
+}
+.HelpTip:hover span.msg
+{
+	top: 16px;
+	left: -45px;
+}
+.HelpTip:hover span.footer
+{
+	background-image: url(img/footer2.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	padding: 5px 20px 0px 20px;
+	height: 24px;
+	z-index: 26;
+	left: -2px;
+	bottom: 0px;
+}
+.HelpTip:hover span.link
+{
+	text-decoration: underline;
+	display: inline;
+}
+
+/*********************************************************************************
+PRINT TIP
+*********************************************************************************/
+.PrintTip img
+{
+	border: 0px;
+	z-index: 30;
+}
+.PrintTip li, .PrintTip ul
+{
+	margin-left: 10px;
+	padding: 0px;
+	list-style-type: disc;
+	color: #FFF;
+}
+.PrintTip:hover span.msg
+{
+	top: 30px;
+	left: -30px;
+	padding: 20px 25px 40px 15px;
+	z-index: 100;
+	font-weight: normal;
+	background: url(img/PrintTip.jpg) no-repeat;
+	text-decoration: none;
+}
+.PrintTip:hover span.footer
+{
+	background-image: url(img/footer2.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+	padding: 10px 25px 50px 15px;
+	height: 24px;
+	z-index: 26;
+	right: 22px;
+	bottom: 0px;
+	display: none;
+}
+
+
+/*********************************************************************************
+ToolTips
+*********************************************************************************/
+.InfoTip1, .InfoTip2, .InfoTip3, .InfoTip4, .InfoTip5, .InfoTip6
+{
+	
+}
+.InfoTip1 .msg, .InfoTip2 .msg, .InfoTip3 .msg, .InfoTip4 .msg, .InfoTip5 .msg, .InfoTip6 .msg,
+.InfoTip1 .footer, .InfoTip2 .footer, .InfoTip3 .footer, .InfoTip4 .footer, .InfoTip5 .footer, .InfoTip6 .footer
+{
+	position: absolute;
+	display: none;
+	width: 348px;
+	filter: alpha(opacity=85);
+	-moz-opacity: 0.85;
+	color: #000 !important;
+	z-index: 100;	
+}
+
+.InfoTip1:hover .msg, .InfoTip2:hover .msg, .InfoTip3:hover .msg, .InfoTip4:hover .msg, .InfoTip5:hover .msg, .InfoTip6:hover .msg,
+.InfoTip1:hover .footer, .InfoTip2:hover .footer, .InfoTip3:hover .footer, .InfoTip4:hover .footer, .InfoTip5:hover .footer, .InfoTip6:hover .footer
+{
+	display: block;
+	white-space: normal !important;
+	background-repeat: no-repeat;
+	padding:20px 20px 30px 20px;
+	margin-left:-40px;
+	text-decoration:none !important;
+}
+.InfoTip1:hover span.footer, .InfoTip2:hover span.footer, .InfoTip3:hover span.footer, .InfoTip4:hover span.footer, .InfoTip5:hover span.footer, .InfoTip6:hover span.footer
+{
+	background-position: bottom right;	
+	height: 24px !important;
+	z-index: 26;		
+	padding:0px !important;	
+	bottom:0px;
+	right:2px;
+	width: 388px;	
+}
+
+.InfoTip1:hover span.msg{background-image: url(img/top.gif);color: #FFF !important;}
+.InfoTip1:hover span.footer{background-image: url(img/footer.gif);}
+
+.InfoTip2:hover span.msg{background-image: url(img/top2.gif);color: #000 !important;}
+.InfoTip2:hover span.footer{background-image: url(img/footer2.gif);}
+
+.InfoTip3:hover span.msg{background-image: url(img/top3.gif);color: #000 !important;}
+.InfoTip3:hover span.footer{background-image: url(img/footer3.gif);}
+
+.InfoTip4:hover span.msg{background-image: url(img/top4.gif);color: #000 !important;}
+.InfoTip4:hover span.footer{background-image: url(img/footer4.gif);}
+
+.InfoTip5:hover span.msg{background-image: url(img/top5.gif);color: #000 !important;}
+.InfoTip5:hover span.footer{background-image: url(img/footer5.gif);}
+
+.InfoTip6:hover span.msg{background-image: url(img/top6.gif);color: #000 !important;}
+.InfoTip6:hover span.footer{background-image: url(img/footer6.gif);}
+
+
+
+@media print
+	{
+	a.ToolTip, a.HelpTip, a.PrintTip {display:none !important;}
+}

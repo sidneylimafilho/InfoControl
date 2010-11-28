@@ -6,7 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
     <h1>
         Controle de Cheques <a class="HelpTip" href="javascript:void(0);">
-            <img id="Img2" runat="server" border="0" src="~/App_themes/_global/ico_ajuda.gif" />
+            <img id="Img2" runat="server" border="0" src="~/App_Shared/themes/glasscyan/ico_ajuda.gif" />
             <span class="msg">• Cadastre os seus cheques emitidos e recebidos. Em breve, o InfoControl
                 trará uma ferramenta para o gerenciamento completo destes cheques. Isso evitará
                 inadimplência. <span class="footer"></span></span></a>
@@ -34,13 +34,13 @@
                         Cheque de:<br />
                         <asp:TextBox ID="SenderTextBox" runat="server" Text='<%# Bind("Sender") %>' Columns="40"
                             MaxLength="40" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                        <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                             runat="server" ControlToValidate="SenderTextBox"></asp:RequiredFieldValidator>
                         <br />
                         Valor do Cheque:<br />
                         <asp:TextBox ID="CheckValueTextBox" runat="server" Text='<%# Bind("CheckValue", "{0:###,##0.00}") %>'
                             Columns="15" MaxLength="10" />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                        <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                             runat="server" ControlToValidate="CheckValueTextBox"></asp:RequiredFieldValidator>
                         <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender1" runat="server" ClearMaskOnLostFocus="False"
                             InputDirection="RightToLeft" Mask="999,999.99" MaskType="Number" TargetControlID="CheckValueTextBox">
@@ -55,7 +55,7 @@
                             DataSourceID="odsBanks" DataTextField="Name" DataValueField="BankId" AppendDataBoundItems="true">
                             <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                        <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                             runat="server" ControlToValidate="cboBankId"></asp:RequiredFieldValidator>
                         <br />
                         Agência:<br />

@@ -17,11 +17,11 @@
         }
         #tasks .plus
         {
-            background: url(../app_themes/GlassCyan/Controls/treeview/plus.gif) no-repeat;
+            background: url(../App_Shared/themes/glasscyan/Controls/treeview/plus.gif) no-repeat;
         }
         #tasks .minus
         {
-            background: url(../app_themes/GlassCyan/Controls/treeview/minus.gif) no-repeat;
+            background: url(../App_Shared/themes/glasscyan/Controls/treeview/minus.gif) no-repeat;
         }
         #tasks td
         {

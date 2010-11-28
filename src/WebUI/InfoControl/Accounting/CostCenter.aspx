@@ -56,7 +56,7 @@
                             inserir:<br />
                             <asp:TextBox ID="txtName" runat="server" Columns="80" MaxLength="50" Width="180px"></asp:TextBox>
                             &nbsp;&nbsp;&nbsp;
-                            <asp:RequiredFieldValidator ID="reqtxtName" runat="server" CssClass="cErr21" ControlToValidate="txtName"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtName" runat="server"  ControlToValidate="txtName"
                                 ValidationGroup="save" ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                             <br />
                             Selecione um centro de custo pai:&nbsp;<VFX:HelpTooltip runat="server">

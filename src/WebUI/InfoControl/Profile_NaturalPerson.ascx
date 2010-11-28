@@ -8,10 +8,10 @@
 <asp:Panel ID="searchForm" runat="server" Visible="false">
     CPF:<br />
     <asp:TextBox ID="txtSearchCPF" runat="server" Text="" Columns="18" MaxLength="18" />
-    <asp:RequiredFieldValidator ID="valCnpj" runat="server" ControlToValidate="txtSearchCPF"
-        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+    <asp:RequiredFieldValidator CssClass="cErr21" ID="valCnpj" runat="server" ControlToValidate="txtSearchCPF"
+        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
     <VFX:CpfValidator ID="CpfValidator2" runat="server" ControlToValidate="txtSearchCPF"
-        Display="Dynamic" Enabled="true" ValidationGroup="valNext" CssClass="cErr21">&nbsp;&nbsp;&nbsp;</VFX:CpfValidator>
+        Display="Dynamic" Enabled="true" ValidationGroup="valNext" >&nbsp;&nbsp;&nbsp;</VFX:CpfValidator>
     &nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnSelect" runat="server" Text="Avançar" OnClick="btnSelect_Click"
         ValidationGroup="valNext" />
@@ -29,10 +29,10 @@
                         AutoPostBack="True" OnTextChanged="txtCPF_TextChanged" />
                     <span class="btnReceitaFederal" onclick="ConsultaReceitaFederal('<%=txtCPF.Text.Replace(".", "").Replace("-", "").Replace("/", "") %>');">
                         &nbsp; </span>
-                    <asp:RequiredFieldValidator ID="valCpf" runat="server" Display="Dynamic" ControlToValidate="txtCPF"
-                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"  CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valCpf" runat="server" Display="Dynamic" ControlToValidate="txtCPF"
+                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"  ></asp:RequiredFieldValidator>
                     <VFX:CpfValidator ID="CpfValidator" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                        ControlToValidate="txtCPF" CssClass="cErr21">
+                        ControlToValidate="txtCPF" >
                     </VFX:CpfValidator>
                     <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender1" runat="server" TargetControlID="txtCPF"
                         CultureName="pt-BR" Mask="999,999,999-99" ClearMaskOnLostFocus="False">
@@ -40,12 +40,12 @@
                 </td>
                 <td>Nome:<br />
                     <asp:TextBox ID="txtName" runat="server" Width="250" MaxLength="100" />
-                    <asp:RequiredFieldValidator ID="valName" runat="server" ControlToValidate="txtName"
-                        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valName" runat="server" ControlToValidate="txtName"
+                        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td>E-mail:<br />
                     <asp:TextBox ID="txtEmail" runat="server" Columns="20" MaxLength="50"></asp:TextBox>
-                    <asp:RegularExpressionValidator ID="ValEmail" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+                    <asp:RegularExpressionValidator CssClass="cErr21" ID="ValEmail" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
                         ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </td>
             </tr>
@@ -55,15 +55,15 @@
                 <td>Telefone:<br />
                     <asp:TextBox ID="txtPhone" Plugin="Mask" Mask="(99)9999-9999" runat="server" Columns="10"
                         MaxLength="13" />
-                    <asp:RequiredFieldValidator ID="reqPhone" runat="server" ControlToValidate="txtPhone"
-                        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqPhone" runat="server" ControlToValidate="txtPhone"
+                        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </td>
                 <td>Telefone Residencial:<br />
                     <asp:TextBox ID="txtHomePhone" Plugin="Mask" Mask="(99)9999-9999" runat="server"
                         Columns="10" MaxLength="13" />
-                    <asp:RequiredFieldValidator ID="reqHomePhone" runat="server" ControlToValidate="txtHomePhone"
-                        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqHomePhone" runat="server" ControlToValidate="txtHomePhone"
+                        ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </td>
                 <td>Telefone Celular:<br />
@@ -84,8 +84,8 @@
                         <asp:ListItem Text="Masculino" Value="1"></asp:ListItem>
                         <asp:ListItem Text="Feminino" Value="2"></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="reqSex" runat="server" ControlToValidate="cboSex"
-                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSex" runat="server" ControlToValidate="cboSex"
+                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td>Estado Civil:<br />
                     <asp:DropDownList ID="cboMaritalStatus" runat="server" AppendDataBoundItems="True"
@@ -93,16 +93,16 @@
                         <asp:ListItem Text="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                             Value=""></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="reqMaritalStatus" runat="server" ControlToValidate="cboMaritalStatus"
-                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqMaritalStatus" runat="server" ControlToValidate="cboMaritalStatus"
+                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 <td>Escolaridade:<br />
                     <asp:DropDownList ID="cboEducation" runat="server" AppendDataBoundItems="True" DataSourceID="odsEducation"
                         DataTextField="Name" DataValueField="EducationLevelId">
                         <asp:ListItem Text="" Value=""></asp:ListItem>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="reqEducation" runat="server" ControlToValidate="cboEducation"
-                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Display="Dynamic" CssClass="cErr21"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqEducation" runat="server" ControlToValidate="cboEducation"
+                        ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
             </tr>
         </table>

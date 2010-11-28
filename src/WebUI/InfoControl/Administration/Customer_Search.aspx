@@ -6,7 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
     <h1>
         <a href="javascript:void(0);" class="HelpTip">
-            <img id="Img1" runat="server" border="0" src="~/App_themes/_global/ico_ajuda.gif" /><span
+            <img id="Img1" runat="server" border="0" src="~/App_Shared/themes/glasscyan/ico_ajuda.gif" /><span
                 class="msg">Aqui, você também poderá fazer uma pesquisa pelos seus clientes, com
                 diversos parâmetros, o que facilitará na hora de encontrar “aquele” cliente que
                 não aparece há muito tempo, onde preenchendo apenas um campo, o sistema faz a filtragem

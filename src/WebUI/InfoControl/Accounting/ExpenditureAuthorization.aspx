@@ -30,7 +30,7 @@
                             Número do Chamado:<br />
                             <asp:TextBox runat="server" OnTextChanged="txtCallNumber_Changed" ValidationGroup="Save"
                                 AutoPostBack="true" ID="txtCallNumber"></asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ID="reqTxtCallNumber" ValidationGroup="Save"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqTxtCallNumber" ValidationGroup="Save"
                                 ErrorMessage="&nbsp&nbsp&nbsp" ControlToValidate="txtCallNumber" />
                         </td>
                     </tr>
@@ -69,7 +69,7 @@
                             <br />
                             <asp:TextBox ID="txtDescription" CssClass="cDat11" runat="server" Height="100px"
                                 TextMode="MultiLine" Width="90%" MaxLength="500"></asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ID="reqTxtDescription" ErrorMessage="&nbsp&nbsp&nbsp"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqTxtDescription" ErrorMessage="&nbsp&nbsp&nbsp"
                                 ControlToValidate="txtDescription" ValidationGroup="Save" />
                         </td>
                     </tr>

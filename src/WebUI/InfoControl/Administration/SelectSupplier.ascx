@@ -16,7 +16,7 @@
                 Dica: Digite parte do texto, que o completará automaticamente!</p>
         </td>
         <td>
-            <img src="~/App_Themes/_global/Company/user_add.gif" alt="Inserir Fornecedor" border="0"
+            <img src="~/App_Shared/themes/glasscyan/Company/user_add.gif" alt="Inserir Fornecedor" border="0"
                 runat="server" style="cursor:pointer" plugin="lightbox" source='Administration/Supplier_General.aspx?w=modal&lightbox[iframe]=true' />&nbsp;&nbsp;&nbsp;&nbsp;
         </td>
     </tr>
@@ -35,7 +35,7 @@
                 <asp:Label ID="lblSupplierPhone" runat="server" Text=""></asp:Label>
             </td>
             <td>
-                &nbsp;&nbsp;&nbsp;&nbsp;<img src="<%=ResolveUrl("~/App_Themes/_global/p_univ.gif")%>"
+                &nbsp;&nbsp;&nbsp;&nbsp;<img src="<%=ResolveUrl("~/App_Shared/themes/glasscyan/p_univ.gif")%>"
                     onclick="$('#<%=pnlSupplierSearch.ClientID %>').show(); " />
             </td>
         </tr>

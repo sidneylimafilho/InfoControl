@@ -7,7 +7,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
     <h1>
         Controle de Cheques<a class="HelpTip" href="javascript:void(0);">
-            <img id="Img2" runat="server" border="0" src="~/App_themes/_global/ico_ajuda.gif" />
+            <img id="Img2" runat="server" border="0" src="~/App_Shared/themes/glasscyan/ico_ajuda.gif" />
             <span class="msg">• Cadastre os seus cheques emitidos e recebidos. Em breve, 
         o InfoControl trará uma ferramenta para o gerenciamento completo destes cheques. 
         Isso evitará inadimplência. <span class="footer"></span></span></a>

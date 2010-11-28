@@ -11,10 +11,10 @@
                     </td>
                     <td valign="middle">
                         <asp:CompareValidator ID="cmptxtBeginDate" runat="server" Display="Dynamic" ControlToValidate="txtBeginDate"
-                            CssClass="cErr21" Operator="GreaterThanEqual"  ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                             Operator="GreaterThanEqual"  ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                             Type="Date" ValueToCompare="1/1/1753">
                         </asp:CompareValidator>
-                        <asp:RequiredFieldValidator ID="reqtxtBeginDate" CssClass="cErr21" runat="server" ControlToValidate="txtBeginDate" Display="Dynamic" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtBeginDate"  runat="server" ControlToValidate="txtBeginDate" Display="Dynamic" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>
@@ -28,14 +28,14 @@
                     </td>                  
                     <td valign="middle">
                         <asp:CompareValidator ID="cmptxtEndDate" runat="server" ControlToValidate="txtEndDate"
-                            CssClass="cErr21" Operator="GreaterThanEqual" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                             Operator="GreaterThanEqual" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                             Type="Date" ValueToCompare="1/1/1753" Display="Dynamic">
                         </asp:CompareValidator>
                         <asp:CompareValidator ID="cmpDates" runat="server" ControlToValidate="txtEndDate"
-                            ControlToCompare="txtBeginDate" CssClass="cErr21" Operator="GreaterThan" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+                            ControlToCompare="txtBeginDate"  Operator="GreaterThan" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                             Type="Date" Display="Dynamic">
                         </asp:CompareValidator>
-                        <asp:RequiredFieldValidator ID="reqtxtEndDate" CssClass="cErr21" runat="server" ControlToValidate="txtBeginDate" Display="Dynamic" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtEndDate"  runat="server" ControlToValidate="txtBeginDate" Display="Dynamic" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
             </table>           

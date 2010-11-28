@@ -5,7 +5,7 @@
 <%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls"
     TagPrefix="VFX" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
-    <img src="../App_Themes/Glass/Company/paymentMethod.gif" alt="" />
+    <img src="../App_Shared/modules/Glass/Company/paymentMethod.gif" alt="" />
     <table class="cLeafBox21" width="50%">
         <tr class="top">
             <td class="left">
@@ -28,8 +28,8 @@
                         <asp:BoundField DataField="Name" HeaderText="Nome" SortExpression="Name"></asp:BoundField>
                         <asp:BoundField DataField="TransactionUrl" HeaderText="Url da Operadora" SortExpression="TransactionUrl">
                         </asp:BoundField>
-                        <asp:CommandField DeleteText="&lt;img src=&quot;../App_Themes/Glass/Controls/GridView/img/Pixel_bg.gif&quot; alt=&quot;Apagar&quot; class=&quot;delete&quot; border=0&gt;"
-                            HeaderText="&lt;img src='../App_Themes/Glass/Controls/GridView/img/Add.gif' border='0' /&gt;"
+                        <asp:CommandField DeleteText="&lt;img src=&quot;../App_Shared/modules/Glass/Controls/GridView/img/Pixel_bg.gif&quot; alt=&quot;Apagar&quot; class=&quot;delete&quot; border=0&gt;"
+                            HeaderText="&lt;img src='../App_Shared/modules/Glass/Controls/GridView/img/Add.gif' border='0' /&gt;"
                             ShowDeleteButton="True" SortExpression="Insert">
                             <ItemStyle Width="1%" />
                         </asp:CommandField>

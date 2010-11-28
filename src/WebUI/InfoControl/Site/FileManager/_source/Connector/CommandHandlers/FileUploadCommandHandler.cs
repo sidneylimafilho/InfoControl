@@ -219,7 +219,7 @@ namespace CKFinder.Connector.CommandHandlers
                 <%@ Register Src='~/site/_modules/Search.ascx' TagName='Search' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/Tags.ascx' TagName='Tags' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/PageCategories.ascx' TagName='PageCategories' TagPrefix='vfx' %>
-                <%@ Register Src='~/App_Modules/AccessControl/Login.ascx' TagName='Login'  TagPrefix='vfx' %>
+                <%@ Register Src='~/App_Shared/modules/AccessControl/Login.ascx' TagName='Login'  TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/WebPage.ascx' TagName='WebPage'  TagPrefix='vfx' %>");
 
             //

@@ -35,7 +35,7 @@
                                 <td>
                                     Nome:<br />
                                     <asp:TextBox ID="txtName" runat="server" MaxLength="120" Text='<%# Bind("Name") %>' />
-                                    <asp:RequiredFieldValidator ID="valName" runat="server" ControlToValidate="txtName"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valName" runat="server" ControlToValidate="txtName"
                                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="FollowupAction"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>

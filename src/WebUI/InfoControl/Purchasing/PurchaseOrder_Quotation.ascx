@@ -60,7 +60,7 @@
             <uc3:Date ID="datDeliveryDate" ValidationGroup="Save" Required="true" runat="server" />
         </td>
         <td>
-           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator"
+           <%-- <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator"
                 ControlToValidate="datDeliveryDate"></asp:RequiredFieldValidator>--%>
         </td>
     </tr>

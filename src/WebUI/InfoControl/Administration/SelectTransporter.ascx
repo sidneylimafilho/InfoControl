@@ -21,7 +21,7 @@
                 Dica: Digite parte do texto, que o completará automaticamente!</p>
                 </td>
                 <td>
-                    <img id="Img1" src="~/App_Themes/_global/Company/user_add.gif" runat="server" alt="Inserir Transportadora"
+                    <img id="Img1" src="~/App_Shared/themes/glasscyan/Company/user_add.gif" runat="server" alt="Inserir Transportadora"
                         border="0" onclick="top.$.lightbox('Administration/Transporter.aspx?w=modal&lightbox[iframe]=true);" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
@@ -40,7 +40,7 @@
                         <asp:Label ID="lblTransporterPhone" runat="server" Text=""></asp:Label>
                     </td>
                     <td>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<img src="<%=ResolveUrl("~/App_Themes/_global/p_univ.gif")%>"
+                        &nbsp;&nbsp;&nbsp;&nbsp;<img src="<%=ResolveUrl("~/App_Shared/themes/glasscyan/p_univ.gif")%>"
                             onclick="$('#<%=pnlTransporterSearch.ClientID %>').show(); " />
                     </td>
                 </tr>

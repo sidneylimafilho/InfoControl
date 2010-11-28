@@ -35,8 +35,8 @@
                         <td>
                             <uc2:SelectSupplier ID="selSupplier" OnSelectedSupplier="selSupplier_SelectedSupplier"
                                 runat="server" />
-                            <asp:RequiredFieldValidator ID="reqSelSupplier" runat="server" ControlToValidate="selSupplier"
-                                CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSelSupplier" runat="server" ControlToValidate="selSupplier"
+                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                         </td>
                     </tr>
                 </table>

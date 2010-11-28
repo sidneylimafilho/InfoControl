@@ -37,8 +37,8 @@
                                     DataTextField="Name" DataValueField="DepositId" AutoPostBack="True" OnSelectedIndexChanged="cboDeposit_SelectedIndexChanged">
                                     <asp:ListItem Value="" Text=""></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="reqcboDeposit" runat="server" ControlToValidate="cboDeposit"
-                                    CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboDeposit" runat="server" ControlToValidate="cboDeposit"
+                                     ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="Save"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>
@@ -47,8 +47,8 @@
                                 <asp:DropDownList ID="cboProducts" runat="server" DataTextField="Name" DataValueField="ProductId"
                                     Enabled="False">
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="reqcboProducts" runat="server" ControlToValidate="cboProducts"
-                                    CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboProducts" runat="server" ControlToValidate="cboProducts"
+                                     ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="Save"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>

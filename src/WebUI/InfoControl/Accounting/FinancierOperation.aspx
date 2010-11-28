@@ -41,7 +41,7 @@
                                 DataTextField="Name" DataValueField="PaymentMethodId" AppendDataBoundItems="True">
                                 <asp:ListItem Value="" Text=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqcboPaymentMethod" ControlToValidate="cboPaymentMethod"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboPaymentMethod" ControlToValidate="cboPaymentMethod"
                                 runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="SaveFinancierOperation"></asp:RequiredFieldValidator>
                             <VFX:BusinessManagerDataSource ID="odsPaymentMethod" runat="server" SelectMethod="GetAllPaymentMethod"
                                 TypeName="Vivina.Erp.BusinessRules.AccountManager">
@@ -67,7 +67,7 @@
                                 DataValueField="AccountId" AppendDataBoundItems="True">
                                 <asp:ListItem Value="" Text=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="cboAccount"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" ControlToValidate="cboAccount"
                                 runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="SaveFinancierOperation"></asp:RequiredFieldValidator>
                             <VFX:BusinessManagerDataSource ID="odsAccounts" runat="server" SelectMethod="GetAccountsWithShortName"
                                 TypeName="Vivina.Erp.BusinessRules.AccountManager" onselecting="odsAccounts_Selecting">
@@ -185,7 +185,7 @@
                             </td>
                             <td>
                                 <asp:ImageButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" ValidationGroup="SaveFinancierCondition"
-                                    ImageUrl="../../App_Themes/GlassCyan/Controls/GridView/img/Add2.gif" />
+                                    ImageUrl="../../App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif" />
                             </td>
                         </tr>
                     </table>

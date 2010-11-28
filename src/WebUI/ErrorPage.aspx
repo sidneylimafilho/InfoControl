@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" StylesheetTheme="GlassCyan" Inherits="ErrorPage" Codebehind="ErrorPage.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="ErrorPage" Codebehind="ErrorPage.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -11,7 +11,7 @@
     <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
         EnableScriptLocalization="true">
     </ajaxToolkit:ToolkitScriptManager>
-    <img id="Img1" runat="server" src="~/App_Themes/_global/Ooops.gif" alt="Ooops" />
+    <img id="Img1" runat="server" src="~/App_Shared/themes/glasscyan/Ooops.gif" alt="Ooops" />
     <table class="cLeafBox21" width="100%">
         <tr class="top">
             <td class="left">
@@ -46,7 +46,7 @@
                         <td class="cTxt11" style="padding-left: 120px;">
                             <div onclick="$get('<%= LabelError.ClientID%>').style.display=($get('<%= LabelError.ClientID%>').style.display=='none'?'':'none');"
                                 style="cursor: pointer; text-align: center;">
-                                <img src="~/App_Themes/_global/debug_view.gif" alt="Visualizar o erro!" runat="server" /><br />
+                                <img src="~/App_Shared/themes/glasscyan/debug_view.gif" alt="Visualizar o erro!" runat="server" /><br />
                                 Exibir detalhes
                             </div>
                             <br />

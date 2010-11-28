@@ -42,9 +42,9 @@
                                 runat="server" />
                         </td>
                         <td>
-                            <asp:RequiredFieldValidator ID="reqcboCostCenter" ValidationGroup="SaveRequest" ControlToValidate="cboTreeBoxCostCenter"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboCostCenter" ValidationGroup="SaveRequest" ControlToValidate="cboTreeBoxCostCenter"
                                 runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ValidationGroup="AddRequestItem"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" ValidationGroup="AddRequestItem"
                                 ControlToValidate="cboTreeBoxCostCenter" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                         </td>
                         <td>

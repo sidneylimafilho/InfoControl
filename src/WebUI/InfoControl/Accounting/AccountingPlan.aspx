@@ -65,7 +65,7 @@
                                             <br />
                                             <asp:TextBox ID="txtName" runat="server" Columns="80" MaxLength="50" Width="180px"></asp:TextBox>
                                             &nbsp;&nbsp;&nbsp;
-                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" CssClass="cErr21"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" 
                                                 ControlToValidate="txtName" ValidationGroup="ValidateAccountingPlan" ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>

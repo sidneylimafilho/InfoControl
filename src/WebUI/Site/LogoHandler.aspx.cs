@@ -16,7 +16,7 @@ public partial class Company_ImageHandler : Vivina.Erp.SystemFramework.PageBase
 
             if (Company.CompanyConfiguration.Logo == null)
                 Company.CompanyConfiguration.Logo =
-                    new Binary(File.ReadAllBytes(Server.MapPath("~/App_Themes/_global/Menu/blank.gif")));
+                    new Binary(File.ReadAllBytes(Server.MapPath("~/App_Shared/themes/glasscyan/Menu/blank.gif")));
 
             Response.Clear();
             Response.Cache.SetCacheability(HttpCacheability.Server);

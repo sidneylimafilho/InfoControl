@@ -32,7 +32,7 @@
                             Título:
                             <br />
                             <asp:TextBox ID="txtName" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqtxtName"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqtxtName"
                                 ValidationGroup="SaveTask" ControlToValidate="txtName">
                             </asp:RequiredFieldValidator>
                         </td>
@@ -42,7 +42,7 @@
                             <asp:DropDownList ID="cboMasterPage" AppendDataBoundItems="true" runat="server" DataSourceID="odsMasterPages">
                                 <asp:ListItem Text="" Value="" />
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator runat="server" ID="reqCboMasterPage" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqCboMasterPage" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ValidationGroup="SaveTask" ControlToValidate="cboMasterPage"></asp:RequiredFieldValidator>
                         </td>
                     </tr>

@@ -50,7 +50,7 @@
                             Descrição:<br />
                             <asp:TextBox ID="DescriptionTextBox" runat="server" CssClass="cDat11" Height="100px"
                                 Text='<%# Bind("Description") %>' Width="300px" TextMode="MultiLine"></asp:TextBox><br />
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="DescriptionTextBox"
+                            <asp:RegularExpressionValidator CssClass="cErr21" ID="RegularExpressionValidator1" runat="server" ControlToValidate="DescriptionTextBox"
                                 Display="Dynamic" ErrorMessage="&nbsp;&nbsp;&nbsp;" Text="Campo para apenas 1024 caracteres!"
                                 ValidationExpression=".{0,1024}"></asp:RegularExpressionValidator><br />
                             <br />

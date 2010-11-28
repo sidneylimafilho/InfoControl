@@ -7,13 +7,13 @@
         </td>
         <td valign="bottom">           
             <asp:CompareValidator ID="cmptxtDate" runat="server" ControlToValidate="txtDate"
-                CssClass="cErr21" Operator="GreaterThanEqual" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                 Operator="GreaterThanEqual" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                 Type="Date" ValueToCompare="1/1/1753" Display="Dynamic">
             </asp:CompareValidator>
         </td>
         <td valign="middle">
-            <asp:RequiredFieldValidator ID="reqtxtDate" runat="server" ControlToValidate="txtDate"
-                CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtDate" runat="server" ControlToValidate="txtDate"
+                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic"></asp:RequiredFieldValidator>
             &nbsp;&nbsp;&nbsp;&nbsp;
         </td>
         <td>

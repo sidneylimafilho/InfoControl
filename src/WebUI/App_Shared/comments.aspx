@@ -5,13 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Comentários </title>
-    <link id="Link1" href="~/App_Themes/GlassCyan/text.css" runat="server" type="text/css"
+    <link id="Link1" href="~/App_Shared/themes/glasscyan/text.css" runat="server" type="text/css"
         rel="Stylesheet" />
-    <link id="Link2" href="~/App_Themes/GlassCyan/Global.css" runat="server" type="text/css"
+    <link id="Link2" href="~/App_Shared/themes/glasscyan/Global.css" runat="server" type="text/css"
         rel="Stylesheet" />
-    <link id="Link3" href="~/App_Themes/GlassCyan/Controls/BUtton/BUtton.css" runat="server"
+    <link id="Link3" href="~/App_Shared/themes/glasscyan/Controls/BUtton/BUtton.css" runat="server"
         type="text/css" rel="Stylesheet" />
-    <link id="Link4" href="~/App_Themes/GlassCyan/Controls/Textbox/TextControl.css" runat="server"
+    <link id="Link4" href="~/App_Shared/themes/glasscyan/Controls/Textbox/TextControl.css" runat="server"
         type="text/css" rel="Stylesheet" />
     <script>
     var intervalID;

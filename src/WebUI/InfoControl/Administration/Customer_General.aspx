@@ -69,7 +69,7 @@
                                     <br />
                                     <asp:TextBox ID="txtUserName" runat="server" MaxLength="50">
                                     </asp:TextBox>
-                                    <asp:RegularExpressionValidator ID="ValEmail" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+                                    <asp:RegularExpressionValidator CssClass="cErr21" ID="ValEmail" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
                                         ControlToValidate="txtUserName" ValidationGroup="save" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                 </td>
                                 <td>
@@ -93,7 +93,7 @@
                                         Vendedor:<br />
                                         <asp:Panel ID="pnlShowVendor" runat="server" Visible="true">
                                             <asp:Label ID="lblVendor" runat="server"></asp:Label>&nbsp;&nbsp;<img id="imgUndoSelectedEmployee"
-                                                alt="Desfazer" src="../../App_Themes/_global/undo.gif" onclick="EditVendor()" /></asp:Panel>
+                                                alt="Desfazer" src="../../App_Shared/themes/glasscyan/undo.gif" onclick="EditVendor()" /></asp:Panel>
                                         <asp:DropDownList ID="cboVendors" runat="server" DataSourceID="odsSalesPerson" DataTextField="Name"
                                             DataValueField="EmployeeId" AppendDataBoundItems="True">
                                             <asp:ListItem Text="" Value=""></asp:ListItem>
@@ -113,7 +113,7 @@
                                         Vendedor adicional:<br />
                                         <asp:Panel ID="pnlShowSupplementalVendor" runat="server">
                                             <asp:Label ID="lblSupplementalVendor" runat="server"></asp:Label>&nbsp;&nbsp;<img
-                                                id="imgUndoSelectedSupplementalEmployee" alt="Desfazer" src="../../App_Themes/_global/undo.gif"
+                                                id="imgUndoSelectedSupplementalEmployee" alt="Desfazer" src="../../App_Shared/themes/glasscyan/undo.gif"
                                                 onclick="EditSupplementalVendor()" /></asp:Panel>
                                         <asp:DropDownList ID="cboSupplementalVendor" runat="server" DataSourceID="odsSalesPerson"
                                             DataTextField="Name" DataValueField="EmployeeId" AppendDataBoundItems="True">
@@ -171,7 +171,7 @@
                                             MaskType="Date" TargetControlID="txtAccountCreatedDate">
                                         </ajaxToolkit:MaskedEditExtender>
                                         <asp:CompareValidator ID="cmpTxtAccountCreatedDate" runat="server" ControlToValidate="txtAccountCreatedDate"
-                                            ValueToCompare="1/1/1753" Operator="GreaterThanEqual" CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"
+                                            ValueToCompare="1/1/1753" Operator="GreaterThanEqual"  ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"
                                             Type="Date" ValidationGroup="save">
                                         </asp:CompareValidator>
                                     </td>

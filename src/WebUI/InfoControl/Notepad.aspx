@@ -12,6 +12,6 @@
 <%@ Register Src="../App_Shared/Date.ascx" TagName="Date" TagPrefix="uc5" %>
 <%@ Register Src="../App_Shared/LeafBox.ascx" TagName="LeafBox" TagPrefix="uc6" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
-     <textarea plugin="htmlbox" options="{idir:'../App_themes/glasscyan/controls/Editor/'}" runat="server"  ID="txtDescription" />
+     <textarea plugin="htmlbox" options="{idir:'../App_Shared/themes/glasscyan/controls/Editor/'}" runat="server"  ID="txtDescription" />
    
 </asp:Content>

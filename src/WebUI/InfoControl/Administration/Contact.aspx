@@ -33,13 +33,13 @@
                         <td>
                             Nome:<br />
                             <asp:TextBox ID="txtName" runat="server" Columns="34" MaxLength="50" ValidationGroup="Save" />
-                            <asp:RequiredFieldValidator ID="reqTxtName" runat="server" ControlToValidate="txtName"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtName" runat="server" ControlToValidate="txtName"
                                 ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="Save"></asp:RequiredFieldValidator>
                         </td>
                         <td>
                             E-mail:<br />
                             <asp:TextBox ID="txtMail" runat="server" Columns="20" MaxLength="50" ValidationGroup="Save" />
-                            <asp:RegularExpressionValidator ID="reqTxtMail" runat="server" ControlToValidate="txtMail"
+                            <asp:RegularExpressionValidator CssClass="cErr21" ID="reqTxtMail" runat="server" ControlToValidate="txtMail"
                                 ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                                 ValidationGroup="Save"></asp:RegularExpressionValidator>
                         </td> 
@@ -52,13 +52,13 @@
                         <td>
                             Msn:<br />
                             <asp:TextBox ID="txtMsn" runat="server" Columns="20" MaxLength="50" />
-                            <asp:RegularExpressionValidator ID="ValEmail" runat="server" ErrorMessage="&nbsp&nbsp&nbsp"
+                            <asp:RegularExpressionValidator CssClass="cErr21" ID="ValEmail" runat="server" ErrorMessage="&nbsp&nbsp&nbsp"
                                 ControlToValidate="txtMsn" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                         </td>
                         <td>
                             Telefone:<br />
                             <asp:TextBox ID="txtPhone" runat="server" Mask="phone" Columns="10" MaxLength="50" />
-                            <asp:RequiredFieldValidator runat="server" ID="reqTxtPhone" ControlToValidate="txtPhone"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqTxtPhone" ControlToValidate="txtPhone"
                                 Display="Dynamic" ValidationGroup="InsertContact"
                                 ErrorMessage="&nbsp;&nbsp;">
                             </asp:RequiredFieldValidator>

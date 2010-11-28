@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Commons_AlphabeticalPaging"
     CodeBehind="/AlphabeticalPaging.ascx" %>
-<span class="cGrd11" style="border: 0px; width: 100%">
+<span class="ui-theme-table" style="border: 0px; width: 100%">
     <table cellpadding="0" cellspacing="0" align="center">
         <tr>
             <td>

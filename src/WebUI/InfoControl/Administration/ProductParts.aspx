@@ -33,14 +33,14 @@
                             <br />
                             clique na de nível superior e depois em &quot;Adicionar&quot;:<br />
                             <asp:TextBox ID="txtProductPart" runat="server" Text="" Columns="40" MaxLength="50" />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ControlToValidate="txtProductPart"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ControlToValidate="txtProductPart"></asp:RequiredFieldValidator>
                             <br />
                             Quantidade:<br />
                             <input id="btnDown" class="cUpDown11" tabindex="10" type="button" value="-" />
                             <asp:TextBox ID="txtQuantity" runat="server" Columns="5" MaxLength="5" TabIndex="0"></asp:TextBox>
                             <input id="btnUp" class="cUpDown11" tabindex="11" type="button" value="+" />
                             <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtQuantity"
-                                CssClass="cErr21" MaximumValue="10000" MinimumValue="0" Type="Integer" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="Grid"></asp:RangeValidator>
+                                 MaximumValue="10000" MinimumValue="0" Type="Integer" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="Grid"></asp:RangeValidator>
                             <ajaxToolkit:NumericUpDownExtender ID="NumericUpDownExtender1" runat="server" Maximum="10000"
                                 Minimum="0" TargetButtonDownID="btnDown" TargetButtonUpID="btnUp" TargetControlID="txtQuantity"
                                 Width="60">

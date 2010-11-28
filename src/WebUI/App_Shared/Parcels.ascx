@@ -39,8 +39,8 @@
                             <asp:DropDownList ID="cboPaymentMethod" runat="server" DataSourceID="odsPaymentMethod"
                                 DataTextField="Name" DataValueField="PaymentMethodId">
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqcboFinancierOperations" runat="server" ControlToValidate="cboPaymentMethod"
-                                CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboFinancierOperations" runat="server" ControlToValidate="cboPaymentMethod"
+                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
                         <td>
@@ -62,7 +62,7 @@
                         </td>                       
                         <td style="text-align: right" nowrap="nowrap">
                             &nbsp;&nbsp;&nbsp;
-                            <asp:ImageButton ID="btnAddParcel" runat="server" ImageUrl="~\App_Themes\GlassCyan\Controls\GridView\img\Add2.gif"
+                            <asp:ImageButton ID="btnAddParcel" runat="server" ImageUrl="~\App_Shared/themes/glasscyan\Controls\GridView\img\Add2.gif"
                                 ValidationGroup="AddParcel" OnClick="btnAddParcel_Click" CausesValidation="true" />
                         </td>
                     </tr>
@@ -124,8 +124,8 @@
                                     AppendDataBoundItems="true" >
                                     <asp:ListItem></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="valcboGrdPaymentMethod" runat="server" ControlToValidate="cboPaymentMethod"
-                                    CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="valcboGrdPaymentMethod" runat="server" ControlToValidate="cboPaymentMethod"
+                                     ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="save">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
                                   <asp:Label Text=' <%# Eval("PaymentMethod.Name") %>' runat="server" /> 

@@ -29,7 +29,7 @@
                         <td>
                             Habilidade:<br />
                             <asp:TextBox runat="server" ID="txtSkillName" MaxLength="30"></asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ID="reqSkillName"  ErrorMessage="&nbsp;&nbsp;" Display="Dynamic"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqSkillName"  ErrorMessage="&nbsp;&nbsp;" Display="Dynamic"
                                 ControlToValidate="txtSkillName"></asp:RequiredFieldValidator>
                         </td>
                         <td>
@@ -41,7 +41,7 @@
                         </td>
                         <td>
                             <br />
-                            <asp:ImageButton runat="server" ID="btnSave" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton runat="server" ID="btnSave" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 AlternateText="Salvar" OnClick="btnSave_Click" CausesValidation="true" />
                         </td>
                     </tr>

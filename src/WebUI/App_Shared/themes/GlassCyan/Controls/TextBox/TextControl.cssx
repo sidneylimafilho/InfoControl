@@ -1,0 +1,309 @@
+﻿.cDat11 textarea
+{
+	border: 2px solid #CECECE;
+	background-color: #FBFBFB;
+}
+.cDat11_hover textarea
+{
+	border: 2px solid #878787;
+	background-color: #FAFAFA;
+}
+.cDat11_focus textarea
+{
+	border: 2px solid #88CCCC;
+	background-color: #F3F7F7;
+}
+.cDat11_disabled textarea
+{
+	border: 2px solid #DCDDDD;
+	background-color: #DCDDDD;
+}
+
+.cDat11, .cDat11_hover, .cDat11_disabled, .cDynDat11, 
+.cDat11 input, .cDat11_hover input, .cDat11_disabled input, 
+.cDat11 span, .cDat11_hover span, .cDat11_focus span, .cDat11_disabled span, 
+.cDynDat11 span, .cDynDat11_hover span, .cDynDat11_focus span, .cDynDat11_disabled span
+{
+	height: 24px;	
+	font-size: 12px !important;	
+}
+
+.cDat11 input, .cDat11_hover input, .cDat11_focus input, .cDat11_disabled input, .cDynDat11 input, .cDynDat11_hover input, .cDynDat11_focus input, .cDynDat11_disabled input
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+	background-color: Transparent;
+	padding: 5px 3px 4px 5px;
+	border: 0px solid red;
+	height: auto;
+	color: #000000;
+	
+}
+
+.cDynDat11 input, .cDynDat11_hover input, .cDynDat11_focus input, .cDynDat11_disabled input
+{
+	padding-left:21px !important;
+}
+
+.cDat11 span, .cDat11_hover span, .cDat11_focus span, .cDat11_disabled span, .cDynDat11 span, .cDynDat11_hover span, .cDynDat11_focus span, .cDynDat11_disabled span
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+	border: 0px solid red;	
+	width: 5px;
+}
+
+
+.cDat11 input
+{
+	background: url(1/bg_left.gif) no-repeat;
+}
+.cDat11 span
+{
+	background: url(1/bg_right.gif) no-repeat;
+}
+.cDat11_hover input
+{
+	background: url(1/bg_left.gif) no-repeat 0px -23px;
+}
+.cDat11_hover span
+{
+	background: url(1/bg_right.gif) no-repeat 0px -23px;
+}
+.cDat11_focus input
+{
+	background: url(1/bg_left.gif) no-repeat 0px -46px;
+}
+.cDat11_focus span
+{
+	background: url(1/bg_right.gif) no-repeat 0px -46px;
+}
+.cDat11_disabled input
+{
+	background: url(1/bg_left.gif) no-repeat 0px -69px;
+}
+.cDat11_disabled span
+{
+	background: url(1/bg_right.gif) no-repeat 0px -69px;
+}
+
+
+
+
+
+
+
+
+
+.cDat21, .cDat21_hover, .cDat21 input, .cDat21_hover input, .cDat21_disabled input
+{
+}
+
+.cDat21 input
+{
+}
+
+.cDat21 input, .cDat21_hover input, .cDat21_focus input, .cDat21_disabled input
+{
+	background-color: Transparent;
+	font-size:24px !important;
+	font-weight:bold !important;
+	border: 0px;
+	height: 32px;
+	padding-right:2px;
+	color: #ccc !important;
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.cDat21 span, .cDat21_hover span, .cDat21_focus span, .cDat21_disabled span
+{
+	display: -moz-inline-box;
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 0px;
+	height: 32px;
+	width: 7px;
+}
+
+
+.cDat21 input
+{
+	background: url(2/bg_left.gif) no-repeat;
+}
+.cDat21 span
+{
+	background: url(2/bg_right.gif) no-repeat;
+}
+.cDat21_hover input
+{
+	background: url(2/bg_left.gif) no-repeat 0px -32px;
+}
+.cDat21_hover span
+{
+	background: url(2/bg_right.gif) no-repeat 0px -32px;
+}
+.cDat21_focus input
+{
+	background: url(2/bg_left.gif) no-repeat 0px -64px;
+}
+.cDat21_focus span
+{
+	background: url(2/bg_right.gif) no-repeat 0px -64px;
+}
+.cDat21_disabled input
+{
+	background: url(2/bg_left.gif) no-repeat 0px -96px;
+}
+.cDat21_disabled span
+{
+	background: url(2/bg_right.gif) no-repeat 0px -96px;
+}
+
+
+
+
+
+.cDynDat11 input
+{
+	background: url(AutoComplete/bg_left.gif) no-repeat;
+}
+.cDynDat11 span
+{
+	background: url(AutoComplete/bg_right.gif) no-repeat;
+}
+.cDynDat11_hover input
+{
+	background: url(AutoComplete/bg_left.gif) no-repeat 0px -23px;
+}
+.cDynDat11_hover span
+{
+	background: url(AutoComplete/bg_right.gif) no-repeat 0px -23px;
+}
+.cDynDat11_focus input
+{
+	background: url(AutoComplete/bg_left.gif) no-repeat 0px -46px;
+}
+.cDynDat11_focus span
+{
+	background: url(AutoComplete/bg_right.gif) no-repeat 0px -46px;
+}
+.cDynDat11_disabled input
+{
+	background: url(AutoComplete/bg_left.gif) no-repeat 0px -69px;
+}
+.cDynDat11_disabled span
+{
+	background: url(AutoComplete/bg_right.gif) no-repeat 0px -69px;
+}
+
+.cDynDat11 ul, .cDynDat11_hover ul, .cDynDat11_focus ul
+{
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.CompletionListItemCssClass, .CompletionListHighlightedItemCssClass
+{
+	border-bottom: 1px solid #E4E4E4;
+	border-left: 1px solid #E4E4E4;
+	border-right: 1px solid #E4E4E4;
+	border-collapse: collapse;
+}
+.CompletionListCssClass, .CompletionListItemCssClass, .CompletionListHighlightedItemCssClass
+{
+	background-color: White;
+}
+
+.CompletionListHighlightedItemCssClass
+{
+	color: #661100 !important;
+	background: url(../GridView/img/tdhover.png);
+	text-decoration: none;
+}
+
+.CompletionListItemCssClass, .CompletionListHighlightedItemCssClass
+{
+	color: #666666;
+	width: 100%;
+	cursor: hand;
+	cursor: pointer;
+	text-decoration: none;
+	border-collapse: collapse;
+	padding: 3px 3px 3px 3px;
+	vertical-align: middle;
+	display: block;
+}
+
+.CompletionListItemCssClass b
+{
+	color: #000000;
+}
+
+
+.ui-autocomplete {
+}
+.ui-autocomplete-results {
+overflow:hidden;
+padding:1px;
+position:absolute;
+z-index:99999;
+border:1px solid #d2e7e7;
+background-color: #90caca;
+}
+.ui-autocomplete-results ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+width:100%;
+background-color: #eef5f5;
+}
+.ui-autocomplete-results li {
+border-collapse:collapse;
+cursor:default;
+display:block;
+line-height:16px;
+margin:0;
+overflow:hidden;
+padding:2px 5px;
+white-space:nowrap;
+}
+
+
+
+.ui-autocomplete-results li.ui-autocomplete-even {
+background-color:#eef5f5;
+}
+.ui-autocomplete-results li.ui-autocomplete-odd {
+background-color:#FFF;
+}
+.ui-autocomplete-results li.ui-autocomplete-state-default {
+border:0px solid #FFFFFF;
+color:#0a6262;
+}
+
+.ui-autocomplete-results .match
+{
+    color:#000;
+}
+
+.ui-autocomplete-results li.ui-autocomplete-state-active, .ui-autocomplete-results li.ui-autocomplete-state-active .match{
+background: url(../GridView/img/tdhover.png) repeat-x scroll 0 0;
+border:0px solid #D3D3D3;
+color:#FFF;
+}
+.ui-autocomplete-loading {
+-moz-background-clip:border;
+-moz-background-inline-policy:continuous;
+-moz-background-origin:padding;
+}
+.ui-autocomplete-over {
+background-color:#0A246A;
+color:white;
+}
+

@@ -36,7 +36,7 @@
                                             runat="server" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator runat="server" ID="reqSelContact" ErrorMessage="&nbsp&nbsp&nbsp"
+                                        <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqSelContact" ErrorMessage="&nbsp&nbsp&nbsp"
                                             ControlToValidate="selContact"> </asp:RequiredFieldValidator>
                                     </td>
                                 </tr>

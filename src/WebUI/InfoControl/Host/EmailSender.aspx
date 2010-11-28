@@ -38,7 +38,7 @@
                             <br />
                             <asp:TextBox runat="server" ID="txtSubject" MaxLength="100" Width="200px" param="subject" />
                             
-                            <asp:RequiredFieldValidator ID="reqTxtSubject" runat="server" ControlToValidate="txtSubject"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtSubject" runat="server" ControlToValidate="txtSubject"
                                 ErroMessage="&nbsp&nbsp&nbsp" />
                         </td>
                     </tr>

@@ -21,12 +21,12 @@
                 <td align="left">
                     Nome:<br />
                     <asp:TextBox ID="txtName" CssClass="cDat11" runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtName" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ControlToValidate="txtName" ErrorMessage="*"></asp:RequiredFieldValidator>
                     <br />
                     E-mail:<br />
                     <asp:TextBox ID="txtMail" CssClass="cDat11 " runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtMail" ErrorMessage="*"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator runat="server" ControlToValidate="txtMail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
+                    <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ControlToValidate="txtMail" ErrorMessage="*"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator CssClass="cErr21" runat="server" ControlToValidate="txtMail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
                         ErrorMessage="E-mail inválido!"></asp:RegularExpressionValidator>
                     <br />
                     Website:<br />
@@ -39,7 +39,7 @@
                 <td>
                     <asp:TextBox ID="txtDescription" CssClass="cDat11" runat="server" Height="100px"
                         TextMode="MultiLine" Width="99%" onfocus="clearInterval(intervalID);" onblur="Refresh();"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="valtxtDescription" runat="server" ControlToValidate="txtDescription"
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valtxtDescription" runat="server" ControlToValidate="txtDescription"
                         ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="saveComment" Display="Dynamic"></asp:RequiredFieldValidator>
                     <asp:Label runat="server" ID="lblSelectFile" Text="Selecionar arquivo:"></asp:Label><br />
                     <asp:FileUpload ID="fupComments" runat="server" />

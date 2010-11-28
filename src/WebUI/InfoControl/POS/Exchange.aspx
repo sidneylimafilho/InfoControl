@@ -36,7 +36,7 @@ Inherits="Company_POS_Exchange" Title="Devolução" Codebehind="Exchange.aspx.cs
                                     CultureName="pt-BR" InputDirection="RightToLeft" Mask="999999999" MaskType="Number"
                                     TargetControlID="txtSaleNumber">
                                 </ajaxToolkit:MaskedEditExtender>
-                                <asp:ImageButton ID="btnAddSale" runat="server" ImageUrl="~\App_Themes\GlassCyan\Controls\GridView\img\Add2.gif"
+                                <asp:ImageButton ID="btnAddSale" runat="server" ImageUrl="~\App_Shared/themes/glasscyan\Controls\GridView\img\Add2.gif"
                                     OnClick="btnAddSale_Click" />
                                 <br />
                             </td>
@@ -122,7 +122,7 @@ Inherits="Company_POS_Exchange" Title="Devolução" Codebehind="Exchange.aspx.cs
                                 <td>
                                     <asp:DropDownList ID="cboProducts" runat="server">
                                     </asp:DropDownList>
-                                    <asp:ImageButton ID="btnDevolution" runat="server" ImageUrl="~\App_Themes\Glass\Controls\GridView\img\Add2.gif"
+                                    <asp:ImageButton ID="btnDevolution" runat="server" ImageUrl="~\App_Shared/modules\Glass\Controls\GridView\img\Add2.gif"
                                         OnClick="btnDevolution_Click" />
                                 </td>
                             </tr>

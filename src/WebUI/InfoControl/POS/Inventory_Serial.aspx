@@ -30,7 +30,7 @@
                         <td>
                             Serial:<br />
                             <asp:TextBox ID="txtSerial" runat="server" MaxLength="30"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqTxtSerial" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtSerial" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="txtSerial" ValidationGroup="saveInventorySerial"></asp:RequiredFieldValidator>
                         </td>
                         <td>
@@ -42,7 +42,7 @@
                             <uc4:date id="ucDtDueDate" ValidationGroup="saveInventorySerial" runat="server" />
                         </td>
                         <td>
-                            <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Themes\GlassCyan\Controls\GridView\img\Add2.gif"
+                            <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Shared/themes/glasscyan\Controls\GridView\img\Add2.gif"
                                 AlternateText="Adicionar serial" OnClick="btnAdd_Click" ValidationGroup="saveInventorySerial" />
                         </td>
                     </tr>

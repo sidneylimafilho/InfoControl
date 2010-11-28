@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="True" StylesheetTheme="Site" Codebehind="App_Offline.aspx.cs"
+﻿<%@ Page Language="C#" AutoEventWireup="True" Codebehind="App_Offline.aspx.cs"
     Inherits="App_Offline" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -41,7 +41,7 @@
             </tr>
         </table>
         <div id="footer">
-            <img id="Img2" runat="server" src="~/App_Themes/_global/Ooops.gif" alt="Ooops" />
+            <img id="Img2" runat="server" src="~/App_Shared/themes/glasscyan/Ooops.gif" alt="Ooops" />
             <table class="cLeafBox21" width="500px">
                 <tr class="top">
                     <td class="left">

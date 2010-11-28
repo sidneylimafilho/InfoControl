@@ -33,7 +33,7 @@
                                     Equipamento:<br />
                                     <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>' Columns="40"
                                         MaxLength="50" ValidationGroup="InsertEquipment"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName"
                                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertEquipment"
                                         Width="16px"></asp:RequiredFieldValidator>
                                 </td>
@@ -61,7 +61,7 @@
                                     Serial:<br />
                                     <asp:TextBox ID="txtSerialNumber" Text='<%# Bind("SerialNumber") %>' runat="server"
                                         Columns="30" MaxLength="50" ValidationGroup="InsertEquipment"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="reqtxtSerialNumber" runat="server" ControlToValidate="txtSerialNumber"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtSerialNumber" runat="server" ControlToValidate="txtSerialNumber"
                                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertEquipment"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>
@@ -104,10 +104,10 @@
                                                 </ajaxToolkit:MaskedEditExtender>
                                                 <asp:CompareValidator ID="valtxtWarrantyBeginDate" runat="server" ControlToValidate="txtWarrantyBeginDate"
                                                     ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="GreaterThanEqual" ValueToCompare="1/1/1753"
-                                                    Type="Date" CssClass="cErr21" ValidationGroup="InsertEquipment"></asp:CompareValidator>
+                                                    Type="Date"  ValidationGroup="InsertEquipment"></asp:CompareValidator>
                                             </td>
                                             <td valign="bottom">
-                                                <asp:Image ID="btnCalendar" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                <asp:Image ID="btnCalendar" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                     Style="cursor: pointer;" />
                                                 <ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server" CssClass="cCal11"
                                                     PopupButtonID="btnCalendar" TargetControlID="txtWarrantyBeginDate">
@@ -129,10 +129,10 @@
                                                 </ajaxToolkit:MaskedEditExtender>
                                                 <asp:CompareValidator ID="valtxtWarrantyEndDate" runat="server" ControlToValidate="txtWarrantyEndDate"
                                                     ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertEquipment" Operator="GreaterThanEqual"
-                                                    ValueToCompare="1/1/1753" Type="Date" CssClass="cErr21"></asp:CompareValidator>
+                                                    ValueToCompare="1/1/1753" Type="Date" ></asp:CompareValidator>
                                             </td>
                                             <td valign="bottom">
-                                                <asp:Image ID="Image1" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                <asp:Image ID="Image1" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                     Style="cursor: pointer;" />
                                                 <ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" CssClass="cCal11"
                                                     PopupButtonID="btnCalendar" TargetControlID="txtWarrantyEndDate">

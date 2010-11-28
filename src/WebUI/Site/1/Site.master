@@ -6,7 +6,7 @@
 <%@ Register Src='~/site/_modules/Products.ascx' TagName='Products' TagPrefix='vfx' %>
 <%@ Register Src='~/site/_modules/Tags.ascx' TagName='Tags' TagPrefix='vfx' %>
 <%@ Register Src='~/site/_modules/Search.ascx' TagName='Search' TagPrefix='vfx' %>
-<%@ Register Src='~/App_Modules/AccessControl/Login.ascx' TagName='Login' TagPrefix='vfx' %>
+<%@ Register Src='~/App_Shared/Modules/AccessControl/Login.ascx' TagName='Login' TagPrefix='vfx' %>
 <%@ Register Src='~/site/_modules/WebPage.ascx' TagName='WebPage' TagPrefix='vfx' %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

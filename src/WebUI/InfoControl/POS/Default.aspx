@@ -22,7 +22,7 @@ Só é possível elaborar uma proposta para um cliente cadastrado .
                             </asp:LinkButton>
                         </td>
                         <td>
-                            <div style="background: url(../../App_Themes/_global/Company/flow_right.gif) no-repeat;
+                            <div style="background: url(../../App_Shared/themes/glasscyan/Company/flow_right.gif) no-repeat;
                                 background-position: center right; width: 50px; height: 32px;">
                                 &nbsp;
                             </div>
@@ -42,7 +42,7 @@ Os próximos passos são : a emissão da NOTA FISCAL (caso não tenha sido emiti
                             </asp:LinkButton>
                         </td>
                         <td>
-                            <div style="background: url(../../App_Themes/_global/Company/flow_right.gif) no-repeat;
+                            <div style="background: url(../../App_Shared/themes/glasscyan/Company/flow_right.gif) no-repeat;
                                 background-position: center right; width: 50px; height: 32px;">
                                 &nbsp;
                             </div>
@@ -77,7 +77,7 @@ Os próximos passos são : a emissão da NOTA FISCAL (caso não tenha sido emiti
                             &nbsp;
                         </td>
                         <td>
-                            <div style="background: url(../../App_Themes/_global/Company/flow_bottom.gif) no-repeat;
+                            <div style="background: url(../../App_Shared/themes/glasscyan/Company/flow_bottom.gif) no-repeat;
                                 width: 24px; background-position: bottom; height: 32px;">
                                 &nbsp;
                             </div>
@@ -86,7 +86,7 @@ Os próximos passos são : a emissão da NOTA FISCAL (caso não tenha sido emiti
                             &nbsp;
                         </td>
                         <td>
-                            <div style="background: url(../../App_Themes/_global/Company/flow_top.gif) no-repeat;
+                            <div style="background: url(../../App_Shared/themes/glasscyan/Company/flow_top.gif) no-repeat;
                                 width: 24px; height: 32px;">
                                 &nbsp;
                             </div>

@@ -18,7 +18,7 @@
 
       <siteMapNode url="~/InfoControl/Host/SystemParameters.aspx" permissionRequired="SystemParameters" title="Parâmetros do Sistema"  description="" />
       <!--<siteMapNode url="~/InfoControl/Site/SiteMap.aspx"  title="Mapa do Site"  description="" />-->
-      <siteMapNode url="~/App_Modules/AccessControl/EventViewer.aspx" permissionRequired="Event" title="Visualizador de Eventos" />
+      <siteMapNode url="~/App_Shared/modules/AccessControl/EventViewer.aspx" permissionRequired="Event" title="Visualizador de Eventos" />
       <!--<siteMapNode url="~/InfoControl/Host/PaymentMethods.aspx" title="Formas de Pagamento" permissionRequired="PaymentMethod" description="" />-->
       <siteMapNode url="~/InfoControl/Host/Companies.aspx" permissionRequired="CompanySearch" title="Empresas Cadastradas"  description="" />
 
@@ -63,7 +63,7 @@
       </siteMapNode>
       <siteMapNode url="" title="Relatórios">
         <siteMapNode url="~/InfoControl/Host/Reports.aspx" permissionRequired="ReportsHost" title="Relatórios Cadastrados" description=""   />
-        <siteMapNode url="~/App_Modules/Reports/dynamicReports.aspx" title="Esquema da tabela"  permissionRequired="ReportAdmin"  ></siteMapNode>
+        <siteMapNode url="~/App_Shared/modules/Reports/dynamicReports.aspx" title="Esquema da tabela"  permissionRequired="ReportAdmin"  ></siteMapNode>
       </siteMapNode>
       <siteMapNode url="" title="Site">
         <siteMapNode url="~/InfoControl/Host/SiteTemplates.aspx" title="Modelos de sites"  permissionRequired="SiteBuilder"></siteMapNode>
@@ -318,7 +318,7 @@
     -->
     <siteMapNode title=" Relatórios"
                  permissionRequired="Reports"
-                 url="~/App_Modules/Reports/Dynamic/ReportGenerator.aspx"
+                 url="~/App_Shared/modules/Reports/Dynamic/ReportGenerator.aspx"
                  ImageCollapsed="reports.gif"
                  ImageHoverCollapsed="reports_hover.gif"
                  ImageExpanded="reports_hover.gif" ></siteMapNode>
@@ -332,9 +332,9 @@
     <siteMapNode title=" Controle de Acesso"
                  startPageUrl="http://www.vivina.com.br/site/Ajuda/InfoControl-ERP/Controle-de-Acesso,122.aspx"
                  ImageCollapsed="accessControl.gif"  ImageHoverCollapsed="accessControl_hover.gif" ImageExpanded="accessControl_hover.gif" >
-      <siteMapNode url="~/App_Modules/AccessControl/ChangePassword.aspx" permissionRequired="ChangePassword" title="Alterar Minha Senha" />
-      <siteMapNode url="~/App_Modules/AccessControl/Roles.aspx" permissionRequired="Roles" title="Perfil"    description="" />
-      <siteMapNode url="~/App_Modules/AccessControl/Users.aspx" permissionRequired="Users" title="Usuários"   description="" />
+      <siteMapNode url="~/App_Shared/modules/AccessControl/ChangePassword.aspx" permissionRequired="ChangePassword" title="Alterar Minha Senha" />
+      <siteMapNode url="~/App_Shared/modules/AccessControl/Roles.aspx" permissionRequired="Roles" title="Perfil"    description="" />
+      <siteMapNode url="~/App_Shared/modules/AccessControl/Users.aspx" permissionRequired="Users" title="Usuários"   description="" />
     </siteMapNode>
   </siteMapNode>
 </siteMap>

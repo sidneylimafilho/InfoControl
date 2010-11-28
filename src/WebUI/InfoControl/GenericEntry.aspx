@@ -8,7 +8,7 @@
     <h1>
         <%=Request["Title"] %>
         <%--        <a href="javascript:void(0);" class="HelpTip">
-            <img id="Img2" runat="server" border="0" src="~/App_themes/_global/ico_ajuda.gif" />
+            <img id="Img2" runat="server" border="0" src="~/App_Shared/themes/glasscyan/ico_ajuda.gif" />
             <span class="msg">• Voltado à gestão contábil da empresa, “CENTRO DE CUSTOS” é onde
                 você divide de onde vem cada ganho e cada custo da empresa, separando assim em setores
                 (administrativo, operacional, etc.). Assim como foi citado em “PLANO DE CONTAS”,
@@ -43,7 +43,7 @@
                             <EditItemTemplate>
                                 <asp:TextBox ID="txtNome" CssClass="cDat11" runat="server" Width="90%" MaxLength="50"
                                     Text='<%# Bind("Name") %>'></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtNome"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtNome"
                                     ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="Salvar" Display="Dynamic"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>

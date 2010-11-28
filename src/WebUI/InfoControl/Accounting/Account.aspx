@@ -30,28 +30,28 @@
                                     <asp:DropDownList ID="cboBank" runat="server" DataSourceID="odsBank" DataTextField="Name"
                                         DataValueField="BankId">
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqBankComboBox" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                        CssClass="cErr21" runat="server" ValidationGroup="Save" ControlToValidate="cboBank"></asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqBankComboBox" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                         runat="server" ValidationGroup="Save" ControlToValidate="cboBank"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>
                                     Agência:<br />
                                     <asp:TextBox ID="txtAgency" runat="server" Columns="10"
                                         MaxLength="10" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                         ControlToValidate="txtAgency" ValidationGroup="Save"></asp:RequiredFieldValidator>
                                 </td>                           
                                 <td>
                                     Número da Conta:<br />
                                     <asp:TextBox ID="txtAccountNumber" runat="server" 
                                         Columns="10" MaxLength="10" />
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                         runat="server" ValidationGroup="Save" ControlToValidate="txtAccountNumber"></asp:RequiredFieldValidator>
                                 </td>
                                 <tr>
                                 <td>
                                     E-mail da Agência:<br />
                                     <asp:TextBox ID="txtAgencyMail" runat="server" Columns="18" MaxLength="18" />
-                                    <asp:RegularExpressionValidator  ID="RegularExpressionValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                    <asp:RegularExpressionValidator CssClass="cErr21"  ID="RegularExpressionValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                         runat="server" ControlToValidate="txtAgencyMail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                 </td>
                           
@@ -61,7 +61,7 @@
                                     <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender1" runat="server" TargetControlID="txtAgencyPhone"
                                         ClearMaskOnLostFocus="true" Mask="(99)9999-9999" MaskType="Number">
                                     </ajaxToolkit:MaskedEditExtender>
-                                  <asp:RequiredFieldValidator runat="server" ValidationGroup="Save" ControlToValidate="txtAgencyPhone"
+                                  <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ValidationGroup="Save" ControlToValidate="txtAgencyPhone"
                                   ErrorMessage="&nbsp&nbsp&nbsp"> 
                                   
                                   </asp:RequiredFieldValidator>

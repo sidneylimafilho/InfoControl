@@ -105,47 +105,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Modules\AccessControl\ChangePassword.aspx" />
-    <Content Include="App_Modules\AccessControl\CreateUser.ascx" />
-    <Content Include="App_Modules\AccessControl\CreateUser.aspx" />
-    <Content Include="App_Modules\AccessControl\EventAdd.aspx" />
-    <Content Include="App_Modules\AccessControl\EventViewer.aspx" />
-    <Content Include="App_Modules\AccessControl\EventViewer.aspx.js" />
-    <Content Include="App_Modules\AccessControl\Functions.aspx" />
-    <Content Include="App_Modules\AccessControl\Login.ascx" />
-    <Content Include="App_Modules\AccessControl\PasswordRecoveryMessageBody.htm" />
-    <Content Include="App_Modules\AccessControl\Role.aspx" />
-    <Content Include="App_Modules\AccessControl\Roles.aspx" />
-    <Content Include="App_Modules\AccessControl\Role_General.ascx" />
-    <Content Include="App_Modules\AccessControl\Role_Permissions.ascx" />
-    <Content Include="App_Modules\AccessControl\SelectUser.ascx" />
-    <Content Include="App_Modules\AccessControl\User.aspx" />
-    <Content Include="App_Modules\AccessControl\Users.aspx" />
-    <Content Include="App_Modules\AccessControl\Users.aspx.js" />
-    <Content Include="App_Modules\AccessControl\User_General.aspx" />
-    <Content Include="App_Modules\AccessControl\User_Roles.aspx" />
-    <Content Include="App_Modules\Reports\Default.aspx" />
-    <Content Include="App_Modules\Reports\DynamicReport.aspx" />
-    <Content Include="App_Modules\Reports\DynamicReportField.aspx" />
-    <Content Include="App_Modules\Reports\DynamicReportFields.aspx" />
-    <Content Include="App_Modules\Reports\DynamicReports.aspx" />
-    <Content Include="App_Modules\Reports\DynamicReportVision.aspx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator.aspx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_Columns.ascx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_Filter.ascx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_Finish.ascx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_Sort.ascx" />
-    <Content Include="App_Modules\Reports\Dynamic\ReportGenerator_Start.ascx" />
-    <Content Include="App_Modules\Reports\images\down_plus.png" />
-    <Content Include="App_Modules\Reports\images\funnel_add.gif" />
-    <Content Include="App_Modules\Reports\images\funnel_delete.gif" />
-    <Content Include="App_Modules\Reports\images\garbage_empty.gif" />
-    <Content Include="App_Modules\Reports\images\NominalReport.gif" />
-    <Content Include="App_Modules\Reports\images\StatisticReport.gif" />
-    <Content Include="App_Modules\Reports\ReportViewer.aspx" />
-    <Content Include="App_Modules\Reports\Static\Default.aspx" />
     <Content Include="App_Shared\JS\jquery.notification.js" />
     <Content Include="App_Shared\JS\jquery.meioMask.js" />
     <Content Include="App_Shared\JS\jquery.serializer.js" />
@@ -159,23 +118,10 @@
     <Content Include="App_Shared\JS\jquery.ui.htmlbox.js" />
     <Content Include="App_Shared\JS\jquery.ui.position.js" />
     <Content Include="App_Shared\JS\jquery.ui.widget.js" />
-    <Content Include="App_Themes\_global\Checkout\amex.png" />
-    <Content Include="App_Themes\_global\Checkout\boleto-bancario.png" />
-    <Content Include="App_Themes\_global\Checkout\cardsample.png" />
-    <Content Include="App_Themes\_global\Checkout\hipercard.png" />
-    <Content Include="App_Themes\_global\Checkout\lock.png" />
-    <Content Include="App_Themes\_global\Checkout\mastercard.png" />
-    <Content Include="App_Themes\_global\Checkout\pagseguro.png" />
-    <Content Include="App_Themes\_global\Checkout\transferencia-bb.png" />
-    <Content Include="App_Themes\_global\Checkout\transferencia-itau.png" />
-    <Content Include="App_Themes\_global\Checkout\transferencia-realpague.png" />
-    <Content Include="App_Themes\_global\Checkout\visa.png" />
-    <Content Include="App_Themes\_global\Menu\help.png" />
     <Content Include="InfoControl\Host\EmailSender.aspx" />
     <Content Include="InfoControl\_MailTemplates\Sample.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="InfoControl\_MailTemplates\MailTemplate.Master" />
-    <Content Include="App_Browsers\ControlsAdapter.browser" />
     <Content Include="InfoControl\Accounting\ExpenditureAuthorization.aspx" />
     <Content Include="InfoControl\Accounting\ExpenditureAuthorizations.aspx" />
     <Content Include="InfoControl\Administration\MyInfoControl\Statement.aspx" />
@@ -197,235 +143,235 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Modules\AccessControl\ChangePassword.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\ChangePassword.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\CreateUser.ascx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\CreateUser.ascx.cs">
       <DependentUpon>CreateUser.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\CreateUser.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\CreateUser.ascx.designer.cs">
       <DependentUpon>CreateUser.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\CreateUser.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\CreateUser.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\EventAdd.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\EventAdd.aspx.cs">
       <DependentUpon>EventAdd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\EventAdd.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\EventAdd.aspx.designer.cs">
       <DependentUpon>EventAdd.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\EventViewer.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\EventViewer.aspx.cs">
       <DependentUpon>EventViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\EventViewer.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\EventViewer.aspx.designer.cs">
       <DependentUpon>EventViewer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Functions.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Functions.aspx.cs">
       <DependentUpon>Functions.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Functions.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Functions.aspx.designer.cs">
       <DependentUpon>Functions.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Login.ascx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Login.ascx.cs">
       <DependentUpon>Login.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Login.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Login.ascx.designer.cs">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Role.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Role.aspx.cs">
       <DependentUpon>Role.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Role.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Role.aspx.designer.cs">
       <DependentUpon>Role.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Roles.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Roles.aspx.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Roles.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Roles.aspx.designer.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Role_General.ascx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Role_General.ascx.cs">
       <DependentUpon>Role_General.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Role_General.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Role_General.ascx.designer.cs">
       <DependentUpon>Role_General.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Role_Permissions.ascx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Role_Permissions.ascx.cs">
       <DependentUpon>Role_Permissions.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Role_Permissions.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Role_Permissions.ascx.designer.cs">
       <DependentUpon>Role_Permissions.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\SelectUser.ascx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\SelectUser.ascx.cs">
       <DependentUpon>SelectUser.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\SelectUser.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\SelectUser.ascx.designer.cs">
       <DependentUpon>SelectUser.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\User.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\User.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Users.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\Users.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\User_General.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\User_General.aspx.cs">
       <DependentUpon>User_General.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\User_General.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\User_General.aspx.designer.cs">
       <DependentUpon>User_General.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\User_Roles.aspx.cs">
+    <Compile Include="App_Shared\modules\AccessControl\User_Roles.aspx.cs">
       <DependentUpon>User_Roles.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\AccessControl\User_Roles.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\AccessControl\User_Roles.aspx.designer.cs">
       <DependentUpon>User_Roles.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Alerts\Alerts.svc.cs">
+    <Compile Include="App_Shared\modules\Alerts\Alerts.svc.cs">
       <DependentUpon>Alerts.svc</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Chat\ChatRoom.aspx.cs">
+    <Compile Include="App_Shared\modules\Chat\ChatRoom.aspx.cs">
       <DependentUpon>ChatRoom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Default.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Default.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReport.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReport.aspx.cs">
       <DependentUpon>DynamicReport.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReport.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReport.aspx.designer.cs">
       <DependentUpon>DynamicReport.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReportField.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReportField.aspx.cs">
       <DependentUpon>DynamicReportField.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReportField.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReportField.aspx.designer.cs">
       <DependentUpon>DynamicReportField.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReportFields.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReportFields.aspx.cs">
       <DependentUpon>DynamicReportFields.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReportFields.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReportFields.aspx.designer.cs">
       <DependentUpon>DynamicReportFields.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReports.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReports.aspx.cs">
       <DependentUpon>DynamicReports.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReports.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReports.aspx.designer.cs">
       <DependentUpon>DynamicReports.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReportVision.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReportVision.aspx.cs">
       <DependentUpon>DynamicReportVision.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\DynamicReportVision.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\DynamicReportVision.aspx.designer.cs">
       <DependentUpon>DynamicReportVision.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator.aspx.cs">
       <DependentUpon>ReportGenerator.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator.aspx.designer.cs">
       <DependentUpon>ReportGenerator.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Columns.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Columns.ascx.cs">
       <DependentUpon>ReportGenerator_Columns.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Columns.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Columns.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Columns.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Filter.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Filter.ascx.cs">
       <DependentUpon>ReportGenerator_Filter.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Filter.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Filter.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Filter.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Finish.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Finish.ascx.cs">
       <DependentUpon>ReportGenerator_Finish.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Finish.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Finish.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Finish.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx.cs">
       <DependentUpon>ReportGenerator_GroupBy.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx.designer.cs">
       <DependentUpon>ReportGenerator_GroupBy.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx.cs">
       <DependentUpon>ReportGenerator_MatrixRows.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx.designer.cs">
       <DependentUpon>ReportGenerator_MatrixRows.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Sort.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Sort.ascx.cs">
       <DependentUpon>ReportGenerator_Sort.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Sort.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Sort.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Sort.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Start.ascx.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Start.ascx.cs">
       <DependentUpon>ReportGenerator_Start.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Dynamic\ReportGenerator_Start.ascx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Start.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Start.ascx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\ReportViewer.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\ReportViewer.aspx.cs">
       <DependentUpon>ReportViewer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\ReportViewer.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\ReportViewer.aspx.designer.cs">
       <DependentUpon>ReportViewer.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Modules\Reports\Static\Default.aspx.cs">
+    <Compile Include="App_Shared\modules\Reports\Static\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Modules\Reports\Static\Default.aspx.designer.cs">
+    <Compile Include="App_Shared\modules\Reports\Static\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\Parcels.ascx.designer.cs">
@@ -2704,13 +2650,13 @@
       <LastGenOutput>Resource.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
-    <EmbeddedResource Include="App_Modules\Chat\ChatRoom.aspx.resx">
-      <DependentUpon>ChatRoom.aspx.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App_Modules\Reports\Report.rdlc" />
     <Content Include="App_Shared\Address\App_LocalResources\Address.ascx.resx">
       <SubType>Designer</SubType>
     </Content>
+    <EmbeddedResource Include="App_Shared\modules\Chat\ChatRoom.aspx.resx">
+      <DependentUpon>ChatRoom.aspx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Shared\modules\Reports\Report.rdlc" />
     <EmbeddedResource Include="InfoControl\POS\StockDeposit.aspx.resx">
       <DependentUpon>StockDeposit.aspx.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -2732,12 +2678,6 @@
     <None Include="App_Shared\RadControls\Treeview\Skins\Brackets\Orange\Thumbs.db" />
     <None Include="App_Shared\RadControls\Treeview\Skins\glassy\Blue\Thumbs.db" />
     <None Include="App_Shared\RadControls\Treeview\Skins\glassy\Green\Thumbs.db" />
-    <Content Include="App_Modules\Alerts\Alerts.svc" />
-    <Content Include="App_Modules\Alerts\Alerts.svc.js" />
-    <Content Include="App_Modules\Chat\chat.js" />
-    <Content Include="App_Modules\Chat\Chat.svc" />
-    <Content Include="App_Modules\Chat\Chat.svc.js" />
-    <Content Include="App_Modules\Chat\ChatRoom.aspx" />
     <Content Include="App_Shared\JS\FilesCombiner.ascx" />
     <Content Include="App_Shared\JS\jquery-1.4.2.js" />
     <Content Include="App_Shared\JS\jquery-vsdoc.js" />
@@ -2770,65 +2710,750 @@
     <Content Include="App_Shared\JS\smartclient\UnitTests\index.html" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\test.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\ViewPage1.aspx" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\arrowLeft.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\arrowRight.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\btnCalendar.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\btnCalendar.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\Calendar_bg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ContextMenuInputBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\fastNavLeft.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\fastNavRight.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\HoverBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\MonthYearBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\Pixel_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\selectBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_glass_55_fcf0ba_1x400.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_15_006666_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-soft_25_fca43e_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-icons_808080_256x240.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-icons_847e71_256x240.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-icons_8dc262_256x240.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-icons_eeeeee_256x240.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Calendar\images\ui-icons_ffffff_256x240.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\bold.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\center.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\code.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\copy.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\cut.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\hr.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\image.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\indent.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\italic.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\justify.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\link.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\ol.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\outdent.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\paragraph.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\paste.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\redo.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\removeformat.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\separator.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\strike.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\striptags.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\sub.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\sup.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\ul.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\underline.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\undo.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Editor\unlink.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TreeView\line.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TreeView\minus.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TreeView\plus.gif" />
-    <Content Include="App_Themes\GlassCyan\FilesCombiner.ascx" />
+    <Content Include="App_Shared\modules\AccessControl\ChangePassword.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\CreateUser.ascx" />
+    <Content Include="App_Shared\modules\AccessControl\CreateUser.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\EventAdd.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\EventViewer.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\EventViewer.aspx.js" />
+    <Content Include="App_Shared\modules\AccessControl\Functions.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\Login.ascx" />
+    <Content Include="App_Shared\modules\AccessControl\PasswordRecoveryMessageBody.htm" />
+    <Content Include="App_Shared\modules\AccessControl\Role.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\Roles.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\Role_General.ascx" />
+    <Content Include="App_Shared\modules\AccessControl\Role_Permissions.ascx" />
+    <Content Include="App_Shared\modules\AccessControl\SelectUser.ascx" />
+    <Content Include="App_Shared\modules\AccessControl\User.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\Users.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\Users.aspx.js" />
+    <Content Include="App_Shared\modules\AccessControl\User_General.aspx" />
+    <Content Include="App_Shared\modules\AccessControl\User_Roles.aspx" />
+    <Content Include="App_Shared\modules\Alerts\Alerts.svc" />
+    <Content Include="App_Shared\modules\Alerts\Alerts.svc.js" />
+    <Content Include="App_Shared\modules\Chat\chat.js" />
+    <Content Include="App_Shared\modules\Chat\Chat.svc" />
+    <Content Include="App_Shared\modules\Chat\Chat.svc.js" />
+    <Content Include="App_Shared\modules\Chat\ChatRoom.aspx" />
+    <Content Include="App_Shared\modules\Reports\Default.aspx" />
+    <Content Include="App_Shared\modules\Reports\DynamicReport.aspx" />
+    <Content Include="App_Shared\modules\Reports\DynamicReportField.aspx" />
+    <Content Include="App_Shared\modules\Reports\DynamicReportFields.aspx" />
+    <Content Include="App_Shared\modules\Reports\DynamicReports.aspx" />
+    <Content Include="App_Shared\modules\Reports\DynamicReportVision.aspx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator.aspx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Columns.ascx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Filter.ascx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Finish.ascx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Sort.ascx" />
+    <Content Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Start.ascx" />
+    <Content Include="App_Shared\modules\Reports\images\down_plus.png" />
+    <Content Include="App_Shared\modules\Reports\images\funnel_add.gif" />
+    <Content Include="App_Shared\modules\Reports\images\funnel_delete.gif" />
+    <Content Include="App_Shared\modules\Reports\images\garbage_empty.gif" />
+    <Content Include="App_Shared\modules\Reports\images\NominalReport.gif" />
+    <Content Include="App_Shared\modules\Reports\images\StatisticReport.gif" />
+    <Content Include="App_Shared\modules\Reports\ReportViewer.aspx" />
+    <Content Include="App_Shared\modules\Reports\Static\Default.aspx" />
+    <Content Include="App_Shared\themes\GlassCyan\AccessControl\roles.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\AccessControl\users.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\arrowdouble_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\arrowdouble_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\arrow_down.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\arrow_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\arrow_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\arrow_up.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\background.jpg" />
+    <Content Include="App_Shared\themes\GlassCyan\background.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\amex.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\boleto-bancario.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\cardsample.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\hipercard.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\lock.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\mastercard.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\pagseguro.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\transferencia-bb.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\transferencia-itau.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\transferencia-realpague.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Checkout\visa.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Accounting\bt_Bill.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Accounting\bt_Invoice.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Accounting\Cash-Check.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bg_EntranceReceipt.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bg_OutletReceipt.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bt_cancelar_pagamento.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bt_concluir_venda.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bt_concluir_venda2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bt_removeCustomer.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bt_saveBudget.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\bt_selecionar_cliente2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Chart-Pie.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\desconto.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\flow_bottom.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\flow_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\flow_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\flow_top.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Forward.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\insert.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Product_warning.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\quitar.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\Accounting\Report1.GIF" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\Accounting\Report2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\down_plus.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\funnel_add.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\funnel_delete.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\garbage_empty.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\NominalReport.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Reports\StatisticReport.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_clientes.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_clientes_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_concluir_venda.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_estoque.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_estoque_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_fechamento_caixa.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_fechamento_caixa_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_gerador_proposta.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_gerador_proposta_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_historico_venda.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_historico_venda_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_mapa_vendas.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_mapa_vendas_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_nota_fiscal.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_ponto_venda.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_ponto_venda_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_prospect_builder.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_prospect_builder_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_raio_x.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_raio_x_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_rma.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_rma_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_sangria.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_sangria_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_transferencia.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_transferencia_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_troca.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Sales\bt_troca_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Services\bt_chamados.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Services\bt_ordem_servico.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\Services\bt_servicos.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\shoppingbasket_add.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\subtotal.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\user_add.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\user_into.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\user_into2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Company\view.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\Alert.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\img\bg_alert_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\img\bg_alert_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\img\bg_error_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\img\bg_error_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\img\bg_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Alert\img\bg_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg12_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg12_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg13_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg13_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg14_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg14_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_left_disabled.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_left_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_right_disabled.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\img\bg_right_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\arrowLeft.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\arrowRight.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\btnCalendar.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\btnCalendar.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\Calendar_bg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ContextMenuInputBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\fastNavLeft.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\fastNavRight.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\HoverBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\MonthYearBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\Pixel_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\selectBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_glass_55_fcf0ba_1x400.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_gloss-wave_100_ece8da_500x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_100_f5f3e5_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_100_fafaf4_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_15_006666_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-hard_95_cccccc_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-soft_25_fca43e_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_highlight-soft_95_ffedad_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-bg_inset-soft_15_2b2922_1x100.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-icons_808080_256x240.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-icons_847e71_256x240.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-icons_8dc262_256x240.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-icons_eeeeee_256x240.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\comboDivBox.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\DualListBox\img\backarrow.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\DualListBox\img\doublebackarrow.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\DualListBox\img\doublenextarrow.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\DualListBox\img\nextarrow.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\bold.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\code.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\copy.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\cut.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\hr.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\image.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\indent.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\italic.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\justify.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\link.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\ol.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\outdent.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\paragraph.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\paste.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\redo.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\removeformat.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\separator.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\strike.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\striptags.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\sub.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\sup.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\ul.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\underline.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\undo.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Editor\unlink.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Add.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Add2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\cancel.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Delete.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Delete.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Delete2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Delete_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\dt-arrow-dn.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\dt-arrow-up.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\FooterBg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\headerBg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Pixel_bg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Pixel_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\rtg_save.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Save.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\TdHover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\img\TDSelected.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\hover_td_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\item_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Item_td_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\menu_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\separator.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Temp\hover_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Temp\menu_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Temp\normal_bg.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Temp\separator.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\00.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\01.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\02.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\03.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\04.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\05.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\06.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\07.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\08.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\09.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\10.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Processbar\img\ProcessBar.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\calendar.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\CollapsedBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\contacts.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\contactsItems.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\ExpandBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\folderList.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\HoverBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\icon.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\iconHover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\itemsBg.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mail.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailDeletedItems.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailfolder.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailInbox.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailItems.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailOutbox.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailPersonalFolders.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailSearch.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\mailSent.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\notes.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\notesItems.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\tasks.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\tasksItems.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\TdHover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadScheduler\code_review.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadScheduler\specification_review.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadScheduler\technical.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Rating\img\EmptyStar.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Rating\img\FilledStar.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Rating\img\SavedStar.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Rating\img\stars.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\bkg.jpg" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\ie_tabbacker_720x296.jpg" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\ScrollLeft.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\ScrollLeftDisabled.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\ScrollRight.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\ScrollRightDisabled.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-active-left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-active-right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-active.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-hover-left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-hover-right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-line.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab-right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstHover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstHover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOff.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOff.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOn.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOn.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabRightLastHover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabRightLastHover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOff.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOff.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOn.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOn.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabStripeHover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabStripeHover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabStripeOff.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabStripeOff.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabStripeOn.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tabStripeOn.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab_selected.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\tab_unselected.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\1\bg_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\1\bg_left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\1\bg_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\1\bg_right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_left_disabled.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_left_focus.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_left_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_right_disabled.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_right_focus.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\bg_right_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\AutoComplete\bg_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\AutoComplete\bg_left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\AutoComplete\bg_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\AutoComplete\bg_right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_left_disabled.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_left_focus.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_left_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_right_disabled.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_right_focus.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\img\bg_right_hover.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\footer.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\footer2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\footer3.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\footer4.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\footer5.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\footer6.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\ico_ajuda.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\printtip.jpg" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top2.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top3.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top4.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top5.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\img\top6.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TreeView\line.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TreeView\minus.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TreeView\plus.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Validator\fieldError.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\FilesCombiner.ascx" />
+    <Content Include="App_Shared\themes\GlassCyan\topo_left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\topo_right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\bgComments.jpg" />
+    <Content Include="App_Shared\themes\GlassCyan\bgFilter.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\bgWebPageDraft.png" />
+    <Content Include="App_Shared\themes\GlassCyan\btnCorreios.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\btnFilter.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\btnFilterClose.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\btnGoogle.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\bug.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Chat.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Chat.png" />
+    <Content Include="App_Shared\themes\GlassCyan\close.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\close3.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\close_button.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\collapse.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\comment.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\debug_view.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\draft.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\fechar.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\icons.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\ico_comment.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\ico_comment2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\ico_comment3.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\ico_comment4.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\ico_comment5.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\bg_default.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\company_message.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\system_maintenance.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\users_online.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.bottom.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.bottom.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.bottom.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.bottom.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.bottom.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.bottom.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.middle.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.middle.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.middle.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.middle.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.middle.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.middle.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.top.center.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.top.center.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.top.left.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.top.left.png" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.top.right.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\content.top.right.png" />
+    <Content Include="App_Shared\themes\GlassCyan\loading3.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\logo_infocontrol.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\logo_receita_federal.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\maps_logo.jpg" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\accessControl.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\accessControl_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\Accounting.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\Accounting_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\Administration.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\Administration_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\blank.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\blank1x.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\blank2x.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\blank3x.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\caixa.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\calendar.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\controller.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\crm.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\crm_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\goToStartPage.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\help.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\help.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\host.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\host_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\humanResources.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\humanResources_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\judicial.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\judicial_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\notes.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\POS.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\POS_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\purchasing.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\purchasing_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\reports.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\reports_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\search.png" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\services.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\services_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\tasks.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\WebsiteSettings.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Menu\WebsiteSettings_hover.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\Ooops.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\printer.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\printer2.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\p_univ.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\StartPage\bg_default.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\StartPage\blog.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\StartPage\company_message.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\StartPage\feed-icon-128x128-1.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\StartPage\system_maintenance.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\StartPage\users_online.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\taskShared.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\transparent.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\undo.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\undo.png" />
+    <Content Include="App_Shared\themes\GlassCyan\user_headset.gif" />
+    <Content Include="App_Shared\themes\GlassCyan\user_headset.png" />
+    <Content Include="App_Shared\themes\GlassCyan\user_message.gif" />
     <Content Include="InfoControl\Accounting\AccountSearch.ascx" />
     <Content Include="App_Shared\CurrencyField.ascx" />
     <Content Include="App_Shared\Date.ascx" />
@@ -2836,656 +3461,13 @@
     <Content Include="App_Shared\HelpTooltip.ascx" />
     <Content Include="App_Shared\JS\jquery.dimensions.js" />
     <Content Include="App_Shared\JS\jquery.ui.draggable.js" />
-    <Content Include="App_Shared\JS\jquery.jgrowl.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Notification\jquery.jgrowl.css" />
     <Content Include="App_Shared\JS\jquery.jgrowl.js" />
     <Content Include="App_Shared\JS\jquery.ui.tabs.js" />
     <Content Include="App_Shared\JS\jquery.validate.js" />
     <Content Include="InfoControl\Accounting\Payment.ascx" />
     <Content Include="InfoControl\Accounting\Payment.ascx.js" />
     <Content Include="App_Shared\SelectProductAndService.ascx" />
-    <Content Include="App_Themes\GlassCyan\arrowdouble_left.gif" />
-    <Content Include="App_Themes\GlassCyan\arrowdouble_right.gif" />
-    <Content Include="App_Themes\GlassCyan\arrow_down.gif" />
-    <Content Include="App_Themes\GlassCyan\arrow_left.gif" />
-    <Content Include="App_Themes\GlassCyan\arrow_right.gif" />
-    <Content Include="App_Themes\GlassCyan\arrow_up.gif" />
-    <Content Include="App_Themes\GlassCyan\background.jpg" />
-    <Content Include="App_Themes\GlassCyan\background.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg12_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg12_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg13_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg13_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg14_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg14_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_left.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_left_disabled.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_left_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_right.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_right_disabled.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Button\img\bg_right_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\DualListBox\img\backarrow.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\DualListBox\img\doublebackarrow.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\DualListBox\img\doublenextarrow.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\DualListBox\img\nextarrow.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Add.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Add2.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\cancel.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Delete.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Delete.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Delete2.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Delete_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\dt-arrow-dn.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\dt-arrow-up.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\FooterBg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\headerBg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Pixel_bg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Pixel_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\rtg_save.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\Save.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\TdHover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\GridView\img\TDSelected.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\hover_td_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\item_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\Item_td_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\menu_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\separator.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\Temp\hover_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\Temp\menu_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\Temp\normal_bg.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Menu\img\Temp\separator.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\00.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\01.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\02.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\03.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\04.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\05.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\06.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\07.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\08.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\09.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\10.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Processbar\img\ProcessBar.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\calendar.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\CollapsedBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\contacts.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\contactsItems.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\ExpandBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\folderList.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\HoverBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\icon.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\iconHover.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\itemsBg.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mail.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailDeletedItems.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailfolder.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailInbox.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailItems.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailOutbox.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailPersonalFolders.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailSearch.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\mailSent.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\notes.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\notesItems.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\tasks.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\tasksItems.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadPanelbar\Img\TdHover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadScheduler\code_review.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadScheduler\specification_review.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\RadScheduler\technical.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Rating\img\EmptyStar.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Rating\img\FilledStar.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Rating\img\SavedStar.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\Rating\img\stars.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\bkg.jpg" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\ie_tabbacker_720x296.jpg" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\ScrollLeft.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\ScrollLeftDisabled.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\ScrollRight.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\ScrollRightDisabled.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-active-left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-active-right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-active.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-hover-left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-hover-right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-hover.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-line.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab-right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstHover.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstHover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOff.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOff.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOn.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabLeftFirstOn.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabRightLastHover.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabRightLastHover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOff.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOff.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOn.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabRightLastOn.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabStripeHover.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabStripeHover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabStripeOff.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabStripeOff.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabStripeOn.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tabStripeOn.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab_selected.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TabStrip\Img\tab_unselected.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\1\bg_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\1\bg_left.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\1\bg_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\1\bg_right.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_left.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_left_disabled.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_left_focus.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_left_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_right.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_right_disabled.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_right_focus.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\2\bg_right_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\AutoComplete\bg_left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\AutoComplete\bg_left.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\AutoComplete\bg_right.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\AutoComplete\bg_right.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_left.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_left_disabled.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_left_focus.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_left_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_right.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_right_disabled.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_right_focus.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\TextBox\img\bg_right_hover.png" />
-    <Content Include="App_Themes\GlassCyan\Controls\ToolTip\img\footer.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\ToolTip\img\left.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\ToolTip\img\top.gif" />
-    <Content Include="App_Themes\GlassCyan\Controls\Validator\fieldError.gif" />
-    <Content Include="App_Themes\GlassCyan\topo_left.gif" />
-    <Content Include="App_Themes\GlassCyan\topo_right.gif" />
-    <Content Include="App_Themes\Pooba\bg.jpg" />
-    <Content Include="App_Themes\Pooba\bg_login.gif" />
-    <Content Include="App_Themes\Pooba\Copy of bg_login.gif" />
-    <Content Include="App_Themes\Pooba\DesejoSerInformado.gif" />
-    <Content Include="App_Themes\Pooba\duvidas.gif" />
-    <Content Include="App_Themes\Pooba\faleConosco.gif" />
-    <Content Include="App_Themes\Pooba\Global.css" />
-    <Content Include="App_Themes\Pooba\logo.png" />
-    <Content Include="App_Themes\Pooba\politicaPrivacidade.gif" />
-    <Content Include="App_Themes\Pooba\porqueComprar.gif" />
-    <Content Include="App_Themes\Pooba\quemSomos.gif" />
-    <Content Include="App_Themes\Pooba\quero_registrar.gif" />
-    <Content Include="App_Themes\Pooba\sejaBemVindo.gif" />
-    <Content Include="App_Themes\Pooba\text.css" />
-    <Content Include="App_Themes\Pooba\tour.gif" />
-    <Content Include="App_Themes\_global\AccessControl\roles.gif" />
-    <Content Include="App_Themes\_global\AccessControl\users.gif" />
-    <Content Include="App_Themes\_global\bgComments.jpg" />
-    <Content Include="App_Themes\_global\bgFilter.gif" />
-    <Content Include="App_Themes\_global\bgWebPageDraft.png" />
-    <Content Include="App_Themes\_global\btnCorreios.gif" />
-    <Content Include="App_Themes\_global\btnFilter.gif" />
-    <Content Include="App_Themes\_global\btnFilterClose.gif" />
-    <Content Include="App_Themes\_global\btnGoogle.gif" />
-    <Content Include="App_Themes\_global\bug.gif" />
-    <Content Include="App_Themes\_global\Chat.gif" />
-    <Content Include="App_Themes\_global\Chat.png" />
-    <Content Include="App_Themes\_global\close.gif" />
-    <Content Include="App_Themes\_global\close3.gif" />
-    <Content Include="App_Themes\_global\close_button.gif" />
-    <Content Include="App_Themes\_global\collapse.gif" />
-    <Content Include="App_Themes\_global\comment.gif" />
-    <Content Include="App_Themes\_global\Company\Accounting\bt_Bill.gif" />
-    <Content Include="App_Themes\_global\Company\Accounting\bt_Invoice.gif" />
-    <Content Include="App_Themes\_global\Company\Accounting\Cash-Check.gif" />
-    <Content Include="App_Themes\_global\Company\bg_EntranceReceipt.gif" />
-    <Content Include="App_Themes\_global\Company\bg_OutletReceipt.gif" />
-    <Content Include="App_Themes\_global\Company\bt_cancelar_pagamento.gif" />
-    <Content Include="App_Themes\_global\Company\bt_concluir_venda.gif" />
-    <Content Include="App_Themes\_global\Company\bt_concluir_venda2.gif" />
-    <Content Include="App_Themes\_global\Company\bt_removeCustomer.gif" />
-    <Content Include="App_Themes\_global\Company\bt_saveBudget.gif" />
-    <Content Include="App_Themes\_global\Company\bt_selecionar_cliente2.gif" />
-    <Content Include="App_Themes\_global\Company\Chart-Pie.gif" />
-    <Content Include="App_Themes\_global\Company\desconto.gif" />
-    <Content Include="App_Themes\_global\Company\flow_bottom.gif" />
-    <Content Include="App_Themes\_global\Company\flow_left.gif" />
-    <Content Include="App_Themes\_global\Company\flow_right.gif" />
-    <Content Include="App_Themes\_global\Company\flow_top.gif" />
-    <Content Include="App_Themes\_global\Company\Forward.gif" />
-    <Content Include="App_Themes\_global\Company\insert.gif" />
-    <Content Include="App_Themes\_global\Company\Product_warning.gif" />
-    <Content Include="App_Themes\_global\Company\quitar.gif" />
-    <Content Include="App_Themes\_global\Company\Reports\Accounting\Report1.GIF" />
-    <Content Include="App_Themes\_global\Company\Reports\Accounting\Report2.gif" />
-    <Content Include="App_Themes\_global\Company\Reports\down_plus.png" />
-    <Content Include="App_Themes\_global\Company\Reports\funnel_add.gif" />
-    <Content Include="App_Themes\_global\Company\Reports\funnel_delete.gif" />
-    <Content Include="App_Themes\_global\Company\Reports\garbage_empty.gif" />
-    <Content Include="App_Themes\_global\Company\Reports\NominalReport.gif" />
-    <Content Include="App_Themes\_global\Company\Reports\StatisticReport.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_clientes.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_clientes_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_concluir_venda.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_estoque.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_estoque_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_fechamento_caixa.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_fechamento_caixa_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_gerador_proposta.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_gerador_proposta_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_historico_venda.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_historico_venda_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_mapa_vendas.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_mapa_vendas_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_nota_fiscal.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_ponto_venda.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_ponto_venda_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_prospect_builder.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_prospect_builder_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_raio_x.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_raio_x_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_rma.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_rma_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_sangria.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_sangria_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_transferencia.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_transferencia_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_troca.gif" />
-    <Content Include="App_Themes\_global\Company\Sales\bt_troca_hover.gif" />
-    <Content Include="App_Themes\_global\Company\Services\bt_chamados.gif" />
-    <Content Include="App_Themes\_global\Company\Services\bt_ordem_servico.gif" />
-    <Content Include="App_Themes\_global\Company\Services\bt_servicos.gif" />
-    <Content Include="App_Themes\_global\Company\shoppingbasket_add.gif" />
-    <Content Include="App_Themes\_global\Company\subtotal.gif" />
-    <Content Include="App_Themes\_global\Company\user_add.gif" />
-    <Content Include="App_Themes\_global\Company\user_into.gif" />
-    <Content Include="App_Themes\_global\Company\user_into2.gif" />
-    <Content Include="App_Themes\_global\Company\view.gif" />
-    <Content Include="App_Themes\_global\Controls\Alert\img\bg_alert_left.gif" />
-    <Content Include="App_Themes\_global\Controls\Alert\img\bg_alert_right.gif" />
-    <Content Include="App_Themes\_global\Controls\Alert\img\bg_error_left.gif" />
-    <Content Include="App_Themes\_global\Controls\Alert\img\bg_error_right.gif" />
-    <Content Include="App_Themes\_global\Controls\Alert\img\bg_left.gif" />
-    <Content Include="App_Themes\_global\Controls\Alert\img\bg_right.gif" />
-    <Content Include="App_Themes\_global\Controls\comboDivBox.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\footer.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\footer2.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\footer3.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\footer4.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\footer5.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\footer6.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\left.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\printtip.jpg" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\top.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\top2.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\top3.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\top4.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\top5.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\top6.gif" />
-    <Content Include="App_Themes\_global\Controls\Validator\fieldError.gif" />
-    <Content Include="App_Themes\_global\debug_view.gif" />
-    <Content Include="App_Themes\_global\draft.gif" />
-    <Content Include="App_Themes\_global\fechar.gif" />
-    <Content Include="App_Themes\_global\icons.gif" />
-    <Content Include="App_Themes\_global\Controls\ToolTip\img\ico_ajuda.gif" />
-    <Content Include="App_Themes\_global\ico_comment.gif" />
-    <Content Include="App_Themes\_global\ico_comment2.gif" />
-    <Content Include="App_Themes\_global\ico_comment3.gif" />
-    <Content Include="App_Themes\_global\ico_comment4.gif" />
-    <Content Include="App_Themes\_global\ico_comment5.gif" />
-    <Content Include="App_Themes\_global\LeafBox\bg_default.gif" />
-    <Content Include="App_Themes\_global\LeafBox\company_message.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\1\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\2\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\3\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Cyan\4\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\1\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\2\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\3\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Orange\4\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\1\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\2\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\3\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Purple\4\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\system_maintenance.gif" />
-    <Content Include="App_Themes\_global\LeafBox\users_online.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\1\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\2\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\3\content.top.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.bottom.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.bottom.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.bottom.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.bottom.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.bottom.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.bottom.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.middle.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.middle.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.middle.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.middle.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.middle.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.middle.right.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.top.center.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.top.center.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.top.left.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.top.left.png" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.top.right.gif" />
-    <Content Include="App_Themes\_global\LeafBox\Yellow\4\content.top.right.png" />
-    <Content Include="App_Themes\_global\loading3.gif" />
-    <Content Include="App_Themes\_global\logo_infocontrol.gif" />
-    <Content Include="App_Themes\_global\logo_receita_federal.gif" />
-    <Content Include="App_Themes\_global\maps_logo.jpg" />
-    <Content Include="App_Themes\_global\Menu\accessControl.gif" />
-    <Content Include="App_Themes\_global\Menu\accessControl_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\Accounting.gif" />
-    <Content Include="App_Themes\_global\Menu\Accounting_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\Administration.gif" />
-    <Content Include="App_Themes\_global\Menu\Administration_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\blank.gif" />
-    <Content Include="App_Themes\_global\Menu\blank1x.gif" />
-    <Content Include="App_Themes\_global\Menu\blank2x.gif" />
-    <Content Include="App_Themes\_global\Menu\blank3x.gif" />
-    <Content Include="App_Themes\_global\Menu\caixa.gif" />
-    <Content Include="App_Themes\_global\Menu\calendar.gif" />
-    <Content Include="App_Themes\_global\Menu\controller.gif" />
-    <Content Include="App_Themes\_global\Menu\crm.gif" />
-    <Content Include="App_Themes\_global\Menu\crm_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\goToStartPage.gif" />
-    <Content Include="App_Themes\_global\Menu\help.gif" />
-    <Content Include="App_Themes\_global\Menu\host.gif" />
-    <Content Include="App_Themes\_global\Menu\host_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\humanResources.gif" />
-    <Content Include="App_Themes\_global\Menu\humanResources_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\judicial.gif" />
-    <Content Include="App_Themes\_global\Menu\judicial_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\notes.gif" />
-    <Content Include="App_Themes\_global\Menu\POS.gif" />
-    <Content Include="App_Themes\_global\Menu\POS_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\purchasing.gif" />
-    <Content Include="App_Themes\_global\Menu\purchasing_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\reports.gif" />
-    <Content Include="App_Themes\_global\Menu\reports_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\search.png" />
-    <Content Include="App_Themes\_global\Menu\services.gif" />
-    <Content Include="App_Themes\_global\Menu\services_hover.gif" />
-    <Content Include="App_Themes\_global\Menu\tasks.gif" />
-    <Content Include="App_Themes\_global\Menu\WebsiteSettings.gif" />
-    <Content Include="App_Themes\_global\Menu\WebsiteSettings_hover.gif" />
-    <Content Include="App_Themes\_global\Ooops.gif" />
-    <Content Include="App_Themes\_global\printer.gif" />
-    <Content Include="App_Themes\_global\printer2.gif" />
-    <Content Include="App_Themes\_global\p_univ.gif" />
-    <Content Include="App_Themes\_global\StartPage\bg_default.gif" />
-    <Content Include="App_Themes\_global\StartPage\blog.gif" />
-    <Content Include="App_Themes\_global\StartPage\company_message.gif" />
-    <Content Include="App_Themes\_global\StartPage\feed-icon-128x128-1.gif" />
-    <Content Include="App_Themes\_global\StartPage\system_maintenance.gif" />
-    <Content Include="App_Themes\_global\StartPage\users_online.gif" />
-    <Content Include="App_Themes\_global\taskShared.gif" />
-    <Content Include="App_Themes\_global\transparent.gif" />
-    <Content Include="App_Themes\_global\undo.gif" />
-    <Content Include="App_Themes\_global\undo.png" />
-    <Content Include="App_Themes\_global\user_headset.gif" />
-    <Content Include="App_Themes\_global\user_headset.png" />
-    <Content Include="App_Themes\_global\user_message.gif" />
-    <Content Include="App_Themes\_global\webLink.gif" />
     <Content Include="InfoControl\Accounting\Accounts.aspx.js" />
     <Content Include="InfoControl\Accounting\Contracts.aspx.js" />
     <Content Include="InfoControl\Accounting\Bills.aspx.js" />
@@ -3682,35 +3664,61 @@
     <Content Include="Site\_modules\Search.ascx" />
     <Content Include="Site\_modules\Products.ascx" />
     <Content Include="Site\CustomerCentral.aspx" />
-    <None Include="App_Themes\GlassCyan\Controls\Button\Button.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\Calendar\Calendar.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\Calendar\jquery.ui.core.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\Calendar\jquery.ui.theme.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\GridView\GridView.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\Menu\Menu.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\NumericUpDown\NumericUpDown.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\RadPanelbar\Styles\Outlook.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\RadScheduler\RadScheduler.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\Rating\Rating.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\TabStrip\Img\Thumbs.db" />
-    <Content Include="App_Themes\GlassCyan\SkinFile.skin" />
-    <None Include="App_Themes\GlassCyan\Controls\TabStrip\Tabs.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\TextBox\TextControl.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\ToolTip\tooltip.cssx" />
-    <None Include="App_Themes\GlassCyan\Controls\Validator\validator.cssx" />
-    <None Include="App_Themes\GlassCyan\Global.cssx" />
-    <None Include="App_Themes\GlassCyan\text.cssx" />
-    <None Include="App_Themes\GlassCyan\Thumbs.db" />
-    <Content Include="App_Themes\Pooba\SkinFile.skin" />
-    <None Include="App_Themes\Pooba\Thumbs.db" />
-    <None Include="App_Themes\_global\Controls\Alert\Alert.cssx" />
-    <None Include="App_Themes\_global\Controls\ToolTip\tooltip.cssx" />
-    <None Include="App_Themes\_global\Controls\Validator\validator.cssx" />
-    <None Include="App_Themes\_global\Global.cssx" />
-    <None Include="App_Themes\_global\LeafBox\Cyan\leafBox.cssx" />
-    <None Include="App_Themes\_global\LeafBox\Orange\leafBox.cssx" />
-    <None Include="App_Themes\_global\LeafBox\Purple\leafBox.cssx" />
-    <None Include="App_Themes\_global\LeafBox\Yellow\leafBox.cssx" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Button\Button.css" />
+    <None Include="App_Shared\themes\GlassCyan\Company\Reports\Accounting\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Company\Reports\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Company\Sales\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Company\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\Alert\img\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\Button\img\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\Calendar.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\jquery.ui.core.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Calendar\jquery.ui.theme.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\GridView\GridView.css" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\GridView\img\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Temp\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\Menu\img\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Menu\Menu.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\NumericUpDown\NumericUpDown.css" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Img\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadPanelbar\Outlook.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\RadScheduler\RadScheduler.css" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\Rating\img\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Rating\Rating.css" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Img\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TabStrip\Tabs.css" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\TextBox\1\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\TextBox\2\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\Controls\TextBox\AutoComplete\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\TextBox\TextControl.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\ToolTip\tooltip.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Controls\Validator\validator.css" />
+    <Content Include="App_Shared\themes\GlassCyan\Global.css" />
+    <Content Include="App_Shared\themes\GlassCyan\SkinFile.skin" />
+    <Content Include="App_Shared\themes\GlassCyan\text.css" />
+    <None Include="App_Shared\themes\GlassCyan\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\common.css" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\1\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\2\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\3\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\4\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Cyan\leafBox.css" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Orange\1\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Orange\2\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Orange\3\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Orange\4\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Orange\leafBox.css" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Purple\1\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Purple\2\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Purple\3\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Purple\4\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Purple\leafBox.css" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\1\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\2\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\3\Thumbs.db" />
+    <None Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\4\Thumbs.db" />
+    <Content Include="App_Shared\themes\GlassCyan\LeafBox\Yellow\leafBox.css" />
+    <None Include="App_Shared\themes\GlassCyan\Menu\Thumbs.db" />
     <None Include="InfoControl\Site\FileManager\userfiles\.htaccess" />
     <None Include="InfoControl\Site\FileManager\_source\CKFinderKey.snk" />
     <Content Include="ErrorPage.aspx" />
@@ -3730,9 +3738,6 @@
     <Content Include="RemoveWrongPublishedFiles.wsf" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\BusinessRules\BusinessRules.csproj">
       <Project>{3E8076C7-E88E-42EB-9E81-9036C4986060}</Project>
       <Name>BusinessRules</Name>
@@ -3747,7 +3752,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Themes\_global\Reporting\" />
     <Folder Include="InfoControl\_companies\hardmed.com.br\Accounting\" />
     <Folder Include="Properties\" />
   </ItemGroup>

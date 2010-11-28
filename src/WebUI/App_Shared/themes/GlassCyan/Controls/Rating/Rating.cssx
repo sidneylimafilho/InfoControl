@@ -1,0 +1,27 @@
+/* Rating */
+.ratingStar
+{
+	width: 17px;
+	height: 17px;
+	margin: 0px;	
+	cursor: pointer;	
+	display:inline;
+	background-repeat: no-repeat;
+	background-image: url(../../../_global/icons.gif);
+}
+
+.filledRatingStar
+{
+	background-position: -240px -34px;	
+}
+
+.emptyRatingStar, .deleted .filledRatingStar
+{
+	background-position: -240px 0px;	
+}
+
+.savedRatingStar
+{
+	background-position: -240px -17px;	
+}
+

@@ -99,7 +99,7 @@
                                     <asp:ListItem Text="Sedex10: R$ "></asp:ListItem>
                                     <asp:ListItem Text="Sob Consulta" Value="-1"></asp:ListItem>
                                 </asp:RadioButtonList>
-                                <asp:RequiredFieldValidator runat="server" ID="reqRbtListDeliveryPrices" ControlToValidate="rbtListDelivery"
+                                <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqRbtListDeliveryPrices" ControlToValidate="rbtListDelivery"
                                     ValidationGroup="delivery" ErrorMessage="Escolha um modo de entrega!">
                                 </asp:RequiredFieldValidator>
                             </asp:Panel>

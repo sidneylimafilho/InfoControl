@@ -32,7 +32,7 @@
                         <td>
                             Nome:<br />
                             <asp:TextBox ID="txtName" MaxLength="128" runat="server"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqtxtName" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtName" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="txtName" ValidationGroup="saveSiteTemplate"></asp:RequiredFieldValidator>
                         </td>
                         <td>
@@ -41,13 +41,13 @@
                                 AppendDataBoundItems="True" DataTextField="Name" DataValueField="BranchId">
                                 <asp:ListItem Value="" Text=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqcboBranchId" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboBranchId" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="cboBranchId" ValidationGroup="saveSiteTemplate"></asp:RequiredFieldValidator>
                         </td>
                         <td>
                             Modelo:<br />
                             <asp:FileUpload ID="fupSiteTemplate" runat="server" />
-                            <asp:RequiredFieldValidator ID="reqfupSiteTemplate" runat="server" ControlToValidate="fupSiteTemplate"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqfupSiteTemplate" runat="server" ControlToValidate="fupSiteTemplate"
                                 ValidationGroup="saveSiteTemplate" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                             &nbsp; &nbsp; &nbsp; &nbsp;
                         </td>

@@ -26,15 +26,15 @@
                         <tr>
                             <td>Proposta Número:<br />
                                 <asp:TextBox ID="txtBudgetCode" runat="server" Columns="20" MaxLength="20"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
                                     ValidationGroup="NonSave" ControlToValidate="txtBudgetCode" />
                             </td>
                             <td>Vendedor:<br />
                                 <asp:DropDownList ID="cboVendor" runat="server" AppendDataBoundItems="true" DataTextField="Name" DataValueField="EmployeeId">
                                     <asp:ListItem Text="" Value=""></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="reqCboVendor" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ControlToValidate="cboVendor"
-                                    CssClass="cErr21" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqCboVendor" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ControlToValidate="cboVendor"
+                                     ValidationGroup="Save"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                     </table>
@@ -55,7 +55,7 @@
                                         <td>E-mail:</td>
                                         <td>
                                             <asp:TextBox runat="server" ID="txtCustomerMail" Columns="22" MaxLength="200"></asp:TextBox>
-                                            <asp:RegularExpressionValidator runat="server" ID="regTxtCustomerMail" ControlToValidate="txtCustomerMail"
+                                            <asp:RegularExpressionValidator CssClass="cErr21" runat="server" ID="regTxtCustomerMail" ControlToValidate="txtCustomerMail"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                                         </td>
                                     </tr>
@@ -65,7 +65,7 @@
                                             <asp:TextBox runat="server" ID="txtPhone" MaxLength="13" Columns="10"></asp:TextBox>
                                             <ajaxToolkit:MaskedEditExtender runat="server" ID="txtPhone_MaskedEditExtender" Mask="(99)9999-9999"
                                                 MaskType="Number" TargetControlID="txtPhone" ClearMaskOnLostFocus="false" AutoComplete="false"></ajaxToolkit:MaskedEditExtender>
-                                            <asp:RegularExpressionValidator ID="RegTxtPhone" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
+                                            <asp:RegularExpressionValidator CssClass="cErr21" ID="RegTxtPhone" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
                                                 ControlToValidate="txtPhone" ValidationExpression="((\([0-9_]{2}\))([0-9_]{4})\-([0-9_]{4}))?">
                                             </asp:RegularExpressionValidator>
                                         </td>
@@ -98,11 +98,11 @@
                                 <br />
                             </td>
                             <td>
-                                <asp:ImageButton ID="btnShowProductDescription" ValidationGroup="search" runat="server" ImageUrl="~/App_Themes/_global/Company/view.gif"
+                                <asp:ImageButton ID="btnShowProductDescription" ValidationGroup="search" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/view.gif"
                                     AlternateText="Visualizar a descrição do produto" OnClick="btnShowProductDescription_Click" Style="height: 18px" />
                             </td>
                             <td>
-                                <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Themes\GlassCyan\Controls\GridView\img\Add2.gif"
+                                <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Shared/themes/glasscyan\Controls\GridView\img\Add2.gif"
                                     AlternateText="Adicionar o produto à proposta" OnClick="btnAdd_Click" ValidationGroup="Add" />
                             </td>
                         </tr>

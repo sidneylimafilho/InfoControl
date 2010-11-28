@@ -168,7 +168,7 @@ namespace Vivina.Erp.WebUI.POS
                 if (budgetItem.ProductId.HasValue)
                     saleItem.Name = budgetItem.Product.Name;
                 else
-                    saleItem.Name = budgetItem.SpecialProductName + "&nbsp;&nbsp;&nbsp;&nbsp;<img src='" + ResolveClientUrl("~/App_Themes/_global/Company/Product_warning.gif") + "' alt='Este produto não se encontra cadastrado!' />";
+                    saleItem.Name = budgetItem.SpecialProductName + "&nbsp;&nbsp;&nbsp;&nbsp;<img src='" + ResolveClientUrl("~/App_Shared/themes/glasscyan/Company/Product_warning.gif") + "' alt='Este produto não se encontra cadastrado!' />";
 
                 saleItem.ProductId = budgetItem.ProductId;
                 saleItem.Quantity = budgetItem.Quantity;

@@ -43,7 +43,7 @@
                             <br />
                             <asp:Label ID="lblWelcomeText" runat="server" Text="Digite o texto que aparecerá na caixa de boas-vindas dos usuários desta empresa"></asp:Label>
                             <br />
-                             <textarea  options="{idir:'../App_themes/glasscyan/controls/Editor/'}" plugin="htmlbox" runat="server"  Height="250px" ID="txtWelcomeText" />
+                             <textarea  options="{idir:'../App_Shared/themes/glasscyan/controls/Editor/'}" plugin="htmlbox" runat="server"  Height="250px" ID="txtWelcomeText" />
                         </td>
                     </tr>
                 </table>

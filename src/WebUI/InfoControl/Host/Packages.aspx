@@ -45,8 +45,8 @@
                                         <asp:TemplateField HeaderText="Nome" SortExpression="Name">
                                             <EditItemTemplate>
                                                 <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>'></asp:TextBox>
-                                                <asp:RequiredFieldValidator ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RequiredFieldValidator1"
-                                                    runat="server" ControlToValidate="txtName" CssClass="cErr21">*</asp:RequiredFieldValidator>
+                                                <asp:RequiredFieldValidator CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RequiredFieldValidator1"
+                                                    runat="server" ControlToValidate="txtName" >*</asp:RequiredFieldValidator>
                                             </EditItemTemplate>
                                             <ItemTemplate>
                                                 <asp:Label ID="Label1" runat="server" Text='<%# Bind("Name") %>'></asp:Label>
@@ -56,7 +56,7 @@
                                             <EditItemTemplate>
                                                 <asp:TextBox ID="txtUsers" runat="server" Text='<%# Bind("NumberUsers") %>'></asp:TextBox>
                                                 <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                                    ControlToValidate="txtUsers" CssClass="cErr21" MaximumValue="100000000" MinimumValue="0"
+                                                    ControlToValidate="txtUsers"  MaximumValue="100000000" MinimumValue="0"
                                                     Type="Integer">*</asp:RangeValidator>
                                                 <ajaxToolkit:NumericUpDownExtender ID="NumericUpDownExtender1" runat="server" Maximum="100000"
                                                     Minimum="0" TargetControlID="txtUsers" Width="80">
@@ -70,7 +70,7 @@
                                             <EditItemTemplate>
                                                 <asp:TextBox ID="txtItems" runat="server" Text='<%# Bind("NumberItems") %>'></asp:TextBox>
                                                 <asp:RangeValidator ID="RangeValidator2" runat="server" ControlToValidate="txtItems"
-                                                    CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" MaximumValue="100000000"
+                                                     ErrorMessage="&nbsp;&nbsp;&nbsp;" MaximumValue="100000000"
                                                     MinimumValue="0" Type="Integer">*</asp:RangeValidator>
                                                 <ajaxToolkit:NumericUpDownExtender ID="NumericUpDownExtender2" runat="server" Maximum="100000"
                                                     Minimum="0" TargetControlID="txtItems" Width="80">

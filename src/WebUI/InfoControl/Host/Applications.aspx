@@ -53,7 +53,7 @@
                                     <td valign="top">
                                         <asp:TextBox ID="DescriptionTextBox" runat="server" CssClass="cDat11" Height="100px"
                                             Text='<%# Bind("Description") %>' Width="300px" MaxLength="1024" TextMode="MultiLine"></asp:TextBox><br />
-                                        <asp:RegularExpressionValidator ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RegularExpressionValidator1"
+                                        <asp:RegularExpressionValidator CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RegularExpressionValidator1"
                                             runat="server" ControlToValidate="DescriptionTextBox" Text="Campo para apenas 1024 caracteres!"
                                             ValidationExpression=".{0,1024}" Display="Dynamic"></asp:RegularExpressionValidator>
                                     </td>

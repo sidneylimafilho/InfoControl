@@ -47,8 +47,8 @@
                                     Width="200px" DataTextField="Name" AppendDataBoundItems="true">
                                     <asp:ListItem Value="" Text=""></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                    runat="server" ControlToValidate="cboSupplier" CssClass="cErr21" ValidationGroup="Outside"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator4" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                    runat="server" ControlToValidate="cboSupplier"  ValidationGroup="Outside"></asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Estoque Físico:<br />
@@ -56,8 +56,8 @@
                                     DataValueField="DepositId" Width="100px" AppendDataBoundItems="true">
                                     <asp:ListItem Value="" Text=""></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                    runat="server" ControlToValidate="cboDeposit" CssClass="cErr21" ValidationGroup="Outside"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                    runat="server" ControlToValidate="cboDeposit"  ValidationGroup="Outside"></asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Moeda:<br />
@@ -65,8 +65,8 @@
                                     DataTextField="Name" DataValueField="CurrencyRateId" Width="100px">
                                     <asp:ListItem></asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                    runat="server" ControlToValidate="DropDownList1" CssClass="cErr21" ValidationGroup="Outside"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator5" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                    runat="server" ControlToValidate="DropDownList1"  ValidationGroup="Outside"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                     </table>
@@ -153,7 +153,7 @@
                                 <br />
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <asp:ImageButton ID="btnAdd" runat="server" OnClick="btnAdd_Click" ValidationGroup="addProduct"
-                                    ImageUrl="../../App_Themes/GlassCyan/Controls/GridView/img/Add2.gif" />
+                                    ImageUrl="../../App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif" />
                             </td>
                         </tr>
                     </table>

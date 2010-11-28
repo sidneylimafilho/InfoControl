@@ -31,7 +31,7 @@
                                 AppendDataBoundItems="true" DataValueField="EmployeeId">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="cboEmployee" ValidationGroup="FinishSale">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                         </td>
                         <tr>
@@ -40,7 +40,7 @@
                                 <asp:DropDownList ID="cboCFOP" runat="server" DataTextField="name" DataValueField="CfopId"
                                     DataSourceID="odsAccount" Visible="false">
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                     ControlToValidate="cboCFOP" ValidationGroup="Payment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             </td>
                         </tr>
@@ -57,8 +57,8 @@
                                     <asp:DropDownList ID="cboFinancierOperations" runat="server" DataSourceID="odsFinancierOperation"
                                         DataTextField="Name" DataValueField="FinancierOperationId">
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqcboFinancierOperations" runat="server" ControlToValidate="cboFinancierOperations"
-                                        CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="AddParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboFinancierOperations" runat="server" ControlToValidate="cboFinancierOperations"
+                                         ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="AddParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                                 </td>
                                 <td align="left">
                                     Data da Parcela:<br />
@@ -67,8 +67,8 @@
                                 <td align="left">
                                     Valor Total<br />
                                     <asp:TextBox ID="txtAmount" Columns="10" MaxLength="10" runat="server"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="reqtxtAmount" runat="server" ControlToValidate="txtAmount"
-                                        CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="AddParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtAmount" runat="server" ControlToValidate="txtAmount"
+                                         ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="AddParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                                     <ajaxToolkit:MaskedEditExtender ID="maktxtAmount" runat="server" InputDirection="RightToLeft"
                                         ClearMaskOnLostFocus="true" Mask="9,999,999.99" MaskType="Number" TargetControlID="txtAmount">
                                     </ajaxToolkit:MaskedEditExtender>
@@ -79,12 +79,12 @@
                                     <ajaxToolkit:MaskedEditExtender ID="mskTxtQtdParcels" runat="server" InputDirection="RightToLeft"
                                         Mask="999" MaskType="Number" TargetControlID="txtQtdParcels" ClearMaskOnLostFocus="true">
                                     </ajaxToolkit:MaskedEditExtender>
-                                    <asp:RequiredFieldValidator ID="valTxtQtdParcels" ControlToValidate="txtQtdParcels"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valTxtQtdParcels" ControlToValidate="txtQtdParcels"
                                         ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="AddParcel" runat="server"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>
                                     <br />
-                                    <asp:ImageButton ID="btnAddParcel" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                                    <asp:ImageButton ID="btnAddParcel" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                         runat="server" AlternateText="Inserir Parcela" OnClick="btnAddParcel_Click" ValidationGroup="AddParcel" />
                                 </td>
                             </tr>
@@ -137,9 +137,9 @@
                         <br />
                         &nbsp;&nbsp;
                         <input id="" accesskey="F7" onclick="top.$.modal.Hide();top.content.focus();return false;"
-                            src="../../app_Themes/_global/Company/bt_cancelar_pagamento.gif" type="image" />
+                            src="../../App_Shared/themes/glasscyan/Company/bt_cancelar_pagamento.gif" type="image" />
                         &nbsp;&nbsp;
-                        <asp:ImageButton ID="btnFinishSale" runat="server" ImageUrl="~/app_Themes/_global/Company/bt_concluir_venda2.gif"
+                        <asp:ImageButton ID="btnFinishSale" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/bt_concluir_venda2.gif"
                             ValidationGroup="FinishSale" OnClick="btnFinishSale_Click" />
                     </div>
                     <VFX:BusinessManagerDataSource ID="odsFinancierOperation" runat="server" OnSelecting="odsGeneric_Selecting"

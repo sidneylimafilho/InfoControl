@@ -5,10 +5,10 @@
     CNPJ:
     <br />
     <asp:TextBox ID="txtSearchCNPJ" runat="server" Columns="18" MaxLength="18" Text="" />
-    <%--  <asp:RequiredFieldValidator ID="valCnpj" runat="server" ControlToValidate="txtSearchCNPJ"
+    <%--  <asp:RequiredFieldValidator CssClass="cErr21" ID="valCnpj" runat="server" ControlToValidate="txtSearchCNPJ"
         ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>--%>
     <VFX:CnpjValidator ID="CnpjValidator1" runat="server" ControlToValidate="txtSearchCNPJ"
-        CssClass="cErr21" Display="Dynamic" Enabled="true" ValidationGroup="valNext">
+         Display="Dynamic" Enabled="true" ValidationGroup="valNext">
         &nbsp;&nbsp;&nbsp;</VFX:CnpjValidator>
     &nbsp;&nbsp;&nbsp;
     <asp:Button ID="btnSelect" runat="server" Text="Avançar " OnClick="btnSelect_Click"
@@ -25,10 +25,10 @@
                     <asp:TextBox ID="txtCNPJ" AutoPostBack="True" runat="server" Text="" OnTextChanged="btnSelect_Click"
                         Columns="14" MaxLength="18" />
                     &nbsp;<span class="btnReceitaFederal" onclick="ConsultaReceitaFederal('<%=txtCNPJ.Text.Replace(".", "").Replace("-", "").Replace("/", "") %>');">&nbsp;</span>
-                   <asp:RequiredFieldValidator ID="reqTxtCNPJ" runat="server" Display="Dynamic" ControlToValidate="txtCNPJ"
+                   <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtCNPJ" runat="server" Display="Dynamic" ControlToValidate="txtCNPJ"
                         ErrorMessage="&nbsp;&nbsp;&nbsp;" />
                 <td>
-                    <VFX:CnpjValidator ID="valCnpj" runat="server" ControlToValidate="txtCNPJ" CssClass="cErr21"
+                    <VFX:CnpjValidator ID="valCnpj" runat="server" ControlToValidate="txtCNPJ" 
                         Display="Dynamic" Enabled="true" ValidationGroup="valNext">
         &nbsp;&nbsp;&nbsp;</VFX:CnpjValidator>
                 </td>
@@ -39,7 +39,7 @@
                 <td>
                     Razão Social:<br />
                     <asp:TextBox ID="txtCompanyName" runat="server" Width="270" MaxLength="100" Height="13px" />
-                    <asp:RequiredFieldValidator ID="valCompanyName" runat="server" ControlToValidate="txtCompanyName"
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valCompanyName" runat="server" ControlToValidate="txtCompanyName"
                         ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>&nbsp;
                 </td>
                 <td>
@@ -63,7 +63,7 @@
                 <td>
                     Telefone:<br /> 
                     <asp:TextBox ID="txtPhone" Plugin="Mask" Mask="(99)9999-9999" runat="server" Columns="10" MaxLength="50" />
-                    <asp:RequiredFieldValidator ID="valPhone" runat="server" Display="Dynamic" ControlToValidate="txtPhone"
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valPhone" runat="server" Display="Dynamic" ControlToValidate="txtPhone"
                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="save" InitialValue="(__)____-____">
                     </asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -76,7 +76,7 @@
                 <td>
                     Email:<br />
                     <asp:TextBox ID="txtEmail" runat="server" Columns="30" MaxLength="50" />
-                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail"
+                    <asp:RegularExpressionValidator CssClass="cErr21" ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail"
                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>

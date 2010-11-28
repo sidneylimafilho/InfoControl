@@ -57,12 +57,12 @@
                         <td>
                             Descrição:<br />
                             <asp:TextBox ID="txtDescription" Columns="45" runat="server" MaxLength="200"></asp:TextBox>
-                            <asp:RequiredFieldValidator runat="server" ErrorMessage="&nbsp&nbsp&nbsp"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ErrorMessage="&nbsp&nbsp&nbsp"
                              ControlToValidate="txtDescription" ValidationGroup="Save" ID="reqTxtDescription" />
                         </td>
                         <td>
                             <br />
-                            <asp:ImageButton runat="server" ID="btnSaveImage" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton runat="server" ID="btnSaveImage" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 AlternateText="Adicionar Imagem" ValidationGroup="Save" OnClick="btnSaveImage_Click" />
                                 
                         </td>
@@ -71,7 +71,7 @@
                         <td>
                             Imagem:<br />
                             <asp:FileUpload ID="fupProductImage" runat="server" />
-                             <asp:RequiredFieldValidator runat="server" ErrorMessage="&nbsp&nbsp&nbsp"
+                             <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ErrorMessage="&nbsp&nbsp&nbsp"
                              ControlToValidate="fupProductImage" ValidationGroup="Save" ID="reqFupProductImage" />
                         </td>
                     </tr>

@@ -27,7 +27,7 @@
                         <td>
                             Nome:<br />
                             <asp:TextBox ID="txtName" runat="server" Columns="30" MaxLength="128"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="InsertDependent"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator4" ValidationGroup="InsertDependent"
                                 runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;&nbsp;" ControlToValidate="txtName">
                             </asp:RequiredFieldValidator>
                         </td>
@@ -38,13 +38,13 @@
                         <td>
                             Parentesco:<br />
                             <asp:TextBox ID="txtFamilyTree" runat="server" Columns="30" MaxLength="128"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtFamilyTree"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtFamilyTree"
                                 ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertDependent">
                             </asp:RequiredFieldValidator>
                         </td>
                         <td valign="bottom">
                             &#160;&#160;&#160;
-                            <asp:ImageButton ID="btnAddDependent" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton ID="btnAddDependent" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 runat="server" AlternateText="Inserir Dependente" ValidationGroup="InsertDependent"
                                 OnClick="btnAddDependent_Click" />
                         </td>

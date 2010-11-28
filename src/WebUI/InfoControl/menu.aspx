@@ -21,13 +21,15 @@
             width: 16px;
             right: 5px;
             margin-top: -26px;
-            background: url(../App_Themes/_global/menu/help.png) no-repeat right top;
+            background: url(../App_Shared/themes/glasscyan/menu/help.png) no-repeat right top;
         }
         .startPage:hover
         {
             background-position: 0px -16px;
         }
     </style>
+    
+    <link type="text/css" rel="Stylesheet" href="~/app_shared/themes/glasscyan/filescombiner.ascx" />
 </head>
 <body>
     <form id="form1" runat="server">

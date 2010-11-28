@@ -65,7 +65,7 @@
                             </ajaxToolkit:MaskedEditExtender>
                             <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="TxtDtInicio"
                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="GreaterThanEqual" ValueToCompare="1/1/1753"
-                                Type="Date" CssClass="cErr21"></asp:CompareValidator>
+                                Type="Date" ></asp:CompareValidator>
                         </td>
                     </tr>
                     <tr>

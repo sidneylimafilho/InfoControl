@@ -53,7 +53,7 @@
                         <td style="padding-left: 10px;" valign="top">
                             Selecione uma categoria para alterar ou digite uma nova categoria para inserir:<br />
                             <asp:TextBox ID="txtCategory" runat="server" Text="" MaxLength="50" />
-                            <asp:RequiredFieldValidator ID="reqtxtCategory" ValidationGroup="Add" runat="server"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtCategory" ValidationGroup="Add" runat="server"
                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" ControlToValidate="txtCategory" Text="&nbsp;"></asp:RequiredFieldValidator>
                             <br />
                             Selecione uma categoria pai:<br />

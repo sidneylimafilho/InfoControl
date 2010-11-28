@@ -42,7 +42,7 @@
                             <uc1:CurrencyField ID="ucCurrFieldUnitPrice" runat="server" />
                         </td>
                         <td>
-                            <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Themes\_global\Company\shoppingbasket_add.gif"
+                            <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Shared/modules\_global\Company\shoppingbasket_add.gif"
                                 OnClick="btnAdd_Click" ValidationGroup="AddProductToCart" />
                         </td>
                         <td>
@@ -69,7 +69,7 @@
                                     <asp:TemplateField HeaderText="Nome">
                                         <ItemTemplate>
                                             &nbsp;&nbsp;&nbsp;<%#Eval("Name")%>
-                                            <asp:Image ID="imgProduct_warning" ImageUrl="~/App_Themes/_global/Company/Product_warning.gif"
+                                            <asp:Image ID="imgProduct_warning" ImageUrl="~/App_Shared/themes/glasscyan/Company/Product_warning.gif"
                                                 AlternateText="Este produto não se encontra cadastrado!" runat="server" Visible='<%# Eval("Code")=="0" %>' />
                                         </ItemTemplate>
                                     </asp:TemplateField>
@@ -131,7 +131,7 @@
                                 <tr>
                                     <td>
                                         
-                                        <img src="../../App_Themes/_global/Company/subtotal.gif" alt="Subtotal" />
+                                        <img src="../../App_Shared/themes/glasscyan/Company/subtotal.gif" alt="Subtotal" />
                                     </td>
                                     <td style="text-align: right; padding-right: 32px;">
                                         <asp:Label ID="lblSubtotal" runat="server" Text="00.000,00" CssClass="cTxt42b"></asp:Label>
@@ -139,7 +139,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="../../App_Themes/_global/Company/desconto.gif" alt="Desconto" />
+                                        <img src="../../App_Shared/themes/glasscyan/Company/desconto.gif" alt="Desconto" />
                                     </td>
                                     
                                     <td nowrap="nowrap" style="text-align: right; padding-right: 25px;">
@@ -163,7 +163,7 @@
                                 <tr>
                                     <td>
                                         <td>
-                                            <asp:ImageButton ID="btnPayment" AlternateText="Efetuar venda" runat="server" ImageUrl="../../App_Themes/_global/Company/bt_concluir_venda.gif"
+                                            <asp:ImageButton ID="btnPayment" AlternateText="Efetuar venda" runat="server" ImageUrl="../../App_Shared/themes/glasscyan/Company/bt_concluir_venda.gif"
                                                 OnClick="btnPayment_Click" />
                                         </td>
                                     </td>

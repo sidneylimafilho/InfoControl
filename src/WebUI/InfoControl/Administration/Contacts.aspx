@@ -28,7 +28,7 @@
                             <uc1:SelectContact ID="selContact" runat="server" Required="true" />
                         </td>
                         <td>
-                            <asp:ImageButton runat="server" ID="btnAddContact" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton runat="server" ID="btnAddContact" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 AlternateText="Adicionar Contato" ValidationGroup="add" OnClick="btnAddContact_Click" />
                         </td>
                     </tr>

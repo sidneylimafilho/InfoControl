@@ -38,7 +38,7 @@
                                             DataTextField="Name" DataValueField="CategoryId" DataSourceID="odsCategories" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator ID="valCboCategories" runat="server" ControlToValidate="cboCategories"
+                                        <asp:RequiredFieldValidator CssClass="cErr21" ID="valCboCategories" runat="server" ControlToValidate="cboCategories"
                                             ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="Product"></asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
@@ -60,8 +60,8 @@
                         <td>
                             Código do Produto:<br />
                             <asp:TextBox ID="txtProductCode" runat="server" MaxLength="128" />
-                            <asp:RequiredFieldValidator ID="reqtxtProductCode" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                ControlToValidate="txtProductCode" CssClass="cErr21" ValidationGroup="Product"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtProductCode" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                ControlToValidate="txtProductCode"  ValidationGroup="Product"></asp:RequiredFieldValidator>
                         </td>
                        </tr>
                            </table>
@@ -81,8 +81,8 @@
                                                 <td>
                                                     Código de barras:<br />
                                                     <asp:TextBox ID="txtBarCode" runat="server" MaxLength="128" />
-                                                    <asp:RequiredFieldValidator ID="reqtxtBarCode" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;&nbsp;&nbsp;&nbsp;"
-                                                        runat="server" ControlToValidate="txtBarCode" CssClass="cErr21" ValidationGroup="Product"></asp:RequiredFieldValidator>
+                                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtBarCode" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;&nbsp;&nbsp;&nbsp;"
+                                                        runat="server" ControlToValidate="txtBarCode"  ValidationGroup="Product"></asp:RequiredFieldValidator>
                                                 </td>
                                                   <td>
                                                     Classe Fiscal:<br />

@@ -15,7 +15,7 @@
         <td valign="top">
             Proposta Número:<br />
             <asp:TextBox ID="txtPurchaseOrderCode" runat="server" Columns="20" MaxLength="20"></asp:TextBox>
-            <asp:RequiredFieldValidator ID="reqtxtPurchaseOrderCode" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtPurchaseOrderCode" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                 runat="server" ControlToValidate="txtPurchaseOrderCode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
         </td>
         <%--<td>
@@ -52,7 +52,7 @@
                 <uc3:SelectProduct ID="selProduct" Required="true" ValidationGroup="Add" runat="server" /></td>
             <td>
                 <%--<asp:ListItem Value="2" Text="Menor Preço total"></asp:ListItem>--%>
-                <asp:ImageButton ID="btnAddPurchaseOrderProduct" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                <asp:ImageButton ID="btnAddPurchaseOrderProduct" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                     runat="server" AlternateText="Adicionar" OnClick="btnAdd_Click" ValidationGroup="Add" />
             </td>
         </tr>

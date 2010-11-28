@@ -12,7 +12,7 @@
                 MaxLength="100"> </asp:TextBox>
             
             
-            <asp:RequiredFieldValidator ID="valProduct" ControlToValidate="txtProduct" runat="server"
+            <asp:RequiredFieldValidator CssClass="cErr21" ID="valProduct" ControlToValidate="txtProduct" runat="server"
                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic"></asp:RequiredFieldValidator>&nbsp;&nbsp;&nbsp;&nbsp;
             <p style="font-size: 7pt; color: gray">
                 Dica: Digite parte do texto, que o completará automaticamente!</p>

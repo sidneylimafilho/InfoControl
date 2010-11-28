@@ -28,12 +28,12 @@
                         <td>
                             Certificação:<br />
                             <asp:TextBox runat="server" ID="txtCertification" Columns="30" MaxLength="200"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqTxtCertification" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtCertification" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="txtCertification" Display="Dynamic">
                             </asp:RequiredFieldValidator>
                         </td>
                         <td valign="bottom">
-                            <asp:ImageButton runat="server" ID="btnSaveCetification" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton runat="server" ID="btnSaveCetification" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 AlternateText="Adicionar Certificação" OnClick="btnSaveCetification_Click" />
                         </td>
                     </tr>

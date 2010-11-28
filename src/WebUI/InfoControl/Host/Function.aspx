@@ -30,7 +30,7 @@
                         <td>
                             Nome:<br />
                             <asp:TextBox ID="txtName" MaxLength="128" Width="200" runat="server"> </asp:TextBox>
-                            <asp:RequiredFieldValidator ID="txtvalName" runat="server" ControlToValidate="txtName"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="txtvalName" runat="server" ControlToValidate="txtName"
                                 ValidationGroup="save" ErrorMessage="&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                         </td>
                     </tr>

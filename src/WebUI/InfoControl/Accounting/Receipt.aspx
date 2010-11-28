@@ -62,7 +62,7 @@
                                 DataSourceID="odsAccount" AppendDataBoundItems="true" Width="350px">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="valcboCFOP" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valcboCFOP" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="cboCFOP" ValidationGroup="saveReceipt"></asp:RequiredFieldValidator>
                         </td>
                         <td>
@@ -82,7 +82,7 @@
                                             <uc4:SelectSupplier ID="SelSupplier" runat="server" OnSelectedSupplier="SelSupplier_SelectedSupplier" />
                                         </td>
                                         <td>
-                                            <asp:RequiredFieldValidator ID="reqSelSupplier" runat="server" ControlToValidate="SelSupplier"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSelSupplier" runat="server" ControlToValidate="SelSupplier"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="saveReceipt"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
@@ -95,7 +95,7 @@
                                             <uc1:SelectCustomer ID="SelCustomer" runat="server" OnSelectedCustomer="SelCustomer_SelectedCustomer" />
                                         </td>
                                         <td>
-                                            <asp:RequiredFieldValidator ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="saveReceipt"></asp:RequiredFieldValidator>
                                         </td>
                                     </tr>
@@ -170,7 +170,7 @@
                                 <br />
                             </td>
                             <td style="border-right: 1px solid #1A6E6A;" nowrap="nowrap" class="style1">
-                                <asp:ImageButton ID="btnReceipItemProduct" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                                <asp:ImageButton ID="btnReceipItemProduct" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                     runat="server" AlternateText="Inserir produto" ValidationGroup="AddItem" OnClick="btnReceipItemProduct_Click" />
                             </td>
                             <td>

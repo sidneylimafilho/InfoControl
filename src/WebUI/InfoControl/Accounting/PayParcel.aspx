@@ -20,7 +20,7 @@
             <td>
                 &nbsp;&nbsp;&nbsp;<asp:TextBox ID="txtEffectedDate" runat="server" Columns="10" MaxLength="10"></asp:TextBox>
                 <asp:CompareValidator ID="CompareValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server" ControlToValidate="txtEffectedDate"
-                    CssClass="cErr21" Operator="DataTypeCheck" Type="Date"></asp:CompareValidator>
+                     Operator="DataTypeCheck" Type="Date"></asp:CompareValidator>
                 <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender3" runat="server" ClearMaskOnLostFocus="False"
                     Mask="99/99/9999" CultureName="pt-BR" MaskType="Date" TargetControlID="txtEffectedDate">
                 </ajaxToolkit:MaskedEditExtender>

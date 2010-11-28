@@ -67,8 +67,8 @@
                         <td>
                             Descrição:<br />
                             <asp:TextBox ID="txtDescription" runat="server" Columns="50" MaxLength="1024"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqtxtDescription" runat="server" ControlToValidate="txtDescription"
-                                CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddBill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtDescription" runat="server" ControlToValidate="txtDescription"
+                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddBill">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <br />
                             N.Doc:<br />
@@ -100,7 +100,7 @@
                                             DataValueField="CostCenterId" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator ID="valcboCostCenter" runat="server" ControlToValidate="cboCostCenter"
+                                        <asp:RequiredFieldValidator CssClass="cErr21" ID="valcboCostCenter" runat="server" ControlToValidate="cboCostCenter"
                                             ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" EnableClientScript="true"
                                             ValidationGroup="AddBill" Display="Dynamic"></asp:RequiredFieldValidator>
                                     </td>
@@ -127,7 +127,7 @@
                                             DataValueField="AccountingPlanId" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator ID="valcboAccountPlan" runat="server" ControlToValidate="cboAccountPlan"
+                                        <asp:RequiredFieldValidator CssClass="cErr21" ID="valcboAccountPlan" runat="server" ControlToValidate="cboAccountPlan"
                                             ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" EnableClientScript="true" Display="Dynamic"
                                             ValidationGroup="AddBill"></asp:RequiredFieldValidator>
                                     </td>

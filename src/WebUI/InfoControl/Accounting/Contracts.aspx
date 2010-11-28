@@ -40,7 +40,7 @@
                                         DataSourceID="odsContractType" DataTextField="Name" DataValueField="ContractTypeId">
                                         <asp:ListItem Text="" Value=""></asp:ListItem>
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqcboContractType" runat="server" ControlToValidate="cboContractType"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboContractType" runat="server" ControlToValidate="cboContractType"
                                         ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>
@@ -49,7 +49,7 @@
                                         DataSourceID="odsContractStatus" DataTextField="Name" DataValueField="ContractStatusId">
                                         <asp:ListItem Text="" Value=""></asp:ListItem>
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqcboContractStatus" runat="server" ControlToValidate="cboContractStatus"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboContractStatus" runat="server" ControlToValidate="cboContractStatus"
                                         ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                                 </td>
                                 <td align="right">

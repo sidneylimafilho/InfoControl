@@ -28,7 +28,7 @@
                     DataTextField="Name" OnSelectedIndexChanged="cboAdditionalInfo_SelectedIndexChanged"
                     DataValueField="AddonInfoId">
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator runat="server" ID="reqCboAdditionalInfo" ErrorMessage="&nbsp&nbsp&nbsp"
+                <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqCboAdditionalInfo" ErrorMessage="&nbsp&nbsp&nbsp"
                     ValidationGroup="Salvar" ControlToValidate="cboAdditionalInfo" />
                 <br />
                 <br />
@@ -45,7 +45,7 @@
                             <EditItemTemplate>
                                 <asp:TextBox ID="txtNome" CssClass="cDat11" runat="server" Width="90%" MaxLength="50"
                                     Text='<%# Bind("Name") %>'></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtNome"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtNome"
                                     ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="Salvar" Display="Dynamic"></asp:RequiredFieldValidator>
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -80,7 +80,7 @@
                                 <asp:TextBox ID="txtName" CssClass="cDat11" runat="server" Width="90%" MaxLength="50"
                                     Text='<%# Bind("Name") %>'>
                                 </asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtName"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtName"
                                     ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="Salvar" />
                             </EditItemTemplate>
                             <ItemTemplate>
@@ -91,7 +91,7 @@
                         <asp:CommandField DeleteText="<span class='delete' title='excluir'> </span>" ShowDeleteButton="True">
                             <ItemStyle Width="1%" Wrap="True" HorizontalAlign="Center" />
                         </asp:CommandField>
-                        <asp:CommandField CancelText="&lt;img src='../../App_Themes/GlassCyan/Controls/GridView/img/Cancel.gif' border='0' /&gt;"
+                        <asp:CommandField CancelText="&lt;img src='../../App_Shared/themes/glasscyan/Controls/GridView/img/Cancel.gif' border='0' /&gt;"
                             EditText="" ShowEditButton="True" UpdateText="<span class='save' title='salvar'> </span>"
                             ValidationGroup="Salvar">
                             <ItemStyle Width="1%" Wrap="True" HorizontalAlign="Center" />

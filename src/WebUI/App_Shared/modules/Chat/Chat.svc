@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Service="Vivina.Framework.Web.Modules.Chat.ChatService"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>

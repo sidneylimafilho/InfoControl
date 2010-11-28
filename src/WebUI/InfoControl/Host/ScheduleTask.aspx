@@ -30,8 +30,8 @@
                 <td class="center" style="height: 97px">
                     Nome:<br />
                     <asp:TextBox runat="server" ID="txtName" MaxLength="120" Columns="50"></asp:TextBox>
-                    <asp:RequiredFieldValidator runat="server" ID="reqTxtName" ControlToValidate="txtName"
-                        ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqTxtName" ControlToValidate="txtName"
+                        ErrorMessage="&nbsp;&nbsp;&nbsp;"  ValidationGroup="Save"></asp:RequiredFieldValidator>
                     <table>
                         <tr>
                             <td>
@@ -54,8 +54,8 @@
                             <td>
                                 Nome da Classe com Namespace:<br />
                                 <asp:TextBox runat="server" ID="txtTypeFullName" Columns="80" MaxLength="200" ValidationGroup="Save"></asp:TextBox>
-                                <asp:RequiredFieldValidator runat="server" ID="ReqtxtTypeFullName" ControlToValidate="txtTypeFullName"
-                                    ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" ValidationGroup="Save"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="ReqtxtTypeFullName" ControlToValidate="txtTypeFullName"
+                                    ErrorMessage="&nbsp;&nbsp;&nbsp;"  ValidationGroup="Save"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr>

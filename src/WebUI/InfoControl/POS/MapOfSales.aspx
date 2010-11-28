@@ -48,17 +48,17 @@
                                                 </ajaxToolkit:MaskedEditExtender>
                                             </td>
                                             <td valign="top" style="white-space: nowrap;">
-                                                <asp:Image ID="btnCalendar" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                <asp:Image ID="btnCalendar" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                     Style="cursor: pointer;" /><ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server"
                                                         CssClass="cCal11" PopupButtonID="btnCalendar" TargetControlID="txtPaymentStartDate">
                                                     </ajaxToolkit:CalendarExtender>
                                                 &nbsp;
                                                 <asp:ImageButton ID="ImageButton3" runat="server" OnClick="txtPaymentStartDate_Click"
-                                                    ImageUrl="~/App_Themes/_global/Company/view.gif" />&nbsp;&nbsp;&nbsp;
-                                                <asp:ImageButton ID="btnPaymentChart" runat="server" ImageUrl="~/App_Themes/_global/Company/chart-pie.gif"
+                                                    ImageUrl="~/App_Shared/themes/glasscyan/Company/view.gif" />&nbsp;&nbsp;&nbsp;
+                                                <asp:ImageButton ID="btnPaymentChart" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/chart-pie.gif"
                                                     OnClick="btnPaymentChart_Click" />
                                                 <asp:CompareValidator ID="CompareValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                                                    ControlToValidate="txtPaymentStartDate" CssClass="cErr21" Operator="DataTypeCheck"
+                                                    ControlToValidate="txtPaymentStartDate"  Operator="DataTypeCheck"
                                                     Type="Date"></asp:CompareValidator>
                                             </td>
                                         </tr>
@@ -139,18 +139,18 @@
                                                 </ajaxToolkit:MaskedEditExtender>
                                             </td>
                                             <td style="white-space: nowrap;">
-                                                <asp:Image ID="btnCalendar1" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                <asp:Image ID="btnCalendar1" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                     Style="cursor: pointer;" /><ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server"
                                                         CssClass="cCal11" PopupButtonID="btnCalendar1" TargetControlID="txtSalStartDate">
                                                     </ajaxToolkit:CalendarExtender>
                                                 &nbsp;
                                                 <asp:ImageButton ID="ImageButton2" runat="server" OnClick="txtSalStartDate_Click"
-                                                    ImageUrl="~/App_Themes/_global/Company/view.gif" />
+                                                    ImageUrl="~/App_Shared/themes/glasscyan/Company/view.gif" />
                                                 &nbsp;&nbsp;&nbsp;
-                                                <asp:ImageButton ID="btnChartSalesperson" runat="server" ImageUrl="~/App_Themes/_global/Company/chart-pie.gif"
+                                                <asp:ImageButton ID="btnChartSalesperson" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/chart-pie.gif"
                                                     OnClick="btnChartSalesperson_Click" />
                                                 <asp:CompareValidator ID="CompareValidator2" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                                                    ControlToValidate="txtSalStartDate" CssClass="cErr21" Operator="DataTypeCheck"
+                                                    ControlToValidate="txtSalStartDate"  Operator="DataTypeCheck"
                                                     Type="Date"></asp:CompareValidator>
                                             </td>
                                         </tr>
@@ -233,17 +233,17 @@
                                                 </ajaxToolkit:MaskedEditExtender>
                                             </td>
                                             <td style="white-space: nowrap;">
-                                                <asp:Image ID="btnCalendar2" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                <asp:Image ID="btnCalendar2" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                     Style="cursor: pointer;" /><ajaxToolkit:CalendarExtender ID="CalendarExtender3" runat="server"
                                                         CssClass="cCal11" PopupButtonID="btnCalendar2" TargetControlID="txtCatStartDate">
                                                     </ajaxToolkit:CalendarExtender>
                                                 &nbsp;
                                                 <asp:ImageButton ID="ImageButton1" runat="server" OnClick="txtCatStartDate_Click"
-                                                    ImageUrl="~/App_Themes/_global/Company/view.gif" />&nbsp;&nbsp;&nbsp;
-                                                <asp:ImageButton ID="btnCategoryChart" runat="server" ImageUrl="~/App_Themes/_global/Company/chart-pie.gif"
+                                                    ImageUrl="~/App_Shared/themes/glasscyan/Company/view.gif" />&nbsp;&nbsp;&nbsp;
+                                                <asp:ImageButton ID="btnCategoryChart" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/chart-pie.gif"
                                                     OnClick="btnCategoryChart_Click" />
                                                 <asp:CompareValidator ID="CompareValidator3" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                                                    ControlToValidate="txtCatStartDate" CssClass="cErr21" Operator="DataTypeCheck"
+                                                    ControlToValidate="txtCatStartDate"  Operator="DataTypeCheck"
                                                     Type="Date"></asp:CompareValidator>
                                             </td>
                                         </tr>
@@ -324,14 +324,14 @@
                                                 </ajaxToolkit:MaskedEditExtender>
                                             </td>
                                             <td style="white-space: nowrap;">
-                                                <asp:Image ID="btnCalendar3" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                <asp:Image ID="btnCalendar3" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                     Style="cursor: pointer;" /><ajaxToolkit:CalendarExtender ID="CalendarExtender4" runat="server"
                                                         CssClass="cCal11" PopupButtonID="btnCalendar3" TargetControlID="txtTtlStartDate">
                                                     </ajaxToolkit:CalendarExtender>
                                                 <asp:ImageButton ID="btnViewTotal" runat="server" OnClick="txtTtlStartDate_Click"
-                                                    ImageUrl="~/App_Themes/_global/Company/view.gif" />
+                                                    ImageUrl="~/App_Shared/themes/glasscyan/Company/view.gif" />
                                                 <asp:CompareValidator ID="CompareValidator4" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                                                    ControlToValidate="txtTtlStartDate" CssClass="cErr21" Operator="DataTypeCheck"
+                                                    ControlToValidate="txtTtlStartDate"  Operator="DataTypeCheck"
                                                     Type="Date"></asp:CompareValidator>
                                             </td>
                                         </tr>

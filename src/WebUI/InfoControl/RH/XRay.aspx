@@ -48,14 +48,14 @@
                                                             </ajaxToolkit:MaskedEditExtender>
                                                         </td>
                                                         <td valign="top" style="white-space: nowrap;">
-                                                            <asp:Image ID="btnCalendarStart" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                            <asp:Image ID="btnCalendarStart" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                                 Style="cursor: pointer;" /><ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server"
                                                                     CssClass="cCal11" PopupButtonID="btnCalendarStart" TargetControlID="txtStartDate">
                                                                 </ajaxToolkit:CalendarExtender>
-                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                                                 ControlToValidate="txtStartDate" ValidationGroup="SearchResults"></asp:RequiredFieldValidator>
                                                             <asp:CompareValidator ID="CompareValidator1" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                                                                ControlToValidate="txtStartDate" CssClass="cErr21" Operator="DataTypeCheck" Type="Date"
+                                                                ControlToValidate="txtStartDate"  Operator="DataTypeCheck" Type="Date"
                                                                 ValidationGroup="SearchResults"></asp:CompareValidator>
                                                         </td>
                                                         <td>
@@ -66,18 +66,18 @@
                                                             </ajaxToolkit:MaskedEditExtender>
                                                         </td>
                                                         <td valign="top" style="white-space: nowrap;">
-                                                            <asp:Image ID="btnCalendarEnd" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/Calendar/img/btncalendar.gif"
+                                                            <asp:Image ID="btnCalendarEnd" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/Calendar/img/btncalendar.gif"
                                                                 Style="cursor: pointer;" /><ajaxToolkit:CalendarExtender ID="CalendarExtender2" runat="server"
                                                                     CssClass="cCal11" PopupButtonID="btnCalendarEnd" TargetControlID="txtEndDate">
                                                                 </ajaxToolkit:CalendarExtender>
-                                                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                                                 ControlToValidate="txtEndDate" ValidationGroup="SearchResults"></asp:RequiredFieldValidator>
                                                             <asp:CompareValidator ID="CompareValidator2" ErrorMessage="&nbsp;&nbsp;&nbsp;" runat="server"
-                                                                ControlToValidate="txtEndDate" CssClass="cErr21" Operator="DataTypeCheck" Type="Date"
+                                                                ControlToValidate="txtEndDate"  Operator="DataTypeCheck" Type="Date"
                                                                 ValidationGroup="SearchResults"></asp:CompareValidator>
                                                         </td>
                                                         <td>
-                                                            <asp:ImageButton ID="btnChart" runat="server" ImageUrl="~/App_Themes/_global/Company/chart-pie.gif"
+                                                            <asp:ImageButton ID="btnChart" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/chart-pie.gif"
                                                                 ValidationGroup="SearchResults" />
                                                         </td>
                                                     </tr>

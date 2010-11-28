@@ -39,7 +39,7 @@
                                             </asp:TextBox>
                                             <asp:CompareValidator ID="valtxtIntervalBegin" runat="server" ControlToValidate="txJourneyBegin"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="LessThan" ControlToCompare="txtIntervalBegin"
-                                                Type="Date" CssClass="cErr21" ValidationGroup="Update"></asp:CompareValidator>
+                                                Type="Date"  ValidationGroup="Update"></asp:CompareValidator>
                                             <ajaxToolkit:MaskedEditExtender ID="msktxJourneyBegin" runat="server" TargetControlID="txJourneyBegin"
                                                 CultureName="pt-BR" Mask="99:99" MaskType="Time" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="R$ "
                                                 CultureDateFormat="DMY" CultureDatePlaceholder="/" CultureDecimalPlaceholder=","
@@ -52,10 +52,10 @@
                                             <asp:TextBox ID="txtIntervalBegin" Columns="5" runat="server" Text='<%#  Convert.ToDateTime(Eval("IntervalBegin")).ToShortTimeString() %>'></asp:TextBox>
                                             <asp:CompareValidator ID="CompareValidator8" runat="server" ControlToValidate="txtIntervalBegin"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="LessThan" ControlToCompare="txtIntervalEnd"
-                                                Type="Date" CssClass="cErr21" ValidationGroup="Update"></asp:CompareValidator>
+                                                Type="Date"  ValidationGroup="Update"></asp:CompareValidator>
                                             <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="txtIntervalBegin"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="GreaterThan" ControlToCompare="txJourneyBegin"
-                                                Type="Date" CssClass="cErr21" ValidationGroup="Update"></asp:CompareValidator>
+                                                Type="Date"  ValidationGroup="Update"></asp:CompareValidator>
                                             <ajaxToolkit:MaskedEditExtender ID="msktxtIntervalBegin" runat="server" TargetControlID="txtIntervalBegin"
                                                 CultureName="pt-BR" Mask="99:99" MaskType="Time" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="R$ "
                                                 CultureDateFormat="DMY" CultureDatePlaceholder="/" CultureDecimalPlaceholder=","
@@ -68,10 +68,10 @@
                                             <asp:TextBox ID="txtIntervalEnd" Columns="5" runat="server" Text='<%# Convert.ToDateTime(Eval("IntervalEnd")).ToShortTimeString() %>'></asp:TextBox>
                                             <asp:CompareValidator ID="CompareValidator5" runat="server" ControlToValidate="txtIntervalEnd"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="GreaterThan" ControlToCompare="txtIntervalBegin"
-                                                Type="Date" CssClass="cErr21" ValidationGroup="Update"></asp:CompareValidator>
+                                                Type="Date"  ValidationGroup="Update"></asp:CompareValidator>
                                             <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtIntervalEnd"
                                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" Operator="LessThan" ControlToCompare="txtJourneyEnd"
-                                                Type="Date" CssClass="cErr21" ValidationGroup="Update"></asp:CompareValidator>
+                                                Type="Date"  ValidationGroup="Update"></asp:CompareValidator>
                                             <ajaxToolkit:MaskedEditExtender ID="msktxtIntervalEnd" runat="server" TargetControlID="txtIntervalEnd"
                                                 CultureName="pt-BR" Mask="99:99" MaskType="Time" CultureAMPMPlaceholder="" CultureCurrencySymbolPlaceholder="R$ "
                                                 CultureDateFormat="DMY" CultureDatePlaceholder="/" CultureDecimalPlaceholder=","

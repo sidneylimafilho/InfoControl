@@ -9,7 +9,7 @@
 <%@ Register Src="~/InfoControl/Profile.ascx" TagName="Profile" TagPrefix="uc2" %>
 <%@ Register Src="~/InfoControl/Profile_LegalEntity.ascx" TagName="Profile_LegalEntity"
     TagPrefix="uc3" %>
-<%@ Register Src="~/App_Modules/AccessControl/Login.ascx" TagName="Login" TagPrefix="uc4" %>
+<%@ Register Src="~/App_Shared/modules/AccessControl/Login.ascx" TagName="Login" TagPrefix="uc4" %>
 <%@ Register Src="~/Site/Checkout_Steps.ascx" TagName="CheckoutSteps" TagPrefix="uc1" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <div class="cadastro">
@@ -35,8 +35,8 @@
                         <br />
                         <asp:TextBox ID="txtUserEmail" runat="server" Columns="30" MaxLength="256">
                         </asp:TextBox>
-                        <asp:RequiredFieldValidator ControlToValidate="txtUserEmail" ID="reqTxtUserName"
-                            ValidationGroup="Save" runat="server" CssClass="cErr21">&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:RequiredFieldValidator CssClass="cErr21" ControlToValidate="txtUserEmail" ID="reqTxtUserName"
+                            ValidationGroup="Save" runat="server" >&nbsp;&nbsp;&nbsp;&nbsp;
                         </asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -45,8 +45,8 @@
                         <br />
                         <asp:TextBox ID="txtPassword" TextMode="Password" MaxLength="256" runat="server">
 &nbsp;&nbsp;&nbsp;&nbsp; </asp:TextBox>
-                        <asp:RequiredFieldValidator ControlToValidate="txtPassword" ID="reqTxtPassword" ValidationGroup="Save"
-                            runat="server" ErrorMessage="*" CssClass="cErr21">
+                        <asp:RequiredFieldValidator CssClass="cErr21" ControlToValidate="txtPassword" ID="reqTxtPassword" ValidationGroup="Save"
+                            runat="server" ErrorMessage="*" >
 &nbsp;&nbsp;&nbsp;&nbsp; </asp:RequiredFieldValidator>
                     </td>
                 </tr>
@@ -55,12 +55,12 @@
                         <br />
                         <asp:TextBox ID="TextBox1" TextMode="Password" MaxLength="256" runat="server">
                         </asp:TextBox>
-                        <asp:RequiredFieldValidator ControlToValidate="txtPassword" ID="RequiredFieldValidator1"
-                            ValidationGroup="Save" runat="server" ErrorMessage="*" CssClass="cErr21">
+                        <asp:RequiredFieldValidator CssClass="cErr21" ControlToValidate="txtPassword" ID="RequiredFieldValidator1"
+                            ValidationGroup="Save" runat="server" ErrorMessage="*" >
 &nbsp;&nbsp;&nbsp;&nbsp; </asp:RequiredFieldValidator>
                         <asp:CompareValidator ID="CompareValidator1" runat="server" ValidationGroup="Save"
                             ControlToCompare="txtPassword" ControlToValidate="TextBox1" ErrorMessage="*"
-                            CssClass="cErr21"></asp:CompareValidator>
+                            ></asp:CompareValidator>
                     </td>
                 </tr>
             </table>

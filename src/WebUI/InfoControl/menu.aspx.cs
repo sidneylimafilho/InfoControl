@@ -21,7 +21,7 @@ public partial class Commons_menu : Vivina.Erp.SystemFramework.PageBase
     private void RecursivePopulatePanelbar(RadPanelBar parent, RadPanelItemCollection items, SiteMapNode node)
     {
         level++;
-        imagesBaseDir = ResolveClientUrl("~/app_themes/_global/Menu/");
+        imagesBaseDir = ResolveClientUrl("~/App_Shared/themes/glasscyan/Menu/");
 
         foreach (SiteMapNode child in node.ChildNodes)
         {

@@ -200,7 +200,7 @@ public partial class Company_VPOS_Budget : Vivina.Erp.SystemFramework.PageBase
             //string productName = row["Name"].ToString() + row["SpecialProductName"].ToString();
 
             if (String.IsNullOrEmpty(row["ProductId"].ToString()))
-                productName += "&nbsp;&nbsp;&nbsp;&nbsp;<img src='" + ResolveClientUrl("~/App_Themes/_global/Company/Product_warning.gif") + "' alt='Este produto não se encontra cadastrado!' />";
+                productName += "&nbsp;&nbsp;&nbsp;&nbsp;<img src='" + ResolveClientUrl("~/App_Shared/themes/glasscyan/Company/Product_warning.gif") + "' alt='Este produto não se encontra cadastrado!' />";
 
             basket.Rows.Add(
                 row["ProductId"],

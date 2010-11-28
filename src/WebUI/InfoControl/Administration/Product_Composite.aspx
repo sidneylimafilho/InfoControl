@@ -36,7 +36,7 @@
                             <uc2:SelectProduct ID="ucSelectProduct" runat="server" ValidationGroup="Add" Required="true" />
                         </td>
                         <td>
-                            <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Themes\GlassCyan\Controls\GridView\img\Add2.gif"
+                            <asp:ImageButton ID="btnAdd" runat="server" ImageUrl="~\App_Shared/themes/glasscyan\Controls\GridView\img\Add2.gif"
                                 AlternateText="Adicionar composição do produto" OnClick="btnAdd_Click" ValidationGroup="Add" />
                         </td>
                     </tr>

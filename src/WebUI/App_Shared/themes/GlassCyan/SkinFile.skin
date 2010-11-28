@@ -1,0 +1,421 @@
+
+<%@ Register TagPrefix="radP" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+
+<%-- <%@ Register Assembly="RadCalendar.Net2" Namespace="Telerik.WebControls" TagPrefix="radCln" %> --%>
+<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+
+
+
+<radts:radtabstrip 
+    runat="server"  
+    CssClass="RadTabStrip_dnn" />
+
+<ajaxToolkit:Rating 
+    SkinID="Rating1" 
+    runat="server" 
+    StarCssClass="ratingStar" 
+    WaitingStarCssClass="savedRatingStar"
+    FilledStarCssClass="filledRatingStar" 
+    EmptyStarCssClass="emptyRatingStar" />
+    
+<radCln:RadCalendar  
+    runat="server" 
+    Skin="Calendar" 
+    Style="border-left-color: #ececec; border-bottom-color: #ececec; border-top-color: #ececec; border-right-color: #ececec" 
+    EnableRowSelectors="False" 
+    SkinsPath="~/App_Themes/Glass/"></radCln:RadCalendar>
+      --%>          
+                
+<asp:Button 
+    CssClass="cBtn11"  
+    runat="server"  />
+    
+<asp:TextBox
+    CssClass="cDat11"  
+    runat="server"  />
+    
+<asp:GridView 
+    CssClass="cGrd11"
+    runat="server" >
+    <FooterStyle CssClass="Pager" />
+    <PagerStyle CssClass="Pager" />
+    <HeaderStyle CssClass="Header" />        
+    </asp:GridView>
+   
+<telerik:radgrid 
+    CssClass="cGrd21" Skin=""
+    runat="server" PageSize="20" >    
+    
+    <HeaderStyle CssClass="Header"></HeaderStyle>
+    <ItemStyle CssClass="Item"></ItemStyle>
+    <AlternatingItemStyle CssClass="Item"></AlternatingItemStyle>
+    <FooterStyle CssClass="FooterStyle"></FooterStyle>
+    <PagerStyle CssClass="Pager" Mode="NumericPages"></PagerStyle>
+    <GroupHeaderItemStyle></GroupHeaderItemStyle>
+    <grouppanel cssclass="GroupPanel" Text="Arraste o cabeçalho da coluna até aqui para agrupar a coluna!" />
+</telerik:radgrid>
+    
+
+    
+<asp:RequiredFieldValidator 
+    runat="server" 
+    CssClass="cErr21" 
+    ErrorMessage=""  />
+    
+<asp:RegularExpressionValidator 
+    runat="server"     
+    CssClass="cErr21"   
+    ErrorMessage="" 
+     />                                
+    
+<ajaxToolkit:TabContainer runat="server" CssClass="cTabs11" />
+
+<ajaxToolkit:AutoCompleteExtender 
+    runat="server" 
+    CompletionInterval="1000" 
+     
+    MinimumPrefixLength="2"
+    CompletionListCssClass="CompletionListCssClass" 
+    CompletionListHighlightedItemCssClass="CompletionListHighlightedItemCssClass"
+    CompletionListItemCssClass="CompletionListItemCssClass" 
+    />
+
+<ajaxToolkit:ModalPopupExtender  
+    runat="server"  
+    BackgroundCssClass="bgModalPopup" />
+    
+    
+	
+<telerik:RadTreeView 
+    runat="server" 
+    RadControlsDir="~/App_Shared/RadControls" 
+    />
+    
+
+<telerik:radeditor runat="server" SkinId="Telerik" SpellCheckSettings-DictionaryLanguage="pt-BR"  Skin="Telerik" 
+Width="100%" ToolbarMode="Default"  EditModes="Design, Html" EnableResize="False" Language="pt-BR" Height="268px">
+<Tools>
+	<telerik:EditorToolGroup dockable="true" enabled="true">		
+		<telerik:EditorTool name="Undo" />
+		<telerik:EditorTool name="Redo" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="Cut" />
+		<telerik:EditorTool name="Copy" />
+		<telerik:EditorTool name="PastePlainText" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="LinkManager"/>		
+		<telerik:EditorTool name="InsertHorizontalRule" />
+		<telerik:EditorTool name="CustomFileManager" />
+		<telerik:EditorTool name="AjaxSpellCheck" />
+	</telerik:EditorToolGroup>
+    <telerik:EditorToolGroup Tag="InsertToolbar" >
+        <telerik:EditorTool name="InsertGroupbox" />
+        <telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="InsertTable" />
+		<telerik:EditorTool name="InsertRowAbove" />
+		<telerik:EditorTool name="InsertRowBelow" />
+		<telerik:EditorTool name="DeleteRow" />
+		<telerik:EditorTool name="InsertColumnLeft" />
+		<telerik:EditorTool name="InsertColumnRight" />
+		<telerik:EditorTool name="DeleteColumn" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="MergeColumns" />
+		<telerik:EditorTool name="MergeRows" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="SplitCell" />
+		<telerik:EditorTool name="DeleteCell" />
+		<telerik:EditorTool name="SetCellProperties" />
+		<telerik:EditorTool name="SetTableProperties" />
+		
+	</telerik:EditorToolGroup>
+		
+        <%--
+        <telerik:EditorToolGroup Tag="FormsToolbar"  dockable="true" enabled="true">	
+			<telerik:EditorTool name="FormatStripper" />
+		<telerik:EditorSeparator Visible="true" />
+				<telerik:EditorTool name="InsertFormButton" />
+		<telerik:EditorTool name="InsertFormCheckbox" />
+		<telerik:EditorTool name="InsertFormHidden" />
+		<telerik:EditorTool name="InsertFormPassword" />
+		<telerik:EditorTool name="InsertFormRadio" />
+		<telerik:EditorTool name="InsertFormReset" />
+		<telerik:EditorTool name="InsertFormSelect" />
+		<telerik:EditorTool name="InsertFormSubmit" />
+		<telerik:EditorTool name="InsertFormTextarea" />
+		<telerik:EditorTool name="InsertFormText" />
+		</telerik:EditorToolGroup>
+        --%>
+        
+	<telerik:EditorToolGroup Tag="DropdownToolbar"  dockable="true" enabled="true">		
+	 <telerik:EditorTool name="FontName"/>
+		<telerik:EditorTool name="RealFontSize"/>  		
+		<telerik:EditorTool name="Bold" />
+		<telerik:EditorTool name="Italic" />
+		<telerik:EditorTool name="Underline" />
+		<telerik:EditorTool name="StrikeThrough" />	
+		<telerik:EditorTool name="ForeColor" />
+		<telerik:EditorTool name="BackColor"/>	
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="JustifyLeft" />
+		<telerik:EditorTool name="JustifyCenter" />
+		<telerik:EditorTool name="JustifyRight" />
+		<telerik:EditorTool name="JustifyFull" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="InsertOrderedList" />
+		<telerik:EditorTool name="InsertUnorderedList"/>		
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="Superscript" />
+		<telerik:EditorTool name="Subscript" />
+		<telerik:EditorTool name="InsertSymbol" />
+		<telerik:EditorTool name="Indent" />
+		<telerik:EditorTool name="Outdent" />
+		<telerik:EditorSeparator Visible="true" />	
+		<telerik:EditorTool name="ToggleScreenMode" />
+	</telerik:EditorToolGroup>
+	
+
+   </Tools>
+   <Modules>
+        <telerik:EditorModule Name="RadEditorStatistics" Enabled="True" Visible="false" />
+    </Modules>
+    <CssFiles>
+       <telerik:EditorCssFile Value="~/App_Themes/GlassCyan/print.css" />
+        <telerik:EditorCssFile Value="~/App_Themes/GlassCyan/text.css" />
+   </CssFiles>
+  
+</telerik:radeditor>   
+
+
+<%--FULL SET OF TOOLS--%>
+<%--
+<telerik:radeditor runat="server" SkinId="FullSetOfTools">
+    <Tools>
+    <telerik:EditorToolGroup Tag="MainToolbar">
+		<telerik:EditorTool name="AjaxSpellCheck" />
+		<telerik:EditorTool name="InsertSymbol" />
+		<telerik:EditorTool name="FormatCodeBlock" />
+
+		<telerik:EditorTool name="FormatStripper" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="InsertFormElement" />
+		<telerik:EditorTool name="InsertFormForm" />
+		<telerik:EditorTool name="InsertFormButton" />
+		<telerik:EditorTool name="InsertFormCheckbox" />
+		<telerik:EditorTool name="InsertFormHidden" />
+		<telerik:EditorTool name="InsertFormPassword" />
+		<telerik:EditorTool name="InsertFormRadio" />
+		<telerik:EditorTool name="InsertFormReset" />
+		<telerik:EditorTool name="InsertFormSelect" />
+		<telerik:EditorTool name="InsertFormSubmit" />
+		<telerik:EditorTool name="InsertFormTextarea" />
+		<telerik:EditorTool name="InsertFormText" />
+
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="StripAll" />
+		<telerik:EditorTool name="StripCss" />
+		<telerik:EditorTool name="StripFont" />
+		<telerik:EditorTool name="StripSpan" />
+		<telerik:EditorTool name="StripWord" />
+	</telerik:EditorToolGroup>
+
+	<telerik:EditorToolGroup Tag="EnhancedEditToolbar" >
+		<telerik:EditorTool name="ToggleScreenMode" />
+		<telerik:EditorTool name="ToggleTableBorder" />
+		<telerik:EditorTool name="Zoom" />
+		<telerik:EditorTool name="ModuleManager" />
+		<telerik:EditorTool name="ToggleDocking" />
+		<telerik:EditorTool name="RepeatLastCommand" />
+	</telerik:EditorToolGroup>
+
+	<telerik:EditorToolGroup Tag="InsertToolbar" >
+
+		<telerik:EditorTool name="ImageManager" shortcut="CTRL+M"/>
+		<telerik:EditorTool name="ImageMapDialog"/>
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="FlashManager" />
+		<telerik:EditorTool name="MediaManager" />
+        <telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="DocumentManager" />
+		<telerik:EditorTool name="TemplateManager" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="InsertTable" />
+		<telerik:EditorTool name="InsertRowAbove" />
+		<telerik:EditorTool name="InsertRowBelow" />
+		<telerik:EditorTool name="DeleteRow" />
+		<telerik:EditorTool name="InsertColumnLeft" />
+		<telerik:EditorTool name="InsertColumnRight" />
+		<telerik:EditorTool name="DeleteColumn" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="MergeColumns" />
+		<telerik:EditorTool name="MergeRows" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="SplitCell" />
+		<telerik:EditorTool name="DeleteCell" />
+		<telerik:EditorTool name="SetCellProperties" />
+		<telerik:EditorTool name="SetTableProperties" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="IncreaseSize" shortcut="F10"/>
+		<telerik:EditorTool name="DecreaseSize" shortcut="F9"/>
+	</telerik:EditorToolGroup>
+	<telerik:EditorToolGroup>		
+		<telerik:EditorTool name="Undo" />
+		<telerik:EditorTool name="Redo" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="Cut" />
+		<telerik:EditorTool name="Copy" />
+		<telerik:EditorTool name="Paste" shortcut="CTRL+!"/>
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="PasteFromWord" />
+		<telerik:EditorTool name="PasteFromWordNoFontsNoSizes" />
+		<telerik:EditorTool name="PastePlainText" />		
+		<telerik:EditorTool name="PasteAsHtml"  />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="Print" />
+		<telerik:EditorTool name="FindAndReplace" />
+		<telerik:EditorTool name="SelectAll" />
+	<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="InsertGroupbox" />
+		<telerik:EditorTool name="InsertParagraph" />
+		<telerik:EditorTool name="InsertHorizontalRule" />
+		<telerik:EditorTool name="InsertSnippet" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="InsertDate" />
+		<telerik:EditorTool name="InsertTime" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="AboutDialog" />
+		<telerik:EditorTool name="Help" />
+	</telerik:EditorToolGroup>
+	<telerik:EditorToolGroup>
+		<telerik:EditorTool name="Bold" />
+		<telerik:EditorTool name="Italic" />
+		<telerik:EditorTool name="Underline" />
+		<telerik:EditorTool name="StrikeThrough" />
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="JustifyLeft" />
+		<telerik:EditorTool name="JustifyCenter" />
+		<telerik:EditorTool name="JustifyRight" />
+		<telerik:EditorTool name="JustifyFull" />
+		<telerik:EditorTool name="JustifyNone" />
+
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="Superscript" />
+		<telerik:EditorTool name="Subscript" />
+
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="ConvertToLower" />
+		<telerik:EditorTool name="ConvertToUpper" />
+		
+		<telerik:EditorTool name="Indent" />
+		<telerik:EditorTool name="Outdent" />
+		<telerik:EditorTool name="InsertOrderedList" />
+		<telerik:EditorTool name="InsertUnorderedList"/>
+
+		<telerik:EditorTool name="AbsolutePosition" />
+		<telerik:EditorTool name="LinkManager" />
+		<telerik:EditorTool name="InsertAnchor"/>
+		<telerik:EditorTool name="InsertEmailLink"/>
+		<telerik:EditorTool name="Unlink" />
+	</telerik:EditorToolGroup>
+	<telerik:EditorToolGroup Tag="DropdownToolbar" >
+		<telerik:EditorTool name="ForeColor" />
+		<telerik:EditorTool name="BackColor"/>
+		<telerik:EditorSeparator Visible="true" />
+		<telerik:EditorTool name="FontName"/>
+		<telerik:EditorTool name="FontSize"/>
+		<telerik:EditorTool name="RealFontSize"/>
+		<telerik:EditorTool name="ApplyClass"/>
+		<telerik:EditorTool name="InsertCustomLink"/>
+		<telerik:EditorTool name="FormatBlock"/>
+	</telerik:EditorToolGroup>
+   </Tools>
+   <ImageManager 
+   ViewPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   UploadPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   DeletePaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations"
+    />
+    <FlashManager 
+   ViewPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   UploadPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   DeletePaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations"
+    />
+    <MediaManager 
+   ViewPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   UploadPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   DeletePaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations"
+    />
+    <DocumentManager 
+   ViewPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   UploadPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   DeletePaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations"
+    />
+    <TemplateManager 
+   ViewPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   UploadPaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations" 
+   DeletePaths="~/Editor/Img/UserDir/Marketing,~/Editor/Img/UserDir/PublicRelations"
+   SearchPatterns="*.html,*.html"
+    /> 
+   <Links>
+        <telerik:EditorLink Name="telerik" href="http://www.telerik.com">
+           <telerik:EditorLink Name="Products" href="http://www.telerik.com/products">
+               <telerik:EditorLink Name="RadEditor" href="http://www.telerik.com/radeditor" />
+            </telerik:EditorLink>
+            <telerik:EditorLink name="Purchase" href="http://www.telerik.com/purchase" />
+            <telerik:EditorLink name="Support" href="http://www.telerik.com/support" />
+            <telerik:EditorLink name="Client.Net" href="http://www.telerik.com/clientnet" />
+        </telerik:EditorLink>
+        <telerik:EditorLink name="Microsoft">
+            <telerik:EditorLink name="Main Site" href="http://www.microsoft.com" />
+            <telerik:EditorLink name="MSDN Online" href="http://msdn.microsoft.com" />
+            <telerik:EditorLink name="Windows Update" href="http://windowsupdate.microsoft.com" />
+        </telerik:EditorLink>
+        <telerik:EditorLink name="Search Engines">
+            <telerik:EditorLink name="Google" href="http://www.google.com" />
+            <telerik:EditorLink name="Yahoo" href="http://www.yahoo.com" />
+            <telerik:EditorLink name="AltaVista" href="http://www.altavista.com" />
+        </telerik:EditorLink>
+    </Links> 
+        <Snippets>
+            <telerik:EditorSnippet Name="Order Confirmation">       
+					<div style="width:300px;border:2px outset #D8D2BD;padding:34px;font-family:Arial, Verdana; font-size:11px;background-color:#F1EFE6;">
+					Dear ____________________,<br />
+					Thank you for inquiring about ____________. Your request will be processed in 48 hours and shipped at the address you have provided. 
+					<br /><br />
+						<b>Please, contact us if you have any problems.</b>
+					</div>				
+            </telerik:EditorSnippet>
+            <telerik:EditorSnippet Name="Email Signature">            	
+					<div style="margin-top:30px;width:80%;border-top:1px dotted gray;padding-top:4px;font-family:Arial, Verdana; font-size:11px;">
+					<b>John Wigham</b><br />
+					Senior Web Developer<br />
+						<a href="#">john@mysite.com</a>
+						<br />
+							<br />
+								<i>Disclaimer: The contents of this e-mail are privileged and confidential and intended for the addressees at the specified e-mail addresses only.</i>
+					</div>
+            </telerik:EditorSnippet>				
+            <telerik:EditorSnippet Name="Problem Report Feedback">
+					<div style="width:300px;border:2px outset #D8D2BD;padding:34px;font-family:Arial, Verdana; font-size:11px;background-color:#F1EFE6;">
+					Hi ____________________,<br />
+					Thank you for reporting this issue. We have verified the problem and it is logged in our system. We will notify you once we have a solution. 
+					<br /><br />
+						<b>Please, contact us if you have any problems.</b>
+					</div>
+			</telerik:EditorSnippet>
+        </Snippets>       
+</telerik:radeditor>
+--%>

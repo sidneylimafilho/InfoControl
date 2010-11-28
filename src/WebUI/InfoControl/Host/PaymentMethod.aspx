@@ -5,7 +5,7 @@
 <%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls"
     TagPrefix="VFX" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
-    <img src="../App_Themes/Glass/Company/paymentMethod.gif" alt="" />
+    <img src="../App_Shared/modules/Glass/Company/paymentMethod.gif" alt="" />
     <table class="cLeafBox21" width="50%">
         <tr class="top">
             <td class="left">
@@ -25,8 +25,8 @@
                     <EditItemTemplate>
                         Nome:<br />
                         <asp:TextBox ID="NameTextBox" runat="server" Text='<%# Bind("Name") %>' Columns="30"
-                            MaxLength="30" /><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                ControlToValidate="NameTextBox" CssClass="cErr21"></asp:RequiredFieldValidator>
+                            MaxLength="30" /><asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                ControlToValidate="NameTextBox" ></asp:RequiredFieldValidator>
                         <br />
                         Url da Operadora:<br />
                         <asp:TextBox ID="TransactionUrlTextBox" runat="server" Text='<%# Bind("TransactionUrl") %>'

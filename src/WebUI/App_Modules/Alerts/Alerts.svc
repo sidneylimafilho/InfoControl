@@ -1,4 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Service="InfoControl.Web.UI.Alerts" 
-    CodeBehind="Alerts.svc.cs" 
-    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
-    

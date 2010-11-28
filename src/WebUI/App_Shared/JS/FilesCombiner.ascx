@@ -6,17 +6,17 @@
         System.Text.RegularExpressions.Regex regex;
 
         // Remove comments in // style
-        text = new System.Text.RegularExpressions.Regex("(\\/)(\\/)(.*)").Replace(text, "");
+        //text = new System.Text.RegularExpressions.Regex("([^\"]\\/\\/.*)").Replace(text, "");
 
         // Remove line break
         //text = new System.Text.RegularExpressions.Regex("\\r|\\n|\\t").Replace(text, "");
 
         // Remove exceeding whitespaces
-        text = new System.Text.RegularExpressions.Regex(" +").Replace(text, " ");
+        //text = new System.Text.RegularExpressions.Regex(" +").Replace(text, " ");
 
         // Remove comments in /**/ style
         //text = new System.Text.RegularExpressions.Regex(@"/\*(.|\n)*\*/[^*]").Replace(text, "");
-        
+
 
         return text;
     }
@@ -59,11 +59,20 @@
 
         Include("jquery.UI.core.js");
         Include("jquery.UI.widget.js");
+        Include("jquery.UI.position.js");
+        Include("jquery.UI.tabs.js");
         Include("jquery.UI.autocomplete.js");
         Include("jquery.UI.duallistbox.js");
         Include("jquery.ui.datepicker.js");
+        Include("jquery.UI.htmlbox.js");
+
+        Include("jquery.notification.js");
+
+        Include("jquery.glob.js");
+        Include("jquery.glob.pt-br.js");
 
         Include("smartclient/jquery.smartclient.js");
+
 
         Response.End();
 

@@ -14,7 +14,7 @@
         <tr>
             <td>
                 <asp:TextBox ID="txtServiceOrderNumber" runat="server" MaxLength="50" Columns="20"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="valtxtServiceOrderNumber" runat="server" ControlToValidate="txtServiceOrderNumber"
+                <asp:RequiredFieldValidator CssClass="cErr21" ID="valtxtServiceOrderNumber" runat="server" ControlToValidate="txtServiceOrderNumber"
                     ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertServiceOrder"></asp:RequiredFieldValidator>
             </td>
             <td>
@@ -50,7 +50,7 @@
                                                 <uc1:SelectCustomer ID="SelCustomer" runat="server" OnSelectedCustomer="SelCustomer_SelectedCustomer" />
                                             </td>
                                             <td>
-                                                <asp:RequiredFieldValidator ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
+                                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
                                                     ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertServiceOrder"></asp:RequiredFieldValidator>
                                             </td>
                                         </td>
@@ -65,7 +65,7 @@
                                                     DataTextField="Name" DataValueField="ServiceOrderTypeId" AppendDataBoundItems="True">
                                                     <asp:ListItem Value="" Text=""></asp:ListItem>
                                                 </asp:DropDownList>
-                                                <asp:RequiredFieldValidator ID="reqcboServiceOrderType" runat="server" ControlToValidate="cboServiceOrderType"
+                                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboServiceOrderType" runat="server" ControlToValidate="cboServiceOrderType"
                                                     ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="InsertServiceOrder"></asp:RequiredFieldValidator>
                                             </td>
                                             <td>
@@ -74,7 +74,7 @@
                                                     DataTextField="Name" DataValueField="ServiceOrderStatusId" AppendDataBoundItems="True">
                                                     <asp:ListItem Value="" Text=""></asp:ListItem>
                                                 </asp:DropDownList>
-                                                <asp:RequiredFieldValidator ID="reqcboServiceOrderStatus" runat="server" ControlToValidate="cboServiceOrderStatus"
+                                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboServiceOrderStatus" runat="server" ControlToValidate="cboServiceOrderStatus"
                                                     ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="InsertServiceOrder"></asp:RequiredFieldValidator>
                                                 <VFX:BusinessManagerDataSource ID="odsServicesOrderStatus" runat="server" SelectMethod="getAllServiceOrderStatus"
                                                     TypeName="Vivina.Erp.BusinessRules.Services.ServicesManager">
@@ -173,7 +173,7 @@
                                         DataValueField="ServiceId" AppendDataBoundItems="True">
                                         <asp:ListItem></asp:ListItem>
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="valService" runat="server" ControlToValidate="cboService"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="valService" runat="server" ControlToValidate="cboService"
                                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertService"></asp:RequiredFieldValidator>
                                     &nbsp;&nbsp;&nbsp;
                                     <VFX:BusinessManagerDataSource runat="server" ID="odsServices" SelectMethod="GetServices"
@@ -189,7 +189,7 @@
                                         DataTextField="Name" DataValueField="EmployeeId" AppendDataBoundItems="True">
                                         <asp:ListItem></asp:ListItem>
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqcboServiceEmployee" runat="server" ControlToValidate="cboServiceEmployee"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboServiceEmployee" runat="server" ControlToValidate="cboServiceEmployee"
                                         ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="InsertService"></asp:RequiredFieldValidator>
                                     <VFX:BusinessManagerDataSource runat="server" ID="odsServicesOrderEmployee" onselecting="dataSource_Selecting"
                                         SelectMethod="GetActiveTechnicalEmployee" TypeName="Vivina.Erp.BusinessRules.HumanResourcesManager">
@@ -204,7 +204,7 @@
                                         runat="server" />
                                 </td>
                                 <td>
-                                    <asp:ImageButton ID="btnAddServiceItem" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                                    <asp:ImageButton ID="btnAddServiceItem" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                         runat="server" AlternateText="Inserir Serviço" OnClick="btnAddServiceItem_Click"
                                         ValidationGroup="InsertService" />
                                 </td>
@@ -262,7 +262,7 @@
                                                 options="{max: 10}">
                                                 
                                             </asp:TextBox>
-                                            <asp:RequiredFieldValidator ID="valProduct" runat="server" ControlToValidate="txtProduct"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valProduct" runat="server" ControlToValidate="txtProduct"
                                                 ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertProduct"></asp:RequiredFieldValidator>
                                         </td>
                                         <td>
@@ -279,7 +279,7 @@
                                             <asp:CheckBox ID="choProductIsApplied" runat="server" Text=" Foi aplicado ?" />
                                         </td>
                                         <td>
-                                            <asp:ImageButton ID="btnServiceOrderItemProduct" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                                            <asp:ImageButton ID="btnServiceOrderItemProduct" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                                 runat="server" AlternateText="Inserir produto" OnClick="btnServiceOrderItemProduct_Click"
                                                 ValidationGroup="InsertProduct" />
                                         </td>

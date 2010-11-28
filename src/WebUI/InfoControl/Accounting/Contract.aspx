@@ -16,7 +16,7 @@
         <tr>
             <td>
                 <asp:TextBox ID="txtContractNumber" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="valtxtContractNumber" runat="server" ControlToValidate="txtContractNumber"
+                <asp:RequiredFieldValidator CssClass="cErr21" ID="valtxtContractNumber" runat="server" ControlToValidate="txtContractNumber"
                     ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
             </td>
         </tr>
@@ -45,7 +45,7 @@
                             <%--<asp:TextBox ID="txtName" runat="server" Columns="40" MaxLength="50" Visible="false" /> --%>
                         </td>
                         <td>
-                            <%--<asp:RequiredFieldValidator ID="reqTxtName" runat="server" ControlToValidate="txtName"
+                            <%--<asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtName" runat="server" ControlToValidate="txtName"
                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;--%>
                         </td>
@@ -55,7 +55,7 @@
                                 DataSourceID="odsContractType" DataTextField="Name" DataValueField="ContractTypeId">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqcboContractType" runat="server" ControlToValidate="cboContractType"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboContractType" runat="server" ControlToValidate="cboContractType"
                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
@@ -65,7 +65,7 @@
                                 DataSourceID="odsContractStatus" DataTextField="Name" DataValueField="ContractStatusId">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqcboContractStatus" runat="server" ControlToValidate="cboContractStatus"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboContractStatus" runat="server" ControlToValidate="cboContractStatus"
                                 ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;
                         </td>
@@ -78,8 +78,8 @@
                         <tr>
                             <td valign="top">
                                 <uc2:SelectCustomer ID="SelCustomer" runat="server" OnSelectedCustomer="SelCustomer_SelectedCustomer" />
-                                <asp:RequiredFieldValidator ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
-                                    CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="InsertContract">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
+                                     ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="InsertContract">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 <table>
@@ -123,7 +123,7 @@
                 <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="upParcelsConfiguration">
                     <progresstemplate>
                         <div class="cLoading11" style="position: absolute; width: 95%; height: 160px;">
-                            <img id="Img1" runat="server" alt="Carregando" src="~/App_Themes/_global/loading3.gif" />
+                            <img id="Img1" runat="server" alt="Carregando" src="~/App_Shared/themes/glasscyan/loading3.gif" />
                         </div>
                     </progresstemplate>
                 </asp:UpdateProgress>
@@ -150,11 +150,11 @@
                                                 OnTextChanged="cboFinancierOperationId_TextChanged" AutoPostBack="True">
                                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                                             </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="reqcboFinancierOperationId2" runat="server" Display="Dynamic"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboFinancierOperationId2" runat="server" Display="Dynamic"
                                                 ControlToValidate="cboPaymentMethods" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"
                                                 ValidationGroup="valCalculateParcel"></asp:RequiredFieldValidator>
                                                 
-                                            <asp:RequiredFieldValidator ID="reqcboFinancierOperationId" runat="server" Display="Dynamic"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboFinancierOperationId" runat="server" Display="Dynamic"
                                                 ControlToValidate="cboPaymentMethods" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"
                                                 ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                                         </td>
@@ -165,7 +165,7 @@
                                                 OnSelectedIndexChanged="cboParcels_SelectedIndexChanged" CausesValidation="true">
                                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                                             </asp:DropDownList>
-                                            <asp:RequiredFieldValidator ID="reqParcels" runat="server" Display="Dynamic"
+                                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqParcels" runat="server" Display="Dynamic"
                                                 ControlToValidate="cboParcels" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"
                                                 ValidationGroup="InsertContract"></asp:RequiredFieldValidator>
                                         </td>

@@ -26,7 +26,7 @@
                     <legend>Modelo de Ordem de compra: </legend>
                     <br />
                     <asp:FileUpload ID="fupPurchaseOrderFile" runat="server" />
-                    <asp:RequiredFieldValidator ID="reqfupPurchaseOrderFile" runat="server" ControlToValidate="fupPurchaseOrderFile"
+                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqfupPurchaseOrderFile" runat="server" ControlToValidate="fupPurchaseOrderFile"
                         ValidationGroup="SaveContractTemplate" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                     &nbsp; &nbsp; &nbsp; &nbsp;
                     <asp:Button ID="btnPurchaseOrderFileName" runat="server" Text="Salvar" OnClick="btnPurchaseOrderFileName_Click" />
@@ -49,16 +49,16 @@
                                     runat="server">
                                     <asp:ListItem Value="" Text=""> </asp:ListItem>
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="reqTxtContractTemplateFileName" runat="server" ControlToValidate="cboDocumentTemplateTypes"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtContractTemplateFileName" runat="server" ControlToValidate="cboDocumentTemplateTypes"
                                     ValidationGroup="SaveContractTemplate" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Selecione o modelo:<br />
                                 <asp:FileUpload ID="fupDocumentTemplate" runat="server" />
-                                <asp:RequiredFieldValidator ID="reqFupContractTemplate" runat="server" ControlToValidate="fupDocumentTemplate"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqFupContractTemplate" runat="server" ControlToValidate="fupDocumentTemplate"
                                     ValidationGroup="SaveContractTemplate" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"></asp:RequiredFieldValidator>
                                 &nbsp; &nbsp; &nbsp; &nbsp;
-                                <asp:ImageButton ID="btnAddContractTemplate" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                                <asp:ImageButton ID="btnAddContractTemplate" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                     runat="server" AlternateText="Salvar Modelo" OnClick="btnAddContractTemplate_Click"
                                     ValidationGroup="SaveContractTemplate" />
                             </td>

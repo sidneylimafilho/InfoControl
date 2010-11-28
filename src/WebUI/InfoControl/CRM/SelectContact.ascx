@@ -11,7 +11,7 @@
                 Dica: Digite parte do texto, que o mesmo será completado automaticamente!</p>
         </td>
         <td>
-            <img id="Img1" src="~/app_themes/_global/company/user_add.gif" runat="server" alt="Inserir Contato"
+            <img id="Img1" src="~/App_Shared/themes/glasscyan/company/user_add.gif" runat="server" alt="Inserir Contato"
                 border="0" class="noprintable" style="cursor: pointer" onclick="top.$.lightbox('Administration/Contact.aspx?w=true&lightbox[iframe]=true');" />
         </td>
     </tr>
@@ -29,7 +29,7 @@
             </td>
             <td>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="~/App_Themes/_global/p_univ.gif" id="imgUnselect" onclick="$('.pnlContactSearch').show(); "
+                <img src="~/App_Shared/themes/glasscyan/p_univ.gif" id="imgUnselect" onclick="$('.pnlContactSearch').show(); "
                     runat="server" />
             </td>
         </tr>

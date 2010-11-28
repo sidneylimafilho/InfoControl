@@ -28,7 +28,7 @@
                         <td colspan="2">
                             Nome:<br />
                             <asp:TextBox ID="txtName" MaxLength="50" runat="server" Width="200px" />
-                            <asp:RequiredFieldValidator ID="reqtxtName" runat="server" ControlToValidate="txtName"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtName" runat="server" ControlToValidate="txtName"
                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="InsertDeposit" Display="Dynamic"></asp:RequiredFieldValidator>
                         </td>
                         <td>

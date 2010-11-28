@@ -27,12 +27,12 @@
                         <td>
                             Embalagem:<br />
                             <asp:TextBox runat="server" ID="txtPackage" Columns="30" MaxLength="200"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqTxtPackage" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtPackage" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="txtPackage" Display="Dynamic">
                             </asp:RequiredFieldValidator>
                         </td>
                         <td valign="bottom">
-                            <asp:ImageButton runat="server" ID="btnSavePackage" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton runat="server" ID="btnSavePackage" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 AlternateText="Adicionar Embalagem" OnClick="btnSavePackage_Click" />
                         </td>
                     </tr>

@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/site/1/Site.master" AutoEventWireup="true"
     Inherits="Vivina.Erp.WebUI.Site.Login" CodeBehind="login.aspx.cs" %>
 
-<%@ Register Src="~/App_Modules/AccessControl/Login.ascx" TagName="Login" TagPrefix="uc1" %> 
+<%@ Register Src="~/App_Shared/modules/AccessControl/Login.ascx" TagName="Login" TagPrefix="uc1" %> 
 <asp:Content ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
     <h1>
         Controle de Acesso

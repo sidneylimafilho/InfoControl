@@ -35,7 +35,7 @@
                                     Nome do Equipamento/Carro:<br />
                                     <asp:TextBox ID="txtName" runat="server" Text='<%# Bind("Name") %>' Columns="50" 
                                         MaxLength="100" ValidationGroup="InsertEquipment"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtName"
                                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertEquipment"
                                         Width="16px"></asp:RequiredFieldValidator>
                                 </td>
@@ -63,7 +63,7 @@
                                     Número serial/Chassi:<br />
                                     <asp:TextBox ID="txtSerialNumber" Text='<%# Bind("SerialNumber") %>' runat="server"
                                         Columns="30" MaxLength="50" ValidationGroup="InsertEquipment"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="reqtxtSerialNumber" runat="server" ControlToValidate="txtSerialNumber"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtSerialNumber" runat="server" ControlToValidate="txtSerialNumber"
                                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="InsertEquipment"></asp:RequiredFieldValidator>
                                 </td>
                                 <td>

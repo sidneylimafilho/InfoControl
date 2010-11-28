@@ -1,8 +1,7 @@
 ﻿<%@ Page EnableEventValidation="false" Language="C#" MasterPageFile="~/InfoControl/Default.master"
     AutoEventWireup="true" Inherits="Accounting_Bills" Title="Contas à Pagar" CodeBehind="Bills.aspx.cs" %>
 
-<%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls"
-    TagPrefix="VFX" %>
+<%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls" TagPrefix="VFX" %>
 <%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
 <%@ Register Src="AccountSearch.ascx" TagName="AccountSearch" TagPrefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="Server">
@@ -24,22 +23,24 @@
             </td>
             <td class="center">
                 <fieldset id="filter" class="closed">
-                    <legend><span id="filterLegend">Escolha o filtro desejado:</span></legend><div class="body"
-                        id="filterBody">
+                    <legend><span id="filterLegend">Escolha o filtro desejado:</span></legend>
+                    <div class="body" id="filterBody">
                         <uc1:AccountSearch ID="ucAccountSearch" OnSelectedSearchAccountParameters="SearchAccount_SelectedParameters"
                             runat="server" />
-                    </div><span id="closeFilter" class="closeButton">&nbsp;</span>
+                    </div>
+                    <span id="closeFilter" class="closeButton">&nbsp;</span>
                 </fieldset>
                 <br />
                 <br />
                 <br />
                 <br />
                 <br />
-                <telerik:RadGrid ID="grdBill" runat="server" AllowSorting="True" AutoGenerateColumns="False"
-                    DataSourceID="odsSearchBills" ShowGroupPanel="True" OnItemCommand="grdBill_ItemCommand"
-                    OnSortCommand="grdBill_SortCommand" AllowAutomaticDeletes="True" showgroupfooter="true"
-                    OnItemDataBound="grdBill_ItemDataBound" ShowFooter="True" GridLines="Horizontal"
-                    Width="100%" EnableViewState="False" PageSize="20" RowSelectable="false" AllowPaging="True"> 
+                <telerik:RadGrid ID="grdBill" CssClass="cGrd21" Skin="" runat="server" AllowSorting="True"
+                    AutoGenerateColumns="False" DataSourceID="odsSearchBills" ShowGroupPanel="True"
+                    OnItemCommand="grdBill_ItemCommand" OnSortCommand="grdBill_SortCommand" AllowAutomaticDeletes="True"
+                    showgroupfooter="true" OnItemDataBound="grdBill_ItemDataBound" ShowFooter="True"
+                    GridLines="Horizontal" Width="100%" EnableViewState="False" PageSize="20" RowSelectable="false"
+                    AllowPaging="True">
                     <MasterTableView GroupLoadMode="Client" ShowGroupFooter="true" AllowMultiColumnSorting="false"
                         DataKeyNames="BillId,AccountId,AccountingPlanId,CompanyId,DocumentType,DocumentNumber,EntryDate,CostCenterId,DueDate,Description,SupplierName"
                         NoMasterRecordsText="&lt;div style=&quot;text-align: center&quot;&gt; Não existem dados a serem exibidos.&lt;br /&gt;&lt;/div&gt;"
@@ -99,6 +100,11 @@
                         <ClientEvents OnRowMouseOver="RowMouseOver" OnRowMouseOut="RowMouseOut" />
                     </ClientSettings>
                     <PagerStyle Mode="NumericPages" AlwaysVisible="true"></PagerStyle>
+                    <HeaderStyle CssClass="Header"></HeaderStyle>
+                    <ItemStyle CssClass="Item"></ItemStyle>
+                    <AlternatingItemStyle CssClass="Item"></AlternatingItemStyle>
+                    <FooterStyle CssClass="FooterStyle"></FooterStyle>
+                    <GroupHeaderItemStyle></GroupHeaderItemStyle>
                 </telerik:RadGrid>
             </td>
             <td class="right">
@@ -128,7 +134,6 @@
             <asp:Parameter Name="maximumRows" Type="Int32" />
          </selectparameters>
     </VFX:BusinessManagerDataSource>
-    
     <VFX:BusinessManagerDataSource ID="odsAccountingPlan" runat="server" OnSelecting="odsAccountingPlan_Selecting"
         SelectMethod="GetOutboundPlan" TypeName="Vivina.Erp.BusinessRules.AccountManager">
         <selectparameters>

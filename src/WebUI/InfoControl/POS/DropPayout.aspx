@@ -42,7 +42,7 @@
                             <asp:DropDownList runat="server" DataTextField="Name" DataValueField="DepositId"
                                 ID="cboDeposit" AutoPostBack="false" DataSourceID="odsDeposits">
                             </asp:DropDownList>
-                           <asp:RequiredFieldValidator runat="server" ID="reqCboDeposit" ErrorMessage="&nbsp&nbsp&nbsp"
+                           <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqCboDeposit" ErrorMessage="&nbsp&nbsp&nbsp"
                             ControlToValidate="cboDeposit"> 
                            
                            </asp:RequiredFieldValidator>

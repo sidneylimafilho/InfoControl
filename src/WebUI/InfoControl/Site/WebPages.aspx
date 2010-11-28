@@ -38,7 +38,7 @@
             <br />
             <br />
             Endereço Web <i>(nomedaempresa.com.br)</i>:<br />
-            <asp:TextBox ID="txtWebSite" runat="server"></asp:TextBox><asp:RequiredFieldValidator
+            <asp:TextBox ID="txtWebSite" runat="server"></asp:TextBox><asp:RequiredFieldValidator CssClass="cErr21"
                 ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;"
                 CssClass="cErr11" ControlToValidate="txtWebSite"></asp:RequiredFieldValidator>
             <asp:Button ID="btnSave" runat="server" Text="Salvar" OnClick="btnSave_Click" />

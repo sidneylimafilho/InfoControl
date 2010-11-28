@@ -309,7 +309,7 @@ public partial class Company_Stock_Deposit : Vivina.Erp.SystemFramework.PageBase
                                      {
                                          ShowDeleteButton = true,
                                          DeleteText = "<div class='delete' title='excluir'> </div> ",
-                                         DeleteImageUrl = "../../App_Themes/GlassCyan/Controls/GridView/img/Delete.png"
+                                         DeleteImageUrl = "../../App_Shared/themes/glasscyan/Controls/GridView/img/Delete.png"
                                      });
         }
     }

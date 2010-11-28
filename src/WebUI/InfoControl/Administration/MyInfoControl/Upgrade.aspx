@@ -25,9 +25,9 @@
                 <asp:DropDownList ID="cboPackage" runat="server" DataSourceID="odsPackages" DataTextField="Name"
                     DataValueField="PackageId">
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="cboPackage"
+                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ControlToValidate="cboPackage"
                     ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"></asp:RequiredFieldValidator>
-                <asp:ImageButton ID="btnInsert" runat="server" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                <asp:ImageButton ID="btnInsert" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                     OnClick="btnInsert_Click" />
                 <asp:GridView ID="grdPackageAdditional" runat="server" Width="100%" AutoGenerateColumns="False"
                     DataSourceID="odsAdditionalPackages" DataKeyNames="AddonId" OnRowDataBound="grdPackageAdditional_RowDataBound"
@@ -39,7 +39,7 @@
                         <asp:TemplateField ShowHeader="False">
                             <ItemTemplate>
                                 <asp:LinkButton ID="btnDelete" runat="server" CausesValidation="False" CommandName="Delete"
-                                    Text="&lt;img src=&quot;../../../App_Themes/Glass/Controls/GridView/img/Pixel_bg.gif&quot; class=&quot;delete&quot; border='0' /&gt;"
+                                    Text="&lt;img src=&quot;../../../App_Shared/modules/Glass/Controls/GridView/img/Pixel_bg.gif&quot; class=&quot;delete&quot; border='0' /&gt;"
                                     Visible='<%# Convert.ToInt32(Eval("value")) == 1 %>'></asp:LinkButton>
                             </ItemTemplate>
                         </asp:TemplateField>

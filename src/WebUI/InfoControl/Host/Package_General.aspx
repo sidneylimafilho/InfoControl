@@ -31,7 +31,7 @@
                         <td>
                             Nome:<br />
                             <asp:TextBox ID="txtName" Columns="30" MaxLength="30" runat="server" />
-                            <asp:RequiredFieldValidator ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqTxtName" runat="server"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqTxtName" runat="server"
                                 ValidationGroup="Save" ControlToValidate="txtName"></asp:RequiredFieldValidator>
                         </td>
                         <td>
@@ -39,7 +39,7 @@
                             <input type="button" value="-" id="btnDown" class="cUpDown11" tabindex="100" />
                             <asp:TextBox ID="txtNumberUsers" runat="server" Columns="5" MaxLength="5" />
                             <input type="button" value="+" id="btnUp" class="cUpDown11" tabindex="101" />
-                            <asp:RequiredFieldValidator ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RequiredFieldValidator2"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RequiredFieldValidator2"
                                 runat="server" ControlToValidate="txtNumberUsers"></asp:RequiredFieldValidator>
                             <ajaxToolkit:NumericUpDownExtender ID="NumericUpDownExtender1" runat="server" Maximum="1000"
                                 Minimum="0" TargetControlID="txtNumberUsers" TargetButtonDownID="btnDown" TargetButtonUpID="btnUp"
@@ -51,7 +51,7 @@
                             <input type="button" value="-" id="btnDown2" class="cUpDown11" tabindex="200" />
                             <asp:TextBox ID="txtNumberItems" runat="server" Columns="5" MaxLength="5" />
                             <input type="button" value="+" id="btnUp2" class="cUpDown11" tabindex="201" />
-                            <asp:RequiredFieldValidator ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RequiredFieldValidator3"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="RequiredFieldValidator3"
                                 runat="server" ControlToValidate="txtNumberItems"></asp:RequiredFieldValidator>
                             <ajaxToolkit:NumericUpDownExtender ID="NumericUpDownExtender2" runat="server" Maximum="1000"
                                 Step="50" Minimum="0" TargetControlID="txtNumberItems" TargetButtonDownID="btnDown2"

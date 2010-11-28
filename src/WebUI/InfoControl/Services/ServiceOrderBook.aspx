@@ -56,7 +56,7 @@
                                     </asp:DropDownList>
                                     <asp:Label ID="lblEmployeeItem" runat="server" Text='<%# Eval("EmployeeName") %>'
                                         Visible='<%# (grdServiceOrderBook.Attributes["State"] == "Edit") %>'></asp:Label>
-                                    <asp:RequiredFieldValidator ID="reqCboEmployee" runat="server" ControlToValidate="cboEmployee"
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqCboEmployee" runat="server" ControlToValidate="cboEmployee"
                                         ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ValidationGroup="save"></asp:RequiredFieldValidator>
                                 </EditItemTemplate>
                                 <ItemTemplate>

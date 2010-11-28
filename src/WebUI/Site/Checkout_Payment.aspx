@@ -31,7 +31,7 @@
                     <tr>
                         <td width="120px">
                             <img runat="server" id="imgPaymentMethod" alt='<%#Eval("PaymentMethod.Name") %>'
-                                class='paymentMethod <%#Eval("PaymentMethod.Name").ToString().RemoveSpecialChars() %>' src='<%# "~/App_themes/_global/checkout/" + Eval("PaymentMethod.Name").ToString().RemoveSpecialChars() + ".png" %>'
+                                class='paymentMethod <%#Eval("PaymentMethod.Name").ToString().RemoveSpecialChars() %>' src='<%# "~/App_Shared/themes/glasscyan/checkout/" + Eval("PaymentMethod.Name").ToString().RemoveSpecialChars() + ".png" %>'
                                 style='cursor: hand;' />
                         </td>
                         <td>
@@ -138,7 +138,7 @@
                                                         <input id="cardCvc2" name="cardCvc2" size="6" maxlength="4" class="{required:true, digits:true, messages:{required:'*', digits:'*'}}" />
                                                     </td>
                                                     <td align="Left">
-                                                        <img id="Img1" border="0" runat="server" src="~/app_themes/_global/checkout/lock.png" />
+                                                        <img id="Img1" border="0" runat="server" src="~/App_Shared/themes/glasscyan/checkout/lock.png" />
                                                     </td>
                                                     <td align="Left">
                                                         <a target="_top" href="javascript:;" onclick="window.open('checkout_whatsCVC.htm', 'cardchave', 'toolbars=0, menubar=0, scrollbars=0, statusbar=0, width=420; height=560; resizable=0; titlebar=0;');"

@@ -302,7 +302,7 @@ namespace Vivina.Erp.WebUI.Site
                 if (!_page.IsPublished)
                 {
                     var panel = new Panel();
-                    panel.Style.Add("background-image", "url(" + ResolveUrl("~/app_themes/_global/bgWebPageDraft.png") + ")");
+                    panel.Style.Add("background-image", "url(" + ResolveUrl("~/App_Shared/themes/glasscyan/bgWebPageDraft.png") + ")");
                     panel.Style.Add("position", "absolute");
                     panel.Style.Add("width", "100%");
                     panel.Style.Add("height", "100%");

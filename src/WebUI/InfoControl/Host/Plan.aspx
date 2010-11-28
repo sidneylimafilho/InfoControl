@@ -37,7 +37,7 @@
                             Nome:
                             <br />
                             <asp:TextBox runat="server" ID="txtName" MaxLength="50" ValidationGroup="Save"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqTxtName" ControlToValidate="txtName" runat="server"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtName" ControlToValidate="txtName" runat="server"
                                 ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="Save" />
                         </td>
                         <td>
@@ -52,7 +52,7 @@
                                 DataSourceID="odsApplications" ID="cboApplication" AppendDataBoundItems="true">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqCboApplication" ControlToValidate="cboApplication"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqCboApplication" ControlToValidate="cboApplication"
                                 runat="server" ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="Save" />
                         </td>
                         <td>
@@ -61,7 +61,7 @@
                                 DataSourceID="odsPackages" ID="cboPackage" AppendDataBoundItems="true">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="reqCboPackage" ControlToValidate="cboPackage" runat="server"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqCboPackage" ControlToValidate="cboPackage" runat="server"
                                 ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="Save" />
                         </td>
                     </tr>

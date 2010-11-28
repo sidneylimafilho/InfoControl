@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" StylesheetTheme="" Inherits="Signup_Register" AutoEventWireup="True"
+﻿<%@ Page Language="C#"  Inherits="Signup_Register" AutoEventWireup="True"
     MasterPageFile="~/site/1/infocontrol.master" CodeBehind="Signup_Register.aspx.cs" %>
 
 <%@ Register Assembly="InfoControl" Namespace="InfoControl.Web.UI.WebControls" TagPrefix="VFX" %>
@@ -8,7 +8,7 @@
     <table runat="server" id="pnlFormRegister">
         <tr>
             <td>
-                <img id="Img1" runat="server" src="~/App_Themes/Site/Register/dados_empresa.gif"
+                <img id="Img1" runat="server" src="~/App_Shared/modules/Site/Register/dados_empresa.gif"
                     alt="" /><br />
                 <table>
                     <tr>
@@ -16,16 +16,16 @@
                             Razão Social:<br />
                             <asp:TextBox CssClass="cDat11" ID="txtCompanyName" runat="server" Columns="30" MaxLength="50"
                                 Text='' />
-                            <asp:RequiredFieldValidator ID="reqName" runat="server" ControlToValidate="txtCompanyName"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" CssClass="cErr21">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqName" runat="server" ControlToValidate="txtCompanyName"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" >&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                         </td>
                         <td>
                             Telefone da Empresa:
                             <br />
                             <asp:TextBox CssClass="cDat11" ID="txtCompanyPhone" runat="server" Columns="11" MaxLength="12"
                                 Text='' />
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCompanyPhone"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" InitialValue="(__)____-____">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCompanyPhone"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;"  InitialValue="(__)____-____">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender1" runat="server" AcceptNegative="None"
                                 AutoComplete="False" ClearMaskOnLostFocus="false" Mask="(99)9999-9999" TargetControlID="txtCompanyPhone">
                             </ajaxToolkit:MaskedEditExtender>
@@ -43,10 +43,10 @@
                             <ajaxToolkit:MaskedEditExtender ID="MaskedEditExtender3" runat="server" ClearMaskOnLostFocus="false"
                                 CultureName="pt-BR" Mask="99,999,999/9999-99" TargetControlID="txtCNPJ">
                             </ajaxToolkit:MaskedEditExtender>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtCNPJ"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21" Display="Dynamic">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtCNPJ"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;"  Display="Dynamic">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             <VFX:CnpjValidator ID="CnpjValidator1" runat="server" ControlToValidate="txtCNPJ"
-                                CssClass="cErr21" Display="Dynamic">&nbsp;&nbsp;&nbsp;</VFX:CnpjValidator>
+                                 Display="Dynamic">&nbsp;&nbsp;&nbsp;</VFX:CnpjValidator>
                             &nbsp;
                         </td>
                         <td>
@@ -62,23 +62,23 @@
                         </td>
                     </tr>
                 </table>
-                <img id="Img2" runat="server" src="~/App_Themes/Site/Register/dados_administrador.gif"
+                <img id="Img2" runat="server" src="~/App_Shared/modules/Site/Register/dados_administrador.gif"
                     alt="" /><br />
                 <table>
                     <tr>
                         <td>
                             Nome:<br />
                             <asp:TextBox CssClass="cDat11" ID="txtNome" runat="server" Columns="25" MaxLength="50"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqtxtNome" runat="server" ControlToValidate="txtNome"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtNome" runat="server" ControlToValidate="txtNome"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;" ></asp:RequiredFieldValidator>
                         </td>
                         <td>
                             CPF:<br />
                             <asp:TextBox CssClass="cDat11" ID="txtCPF" runat="server" Columns="12" MaxLength="14"></asp:TextBox>
                             <VFX:CpfValidator ID="CpfValidatortxtCPF" runat="server" ControlToValidate="txtCPF"
-                                CssClass="cErr21">&nbsp;&nbsp;&nbsp;</VFX:CpfValidator>
-                            <asp:RequiredFieldValidator ID="reqtxtCPF" runat="server" ControlToValidate="txtCPF"
-                                CssClass="cErr21">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                >&nbsp;&nbsp;&nbsp;</VFX:CpfValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtCPF" runat="server" ControlToValidate="txtCPF"
+                                >&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             <ajaxToolkit:MaskedEditExtender ID="msktxtCPF" runat="server" ClearMaskOnLostFocus="false"
                                 CultureName="pt-BR" Mask="999,999,999-99" TargetControlID="txtCPF">
                             </ajaxToolkit:MaskedEditExtender>
@@ -86,8 +86,8 @@
                         <td>
                             Seu Telefone:<br />
                             <asp:TextBox CssClass="cDat11" ID="txtPhone" runat="server" Columns="11" MaxLength="12"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPhone"
-                                CssClass="cErr21" InitialValue="(__)____-____">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPhone"
+                                 InitialValue="(__)____-____">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             <ajaxToolkit:MaskedEditExtender ID="msktxtTelefone" runat="server" AcceptNegative="None"
                                 AutoComplete="False" ClearMaskOnLostFocus="false" Mask="(99)9999-9999" TargetControlID="txtPhone">
                             </ajaxToolkit:MaskedEditExtender>
@@ -100,11 +100,11 @@
                             E-Mail (Será enviado um e-mail de confirmação):
                             <br />
                             <asp:TextBox CssClass="cDat11" ID="txtEmail" runat="server" Columns="25" MaxLength="50"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqtxtEmail" runat="server" ControlToValidate="txtEmail"
-                                ErrorMessage="&nbsp;&nbsp;&nbsp;" CssClass="cErr21"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="regExtxtEmail" runat="server" ControlToValidate="txtEmail"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtEmail" runat="server" ControlToValidate="txtEmail"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;" ></asp:RequiredFieldValidator>
+                            <asp:RegularExpressionValidator CssClass="cErr21" ID="regExtxtEmail" runat="server" ControlToValidate="txtEmail"
                                 ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                CssClass="cErr21"></asp:RegularExpressionValidator>
+                                ></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                 </table>
@@ -113,16 +113,16 @@
                         <td>
                             Senha:<br />
                             <asp:TextBox CssClass="cDat11" ID="txtSenha" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqtxtSenha" runat="server" ControlToValidate="txtSenha"
-                                CssClass="cErr21">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtSenha" runat="server" ControlToValidate="txtSenha"
+                                >&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                         </td>
                         <td>
                             Confirmar Senha:<br />
                             <asp:TextBox CssClass="cDat11" ID="txtConfSenha" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqtxtConfSenha" runat="server" ControlToValidate="txtConfSenha"
-                                CssClass="cErr21" Display="Dynamic">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtConfSenha" runat="server" ControlToValidate="txtConfSenha"
+                                 Display="Dynamic">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             <asp:CompareValidator ID="cmptxtConfSenha" runat="server" ControlToCompare="txtSenha"
-                                ControlToValidate="txtConfSenha" CssClass="cErr21">&nbsp;&nbsp;&nbsp;</asp:CompareValidator>
+                                ControlToValidate="txtConfSenha" >&nbsp;&nbsp;&nbsp;</asp:CompareValidator>
                         </td>
                     </tr>
                 </table>

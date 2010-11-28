@@ -8,6 +8,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=0)" />
     <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
+    <link type="text/css" rel="Stylesheet" href="~/app_shared/themes/glasscyan/filescombiner.ascx" />
+    
     <asp:ContentPlaceHolder ID="Header" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -26,28 +28,10 @@
     <!-- Header in print -->
     <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
         EnableScriptLocalization="true" EnablePageMethods="true" CombineScripts="false"
-        ScriptMode="Release">
+        ScriptMode="Release"> 
         <Scripts>
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.core.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.widget.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.position.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.tabs.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.autocomplete.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.duallistbox.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.datepicker.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.ui.htmlbox.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.cookies.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.tooltip.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.validate.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.meioMask.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.template.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.notification.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.serializer.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.js" />
-            <asp:ScriptReference Path="~/App_Shared/JS/jquery.glob.pt-br.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
-        </Scripts>
+        <asp:ScriptReference Path="~/app_shared/js/filescombiner.ascx" />
+        </Scripts>      
     </ajaxToolkit:ToolkitScriptManager>
     <table class="cHeader">
         <tr>

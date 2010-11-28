@@ -15,7 +15,7 @@
         </td>
         <td valign="bottom">
             <br />
-            <img src="~/App_Themes/_global/Company/user_add.gif" runat="server" alt="Inserir Cliente"
+            <img src="~/App_Shared/themes/glasscyan/Company/user_add.gif" runat="server" alt="Inserir Cliente"
                 border="0" class="noPrintable" source="Administration/Customer_General.aspx?w=modal&lightbox[iframe]=true"
                 plugin="lightbox" />
             <br />
@@ -37,7 +37,7 @@
             </td>
             <td>
                 &nbsp;&nbsp;&nbsp;&nbsp;
-                <img src="~/App_Themes/_global/p_univ.gif" id="imgUnselect" onclick="$('.pnlCustomerSearch').show(); "
+                <img src="~/App_Shared/themes/glasscyan/p_univ.gif" id="imgUnselect" onclick="$('.pnlCustomerSearch').show(); "
                     runat="server" />
             </td>
         </tr>

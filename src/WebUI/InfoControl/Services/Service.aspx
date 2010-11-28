@@ -31,8 +31,8 @@
                                 <td colspan="2">
                                     Descrição:<br />
                                     <asp:TextBox ID="txtName" Columns="60" Rows="5" Width="300" runat="server" Text='<%# Bind("Name") %>'
-                                        MaxLength="120" /><asp:RequiredFieldValidator ID="RequiredFieldValidator1" ErrorMessage="&nbsp&nbsp&nbsp"
-                                            runat="server" ControlToValidate="txtName" CssClass="cErr21" ValidationGroup="Service"></asp:RequiredFieldValidator>
+                                        MaxLength="120" /><asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" ErrorMessage="&nbsp&nbsp&nbsp"
+                                            runat="server" ControlToValidate="txtName"  ValidationGroup="Service"></asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
@@ -49,8 +49,8 @@
                                                 <asp:TextBox ID="txtTimeInMinutes" Mask="99999" runat="server" Text='<%# Bind("TimeInMinutes") %>'
                                                     Columns="5" />
                                                 &nbsp;&nbsp;&nbsp;min
-                                                <asp:RequiredFieldValidator ID="valTxtTimeInMinutes" ErrorMessage="&nbsp&nbsp&nbsp"
-                                                    runat="server" ControlToValidate="txtTimeInMinutes" CssClass="cErr21" ValidationGroup="Service" />                                               
+                                                <asp:RequiredFieldValidator CssClass="cErr21" ID="valTxtTimeInMinutes" ErrorMessage="&nbsp&nbsp&nbsp"
+                                                    runat="server" ControlToValidate="txtTimeInMinutes"  ValidationGroup="Service" />                                               
                                             </td>
                                             <td>
                                                 ISS(%):<br />

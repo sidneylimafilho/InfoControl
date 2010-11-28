@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" StylesheetTheme="GlassCyan" Inherits="_Frame" CodeBehind="default.aspx.cs" %>
+﻿<%@ Page Language="C#" Inherits="_Frame" CodeBehind="default.aspx.cs" %>
 
 <%@ Register Src="~/App_Shared/ToolTip.ascx" TagName="ToolTip" TagPrefix="uc2" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -8,7 +8,7 @@ overflow: hidden;">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
     <link rel="Stylesheet" href="../App_Shared/JS/lightbox/themes/default/jquery.lightbox.css" type="text/css" />
-     <link rel="Stylesheet" href="../App_Shared/JS/jquery.jgrowl.css" type="text/css" />
+     <link rel="Stylesheet" href="../App_Shared/themes/glasscyan/filescombiner.ascx" type="text/css" />
     <title></title>
 </head>
 <script defer="defer" type="text/javascript">
@@ -43,19 +43,19 @@ overflow: hidden;">
             <asp:ScriptReference Path="~/App_Shared/js/lightbox/jquery.lightbox.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.dimensions.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.jgrowl.js" />
-            <asp:ScriptReference Path="~/App_Modules/Alerts/Alerts.svc.js" />
+            <asp:ScriptReference Path="~/App_Shared/modules/Alerts/Alerts.svc.js" />
             <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
         </Scripts>
         <Services>
             <asp:ServiceReference Path="~/App_Shared/Tooltip.svc" />
-            <asp:ServiceReference Path="~/App_Modules/Alerts/Alerts.svc" />
+            <asp:ServiceReference Path="~/App_Shared/modules/Alerts/Alerts.svc" />
         </Services>
     </ajaxToolkit:ToolkitScriptManager>
     <div id="loading" class="cLoading11">
         <table style="width: 400px; height: 300px; margin-top: 100px;" align="center">
             <tr>
                 <td>
-                    <img src="../App_Themes/_global/loading3.gif" />
+                    <img src="../App_Shared/themes/glasscyan/loading3.gif" />
                 </td>
                 <td id="loadingMessage">
                     <h1>

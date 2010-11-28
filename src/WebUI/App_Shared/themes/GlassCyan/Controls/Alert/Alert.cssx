@@ -1,0 +1,45 @@
+﻿.cError11, .cAlert11
+{
+	display:-moz-inline-box;
+	display:inline-block;	
+	height: 27px;
+	position:absolute;
+	right:32px;	
+	top:0px;
+}
+
+.cError11 label, .cAlert11 label
+{
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align: middle;	
+	background-color: Transparent;
+	padding: 7px 0px 0px 14px;
+	border:0px solid black;
+	height: 20px;
+	font-weight: bold;	
+	font-size:8pt;
+}
+
+.cError11 span, .cAlert11 span
+{
+	display:-moz-inline-box;
+	display:inline-block;
+	vertical-align: middle;
+	border:0px solid red;
+	height: 27px;
+	width: 13px;
+}
+
+.cError11 label{color: #FFFFFF;}
+
+
+.cError11 label{background:url(img/bg_error_left.gif) no-repeat;}
+.cError11 span{background:url(img/bg_error_right.gif) no-repeat;}
+
+
+
+.cAlert11 label{color: #8B7700;}
+
+.cAlert11 label{background:url(img/bg_alert_left.gif) no-repeat;}
+.cAlert11 span{background:url(img/bg_alert_right.gif) no-repeat;}

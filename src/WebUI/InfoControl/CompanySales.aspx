@@ -29,8 +29,8 @@
                             <td>
                                 Tabela 1:<br />
                                 <asp:TextBox ID="txtUnitPrice1Name" runat="server" MaxLength="50"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="reqtxtUnitPrice1Name" runat="server" ControlToValidate="txtUnitPrice1Name"
-                                    CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="saveConfiguration"></asp:RequiredFieldValidator>
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="reqtxtUnitPrice1Name" runat="server" ControlToValidate="txtUnitPrice1Name"
+                                     ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="saveConfiguration"></asp:RequiredFieldValidator>
                             </td>
                             <td>
                                 Tabela 2:<br />

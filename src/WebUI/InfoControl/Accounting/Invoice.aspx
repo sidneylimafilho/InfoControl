@@ -42,8 +42,8 @@
                                         <uc2:SelectCustomer ID="SelCustomer" runat="server" OnSelectedCustomer="SelCustomer_SelectedCustomer" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
-                                            CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddInvoice">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                        <asp:RequiredFieldValidator CssClass="cErr21" ID="reqSelCustomer" runat="server" ControlToValidate="SelCustomer"
+                                             ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddInvoice">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
                             </table>
@@ -51,8 +51,8 @@
                         <td>
                             Descrição:<br />
                             <asp:TextBox ID="txtSource" runat="server" Columns="40" MaxLength="1024"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="valTxtSource" runat="server" ControlToValidate="txtSource"
-                                CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddInvoice">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="valTxtSource" runat="server" ControlToValidate="txtSource"
+                                 ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ValidationGroup="AddInvoice">&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <table>
                                 <tr>
@@ -80,7 +80,7 @@
                                             DataValueField="CostCenterId" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator ID="valcboCostCenter" runat="server" ControlToValidate="cboCostCenter"
+                                        <asp:RequiredFieldValidator CssClass="cErr21" ID="valcboCostCenter" runat="server" ControlToValidate="cboCostCenter"
                                             ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" EnableClientScript="true"
                                             ValidationGroup="AddInvoice" Display="Dynamic"></asp:RequiredFieldValidator>
                                     </td>
@@ -107,7 +107,7 @@
                                             DataValueField="AccountingPlanId" />
                                     </td>
                                     <td>
-                                        <asp:RequiredFieldValidator ID="valcboAccountPlan" runat="server" ControlToValidate="cboAccountPlan"
+                                        <asp:RequiredFieldValidator CssClass="cErr21" ID="valcboAccountPlan" runat="server" ControlToValidate="cboAccountPlan"
                                             ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" EnableClientScript="true" Display="Dynamic"
                                             ValidationGroup="AddInvoice"></asp:RequiredFieldValidator>
                                         <br />

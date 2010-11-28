@@ -34,7 +34,7 @@
                                 AppendDataBoundItems="true" DataValueField="EmployeeId">
                                 <asp:ListItem Text="" Value=""></asp:ListItem>
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator1" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                 ControlToValidate="cboEmployee" ValidationGroup="addParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                         </td>
                         <tr>
@@ -43,7 +43,7 @@
                                 <asp:DropDownList ID="cboCFOP" runat="server" DataTextField="name" DataValueField="CfopId"
                                     DataSourceID="odsAccount" Visible="false">
                                 </asp:DropDownList>
-                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                <asp:RequiredFieldValidator CssClass="cErr21" ID="RequiredFieldValidator2" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
                                     ControlToValidate="cboCFOP" ValidationGroup="Payment">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                             </td>
                         </tr>
@@ -60,8 +60,8 @@
                                     <asp:DropDownList ID="cboFinancierOperations" runat="server" DataSourceID="odsPaymentMethods"
                                         DataTextField="PaymentMethodName" DataValueField="FinancierOperationId">
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator ID="reqcboFinancierOperations" runat="server" ControlToValidate="cboFinancierOperations"
-                                        CssClass="cErr21" ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="addParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                                    <asp:RequiredFieldValidator CssClass="cErr21" ID="reqcboFinancierOperations" runat="server" ControlToValidate="cboFinancierOperations"
+                                         ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="addParcel">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
                                 </td>
                                 <td align="left">
                                       Data da Parcela:<br />
@@ -79,7 +79,7 @@
                                 </td>
                                 <td>
                                     <br />
-                                    <asp:ImageButton ID="btnAddParcel" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                                    <asp:ImageButton ID="btnAddParcel" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                         runat="server" AlternateText="Inserir Parcela" OnClick="btnAddParcel_Click" ValidationGroup="addParcel" /><br />
                                 </td>
                             </tr>
@@ -132,9 +132,9 @@
                         <br />
                         &nbsp;&nbsp;
                         <input id="" accesskey="F7" onclick="top.$.LightBoxObject.close();top.content.focus();return false;"
-                            src="../../app_Themes/_global/Company/bt_cancelar_pagamento.gif" type="image" />
+                            src="../../App_Shared/themes/glasscyan/Company/bt_cancelar_pagamento.gif" type="image" />
                         &nbsp;&nbsp;
-                        <asp:ImageButton ID="btnFinishSale" runat="server" ImageUrl="~/app_Themes/_global/Company/bt_concluir_venda2.gif"
+                        <asp:ImageButton ID="btnFinishSale" runat="server" ImageUrl="~/App_Shared/themes/glasscyan/Company/bt_concluir_venda2.gif"
                             ValidationGroup="addParcel" OnClick="btnFinishSale_Click" />
                     </div>
                     <VFX:BusinessManagerDataSource ID="odsPaymentMethods" runat="server" OnSelecting="odsFinancierOperation_Selecting"

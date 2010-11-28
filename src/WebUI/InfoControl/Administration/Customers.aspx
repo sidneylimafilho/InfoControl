@@ -96,7 +96,7 @@
                             Arquivo:
                             <br>
                             <asp:FileUpload ID="fupImportExcelFile" runat="server" />
-                            <asp:RequiredFieldValidator runat="server" ValidationGroup="addExcelFile" ErrorMessage="&nbsp&nbsp&nbsp"
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ValidationGroup="addExcelFile" ErrorMessage="&nbsp&nbsp&nbsp"
                                 ControlToValidate="fupImportExcelFile" />
                             <asp:Button runat="server" ID="btnImportExcelFile" Text="Importar Planilha" ValidationGroup="addExcelFile"
                                 OnClick="btnImportExcelFile_Click" />

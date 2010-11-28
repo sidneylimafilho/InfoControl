@@ -347,7 +347,7 @@
                             // Show code
                                 "separator", "code"]
                             ],
-                            idir: "../../App_themes/glasscyan/controls/Editor/",
+                            idir: "../../App_Shared/themes/glasscyan/controls/Editor/",
                             icons: "default",
                             // Icon set
                             about: false,
@@ -440,6 +440,19 @@
             }).mouseleave(function() {
                 $(this).parent().removeClass('cDat11_hover');
             }).after("<span />");
+
+            top.$(":submit", this).wrap("<span class='ui-theme-button cBtn11' />").parent().hover(function() { $(this).removeClass().addClass('cBtn11_hover'); }, function() { $(this).removeClass().addClass('cBtn11'); });
+            top.$(":submit", this).after("<span />");
+
+
+            top.$("table[rules=all]", this).addClass("ui-theme-table")
+                                          .filter("tr")
+                                           .hover(function() {
+                                               $(this).addClass('hover');
+                                           },
+                                          function() {
+                                              $(this).removeClass();
+                                          });
 
 
         }

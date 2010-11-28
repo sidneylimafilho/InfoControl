@@ -29,11 +29,11 @@
                         <td>
                             Fabricante:<br />
                             <asp:TextBox runat="server" ID="txtManufacturer" Columns="30" MaxLength="100"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="reqTxtManufacturer" runat="server" ControlToValidate="txtManufacturer"
+                            <asp:RequiredFieldValidator CssClass="cErr21" ID="reqTxtManufacturer" runat="server" ControlToValidate="txtManufacturer"
                              ErrorMessage="&nbsp&nbsp&nbsp" ValidationGroup="Save" />
                         </td>
                         <td valign="bottom">
-                            <asp:ImageButton runat="server" ID="btnSaveManufacturer" ImageUrl="~/App_Themes/GlassCyan/Controls/GridView/img/Add2.gif"
+                            <asp:ImageButton runat="server" ID="btnSaveManufacturer" ImageUrl="~/App_Shared/themes/glasscyan/Controls/GridView/img/Add2.gif"
                                 AlternateText="Adicionar Fabricante" ValidationGroup="Save" OnClick="btnSaveFabricante_Click" />
                         </td>
                     </tr>
