@@ -1,0 +1,181 @@
+
+div.jGrowl {
+	padding: 			10px;
+	z-index: 			9999;
+}
+
+/** Special IE6 Style Positioning **/
+div.ie6 {
+	position: 			absolute;
+}
+
+div.ie6.top-right {
+	right: 				auto;
+	bottom: 			auto;
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+  	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.top-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.bottom-right {
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.bottom-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+div.ie6.center {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 				100%;
+}
+
+/** Normal Style Positions **/
+body > div.jGrowl {
+	position:			fixed;
+}
+
+body > div.jGrowl.top-left {
+	left: 				0px;
+	top: 				0px;
+}
+
+body > div.jGrowl.top-right {
+	right: 				0px;
+	top: 				0px;
+}
+
+body > div.jGrowl.bottom-left {
+	left: 				0px;
+	bottom:				0px;
+}
+
+body > div.jGrowl.bottom-right {
+	right: 				0px;
+	bottom: 			0px;
+}
+
+body > div.jGrowl.center {
+	top: 				0px;
+	width: 				50%;
+	left: 				25%;
+}
+
+/** Cross Browser Styling **/
+div.center div.jGrowl-notification, div.center div.jGrowl-closer {
+	margin-left: 		auto;
+	margin-right: 		auto;
+}
+
+div.jGrowl div.jGrowl-notification, div.jGrowl div.jGrowl-closer {
+	background-image:		url(../../App_Themes/_global/Controls/Tooltip/img/top6.gif);
+	background-position:    -20px -20px;
+	color: 					#fff;
+	-moz-opacity:			0.76;
+	filter: 				alpha(opacity=76);
+	zoom: 					1;
+	width: 					235px;
+	padding: 				7px 10px;
+	margin-top: 			5px;
+	margin-bottom: 			5px;
+	text-align: 			left;
+	display: 				none;
+	-moz-border-radius: 	5px;
+	-webkit-border-radius:	5px;
+}
+
+div.jGrowl a, div.jGrowl a:hover
+{
+	color:Yellow !important;
+}
+
+div.jGrowl a:hover
+{
+	text-decoration: underline;
+}
+div.jGrowl div.jGrowl-notification {
+	min-height: 			40px;
+}
+
+div.jGrowl .message {
+	min-height: 			40px;
+	vertical-align:			middle;
+}
+
+div.jGrowl div.jGrowl-notification div.header {
+	font-size:				10px;
+	background-color:		#2ab4d6;
+	filter:					alpha(opacity=40);
+	padding:				2px 6px;
+	margin:					-2px;
+	z-index:				2;
+	cursor:                 move;
+}
+
+div.jGrowl div.jGrowl-notification div.close {
+	float: 					right;
+	font-weight: 			bold;
+	font-size: 				18px !important;
+	cursor:					pointer;
+	margin-top:				-6px;
+	margin-right:			-1px;
+	z-index:10;
+}
+
+div.jGrowl div.jGrowl-closer {
+	height: 				15px;
+	padding-top: 			4px;
+	padding-bottom: 		4px;
+	cursor: 				pointer;
+	font-size:				11px;
+	font-weight: 			bold;
+	text-align: 			center;
+}
+
+div.jGrowl div.jGrowl-notification textarea
+{
+	height:50px;
+	width:236px;
+	padding:3px;
+	overflow:hidden;
+	filter:alpha(opacity=66); 
+	-moz-opacity:0.66;
+}
+
+div.jGrowl div.jGrowl-notification .chatpane
+{
+	min-height:70px;
+	max-height:200px;
+	width:238px;
+	overflow: auto;
+	padding:0px 6px;	
+	margin-left:-4px;
+	margin-top:-4px;
+	margin-bottom: 2px;
+	border-top:1px solid white;
+	border-bottom:1px solid white;
+}
+
+div.jGrowl div.jGrowl-notification .history
+{
+	color:#9fd2de;
+	font-style:italic;
+	font-size:90% !important;
+}
+
+div.jGrowl div.jGrowl-notification .user
+{
+	font-weight:bold;
+}
+
+div.jGrowl iframe
+{	
+	height:250px;	
+}
