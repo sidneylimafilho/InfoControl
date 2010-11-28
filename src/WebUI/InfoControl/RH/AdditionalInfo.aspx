@@ -11,7 +11,7 @@
                 &nbsp;
             </td>
             <td class="center">
-                <asp:Label ID="lblErr" runat="server" Text="Label" CssClass="cErr11" Visible="False"></asp:Label><asp:ValidationSummary
+                <asp:Label ID="lblErr" runat="server" Text="Label"  Visible="False"></asp:Label><asp:ValidationSummary
                     ID="ValidationSummary1" runat="server" DisplayMode="List" ValidationGroup="Salvar" />
             </td>
             <td class="right">

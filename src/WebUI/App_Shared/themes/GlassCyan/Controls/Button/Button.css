@@ -51,33 +51,33 @@
 	color: #F0FFFF;
 }
 
-.cBtn11 input{background:url(img/bg_left.gif) no-repeat;}
-.cBtn11 span{background:url(img/bg_right.gif) no-repeat;}
-.cBtn11_hover input{background:url(img/bg_left.gif) no-repeat 0px -25px;}
-.cBtn11_hover span{background:url(img/bg_right.gif) no-repeat 0px -25px;}
-.cBtn11_disabled input{background:url(img/bg_left.gif) no-repeat 0px -50px;}
-.cBtn11_disabled span{background:url(img/bg_right.gif) no-repeat 0px -50px;}
+.cBtn11 input{background:url(controls/button/img/bg_left.gif) no-repeat;}
+.cBtn11 span{background:url(controls/button/img/bg_right.gif) no-repeat;}
+.cBtn11_hover input{background:url(controls/button/img/bg_left.gif) no-repeat 0px -25px;}
+.cBtn11_hover span{background:url(controls/button/img/bg_right.gif) no-repeat 0px -25px;}
+.cBtn11_disabled input{background:url(controls/button/img/bg_left.gif) no-repeat 0px -50px;}
+.cBtn11_disabled span{background:url(controls/button/img/bg_right.gif) no-repeat 0px -50px;}
 
-.cBtn12 input{background:url(img/bg12_left.gif) no-repeat;}
-.cBtn12 span{background:url(img/bg12_right.gif) no-repeat;}
-.cBtn12_hover input{background:url(img/bg12_left.gif) no-repeat 0px -25px;}
-.cBtn12_hover span{background:url(img/bg12_right.gif) no-repeat 0px -25px;}
-.cBtn12_disabled input{background:url(img/bg12_left.gif) no-repeat 0px -50px;}
-.cBtn12_disabled span{background:url(img/bg12_right.gif) no-repeat 0px -50px;}
+.cBtn12 input{background:url(controls/button/img/bg12_left.gif) no-repeat;}
+.cBtn12 span{background:url(controls/button/img/bg12_right.gif) no-repeat;}
+.cBtn12_hover input{background:url(controls/button/img/bg12_left.gif) no-repeat 0px -25px;}
+.cBtn12_hover span{background:url(controls/button/img/bg12_right.gif) no-repeat 0px -25px;}
+.cBtn12_disabled input{background:url(controls/button/img/bg12_left.gif) no-repeat 0px -50px;}
+.cBtn12_disabled span{background:url(controls/button/img/bg12_right.gif) no-repeat 0px -50px;}
 
-.cBtn13 input{background:url(img/bg13_left.gif) no-repeat;}
-.cBtn13 span{background:url(img/bg13_right.gif) no-repeat;}
-.cBtn13_hover input{background:url(img/bg13_left.gif) no-repeat 0px -25px;}
-.cBtn13_hover span{background:url(img/bg13_right.gif) no-repeat 0px -25px;}
-.cBtn13_disabled input{background:url(img/bg13_left.gif) no-repeat 0px -50px;}
-.cBtn13_disabled span{background:url(img/bg13_right.gif) no-repeat 0px -50px;}
+.cBtn13 input{background:url(controls/button/img/bg13_left.gif) no-repeat;}
+.cBtn13 span{background:url(controls/button/img/bg13_right.gif) no-repeat;}
+.cBtn13_hover input{background:url(controls/button/img/bg13_left.gif) no-repeat 0px -25px;}
+.cBtn13_hover span{background:url(controls/button/img/bg13_right.gif) no-repeat 0px -25px;}
+.cBtn13_disabled input{background:url(controls/button/img/bg13_left.gif) no-repeat 0px -50px;}
+.cBtn13_disabled span{background:url(controls/button/img/bg13_right.gif) no-repeat 0px -50px;}
 
-.cBtn14 input{background:url(img/bg14_left.gif) no-repeat;}
-.cBtn14 span{background:url(img/bg14_right.gif) no-repeat;}
-.cBtn14_hover input{background:url(img/bg14_left.gif) no-repeat 0px -25px;}
-.cBtn14_hover span{background:url(img/bg14_right.gif) no-repeat 0px -25px;}
-.cBtn14_disabled input{background:url(img/bg14_left.gif) no-repeat 0px -50px;}
-.cBtn14_disabled span{background:url(img/bg14_right.gif) no-repeat 0px -50px;}
+.cBtn14 input{background:url(controls/button/img/bg14_left.gif) no-repeat;}
+.cBtn14 span{background:url(controls/button/img/bg14_right.gif) no-repeat;}
+.cBtn14_hover input{background:url(controls/button/img/bg14_left.gif) no-repeat 0px -25px;}
+.cBtn14_hover span{background:url(controls/button/img/bg14_right.gif) no-repeat 0px -25px;}
+.cBtn14_disabled input{background:url(controls/button/img/bg14_left.gif) no-repeat 0px -50px;}
+.cBtn14_disabled span{background:url(controls/button/img/bg14_right.gif) no-repeat 0px -50px;}
 
 @media print
 {

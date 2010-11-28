@@ -201,6 +201,7 @@ legend
 	width: 18px;
 	height: 18px;
 	background-position: -656px 0px;
+	margin-right:4px;
 }
 .delete:hover
 {

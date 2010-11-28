@@ -35,46 +35,46 @@
 
 
 
-.cLeafBox11 .top .left{width:25px; height:25px; background-image: url(1/content.top.left.gif);   }
-.cLeafBox11 .top .center{height:25px; background-image: url(1/content.top.center.gif);   }
-.cLeafBox11 .top .right{width:25px; height:25px; background-image: url(1/content.top.right.gif);   }
-.cLeafBox11 .middle .left{width:25px; background-image: url(1/content.middle.left.gif);   }
-.cLeafBox11 .middle .center{  background-image: url(1/content.middle.center.gif);   }
-.cLeafBox11 .middle .right{width:25px; background-image: url(1/content.middle.right.gif);   }
-.cLeafBox11 .bottom .left{width:25px; height:25px; background-image: url(1/content.bottom.left.gif);   }
-.cLeafBox11 .bottom .center{background-image: url(1/content.bottom.center.gif);   }
-.cLeafBox11 .bottom .right{width:25px; height:25px; background-image: url(1/content.bottom.right.gif);   }
+.cLeafBox11 .top .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/1/content.top.left.gif);   }
+.cLeafBox11 .top .center{height:25px; background-image: url(LeafBox/Cyan/1/content.top.center.gif);   }
+.cLeafBox11 .top .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/1/content.top.right.gif);   }
+.cLeafBox11 .middle .left{width:25px; background-image: url(LeafBox/Cyan/1/content.middle.left.gif);   }
+.cLeafBox11 .middle .center{  background-image: url(LeafBox/Cyan/1/content.middle.center.gif);   }
+.cLeafBox11 .middle .right{width:25px; background-image: url(LeafBox/Cyan/1/content.middle.right.gif);   }
+.cLeafBox11 .bottom .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/1/content.bottom.left.gif);   }
+.cLeafBox11 .bottom .center{background-image: url(LeafBox/Cyan/1/content.bottom.center.gif);   }
+.cLeafBox11 .bottom .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/1/content.bottom.right.gif);   }
 
-.cLeafBox21 .top .left{width:25px; height:25px; background-image: url(2/content.top.left.gif);   }
-.cLeafBox21 .top .center{height:25px; background-image: url(2/content.top.center.gif);   }
-.cLeafBox21 .top .right{width:25px; height:25px; background-image: url(2/content.top.right.gif);   }
-.cLeafBox21 .middle .left{width:25px; background-image: url(2/content.middle.left.gif);   }
-.cLeafBox21 .middle .center{ background-image: url(2/content.middle.center.gif);   }
-.cLeafBox21 .middle .right{width:25px; background-image: url(2/content.middle.right.gif);   }
-.cLeafBox21 .bottom .left{width:25px; height:25px; background-image: url(2/content.bottom.left.gif);   }
-.cLeafBox21 .bottom .center{background-image: url(2/content.bottom.center.gif);   }
-.cLeafBox21 .bottom .right{width:25px; height:25px; background-image: url(2/content.bottom.right.gif);   }
+.cLeafBox21 .top .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/2/content.top.left.gif);   }
+.cLeafBox21 .top .center{height:25px; background-image: url(LeafBox/Cyan/2/content.top.center.gif);   }
+.cLeafBox21 .top .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/2/content.top.right.gif);   }
+.cLeafBox21 .middle .left{width:25px; background-image: url(LeafBox/Cyan/2/content.middle.left.gif);   }
+.cLeafBox21 .middle .center{ background-image: url(LeafBox/Cyan/2/content.middle.center.gif);   }
+.cLeafBox21 .middle .right{width:25px; background-image: url(LeafBox/Cyan/2/content.middle.right.gif);   }
+.cLeafBox21 .bottom .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/2/content.bottom.left.gif);   }
+.cLeafBox21 .bottom .center{background-image: url(LeafBox/Cyan/2/content.bottom.center.gif);   }
+.cLeafBox21 .bottom .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/2/content.bottom.right.gif);   }
  
 
-.cLeafBox31 .top .left{width:25px; height:25px; background-image: url(3/content.top.left.gif);   }
-.cLeafBox31 .top .center{height:25px; background-image: url(3/content.top.center.gif);   }
-.cLeafBox31 .top .right{width:25px; height:25px; background-image: url(3/content.top.right.gif);   }
-.cLeafBox31 .middle .left{width:25px; background-image: url(3/content.middle.left.gif);   }
-.cLeafBox31 .middle .center{background-image: url(3/content.middle.center.gif);   }
-.cLeafBox31 .middle .right{width:25px; background-image: url(3/content.middle.right.gif);   }
-.cLeafBox31 .bottom .left{width:25px; height:25px; background-image: url(3/content.bottom.left.gif);   }
-.cLeafBox31 .bottom .center{background-image: url(3/content.bottom.center.gif);   }
-.cLeafBox31 .bottom .right{width:25px; height:25px; background-image: url(3/content.bottom.right.gif);   }
+.cLeafBox31 .top .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/3/content.top.left.gif);   }
+.cLeafBox31 .top .center{height:25px; background-image: url(LeafBox/Cyan/3/content.top.center.gif);   }
+.cLeafBox31 .top .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/3/content.top.right.gif);   }
+.cLeafBox31 .middle .left{width:25px; background-image: url(LeafBox/Cyan/3/content.middle.left.gif);   }
+.cLeafBox31 .middle .center{background-image: url(LeafBox/Cyan/3/content.middle.center.gif);   }
+.cLeafBox31 .middle .right{width:25px; background-image: url(LeafBox/Cyan/3/content.middle.right.gif);   }
+.cLeafBox31 .bottom .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/3/content.bottom.left.gif);   }
+.cLeafBox31 .bottom .center{background-image: url(LeafBox/Cyan/3/content.bottom.center.gif);   }
+.cLeafBox31 .bottom .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/3/content.bottom.right.gif);   }
 
-.cLeafBox41 .top .left{width:25px; height:25px; background-image: url(4/content.top.left.gif);   }
-.cLeafBox41 .top .center{height:25px; background-image: url(4/content.top.center.gif);   }
-.cLeafBox41 .top .right{width:25px; height:25px; background-image: url(4/content.top.right.gif);   }
-.cLeafBox41 .middle .left{width:25px; background-image: url(4/content.middle.left.gif);   }
-.cLeafBox41 .middle .center{ background-image: url(4/content.middle.center.gif);   }
-.cLeafBox41 .middle .right{width:25px; background-image: url(4/content.middle.right.gif);   }
-.cLeafBox41 .bottom .left{width:25px; height:25px; background-image: url(4/content.bottom.left.gif);   }
-.cLeafBox41 .bottom .center{background-image: url(4/content.bottom.center.gif);   }
-.cLeafBox41 .bottom .right{width:25px; height:25px; background-image: url(4/content.bottom.right.gif);   }
+.cLeafBox41 .top .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/4/content.top.left.gif);   }
+.cLeafBox41 .top .center{height:25px; background-image: url(LeafBox/Cyan/4/content.top.center.gif);   }
+.cLeafBox41 .top .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/4/content.top.right.gif);   }
+.cLeafBox41 .middle .left{width:25px; background-image: url(LeafBox/Cyan/4/content.middle.left.gif);   }
+.cLeafBox41 .middle .center{ background-image: url(LeafBox/Cyan/4/content.middle.center.gif);   }
+.cLeafBox41 .middle .right{width:25px; background-image: url(LeafBox/Cyan/4/content.middle.right.gif);   }
+.cLeafBox41 .bottom .left{width:25px; height:25px; background-image: url(LeafBox/Cyan/4/content.bottom.left.gif);   }
+.cLeafBox41 .bottom .center{background-image: url(LeafBox/Cyan/4/content.bottom.center.gif);   }
+.cLeafBox41 .bottom .right{width:25px; height:25px; background-image: url(LeafBox/Cyan/4/content.bottom.right.gif);   }
 
 
 @media print

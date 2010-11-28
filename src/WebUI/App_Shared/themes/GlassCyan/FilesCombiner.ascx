@@ -16,7 +16,7 @@
 
         // Remove comments in /**/ style
         //text = new System.Text.RegularExpressions.Regex(@"/\*(.|\n)*\*/[^*]").Replace(text, "");
-        
+
 
         return text;
     }
@@ -44,42 +44,32 @@
         Response.ContentType = Request["type"] ?? "text/css";
         Response.Clear();
 
-        Include("global.cssx");
-        Include("text.cssx");
-        
-        Include("../_global/global.cssx");
-        Include("../_global/controls/ToolTip/ToolTip.cssx");
-        Include("../_global/controls/Alert/Alert.cssx");
-        Include("../_global/Leafbox/Cyan/Leafbox.cssx");
-        Include("../_global/Leafbox/Orange/Leafbox.cssx");
-        Include("../_global/Leafbox/Purple/Leafbox.cssx");
-        Include("../_global/Leafbox/Yellow/Leafbox.cssx");
-        
-        Include("../../App_Shared/js/jquery.jgrowl.css");                
-        
-        Include("button/button.cssx");
+        Include("common.css");
+        Include("text.css");
+        Include("global.css");
 
-        Include("calendar/calendar.cssx");
-        Include("calendar/jquery.ui.core.cssx");
-        Include("calendar/jquery.ui.theme.cssx");        
-        
-        Include("gridview/gridview.cssx");
-        
-        Include("menu/menu.cssx");
-        
-        Include("numericUpDown.cssx");
 
-        Include("RadScheduler/RadScheduler.cssx");
-                
-        Include("Rating/Rating.cssx");
-        
-        Include("TabStrip/Tabs.cssx");
-        
-        Include("TextBox/textcontrol.cssx");
-        
-        Include("Tooltip/tooltip.cssx");
-        
-        Include("validator/validator.cssx");        
+        Include("Leafbox/Cyan/Leafbox.css");
+        Include("Leafbox/Orange/Leafbox.css");
+        Include("Leafbox/Purple/Leafbox.css");
+        Include("Leafbox/Yellow/Leafbox.css");
+        Include("controls/ToolTip/ToolTip.css");
+        Include("controls/Alert/Alert.css");
+        Include("controls/Notification/jquery.jgrowl.css");
+        Include("controls/button/button.css");
+        Include("controls/calendar/calendar.css");
+        Include("controls/calendar/jquery.ui.core.css");
+        Include("controls/calendar/jquery.ui.theme.css");
+        Include("controls/gridview/gridview.css");
+        Include("controls/menu/menu.css");
+        Include("controls/numericUpDown/numericUpDown.css");
+        Include("controls/RadScheduler/RadScheduler.css");
+        Include("controls/RadPanelbar/Outlook.css");
+        Include("controls/Rating/Rating.css");
+        Include("controls/TabStrip/Tabs.css");
+        Include("controls/TextBox/textcontrol.css");
+        Include("controls/Tooltip/tooltip.css");
+        Include("controls/validator/validator.css");
 
         Response.End();
 

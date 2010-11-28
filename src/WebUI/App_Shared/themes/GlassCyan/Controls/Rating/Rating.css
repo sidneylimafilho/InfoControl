@@ -7,7 +7,7 @@
 	cursor: pointer;	
 	display:inline;
 	background-repeat: no-repeat;
-	background-image: url(../../../_global/icons.gif);
+	background-image: url(../icons.gif);
 }
 
 .filledRatingStar
