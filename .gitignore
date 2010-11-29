@@ -4,3 +4,5 @@
 /src/WebUI/bin
 /src/WebUI/obj
 /src/Framework/obj
+/data
+/build
