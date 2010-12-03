@@ -37,7 +37,7 @@ DeleteWrongFiles(currentExecutionPath)
 
 
 Const OverwriteExisting = True
-objFSO.CopyFile currentExecutionPath & "..\trunk\src\dataclasses\dataclasses.er1" , currentExecutionPath, OverwriteExisting
+objFSO.CopyFile currentExecutionPath & "..\src\dataclasses\dataclasses.er1" , currentExecutionPath, OverwriteExisting
 
 
 '
