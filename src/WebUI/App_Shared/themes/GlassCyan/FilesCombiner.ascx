@@ -67,8 +67,7 @@
         Include("controls/RadPanelbar/Outlook.css");
         Include("controls/Rating/Rating.css");
         Include("controls/TabStrip/Tabs.css");
-        Include("controls/TextBox/textcontrol.css");
-        Include("controls/Tooltip/tooltip.css");
+        Include("controls/TextBox/textcontrol.css");        
         Include("controls/validator/validator.css");
 
         Response.End();

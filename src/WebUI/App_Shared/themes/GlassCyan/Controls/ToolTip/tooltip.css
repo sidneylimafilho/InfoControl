@@ -93,18 +93,20 @@ HELPTIP
 	z-index: 21;
 	text-decoration: none;
 }
-.HelpTip span, .PrintTip span
+.helpToolTip span, .PrintTip span
 {
 	display: none;
 }
 
-.HelpTip:hover span, .PrintTip:hover span
+.helpToolTip:hover span, .PrintTip:hover span
 {
 	display: block;
 	position: absolute;
+	margin-left:-38px;
+	margin-top:6px;
 	width: 348px;
 }
-.HelpTip:hover span.msg, .HelpTip:hover span.buttonTip
+.helpToolTip:hover span, .HelpTip:hover span.buttonTip
 {
 	padding: 20px 23px 17px 23px;
 	z-index: 100;
@@ -112,6 +114,8 @@ HELPTIP
 	background-image: url(controls/Tooltip/img/top.png);
 	background-position:0px 0px;
 	text-decoration: none;
+	color:#FFF;
+	
 }
 .HelpTip:hover span.buttonTip
 {
