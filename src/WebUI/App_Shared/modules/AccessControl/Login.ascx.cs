@@ -61,11 +61,12 @@ public partial class Users_Login : InfoControl.Web.UI.DataUserControl
         try
         {
             MembershipManager manager = new MembershipManager(this);
-            InfoControl.Web.Security.DataEntities.User user = manager.GetUser(Convert.ToInt32(ActivationCode.Text));
+            int result = 0;
+            var user = Int32.TryParse(ActivationCode.Text, out result) ? manager.GetUser(result) : manager.GetUserByEmail(ActivationCode.Text);
+            
             if (user != null)
-            {
                 manager.UnlockUser(user.UserName);
-            }
+
             MultiView1.ActiveViewIndex = (int)Actions.Login;
         }
         catch (Exception ex)

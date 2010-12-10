@@ -48,7 +48,6 @@
 
         Include("jquery.cookies.js");
         Include("jquery.dimensions.js");
-        Include("jquery.template.js");
 
         Include("jquery.jGrowl.js");
         Include("jquery.meioMask.js");

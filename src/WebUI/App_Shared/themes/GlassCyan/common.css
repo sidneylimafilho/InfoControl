@@ -14,7 +14,7 @@ span, div, br, input, textarea, select, p, h1, h2, h3
 
 ul, ol{margin:0px; text-align:left; font-weight:bold;padding-left: 20px;}
 li{ font-weight:normal;}
-h1, h2, h3, h4 {display:inline;}
+h1, h2, h3, h4, h5, h6 {display:inline;}
 
 html, body, form, iframe
 {

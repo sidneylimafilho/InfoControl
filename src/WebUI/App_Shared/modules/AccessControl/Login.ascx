@@ -45,7 +45,8 @@
                     <asp:TextBox ID="ActivationCode" runat="server" Width="150"></asp:TextBox>&nbsp;<asp:RequiredFieldValidator
                         ID="ActivationCodeRequired" runat="server" ControlToValidate="ActivationCode"
                         ErrorMessage="&nbsp;&nbsp;&nbsp;&nbsp;" ToolTip="ActivationCode is required."
-                        CssClass="cErr21" ValidationGroup="Login1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator><asp:Button
+                        CssClass="cErr21" ValidationGroup="Login1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</asp:RequiredFieldValidator>
+                        <asp:Button
                             ID="btnActivate" ValidationGroup="Login1" runat="server" Text="Ativar" OnClick="btnActivate_Click" />
                 </div>
             </asp:View>
@@ -55,7 +56,7 @@
                     UserNameFailureText="E-mail não encontrado" UserNameInstructionText="Digite o seu e-mail, para enviarmos uma nova senha"
                     UserNameLabelText="E-Mail:" UserNameRequiredErrorMessage="O e-mail é necessário"
                     UserNameTitleText="Esqueceu sua senha ?" OnSendingMail="PasswordRecovery1_SendingMail"
-                    OnUserLookupError="PasswordRecovery1_UserLookupError" CssClass="recuperarSenha">
+                    OnUserLookupError="PasswordRecovery1_UserLookupError" CssClass="recuperarSenha" >
                     <MailDefinition IsBodyHtml="True" Subject="Troca de Senha do InfoControl!" BodyFileName="~/App_Shared/Modules/AccessControl/PasswordRecoveryMessageBody.htm">
                     </MailDefinition>
                     <UserNameTemplate>

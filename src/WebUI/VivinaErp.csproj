@@ -145,96 +145,112 @@
   <ItemGroup>
     <Compile Include="App_Shared\modules\AccessControl\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\CreateUser.ascx.cs">
       <DependentUpon>CreateUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\CreateUser.ascx.designer.cs">
       <DependentUpon>CreateUser.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\EventAdd.aspx.cs">
       <DependentUpon>EventAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\EventAdd.aspx.designer.cs">
       <DependentUpon>EventAdd.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\EventViewer.aspx.cs">
       <DependentUpon>EventViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\EventViewer.aspx.designer.cs">
       <DependentUpon>EventViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Functions.aspx.cs">
       <DependentUpon>Functions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Functions.aspx.designer.cs">
       <DependentUpon>Functions.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Login.ascx.cs">
       <DependentUpon>Login.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Login.ascx.designer.cs">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Role.aspx.cs">
       <DependentUpon>Role.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Role.aspx.designer.cs">
       <DependentUpon>Role.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Roles.aspx.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Roles.aspx.designer.cs">
       <DependentUpon>Roles.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Role_General.ascx.cs">
       <DependentUpon>Role_General.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Role_General.ascx.designer.cs">
       <DependentUpon>Role_General.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Role_Permissions.ascx.cs">
       <DependentUpon>Role_Permissions.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Role_Permissions.ascx.designer.cs">
       <DependentUpon>Role_Permissions.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\SelectUser.ascx.cs">
       <DependentUpon>SelectUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\SelectUser.ascx.designer.cs">
       <DependentUpon>SelectUser.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\User.aspx.cs">
       <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\User.aspx.designer.cs">
       <DependentUpon>User.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\User_General.aspx.cs">
       <DependentUpon>User_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\User_General.aspx.designer.cs">
       <DependentUpon>User_General.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\User_Roles.aspx.cs">
       <DependentUpon>User_Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\AccessControl\User_Roles.aspx.designer.cs">
       <DependentUpon>User_Roles.aspx</DependentUpon>
@@ -255,90 +271,105 @@
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReport.aspx.cs">
       <DependentUpon>DynamicReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReport.aspx.designer.cs">
       <DependentUpon>DynamicReport.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReportField.aspx.cs">
       <DependentUpon>DynamicReportField.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReportField.aspx.designer.cs">
       <DependentUpon>DynamicReportField.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReportFields.aspx.cs">
       <DependentUpon>DynamicReportFields.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReportFields.aspx.designer.cs">
       <DependentUpon>DynamicReportFields.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReports.aspx.cs">
       <DependentUpon>DynamicReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReports.aspx.designer.cs">
       <DependentUpon>DynamicReports.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReportVision.aspx.cs">
       <DependentUpon>DynamicReportVision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\DynamicReportVision.aspx.designer.cs">
       <DependentUpon>DynamicReportVision.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator.aspx.cs">
       <DependentUpon>ReportGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator.aspx.designer.cs">
       <DependentUpon>ReportGenerator.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Columns.ascx.cs">
       <DependentUpon>ReportGenerator_Columns.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Columns.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Columns.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Filter.ascx.cs">
       <DependentUpon>ReportGenerator_Filter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Filter.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Filter.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Finish.ascx.cs">
       <DependentUpon>ReportGenerator_Finish.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Finish.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Finish.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx.cs">
       <DependentUpon>ReportGenerator_GroupBy.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_GroupBy.ascx.designer.cs">
       <DependentUpon>ReportGenerator_GroupBy.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx.cs">
       <DependentUpon>ReportGenerator_MatrixRows.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_MatrixRows.ascx.designer.cs">
       <DependentUpon>ReportGenerator_MatrixRows.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Sort.ascx.cs">
       <DependentUpon>ReportGenerator_Sort.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Sort.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Sort.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Start.ascx.cs">
       <DependentUpon>ReportGenerator_Start.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Dynamic\ReportGenerator_Start.ascx.designer.cs">
       <DependentUpon>ReportGenerator_Start.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\ReportViewer.aspx.cs">
       <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\ReportViewer.aspx.designer.cs">
       <DependentUpon>ReportViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Static\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\modules\Reports\Static\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -348,6 +379,7 @@
     </Compile>
     <Compile Include="InfoControl\Host\EmailSender.aspx.cs">
       <DependentUpon>EmailSender.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\EmailSender.aspx.designer.cs">
       <DependentUpon>EmailSender.aspx</DependentUpon>
@@ -361,12 +393,15 @@
     </Compile>
     <Compile Include="InfoControl\_SystemFramework\Auditing\CustomerCallNotifier.cs" />
     <Compile Include="InfoControl\_SystemFramework\MasterPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\_SystemFramework\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\_SystemFramework\Security\InfoControlMembershipProvider.cs" />
     <Compile Include="InfoControl\_SystemFramework\DataControllerBase.cs" />
     <Compile Include="InfoControl\_SystemFramework\UserControlBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\_SystemFramework\UrlRouting\UrlRouterModule.cs" />
     <Compile Include="InfoControl\_SystemFramework\Util.cs" />
@@ -381,6 +416,7 @@
     </Compile>
     <Compile Include="InfoControl\Accounting\AccountSearch.ascx.cs">
       <DependentUpon>AccountSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\AccountSearch.ascx.designer.cs">
       <DependentUpon>AccountSearch.ascx</DependentUpon>
@@ -396,18 +432,21 @@
     </Compile>
     <Compile Include="App_Shared\CurrencyField.ascx.cs">
       <DependentUpon>CurrencyField.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\CurrencyField.ascx.designer.cs">
       <DependentUpon>CurrencyField.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\Date.ascx.cs">
       <DependentUpon>Date.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\Date.ascx.designer.cs">
       <DependentUpon>Date.ascx</DependentUpon>
     </Compile>
     <Compile Include="App_Shared\DateTimeInterval.ascx.cs">
       <DependentUpon>DateTimeInterval.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\DateTimeInterval.ascx.designer.cs">
       <DependentUpon>DateTimeInterval.ascx</DependentUpon>
@@ -421,18 +460,21 @@
     </Compile>
     <Compile Include="InfoControl\Accounting\ExpenditureAuthorization.aspx.cs">
       <DependentUpon>ExpenditureAuthorization.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\ExpenditureAuthorization.aspx.designer.cs">
       <DependentUpon>ExpenditureAuthorization.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Accounting\ExpenditureAuthorizations.aspx.cs">
       <DependentUpon>ExpenditureAuthorizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\ExpenditureAuthorizations.aspx.designer.cs">
       <DependentUpon>ExpenditureAuthorizations.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Accounting\Payment.ascx.cs">
       <DependentUpon>Payment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Payment.ascx.designer.cs">
       <DependentUpon>Payment.ascx</DependentUpon>
@@ -442,12 +484,14 @@
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Statement.aspx.cs">
       <DependentUpon>Statement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Statement.aspx.designer.cs">
       <DependentUpon>Statement.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Statements.aspx.cs">
       <DependentUpon>Statements.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Statements.aspx.designer.cs">
       <DependentUpon>Statements.aspx</DependentUpon>
@@ -457,18 +501,21 @@
     </Compile>
     <Compile Include="InfoControl\CRM\SelectContact.ascx.cs">
       <DependentUpon>SelectContact.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\SelectContact.ascx.designer.cs">
       <DependentUpon>SelectContact.ascx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Host\Companies.aspx.cs">
       <DependentUpon>Companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Companies.aspx.designer.cs">
       <DependentUpon>Companies.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Host\Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Company.aspx.designer.cs">
       <DependentUpon>Company.aspx</DependentUpon>
@@ -481,6 +528,7 @@
     </Compile>
     <Compile Include="App_Shared\SelectProductAndService.ascx.cs">
       <DependentUpon>SelectProductAndService.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\SelectProductAndService.ascx.designer.cs">
       <DependentUpon>SelectProductAndService.ascx</DependentUpon>
@@ -559,138 +607,161 @@
     </Compile>
     <Compile Include="InfoControl\Administration\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Contacts.aspx.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Contacts.aspx.designer.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Contracts.aspx.cs">
       <DependentUpon>Contracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Contracts.aspx.designer.cs">
       <DependentUpon>Contracts.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\CustomerCalls.aspx.cs">
       <DependentUpon>CustomerCalls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\CustomerCalls.aspx.designer.cs">
       <DependentUpon>CustomerCalls.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Sales.aspx.cs">
       <DependentUpon>Customer_Sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Sales.aspx.designer.cs">
       <DependentUpon>Customer_Sales.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Payment.aspx.cs">
       <DependentUpon>Customer_Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Payment.aspx.designer.cs">
       <DependentUpon>Customer_Payment.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Equipment.aspx.cs">
       <DependentUpon>Customer_Equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Equipment.aspx.designer.cs">
       <DependentUpon>Customer_Equipment.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_General.aspx.cs">
       <DependentUpon>Customer_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_General.aspx.designer.cs">
       <DependentUpon>Customer_General.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Deposits.aspx.cs">
       <DependentUpon>Deposits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Deposits.aspx.designer.cs">
       <DependentUpon>Deposits.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Certificate.aspx.cs">
       <DependentUpon>Product_Certificate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Certificate.aspx.designer.cs">
       <DependentUpon>Product_Certificate.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Manufacturer.aspx.cs">
       <DependentUpon>Product_Manufacturer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Manufacturer.aspx.designer.cs">
       <DependentUpon>Product_Manufacturer.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Package.aspx.cs">
       <DependentUpon>Product_Package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Package.aspx.designer.cs">
       <DependentUpon>Product_Package.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Administration\Supplier_General.aspx.cs">
       <DependentUpon>Supplier_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Supplier_General.aspx.designer.cs">
       <DependentUpon>Supplier_General.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Appointments.aspx.cs">
       <DependentUpon>Appointments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Appointments.aspx.designer.cs">
       <DependentUpon>Appointments.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CompanyContracts.aspx.cs">
       <DependentUpon>CompanyContracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanyContracts.aspx.designer.cs">
       <DependentUpon>CompanyContracts.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CompanyTemplates.aspx.cs">
       <DependentUpon>CompanyTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanyTemplates.aspx.designer.cs">
       <DependentUpon>CompanyTemplates.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CompanyPrints.aspx.cs">
       <DependentUpon>CompanyPrints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanyPrints.aspx.designer.cs">
       <DependentUpon>CompanyPrints.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CompanyReports.aspx.cs">
       <DependentUpon>CompanyReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanyReports.aspx.designer.cs">
       <DependentUpon>CompanyReports.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CompanySales.aspx.cs">
       <DependentUpon>CompanySales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanySales.aspx.designer.cs">
       <DependentUpon>CompanySales.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CompanySymbol.aspx.cs">
       <DependentUpon>CompanySymbol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanySymbol.aspx.designer.cs">
       <DependentUpon>CompanySymbol.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerCall.aspx.cs">
       <DependentUpon>CustomerCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerCall.aspx.designer.cs">
       <DependentUpon>CustomerCall.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerCalls.aspx.cs">
       <DependentUpon>CustomerCalls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerCalls.aspx.designer.cs">
       <DependentUpon>CustomerCalls.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Host\Package_General.aspx.cs">
       <DependentUpon>Package_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Package_General.aspx.designer.cs">
       <DependentUpon>Package_General.aspx</DependentUpon>
@@ -700,54 +771,63 @@
     </Compile>
     <Compile Include="InfoControl\Host\Plans.aspx.cs">
       <DependentUpon>Plans.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Plans.aspx.designer.cs">
       <DependentUpon>Plans.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory_General.aspx.cs">
       <DependentUpon>Inventory_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory_General.aspx.designer.cs">
       <DependentUpon>Inventory_General.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory_History.aspx.cs">
       <DependentUpon>Inventory_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory_History.aspx.designer.cs">
       <DependentUpon>Inventory_History.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory_Serial.aspx.cs">
       <DependentUpon>Inventory_Serial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory_Serial.aspx.designer.cs">
       <DependentUpon>Inventory_Serial.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseCompetencyValue.aspx.cs">
       <DependentUpon>PurchaseCompetencyValue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseCompetencyValue.aspx.designer.cs">
       <DependentUpon>PurchaseCompetencyValue.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrderTemplateBuilder.aspx.cs">
       <DependentUpon>PurchaseOrderTemplateBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrderTemplateBuilder.aspx.designer.cs">
       <DependentUpon>PurchaseOrderTemplateBuilder.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Quotation.ascx.cs">
       <DependentUpon>PurchaseOrder_Quotation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Quotation.ascx.designer.cs">
       <DependentUpon>PurchaseOrder_Quotation.ascx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseRequest.aspx.cs">
       <DependentUpon>PurchaseRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseRequest.aspx.designer.cs">
       <DependentUpon>PurchaseRequest.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseRequests.aspx.cs">
       <DependentUpon>PurchaseRequests.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseRequests.aspx.designer.cs">
       <DependentUpon>PurchaseRequests.aspx</DependentUpon>
@@ -760,6 +840,7 @@
     </Compile>
     <Compile Include="InfoControl\Accounting\XRay.aspx.cs">
       <DependentUpon>XRay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\XRay.aspx.designer.cs">
       <DependentUpon>XRay.aspx</DependentUpon>
@@ -769,6 +850,7 @@
     </Compile>
     <Compile Include="InfoControl\Administration\BirthDayCustomers.aspx.cs">
       <DependentUpon>BirthDayCustomers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\BirthDayCustomers.aspx.designer.cs">
       <DependentUpon>BirthDayCustomers.aspx</DependentUpon>
@@ -865,12 +947,14 @@
     </Compile>
     <Compile Include="InfoControl\Host\Function.aspx.cs">
       <DependentUpon>Function.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Function.aspx.designer.cs">
       <DependentUpon>Function.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Notepad.aspx.cs">
       <DependentUpon>Notepad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Notepad.aspx.designer.cs">
       <DependentUpon>Notepad.aspx</DependentUpon>
@@ -982,6 +1066,7 @@
     </Compile>
     <Compile Include="InfoControl\POS\Sale2.aspx.cs">
       <DependentUpon>Sale2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Sale2.aspx.designer.cs">
       <DependentUpon>Sale2.aspx</DependentUpon>
@@ -997,6 +1082,7 @@
     </Compile>
     <Compile Include="InfoControl\POS\Sale_Parcels2.aspx.cs">
       <DependentUpon>Sale_Parcels2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Sale_Parcels2.aspx.designer.cs">
       <DependentUpon>Sale_Parcels2.aspx</DependentUpon>
@@ -1039,42 +1125,49 @@
     </Compile>
     <Compile Include="InfoControl\Purchasing\Purchase.aspx.cs">
       <DependentUpon>Purchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\Purchase.aspx.designer.cs">
       <DependentUpon>Purchase.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder.aspx.cs">
       <DependentUpon>PurchaseOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder.aspx.designer.cs">
       <DependentUpon>PurchaseOrder.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrders.aspx.cs">
       <DependentUpon>PurchaseOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrders.aspx.designer.cs">
       <DependentUpon>PurchaseOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrderViewer.aspx.cs">
       <DependentUpon>PurchaseOrderViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrderViewer.aspx.designer.cs">
       <DependentUpon>PurchaseOrderViewer.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Finish.ascx.cs">
       <DependentUpon>PurchaseOrder_Finish.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Finish.ascx.designer.cs">
       <DependentUpon>PurchaseOrder_Finish.ascx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Product.ascx.cs">
       <DependentUpon>PurchaseOrder_Product.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Product.ascx.designer.cs">
       <DependentUpon>PurchaseOrder_Product.ascx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Summary.ascx.cs">
       <DependentUpon>PurchaseOrder_Summary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Purchasing\PurchaseOrder_Summary.ascx.designer.cs">
       <DependentUpon>PurchaseOrder_Summary.ascx</DependentUpon>
@@ -1084,6 +1177,7 @@
     </Compile>
     <Compile Include="InfoControl\RH\Dependants.aspx.cs">
       <DependentUpon>Dependants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Dependants.aspx.designer.cs">
       <DependentUpon>Dependants.aspx</DependentUpon>
@@ -1102,24 +1196,28 @@
     </Compile>
     <Compile Include="InfoControl\RH\Employee_Competency.aspx.cs">
       <DependentUpon>Employee_Competency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_Competency.aspx.designer.cs">
       <DependentUpon>Employee_Competency.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_History.aspx.cs">
       <DependentUpon>Employee_History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_History.aspx.designer.cs">
       <DependentUpon>Employee_History.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_PersonalData.aspx.cs">
       <DependentUpon>Employee_PersonalData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_PersonalData.aspx.designer.cs">
       <DependentUpon>Employee_PersonalData.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_ProfessionalData.aspx.cs">
       <DependentUpon>Employee_ProfessionalData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Employee_ProfessionalData.aspx.designer.cs">
       <DependentUpon>Employee_ProfessionalData.aspx</DependentUpon>
@@ -1159,12 +1257,14 @@
     </Compile>
     <Compile Include="InfoControl\Services\Summary.aspx.cs">
       <DependentUpon>Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Services\Summary.aspx.designer.cs">
       <DependentUpon>Summary.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Signup_Register.aspx.cs">
       <DependentUpon>Signup_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Signup_Register.aspx.designer.cs">
       <DependentUpon>Signup_Register.aspx</DependentUpon>
@@ -1187,6 +1287,7 @@
     <Compile Include="InfoControl\Site\FileManager\_source\Connector\CommandHandlers\XmlCommandHandlerBase.cs" />
     <Compile Include="InfoControl\Site\FileManager\_source\Connector\Config.cs" />
     <Compile Include="InfoControl\Site\FileManager\_source\Connector\Connector.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Site\FileManager\_source\Connector\ConnectorException.cs" />
     <Compile Include="InfoControl\Site\FileManager\_source\Connector\Errors.cs" />
@@ -1202,6 +1303,7 @@
     <Compile Include="InfoControl\Site\FileManager\_source\Settings\AccessControl.cs" />
     <Compile Include="InfoControl\Site\FileManager\_source\Settings\AccessControlManager.cs" />
     <Compile Include="InfoControl\Site\FileManager\_source\Settings\ConfigFile.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Site\FileManager\_source\Settings\Images.cs" />
     <Compile Include="InfoControl\Site\FileManager\_source\Settings\ResourceType.cs" />
@@ -1210,12 +1312,14 @@
     <Compile Include="InfoControl\Site\FileManager\_source\TriStateBool.cs" />
     <Compile Include="InfoControl\Site\WebPage.aspx.cs">
       <DependentUpon>WebPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Site\WebPage.aspx.designer.cs">
       <DependentUpon>WebPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="InfoControl\Site\WebPages.aspx.cs">
       <DependentUpon>WebPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Site\WebPages.aspx.designer.cs">
       <DependentUpon>WebPages.aspx</DependentUpon>
@@ -1271,12 +1375,14 @@
     </Compile>
     <Compile Include="InfoControl\Accounting\CashMonthly.aspx.cs">
       <DependentUpon>CashMonthly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\CashMonthly.aspx.designer.cs">
       <DependentUpon>CashMonthly.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Checkout_PaymentProcess.aspx.cs">
       <DependentUpon>Checkout_PaymentProcess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Checkout_PaymentProcess.aspx.designer.cs">
       <DependentUpon>Checkout_PaymentProcess.aspx</DependentUpon>
@@ -1290,14 +1396,17 @@
     </Compile>
     <Compile Include="Site\Boleto.aspx.cs">
       <DependentUpon>Boleto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Boleto.aspx.designer.cs">
       <DependentUpon>Boleto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\CheckoutPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Checkout_Summary.aspx.cs">
       <DependentUpon>Checkout_Summary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Checkout_Summary.aspx.designer.cs">
       <DependentUpon>Checkout_Summary.aspx</DependentUpon>
@@ -1338,24 +1447,31 @@
     </Compile>
     <Compile Include="App_Offline.aspx.cs">
       <DependentUpon>App_Offline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\AccountingPlan.ascx.cs">
       <DependentUpon>AccountingPlan.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\Address\Address.ascx.cs">
       <DependentUpon>Address.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\AlphabeticalPaging.ascx.cs">
       <DependentUpon>AlphabeticalPaging.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\ComboTreeBox.ascx.cs">
       <DependentUpon>ComboTreeBox.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\Comments.ascx.cs">
       <DependentUpon>Comments.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\comments.aspx.cs">
       <DependentUpon>comments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\HelpPrint.ascx.cs">
       <DependentUpon>HelpPrint.ascx</DependentUpon>
@@ -1366,6 +1482,7 @@
     </Compile>
     <Compile Include="App_Shared\Parcels.ascx.cs">
       <DependentUpon>Parcels.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\ScaleAccessLevel.ascx.cs">
       <DependentUpon>ScaleAccessLevel.ascx</DependentUpon>
@@ -1373,129 +1490,171 @@
     </Compile>
     <Compile Include="InfoControl\Administration\SelectCustomer.ascx.cs">
       <DependentUpon>SelectCustomer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\SelectEmployee.ascx.cs">
       <DependentUpon>SelectEmployee.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\SelectProduct.ascx.cs">
       <DependentUpon>SelectProduct.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\SelectSupplier.ascx.cs">
       <DependentUpon>SelectSupplier.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\SelectTransporter.ascx.cs">
       <DependentUpon>SelectTransporter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="App_Shared\ToolTip.ascx.cs">
       <DependentUpon>ToolTip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ErrorPage.aspx.cs">
       <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Account.aspx.cs">
       <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\AccountingPlan.aspx.cs">
       <DependentUpon>AccountingPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\AccountRegister.aspx.cs">
       <DependentUpon>AccountRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Accounts.aspx.cs">
       <DependentUpon>Accounts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\AlertFinancier.aspx.cs">
       <DependentUpon>AlertFinancier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Bill.aspx.cs">
       <DependentUpon>Bill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Bills.aspx.cs">
       <DependentUpon>Bills.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\CashFlow.aspx.cs">
       <DependentUpon>CashFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\CashFlowByMonth.aspx.cs">
       <DependentUpon>CashFlowByMonth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\CashFlowByWeek.aspx.cs">
       <DependentUpon>CashFlowByWeek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Check.aspx.cs">
       <DependentUpon>Check.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Checks.aspx.cs">
       <DependentUpon>Checks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Contract.aspx.cs">
       <DependentUpon>Contract.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Contracts.aspx.cs">
       <DependentUpon>Contracts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\CostCenter.aspx.cs">
       <DependentUpon>CostCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\FinancierOperation.aspx.cs">
       <DependentUpon>FinancierOperation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\FinancierOperations.aspx.cs">
       <DependentUpon>FinancierOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Invoice.aspx.cs">
       <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Invoices.aspx.cs">
       <DependentUpon>Invoices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\PayParcel.aspx.cs">
       <DependentUpon>PayParcel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Receipt.aspx.cs">
       <DependentUpon>Receipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Accounting\Receipts.aspx.cs">
       <DependentUpon>Receipts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Billings.aspx.cs">
       <DependentUpon>Billings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Companies.aspx.cs">
       <DependentUpon>Companies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customers.aspx.cs">
       <DependentUpon>Customers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\CustomerSearch_Results.aspx.cs">
       <DependentUpon>CustomerSearch_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Customer_Search.aspx.cs">
       <DependentUpon>Customer_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Deposit.aspx.cs">
       <DependentUpon>Deposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Billings.aspx.cs">
       <DependentUpon>Billings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Boletu.aspx.cs">
       <DependentUpon>Boletu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\MyInfoControl\Upgrade.aspx.cs">
       <DependentUpon>Upgrade.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\MySystem.aspx.cs">
       <DependentUpon>MySystem.aspx</DependentUpon>
@@ -1503,174 +1662,231 @@
     </Compile>
     <Compile Include="InfoControl\Administration\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Image.aspx.cs">
       <DependentUpon>Product_Image.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\ProductParts.aspx.cs">
       <DependentUpon>ProductParts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\ProductSearch.aspx.cs">
       <DependentUpon>ProductSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\ProductSearch_Results.aspx.cs">
       <DependentUpon>ProductSearch_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_Composite.aspx.cs">
       <DependentUpon>Product_Composite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Product_General.aspx.cs">
       <DependentUpon>Product_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Representant.aspx.cs">
       <DependentUpon>Representant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Representants.aspx.cs">
       <DependentUpon>Representants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Supplier.aspx.cs">
       <DependentUpon>Supplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Suppliers.aspx.cs">
       <DependentUpon>Suppliers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\SupplierSearch_Results.aspx.cs">
       <DependentUpon>SupplierSearch_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Supplier_Search.aspx.cs">
       <DependentUpon>Supplier_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Transporter.aspx.cs">
       <DependentUpon>Transporter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Transporters.aspx.cs">
       <DependentUpon>Transporters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\TransporterSearch_Results.aspx.cs">
       <DependentUpon>TransporterSearch_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Administration\Transporter_Search.aspx.cs">
       <DependentUpon>Transporter_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\BarCode_Print.aspx.cs">
       <DependentUpon>BarCode_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CompanyConfiguration.aspx.cs">
       <DependentUpon>CompanyConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\Contacts.aspx.cs">
       <DependentUpon>Contacts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerFollowup.aspx.cs">
       <DependentUpon>CustomerFollowup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerFollowupAction.aspx.cs">
       <DependentUpon>CustomerFollowupAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerFollowupActions.aspx.cs">
       <DependentUpon>CustomerFollowupActions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\CRM\CustomerFollowups.aspx.cs">
       <DependentUpon>CustomerFollowups.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Default.master.cs">
       <DependentUpon>Default.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\GenericEntry.aspx.cs">
       <DependentUpon>GenericEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\header.aspx.cs">
       <DependentUpon>header.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Applications.aspx.cs">
       <DependentUpon>Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Branch.aspx.cs">
       <DependentUpon>Branch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Company_Search.aspx.cs">
       <DependentUpon>Company_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Company_Search_Results.aspx.cs">
       <DependentUpon>Company_Search_Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Functions.aspx.cs">
       <DependentUpon>Functions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\FunctionsByPackages.aspx.cs">
       <DependentUpon>FunctionsByPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\GenericEntry.aspx.cs">
       <DependentUpon>GenericEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Package.aspx.cs">
       <DependentUpon>Package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Packages.aspx.cs">
       <DependentUpon>Packages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\PaymentMethod.aspx.cs">
       <DependentUpon>PaymentMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\PaymentMethods.aspx.cs">
       <DependentUpon>PaymentMethods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Plan.aspx.cs">
       <DependentUpon>Plan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Report.aspx.cs">
       <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\Reports.aspx.cs">
       <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\ScheduleTask.aspx.cs">
       <DependentUpon>ScheduleTask.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\ScheduleTasks.aspx.cs">
       <DependentUpon>ScheduleTasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\SiteTemplate.aspx.cs">
       <DependentUpon>SiteTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\SiteTemplates.aspx.cs">
       <DependentUpon>SiteTemplates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Host\SystemParameters.aspx.cs">
       <DependentUpon>SystemParameters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\LogoHandler.aspx.cs">
       <DependentUpon>LogoHandler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\menu.aspx.cs">
       <DependentUpon>menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\AbcCurve.aspx.cs">
       <DependentUpon>AbcCurve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\DropPayout.aspx.cs">
       <DependentUpon>DropPayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\DropPayoutReport.aspx.cs">
       <DependentUpon>DropPayoutReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Exchange.aspx.cs">
       <DependentUpon>Exchange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Inventories.aspx.cs">
       <DependentUpon>Inventories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Inventory.aspx.cs">
       <DependentUpon>Inventory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\InventoryHistory.ascx.cs">
       <DependentUpon>InventoryHistory.ascx</DependentUpon>
@@ -1678,96 +1894,127 @@
     </Compile>
     <Compile Include="InfoControl\POS\InventoryPrice.aspx.cs">
       <DependentUpon>InventoryPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\MapOfSales.aspx.cs">
       <DependentUpon>MapOfSales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Prospect.aspx.cs">
       <DependentUpon>Prospect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\ProspectBuilder.aspx.cs">
       <DependentUpon>ProspectBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Prospects.aspx.cs">
       <DependentUpon>Prospects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Sale.aspx.cs">
       <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\SaleList.aspx.cs">
       <DependentUpon>SaleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\SaleViewer.aspx.cs">
       <DependentUpon>SaleViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Sale_Parcels.aspx.cs">
       <DependentUpon>Sale_Parcels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\Stock.aspx.cs">
       <DependentUpon>Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockDeposit.aspx.cs">
       <DependentUpon>StockDeposit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockDrop.aspx.cs">
       <DependentUpon>StockDrop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockMovement.aspx.cs">
       <DependentUpon>StockMovement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockRMA.aspx.cs">
       <DependentUpon>StockRMA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockRMASupplier.aspx.cs">
       <DependentUpon>StockRMASupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockTransfer.aspx.cs">
       <DependentUpon>StockTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockTransferRECEIVE.aspx.cs">
       <DependentUpon>StockTransferRECEIVE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\StockTransferSEND.aspx.cs">
       <DependentUpon>StockTransferSEND.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\POS\XRay.aspx.cs">
       <DependentUpon>XRay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Profile.ascx.cs">
       <DependentUpon>Profile.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Profile_LegalEntity.ascx.cs">
       <DependentUpon>Profile_LegalEntity.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Profile_NaturalPerson.ascx.cs">
       <DependentUpon>Profile_NaturalPerson.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\AdditionalInfo.aspx.cs">
       <DependentUpon>AdditionalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Education.aspx.cs">
       <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Employee.aspx.cs">
       <DependentUpon>Employee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Employees.aspx.cs">
       <DependentUpon>Employees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\EmployeeWorkedTime.aspx.cs">
       <DependentUpon>EmployeeWorkedTime.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Formation.aspx.cs">
       <DependentUpon>Formation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\OrganizationLevel.aspx.cs">
       <DependentUpon>OrganizationLevel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Sector.aspx.cs">
       <DependentUpon>Sector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\Service.aspx.cs">
       <DependentUpon>Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\RH\XRay.aspx.cs">
       <DependentUpon>XRay.aspx</DependentUpon>
@@ -1775,42 +2022,54 @@
     </Compile>
     <Compile Include="InfoControl\Services\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Services\Service.aspx.cs">
       <DependentUpon>Service.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Services\ServiceOrder.aspx.cs">
       <DependentUpon>ServiceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Services\ServiceOrderBook.aspx.cs">
       <DependentUpon>ServiceOrderBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Services\ServiceOrders.aspx.cs">
       <DependentUpon>ServiceOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Services\Services.aspx.cs">
       <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\StartPage.aspx.cs">
       <DependentUpon>StartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Task.aspx.cs">
       <DependentUpon>Task.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="InfoControl\Tasks.aspx.cs">
       <DependentUpon>Tasks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Logoff.aspx.cs">
       <DependentUpon>Logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\ContactUs.aspx.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Checkout_Payment.aspx.cs">
       <DependentUpon>Checkout_Payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Checkout_Payment.aspx.designer.cs">
       <DependentUpon>Checkout_Payment.aspx</DependentUpon>
@@ -1818,57 +2077,67 @@
     <Compile Include="Site\SiteController.cs" />
     <Compile Include="Site\_modules\Categories.ascx.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\Categories.ascx.designer.cs">
       <DependentUpon>Categories.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site\Checkout_Basket.aspx.cs">
       <DependentUpon>Checkout_Basket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Checkout_Basket.aspx.designer.cs">
       <DependentUpon>Checkout_Basket.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Categories.aspx.designer.cs">
       <DependentUpon>Categories.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\_modules\PageCategories.ascx.cs">
       <DependentUpon>PageCategories.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\PageCategories.ascx.designer.cs">
       <DependentUpon>PageCategories.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site\_modules\Tags.ascx.cs">
       <DependentUpon>Tags.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\Tags.ascx.designer.cs">
       <DependentUpon>Tags.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site\_modules\Products.ascx.cs">
       <DependentUpon>Products.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\CustomerCentral.aspx.cs">
       <DependentUpon>CustomerCentral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\CustomerCentral.aspx.designer.cs">
       <DependentUpon>CustomerCentral.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Checkout_Identification.aspx.cs">
       <DependentUpon>Checkout_Identification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Checkout_Identification.aspx.designer.cs">
       <DependentUpon>Checkout_Identification.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\_modules\FeedReader.ascx.cs">
       <DependentUpon>FeedReader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\FeedReader.ascx.designer.cs">
       <DependentUpon>FeedReader.ascx</DependentUpon>
     </Compile>
     <Compile Include="Site\_modules\Menu.ascx.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\Menu.ascx.designer.cs">
       <DependentUpon>Menu.ascx</DependentUpon>
@@ -1878,33 +2147,39 @@
     </Compile>
     <Compile Include="Site\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Products.aspx.designer.cs">
       <DependentUpon>Products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Product.aspx.cs">
       <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Product.aspx.designer.cs">
       <DependentUpon>Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\rss.aspx.cs">
       <DependentUpon>rss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\WebPage.ascx.cs">
       <DependentUpon>WebPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Site\_modules\WebPage.ascx.designer.cs">
       <DependentUpon>WebPage.ascx</DependentUpon>
