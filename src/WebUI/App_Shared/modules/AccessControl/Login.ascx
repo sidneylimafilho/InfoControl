@@ -56,7 +56,7 @@
                     UserNameLabelText="E-Mail:" UserNameRequiredErrorMessage="O e-mail é necessário"
                     UserNameTitleText="Esqueceu sua senha ?" OnSendingMail="PasswordRecovery1_SendingMail"
                     OnUserLookupError="PasswordRecovery1_UserLookupError" CssClass="recuperarSenha">
-                    <MailDefinition IsBodyHtml="True" Subject="Troca de Senha do InfoControl!" BodyFileName="~/App_Modules/AccessControl/PasswordRecoveryMessageBody.htm">
+                    <MailDefinition IsBodyHtml="True" Subject="Troca de Senha do InfoControl!" BodyFileName="~/App_Shared/Modules/AccessControl/PasswordRecoveryMessageBody.htm">
                     </MailDefinition>
                     <UserNameTemplate>
                         <table border="0" cellpadding="2" width="100%">
