@@ -92,7 +92,7 @@ public partial class Site_WebPage : Vivina.Erp.SystemFramework.UserControlBase
                 pageView.InnerHtml = WebPage.Description;
         }
 
-        pageView.Visible = !String.IsNullOrEmpty(pageView.InnerHtml);
+        pageView.Visible = !String.IsNullOrEmpty(pageView.InnerText);
         postList.DataBind();
         pageListLinks.DataBind();
         pageListArchived.DataBind();
