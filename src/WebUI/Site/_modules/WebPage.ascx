@@ -74,5 +74,4 @@
             <%#Convert.ToDateTime(Eval("Date")).ToString("MMM yyyy").ToUpper()%>&nbsp;(<%#Eval("Count")%>)</a><br />
     </ItemTemplate>
 </asp:Repeater>
-<div id="pageView" runat="server" class="page">
-</div>
+<div id="pageView" runat="server" class="page"></div>
