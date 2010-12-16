@@ -2430,6 +2430,7 @@
     <Content Include="App_Shared\JS\smartclient\UnitTests\SampleAll.ascx" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\index.html" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\test.js" />
+    <Content Include="App_Shared\JS\smartclient\UnitTests\Sample.svc" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\ViewPage1.aspx" />
     <Content Include="App_Shared\modules\AccessControl\ChangePassword.aspx" />
     <Content Include="App_Shared\modules\AccessControl\CreateUser.ascx" />
