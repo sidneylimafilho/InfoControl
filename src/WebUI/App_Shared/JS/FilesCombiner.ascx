@@ -70,6 +70,8 @@
         Include("jquery.glob.js");
         Include("jquery.glob.pt-br.js");
 
+        Include("jquery.defaults.js");
+
         Include("smartclient/jquery.smartclient.js");
 
 
