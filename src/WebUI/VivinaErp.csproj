@@ -2126,6 +2126,7 @@
     <Content Include="App_Shared\JS\FilesCombiner.ascx" />
     <Content Include="App_Shared\JS\jquery-1.4.2.js" />
     <Content Include="App_Shared\JS\jquery-vsdoc.js" />
+    <Content Include="App_Shared\JS\jquery.defaults.js" />
     <Content Include="App_Shared\JS\jquery.glob.js" />
     <Content Include="App_Shared\JS\jquery.glob.pt-br.js" />
     <Content Include="App_Shared\JS\jquery.raty.js" />

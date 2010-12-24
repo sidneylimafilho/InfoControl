@@ -38,7 +38,7 @@ overflow: hidden;">
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.core.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.widget.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.draggable.js" />  
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.thickbox.js" />
+            
             
             <asp:ScriptReference Path="~/App_Shared/js/lightbox/jquery.lightbox.js" />
             <asp:ScriptReference Path="~/App_Shared/js/jquery.dimensions.js" />

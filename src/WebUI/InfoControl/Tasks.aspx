@@ -54,17 +54,12 @@
                     <div class="body">
                         Modo de Exibição:<br />
                         <table width="100%">
-                            <tr>
-                                <td colspan="9" style="border-bottom: 1px solid #099">
-                                    <input type="radio" value="2" name="view" field="view" onclick="$('#otherFilters').hide('slow')" /><label>Hierarquia</label>
-                                </td>
-                            </tr>
-                            <tr>
+                             <tr>
                                 <td>
                                     <input type="radio" value="1" name="view" field="view" checked="checked" onclick="$('#otherFilters').fadeIn('slow')" /><label>Data</label>
                                 </td>
                                 <td>
-                                    <table id="otherFilters" style="display: none">
+                                    <table id="otherFilters">
                                         <tr>
                                             <td>
                                                 Parte do nome:
@@ -76,12 +71,12 @@
                                                     <tr>
                                                         <td>
                                                             Início:<br />
-                                                            <input type="text" name="inicio" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999"
+                                                            <input type="text" name="inicio" columns="8" maxlength="10" plugin="datepicker" mask="99/99/9999"
                                                                 options="{relatedCalendar:'#txtEndDate'}" />
                                                         </td>
                                                         <td>
                                                             Fim:<br />
-                                                            <input type="text" name="fim" columns="8" maxlength="10" plugin="calendar" mask="99/99/9999" />
+                                                            <input type="text" name="fim" columns="8" maxlength="10" plugin="datepicker" mask="99/99/9999" />
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -97,6 +92,12 @@
                                     </table>
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="9" style="border-top: 1px solid #099">
+                                    <input type="radio" value="2" name="view" field="view" onclick="$('#otherFilters').hide('slow')" /><label>Hierarquia</label>
+                                </td>
+                            </tr>
+                           
                         </table>
                         <asp:Button ID="btSearch" command="click" runat="server" Text="Pesquisar" OnClientClick="$('#filter').toggleClass('closed').find('.body').hide('slow');return false;" />
                     </div>

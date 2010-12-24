@@ -14,8 +14,8 @@
                         ID="lblTimer" runat="server" Text="Esta informação fechará em XX segundos!"></asp:Label></p>
             </td>
             <td nowrap="nowrap">
-                <span class="cBtn13">
-                    <input type="button" runat="server" id="btnFechar" value="Fechar" /><span></span></span>
+                
+                    <input type="button" runat="server" id="btnFechar" value="Fechar" class="cBtn13" />
             </td>
         </tr>
     </table>

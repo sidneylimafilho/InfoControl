@@ -1,4 +1,4 @@
-﻿.cBtn11, .cBtn11_hover, .cBtn11 input, .cBtn11_hover input,
+﻿.cBtn11, .ui-theme-button, .cBtn11_hover, .ui-theme-button.hover, .cBtn11 input, .ui-theme-button input, .cBtn11_hover input,
 .cBtn12, .cBtn12_hover, .cBtn12 input, .cBtn12_hover input,
 .cBtn13, .cBtn13_hover, .cBtn13 input, .cBtn13_hover input,
 .cBtn14, .cBtn14_hover, .cBtn14 input, .cBtn14_hover input
@@ -9,7 +9,7 @@
 	height: 27px;
 }
 
-.cBtn11 input, .cBtn11_hover input, .cBtn11_disabled input,
+.cBtn11 input, .ui-theme-button input, .cBtn11_hover input, .cBtn11_disabled input,
 .cBtn12 input, .cBtn12_hover input, .cBtn12_disabled input,
 .cBtn13 input, .cBtn13_hover input, .cBtn13_disabled input,
 .cBtn14 input, .cBtn14_hover input, .cBtn14_disabled input
@@ -25,7 +25,7 @@
 	font-weight:bold;
 }
 
-.cBtn11 span, .cBtn11_hover span, .cBtn11_disabled span,
+.cBtn11 span, .ui-theme-button span, .cBtn11_hover span, .cBtn11_disabled span,
 .cBtn12 span, .cBtn12_hover span, .cBtn12_disabled span,
 .cBtn13 span, .cBtn13_hover span, .cBtn13_disabled span,
 .cBtn14 span, .cBtn14_hover span, .cBtn14_disabled span
@@ -43,7 +43,7 @@
 	color: #FFFFFF;
 }
 
-.cBtn11 input, .cBtn11_disabled input,
+.cBtn11 input, .ui-theme-button input, .cBtn11_disabled input,
 .cBtn12 input, .cBtn12_disabled input,
 .cBtn13 input, .cBtn13_disabled input,
 .cBtn14 input, .cBtn14_disabled input
@@ -51,8 +51,8 @@
 	color: #F0FFFF;
 }
 
-.cBtn11 input{background:url(controls/button/img/bg_left.gif) no-repeat;}
-.cBtn11 span{background:url(controls/button/img/bg_right.gif) no-repeat;}
+.cBtn11 input, .ui-theme-button input{background:url(controls/button/img/bg_left.gif) no-repeat;}
+.cBtn11 span, .ui-theme-button span{background:url(controls/button/img/bg_right.gif) no-repeat;}
 .cBtn11_hover input{background:url(controls/button/img/bg_left.gif) no-repeat 0px -25px;}
 .cBtn11_hover span{background:url(controls/button/img/bg_right.gif) no-repeat 0px -25px;}
 .cBtn11_disabled input{background:url(controls/button/img/bg_left.gif) no-repeat 0px -50px;}
@@ -81,6 +81,6 @@
 
 @media print
 {
-	.cBtn11, .cBtn12, .cBtn13, .cBtn14, 
-	.cBtn11_hover, .cBtn12_hover, .cBtn13_hover, .cBtn14_hover{display:none;}
+	.cBtn11, .ui-theme-button, .cBtn12, .cBtn13, .cBtn14, 
+	.cBtn11_hover, .ui-theme-button.hover, .cBtn12_hover, .cBtn13_hover, .cBtn14_hover{display:none;}
 }
