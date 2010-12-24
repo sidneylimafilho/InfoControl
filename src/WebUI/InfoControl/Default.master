@@ -30,7 +30,30 @@
         EnableScriptLocalization="true" EnablePageMethods="true" CombineScripts="false"
         ScriptMode="Release"> 
         <Scripts>
-        <asp:ScriptReference Path="~/app_shared/js/filescombiner.ascx" />
+        <asp:ScriptReference Path="~/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
+        jquery,
+        jquery.cookies,
+        jquery.dimensions,
+        jquery.jGrowl,
+        jquery.meioMask,
+        jquery.validate,
+        jquery.tooltip,
+        jquery.serializer,
+        jquery.template,
+        jquery.UI.core,
+        jquery.UI.widget,
+        jquery.UI.position,
+        jquery.UI.tabs,
+        jquery.UI.autocomplete,
+        jquery.UI.duallistbox,
+        jquery.ui.datepicker,
+        jquery.UI.htmlbox,
+        jquery.notification,
+        jquery.glob,
+        jquery.glob.pt-br,        
+        jquery.defaults,
+        smartclient/jquery.smartclient" />
+
         </Scripts>      
     </ajaxToolkit:ToolkitScriptManager>
     <table class="cHeader">
