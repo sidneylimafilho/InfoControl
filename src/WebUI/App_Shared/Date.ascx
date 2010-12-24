@@ -2,7 +2,7 @@
 <table nowrap="true" cellpadding="0" cellspacing="0">
     <tr>
         <td>
-            <asp:TextBox ID="txtDate" Columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999"
+            <asp:TextBox ID="txtDate" Columns="8" MaxLength="10" plugin="datepicker" mask="99/99/9999"
                 runat="server"></asp:TextBox> 
         </td>
         <td valign="bottom">           

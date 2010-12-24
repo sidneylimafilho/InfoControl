@@ -7,7 +7,7 @@
             <table cellpadding="0" cellspacing="0" nowrap="true">
                 <tr>
                     <td>
-                        <asp:TextBox ID="txtBeginDate" Columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtBeginDate" Columns="8" MaxLength="10" plugin="datepicker" mask="99/99/9999" runat="server"></asp:TextBox>
                     </td>
                     <td valign="middle">
                         <asp:CompareValidator ID="cmptxtBeginDate" runat="server" Display="Dynamic" ControlToValidate="txtBeginDate"
@@ -24,7 +24,7 @@
             <table cellpadding="0" cellspacing="0"  nowrap="true">
                 <tr>
                     <td>
-                        <asp:TextBox ID="txtEndDate" Columns="8" MaxLength="10" plugin="calendar" mask="99/99/9999" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtEndDate" Columns="8" MaxLength="10" plugin="datepicker" mask="99/99/9999" runat="server"></asp:TextBox>
                     </td>                  
                     <td valign="middle">
                         <asp:CompareValidator ID="cmptxtEndDate" runat="server" ControlToValidate="txtEndDate"
