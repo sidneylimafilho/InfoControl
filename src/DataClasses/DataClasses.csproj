@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Vivina.Erp.DataClasses</RootNamespace>
     <AssemblyName>Vivina.Erp.DataClasses</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
     </SccProjectName>
@@ -304,9 +304,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Framework\Framework 3.5.csproj">
+    <ProjectReference Include="..\Framework\Framework.csproj">
       <Project>{148DC18F-45AB-4191-B587-71092A7BDF74}</Project>
-      <Name>Framework 3.5</Name>
+      <Name>Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
