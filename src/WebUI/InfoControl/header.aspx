@@ -8,12 +8,33 @@
 <head id="Head1" runat="server">
     <title>Untitled Page</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <script type="text/javascript" src="../App_Shared/JS/jquery.js"></script>
-
-    <script type="text/javascript" src="../App_Shared/JS/smartclient/jquery.smartclient.js"></script>
-
+    
     <link type="text/css" rel="Stylesheet" href="~/app_shared/themes/glasscyan/filescombiner.ascx" />
+   <script type="text/javascript" src="/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
+        jquery,
+        jquery.cookies,
+        jquery.dimensions,
+        jquery.jGrowl,
+        jquery.meioMask,
+        jquery.validate,
+        jquery.tooltip,
+        jquery.serializer,
+        jquery.template,
+        jquery.UI.core,
+        jquery.UI.widget,
+        jquery.UI.position,
+        jquery.UI.tabs,
+        jquery.UI.autocomplete,
+        jquery.UI.duallistbox,
+        jquery.ui.datepicker,
+        jquery.UI.htmlbox,
+        jquery.notification,
+        jquery.glob,
+        jquery.glob.pt-br,        
+        ../modules/Alerts/Alerts.svc,
+        lightbox/jquery.lightbox,
+        jquery.defaults,        
+        smartclient/jquery.smartclient"></script>
     <style type="text/css">
         body
         {

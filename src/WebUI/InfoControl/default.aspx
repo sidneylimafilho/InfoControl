@@ -7,8 +7,9 @@ overflow: hidden;">
 <head id="head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
-    <link rel="Stylesheet" href="../App_Shared/JS/lightbox/themes/default/jquery.lightbox.css" type="text/css" />
-     <link rel="Stylesheet" href="../App_Shared/themes/glasscyan/filescombiner.ascx" type="text/css" />
+    <link rel="Stylesheet" href="../App_Shared/JS/lightbox/themes/default/jquery.lightbox.css"
+        type="text/css" />
+    <link rel="Stylesheet" href="../App_Shared/themes/glasscyan/filescombiner.ascx" type="text/css" />
     <title></title>
 </head>
 <script defer="defer" type="text/javascript">
@@ -21,12 +22,56 @@ overflow: hidden;">
         document.getElementById('content').style.height = (document.body.offsetHeight - 86) + "px";
 
         $("#loading").fadeOut(2000, function () {
-            InitAlertMonitor();
+            InitAlertMonitor(Alerts);
         });
     }
 
     function ScrollToTop() { self.scrollTo(0, 0); setTimeout("ScrollToTop()", 100); }
     ScrollToTop();
+</script>
+<script type="text/javascript" src="/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
+        jquery,
+        jquery.cookies,
+        jquery.dimensions,
+        jquery.jGrowl,
+        jquery.meioMask,
+        jquery.validate,
+        jquery.tooltip,
+        jquery.serializer,
+        jquery.template,
+        jquery.UI.core,
+        jquery.UI.widget,
+        jquery.UI.position,
+        jquery.UI.tabs,
+        jquery.UI.autocomplete,
+        jquery.UI.duallistbox,
+        jquery.ui.datepicker,
+        jquery.UI.htmlbox,
+        jquery.notification,
+        jquery.glob,
+        jquery.glob.pt-br,        
+        ../modules/Alerts/Alerts.svc,
+        lightbox/jquery.lightbox,
+        jquery.defaults,        
+        smartclient/jquery.smartclient"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnMenu").click(function () {
+            if (!$(this).data("IsClosed")) {
+                $(this).data("IsClosed", true);
+
+                $(this).css('backgroundPosition', 'left 40%');
+                $("#menuContainer").hide("slow");
+            }
+            else {
+                $(this).data("IsClosed", false);
+
+                $("#menuContainer").show("slow").parent().css('width', '180px');
+                $(this).css('backgroundPosition', 'right 40%');
+            }
+        });
+    });    
 </script>
 <body style="margin: 0px; padding: 0px; height: 100%; width: 100%;">
     <form id="form1" runat="server" style="height: 100%; width: 100%;">
@@ -34,17 +79,6 @@ overflow: hidden;">
         EnableScriptLocalization="true" EnablePageMethods="true" ScriptMode="Release"
         CombineScripts="false">
         <Scripts>
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />          
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.core.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.widget.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.ui.draggable.js" />  
-            
-            
-            <asp:ScriptReference Path="~/App_Shared/js/lightbox/jquery.lightbox.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.dimensions.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.jgrowl.js" />
-            <asp:ScriptReference Path="~/App_Shared/modules/Alerts/Alerts.svc.js" />
-            <asp:ScriptReference Path="~/App_Shared/js/smartclient/jquery.smartclient.js" />
         </Scripts>
         <Services>
             <asp:ServiceReference Path="~/App_Shared/Tooltip.svc" />
@@ -75,13 +109,10 @@ overflow: hidden;">
     <uc2:ToolTip ID="ToolTip4" runat="server" Indication="left" Left="210px" Top="290px"
         Title="Dica:" Message="Este é um botão dinâmico. Feito para facilitar a navegação pelo sistema. Clique uma vez para 'escondê-lo', e clique outra vez para 'exibi-lo'."
         Visible="true" />
-   
     <uc2:ToolTip ID="ToolTip1" runat="server" Indication="top" Right="113px" Top="80px"
         Title="Dica:" Message="Clique nesse boneco roxo para nos contactar em caso de erro no sistema, reclamação, sugestão ou elogio. Mande uma mensagem para nós!"
         Visible="true" />
-
-
-    <table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%">
+   <table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%">
         <tr>
             <td colspan="99" valign="top" style="height: 86px">
                 <iframe name="header" src="header.aspx" style="width: 100%; height: 86px;" frameborder="0"
@@ -105,27 +136,7 @@ overflow: hidden;">
                 </iframe>
             </td>
         </tr>
-    </table>
+    </table> <%----%>
     </form>
 </body>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#btnMenu").click(function () {
-            if (!$(this).data("IsClosed")) {
-                $(this).data("IsClosed", true);
-
-                $(this).css('backgroundPosition', 'left 40%');
-                $("#menuContainer").hide("slow");
-            }
-            else {
-                $(this).data("IsClosed", false); 
-
-                $("#menuContainer").show("slow").parent().css('width', '180px');
-                $(this).css('backgroundPosition', 'right 40%');                               
-            }
-        });
-    });
-       
-    
-</script>
 </html>

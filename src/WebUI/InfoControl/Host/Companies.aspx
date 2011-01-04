@@ -32,7 +32,7 @@
                                  <tr>                                    
                                        <td> 
                                          CNPJ: <br>
-                                        <asp:TextBox runat="server" ID="txtCnpj" Plugin="Mask" Mask="99.999.999/9999-99" /> 
+                                        <asp:TextBox runat="server" ID="txtCnpj"  Mask="99.999.999/9999-99" /> 
                                        </td>
                                    
                                        <td> 

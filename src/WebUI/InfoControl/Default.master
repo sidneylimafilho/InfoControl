@@ -21,16 +21,7 @@
 </head>
 
 <script pin="pin">    window.applicationPath = '<%=Request.Url.Scheme + ":/"+"/" + Request.Url.Host + Request.ApplicationPath%>'</script>
-
-<body>
-    <form id="form1" runat="server" autocomplete="off">
-    <!-- Print Button -->
-    <!-- Header in print -->
-    <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
-        EnableScriptLocalization="true" EnablePageMethods="true" CombineScripts="false"
-        ScriptMode="Release"> 
-        <Scripts>
-        <asp:ScriptReference Path="~/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
+<script type="text/javascript" src="/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
         jquery,
         jquery.cookies,
         jquery.dimensions,
@@ -52,8 +43,16 @@
         jquery.glob,
         jquery.glob.pt-br,        
         jquery.defaults,
-        smartclient/jquery.smartclient" />
+        smartclient/jquery.smartclient"></script>
 
+<body>
+    <form id="form1" runat="server" autocomplete="off">
+    <!-- Print Button -->
+    <!-- Header in print -->
+    <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
+        EnableScriptLocalization="true" EnablePageMethods="true" CombineScripts="false"
+        ScriptMode="Release"> 
+        <Scripts>     
         </Scripts>      
     </ajaxToolkit:ToolkitScriptManager>
     <table class="cHeader">

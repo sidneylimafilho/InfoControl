@@ -55,7 +55,7 @@
         var files = (Request["f"] ?? "").Split(',');
         foreach (var filename in files)
             if (!String.IsNullOrEmpty(filename))
-                Response.Write(GetFileContentInCache(basePath + filename.Trim() + extension));
+                Response.Write( GetFileContentInCache(basePath + filename.Trim() + extension) );
 
         Response.End();
 

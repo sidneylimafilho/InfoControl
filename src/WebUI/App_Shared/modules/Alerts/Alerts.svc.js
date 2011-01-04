@@ -1,6 +1,8 @@
-﻿var InitAlertMonitor = function () {
+﻿window.InitAlertMonitor = function (Alerts) {
     if (!top.document.originalTitle)
         top.document.originalTitle = top.document.title;
+
+    Alerts = Alerts || {};
 
     if (!Alerts.Count)
         Alerts.Count = 0;
