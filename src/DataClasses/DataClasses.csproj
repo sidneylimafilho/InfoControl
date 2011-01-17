@@ -304,7 +304,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\Framework\Framework.csproj">
+    <ProjectReference Include="..\Framework\Framework 3.5.csproj">
       <Project>{148DC18F-45AB-4191-B587-71092A7BDF74}</Project>
       <Name>Framework</Name>
     </ProjectReference>
