@@ -1,6 +1,5 @@
 ﻿<%@ Application Language="C#" %>
 <%@ Import Namespace="System.Data" %>
-<%@ Import Namespace="System.Data.Services" %>
 <%@ Import Namespace="System.Web.Services" %>
 <%@ Import Namespace="System.Web.Routing" %>
 <%@ Import Namespace="System.Web.Mvc" %>
@@ -13,14 +12,12 @@
         // Code that runs on application startup
         Scheduler.Instance.Start();
 
+        var obj = new { controller = "SearchService", action = "HelloWorld", id = "" };
+
         // Start MVC Routing
-        RouteTable.Routes.MapRoute(
-            "Default",
-            "controller/{controller}/{action}/{id}",
-            new { controller = "SearchService", action = "HelloWorld", id = "" }
-        );
-        
-       
+        RouteTable.Routes.MapRoute("Default", "controller/{controller}/{action}/{id}", obj);
+
+
 
     }
 
