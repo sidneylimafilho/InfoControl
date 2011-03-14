@@ -75,10 +75,6 @@ namespace InfoControl.Web.Services
         }
         #endregion
 
-        //
-        // Baseado nos atributos disponiveis em 
-        // http://www.israelaece.com/post/WCF-Internals-e-Extensibilidade.aspx
-        //
         #region WCF Service > IOperationBehavior Members
 
         public void AddBindingParameters(OperationDescription operationDescription, System.ServiceModel.Channels.BindingParameterCollection bindingParameters)
@@ -96,7 +92,7 @@ namespace InfoControl.Web.Services
         {
             var SerializerBehavior = operationDescription.Behaviors.Find<DataContractSerializerOperationBehavior>();
 
-            dispatchOperation.Formatter = new CustomFormatter(dispatchOperation.Formatter, operationDescription);
+            dispatchOperation.Formatter = new JsonFormatter(dispatchOperation.Formatter, operationDescription);
         }
 
         public void Validate(OperationDescription operationDescription)
@@ -105,13 +101,13 @@ namespace InfoControl.Web.Services
         }
 
 
-        private class CustomFormatter : IDispatchMessageFormatter
+        private class JsonFormatter : IDispatchMessageFormatter
         {
 
             IDispatchMessageFormatter original;
             OperationDescription operationDescription;
 
-            public CustomFormatter(IDispatchMessageFormatter original, OperationDescription operationDescription)
+            public JsonFormatter(IDispatchMessageFormatter original, OperationDescription operationDescription)
             {
                 this.original = original;
                 this.operationDescription = operationDescription;
