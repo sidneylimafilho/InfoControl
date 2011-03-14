@@ -22,7 +22,7 @@ namespace Vivina.Erp.DataClasses
                 while ((webPage = webPage.WebPage1) != null)
                     url = webPage.Name.Trim().RemoveSpecialChars() + "/" + url;
 
-                return "~/site/" + url + Name.RemoveSpecialChars() + "," + WebPageId + ".aspx";                
+                return "~/" + url + Name.RemoveSpecialChars() + "," + WebPageId + ".aspx";                
             }
         }               
     }

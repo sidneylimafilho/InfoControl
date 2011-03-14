@@ -30,20 +30,18 @@ public partial class _Default : DataPage
         //zip.Extract("c:\\teste");
 
 
-        Response.StatusCode = 301;
-        Response.StatusDescription = "Moved Permanently";
-        Response.RedirectLocation = ResolveClientUrl("~/site/");
+        if (Request.Url.OriginalString.ToLower().Contains("pervasiva.com.br"))
+        {
+            Response.StatusCode = 301;
+            Response.StatusDescription = "Moved Permanently";
+            Response.RedirectLocation = "http://www.vivina.com.br/pervasiva/start,452.aspx";
+            Response.End();
+        }
 
-        if (Request.Url.OriginalString.ToLower().Contains("pooba.com.br"))
-            Response.RedirectLocation = ResolveClientUrl("~/pooba/");
+        Server.Execute("~/site/default.aspx");
 
-        if (Request.Url.OriginalString.ToLower().Contains("blog.vivina.com.br"))
-            Response.RedirectLocation = "http://www.vivina.com.br/site/Blog-da-Vivina,9.aspx?type=blog";
-            
-        if (Request.Url.OriginalString.ToLower().Contains("infocontrol.com.br"))
-            Response.RedirectLocation = "http://www.vivina.com.br/site/InfoControl/Infocontrol,53.aspx";
 
-       
+
 
         //DataTable table = new DataTable();
         //table.Columns.Add("Regiao");
