@@ -71,13 +71,29 @@ namespace InfoControl.Web.Configuration
         /// </summary>
         internal static Application GetCurrentApplication()
         {
-            Application application;
+            Application application = new Application() { Name = "/" };
 
-            using (ConfigurationDataContext db = (new DataManager()).CreateDataContext<ConfigurationDataContext>())
-                application = db.Applications.Where(x => x.Name == ApplicationName).FirstOrDefault();
+            string text = "/";
 
-            if (application == null)
-                throw new ConfigurationErrorsException("The application name dont match in database");
+            text = System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
+            if (!string.IsNullOrEmpty(text))
+                application.Name = text.Trim('/');
+
+            text = System.Configuration.ConfigurationManager.AppSettings["ApplicationName"];
+            if (!string.IsNullOrEmpty(text))
+                application.Name = text;
+
+            try
+            {
+                using (ConfigurationDataContext db = (new DataManager()).CreateDataContext<ConfigurationDataContext>())
+                    application = db.Applications.Where(x => x.Name == application.Name).FirstOrDefault();
+
+                if (application == null)
+                    throw new ConfigurationErrorsException("The application name dont match in database");
+            }
+            catch { }
+
+
 
             return application;
         }
@@ -92,40 +108,6 @@ namespace InfoControl.Web.Configuration
             return db.SystemParameters.Where(x => x.ApplicationId == _currentApplication.ApplicationId).ToDictionary(x => x.Name);
         }
 
-        /// <summary>
-        /// Retrieve the name of the current application
-        /// </summary>
-        internal static string ApplicationName
-        {
-            get
-            {
-                try
-                {
-                    string text1 = System.Configuration.ConfigurationManager.AppSettings["ApplicationName"];
-                    if (!string.IsNullOrEmpty(text1))
-                        return text1;
-
-                    text1 = System.Web.Hosting.HostingEnvironment.ApplicationVirtualPath;
-                    if (!string.IsNullOrEmpty(text1))
-                        return text1;
-
-                    text1 = System.Diagnostics.Process.GetCurrentProcess().MainModule.ModuleName;
-                    int num1 = text1.IndexOf('.');
-                    if (num1 != -1)
-                        return text1.Remove(num1);
-
-                    if (string.IsNullOrEmpty(text1))
-                        return "/";
-
-                    return text1;
-                }
-                catch
-                {
-                    return "/";
-                }
-
-            }
-        }
 
 
     }
