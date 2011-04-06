@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 
 #if !CompactFramework
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Json;
 #endif
 
 namespace InfoControl.Runtime
@@ -60,7 +61,7 @@ namespace InfoControl.Runtime
         }
         public static MemoryStream SerializeToXmlInStream(this object graph)
         {
-            MemoryStream stream = new MemoryStream();
+            var stream = new MemoryStream();
             XmlSerializer serializer = new XmlSerializer(graph.GetType());
             serializer.Serialize(stream, graph);
             stream.Position = 0;
@@ -68,10 +69,21 @@ namespace InfoControl.Runtime
         }
 
         public static string SerializeToJson(this object graph)
-        {           
-            System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();
-            return ser.Serialize(graph);
+        {
+            return new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(graph);
         }
+
+        public static string SerializeToWcfJson(this object graph)
+        {
+            using (var stream = new MemoryStream())
+            {
+                new DataContractJsonSerializer(graph.GetType()).WriteObject(stream, graph);
+                stream.Position = 0;
+                return new StreamReader(stream).ReadToEnd();
+            }
+        }
+
+
         #endregion
 
         #region Deserialization
@@ -118,7 +130,7 @@ namespace InfoControl.Runtime
         }
         public static object DeserializeFromJson(this string json)
         {
-            System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();            
+            System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();
             return ser.DeserializeObject(json);
         }
 

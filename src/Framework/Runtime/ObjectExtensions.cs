@@ -31,10 +31,15 @@ namespace InfoControl
             return SerializationHelper.SerializeToJson(graph);
         }
 
+        public static string SerializeToWcfJson<T>(this T graph)
+        {
+            return SerializationHelper.SerializeToWcfJson(graph);
+        }
+
         public static byte[] Serialize<T>(this T graph)
         {
             return SerializationHelper.Serialize(graph);
-        }    
+        }
 #endif
     }
 }
