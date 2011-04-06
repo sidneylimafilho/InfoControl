@@ -26,14 +26,13 @@ namespace InfoControl.Web.Auditing
     [DataObject]
     public class ExceptionManager
     {
-        private readonly ExceptionNotifierDataContext dbContext;
-        private readonly DataManager manager;
+        private ExceptionNotifierDataContext dbContext;
+        private DataManager manager;
         private Event eventEntity;
 
         public ExceptionManager()
         {
-            manager = new DataManager(false);
-            dbContext = manager.CreateDataContext<ExceptionNotifierDataContext>();
+
         }
 
         #region Members
@@ -134,6 +133,9 @@ namespace InfoControl.Web.Auditing
             HttpContext context = HttpContext.Current;
             if (context != null)
             {
+                manager = new DataManager(false);
+                dbContext = manager.CreateDataContext<ExceptionNotifierDataContext>();
+
                 //
                 // Create an event
                 //
@@ -143,15 +145,7 @@ namespace InfoControl.Web.Auditing
                                     CurrentDate = DateTime.Now,
                                     ExceptionCode = ex.GetHashCode().ToString(),
 
-                                    Message = "<h2>Message: " + ex.Message.Replace("\n", "<br />") + "</h2><br />"
-                                      + "<b>Source: </b>" + ex.Source + "<br />"
-                                      + (ex.InnerException != null ? "<b>InnerException: </b>" + ex.InnerException.GetType() + "<br />" : String.Empty)
-                                      + "<b>TargetSite: </b>" + ex.TargetSite + "<br />"
-                                      + "<b>Path: </b>" + context.Request.Path + "<br />"
-                                      + "<b>URL Referer: </b>" + (context.Request.UrlReferrer != null ? context.Request.UrlReferrer.AbsolutePath : String.Empty) + "<br />"
-                                      + "<b>Stack Trace: </b>" + ex.StackTrace.Replace("\n", "<br />")
-                                      + (!String.IsNullOrEmpty(ex.HelpLink) ? "<b>HelpLink: </b><br />" + ex.HelpLink + "<br />" : String.Empty)
-                                      + GetTextErrorLog(),
+                                    Message = GetTextErrorLog(ex),
 
                                     Name = ex.GetType().ToString(),
                                     Path = context.Request.FilePath,
@@ -168,7 +162,7 @@ namespace InfoControl.Web.Auditing
                     (context.User as AccessControlPrincipal).Identity.UserId > 0)
                     eventEntity.UserId = (context.User as AccessControlPrincipal).Identity.UserId;
 
-                
+
 
                 //  eventEntity.StackTrace += ex.HelpLink;
 
@@ -191,8 +185,8 @@ namespace InfoControl.Web.Auditing
                 throw new NullReferenceException("The 'InfoControl/File' section is empty!");
             }
 
-            string text = GetHeaderErrorLog(ex);
-            File.AppendAllText(GetFileNameLog(DateTime.Now.Date), text);
+            string text = GetTextErrorLog(ex);
+            File.AppendAllText(GetFileNameLog(DateTime.Now), text);
         }
 
         private void SendMail(Exception ex)
@@ -204,9 +198,10 @@ namespace InfoControl.Web.Auditing
                 throw new Exception("Para enviar o log de erros, por email, precisa configurar um destinat�rio!");
 
             var smtp = new SmtpClient();
-            var mail = new MailMessage(emailConfig["to"].ToString(), emailConfig["from"].ToString());
+            var mail = new MailMessage(emailConfig["from"].ToString(), emailConfig["to"].ToString());
             mail.IsBodyHtml = true;
             mail.Priority = MailPriority.High;
+            mail.Subject = "BUG: " + ex.Message;
 
             //
             // Se for para envio consolidado verifica se j� passou o dia
@@ -221,15 +216,10 @@ namespace InfoControl.Web.Auditing
                 if (sentDate < DateTime.Now.Date)
                 {
                     var countError = ((int)HttpContext.Current.Cache["CountError"]);
+
                     if (countError > 1)
-                    {
-                        mail.Subject = "Foram encontrados " + countError + " erros no sistema " +
-                                       Application.Current.Name;
-                    }
-                    else
-                    {
-                        mail.Subject = "Foi encontrado " + countError + " erro no sistema " + Application.Current.Name;
-                    }
+                        mail.Subject = "Foram encontrados " + countError + " erros no sistema " + Application.Current.Name;
+
                     mail.Body = HttpContext.Current.Cache["EmailDigestBody"].ToString();
 
                     smtp.Send(mail);
@@ -263,7 +253,7 @@ namespace InfoControl.Web.Auditing
                         HttpContext.Current.Cache["EmailDigestBody"] = "";
 
                     var mailDigestBody = (string)HttpContext.Current.Cache["EmailDigestBody"];
-                    mailDigestBody += GetHeaderErrorLog(ex);
+                    mailDigestBody += GetTextErrorLog(ex);
                     HttpContext.Current.Cache["EmailDigestBody"] = mailDigestBody;
                 }
             }
@@ -272,8 +262,8 @@ namespace InfoControl.Web.Auditing
                 //
                 // Dispara a cada erro que ocorra
                 //
-                mail.Subject = "Foi encontrado erro no sistema " + Application.Current.Name;
-                mail.Body = GetHeaderErrorLog(ex);
+
+                mail.Body = GetTextErrorLog(ex);
                 smtp.Send(mail);
             }
         }
@@ -314,82 +304,28 @@ namespace InfoControl.Web.Auditing
         }
 
 
-        public static string GetHeaderErrorLog(Exception ex)
-        {
-            string body =
-                @"<html>
-                                <head>
-                                    <title>[=Message=]</title>
-                                    <style>
-                                     body {font-family:'Verdana';font-weight:normal;font-size: .7em;color:black;} 
-                                     p {font-family:'Verdana';font-weight:normal;color:black;margin-top: -5px}
-                                     b {font-family:'Verdana';font-weight:bold;color:black;margin-top: -5px}
-                                     H1 { font-family:'Verdana';font-weight:normal;font-size:18pt;color:red }
-                                     H2 { font-family:'Verdana';font-weight:normal;font-size:14pt;color:maroon }
-                                     pre {font-family:'Lucida Console';font-size: .9em}
-                                     .marker {font-weight: bold; color: black;text-decoration: none;}
-                                     .version {color: gray;}
-                                     .error {margin-bottom: 10px;}
-                                     .expandable { text-decoration:underline; font-weight:bold; color:navy; cursor:hand; }
-                                    </style>
-                                </head>
-                                <body bgcolor='white'>
-
-                                        <span><H1>Server Error in '[=ApplicationName=]' Application.<hr width=100% size=1 color=silver></H1>
-
-                                        <h2> <i>[=Message=]</i> </h2></span>
-
-                                        <font face='Arial, Helvetica, Geneva, SunSans-Regular, sans-serif '>
-
-                                        <b> Description: </b>An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
-
-                                        <br><br>
-
-                                        <b> Exception Details: </b>[=ExceptionType=]: [=Message=]<br><br>
-                                        
-                                        <br>
-
-                                        <b> Source File: </b>[=FilePath=] [=TargetSite=]<b> &nbsp;&nbsp;
-                                        <br><br>
-
-                                        <b>Stack Trace:</b> <br><br>
-
-                                        <table width=100% bgcolor='#ffffcc'>
-                                           <tr>
-                                              <td>
-                                                  <code><pre>[=StackTrace=]</pre></code>
-                                              </td>
-                                           </tr>
-                                        </table>
-
-                                        <br>
-
-                                        <hr width=100% size=1 color=silver>
-
-                                        <b>Version Information:</b>[=.NetVersion=]&nbsp;Microsoft .NET Framework Version:2.0.50727.42; ASP.NET Version:2.0.50727.42
-
-                                        </font>
-
-                                </body>
-                            </html>";
-
-            body = body.Replace("[=Message=]", ex.Message);
-            body = body.Replace("[=ExceptionType=]", ex.GetType().ToString());
-            body = body.Replace("[=StackTrace=]", ex.StackTrace);
-            body = body.Replace("[=TargetSite=]", ex.TargetSite.Name);
-            body = body.Replace("[=.NetVersion=]", Environment.Version.ToString());
-            body = body.Replace("[=FilePath=]", HttpContext.Current.Request.FilePath);
-            body = body.Replace("[=ApplicationName=]", HttpContext.Current.Request.PhysicalApplicationPath);
 
 
-            return (body);
-        }
-
-        private string GetTextErrorLog()
+        private string GetTextErrorLog(Exception ex)
         {
             var sb = new StringBuilder();
 
-            string text = String.Empty;
+            while (ex != null && !String.IsNullOrEmpty(ex.Message))
+            {
+                sb.Append("<h2>Message: " + ex.Message.Replace("\n", "<br />") + "</h2><br />");
+                sb.Append("<b>Source: </b>" + ex.Source + "<br />");
+                sb.Append((ex.InnerException != null ? "<b>InnerException: </b>" + ex.InnerException.GetType() + "<br />" : String.Empty));
+                sb.Append("<b>TargetSite: </b>" + ex.TargetSite + "<br />");
+                sb.Append("<b>Path: </b>" + HttpContext.Current.Request.Path + "<br />");
+                sb.Append("<b>URL Referer: </b>" + (HttpContext.Current.Request.UrlReferrer != null ? HttpContext.Current.Request.UrlReferrer.AbsolutePath : String.Empty) + "<br />");
+                sb.Append("<b>Stack Trace: </b>" + ex.StackTrace.Replace("\n", "<br />"));
+                sb.Append((!String.IsNullOrEmpty(ex.HelpLink) ? "<b>HelpLink: </b><br />" + ex.HelpLink + "<br />" : String.Empty));
+                sb.Append("<br /><br />");
+                
+                ex = ex.InnerException;
+            }
+
+            string text = "";
 
             text = GetFormVariables();
             if (!String.IsNullOrEmpty(text))
@@ -425,7 +361,7 @@ namespace InfoControl.Web.Auditing
                 sb.Append("<table border='1'>");
                 for (int i = 0; i < request.QueryString.Count; i++)
                 {
-                    if (!String.IsNullOrEmpty(request.QueryString[i]))
+                    if (!String.IsNullOrEmpty(request.QueryString[i]) && !IsPasswordKey(request.QueryString.Keys[i]))
                     {
                         sb.Append("<tr>");
                         sb.Append("<td>" + request.QueryString.Keys[i] + "&nbsp;</td>");
@@ -450,7 +386,7 @@ namespace InfoControl.Web.Auditing
 
                 for (int i = 0; i < request.Form.Count; i++)
                 {
-                    if (!String.IsNullOrEmpty(request.Form[i]))
+                    if (!String.IsNullOrEmpty(request.Form[i]) && !IsPasswordKey(request.Form.Keys[i]))
                     {
                         sb.Append("<tr>");
                         sb.Append("<td><b>" + request.Form.Keys[i] + "</b>&nbsp;</td>");
@@ -475,7 +411,7 @@ namespace InfoControl.Web.Auditing
 
                 foreach (string key in request.ServerVariables.Keys)
                 {
-                    if (!key.Contains("ALL"))
+                    if (!key.Contains("ALL") && !IsPasswordKey(key))
                     {
                         try
                         {
@@ -505,12 +441,13 @@ namespace InfoControl.Web.Auditing
                 sb.Append("<h3>Session</h3>");
                 sb.Append("<table border='1'>");
                 for (int i = 0; i < session.Count; i++)
-                    if (!String.IsNullOrEmpty(Convert.ToString(session[i])))
+                    if (!String.IsNullOrEmpty(Convert.ToString(session[i])) && !IsPasswordKey(session.Keys[i]))
                     {
-                        sb.Append("<tr>");
-                        sb.Append("<td><b>" + session.Keys[i] + "</b>&nbsp;</td>");
-                        sb.Append("<td>" + Convert.ToString(session[i]) + "&nbsp;</td>");
-                        sb.Append("</tr>");
+                        sb.Append("<tr><td style='background-color:#CCC'><b>" + session.Keys[i] + "</b>&nbsp;</td></tr>");
+                        sb.Append("<tr><td>");
+                        try { sb.Append(session[i].SerializeToWcfJson().Replace("{", "{<ol>").Replace("}", "</ol>}").Replace(",", ", <br />")); }
+                        catch { sb.Append("Tipo: " + Convert.ToString(session[i])); }
+                        sb.Append("</td></tr>");
                     }
 
                 sb.Append("</table>");
@@ -538,6 +475,12 @@ namespace InfoControl.Web.Auditing
                 sb.Append("</table>");
             }
             return (sb.ToString().Replace("\n", "<BR />"));
+        }
+
+
+        private bool IsPasswordKey(string key)
+        {
+            return key.ToUpper().Contains("PWD") || key.ToUpper().Contains("SENHA") || key.ToUpper().Contains("PASS");
         }
 
         #endregion
