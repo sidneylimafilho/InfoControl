@@ -70,6 +70,8 @@
         Include("controls/TextBox/textcontrol.css");        
         Include("controls/validator/validator.css");
 
+        Include("../../js/lightbox/themes/default/jquery.lightbox.css");
+
         Response.End();
 
     }

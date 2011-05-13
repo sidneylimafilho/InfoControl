@@ -30,18 +30,18 @@
 }
 .ToolTip_left
 {
-	background-image: url(controls/Tooltip/img/left.gif);
+	background-image: url(themes/glasscyan/controls/Tooltip/img/left.gif);
 	padding-top: 10px;
 }
 .ToolTip_top
 {
-	background-image: url(controls/Tooltip/img/top.gif);
+	background-image: url(themes/glasscyan/controls/Tooltip/img/top.gif);
 	padding-top: 20px;
 }
 
 .ToolTip_left #footer, .ToolTip_top #footer
 {
-	background-image: url(controls/Tooltip/img/footer.gif);
+	background-image: url(themes/glasscyan/controls/Tooltip/img/footer.gif);
 	background-position: bottom;
 	background-repeat: no-repeat;
 	height: 24px;
@@ -85,8 +85,8 @@ HELPTIP
 	background-repeat:no-repeat;
 	background-position:0px 0px;
 }
-.HelpTip {background-image:url(controls/Tooltip/img/ico_ajuda.gif);}
-.PrintTip {background-image:url(controls/Tooltip/../../printer.gif);}
+.HelpTip {background-image:url(themes/glasscyan/controls/Tooltip/img/ico_ajuda.gif);}
+.PrintTip {background-image:url(themes/glasscyan/controls/Tooltip/../../printer.gif);}
 
 .HelpTip:hover, .PrintTip:hover
 {
@@ -111,7 +111,7 @@ HELPTIP
 	padding: 20px 23px 17px 23px;
 	z-index: 100;
 	font-weight: normal;
-	background-image: url(controls/Tooltip/img/top.png);
+	background-image: url(themes/glasscyan/controls/Tooltip/img/top.png);
 	background-position:0px 0px;
 	text-decoration: none;
 	color:#FFF;
@@ -130,7 +130,7 @@ HELPTIP
 }
 .HelpTip:hover span.footer
 {
-	background-image: url(controls/Tooltip/img/footer2.gif);
+	background-image: url(themes/glasscyan/controls/Tooltip/img/footer2.gif);
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	padding: 5px 20px 0px 20px;
@@ -167,12 +167,12 @@ PRINT TIP
 	padding: 20px 25px 40px 15px;
 	z-index: 100;
 	font-weight: normal;
-	background: url(controls/Tooltip/img/PrintTip.jpg) no-repeat;
+	background: url(themes/glasscyan/controls/Tooltip/img/PrintTip.jpg) no-repeat;
 	text-decoration: none;
 }
 .PrintTip:hover span.footer
 {
-	background-image: url(controls/Tooltip/img/footer2.gif);
+	background-image: url(themes/glasscyan/controls/Tooltip/img/footer2.gif);
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	padding: 10px 25px 50px 15px;
@@ -224,23 +224,23 @@ ToolTips
 	width: 388px;	
 }
 
-.InfoTip1:hover span.msg{background-image: url(controls/Tooltip/img/top.gif);color: #FFF !important;}
-.InfoTip1:hover span.footer{background-image: url(controls/Tooltip/img/footer.gif);}
+.InfoTip1:hover span.msg{background-image: url(themes/glasscyan/controls/Tooltip/img/top.gif);color: #FFF !important;}
+.InfoTip1:hover span.footer{background-image: url(themes/glasscyan/controls/Tooltip/img/footer.gif);}
 
-.InfoTip2:hover span.msg{background-image: url(controls/Tooltip/img/top2.gif);color: #000 !important;}
-.InfoTip2:hover span.footer{background-image: url(controls/Tooltip/img/footer2.gif);}
+.InfoTip2:hover span.msg{background-image: url(themes/glasscyan/controls/Tooltip/img/top2.gif);color: #000 !important;}
+.InfoTip2:hover span.footer{background-image: url(themes/glasscyan/controls/Tooltip/img/footer2.gif);}
 
-.InfoTip3:hover span.msg{background-image: url(controls/Tooltip/img/top3.gif);color: #000 !important;}
-.InfoTip3:hover span.footer{background-image: url(controls/Tooltip/img/footer3.gif);}
+.InfoTip3:hover span.msg{background-image: url(themes/glasscyan/controls/Tooltip/img/top3.gif);color: #000 !important;}
+.InfoTip3:hover span.footer{background-image: url(themes/glasscyan/controls/Tooltip/img/footer3.gif);}
 
-.InfoTip4:hover span.msg{background-image: url(controls/Tooltip/img/top4.gif);color: #000 !important;}
-.InfoTip4:hover span.footer{background-image: url(controls/Tooltip/img/footer4.gif);}
+.InfoTip4:hover span.msg{background-image: url(themes/glasscyan/controls/Tooltip/img/top4.gif);color: #000 !important;}
+.InfoTip4:hover span.footer{background-image: url(themes/glasscyan/controls/Tooltip/img/footer4.gif);}
 
-.InfoTip5:hover span.msg{background-image: url(controls/Tooltip/img/top5.gif);color: #000 !important;}
-.InfoTip5:hover span.footer{background-image: url(controls/Tooltip/img/footer5.gif);}
+.InfoTip5:hover span.msg{background-image: url(themes/glasscyan/controls/Tooltip/img/top5.gif);color: #000 !important;}
+.InfoTip5:hover span.footer{background-image: url(themes/glasscyan/controls/Tooltip/img/footer5.gif);}
 
-.InfoTip6:hover span.msg{background-image: url(controls/Tooltip/img/top6.gif);color: #000 !important;}
-.InfoTip6:hover span.footer{background-image: url(controls/Tooltip/img/footer6.gif);}
+.InfoTip6:hover span.msg{background-image: url(themes/glasscyan/controls/Tooltip/img/top6.gif);color: #000 !important;}
+.InfoTip6:hover span.footer{background-image: url(themes/glasscyan/controls/Tooltip/img/footer6.gif);}
 
 
 

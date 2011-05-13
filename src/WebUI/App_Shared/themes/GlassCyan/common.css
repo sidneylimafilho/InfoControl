@@ -166,7 +166,7 @@ legend
 
 .comboDivBox
 {
-	background: url(Controls/comboDivBox.gif) no-repeat right;
+	background: url(themes/glasscyan/controls/comboDivBox.gif) no-repeat right;
 	height: 14px;
 	padding: 2px 24px 1px 4px;
 	display: block;

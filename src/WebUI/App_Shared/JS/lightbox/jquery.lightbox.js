@@ -928,7 +928,7 @@ function($) {
         }
     });
     $.fn.lightbox = function(k, l) {
-        return $(this).live('click', function(e) {
+        return $(this).click( function(e) {
             e.preventDefault();
             $(this).blur();
             var b = [];
@@ -970,10 +970,11 @@ function($) {
     $(function() {
         if (parseFloat($.fn.jquery) > 1.2) {
             if (document.domain.indexOf("envato.com") != -1 || document.domain.indexOf("aerowebstudio.net") != -1 || document.domain.indexOf("localhost") != -1) {
-                
-            }$.LightBoxObject.create()
+
+            } $.LightBoxObject.create()
         } else {
             throw "The jQuery version that was loaded is too old. Lightbox Evolution requires jQuery 1.3+";
         }
     })
 })(jQuery);
+

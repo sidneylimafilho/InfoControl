@@ -33,7 +33,7 @@
 
 .ui-theme-table .Header, .ui-theme-table th
 {
-	background-image: url(controls/gridview/img/HeaderBg.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/HeaderBg.png);
 	background-repeat: repeat-x;
 	height: 22px;
 }
@@ -46,7 +46,7 @@
 
 .ui-theme-table .Footer, .ui-theme-table tf, .ui-theme-table .Footer *, .ui-theme-table tfoot, .ui-theme-table .Pager
 {
-	background-image: url(controls/gridview/img/FooterBg.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/FooterBg.png);
 	background-repeat: repeat-x;
 }
 
@@ -66,12 +66,12 @@
 
 .ui-theme-table table .pages
 {
-	background-image: url(controls/gridview/img/TDSelected.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDSelected.png);
 }
 
 .ui-theme-table table a:hover
 {
-	background-image: url(controls/gridview/img/TDHover.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDHover.png);
 	color: #661100;
 	border: 1px solid #661100;
 }
@@ -96,11 +96,11 @@
 
 .ui-theme-table tfoot span
 {
-	background-image: url(controls/gridview/img/TDSelected.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDSelected.png);
 }
 .ui-theme-table tfoot a:hover
 {
-	background-image: url(controls/gridview/img/TDHover.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDHover.png);
 	color: #993300;
 }
 
@@ -122,14 +122,14 @@
 .ui-theme-table .SelectedColumnAsc a
 {
 	padding-right: 16px;
-	background: url(controls/gridview/img/dt-arrow-up.gif) no-repeat right 50%;
+	background: url(themes/glasscyan/controls/gridview/img/dt-arrow-up.gif) no-repeat right 50%;
 	height: 16px;
 	width: 16px;
 }
 .ui-theme-table .SelectedColumnDesc a
 {
 	padding-right: 16px;
-	background: url(controls/gridview/img/dt-arrow-dn.gif) no-repeat right 50%;
+	background: url(themes/glasscyan/controls/gridview/img/dt-arrow-dn.gif) no-repeat right 50%;
 	height: 16px;
 	width: 16px;
 }
@@ -154,13 +154,13 @@
 .ui-theme-table .Items_Hover, .ui-theme-table .Items_Hover p,
  .ui-theme-table tr:hover, .ui-theme-table tr:hover p
 {
-	background-image: url(controls/gridview/img/TDHover.png) !important;
+	background-image: url(themes/glasscyan/controls/gridview/img/TDHover.png) !important;
 	color: #993300 !important;
 	cursor: hand;
 }
 .ui-theme-table .Items_Selected
 {
-	background-image: url(controls/gridview/img/TDSelected.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDSelected.png);
 	color: #1A6E6A;
 	cursor: hand;
 }
@@ -200,18 +200,18 @@
 }
 .ui-theme-table .cancel
 {
-	background: url(controls/gridview/img/cancel.gif) no-repeat;
+	background: url(themes/glasscyan/controls/gridview/img/cancel.gif) no-repeat;
 	margin-left: 15px;
 }
 
 .ui-theme-table .save
 {
-	background: url(controls/gridview/img/Save.gif) no-repeat;
+	background: url(themes/glasscyan/controls/gridview/img/Save.gif) no-repeat;
 }
 
 .ui-theme-table .insert, .cGrd21 .insert
 {
-	background: url(controls/gridview/img/Add.gif) no-repeat;
+	background: url(themes/glasscyan/controls/gridview/img/Add.gif) no-repeat;
 }
 
 
@@ -255,7 +255,7 @@
 .cGrd21 .Header
 {
 	font-weight: bold;	
-	background-image: url(controls/gridview/img/HeaderBg.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/HeaderBg.png);
 	background-repeat: repeat-x;
 	color: #FFFFFF;
 }
@@ -318,14 +318,14 @@
 
 .cGrd21 .EditItem
 {
-	background-image: url(controls/gridview/img/defaultEditItemBg.gif);
+	background-image: url(themes/glasscyan/controls/gridview/img/defaultEditItemBg.gif);
 	background-repeat: repeat-x;
 	background-color: #eef2ea;
 }
 
 .cGrd21 .SelectedItem
 {
-	background-image: url(controls/gridview/img/defaultSelectedItemBg.gif);
+	background-image: url(themes/glasscyan/controls/gridview/img/defaultSelectedItemBg.gif);
 	background-repeat: repeat-x;
 	background-color: #eef2ea;
 }
@@ -349,14 +349,14 @@
 
 .cGrd21 .Pager A
 {
-	background-image: url(controls/gridview/img/TDSelected.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDSelected.png);
 	color: #FFFFFF !important;
 	cursor: hand;
 }
 
 .cGrd21 .Pager A:hover, .cGrd21 .RadGrid_Items_Hover td
 {
-	background-image: url(controls/gridview/img/TDHover.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDHover.png);
 	color: #661100 !important;
 	cursor: hand;
 }
@@ -368,7 +368,7 @@
 
 .cGrd21 .GroupPanel
 {
-	background-image: url(controls/gridview/img/TDSelected.png);
+	background-image: url(themes/glasscyan/controls/gridview/img/TDSelected.png);
 	width: 100%;
 	border-top: 1px solid #8d9c87;
 	height: 18px;

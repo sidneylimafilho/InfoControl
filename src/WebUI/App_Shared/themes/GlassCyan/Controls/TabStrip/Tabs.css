@@ -27,7 +27,7 @@
 }
 .cTabs11 UL.tabNavigation LI A
 {
-	background: url(controls/TabStrip/Img/tabStripeOff.gif);
+	background: url(themes/glasscyan/controls/TabStrip/Img/tabStripeOff.gif);
 	color: #000;
 	height: 20px;
 	display: -moz-inline-box;
@@ -38,10 +38,10 @@
 }
 .cTabs11 UL.tabNavigation LI A.selected
 {
-	background: url(controls/TabStrip/Img/tabStripeHover.gif);
+	background: url(themes/glasscyan/controls/TabStrip/Img/tabStripeHover.gif);
 }
 .cTabs11 UL.tabNavigation LI A:hover
 {
-	background: url(controls/TabStrip/Img/tabStripeHover.gif);
+	background: url(themes/glasscyan/controls/TabStrip/Img/tabStripeHover.gif);
 }
 

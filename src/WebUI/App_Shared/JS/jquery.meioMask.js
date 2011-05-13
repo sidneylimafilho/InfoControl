@@ -37,4 +37,6 @@
         unsetMask: function () { return D.mask.unset(this) },
         unmaskedVal: function () { return D.mask.unmaskedVal(this[0]) }
     })
+
+    D.fn.Mask = D.fn.setMask;
 })(jQuery);

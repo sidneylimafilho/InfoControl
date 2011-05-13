@@ -58,35 +58,35 @@
 
 .cDat11 input
 {
-	background: url(controls/Textbox/1/bg_left.gif) no-repeat;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_left.gif) no-repeat;
 }
 .cDat11 span
 {
-	background: url(controls/Textbox/1/bg_right.gif) no-repeat;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_right.gif) no-repeat;
 }
 .cDat11_hover input
 {
-	background: url(controls/Textbox/1/bg_left.gif) no-repeat 0px -23px;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_left.gif) no-repeat 0px -23px;
 }
 .cDat11_hover span
 {
-	background: url(controls/Textbox/1/bg_right.gif) no-repeat 0px -23px;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_right.gif) no-repeat 0px -23px;
 }
 .cDat11_focus input
 {
-	background: url(controls/Textbox/1/bg_left.gif) no-repeat 0px -46px;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_left.gif) no-repeat 0px -46px;
 }
 .cDat11_focus span
 {
-	background: url(controls/Textbox/1/bg_right.gif) no-repeat 0px -46px;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_right.gif) no-repeat 0px -46px;
 }
 .cDat11_disabled input
 {
-	background: url(controls/Textbox/1/bg_left.gif) no-repeat 0px -69px;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_left.gif) no-repeat 0px -69px;
 }
 .cDat11_disabled span
 {
-	background: url(controls/Textbox/1/bg_right.gif) no-repeat 0px -69px;
+	background: url(themes/glasscyan/controls/Textbox/1/bg_right.gif) no-repeat 0px -69px;
 }
 
 
@@ -132,35 +132,35 @@
 
 .cDat21 input
 {
-	background: url(controls/Textbox/2/bg_left.gif) no-repeat;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_left.gif) no-repeat;
 }
 .cDat21 span
 {
-	background: url(controls/Textbox/2/bg_right.gif) no-repeat;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_right.gif) no-repeat;
 }
 .cDat21_hover input
 {
-	background: url(controls/Textbox/2/bg_left.gif) no-repeat 0px -32px;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_left.gif) no-repeat 0px -32px;
 }
 .cDat21_hover span
 {
-	background: url(controls/Textbox/2/bg_right.gif) no-repeat 0px -32px;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_right.gif) no-repeat 0px -32px;
 }
 .cDat21_focus input
 {
-	background: url(controls/Textbox/2/bg_left.gif) no-repeat 0px -64px;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_left.gif) no-repeat 0px -64px;
 }
 .cDat21_focus span
 {
-	background: url(controls/Textbox/2/bg_right.gif) no-repeat 0px -64px;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_right.gif) no-repeat 0px -64px;
 }
 .cDat21_disabled input
 {
-	background: url(controls/Textbox/2/bg_left.gif) no-repeat 0px -96px;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_left.gif) no-repeat 0px -96px;
 }
 .cDat21_disabled span
 {
-	background: url(controls/Textbox/2/bg_right.gif) no-repeat 0px -96px;
+	background: url(themes/glasscyan/controls/Textbox/2/bg_right.gif) no-repeat 0px -96px;
 }
 
 
@@ -169,35 +169,35 @@
 
 .cDynDat11 input
 {
-	background: url(controls/Textbox/AutoComplete/bg_left.gif) no-repeat;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_left.gif) no-repeat;
 }
 .cDynDat11 span
 {
-	background: url(controls/Textbox/AutoComplete/bg_right.gif) no-repeat;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_right.gif) no-repeat;
 }
 .cDynDat11_hover input
 {
-	background: url(controls/Textbox/AutoComplete/bg_left.gif) no-repeat 0px -23px;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_left.gif) no-repeat 0px -23px;
 }
 .cDynDat11_hover span
 {
-	background: url(controls/Textbox/AutoComplete/bg_right.gif) no-repeat 0px -23px;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_right.gif) no-repeat 0px -23px;
 }
 .cDynDat11_focus input
 {
-	background: url(controls/Textbox/AutoComplete/bg_left.gif) no-repeat 0px -46px;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_left.gif) no-repeat 0px -46px;
 }
 .cDynDat11_focus span
 {
-	background: url(controls/Textbox/AutoComplete/bg_right.gif) no-repeat 0px -46px;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_right.gif) no-repeat 0px -46px;
 }
 .cDynDat11_disabled input
 {
-	background: url(controls/Textbox/AutoComplete/bg_left.gif) no-repeat 0px -69px;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_left.gif) no-repeat 0px -69px;
 }
 .cDynDat11_disabled span
 {
-	background: url(controls/Textbox/AutoComplete/bg_right.gif) no-repeat 0px -69px;
+	background: url(themes/glasscyan/controls/Textbox/AutoComplete/bg_right.gif) no-repeat 0px -69px;
 }
 
 .cDynDat11 ul, .cDynDat11_hover ul, .cDynDat11_focus ul
@@ -221,7 +221,7 @@
 .CompletionListHighlightedItemCssClass
 {
 	color: #661100 !important;
-	background: url(controls/Textbox/../GridView/img/tdhover.png);
+	background: url(themes/glasscyan/controls/Textbox/../GridView/img/tdhover.png);
 	text-decoration: none;
 }
 
@@ -293,7 +293,7 @@ color:#0a6262;
 }
 
 .ui-autocomplete-results li.ui-autocomplete-state-active, .ui-autocomplete-results li.ui-autocomplete-state-active .match{
-background: url(controls/Textbox/../GridView/img/tdhover.png) repeat-x scroll 0 0;
+background: url(themes/glasscyan/controls/Textbox/../GridView/img/tdhover.png) repeat-x scroll 0 0;
 border:0px solid #D3D3D3;
 color:#FFF;
 }

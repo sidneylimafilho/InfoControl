@@ -1,25 +1,25 @@
 ﻿.cMnu1
 {
-	background-image: url(controls/menu/img/hover_td_bg.png);
+	background-image: url(themes/glasscyan/controls/menu/img/hover_td_bg.png);
 	background-repeat: repeat-x;
 	border-collapse:collapse;
 }
 .Item
 {
-	background-image: url(controls/menu/img/item_bg.png);
+	background-image: url(themes/glasscyan/controls/menu/img/item_bg.png);
 	height: 32px;
 	padding: 0px 10px 0px 10px;
 	
 }
 .Item TD
 {
-	background-image: url(controls/menu/img/item_td_bg.png);
+	background-image: url(themes/glasscyan/controls/menu/img/item_td_bg.png);
 	background-repeat:repeat-x;
 	height: 32px;
 }
 .Hover TD
 {
-	background-image: url(controls/menu/img/hover_td_bg.png);
+	background-image: url(themes/glasscyan/controls/menu/img/hover_td_bg.png);
 	background-repeat: repeat-x;
 	height: 32px;
 }
