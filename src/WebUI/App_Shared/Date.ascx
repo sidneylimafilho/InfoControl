@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Date.ascx.cs" Inherits="InfoControl.Web.UI.Date" %>
 <table nowrap="true" cellpadding="0" cellspacing="0">
     <tr>
-        <td>
+        <td> 
             <asp:TextBox ID="txtDate" Columns="8" MaxLength="10" plugin="datepicker" mask="99/99/9999"
                 runat="server"></asp:TextBox> 
         </td>
