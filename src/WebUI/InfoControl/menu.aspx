@@ -31,12 +31,35 @@
     
     <link type="text/css" rel="Stylesheet" href="~/app_shared/themes/glasscyan/filescombiner.ascx" />
 </head>
+<script type="text/javascript" src="/app_shared/filescombiner.ascx?base=js/&f=
+        jquery.js,
+        jquery.cookies.js,
+        jquery.dimensions.js,
+        jquery.jGrowl.js,
+        jquery.meioMask.js,
+        jquery.validate.js,
+        jquery.tooltip.js,
+        jquery.serializer.js,        
+        jquery.UI.core.js,
+        jquery.UI.widget.js,
+        jquery.UI.position.js,
+        jquery.UI.tabs.js,
+        jquery.UI.autocomplete.js,
+        jquery.UI.duallistbox.js,
+        jquery.ui.datepicker.js,
+        jquery.UI.htmlbox.js,
+        jquery.notification.js,
+        jquery.glob.js,
+        jquery.glob.pt-br.js,        
+        ../modules/Alerts/Alerts.svc.js,        
+        lightbox/jquery.lightbox.js,      
+        smartclient/src/jquery.smartclient.js"></script>
 <body>
     <form id="form1" runat="server">
     <div id="menu">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
-                <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
+                
             </Scripts>
         </asp:ScriptManager>
         <asp:Label ID="lblAdminCompany" runat="server" Text="Administrar a empresa:">

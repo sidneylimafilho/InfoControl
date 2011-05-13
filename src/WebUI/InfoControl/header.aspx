@@ -10,31 +10,32 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     
     <link type="text/css" rel="Stylesheet" href="~/app_shared/themes/glasscyan/filescombiner.ascx" />
-   <script type="text/javascript" src="/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
-        jquery,
-        jquery.cookies,
-        jquery.dimensions,
-        jquery.jGrowl,
-        jquery.meioMask,
-        jquery.validate,
-        jquery.tooltip,
-        jquery.serializer,
-        jquery.template,
-        jquery.UI.core,
-        jquery.UI.widget,
-        jquery.UI.position,
-        jquery.UI.tabs,
-        jquery.UI.autocomplete,
-        jquery.UI.duallistbox,
-        jquery.ui.datepicker,
-        jquery.UI.htmlbox,
-        jquery.notification,
-        jquery.glob,
-        jquery.glob.pt-br,        
-        ../modules/Alerts/Alerts.svc,
-        lightbox/jquery.lightbox,
-        jquery.defaults,        
-        smartclient/jquery.smartclient"></script>
+
+
+<script type="text/javascript" src="/app_shared/filescombiner.ascx?base=js/&f=
+        jquery.js,
+        jquery.cookies.js,
+        jquery.dimensions.js,
+        jquery.jGrowl.js,
+        jquery.meioMask.js,
+        jquery.validate.js,
+        jquery.tooltip.js,
+        jquery.serializer.js,        
+        jquery.UI.core.js,
+        jquery.UI.widget.js,
+        jquery.UI.position.js,
+        jquery.UI.tabs.js,
+        jquery.UI.autocomplete.js,
+        jquery.UI.duallistbox.js,
+        jquery.ui.datepicker.js,
+        jquery.UI.htmlbox.js,
+        jquery.notification.js,
+        jquery.glob.js,
+        jquery.glob.pt-br.js,        
+        ../modules/Alerts/Alerts.svc.js,        
+        lightbox/jquery.lightbox.js,      
+        smartclient/src/jquery.smartclient.js"></script>
+        
     <style type="text/css">
         body
         {

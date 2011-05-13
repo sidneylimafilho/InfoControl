@@ -32,8 +32,8 @@
                             Título:
                             <br />
                             <asp:TextBox ID="txtName" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
-                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;" ID="reqtxtName"
-                                ValidationGroup="SaveTask" ControlToValidate="txtName">
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ErrorMessage="&nbsp;&nbsp;&nbsp;"
+                                ID="reqtxtName" ValidationGroup="SaveTask" ControlToValidate="txtName">
                             </asp:RequiredFieldValidator>
                         </td>
                         <td>
@@ -42,57 +42,59 @@
                             <asp:DropDownList ID="cboMasterPage" AppendDataBoundItems="true" runat="server" DataSourceID="odsMasterPages">
                                 <asp:ListItem Text="" Value="" />
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqCboMasterPage" ErrorMessage="&nbsp;&nbsp;&nbsp;"
-                                ValidationGroup="SaveTask" ControlToValidate="cboMasterPage"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator CssClass="cErr21" runat="server" ID="reqCboMasterPage"
+                                ErrorMessage="&nbsp;&nbsp;&nbsp;" ValidationGroup="SaveTask" ControlToValidate="cboMasterPage"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td>
-                            Pai:<br />
-                            <uc2:ComboTreeBox ID="cboParentPages" runat="server" DataFieldID="WebPageId" DataFieldParentID="ParentPageId"
-                                DataTextField="Name" DataValueField="WebPageId" DataSourceID="odsSiteMap" Width="400px" />
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <asp:CheckBox ID="chkCanComment" Text=" Permite comentário?" runat="server" />
-                            &nbsp;&nbsp;&nbsp;
-                            <asp:CheckBox ID="chkIsPublished" Text=" Publicado?" runat="server" />&nbsp;
-                            <uc3:HelpTooltip ID="HelpTooltip2" runat="server">
-                                <ItemTemplate>
+                        <td valign="top">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Pai:<br />
+                                        <uc2:ComboTreeBox ID="cboParentPages" runat="server" DataFieldID="WebPageId" DataFieldParentID="ParentPageId"
+                                            DataTextField="Name" DataValueField="WebPageId" DataSourceID="odsSiteMap" Width="400px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:CheckBox ID="chkCanComment" Text=" Permite comentário?" runat="server" />
+                                        &nbsp;&nbsp;&nbsp;
+                                        <asp:CheckBox ID="chkIsPublished" Text=" Publicado?" runat="server" />&nbsp;
+                                        <uc3:HelpTooltip ID="HelpTooltip2" runat="server">
+                                            <itemtemplate>
                                     Publicado significa que estará disponivel para os usuários, quando desmarcada irá
                                     apresentar apenas para testes com uma marca d'agua RASCUNHO.
-                                </ItemTemplate>
-                            </uc3:HelpTooltip>
-                            &nbsp;&nbsp;&nbsp;
-                            <asp:CheckBox ID="chkIsInMenu" Text=" No menu?" runat="server" />&nbsp;
-                            <uc3:HelpTooltip ID="HelpTooltip1" runat="server">
-                                <ItemTemplate>
+                                </itemtemplate>
+                                        </uc3:HelpTooltip>
+                                        &nbsp;&nbsp;&nbsp;
+                                        <asp:CheckBox ID="chkIsInMenu" Text=" No menu?" runat="server" />&nbsp;
+                                        <uc3:HelpTooltip ID="HelpTooltip1" runat="server">
+                                            <itemtemplate>
                                     Este item só se aplica quando utiliza a tag MENU no arquivo tema
-                                </ItemTemplate>
-                            </uc3:HelpTooltip>
-                            &nbsp;&nbsp;&nbsp;
+                                </itemtemplate>
+                                        </uc3:HelpTooltip>
+                                        &nbsp;&nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td valign="top">
+                            <label>
+                                Redirecionar URL:</label>
+                            <br />
+                            <asp:TextBox ID="txtRedirectUrl" runat="server" MaxLength="1024" Columns="40"></asp:TextBox>
                         </td>
                     </tr>
                 </table>
                 Descrição:<br />
-                <textarea plugin="htmlbox" style="height:400px; width:100%;" runat="server" id="txtDescription" />
+                <textarea plugin="htmlbox" style="height: 200px; width: 100%;" runat="server" id="txtDescription" />
                 <br />
                 <label>
                     Tags:</label><br />
                 <asp:TextBox ID="txtTags" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>
-                <br />
-                <label>
-                <%--    Categorias:</label><br />
-                <asp:TextBox ID="txtCategories" runat="server" Columns="80" MaxLength="1024"></asp:TextBox>--%>
-                <br />
-                <label>
-                    Redirecionar URL:</label>
-                <br />
-                <asp:TextBox ID="txtRedirectUrl" runat="server" MaxLength="1024" Columns="40"></asp:TextBox>
-                <br />
                 <table width="100%">
                     <tr>
                         <td align="right">
@@ -120,9 +122,6 @@
             </td>
         </tr>
     </table>
-
-   
-
     <VFX:BusinessManagerDataSource ID="odsSiteMap" runat="server" onselecting="odsSiteMap_Selecting"
         SelectMethod="GetChildPagesAsTable" TypeName="Vivina.Erp.BusinessRules.WebSites.SiteManager">
         <selectparameters>

@@ -9,55 +9,79 @@ overflow: hidden;">
     <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
     <link rel="Stylesheet" href="../App_Shared/JS/lightbox/themes/default/jquery.lightbox.css"
         type="text/css" />
-    <link rel="Stylesheet" href="../App_Shared/themes/glasscyan/filescombiner.ascx" type="text/css" />
+    <link rel="Stylesheet" type="text/css" href="../app_shared/filescombiner.ascx?type=text/css&base=themes/glasscyan/&f=
+        common.css, 
+        text.css, 
+        global.css,
+        Leafbox/Cyan/Leafbox.css,
+        Leafbox/Cyan/Leafbox.css,
+        Leafbox/Orange/Leafbox.css,
+        Leafbox/Purple/Leafbox.css,
+        Leafbox/Yellow/Leafbox.css,
+        controls/ToolTip/ToolTip.css,
+        controls/Alert/Alert.css,
+        controls/Notification/jquery.jgrowl.css,
+        controls/button/button.css,
+        controls/calendar/calendar.css,
+        controls/calendar/jquery.ui.core.css,
+        controls/calendar/jquery.ui.theme.css,
+        controls/gridview/gridview.css,
+        controls/menu/menu.css,
+        controls/numericUpDown/numericUpDown.css,
+        controls/RadScheduler/RadScheduler.css,
+        controls/RadPanelbar/Outlook.css,
+        controls/Rating/Rating.css,
+        controls/TabStrip/Tabs.css,
+        controls/TextBox/textcontrol.css,        
+        controls/validator/validator.css               
+        " />
+    <link rel="Stylesheet" type="text/css" href="../App_Shared/js/lightbox/themes/default/jquery.lightbox.css" />
     <title></title>
 </head>
+
+<script type="text/javascript" src="/app_shared/filescombiner.ascx?base=js/&f=
+        jquery.js,
+        jquery.cookies.js,
+        jquery.dimensions.js,
+        jquery.jGrowl.js,
+        jquery.meioMask.js,
+        jquery.validate.js,
+        jquery.tooltip.js,
+        jquery.serializer.js,        
+        jquery.UI.core.js,
+        jquery.UI.widget.js,
+        jquery.UI.position.js,
+        jquery.UI.tabs.js,
+        jquery.UI.autocomplete.js,
+        jquery.UI.duallistbox.js,
+        jquery.ui.datepicker.js,
+        jquery.UI.htmlbox.js,
+        jquery.notification.js,
+        jquery.glob.js,
+        jquery.glob.pt-br.js,        
+        ../modules/Alerts/Alerts.svc.js,        
+        lightbox/jquery.lightbox.js,      
+        smartclient/src/jquery.smartclient.js"></script>
+
 <script defer="defer" type="text/javascript">
     function ResetAll() { ResetHeader(); ResetContent(); }
     function ResetHeader() { header.location += '?'; }
     function ResetContent() { content.location = 'StartPage.aspx?' }
 
-    window.onload = function () {
+    window.onload = function() {
         document.getElementById('menu').style.height = (document.body.offsetHeight - 86) + "px";
         document.getElementById('content').style.height = (document.body.offsetHeight - 86) + "px";
 
-        $("#loading").fadeOut(2000, function () {
+        $("#loading").fadeOut(2000, function() {
             InitAlertMonitor(Alerts);
         });
     }
 
     function ScrollToTop() { self.scrollTo(0, 0); setTimeout("ScrollToTop()", 100); }
     ScrollToTop();
-</script>
-<script type="text/javascript" src="/app_shared/js/filescombiner.ascx?base=&ext=.js&f=
-        jquery,
-        jquery.cookies,
-        jquery.dimensions,
-        jquery.jGrowl,
-        jquery.meioMask,
-        jquery.validate,
-        jquery.tooltip,
-        jquery.serializer,
-        jquery.template,
-        jquery.UI.core,
-        jquery.UI.widget,
-        jquery.UI.position,
-        jquery.UI.tabs,
-        jquery.UI.autocomplete,
-        jquery.UI.duallistbox,
-        jquery.ui.datepicker,
-        jquery.UI.htmlbox,
-        jquery.notification,
-        jquery.glob,
-        jquery.glob.pt-br,        
-        ../modules/Alerts/Alerts.svc,
-        lightbox/jquery.lightbox,
-        jquery.defaults,        
-        smartclient/jquery.smartclient"></script>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#btnMenu").click(function () {
+    $(document).ready(function() {
+        $("#btnMenu").click(function() {
             if (!$(this).data("IsClosed")) {
                 $(this).data("IsClosed", true);
 
@@ -73,17 +97,18 @@ overflow: hidden;">
         });
     });    
 </script>
+
 <body style="margin: 0px; padding: 0px; height: 100%; width: 100%;">
     <form id="form1" runat="server" style="height: 100%; width: 100%;">
     <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server" EnableScriptGlobalization="true"
         EnableScriptLocalization="true" EnablePageMethods="true" ScriptMode="Release"
         CombineScripts="false">
-        <Scripts>
-        </Scripts>
-        <Services>
+        <scripts>
+        </scripts>
+        <services>
             <asp:ServiceReference Path="~/App_Shared/Tooltip.svc" />
             <asp:ServiceReference Path="~/App_Shared/modules/Alerts/Alerts.svc" />
-        </Services>
+        </services>
     </ajaxToolkit:ToolkitScriptManager>
     <div id="loading" class="cLoading11">
         <table style="width: 400px; height: 300px; margin-top: 100px;" align="center">
@@ -112,7 +137,7 @@ overflow: hidden;">
     <uc2:ToolTip ID="ToolTip1" runat="server" Indication="top" Right="113px" Top="80px"
         Title="Dica:" Message="Clique nesse boneco roxo para nos contactar em caso de erro no sistema, reclamação, sugestão ou elogio. Mande uma mensagem para nós!"
         Visible="true" />
-   <table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%">
+    <table border="0" cellpadding="0" cellspacing="0" style="height: 100%; width: 100%">
         <tr>
             <td colspan="99" valign="top" style="height: 86px">
                 <iframe name="header" src="header.aspx" style="width: 100%; height: 86px;" frameborder="0"
@@ -136,7 +161,8 @@ overflow: hidden;">
                 </iframe>
             </td>
         </tr>
-    </table> <%----%>
+    </table>
+    <%----%>
     </form>
 </body>
 </html>
