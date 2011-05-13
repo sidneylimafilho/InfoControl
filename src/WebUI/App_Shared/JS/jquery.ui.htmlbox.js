@@ -1,8 +1,8 @@
-﻿document.htmlbox_colors = function () {
+﻿document.htmlbox_colors = function() {
     return ['white', 'FFFFFF', 'ivory', 'FFFFF0', 'lightyellow', 'FFFFE0', 'yellow', 'FFFF00', 'snow', 'FFFAFA', 'floralwhite', 'FFFAF0', 'lemonchiffon', 'FFFACD', 'cornsilk', 'FFF8DC', 'seashell', 'FFF5EE', 'lavenderblush', 'FFF0F5', 'papayawhip', 'FFEFD5', 'blanchedalmond', 'FFEBCD', 'mistyrose', 'F FE4E1', 'bisque', 'FFE4C4', 'moccasin', 'FFE4B5', 'navajowhite', 'FFDEAD', 'peachpuff', 'FFDAB9', 'gold', 'FFD700', 'pink', 'FFC0CB', 'lightpink ', 'FFB6C1', 'orange', 'FFA500', 'lightsalmon', 'FFA07A', 'darkorange', 'FF8C00', 'coral', 'FF7F50', 'hotpink', 'FF69B4', 'tomato', 'FF6347', 'orangered', 'FF4500', 'deeppink', 'FF1493', 'magenta', 'FF00FF', 'fuchsia', 'FF00FF', 'red', 'FF0000', 'oldlace', 'FDF5E6', 'lightgoldenrodyellow', 'FAFAD2', ' linen', 'FAF0E6', 'antiquewhite', 'FAEBD7', 'salmon', 'FA8072', 'ghostwhite', 'F8F8FF', 'mintcream', 'F5FFFA', 'whitesmoke', 'F5F5F5', 'beige', ' F5F5DC', 'wheat', 'F5DEB3', 'sandybrown', 'F4A460', 'azure', 'F0FFFF', 'honeydew', 'F0FFF0', 'aliceblue', 'F0F8FF', 'khaki', 'F0E68C', 'lightcoral ', 'F08080', 'palegoldenrod', 'EEE8AA', 'violet', 'EE82EE', 'darksalmon', 'E9967A', 'lavender', 'E6E6FA', 'lightcyan', 'E0FFFF', 'burlywood', 'DEB887', 'plum', 'DDA0DD', 'gainsboro', 'DCDCDC', 'crimson', 'DC143C', 'palevioletred', 'DB7093', 'goldenrod', 'DAA520', 'orchid', 'DA70D6', 'thistle', 'D8BFD8', 'lightgrey', 'D3D3D3', 'tan', 'D2B48C', 'chocolate', 'D2691E', 'peru', 'CD853F', 'indianred', 'CD5C5C', 'mediumvioletred', 'C71585', 'silver', 'C0C0C0', 'darkkhaki', 'BDB76B', 'rosybrown', 'BC8F8F', 'mediumorchid', 'BA55D3', 'darkgoldenrod', 'B8860B', 'firebrick', 'B22222', 'powderblue', 'B0E0E6', 'lightsteelblue', 'B0C4DE', 'paleturquoise', 'AFEEEE', 'greenyellow', 'ADFF2F', 'lightblue', 'ADD8E6', 'darkgray', 'A9A9A9', 'brown', 'A52A2A', 'sienna', "A0522D", 'yellowgreen', "9ACD32", 'darkorchid', '9932CC', 'palegreen', '98FB98', 'darkviolet', '9400D3', 'mediumpurple', '9370DB', 'lightgreen', '90EE90', 'darkseagreen', '8FBC8F', 'saddlebrown', '8B4513', 'darkmagenta', '8B008B', 'darkred', '8B0000', 'blueviolet', '8A2BE2', 'lightskyblue', '87CEFA', 'skyblue', '87CEEB', 'gray', '808080', 'olive', '808000', 'purple', '800080', 'maroon', '800000', 'aquamarine', '7FFFD4', 'chartreuse', '7FFF00', 'lawngreen', '7CFC00', 'mediumslateblue', '7B68EE', 'lightslategray', '778899', 'slategray', '708090', 'olivedrab', '6B8E23', 'slateblue', '6A5ACD', 'dimgray', '696969', 'mediumaquamarine', '66CDAA', 'cornflowerblue', '6495ED', 'cadetblue', '5F9EA0', 'darkolivegreen', '556B2F', 'indigo', '4B0082', 'mediumturquoise', '48D1CC', 'darkslateblue', '483D8B', 'steelblue', '4682B4', 'royalblue', '4169E1', 'turquoise', '40E0D0', 'mediumseagreen', '3CB371', 'limegreen', '32CD32', 'darkslategray', '2F4F4F', 'seagreen', '2E8B57', 'forestgreen', '228B22', 'lightseagreen', '20B2AA', 'dodgerblue', '1E90FF', 'midnightblue', '191970', 'cyan', '00FFFF', 'aqua', '00FFFF', 'springgreen', '00FF7F', 'lime', '00FF00', 'mediumspringgreen', '00FA9A', 'darkturquoise', '00CED1', 'deepskyblue', '00BFFF', 'darkcyan', "008B8B", 'teal', "008080", 'green', '008000', 'darkgreen', '006400', 'blue', '0000FF', 'mediumblue', '0000CD', 'darkblue', '00008B', 'navy', '000080', 'black', '000000'];
 };
 
-document.htmlbox_styles = function () {
+document.htmlbox_styles = function() {
     return [
     [
 	'Pull Orange - Right',
@@ -25,7 +25,7 @@ document.htmlbox_styles = function () {
 /*
 Html2Xhtml : Javascript Mini HTML to XHTML Parser 
 */
-function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2Xhtml(data) { this.data = data || '' }; Html2Xhtml.prototype.setHTML = function (data) { this.data = data || this.data }; Html2Xhtml.prototype.parse = function () { var state = 0; var xhtml = ''; var p = 0; var unget = false; var tagname = ''; var attrname = ''; var attrval = ''; var quot = ''; var data = this.data; var len = data.length; var phpval = ''; var tagtype = 0; var insidepre = false; var codetype = ''; while (1) { if (p >= len && !unget) { return xhtml } if (unget) { unget = false } else { var c = data.substr(p++, 1) } switch (state) { case 0: if (c == '<') { state = 1; break } xhtml += c; break; case 1: if (/[a-zA-Z]/.test(c)) { state = 2; tagtype = 1; tagname = c.toLowerCase(); break } if (c == '/') { state = 2; tagtype = -1; break } if (c == '!') { if (data.substr(p, 2) == '--') { xhtml += '<!--'; p += 2; state = 9; break } xhtml += '<!'; state = 10; break } if (c == '?' || c == '%') { codetype = c; state = 11; xhtml += '<' + c; break } xhtml += '&lt;'; unget = true; state = 0; break; case 2: if (Html2Xhtml.isSpaceChar[c]) { xhtml += (!insidepre && tagtype > 0 && Html2Xhtml.hasNLBefore[tagname] && xhtml.length && xhtml.substr(xhtml.length - 1, 1) != '\n' ? '\n' : '') + (tagtype > 0 ? '<' : '</') + tagname; state = 3; break } if (c == '/') { xhtml += (!insidepre && tagtype > 0 && Html2Xhtml.hasNLBefore[tagname] && xhtml.length && xhtml.substr(xhtml.length - 1, 1) != '\n' ? '\n' : '') + (tagtype > 0 ? '<' : '</') + tagname; if (data.substr(p, 1) != '>') { state = 3; break } state = 4; break } if (c == '>') { xhtml += (!insidepre && tagtype > 0 && Html2Xhtml.hasNLBefore[tagname] && xhtml.length && xhtml.substr(xhtml.length - 1, 1) != '\n' ? '\n' : '') + (tagtype > 0 ? '<' : '</') + tagname; unget = true; state = 4; break } tagname += c.toLowerCase(); break; case 3: if (Html2Xhtml.isSpaceChar[c]) { break } if (c == '/') { if (data.substr(p, 1) != '>') { break } state = 4; break } if (c == '>') { unget = true; state = 4; break } attrname = c.toLowerCase(); attrval = ''; state = 5; break; case 4: xhtml += (Html2Xhtml.isEmptyTag[tagname] ? ' />' : '>') + (!insidepre && tagtype < 0 && Html2Xhtml.hasNLAfter[tagname] && p < len && data.substr(p, 1) != '\n' ? '\n' : ''); if (tagtype > 0 && Html2Xhtml.dontAnalyzeContent[tagname]) { state = 13; attrname = attrval = quot = ''; tagtype = 0; break } if (tagname == 'pre') { insidepre = !insidepre } state = 0; tagname = attrname = attrval = quot = ''; tagtype = 0; break; case 5: if (Html2Xhtml.isSpaceChar[c]) { xhtml += ' ' + attrname; if (Html2Xhtml.isEmptyAttr[attrname]) { xhtml += '="' + attrname + '"' } state = 3; break } if (c == '/') { xhtml += ' ' + attrname; if (Html2Xhtml.isEmptyAttr[attrname]) { xhtml += '="' + attrname + '"' } if (data.substr(p, 1) != '>') { state = 3; break } state = 4; break } if (c == '>') { xhtml += ' ' + attrname; if (Html2Xhtml.isEmptyAttr[attrname]) { xhtml += '="' + attrname + '"' } unget = true; state = 4; break } if (c == '=') { xhtml += ' ' + attrname + '='; state = 6; break } if (c == '"' || c == "'") { attrname += '?' } else { attrname += c.toLowerCase() } break; case 6: if (Html2Xhtml.isSpaceChar[c]) { xhtml += (Html2Xhtml.isEmptyAttr[attrname] ? '"' + attrname + '"' : '""'); state = 3; break } if (c == '>') { xhtml += (Html2Xhtml.isEmptyAttr[attrname] ? '"' + attrname + '"' : '""'); unget = true; state = 4; break } if (c == '/' && data.substr(p, 1) == '>') { xhtml += (Html2Xhtml.isEmptyAttr[attrname] ? '"' + attrname + '"' : '""'); state = 4; break } if (c == '"' || c == "'") { quot = c; state = 8; break } attrval = c; state = 7; break; case 7: if (Html2Xhtml.isSpaceChar[c]) { xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 3; break } if (c == '/' && data.substr(p, 1) == '>') { xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 4; break } if (c == '>') { unget = true; xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 4; break } attrval += c; break; case 8: if (c == quot) { xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 3; break } attrval += c; break; case 9: if (c == '-' && data.substr(p, 2) == '->') { p += 2; xhtml += '-->'; state = 0; break } xhtml += c; break; case 10: if (c == '>') { state = 0 } xhtml += c; break; case 11: if (c == "'" || c == '"') { quot = c; state = 12; break } if (c == codetype && data.substr(p, 1) == '>') { state = 0; xhtml += c + '>'; codetype = ''; p++; break } xhtml += c; break; case 12: if (c == quot) { state = 11; xhtml += quot + Html2Xhtml.escapeQuot(phpval, quot) + quot; phpval = quot = ''; break } phpval += c; break; case 13: if (c == '<' && data.substr(p, tagname.length + 1).toLowerCase() == '/' + tagname) { unget = true; state = 0; tagname = ''; break } if (tagname == 'textarea') { xhtml += Html2Xhtml.escapeHTMLChar(c) } else { xhtml += c } break } } return xhtml }; Html2Xhtml.escapeQuot = function (str, quot) { if (!quot) { quot = '"' } if (quot == '"') { return str.replace(/"/ig, '\\"') } return str.replace(/'/ig, "\\'") }; Html2Xhtml.escapeHTMLChar = function (c) { if (c == '&') { return '&amp;' } if (c == '<') { return '&lt;' } if (c == '>') { return '&gt;' } return c }; Html2Xhtml.isSpaceChar = { ' ': 1, '\r': 1, '\n': 1, '\t': 1 }; Html2Xhtml.isEmptyTag = { 'area': 1, 'base': 1, 'basefont': 1, 'br': 1, 'hr': 1, 'img': 1, 'input': 1, 'link': 1, 'meta': 1, 'param': 1 }; Html2Xhtml.isEmptyAttr = { 'checked': 1, 'compact': 1, 'declare': 1, 'defer': 1, 'disabled': 1, 'ismap': 1, 'multiple': 1, 'noresize': 1, 'nosave': 1, 'noshade': 1, 'nowrap': 1, 'readonly': 1, 'selected': 1 }; Html2Xhtml.hasNLBefore = { 'div': 1, 'p': 1, 'table': 1, 'tbody': 1, 'tr': 1, 'td': 1, 'th': 1, 'title': 1, 'head': 1, 'body': 1, 'script': 1, 'comment': 1, 'li': 1, 'meta': 1, 'h1': 1, 'h2': 1, 'h3': 1, 'h4': 1, 'h5': 1, 'h6': 1, 'hr': 1, 'ul': 1, 'ol': 1, 'option': 1, 'link': 1 }; Html2Xhtml.hasNLAfter = { 'html': 1, 'head': 1, 'body': 1, 'p': 1, 'th': 1, 'style': 1 }; Html2Xhtml.dontAnalyzeContent = { 'textarea': 1, 'script': 1, 'style': 1 };
+function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2Xhtml(data) { this.data = data || '' }; Html2Xhtml.prototype.setHTML = function(data) { this.data = data || this.data }; Html2Xhtml.prototype.parse = function() { var state = 0; var xhtml = ''; var p = 0; var unget = false; var tagname = ''; var attrname = ''; var attrval = ''; var quot = ''; var data = this.data; var len = data.length; var phpval = ''; var tagtype = 0; var insidepre = false; var codetype = ''; while (1) { if (p >= len && !unget) { return xhtml } if (unget) { unget = false } else { var c = data.substr(p++, 1) } switch (state) { case 0: if (c == '<') { state = 1; break } xhtml += c; break; case 1: if (/[a-zA-Z]/.test(c)) { state = 2; tagtype = 1; tagname = c.toLowerCase(); break } if (c == '/') { state = 2; tagtype = -1; break } if (c == '!') { if (data.substr(p, 2) == '--') { xhtml += '<!--'; p += 2; state = 9; break } xhtml += '<!'; state = 10; break } if (c == '?' || c == '%') { codetype = c; state = 11; xhtml += '<' + c; break } xhtml += '&lt;'; unget = true; state = 0; break; case 2: if (Html2Xhtml.isSpaceChar[c]) { xhtml += (!insidepre && tagtype > 0 && Html2Xhtml.hasNLBefore[tagname] && xhtml.length && xhtml.substr(xhtml.length - 1, 1) != '\n' ? '\n' : '') + (tagtype > 0 ? '<' : '</') + tagname; state = 3; break } if (c == '/') { xhtml += (!insidepre && tagtype > 0 && Html2Xhtml.hasNLBefore[tagname] && xhtml.length && xhtml.substr(xhtml.length - 1, 1) != '\n' ? '\n' : '') + (tagtype > 0 ? '<' : '</') + tagname; if (data.substr(p, 1) != '>') { state = 3; break } state = 4; break } if (c == '>') { xhtml += (!insidepre && tagtype > 0 && Html2Xhtml.hasNLBefore[tagname] && xhtml.length && xhtml.substr(xhtml.length - 1, 1) != '\n' ? '\n' : '') + (tagtype > 0 ? '<' : '</') + tagname; unget = true; state = 4; break } tagname += c.toLowerCase(); break; case 3: if (Html2Xhtml.isSpaceChar[c]) { break } if (c == '/') { if (data.substr(p, 1) != '>') { break } state = 4; break } if (c == '>') { unget = true; state = 4; break } attrname = c.toLowerCase(); attrval = ''; state = 5; break; case 4: xhtml += (Html2Xhtml.isEmptyTag[tagname] ? ' />' : '>') + (!insidepre && tagtype < 0 && Html2Xhtml.hasNLAfter[tagname] && p < len && data.substr(p, 1) != '\n' ? '\n' : ''); if (tagtype > 0 && Html2Xhtml.dontAnalyzeContent[tagname]) { state = 13; attrname = attrval = quot = ''; tagtype = 0; break } if (tagname == 'pre') { insidepre = !insidepre } state = 0; tagname = attrname = attrval = quot = ''; tagtype = 0; break; case 5: if (Html2Xhtml.isSpaceChar[c]) { xhtml += ' ' + attrname; if (Html2Xhtml.isEmptyAttr[attrname]) { xhtml += '="' + attrname + '"' } state = 3; break } if (c == '/') { xhtml += ' ' + attrname; if (Html2Xhtml.isEmptyAttr[attrname]) { xhtml += '="' + attrname + '"' } if (data.substr(p, 1) != '>') { state = 3; break } state = 4; break } if (c == '>') { xhtml += ' ' + attrname; if (Html2Xhtml.isEmptyAttr[attrname]) { xhtml += '="' + attrname + '"' } unget = true; state = 4; break } if (c == '=') { xhtml += ' ' + attrname + '='; state = 6; break } if (c == '"' || c == "'") { attrname += '?' } else { attrname += c.toLowerCase() } break; case 6: if (Html2Xhtml.isSpaceChar[c]) { xhtml += (Html2Xhtml.isEmptyAttr[attrname] ? '"' + attrname + '"' : '""'); state = 3; break } if (c == '>') { xhtml += (Html2Xhtml.isEmptyAttr[attrname] ? '"' + attrname + '"' : '""'); unget = true; state = 4; break } if (c == '/' && data.substr(p, 1) == '>') { xhtml += (Html2Xhtml.isEmptyAttr[attrname] ? '"' + attrname + '"' : '""'); state = 4; break } if (c == '"' || c == "'") { quot = c; state = 8; break } attrval = c; state = 7; break; case 7: if (Html2Xhtml.isSpaceChar[c]) { xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 3; break } if (c == '/' && data.substr(p, 1) == '>') { xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 4; break } if (c == '>') { unget = true; xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 4; break } attrval += c; break; case 8: if (c == quot) { xhtml += '"' + Html2Xhtml.escapeQuot(attrval, '"') + '"'; state = 3; break } attrval += c; break; case 9: if (c == '-' && data.substr(p, 2) == '->') { p += 2; xhtml += '-->'; state = 0; break } xhtml += c; break; case 10: if (c == '>') { state = 0 } xhtml += c; break; case 11: if (c == "'" || c == '"') { quot = c; state = 12; break } if (c == codetype && data.substr(p, 1) == '>') { state = 0; xhtml += c + '>'; codetype = ''; p++; break } xhtml += c; break; case 12: if (c == quot) { state = 11; xhtml += quot + Html2Xhtml.escapeQuot(phpval, quot) + quot; phpval = quot = ''; break } phpval += c; break; case 13: if (c == '<' && data.substr(p, tagname.length + 1).toLowerCase() == '/' + tagname) { unget = true; state = 0; tagname = ''; break } if (tagname == 'textarea') { xhtml += Html2Xhtml.escapeHTMLChar(c) } else { xhtml += c } break } } return xhtml }; Html2Xhtml.escapeQuot = function(str, quot) { if (!quot) { quot = '"' } if (quot == '"') { return str.replace(/"/ig, '\\"') } return str.replace(/'/ig, "\\'") }; Html2Xhtml.escapeHTMLChar = function(c) { if (c == '&') { return '&amp;' } if (c == '<') { return '&lt;' } if (c == '>') { return '&gt;' } return c }; Html2Xhtml.isSpaceChar = { ' ': 1, '\r': 1, '\n': 1, '\t': 1 }; Html2Xhtml.isEmptyTag = { 'area': 1, 'base': 1, 'basefont': 1, 'br': 1, 'hr': 1, 'img': 1, 'input': 1, 'link': 1, 'meta': 1, 'param': 1 }; Html2Xhtml.isEmptyAttr = { 'checked': 1, 'compact': 1, 'declare': 1, 'defer': 1, 'disabled': 1, 'ismap': 1, 'multiple': 1, 'noresize': 1, 'nosave': 1, 'noshade': 1, 'nowrap': 1, 'readonly': 1, 'selected': 1 }; Html2Xhtml.hasNLBefore = { 'div': 1, 'p': 1, 'table': 1, 'tbody': 1, 'tr': 1, 'td': 1, 'th': 1, 'title': 1, 'head': 1, 'body': 1, 'script': 1, 'comment': 1, 'li': 1, 'meta': 1, 'h1': 1, 'h2': 1, 'h3': 1, 'h4': 1, 'h5': 1, 'h6': 1, 'hr': 1, 'ul': 1, 'ol': 1, 'option': 1, 'link': 1 }; Html2Xhtml.hasNLAfter = { 'html': 1, 'head': 1, 'body': 1, 'p': 1, 'th': 1, 'style': 1 }; Html2Xhtml.dontAnalyzeContent = { 'textarea': 1, 'script': 1, 'style': 1 };
 
 
 //============================= START OF CLASS ==============================//
@@ -42,8 +42,8 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
 * @author Remiya Solutions
 * @version 4.0
 */
-(function ($) {
-    $.fn.htmlbox = function (options) {
+(function($) {
+    $.fn.htmlbox = function(options) {
         // START: Settings
         // Are there any plugins?
         var colors = (typeof document.htmlbox_colors === 'function') ? document.htmlbox_colors() : ['silver', 'silver', 'white', 'white', 'yellow', 'yellow', 'orange', 'orange', 'red', 'red', 'green', 'green', 'blue', 'blue', 'brown', 'brown', 'black', 'black'];
@@ -52,11 +52,28 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         var urm = (typeof htmlbox_undo_redo_manager === 'function') ? new htmlbox_undo_redo_manager() : false;
         // Default option
         var d = {
-            toolbars: [["bold", "italic", "underline"]],      // Buttons
-            idir: "./images/", // HtmlBox Image Directory, This is needed for the images to work
-            icons: "default",  // Icon set
+            toolbars: [[
+            // Cut, Copy, Paste
+            "separator", "cut", "copy", "paste",
+            // Undo, Redo
+            "separator", "undo", "redo",
+            // Bold, Italic, Underline, Strikethrough, Sup, Sub
+            "separator", "bold", "italic", "underline", "strike", "sup", "sub",
+            // Left, Right, Center, Justify
+            "separator", "justify", "left", "center", "right",
+            // Ordered List, Unordered List, Indent, Outdent
+            "separator", "ol", "ul", "indent", "outdent",
+            // Hyperlink, Remove Hyperlink, Image, Show code
+            "separator", "link", "unlink", "image", "separator", "removeformat", "striptags", "hr", "paragraph", "quote","code"],
+            [
+            // Formats, Font size, Font family, Font color, Font, Background
+            "separator", "formats", "fontsize", "fontfamily",
+            "separator", "fontcolor", "highlight",
+            ]],      // Buttons
+            idir: "http://remiya.com/htmlbox/files/demo/4.0/images", // HtmlBox Image Directory, This is needed for the images to work
+            icons: "silk",  // Icon set
             about: true,
-            skin: "default",  // Skin, silver
+            skin: "silver",  // Skin, silver
             output: "xhtml",  // Output
             toolbar_height: 24, // Toolbar height
             tool_height: 16,   // Tools height
@@ -64,8 +81,8 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
             tool_image_height: 16,  // Tools image height
             tool_image_width: 16,  // Tools image width
             css: "body{margin:8px;} *{font-family:Segoe UI; font-size:11px}", // "body{margin:3px;font-family:verdana;font-size:11px;}p{margin:0px;}"
-            success: function (data) { alert(data); }, // AJAX on success
-            error: function (a, b, c) { return this; }   // AJAX on error
+            success: function(data) { alert(data); }, // AJAX on success
+            error: function(a, b, c) { return this; }   // AJAX on error
         };
 
         // User options
@@ -84,7 +101,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Returns the selected (X)HTML code
         * @access private
         */
-        var get_selection = function () {
+        var get_selection = function() {
             var range;
             if ($.browser.msie) {
                 range = d.iframe.contentWindow.document.selection.createRange();
@@ -117,7 +134,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Coppies the PHP in_array function. This is useful for Objects.
         * @access private
         */
-        var in_array = function (o, a) {
+        var in_array = function(o, a) {
             for (var i in a) { if ((i === o)) { return true; } }
             return false;
         };
@@ -132,7 +149,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Inserts text at the cursor position or selection
         * @access private
         */
-        var insert_text = function (text, start, end) {
+        var insert_text = function(text, start, end) {
             if ($.browser.msie) {
                 if (typeof d.idoc.selection !== "undefined" && d.idoc.selection.type !== "Text" && d.idoc.selection.type !== "None") { start = false; d.idoc.selection.clear(); }
                 var sel = d.idoc.selection.createRange(); sel.pasteHTML(text);
@@ -162,7 +179,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Keyup event.
         * @access private 
         */
-        var keyup = function (e) {
+        var keyup = function(e) {
             // Updating the textarea component, so whenever it is posted it will send all the data
             var html = $("#1" + d.id).is(":visible") ? $("#" + d.id).val() : html = d.iframe.contentWindow.document.body.innerHTML;
             if (urm) { urm.add(html); } // Undo Redo
@@ -181,11 +198,11 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Sets the CSS style to the HtmlBox iframe
         * @access private
         */
-        var style = function () {
+        var style = function() {
             // START: HtmlBox Style
             if (d.css.indexOf("background:") === -1) { d.css += "body{background:white;}"; }
             if (d.css.indexOf("background-image:") === -1) {
-                d.css = d.css + "body{background-image:url(" + d.idir + "logo.gif);background-position:top right;background-repeat:no-repeat;}";
+                d.css = d.css + "body{background-position:top right;background-repeat:no-repeat;}";
             }
 
             if (d.idoc.createStyleSheet) {
@@ -213,14 +230,14 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @return this
         * @access private
         */
-        var toolbar = function () {
+        var toolbar = function() {
             var h = "";
             if (d.about && !in_array(d.toolbars[0], "about")) { d.toolbars[0][d.toolbars[0].length] = "separator"; d.toolbars[0][d.toolbars[0].length] = "about"; }
             for (var k = 0; k < d.toolbars.length; k++) {
                 var toolbar = d.toolbars[k];
                 h += "<tr><td class='" + d.id + "_tb' valign='middle'><table cellspacing='1' cellpadding='0'>";
                 for (var i = 0; i < (toolbar.length); i++) {
-                    var img = (d.icons == "default") ? d.idir + "/" + toolbar[i] + ".gif" : d.idir + d.icons + "/" + toolbar[i] + ".gif";
+                    var img = (d.icons == "default") ? d.idir + "/" + toolbar[i] + ".gif" : d.idir + d.icons + "/" + toolbar[i] + ".png";
                     if (undefined === toolbar[i]) { continue; }
                     // START: Custom button
                     else if (typeof (toolbar[i]) != 'string') {
@@ -233,7 +250,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
                     else if (toolbar[i] === "fontsize") {
                         h += "<td valign='middle' align='center'><select id='" + d.id + "_fontsize' onchange='global_hb[\"" + d.id + "\"].cmd(\"fontsize\",this.options[this.selectedIndex].value);this.options[0].selected=\"true\";' style='font-size:12px;'><option value='' selected>- TAMANHO -</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option><option value='6'>6</option><option value='7'>7</option></select></td>";
                     } else if (toolbar[i] === "fontfamily") {
-                    h += "<td valign='middle' align='center'><select id='" + d.id + "_fontfamily' onchange='global_hb[\"" + d.id + "\"].cmd(\"fontname\",this.options[this.selectedIndex].value);this.options[0].selected=\"true\";' style='font-size:12px;'><option value='' selected>- FONTE -</option><option value='arial' style='font-family:arial;'>Arial</option><option value='courier' style='font-family:courier;'>Courier</option><option value='cursive' style='font-family:cursive;'>Cursive</option><option value='georgia' style='font-family:georgia;'>Georgia</option><option value='monospace' style='font-family:monospace;'>Monospace</option><option value='segoe ui' style='font-family:Segoe UI;'>Segoe UI</option><option value='tahoma' style='font-family:tahoma;'>Tahoma</option><option value='verdana' style='font-family:verdana;'>Verdana</option></select></td>";
+                        h += "<td valign='middle' align='center'><select id='" + d.id + "_fontfamily' onchange='global_hb[\"" + d.id + "\"].cmd(\"fontname\",this.options[this.selectedIndex].value);this.options[0].selected=\"true\";' style='font-size:12px;'><option value='' selected>- FONTE -</option><option value='arial' style='font-family:arial;'>Arial</option><option value='courier' style='font-family:courier;'>Courier</option><option value='cursive' style='font-family:cursive;'>Cursive</option><option value='georgia' style='font-family:georgia;'>Georgia</option><option value='monospace' style='font-family:monospace;'>Monospace</option><option value='segoe ui' style='font-family:Segoe UI;'>Segoe UI</option><option value='tahoma' style='font-family:tahoma;'>Tahoma</option><option value='verdana' style='font-family:verdana;'>Verdana</option></select></td>";
                     } else if (toolbar[i] === "formats") {
                         h += "<td valign='middle' align='center'><select id='" + d.id + "_formats' onchange='global_hb[\"" + d.id + "\"].cmd(\"format\",this.options[this.selectedIndex].value);this.options[0].selected=\"true\";' style='font-size:12px;'><option value='' selected>- FORMATOS -</option><option value='h1'>Heading 1</option><option value='h2'>Heading 2</option><option value='h3'>Heading 3</option><option value='h4'>Heading 4</option><option value='h5'>Heading 5</option><option value='h6'>Heading 6</option><option value='p'>Paragraph</option><option value='pindent'>First Indent</option><option value='pre'>Preformatted</option></select></td>";
                     } else if (toolbar[i] === "fontcolor") {
@@ -284,7 +301,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Wraps tags around the cursor position or selection
         * @access private
         */
-        this.wrap_tags = function (start, end) {
+        this.wrap_tags = function(start, end) {
             var sel = get_selection();
             if (undefined === sel) { sel = ""; }
             if (undefined === end) { end = ""; }
@@ -305,7 +322,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @return this
         * @access private	  
         */
-        this._init = function (is_init) {
+        this._init = function(is_init) {
             if (undefined === window.global_hb) { global_hb = []; }
             if (!$(this).attr("id")) { d.id = "jqhb_" + global_hb.length; $(this).attr("id", d.id); } else { d.id = $(this).attr("id"); }
             if (undefined === global_hb[d.id]) { global_hb[d.id] = this; }
@@ -318,20 +335,20 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
             $(this).parent().parent().parent().parent().prepend(toolbar());
             $("." + d.id + "_tb").height(d.toolbar_height);
 
-            $("." + d.id + "_html_button").each(function () {
+            $("." + d.id + "_html_button").each(function() {
                 // Set tool dimension
                 $(this).width(d.tool_width).height(d.tool_height);
                 // Set image dimension
-                $(this).find("image").each(function () { $(this).width(d.tool_image_width).height(d.tool_image_height); });
+                $(this).find("image").each(function() { $(this).width(d.tool_image_width).height(d.tool_image_height); });
                 // Set borders
                 $(this).css("border", "1px solid transparent").css("background", "transparent").css("margin", "1px 1px 1px 1px").css("padding", "1px");
-                $(this).mouseover(function () { $(this).css("border", "1px solid #BFCAFF").css("background", "#EFF2FF"); });
-                $(this).mouseout(function () { $(this).css("border", "1px solid transparent").css("background", "transparent"); });
+                $(this).mouseover(function() { $(this).css("border", "1px solid #BFCAFF").css("background", "#EFF2FF"); });
+                $(this).mouseout(function() { $(this).css("border", "1px solid transparent").css("background", "transparent"); });
             }
 		);
 
             // Selectors
-            $("." + d.id + "_tb").find("select").each(function () {
+            $("." + d.id + "_tb").find("select").each(function() {
                 $(this).css("border", "1px solid #E9EAEF").css("background", "transparent").css("margin", "2px 2px 3px 2px");
                 if ($.browser.mozilla) { $(this).css("padding", "0").css("position", "relative").css("top", "-2px"); }
             }
@@ -398,7 +415,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
                 // START: HtmlBox Style
                 if (d.css.indexOf("background:") === -1) { d.css += "body{background:white;}"; }
                 if (d.css.indexOf("background-image:") === -1) {
-                    d.css = d.css + "body{background-image:url(" + d.idir + "logo.gif);background-position:top right;background-repeat:no-repeat;}";
+                    d.css = d.css + "body{background-position:top right;background-repeat:no-repeat;}";
                 }
 
                 if (d.idoc.createStyleSheet) {
@@ -431,7 +448,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @since 2.0
         * @return this
         */
-        this.cmd = function (cmd, arg1) {
+        this.cmd = function(cmd, arg1) {
             // When user clicks toolbar button make sure it always targets its respective WYSIWYG
             d.iframe.contentWindow.focus();
             // START: Prepare commands
@@ -563,7 +580,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @since 1.2
         * @return this
         */
-        this.get_text = function () {
+        this.get_text = function() {
             // Is textbox visible?
             if ($("#" + d.id).is(":visible")) { return $("#" + d.id).val(); }
             // Iframe is visible
@@ -589,7 +606,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @since 1.2
         * @return this
         */
-        this.set_text = function (txt) {
+        this.set_text = function(txt) {
             var text = (undefined === txt) ? "" : txt;
             if (text == "" && $.browser.safari) { text = "&nbsp;"; } // Bug in Chrome and Safari
             // Is textarea visible? Writing to it.
@@ -623,7 +640,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Returns the (X)HTML content of the HtmlBox
         * @return this
         */
-        this.get_html = function () {
+        this.get_html = function() {
             var html;
             if ($("#" + d.id).is(":visible")) {
                 html = $("#" + d.id).val();
@@ -642,7 +659,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         /**
         * Specifies a function to be executed on text change in the HtmlBox
         */
-        this.change = function (fn) { d.change = fn; return this; };
+        this.change = function(fn) { d.change = fn; return this; };
         //=====================================================================//
         //  METHOD: change                                                     //
         //========================== END OF METHOD ============================//
@@ -653,7 +670,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         /**
         * Removes the HtmlBox instance from the DOM and the globalspace
         */
-        this.remove = function () {
+        this.remove = function() {
             global_hb[d.id] = undefined;
             $("#" + d.id + "_wrap").remove();
             if ($("#" + d.id + "_about").length === 0) { $("#" + d.id + "_about").remove(); }
@@ -671,7 +688,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @param String the text to be posted, default the (X)HTML text
         * @return this;
         */
-        this.post = function (url, data) {
+        this.post = function(url, data) {
             if (undefined === data) { data = this.get_html(); } data = (d.id + "=" + data);
             $.ajax({ type: "POST", data: data, url: url, dataType: "html", error: d.error, success: d.success });
         };
@@ -688,7 +705,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * @param String the text to be posted, default the (X)HTML text
         * @return this;
         */
-        this.get = function (url, data) {
+        this.get = function(url, data) {
             if (undefined === data) { data = this.get_html(); } data = (d.id + "=" + data);
             $.ajax({ type: "GET", data: data, url: url, dataType: "html", error: d.error, success: d.success });
         };
@@ -702,7 +719,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         /**
         * Specifies what is to be executed on successful Ajax POST or GET
         */
-        this.success = function (fn) { d.success = fn; return this; };
+        this.success = function(fn) { d.success = fn; return this; };
         //=====================================================================//
         //  METHOD: success                                                    //
         //========================== END OF METHOD ============================//
@@ -714,7 +731,7 @@ function getXHTML(data) { return new Html2Xhtml(data).parse() }; function Html2X
         * Specifies what is to be executed on error Ajax POST or GET
         * @return {HtmlBox} the instance of this HtmlBox
         */
-        this.error = function (fn) { d.error = fn; return this; };
+        this.error = function(fn) { d.error = fn; return this; };
         //=====================================================================//
         //  METHOD: error                                                      //
         //========================== END OF METHOD ============================//
