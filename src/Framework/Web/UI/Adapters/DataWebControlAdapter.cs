@@ -45,7 +45,7 @@ namespace InfoControl.Web.UI.Adapters
                         }
                     }
 
-                    object value = dataObject.GetPropertyValue(dataField);
+                    object value = dataObject.GetPropertyValue<object>(dataField);
 
                     if (Control.GetType() == typeof (CheckBox))
                     {
