@@ -191,6 +191,17 @@ namespace InfoControl
         /// </summary>
         /// <param name="container"></param>
         /// <param name="propName"></param>
+        /// <returns></returns>
+        public static T GetPropertyValue<T>(this object container, string propName)
+        {
+            return (T)container.GetPropertyValue(propName);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="container"></param>
+        /// <param name="propName"></param>
         /// <param name="value"></param>
         public static void SetPropertyValue(this object container, string propName, object value)
         {
