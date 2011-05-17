@@ -38,7 +38,7 @@
                 // TODO remove
                 selectFirst: true,
                 // TODO remove, replaced by parse/source
-                formatItem: this.options.formatItem || function(row) { return row[0]; },
+                formatItem: this.options.formatItem || function(row) { return row; },
                 // TODO remove, replaced by parse/source
                 formatMatch: this.options.formatMatch || null,
                 // TODO replace with focus-option: "fill"
@@ -186,14 +186,14 @@
 		        var result;
 		        if (data && data.length) {
 		            for (var i = 0; i < data.length; i++) {
-		                if (data[i].value.toLowerCase() == q.toLowerCase()) {
+		                if (data[i].result.toLowerCase() == q.toLowerCase()) {
 		                    result = data[i];
 		                    break;
 		                }
 		            }
 		        }
 		        if (typeof fn == "function") fn(result);
-		        else $input.trigger("result.autocomplete", result && [result.data, result.value]);
+		        else $input.trigger("result.autocomplete", result && [result.data, result.result]);
 		    }
 		    // TODO remove trimWords/multiple handling
 		    $.each(trimWords($input.val()), function(i, value) {
@@ -225,7 +225,7 @@
                 var selected = select.selected();
                 if (!selected) return false;
 
-                var v = selected.value;
+                var v = selected.result;
                 previousValue = v;
 
                 // TODO remove
@@ -240,7 +240,7 @@
                 $input.val(v);
                 hideResultsNow();
                 input.onchanged();
-                $input.trigger("result.autocomplete", [selected.data, selected.value]);
+                $input.trigger("result.autocomplete", [selected.data, selected.result]);
                 return true;
             };
 
@@ -344,7 +344,7 @@
                 if (data && data.length && hasFocus) {
                     stopLoading();
                     select.display(data, q);
-                    autoFill(q, data[0].value);
+                    autoFill(q, data[0].result);
                     select.show();
                 } else {
                     hideResultsNow();
@@ -588,7 +588,7 @@
                             var c = data[k];
                             $.each(c, function(i, x) {
                                 // if we've got a match, add it to the array
-                                if (matchSubset(x.value, q)) {
+                                if (matchSubset(x.result, q)) {
                                     csub.push(x);
                                 }
                             });
@@ -606,7 +606,7 @@
                         if (c) {
                             var csub = [];
                             $.each(c, function(i, x) {
-                                if (matchSubset(x.value, q)) {
+                                if (matchSubset(x.result, q)) {
                                     csub[csub.length] = x;
                                 }
                             });
@@ -717,7 +717,7 @@
             for (var i = 0; i < max; i++) {
                 if (!data[i])
                     continue;
-                var formatted = options.formatItem(data[i].data, i + 1, max, data[i].value, term);
+                var formatted = options.formatItem(data[i].data, i + 1, max, data[i].result, term);
                 if (formatted === false)
                     continue;
                 var li = $("<li/>")
