@@ -1,3 +1,0 @@
-[submodule "src/WebUI/App_Shared/JS/smartclient"]
-	path = src/WebUI/App_Shared/JS/smartclient
-	url = https://github.com/sidneyfilho/jq-smartclient.git
