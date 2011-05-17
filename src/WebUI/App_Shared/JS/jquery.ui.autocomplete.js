@@ -186,7 +186,7 @@
 		        var result;
 		        if (data && data.length) {
 		            for (var i = 0; i < data.length; i++) {
-		                if (data[i].result.toLowerCase() == q.toLowerCase()) {
+		                if (data[i].value.toLowerCase() == q.toLowerCase()) {
 		                    result = data[i];
 		                    break;
 		                }
@@ -225,7 +225,7 @@
                 var selected = select.selected();
                 if (!selected) return false;
 
-                var v = selected.result;
+                var v = selected.value;
                 previousValue = v;
 
                 // TODO remove
