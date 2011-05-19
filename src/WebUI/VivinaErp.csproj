@@ -2161,7 +2161,6 @@
     <Content Include="App_Shared\JS\lightbox\themes\default\images\jquery-lightbox-theme.png" />
     <Content Include="App_Shared\JS\lightbox\themes\default\images\loading.gif" />
     <Content Include="App_Shared\JS\lightbox\themes\default\jquery.lightbox.css" />
-    <Content Include="App_Shared\JS\smartclient\jquery.smartclient.js" />
     <Content Include="App_Shared\JS\smartclient\license.htm" />
     <Content Include="App_Shared\JS\smartclient\readme.txt" />
     <Content Include="App_Shared\JS\smartclient\src\jquery.smartclient.js" />

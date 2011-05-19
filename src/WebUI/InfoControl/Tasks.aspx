@@ -47,14 +47,22 @@
                 &nbsp;
             </td>
             <td class="center">
-                <fieldset id="filter" class="closed" asform="true" action="GetTasks" command="load"
-                    template=".template" target="#tasks">
+                <fieldset id="filter" class="closed" asform="true" smart='{
+                    load:{
+                        source: "~/Infocontrol/TaskService.svc/GetTasks",
+                        template: ".template",
+                        target: "#tasks",
+                        onresponse: function(responseBody){
+                            return responseBody.Data;
+                        }
+                    }
+                }'>
                     <legend onmouseover='setTimeout("$(\"#filter .body\").show(1000);", 0); setTimeout("$(\"#filter\").attr({className:\"open\"})", 300);'>
                         Escolha o filtro desejado: </legend>
                     <div class="body">
                         Modo de Exibição:<br />
                         <table width="100%">
-                             <tr>
+                            <tr>
                                 <td>
                                     <input type="radio" value="1" name="view" field="view" checked="checked" onclick="$('#otherFilters').fadeIn('slow')" /><label>Data</label>
                                 </td>
@@ -97,9 +105,8 @@
                                     <input type="radio" value="2" name="view" field="view" onclick="$('#otherFilters').hide('slow')" /><label>Hierarquia</label>
                                 </td>
                             </tr>
-                           
                         </table>
-                        <asp:Button ID="btSearch" command="click" runat="server" Text="Pesquisar" OnClientClick="$('#filter').toggleClass('closed').find('.body').hide('slow');return false;" />
+                        <asp:Button ID="btSearch" smart='{click:{trigger:"#filter"}}' runat="server" Text="Pesquisar" OnClientClick="$('#filter').toggleClass('closed').find('.body').hide('slow');return false;" />
                     </div>
                     <span class="closeButton" onmouseover="$('#filter').toggleClass('closed').find('.body').hide('slow');">
                         &nbsp;</span>
@@ -112,7 +119,7 @@
                 <table width="100%">
                     <tr>
                         <td>
-                            <%-- 
+                        <%-- 
                         - Este template separado pois será usado recursivamente sendo colocado uma UL dentro de outra UL criando assim 
                           uma arvore de tarefas.
                         - Este template está com display none para não ser apresentado na tela
@@ -122,12 +129,33 @@
                                 <li id="task_<$=TaskId$>">
                                     <table cellpadding="0" cellspacing="0">
                                         <tr>
-                                            <td class='<$=HasChildTasks?"plus":"line"$>' command="click" options="{parentId:<$=TaskId$>}"
-                                                target="#task_<$=TaskId$> > ul" trigger="#filter" onclick="$(this).attr({className:'minus'});$('#task_<$=TaskId$> > ul').show()">
+                                            <td class='<$=HasChildTasks?"plus":"line"$>' smart="{
+                                                click:{
+                                                    target: '#task_<$=TaskId$> > ul',
+                                                    trigger: '#filter',
+                                                    sourceparams: {parentId:<$=TaskId$>},
+                                                    show: '#task_<$=TaskId$> > ul',
+                                                    onbounded:function(){
+                                                        this.attr({className:'minus'});
+                                                    }
+                                                }
+                                            }">
                                             </td>
                                             <td>
-                                                <input type="checkbox" command="click" action="CompleteTask" options="{companyId:<%=Company.CompanyId%>, taskId:<$=TaskId$>, userId:<%=User.Identity.UserId%>}"
-                                                    onsucess="$('#task_<$=TaskId$>').hide()" onbinding="if(!confirm('Esta tarefa está realmente COMPLETA?')) {this[0].checked=false;}" />
+                                                <input type="checkbox" smart="{
+                                                    click:{
+                                                        source: '~/Infocontrol/TaskService.svc/CompleteTask',
+                                                        sourceparams: {
+                                                            companyId: <%=Company.CompanyId%>, 
+                                                            taskId: <$=TaskId$>, 
+                                                            userId: <%=User.Identity.UserId%>
+                                                        },
+                                                        hide: '#task_<$=TaskId$>',
+                                                        onbinding: function(){
+                                                            return confirm('Esta tarefa está realmente COMPLETA?');
+                                                        }
+                                                    }
+                                                }" />
                                                 &nbsp; <font id="date"><$=$.format((FinishDate||Deadline||"").JsonToDate(), "d")$></font>
                                             </td>
                                             <td style='white-space: nowrap; font-weight: <$=HasChildTasks?"bold":"normal"$>'>
@@ -136,8 +164,9 @@
                                             </td>
                                             <td style="width: 100px;">
                                                 <div id="rating" title="Classificação" class="inline">
-                                                    <$ for (var i=0; i < Priority; i++){$> <span class='ratingStar emptyRatingStar' style='float: left;'>
-                                                        &nbsp;</span> <$}$>
+                                                    <$for (var i=0; i < Priority; i++) {$> 
+                                                        <span class='ratingStar emptyRatingStar' style='float: left;'>&nbsp;</span> 
+                                                    <$}$>
                                                 </div>
                                                 &nbsp;
                                                 <div href='javascript:;' id="shared" class='shared' title="Tarefa Compartilhada Aguardando">
