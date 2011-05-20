@@ -62,7 +62,7 @@
                 
                 <td>
                     Telefone:<br /> 
-                    <asp:TextBox ID="txtPhone" Plugin="Mask" Mask="(99)9999-9999" runat="server" Columns="10" MaxLength="50" />
+                    <asp:TextBox ID="txtPhone" Plugin="mask" Mask="(99)9999-9999" runat="server" Columns="10" MaxLength="50" />
                     <asp:RequiredFieldValidator CssClass="cErr21" ID="valPhone" runat="server" Display="Dynamic" ControlToValidate="txtPhone"
                         ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;" ValidationGroup="save" InitialValue="(__)____-____">
                     </asp:RequiredFieldValidator>
@@ -70,7 +70,7 @@
                 </td>
                 <td>
                     Fax:<br />
-                    <asp:TextBox ID="txtFax" runat="server" Columns="10" Plugin="Mask" Mask="(99)9999-9999"  MaxLength="13" />
+                    <asp:TextBox ID="txtFax" runat="server" Columns="10" Plugin="mask" Mask="(99)9999-9999"  MaxLength="13" />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
                 <td>

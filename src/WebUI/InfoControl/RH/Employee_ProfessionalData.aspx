@@ -188,13 +188,13 @@
                                     <tr>
                                         <td>
                                             Início da Jornada:<br />
-                                            <asp:TextBox ID="txtJourneyBegin" Plugin="Mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtJourneyBegin" Plugin="mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
                                             <asp:RegularExpressionValidator CssClass="cErr21" ErrorMessage="&nbsp&nbsp&nbsp" ValidationExpression="^([0-1][0-9]|[2][0-3]):([0-5][0-9])$"
                                                 ID="regtxtJourneyBegin" runat="server" ControlToValidate="txtJourneyBegin"></asp:RegularExpressionValidator>
                                         </td>
                                         <td>
                                             Fim da Jornada:<br />
-                                            <asp:TextBox ID="txtJourneyEnd" Plugin="Mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtJourneyEnd" Plugin="mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
                                             <asp:RegularExpressionValidator CssClass="cErr21" ErrorMessage="&nbsp&nbsp&nbsp" ValidationExpression="^([0-1][0-9]|[2][0-3]):([0-5][0-9])$"
                                                 ID="regtxtJourneyEnd" runat="server" ControlToValidate="txtJourneyEnd"></asp:RegularExpressionValidator>
                                         </td>
@@ -202,13 +202,13 @@
                                     <tr>
                                         <td>
                                             Início do intervalo:<br />
-                                            <asp:TextBox ID="txtIntervalBegin" Plugin="Mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtIntervalBegin" Plugin="mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
                                             <asp:RegularExpressionValidator CssClass="cErr21" runat="server" ControlToValidate="txtIntervalBegin"
                                                 ErrorMessage="&nbsp&nbsp&nbsp" ValidationExpression="^([0-1][0-9]|[2][0-3]):([0-5][0-9])$" />
                                         </td>
                                         <td>
                                             Fim do intervalo:<br />
-                                            <asp:TextBox ID="txtIntervalEnd" Plugin="Mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="txtIntervalEnd" Plugin="mask" Mask="99:99" Columns="2" runat="server"></asp:TextBox>
                                             <asp:RegularExpressionValidator CssClass="cErr21" ErrorMessage="&nbsp&nbsp&nbsp" ValidationExpression="^([0-1][0-9]|[2][0-3]):([0-5][0-9])$"
                                                 ID="regtxtIntervalEnd" runat="server" ControlToValidate="txtIntervalEnd"></asp:RegularExpressionValidator>
                                         </td>

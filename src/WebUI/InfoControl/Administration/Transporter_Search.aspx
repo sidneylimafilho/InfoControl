@@ -38,12 +38,12 @@
                             <td>
                                 CNPJ:
                                 <br />
-                                <asp:TextBox ID="txtCNPJ" Plugin="Mask" Mask="99.999.999/9999-99" Columns="14"  runat="server"></asp:TextBox> 
+                                <asp:TextBox ID="txtCNPJ" Plugin="mask" Mask="99.999.999/9999-99" Columns="14"  runat="server"></asp:TextBox> 
                             </td>
                             <td>
                                 Telefone:
                                 <br />
-                                <asp:TextBox ID="txtPhone" Plugin="Mask" Mask="(99)9999-9999" Columns="10" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtPhone" Plugin="mask" Mask="(99)9999-9999" Columns="10" runat="server"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>

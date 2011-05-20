@@ -53,25 +53,25 @@
         <table width="50%">
             <tr>
                 <td>Telefone:<br />
-                    <asp:TextBox ID="txtPhone" Plugin="Mask" Mask="(99)9999-9999" runat="server" Columns="10"
+                    <asp:TextBox ID="txtPhone" Plugin="mask" Mask="(99)9999-9999" runat="server" Columns="10"
                         MaxLength="13" />
                     <asp:RequiredFieldValidator CssClass="cErr21" ID="reqPhone" runat="server" ControlToValidate="txtPhone"
                         ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </td>
                 <td>Telefone Residencial:<br />
-                    <asp:TextBox ID="txtHomePhone" Plugin="Mask" Mask="(99)9999-9999" runat="server"
+                    <asp:TextBox ID="txtHomePhone" Plugin="mask" Mask="(99)9999-9999" runat="server"
                         Columns="10" MaxLength="13" />
                     <asp:RequiredFieldValidator CssClass="cErr21" ID="reqHomePhone" runat="server" ControlToValidate="txtHomePhone"
                         ErrorMessage="&nbsp;&nbsp;&nbsp;" Display="Dynamic" ></asp:RequiredFieldValidator>
                     &nbsp;&nbsp;&nbsp;&nbsp; </td>
                 </td>
                 <td>Telefone Celular:<br />
-                    <asp:TextBox ID="txtCellPhone" runat="server" Plugin="Mask" Mask="(99)9999-9999"
+                    <asp:TextBox ID="txtCellPhone" runat="server" Plugin="mask" Mask="(99)9999-9999"
                         Columns="10" MaxLength="13" />
                 </td>
                 <td>Fax:<br />
-                    <asp:TextBox ID="txtFax" runat="server" Plugin="Mask" Mask="(99)9999-9999" Columns="10"
+                    <asp:TextBox ID="txtFax" runat="server" Plugin="mask" Mask="(99)9999-9999" Columns="10"
                         MaxLength="13" />
                 </td>
             </tr>
@@ -229,7 +229,7 @@
                     </td>
                     <td>&nbsp;&nbsp;&nbsp; </td>
                     <td>Telefone:<br />
-                        <asp:TextBox ID="txtCompanyPhone" Plugin="Mask" Mask="(99)9999-9999" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtCompanyPhone" Plugin="mask" Mask="(99)9999-9999" runat="server"></asp:TextBox>
                     </td>
                 </tr>
             </table>

@@ -66,7 +66,7 @@
                                         </td>
                                         <td>
                                             Telefone:<br />
-                                            <asp:TextBox runat="server" ID="txtPhone" Plugin="Mask" Mask="(99)9999-9999"  MaxLength="13" Columns="10"></asp:TextBox>
+                                            <asp:TextBox runat="server" ID="txtPhone" Plugin="mask" Mask="(99)9999-9999"  MaxLength="13" Columns="10"></asp:TextBox>
                                             <asp:RegularExpressionValidator CssClass="cErr21" ID="RegTxtPhone" runat="server" ErrorMessage="&amp;nbsp;&amp;nbsp;&amp;nbsp;"
                                                 ControlToValidate="txtPhone" ValidationExpression="((\([0-9_]{2}\))([0-9_]{4})\-([0-9_]{4}))?">
                                             </asp:RegularExpressionValidator>

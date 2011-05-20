@@ -26,25 +26,25 @@
                         <tr>
                             <td>
                                 Superior:<br />
-                                <asp:TextBox ID="txtReportUp" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                <asp:TextBox ID="txtReportUp" Plugin="mask" Mask="99,99" Columns="2" MaxLength="5"
                                     runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                             <td>
                                 Direita:<br />
-                                <asp:TextBox ID="txtReportRight" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                <asp:TextBox ID="txtReportRight" Plugin="mask" Mask="99,99" Columns="2" MaxLength="5"
                                     runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                             <td>
                                 Inferior:<br />
-                                <asp:TextBox ID="txtReportBottom" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                <asp:TextBox ID="txtReportBottom" Plugin="mask" Mask="99,99" Columns="2" MaxLength="5"
                                     runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
                             <td>
                                 Esquerda:<br />
-                                <asp:TextBox ID="txtReportLeft" Plugin="Mask" Mask="99,99" Columns="2" MaxLength="5"
+                                <asp:TextBox ID="txtReportLeft" Plugin="mask" Mask="99,99" Columns="2" MaxLength="5"
                                     runat="server"></asp:TextBox>
                                 &nbsp;cm
                             </td>
