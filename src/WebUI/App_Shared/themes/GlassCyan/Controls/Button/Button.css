@@ -51,12 +51,12 @@
 	color: #F0FFFF;
 }
 
-.cBtn11 input, .ui-theme-button input{background:url(themes/glasscyan/controls/button/img/bg_left.gif) no-repeat;}
-.cBtn11 span, .ui-theme-button span{background:url(themes/glasscyan/controls/button/img/bg_right.gif) no-repeat;}
-.cBtn11_hover input{background:url(themes/glasscyan/controls/button/img/bg_left.gif) no-repeat 0px -25px;}
-.cBtn11_hover span{background:url(themes/glasscyan/controls/button/img/bg_right.gif) no-repeat 0px -25px;}
-.cBtn11_disabled input{background:url(themes/glasscyan/controls/button/img/bg_left.gif) no-repeat 0px -50px;}
-.cBtn11_disabled span{background:url(themes/glasscyan/controls/button/img/bg_right.gif) no-repeat 0px -50px;}
+.cBtn11 input, .ui-theme-button input{background:url(themes/glasscyan/controls/button/img/bg_left.png) no-repeat;}
+.cBtn11 span, .ui-theme-button span{background:url(themes/glasscyan/controls/button/img/bg_right.png) no-repeat;}
+.cBtn11_hover input, .ui-theme-button.hover input{background:url(themes/glasscyan/controls/button/img/bg_left.png) no-repeat 0px -25px;}
+.cBtn11_hover span, .ui-theme-button.hover span{background:url(themes/glasscyan/controls/button/img/bg_right.png) no-repeat 0px -25px;}
+.cBtn11_disabled input, .ui-theme-button.disabled input{background:url(themes/glasscyan/controls/button/img/bg_left.png) no-repeat 0px -50px;}
+.cBtn11_disabled span, .ui-theme-button.disabled span{background:url(themes/glasscyan/controls/button/img/bg_right.png) no-repeat 0px -50px;}
 
 .cBtn12 input{background:url(themes/glasscyan/controls/button/img/bg12_left.gif) no-repeat;}
 .cBtn12 span{background:url(themes/glasscyan/controls/button/img/bg12_right.gif) no-repeat;}

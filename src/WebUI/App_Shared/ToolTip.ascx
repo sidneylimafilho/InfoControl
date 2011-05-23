@@ -15,7 +15,7 @@
             </td>
             <td nowrap="nowrap">
                 
-                    <input type="button" runat="server" id="btnFechar" value="Fechar" class="cBtn13" />
+                    <input type="button" runat="server" id="btnFechar" value="Fechar" />
             </td>
         </tr>
     </table>
