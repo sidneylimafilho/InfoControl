@@ -27,6 +27,12 @@ namespace InfoControl.Web
                 var page = new DataPage();
 
                 var lastModified = System.IO.File.GetLastWriteTimeUtc(filePath);
+
+                //
+                // Set Cache
+                //                    
+                response.Cache.SetLastModified(lastModified);
+
                 if (request.Headers["If-Modified-Since"] != lastModified.ToRFC1123())
                 {
 
@@ -36,11 +42,7 @@ namespace InfoControl.Web
                     // Set internal variables that verify whether the page contains a form
                     // 
                     page.GetType().GetMethod("OnFormRender", BindingFlags.Instance | BindingFlags.NonPublic).Invoke(page, null);
-
-                    //
-                    // Set Cache
-                    //                    
-                    response.Cache.SetLastModified(lastModified);
+                    
 
                     context.Server.Execute(page, response.Output, true);
                 }

@@ -515,29 +515,32 @@ namespace InfoControl.Web.Security
 
         public void Logoff(AccessControlPrincipal principal)
         {
-            User user = GetUser(principal.Identity.UserId);
-
-            if (user != null)
+            if (principal != null && principal.Identity != null)
             {
-                //
-                // Trace the User Activity
-                //
-                var activity = new UserActivityLog();
-                activity.LoginDate = user.LastLoginDate;
-                activity.LogoffDate = DateTime.Now;
-                activity.UserId = user.UserId;
+                var user = GetUser(principal.Identity.UserId);
 
-                DbContext.UserActivityLogs.InsertOnSubmit(activity);
-                DbContext.SubmitChanges();
+                if (user != null)
+                {
+                    //
+                    // Trace the User Activity
+                    //
+                    DbContext.UserActivityLogs.InsertOnSubmit(new UserActivityLog()
+                    {
+                        LoginDate = user.LastLoginDate,
+                        LogoffDate = DateTime.Now,
+                        UserId = user.UserId
+                    });
+                    DbContext.SubmitChanges();
 
 
 
-                user.IsOnline = false;
-                user.LastRemoteHost = null;
-                user.LastActivityDate = DateTime.Now;
-                user.LastLoginDate = DateTime.Now;
-                user.PersonalizationRaw = principal.Personalization.SerializeToString();
-                DbContext.SubmitChanges();
+                    user.IsOnline = false;
+                    user.LastRemoteHost = null;
+                    user.LastActivityDate = DateTime.Now;
+                    user.LastLoginDate = DateTime.Now;
+                    user.PersonalizationRaw = principal.Personalization.SerializeToString();
+                    DbContext.SubmitChanges();
+                }
             }
         }
     }

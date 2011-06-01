@@ -1,7 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
+using System.Net;
 using System.Text;
 using System.Web;
 using System.Web.UI;
@@ -102,6 +103,21 @@ namespace Vivina.Erp.WebUI.Site
                     MasterPageFile = Company.GetMasterPagePath();
             }
 
+
+            string filePath = Server.MapPath(Request.FilePath);
+            DateTime lastWriteTime = File.GetLastWriteTimeUtc(filePath);
+            DateTime lastModified = lastWriteTime < _page.ModifiedDate ? _page.ModifiedDate : lastWriteTime;
+
+            //
+            // Set Cache
+            //                    
+            Response.Cache.SetLastModified(lastModified);
+            if (Request.Headers["If-Modified-Since"] == lastModified.ToRFC1123())
+            {
+                Response.StatusCode = 304;
+                Response.End();
+            }
+
             if ((Request["format"] ?? "").ToUpper() == "RAW")
             {
                 Response.Clear();
@@ -185,7 +201,6 @@ namespace Vivina.Erp.WebUI.Site
 
         private void ProcessBudget()
         {
-
             //
             // Verify if the request is not null ["nome"] and  ["email"]
             //
@@ -198,12 +213,12 @@ namespace Vivina.Erp.WebUI.Site
             // Populate Budget
             //
             var budget = new Budget
-            {
-                CustomerName = Request["nome"],
-                CustomerMail = Request["email"],
-                CompanyId = Company.CompanyId,
-                BudgetCode = "OR" + Util.GenerateUniqueID()
-            };
+                             {
+                                 CustomerName = Request["nome"],
+                                 CustomerMail = Request["email"],
+                                 CompanyId = Company.CompanyId,
+                                 BudgetCode = "OR" + Util.GenerateUniqueID()
+                             };
             //saleManager.Insert(budget);
 
             //
@@ -302,7 +317,8 @@ namespace Vivina.Erp.WebUI.Site
                 if (!_page.IsPublished)
                 {
                     var panel = new Panel();
-                    panel.Style.Add("background-image", "url(" + ResolveUrl("~/App_Shared/themes/glasscyan/bgWebPageDraft.png") + ")");
+                    panel.Style.Add("background-image",
+                                    "url(" + ResolveUrl("~/App_Shared/themes/glasscyan/bgWebPageDraft.png") + ")");
                     panel.Style.Add("position", "absolute");
                     panel.Style.Add("width", "100%");
                     panel.Style.Add("height", "100%");
