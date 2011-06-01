@@ -6,7 +6,6 @@
     <div id="commentBody">
         <asp:DataList ID="dtlComments" Width="100%" runat="server" DataSourceID="odsComments">
             <ItemTemplate>
-                <br />
                 <p>
                     <%# Eval("Description") %></p>
                 <span class="comment-footer"><span class="cTxt21">
