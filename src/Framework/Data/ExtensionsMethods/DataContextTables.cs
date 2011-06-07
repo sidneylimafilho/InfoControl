@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Linq.Mapping;
 using System.Reflection;
 using InfoControl.Data;
-
 
 #if !CompactFramework
 #if LinqCTP
@@ -53,7 +53,7 @@ namespace InfoControl
             // Utilize reflection to get IDataReader underlying a IQureryable
             // 
             object reader = source;
-            var fieldInfo = reader.GetType().GetField("session", all);
+            FieldInfo fieldInfo = reader.GetType().GetField("session", all);
             if (fieldInfo != null)
             {
                 reader = fieldInfo.GetValue(reader);
@@ -92,6 +92,23 @@ namespace InfoControl
         }
 
         /// <summary>
+        /// Create a Hashtable with the data and close a underlying IDataReader imediate after read all
+        /// </summa
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <returns></returns>
+        public static Hashtable ToHashtable<T>(this IEnumerable<T> source, Func<T, object> keySelector,
+                                               Func<T, object> valueSelector)
+        {
+            var table = new Hashtable();
+            IEnumerator<T> enu = source.GetEnumerator();
+            while (enu.MoveNext())
+                table[keySelector(enu.Current)] = valueSelector(enu.Current);
+
+            return table;
+        }
+
+        /// <summary>
         /// Create a DataReader to read the data and close a underlying IDataReader imediate after read all
         /// </summa
         /// <typeparam name="T"></typeparam>
@@ -117,12 +134,14 @@ namespace InfoControl
                         {
                             currentProps = enu.Current.GetType().GetProperties();
                             foreach (PropertyInfo prop in currentProps)
-                                if (!prop.PropertyType.FullName.Contains("EntitySet") && !prop.PropertyType.FullName.Contains("EntityRef") && prop.GetCustomAttributes(typeof(AssociationAttribute), true).Length == 0)
+                                if (!prop.PropertyType.FullName.Contains("EntitySet") &&
+                                    !prop.PropertyType.FullName.Contains("EntityRef") &&
+                                    prop.GetCustomAttributes(typeof (AssociationAttribute), true).Length == 0)
                                     table.Columns.Add(new DataColumn
-                                                      {
-                                                          ColumnName = prop.Name,
-                                                          DataType = typeof(object)
-                                                      });
+                                                          {
+                                                              ColumnName = prop.Name,
+                                                              DataType = typeof (object)
+                                                          });
 
                             loadedSchema = true;
                         }
@@ -133,7 +152,9 @@ namespace InfoControl
                         DataRow row = table.NewRow();
 
                         foreach (PropertyInfo prop in currentProps)
-                            if (!prop.PropertyType.FullName.Contains("EntitySet") && !prop.PropertyType.FullName.Contains("EntityRef") && prop.GetCustomAttributes(typeof(AssociationAttribute), true).Length == 0)
+                            if (!prop.PropertyType.FullName.Contains("EntitySet") &&
+                                !prop.PropertyType.FullName.Contains("EntityRef") &&
+                                prop.GetCustomAttributes(typeof (AssociationAttribute), true).Length == 0)
                                 row[prop.Name] = prop.GetValue(enu.Current, null);
 
                         table.Rows.Add(row);
