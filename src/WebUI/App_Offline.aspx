@@ -5,15 +5,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Sistema em MANUTENÇÃO!</title>
+  
 </head>
+<script type="text/javascript" src="app_shared/filescombiner.ascx?base=js/&f=
+        jquery.js,
+        jquery.cookies.js,
+        jquery.dimensions.js,
+        jquery.jGrowl.js,
+        jquery.meioMask.js,
+        jquery.validate.js,
+        jquery.tooltip.js,
+        jquery.serializer.js,        
+        jquery.UI.core.js,
+        jquery.UI.widget.js,
+        jquery.UI.position.js,
+        jquery.UI.autocomplete.js,
+        jquery.UI.duallistbox.js,
+        jquery.ui.datepicker.js,
+        jquery.UI.htmlbox.js,
+        jquery.notification.js,
+        jquery.glob.js,
+        jquery.glob.pt-br.js,               
+        lightbox/jquery.lightbox.js,      
+        smartclient/src/jquery.smartclient.js"></script>
+
 <body>
     <form id="form1" runat="server">
-    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnableScriptGlobalization="true"
-        EnableScriptLocalization="true" LoadScriptsBeforeUI="false" CombineScripts="false">
-        <Scripts>
-            <asp:ScriptReference Path="~/App_Shared/js/jquery.js" />
-        </Scripts>
-    </ajaxToolkit:ToolkitScriptManager>
     <div id="loadingMessage" style="display: none;">
         <h1>
             InfoControl está entrando em modo de manutenção!</h1>
@@ -68,7 +85,7 @@
                         uso do computador, etc.
                         <center>
                             <h3>
-                                <a href="http://blogdoinfocontrol.blogspot.com">Acesse nosso blog!</a></h3>
+                                <a href="http://vivina.com.br/">Acesse nosso site!</a></h3>
                         </center>
                     </td>
                     <td class="right">

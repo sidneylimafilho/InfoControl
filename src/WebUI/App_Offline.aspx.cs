@@ -14,7 +14,7 @@ using InfoControl.Security;
 using InfoControl.Web.Security;
 using InfoControl.Web.Security.DataEntities;
 
-public partial class App_Offline : Vivina.Erp.SystemFramework.PageBase
+public partial class App_Offline : Page 
 {
     protected void Page_Load(object sender, EventArgs e)
     {
