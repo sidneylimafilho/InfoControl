@@ -44,8 +44,7 @@ namespace InfoControl.Web.ScheduledTasks
 
         private Scheduler()
         {
-            if (SchedulerSection.Enabled)
-                _thread = new Thread(CheckTimer);
+            _thread = new Thread(CheckTimer);
         }
 
         #region Methods
