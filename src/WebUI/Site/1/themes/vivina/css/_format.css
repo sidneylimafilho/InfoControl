@@ -4,7 +4,7 @@ html, body
 	font-size: 16px;
 	margin: 0em;
 	padding: 0em;	
-	letter-spacing: -1px;
+	letter-spacing: -0.6px;
 	color:#333333;
 }
 
@@ -17,8 +17,12 @@ h4{	font-size: 130% !important;	}
 p, h1, h2, h3, h4, ul
 {
 	margin: 0px 0px 8px 0px;	
-	font-weight:normal;
-	
+	font-weight:normal;	
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: #00CCD0;
 }
 
 small{	font-size: 80%;}
@@ -42,6 +46,11 @@ a
 a:hover
 {
 	text-decoration:underline;
+}
+
+b
+{
+    font-weight:600;
 }
 
 /*---------------------------------------------------------------------------

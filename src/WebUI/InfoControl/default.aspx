@@ -6,7 +6,7 @@
 overflow: hidden;">
 <head id="head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="shortcut icon" href="../site/1/img/infocontrol.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../site/1/themes/infocontrol/img/infocontrol.ico" type="image/x-icon" />
     <link rel="Stylesheet" href="../App_Shared/JS/lightbox/themes/default/jquery.lightbox.css"
         type="text/css" />
     <link rel="Stylesheet" type="text/css" href="../app_shared/filescombiner.ascx?type=text/css&base=themes/glasscyan/&f=
