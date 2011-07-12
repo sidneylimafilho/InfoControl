@@ -164,7 +164,7 @@ fieldset
     border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
     padding: 0px 6px 6px; 
-    margin: 15px 0px;
+    margin: 32px 0px;
 }
 
 legend
@@ -344,7 +344,7 @@ Geral
     margin: 0px;
     color: #00AAB0;
 }
-.page a:hover, .impulse a:hover
+.page a:hover, .impulse a:hover, .page .clicked
 {
     color: #066;
     border-bottom-color: #F90 !important;

@@ -19,6 +19,8 @@ ul, ol
 	margin-top: 0px;
 	margin-bottom: 0px;
 	text-align: left;
+	list-style-type:disc;
+	padding-left:20px;
 }
 
 
@@ -32,6 +34,6 @@ div
 	margin: auto;
 }
 
-.sys-template{display:none;}
+
 
 

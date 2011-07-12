@@ -1,50 +1,46 @@
-<%@ Master Language='C#' AutoEventWireup='true' %>
+ï»¿<%@ Master Language='C#' AutoEventWireup='true' %>
                 <%@ Register Src='~/site/_modules/Menu.ascx' TagName='Menu' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/Categories.ascx' TagName='Categories' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/FeedReader.ascx' TagName='FeedReader' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/Products.ascx' TagName='Products' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/Search.ascx' TagName='Search' TagPrefix='vfx' %>
-                <%@ Register Src='~/App_Shared/Modules/AccessControl/Login.ascx' TagName='Login'  TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/Tags.ascx' TagName='Tags' TagPrefix='vfx' %>
+                <%@ Register Src='~/site/_modules/PageCategories.ascx' TagName='PageCategories' TagPrefix='vfx' %>
+                <%@ Register Src='~/App_shared/modules/AccessControl/Login.ascx' TagName='Login'  TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/WebPage.ascx' TagName='WebPage'  TagPrefix='vfx' %><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Vivina</title>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(duration=0)" />
+    <meta name="google-site-verification" content="o97XiFALsxi13RdDNyhXekBwdJ2tFS2QA03_AtN7vbs" />
     <link rel="shortcut icon" href="themes/infocontrol/img/infocontrol.ico" type="image/x-icon" />
     <link href="themes/infocontrol/css/infocontrol.css" rel="stylesheet" type="text/css" />
 
 <meta name='generator' content='Vivina InfoControl' />
 <asp:ContentPlaceHolder ID='head' runat='server'></asp:ContentPlaceHolder></head>
-
-                <body>
-                <form id='form1' runat='server'>
-                    <asp:ScriptManager runat='server' EnablePageMethods='true'>
-                        <scripts>
-                            <asp:ScriptReference Path='~/App_Shared/js/jquery.js' />
-                            <asp:ScriptReference Path='~/App_Shared/js/jquery.validate.js' />
-                        </scripts>
-                    </asp:ScriptManager>
+<body>
+                                   <form id='form1' runat='server'>
+                                    <asp:ScriptManager runat='server' EnablePageMethods='true'>
+                                        <scripts>
+                                            <asp:ScriptReference Path='~/App_Shared/js/FilesCombiner.ascx' />
+                                        </scripts>
+                                    </asp:ScriptManager>
     <div class="bgLeft">
         <div class="bgRight">
             <div class="headerConteiner">
                 <div class="header">
-                    <div class="aba">
-                        <div class="products">
-                            <a href="/site/">Vivina</a> <a href="Infocontrol,259B43B5303D3A90.aspx" class="selected">
-                                InfoControl</a><a href="/site/Blog-da-Vivina,F3E530499FBA0873.aspx?type=blog">Pooba</a><a
-                                    href="/site/Ajuda/InfoControl,2663D3BCEC6B6C58.aspx">Ajuda</a>
-                        </div>
-                    </div>
+                    
                     <div class="menu">
                         <a href="Infocontrol,259B43B5303D3A90.aspx" class="logo"></a>
                         <div id="ctl00_Menu1_RadMenu1" class="RadMenu RadMenu_Outlook ">
                             <!-- 2008.1.515.35 -->
-                            <a href="Porque-usar,08DAB12694A28C13.aspx"
-                                    class="menuItem">Porque Usar?</a> <a href="Duvidas,EA89BEADC2AF8524.aspx" class="menuItem">
-                                    Dúvidas</a><a href="1/infocontrol/tour.aspx"
-                                    class="menuItem">Experimente!</a> <a href="Planos-e-Precos,3687AC14BB0B86A4.aspx"
-                                    class="menuItem">Planos e Preços</a>
+                            <a href="Porque-usar,101.aspx" class="menuItem">Porque Usar?</a> 
+                            <a href="Duvidas,102.aspx" class="menuItem">DÃºvidas</>
+                            <!--<a href="Framework,2C50D1ED981447D3.aspx" class="menuItem">Framework</>-->
+                            <a href="/infocontrol/tour.aspx" class="menuItem">Experimente!</a> 
+                            <a href="Planos-e-Precos,192.aspx" class="menuItem">Planos e PreÃ§os</a>
+                            <a href="/site/Ajuda/InfoControl-ERP,33.aspx">Ajuda</a>
                             <input id="ctl00_Menu1_RadMenu1_ClientState" name="ctl00_Menu1_RadMenu1_ClientState"
                                 type="hidden" />
                         </div>
@@ -65,11 +61,11 @@
                 <div class="footer">
                     <div class="copyright">
                         <a href='http://www.vivina.com.br' class="logoVivina">&nbsp;</a><br />
-                        <small>Os nomes e marcas InfoControl, Pooba, Vivina estão registradas para a Vivina
+                        <small>Os nomes e marcas InfoControl, Pooba, Vivina estÃ£o registradas para a Vivina
                             Softhouse.<br />
-                            © 2009 - Todos os direitos reservados.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                                href="Termos-de-Utilizacao,7A2F7321446A1780.aspx" class="fLnk11">Termos de Utilização</a>
-                            | <a href="Politica-de-Privacidade,8E954284957DBF6D.aspx" class="fLnk11">Política de
+                            Â© 2009 - Todos os direitos reservados.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                href="Termos-de-Utilizacao,11.aspx" class="fLnk11">Termos de UtilizaÃ§Ã£o</a>
+                            | <a href="Politica-de-Privacidade,12.aspx" class="fLnk11">PolÃ­tica de
                                 Privacidade</a></small>
                     </div>
                 </div>

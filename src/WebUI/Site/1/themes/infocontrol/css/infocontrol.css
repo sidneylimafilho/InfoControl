@@ -44,7 +44,7 @@ Header
 
 .header .login
 {
-	padding: 3px;
+	/*padding: 3px;*/
 }
 
 .header .login .username input, .header .login .password input
@@ -56,7 +56,7 @@ Header
 {
 	float: right;
 	margin-right:0px;
-	width:auto;
+	width:310px;
 }
 
 .header .products
@@ -71,6 +71,8 @@ Header
 {
 	margin-left: 0px;
 	float: left;
+	position:absolute;
+	z-index:1;
 }
 
 .header  .menu ul
@@ -84,6 +86,7 @@ Header
 	width:300px;
 	position:absolute;
 	margin-left: 265px;
+	z-index:1000;
 }
 
 /*---------------------------------------------------------------------------
@@ -106,7 +109,7 @@ Menu
 
 .outdoor 
 {
-	background-position:right top;
+	background-position:right bottom;
 	background-image:url(../img/outdoor.jpg);
 	background-repeat:no-repeat;
 	height:330px;
@@ -148,3 +151,14 @@ Menu
 
 .btRegister{ background:url(../img/bt_register.gif) no-repeat; display:block; width:127px; height:32px; }
 .btPlansPrices{ background:url(../img/bt_plans_prices.gif) no-repeat; display:block;}
+
+.page
+{
+	border:0px solid transparent;
+}
+
+
+.page .head, .page .foot
+{
+	display:none;
+}

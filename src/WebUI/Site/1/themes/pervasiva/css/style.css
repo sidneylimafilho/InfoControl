@@ -1,0 +1,55 @@
+@import url("../../vivina/css/intern.css");
+@import url("../../vivina/css/_format.css");
+@import url("../../vivina/css/_global.css");
+
+/*---------------------------------------------------------------------------
+Geral
+----------------------------------------------------------------------------*/
+
+.bgLeft
+{
+	background: url(../img/bgLeft.jpg) no-repeat;
+	background-position:-100px 0px;
+	background-attachment: fixed;
+	z-index: 2;
+	vertical-align: top;
+}
+.bgRight
+{
+	background: url(../img/bgRight.jpg) no-repeat;
+	background-position:116% 0px;
+	background-attachment: fixed;
+	z-index: 2;
+	vertical-align: top;
+}
+
+
+
+/*---------------------------------------------------------------------------
+Header
+----------------------------------------------------------------------------*/
+.header
+{
+	height: 65px;
+}
+
+.header .logo
+{
+	background: url(../img/logo.png) no-repeat;	
+	height:60px;
+	width: 157px;
+	padding-top:3px;
+}
+
+
+
+.page
+{
+	border:0px solid transparent;
+}
+
+
+.page .head, .page .foot
+{
+	display:none;
+}
