@@ -33,7 +33,9 @@ namespace InfoControl.Web.Auditing
             SessionStateModule sessionModule = context.Modules["Session"] as SessionStateModule;
 
             //
-            // sessionModule.End += new EventHandler(OnSessionEnd);
+            sessionModule.End += new EventHandler(OnSessionEnd);
+            if (context.Application["Session_End"] == null)
+                context.Application["Session_End"] = new EventHandler(OnSessionEnd);
             //
             //Type type = typeof(System.Web.HttpApplication);
             //type = type.Assembly.GetType("System.Web.HttpApplicationFactory");
@@ -85,6 +87,7 @@ namespace InfoControl.Web.Auditing
             _isAuditing = false;
             DataManager.CloseConnection();
         }
+
         void OnRequestEnter(object sender, EventArgs e)
         {
             HttpApplication application = sender as HttpApplication;

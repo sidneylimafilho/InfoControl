@@ -52,26 +52,31 @@ namespace InfoControl.Data
         private DbDataReader dr = null;
         private Hashtable items;
         private Hashtable dataContexts = new Hashtable();
+        private static Hashtable _CacheCommands;
         #endregion
 
         #region Properties
 
-        private static Hashtable _CacheCommands;
-
-        public Hashtable CacheCommands
+        /// <summary>
+        /// Indica se mantem a conexão aberta ou não
+        /// </summary>
+#if !CompactFramework
+        [Browsable(false)]
+#endif
+        public string ConnectionStringName
         {
-            get
-            {
-                return _CacheCommands;
-            }
+            get { return _connectionStringName ?? AppConfig.DataAccess.ConnectionStringName; }
+            set { _connectionStringName = value; }
         }
 
-        public Hashtable Items
+
+        /// <summary>
+        /// Indica qual será o provedor de informações
+        /// </summary>
+        public string ProviderName
         {
-            get
-            {
-                return items ?? (items = new Hashtable());
-            }
+            get { return _providerName ?? (_providerName = AppConfig.ConnectionStrings[ConnectionStringName].ProviderName); }
+            set { _providerName = value; }
         }
 
 #if CompactFramework
@@ -94,23 +99,71 @@ namespace InfoControl.Data
         /// <summary>
         /// Factory que cria os objetos da base de dados
         /// </summary>
-        public DbProviderFactory DataSource
+        public DbProviderFactory DataSource { get { return _dataSource ?? (_dataSource = DbProviderFactories.GetFactory(ProviderName)); } }
+        private DbProviderFactory _dataSource;
+#endif
+        public string ConnectionString
         {
             get
             {
-                return _dataSource ?? (_dataSource = DbProviderFactories.GetFactory(ProviderName));
+                if (!String.IsNullOrEmpty(_connectionString)) return _connectionString;
+
+                _connectionString = AppConfig.ConnectionStrings[ConnectionStringName].ConnectionString;
+
+                if (String.IsNullOrEmpty(AppConfig.DataAccess.TenantConnectionStringName)) return _connectionString;
+
+                var settings = AppConfig.ConnectionStrings[AppConfig.DataAccess.TenantConnectionStringName];
+
+                if (settings == null) return _connectionString;
+                if (String.IsNullOrEmpty(settings.ConnectionString)) return _connectionString;
+
+                var connStr = settings.ConnectionString;
+
+                // update datasource to tenant
+                _dataSource = DbProviderFactories.GetFactory(settings.ProviderName);
+
+                using (var conn = _dataSource.CreateConnection())
+                {
+                    conn.ConnectionString = _connectionString;
+                    conn.Open();
+
+                    var cmd = conn.CreateCommand();
+                    cmd.CommandText = AppConfig.DataAccess.TenantGetQuery.Replace("@ID", GetTenantId());
+                    var reader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+
+                    if (reader.Read())
+                    {
+                        for (var i = 0; i < reader.FieldCount - 1; i++)
+                            connStr = connStr.Replace("{" + reader.GetName(i) + "}", Convert.ToString(reader.GetValue(i)));
+                    }
+                    else
+                    {
+                        // rollback datasource to tenant
+                        _dataSource = DbProviderFactories.GetFactory(AppConfig.ConnectionStrings[ConnectionStringName].ProviderName);
+                        return _connectionString;
+                    }
+                }
+
+                return _connectionString = connStr;
+            }
+            set { _connectionString = value; }
+        }
+
+
+        public Hashtable CacheCommands
+        {
+            get
+            {
+                return _CacheCommands;
             }
         }
-        private DbProviderFactory _dataSource;
-#endif
+
+        public Hashtable Items { get { return items ?? (items = new Hashtable()); } }
 
         /// <summary>
         /// Retorna a transação atual com a base de dados
         /// </summary>
-        public DbTransaction Transaction
-        {
-            get { return _transaction; }
-        }
+        public DbTransaction Transaction { get { return _transaction; } }
 
         /// <summary>
         /// Retorna a conexão com a base de dados
@@ -133,20 +186,6 @@ namespace InfoControl.Data
             }
         }
 
-        /// <summary>
-        /// Indica qual ser� o provedor de informações
-        /// </summary>
-        public string ProviderName
-        {
-            get { return _providerName ?? (_providerName = AppConfig.ConnectionStrings[ConnectionStringName].ProviderName); }
-            set { _providerName = value; }
-        }
-
-        public string ConnectionString
-        {
-            get { return _connectionString ?? (_connectionString = AppConfig.ConnectionStrings[ConnectionStringName].ConnectionString); }
-            set { _connectionString = value; }
-        }
 
         /// <summary>
         /// Retorna um objeto Command associado com a conexão
@@ -187,21 +226,6 @@ namespace InfoControl.Data
             }
         }
 
-        /// <summary>
-        /// Indica se mantem a conexão aberta ou não
-        /// </summary>
-#if !CompactFramework
-        [Browsable(false)]
-#endif
-        public string ConnectionStringName
-        {
-            get
-            {
-                _connectionStringName = _connectionStringName ?? AppConfig.DataAccess.ConnectionStringName;
-                return (_connectionStringName);
-            }
-            set { _connectionStringName = value; }
-        }
 
         /// <summary>
         /// Indica se mantem a conexão aberta ou não
@@ -337,8 +361,22 @@ namespace InfoControl.Data
 
         #region Utilities
 
+        private string GetTenantId()
+        {
+            if (!String.IsNullOrEmpty(AppConfig.DataAccess.TenantCookieName))
+                if (System.Web.HttpContext.Current != null)
+                {
+                    var cookie = System.Web.HttpContext.Current.Request.Cookies[AppConfig.DataAccess.TenantCookieName];
+                    if (cookie != null)
+                        return cookie.Value;
+                }
+
+            return AppConfig.DataAccess.TenantDefaultID;
+        }
+
+
         /// <summary>
-        /// Realiza todo o processo necess�rio para estabelecer uma conexão com a base de dados.
+        /// Realiza todo o processo necessário para estabelecer uma conexão com a base de dados.
         /// </summary>
         public DbConnection GetOpenConnection()
         {
@@ -346,7 +384,7 @@ namespace InfoControl.Data
         }
 
         /// <summary>
-        /// Realiza todo o processo necess�rio para estabelecer uma conexão com a base de dados.
+        /// Realiza todo o processo necessário para estabelecer uma conexão com a base de dados.
         /// </summary>
         public DbConnection GetOpenConnection(DbConnection conn)
         {
@@ -393,7 +431,7 @@ namespace InfoControl.Data
 
                     _transaction = null;
 
-                    
+
                 }
                 else
                 {
@@ -429,13 +467,13 @@ namespace InfoControl.Data
                     _transaction = null;
                 }
             }
-            
+
             CloseConnection();
             Trace.TraceWarning("End Rollback");
         }
 
         /// <summary>
-        /// Indica se a conexão est� aberta ou não
+        /// Indica se a conexão está aberta ou não
         /// </summary>
         /// <returns>Verdadeiro: Conexão Aberta; Falso: Conexão Fechada</returns>
         private bool IsOpenConnection()
@@ -989,7 +1027,7 @@ namespace InfoControl.Data
             while (reader.Read())
             {
                 var hashTbl = new Hashtable();
-                for(var i= 0; i<reader.FieldCount; i++)
+                for (var i = 0; i < reader.FieldCount; i++)
                     hashTbl[reader.GetName(i)] = reader[i];
 
                 list.Add(hashTbl);
