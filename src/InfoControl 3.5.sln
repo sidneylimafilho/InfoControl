@@ -9,6 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework 3.5", "Framework\Framework 3.5.csproj", "{148DC18F-45AB-4191-B587-71092A7BDF74}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F15AB02F-9679-4C7B-9C7E-870F51FC02FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C812E18-91D8-49B0-A7B0-77CDF06149A1}"
+	ProjectSection(SolutionItems) = preProject
+		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "TestProject1\Test.csproj", "{81F834C2-31FF-46A6-AA3E-347501F4E805}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CCNET|Any CPU = CCNET|Any CPU
@@ -105,8 +114,28 @@ Global
 		{148DC18F-45AB-4191-B587-71092A7BDF74}.Release|Any CPU.Build.0 = Release|Any CPU
 		{148DC18F-45AB-4191-B587-71092A7BDF74}.Release|x64.ActiveCfg = Release|Any CPU
 		{148DC18F-45AB-4191-B587-71092A7BDF74}.Release|x86.ActiveCfg = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.CCNET|Any CPU.ActiveCfg = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.CCNET|Any CPU.Build.0 = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.CCNET|x64.ActiveCfg = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.CCNET|x86.ActiveCfg = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Disconnected|Any CPU.ActiveCfg = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Disconnected|Any CPU.Build.0 = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Disconnected|x64.ActiveCfg = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Disconnected|x86.ActiveCfg = Debug|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Release|x64.ActiveCfg = Release|Any CPU
+		{81F834C2-31FF-46A6-AA3E-347501F4E805}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C812E18-91D8-49B0-A7B0-77CDF06149A1} = {F15AB02F-9679-4C7B-9C7E-870F51FC02FB}
+		{81F834C2-31FF-46A6-AA3E-347501F4E805} = {F15AB02F-9679-4C7B-9C7E-870F51FC02FB}
 	EndGlobalSection
 EndGlobal

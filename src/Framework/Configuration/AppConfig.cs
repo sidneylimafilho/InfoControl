@@ -32,7 +32,7 @@ namespace InfoControl.Configuration
             }
         }
 #else
-    public class AppConfig 
+    public class AppConfig
     {
         private static System.Configuration.Configuration _config;
 
@@ -168,7 +168,7 @@ namespace InfoControl.Configuration
                 _dataAccessSection = new DataAccessSection();
                 _dataAccessSection.ConnectionStringName = doc.GetElementsByTagName("DataAccess")[0].Attributes["connectionStringName"].Value;
 #else
-                _dataAccessSection = (DataAccessSection)GetSection("InfoControl/DataAccess");
+                _dataAccessSection = (DataAccessSection)ConfigurationManager.GetSection("InfoControl/DataAccess");
 #endif
                 if (_dataAccessSection == null)
                 {
@@ -253,7 +253,7 @@ namespace InfoControl.Configuration
 #else
         public static ConnectionStringSettingsCollection ConnectionStrings
         {
-            get { return Config.ConnectionStrings.ConnectionStrings; }
+            get { return ConfigurationManager.ConnectionStrings; }
         }
 #endif
     }
