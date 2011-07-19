@@ -197,6 +197,36 @@
     <Compile Include="IO\Compact.cs" />
     <Compile Include="IO\StringExtensions.cs" />
     <Compile Include="JsonObject.cs" />
+    <Compile Include="Payment\BoletoProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\Configuration\PaymentSectionGroup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\Configuration\ProviderExtrasSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\Configuration\ProviderSection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\CreditCard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\MasterCardProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\PaymentMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\PaymentProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\PaymentResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Payment\VisaProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Recognizable.cs" />
     <Compile Include="Management\DomainNameServer.cs" />
     <Compile Include="Multimedia\Sound.cs" />
@@ -307,16 +337,6 @@
     <Compile Include="Net\Mail\SMTP\Server\_SMTP_Cmd_Validator.cs" />
     <Compile Include="Net\Mail\StreamHelper.cs" />
     <Compile Include="Net\Mail\_SocketState.cs" />
-    <Compile Include="Payment\BoletoProvider.cs" />
-    <Compile Include="Payment\Configuration\PaymentSectionGroup.cs" />
-    <Compile Include="Payment\Configuration\ProviderExtrasSection.cs" />
-    <Compile Include="Payment\Configuration\ProviderSection.cs" />
-    <Compile Include="Payment\CreditCard.cs" />
-    <Compile Include="Payment\MasterCardProvider.cs" />
-    <Compile Include="Payment\PaymentMode.cs" />
-    <Compile Include="Payment\PaymentProvider.cs" />
-    <Compile Include="Payment\PaymentResult.cs" />
-    <Compile Include="Payment\VisaProvider.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -442,6 +462,7 @@
     <Compile Include="Web\Security\VivinaRoleProviderModule.cs" />
     <Compile Include="Web\Services\DataService.cs" />
     <Compile Include="Web\Services\JsonFilterAttribute.cs" />
+    <Compile Include="Web\Services\JSONPSupportBehavior.cs" />
     <Compile Include="Web\StringResources.cs" />
     <Compile Include="Web\UI\Adapters\ButtonAdapter.cs" />
     <Compile Include="Web\UI\Adapters\DropDownListAdapter.cs" />

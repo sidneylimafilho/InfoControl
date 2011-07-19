@@ -3,11 +3,16 @@ using System.Data.Services.Common;
 using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Reflection;
+using InfoControl.Configuration;
+using InfoControl.Data;
+using System.Data.Services;
 
 namespace Vivina.Erp.DataClasses
 {
     public partial class InfoControlDataContext
     {
+        public InfoControlDataContext() : base(new DataManager().ConnectionString) { }
+
         [Function(Name = "dbo.AccountingPlanTree", IsComposable = true)]
         public IQueryable<AccountingPlan> AccountingPlanTree([Parameter(Name = "AccPlanId", DbType = "Int")] Nullable<int> accPlanId, [Parameter(DbType = "Int")] Nullable<int> companyId)
         {
@@ -239,6 +244,7 @@ namespace Vivina.Erp.DataClasses
 
     [Serializable]
     [DataServiceKey("EmployeeId")]
+    [IgnoreProperties("CurrentEvents")]
     public partial class Employee { }
 
     [Serializable]
@@ -287,6 +293,7 @@ namespace Vivina.Erp.DataClasses
 
     [Serializable]
     [DataServiceKey("FinancierOperationId")]
+    [IgnoreProperties("PaymentProvider")]
     public partial class FinancierOperation { }
 
     [Serializable]
@@ -314,7 +321,7 @@ namespace Vivina.Erp.DataClasses
     public partial class InventoryHistory { }
 
     [Serializable]
-    [DataServiceKey("InventoryMovimentId")]
+    [DataServiceKey("InventoryMovementId")]
     public partial class InventoryMoviment { }
 
     [Serializable]
@@ -354,7 +361,7 @@ namespace Vivina.Erp.DataClasses
     public partial class Neighborhood { }
 
     [Serializable]
-    [DataServiceKey("OrganizationLevelId")]
+    [DataServiceKey("OrganizationlevelId")]
     public partial class OrganizationLevel { }
 
     [Serializable]
@@ -366,11 +373,11 @@ namespace Vivina.Erp.DataClasses
     public partial class Package { }
 
     [Serializable]
-    [DataServiceKey("PackageAdditionalId")]
+    [DataServiceKey("AddonId")]
     public partial class PackageAdditional { }
 
     [Serializable]
-    [DataServiceKey("PackageFunctionId")]
+    [DataServiceKey("FunctionId", "PackageId")]
     public partial class PackageFunction { }
 
     [Serializable]
@@ -390,7 +397,7 @@ namespace Vivina.Erp.DataClasses
     public partial class PaymentMethod { }
 
     [Serializable]
-    [DataServiceKey("PermissionId")]
+    [DataServiceKey("FunctionId", "RoleId")]
     public partial class Permission { }
 
     [Serializable]
@@ -475,7 +482,7 @@ namespace Vivina.Erp.DataClasses
     public partial class Receipt { }
 
     [Serializable]
-    [DataServiceKey("ReceiptFieldConfigurationId")]
+    [DataServiceKey("ReceiptFieldId")]
     public partial class ReceiptFieldConfiguration { }
 
     [Serializable]
@@ -483,7 +490,7 @@ namespace Vivina.Erp.DataClasses
     public partial class ReceiptItem { }
 
     [Serializable]
-    [DataServiceKey("ReportColumnId")]
+    [DataServiceKey("ReportId", "ReportTablesSchemaId", "ReportColumnsSchemaId")]
     public partial class ReportColumn { }
 
     [Serializable]
@@ -499,7 +506,7 @@ namespace Vivina.Erp.DataClasses
     public partial class ReportDataType { }
 
     [Serializable]
-    [DataServiceKey("ReportFilterId")]
+    [DataServiceKey("ReportId", "ReportTablesSchemaId", "ReportColumnsSchemaId")]
     public partial class ReportFilter { }
 
     [Serializable]
@@ -511,7 +518,7 @@ namespace Vivina.Erp.DataClasses
     public partial class Report { }
 
     [Serializable]
-    [DataServiceKey("ReportSortId")]
+    [DataServiceKey("ReportId", "ReportTablesSchemaId", "ReportColumnsSchemaId")]
     public partial class ReportSort { }
 
     [Serializable]
@@ -523,7 +530,7 @@ namespace Vivina.Erp.DataClasses
     public partial class Representant { }
 
     [Serializable]
-    [DataServiceKey("RepresentantUserId")]
+    [DataServiceKey("RepresentantId", "UserId")]
     public partial class RepresentantUser { }
 
     [Serializable]
@@ -535,7 +542,7 @@ namespace Vivina.Erp.DataClasses
     public partial class Sale { }
 
     [Serializable]
-    [DataServiceKey("SaleItemId")]
+    [DataServiceKey("SaleItemsId")]
     public partial class SaleItem { }
 
     [Serializable]
@@ -558,6 +565,8 @@ namespace Vivina.Erp.DataClasses
     [DataServiceKey("ServiceOrderBookId")]
     public partial class ServiceOrderBook { }
 
+    [Serializable]
+    [DataServiceKey("ServiceOrderEquipmentDamageId")]
     public partial class ServiceOrderEquipmentDamage { }
 
     [Serializable]
@@ -629,7 +638,7 @@ namespace Vivina.Erp.DataClasses
     public partial class SupplierCategory { }
 
     [Serializable]
-    [DataServiceKey("SupplierContactId")]
+    [DataServiceKey("SupplierId", "ContactId")]
     public partial class SupplierContact { }
 
     [Serializable]
@@ -645,7 +654,7 @@ namespace Vivina.Erp.DataClasses
     public partial class TaskStatus { }
 
     [Serializable]
-    [DataServiceKey("TaskUserId")]
+    [DataServiceKey("TaskId", "UserId")]
     public partial class TaskUser { }
 
     [Serializable]
@@ -653,7 +662,7 @@ namespace Vivina.Erp.DataClasses
     public partial class Transporter { }
 
     [Serializable]
-    [DataServiceKey("UserActivityLogId")]
+    [DataServiceKey("UserId", "SessionId")]
     public partial class UserActivityLog { }
 
     [Serializable]
@@ -661,7 +670,7 @@ namespace Vivina.Erp.DataClasses
     public partial class User { }
 
     [Serializable]
-    [DataServiceKey("UsersInRoleId")]
+    [DataServiceKey("UserId", "RoleId")]
     public partial class UsersInRole { }
 
     [Serializable]
