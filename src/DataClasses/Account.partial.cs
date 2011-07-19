@@ -14,13 +14,13 @@ namespace Vivina.Erp.DataClasses
         /// <summary>
         /// AccountNumberDigit
         /// </summary>
-        public char AccountNumberDigit
+        public string AccountNumberDigit
         {
 
             get
             {
                 if (!String.IsNullOrEmpty(AccountNumber))
-                    return AccountNumber.Substring(AccountNumber.Length - 1, 1)[0];
+                    return AccountNumber.Substring(AccountNumber.Length - 1, 1)[0].ToString();
                 else
                     throw new FormatException();
             }
@@ -29,13 +29,13 @@ namespace Vivina.Erp.DataClasses
         /// <summary>
         /// AgencyDigit
         /// </summary>
-        public char AgencyDigit
+        public string AgencyDigit
         {
 
             get
             {
                 if (!String.IsNullOrEmpty(Agency))
-                    return AccountNumber.Substring(Agency.Length - 1, 1)[0];
+                    return AccountNumber.Substring(Agency.Length - 1, 1)[0].ToString();
                 else
                     throw new FormatException();
             }

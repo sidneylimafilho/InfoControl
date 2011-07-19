@@ -1,0 +1,6 @@
+[submodule "src/WebUI/App_Shared/JS/smartclient"]
+	path = src/WebUI/App_Shared/JS/smartclient
+	url = git@github.com:vivina/jq-smartclient.git
+[submodule "src/WebUI/App_Shared/JS/smartclient2"]
+	path = src/WebUI/App_Shared/JS/smartclient2
+	url = git@github.com:vivina/jq-smartclient.git

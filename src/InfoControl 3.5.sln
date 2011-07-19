@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataClasses", "DataClasses\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework 3.5", "Framework\Framework 3.5.csproj", "{148DC18F-45AB-4191-B587-71092A7BDF74}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{F15AB02F-9679-4C7B-9C7E-870F51FC02FB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F15AB02F-9679-4C7B-9C7E-870F51FC02FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2C812E18-91D8-49B0-A7B0-77CDF06149A1}"
 	ProjectSection(SolutionItems) = preProject
