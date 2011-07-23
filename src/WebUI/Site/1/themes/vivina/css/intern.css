@@ -163,20 +163,21 @@ fieldset
     border: 1px solid #005544;
     border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
-    padding: 0px 6px 6px; 
+    padding: 0px 6px 6px;
     margin: 32px 0px;
 }
 
 legend
 {
     padding: 3px 9px;
-    margin: -26px 0px 0px -7px;
-   
+    margin: -24px 0px 0px -7px;
+    position: absolute;
+    line-height: 17px;
     border-top-right-radius: 12px;
     border-top: 1px solid #005544;
     border-left: 1px solid #005544;
     border-right: 1px solid #005544;
-    border-bottom: 0px solid #005544;    
+    border-bottom: 0px solid #005544;
     background-color: #F8F8F8;
 }
 
@@ -264,7 +265,7 @@ ul
     border-style: solid;
     border-width: 1px 1px 1px 3px;
     color: #444444;
-    font: 12px monospace;    
+    font: 12px monospace;
     margin-bottom: 7px;
     margin-top: 5px;
     padding: 7px;

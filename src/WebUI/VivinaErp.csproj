@@ -2441,6 +2441,7 @@
     <Content Include="App_Shared\JS\smartclient\src\jquery.smartclient.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\blank.htm" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\data.js" />
+    <Content Include="App_Shared\JS\smartclient\UnitTests\jquery.smartclient.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\libs\jquery.cookies.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\libs\jquery.dimensions.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\libs\jquery.glob.js" />
@@ -2459,6 +2460,7 @@
     <Content Include="App_Shared\JS\smartclient\UnitTests\qunit\qunit.css" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\qunit\qunit.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\index.html" />
+    <Content Include="App_Shared\JS\smartclient\UnitTests\test.html" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\test.js" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\Sample.svc" />
     <Content Include="App_Shared\JS\smartclient\UnitTests\ViewPage1.aspx" />
@@ -3505,6 +3507,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="InfoControl\_companies\hardmed.com.br\Accounting\" />
     <Folder Include="Properties\" />
   </ItemGroup>
