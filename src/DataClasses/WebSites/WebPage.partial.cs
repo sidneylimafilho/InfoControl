@@ -18,12 +18,15 @@ namespace Vivina.Erp.DataClasses
 
                 string url = "";
 
-                var webPage = this;                
-                while ((webPage = webPage.WebPage1) != null)
-                    url = webPage.Name.Trim().RemoveSpecialChars() + "/" + url;
+                var parent = this.WebPage1;
+                while (parent != null && parent.WebPage1 != null)
+                {
+                    url = parent.Name.Trim().RemoveSpecialChars() + "/" + url;
+                    parent = parent.WebPage1;                    
+                }
 
-                return "~/" + url + Name.RemoveSpecialChars() + "," + WebPageId + ".aspx";                
+                return "~/" + url + Name.RemoveSpecialChars() + "," + WebPageId + ".aspx";
             }
-        }               
+        }
     }
 }

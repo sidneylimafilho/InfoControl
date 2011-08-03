@@ -100,13 +100,13 @@ public partial class Site_WebPage : Vivina.Erp.SystemFramework.UserControlBase
 
     public string GetBreadcrumbs(WebPage page)
     {
-        WebPage parent = page;
+        WebPage parent = page.WebPage1;
         string breacrumbsHtml = "";
         int i = 0;
-        while ((parent = parent.WebPage1) != null)
+        while (parent != null && parent.WebPage1 != null)
         {
-            breacrumbsHtml = "<a href='" + Page.ResolveUrl(parent.Url ) + "'>" + parent.Name +
-                             "</a> &raquo; " + breacrumbsHtml;
+            breacrumbsHtml = "<a href='{0}'>{1}</a> &raquo; {2}".FormatAll(Page.ResolveUrl(parent.Url), parent.Name, breacrumbsHtml);
+            parent = parent.WebPage1;
             i++;
         }
 
@@ -131,7 +131,7 @@ public partial class Site_WebPage : Vivina.Erp.SystemFramework.UserControlBase
             childPages = childPages.Where(wp => wp.PageTags.Any(tag => tag.Name == Tag));
         }
 
-       
+
 
         // sibling 
         //if (webPage.WebPage1 != null)

@@ -25,10 +25,10 @@ namespace Vivina.Erp.WebUI.Site
             Response.Write("<channel>");
             Response.Write(FormatBlogSettings(WebPage));
 
-            IOrderedEnumerable<WebPage> query = from pages in WebPage.WebPages
-                                                where pages.IsPublished
-                                                orderby pages.PublishedDate descending
-                                                select pages;
+            var query = from pages in WebPage.WebPages
+                        where pages.IsPublished
+                        orderby pages.PublishedDate descending
+                        select pages;
 
             foreach (WebPage childWebPage in query.Take(10))
                 Response.Write(FormatCData(childWebPage));
@@ -56,10 +56,9 @@ namespace Vivina.Erp.WebUI.Site
 
             //foreach (PageTag tag in page.PageTags)
             //    builder.Append("<tag><![CDATA[ " + tag.Name + " ]]> </tag>");
-
-            var manager = new CommentsManager(this);
-            builder.Append("<slash:comments>" + manager.GetComments(page.WebPageId, "comments.aspx").Count() +
-                           "</slash:comments>");
+                        
+            var commentsCount = new CommentsManager(this).GetComments(page.WebPageId, "comments.aspx").Count();
+            builder.Append("<slash:comments>{0}</slash:comments>".FormatAll(commentsCount));
 
             builder.Append("</item>");
 

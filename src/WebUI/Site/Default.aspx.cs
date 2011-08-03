@@ -177,7 +177,7 @@ namespace Vivina.Erp.WebUI.Site
             if (!_page.Name.ToLower().StartsWith("home") && !_page.Name.ToLower().StartsWith("default"))
             {
                 WebPage parentPage = _page;
-                while (parentPage != null)
+                while (parentPage != null && parentPage.WebPage1 != null)
                 {
                     Title += parentPage.Name + " - ";
                     parentPage = parentPage.WebPage1;

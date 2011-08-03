@@ -89,11 +89,11 @@ namespace Vivina.Erp.BusinessRules.WebSites
             WebPage parentPage;
 
             if ((parentPage = page).IsInMenu)
-                while ((parentPage = parentPage.WebPage1) != null)
+                while ((parentPage = parentPage.WebPage1) != null && !parentPage.IsInMenu)
                     parentPage.IsInMenu = true;
 
             if ((parentPage = page).IsPublished)
-                while ((parentPage = parentPage.WebPage1) != null)
+                while ((parentPage = parentPage.WebPage1) != null && !parentPage.IsPublished)
                     parentPage.IsPublished = true;
 
             DbContext.SubmitChanges();

@@ -1,4 +1,4 @@
-﻿<%@ Master Language='C#' AutoEventWireup='true' %>
+<%@ Master Language='C#' AutoEventWireup='true' %>
                 <%@ Register Src='~/site/_modules/Menu.ascx' TagName='Menu' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/Categories.ascx' TagName='Categories' TagPrefix='vfx' %>
                 <%@ Register Src='~/site/_modules/FeedReader.ascx' TagName='FeedReader' TagPrefix='vfx' %>
@@ -57,26 +57,27 @@
                                 <a href="/" class="selected">Vivina</a> 
                                 <a href="/InfoControl,53.aspx">
                                     InfoControl</a> 
-                                    <a href="/Pooba,9.aspx?type=blog">Pooba</a> 
+                                   
                                     <a href="/Smart-Client/Start,359.aspx">
                                         SmartClient</a>
-                                        <a href="/InfoControl-Framework,417.aspx">
-                                        Framework</a>
-                                    <a href="/pervasiva/Start,452.aspx">
-                                        Pervasiva</a>
+                                    
+                                   
                             </div>
                         </div>
                         <div class="menu">
                             <table align="center">
                                 <tr>
                                     <td>
-                                        <a href="Empresa,4.aspx" class="menuItem">Sobre a Vivina</a>
+                                        <a href="Empresa,4.aspx" class="menuItem">Sobre MIM</a>
                                     </td>
                                     <td>
                                         <a href="Porque-Webware,188.aspx" class="menuItem">Porque Webware?</a>
                                     </td>
                                     <td>
-                                        <a href="Fale-Conosco,8.aspx" class="menuItem">Fale Conosco</a>
+                                        <a href="50-coisas,520.aspx" class="menuItem">50 coisas</a>
+                                    </td>
+                                    <td>
+                                        <a href="Fale-Conosco,8.aspx" class="menuItem">Fale Comigo</a>
                                     </td>
                                 </tr>
                             </table>
@@ -95,7 +96,7 @@
                         <a href='http://www.vivina.com.br' class="logoVivina">&nbsp;</a><br />
                         <small>Os nomes e marcas Vivina, InfoControl, Pooba, Pervasiva est&atilde;o registradas para a
                             Vivina Softhouse.<br />
-                            © 2009 - Todos os direitos reservados.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            � 2009 - Todos os direitos reservados.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
                                 href="Termos-de-Utilizacao,11.aspx" class="fLnk11">Termos de Utiliza&ccedil;&atilde;o</a>
                             | <a href="Politica-de-Privacidade,12.aspx" class="fLnk11">Pol&iacute;tica de Privacidade</a></small>
                     </div>
