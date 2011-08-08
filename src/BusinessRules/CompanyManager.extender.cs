@@ -548,7 +548,7 @@ namespace Vivina.Erp.BusinessRules
                                         join userCompanies in DbContext.CompanyUsers on company.CompanyId equals
                                             userCompanies.CompanyId
                                         join users in DbContext.Users on userCompanies.UserId equals users.UserId
-                                        where (users.UserName == userName) && userCompanies.IsMain                                        
+                                        where (users.UserName == userName) && userCompanies.IsMain
                                         select company;
 
             return query.FirstOrDefault();
@@ -566,8 +566,8 @@ namespace Vivina.Erp.BusinessRules
                 return _hostCompany;
 
             _hostCompany = (from company in DbContext.Companies
-                                   where company.CompanyId == 1
-                                   select company).FirstOrDefault();
+                            where company.CompanyId == 1
+                            select company).FirstOrDefault();
 
             _hostCompany.LegalEntityProfile.GetHashCode();
             _hostCompany.LegalEntityProfile.Address.GetHashCode();
@@ -666,6 +666,32 @@ namespace Vivina.Erp.BusinessRules
             DbContext.SubmitChanges();
 
 
+            DbContext.ExecuteCommand("UPDATE customer SET RepresentantID=null, BankId=null, CustomerTypeId=null  WHERE CompanyId={0}", companyId);
+
+            DbContext.ExecuteCommand("UPDATE ReceiptItem SET ProductId=null, ServiceId=null WHERE CompanyId={0}", companyId);
+
+            DbContext.ExecuteCommand("UPDATE SaleItem SET ProductId=null WHERE CompanyId={0}", companyId);
+
+            DbContext.ExecuteCommand("UPDATE CustomerCall SET CustomerEquipmentId=null, RepresentantId=null WHERE CompanyId={0}", companyId);
+
+            DbContext.ExecuteCommand("UPDATE InventoryHistory SET Saleid=null, userId=null WHERE CompanyId={0}", companyId);
+
+            DbContext.ExecuteCommand("UPDATE CompositeProduct SET ProductManufacturerId=null, ProductPackageId=null WHERE exists (select null from Product where Product.ProductId = CompositeProduct. ProductId and Product.CompanyId={0})", companyId);
+            
+
+
+            //
+            // Delete ServiceOrders
+            //
+            DbContext.ServiceOrders.DeleteAllOnSubmit(DbContext.ServiceOrders.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete ServiceOrderTypes
+            //
+            DbContext.ServiceOrderTypes.DeleteAllOnSubmit(DbContext.ServiceOrderTypes.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
 
             var queryRepresentantUsers = from representant in DbContext.Representants
                                          join representantUser in DbContext.RepresentantUsers
@@ -675,7 +701,77 @@ namespace Vivina.Erp.BusinessRules
 
             DbContext.RepresentantUsers.DeleteAllOnSubmit(queryRepresentantUsers);
 
+            //
+            // Delete BudgetItems
+            //
+            DbContext.BudgetItems.DeleteAllOnSubmit(DbContext.BudgetItems.Where(x => x.Budget.CompanyId == companyId));
+            DbContext.SubmitChanges();
 
+            //
+            // Delete SaleItems
+            //
+            DbContext.SaleItems.DeleteAllOnSubmit(DbContext.SaleItems.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete InventoryHistories
+            //
+            DbContext.InventoryHistories.DeleteAllOnSubmit(DbContext.InventoryHistories.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete Inventories
+            //
+            DbContext.Inventories.DeleteAllOnSubmit(DbContext.Inventories.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete Contacts
+            //
+            DbContext.Contacts.DeleteAllOnSubmit(DbContext.Contacts.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete Contracts
+            //
+            DbContext.Contracts.DeleteAllOnSubmit(DbContext.Contracts.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete Products
+            //
+            DbContext.Products.DeleteAllOnSubmit(DbContext.Products.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete Representants
+            //
+            DbContext.Representants.DeleteAllOnSubmit(DbContext.Representants.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete Contacts
+            //
+            DbContext.Contacts.DeleteAllOnSubmit(DbContext.Contacts.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete FinancierConditions
+            //
+            DbContext.FinancierConditions.DeleteAllOnSubmit(DbContext.FinancierConditions.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete AdditionalInformationDatas
+            //
+            DbContext.AdditionalInformationDatas.DeleteAllOnSubmit(DbContext.AdditionalInformationDatas.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            //
+            // Delete AdditionalInformations
+            //
+            DbContext.AdditionalInformations.DeleteAllOnSubmit(DbContext.AdditionalInformations.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
 
             //
             //this method returns all user of a selected company that are only users of this company
@@ -704,6 +800,25 @@ namespace Vivina.Erp.BusinessRules
                 DbContext.SubmitChanges();
             }
 
+            DbContext.QuotationItems.DeleteAllOnSubmit(DbContext.QuotationItems.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+
+            DbContext.Quotations.DeleteAllOnSubmit(DbContext.Quotations.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.PurchaseOrderItems.DeleteAllOnSubmit(DbContext.PurchaseOrderItems.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.PurchaseOrders.DeleteAllOnSubmit(DbContext.PurchaseOrders.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.CustomerCalls.DeleteAllOnSubmit(DbContext.CustomerCalls.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.CustomerFollowups.DeleteAllOnSubmit(DbContext.CustomerFollowups.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
             DbContext.UsersInRoles.DeleteAllOnSubmit(DbContext.UsersInRoles.Where(x => x.CompanyId == companyId));
             DbContext.SubmitChanges();
 
@@ -713,9 +828,24 @@ namespace Vivina.Erp.BusinessRules
             DbContext.CustomerCalls.DeleteAllOnSubmit(DbContext.CustomerCalls.Where(x => x.CompanyId == companyId));
             DbContext.SubmitChanges();
 
+            DbContext.Parcels.DeleteAllOnSubmit(DbContext.Parcels.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.Bills.DeleteAllOnSubmit(DbContext.Bills.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.Suppliers.DeleteAllOnSubmit(DbContext.Suppliers.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.SupplierCategories.DeleteAllOnSubmit(DbContext.SupplierCategories.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
+
+            DbContext.SupplierContacts.DeleteAllOnSubmit(DbContext.SupplierContacts.Where(x => x.CompanyId == companyId));
+            DbContext.SubmitChanges();
 
             DbContext.Companies.DeleteAllOnSubmit(DbContext.Companies.Where(x => x.CompanyId == companyId || x.MatrixId == companyId));
             DbContext.SubmitChanges();
+            DataManager.Commit();
         }
 
         /// <summary>

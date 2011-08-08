@@ -46,8 +46,8 @@ namespace Vivina.Erp.WebUI.InfoControl.Host
 
         protected void grdCompanies_RowDataBound(object sender, GridViewRowEventArgs e)
         {
-            if (e.Row.RowType == DataControlRowType.DataRow)
-                e.Row.Attributes["onclick"] = "location='../Administration/Company.aspx?CompanyId=" + grdCompanies.DataKeys[e.Row.RowIndex]["CompanyId"] + "&host=true';";
+            //if (e.Row.RowType == DataControlRowType.DataRow)
+            //    e.Row.Attributes["onclick"] = "location='../Administration/Company.aspx?CompanyId=" + grdCompanies.DataKeys[e.Row.RowIndex]["CompanyId"] + "&host=true';";
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
@@ -59,19 +59,21 @@ namespace Vivina.Erp.WebUI.InfoControl.Host
             //make a list of customers
             String[] lista = Request["chkCompany"].Split(delimiter);
 
-            try
+
+            //delete company
+            for (int index = 0; index < lista.Length; index++)
             {
-                //delete company
-                for (int index = 0; index < lista.Length; index++)
+                try
                 {
                     cManager.DeleteCompany(Convert.ToInt32(lista[index]));
                 }
+                catch (Exception ex)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "errorAlert1", "alert('" + ex.Message + "');", true);
+                    ShowError("Companhia contendo registros relacionados!");
+                }
             }
-            catch (Exception ex)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "errorAlert1", "alert('" + ex.Message + "');", true);
-                ShowError("Companhia contendo registros relacionados!");
-            }
+
 
             grdCompanies.DataBind();
         }
