@@ -349,6 +349,7 @@
     </Compile>
     <Compile Include="Runtime\ObjectExtensions.cs" />
     <Compile Include="Runtime\SerializationHelper.cs" />
+    <Compile Include="Runtime\StringExtensions.cs" />
     <Compile Include="Security\Cryptography\Cypher.cs" />
     <Compile Include="Security\Cryptography\StringExtensions.cs" />
     <Compile Include="Service References\Payment.MasterCard\Reference.cs">
