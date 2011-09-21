@@ -38,10 +38,16 @@ public partial class _Default : DataPage
             Response.End();
         }
 
+
+        if (Request.Url.OriginalString.ToLower().Contains("infocontrol.com.br"))
+        {
+            Response.StatusCode = 301;
+            Response.StatusDescription = "Moved Permanently";
+            Response.RedirectLocation = "http://www.infocontrol.com.br/InfoControl,53.aspx";
+            Response.End();            
+        }
+
         Server.Execute("~/site/default.aspx");
-
-
-
 
         //DataTable table = new DataTable();
         //table.Columns.Add("Regiao");
