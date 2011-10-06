@@ -14,9 +14,9 @@ h2{	font-size: 175% !important;	}
 h3{	font-size: 150% !important;	}
 h4{	font-size: 130% !important;	}
 
-p, h1, h2, h3, h4, ul
+p, h1, h2, h3, h4, ul, li
 {
-	margin: 0px 0px 8px 0px;	
+	margin: 4px 0px 12px 0px;
 	font-weight:normal;	
 }
 

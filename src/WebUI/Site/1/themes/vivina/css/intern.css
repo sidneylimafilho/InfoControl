@@ -149,11 +149,11 @@ Content
 {
     list-style-position: outside;
 }
+
 .content ul li
 {
     list-style: circle;
-    list-style-image: url(../../infocontrol/img/bk_bullet.gif);
-    padding: 0px;
+    list-style-image: url(../../infocontrol/img/bk_bullet.gif);    
 }
 
 fieldset
