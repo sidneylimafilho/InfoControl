@@ -30,7 +30,9 @@ namespace Vivina.Erp.WebUI.Site
                         orderby pages.PublishedDate descending
                         select pages;
 
-            foreach (WebPage childWebPage in query.Take(10))
+            var limit = !String.IsNullOrEmpty(Request["limit"]) ? Convert.ToInt32(Request["limit"]) : 10;
+
+            foreach (WebPage childWebPage in query.Take(limit))
                 Response.Write(FormatCData(childWebPage));
 
             Response.Write("</channel></rss>");
@@ -56,7 +58,7 @@ namespace Vivina.Erp.WebUI.Site
 
             //foreach (PageTag tag in page.PageTags)
             //    builder.Append("<tag><![CDATA[ " + tag.Name + " ]]> </tag>");
-                        
+
             var commentsCount = new CommentsManager(this).GetComments(page.WebPageId, "comments.aspx").Count();
             builder.Append("<slash:comments>{0}</slash:comments>".FormatAll(commentsCount));
 
