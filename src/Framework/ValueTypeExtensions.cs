@@ -298,17 +298,16 @@ namespace InfoControl
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="original"></param>
-        //public static T LoadAll<T>(this T original) where T : class
-        //{
-        //    if (original != null)
-        //    {
-        //        PropertyInfo[] currentProps = original.GetType().GetProperties();
-        //        foreach (PropertyInfo prop in currentProps)
-        //            if (prop.GetCustomAttributes(typeof(AssociationAttribute), true).Length == 1)
-        //                prop.GetValue(original, null);
-        //    }
-        //    return original;
-        //}
+        public static T LoadAll<T>(this T original) where T : class
+        {
+            if (original != null)
+            {
+                PropertyInfo[] currentProps = original.GetType().GetProperties();
+                foreach (PropertyInfo prop in currentProps)
+                    prop.GetValue(original, null);
+            }
+            return original;
+        }
 
         /// <summary>
         /// 
