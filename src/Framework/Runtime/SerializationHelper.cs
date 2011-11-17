@@ -134,6 +134,12 @@ namespace InfoControl.Runtime
             return ser.DeserializeObject(json);
         }
 
+        public static T DeserializeFromWcfJson<T>(this string json)
+        {
+            using (var stream = new MemoryStream())
+                return (T)new DataContractJsonSerializer(typeof(T)).ReadObject(new MemoryStream(System.Text.Encoding.UTF8.GetBytes(json)));
+        }
+
         #endregion
         #region Typed
 #if !CompactFramework
